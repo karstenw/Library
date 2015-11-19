@@ -1,0 +1,33 @@
+<colors query="kiribati">
+
+<color name="white" weight="0.54929516346">
+ <shade name="cool" weight="0.499999166668" />
+ <shade name="dark" weight="0.277777314816" />
+ <shade name="hard" weight="0.222221851852" />
+</color>
+
+<color name="red" weight="0.140844913708">
+ <shade name="cool" weight="0.499999166668" />
+ <shade name="dark" weight="0.277777314816" />
+ <shade name="hard" weight="0.222221851852" />
+</color>
+
+<color name="black" weight="0.140844913708">
+ <shade name="cool" weight="0.499999166668" />
+ <shade name="dark" weight="0.277777314816" />
+ <shade name="hard" weight="0.222221851852" />
+</color>
+
+<color name="blue" weight="0.0985914395954">
+ <shade name="cool" weight="0.499999166668" />
+ <shade name="dark" weight="0.277777314816" />
+ <shade name="hard" weight="0.222221851852" />
+</color>
+
+<color name="green" weight="0.0704224568539">
+ <shade name="cool" weight="0.499999166668" />
+ <shade name="dark" weight="0.277777314816" />
+ <shade name="hard" weight="0.222221851852" />
+</color>
+
+</colors>

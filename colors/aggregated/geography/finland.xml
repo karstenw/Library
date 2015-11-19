@@ -1,0 +1,33 @@
+<colors query="finland">
+
+<color name="white" weight="0.482934267822">
+ <shade name="neutral" weight="0.478767140176" />
+ <shade name="cool" weight="0.397584885972" />
+ <shade name="dark" weight="0.123646817941" />
+</color>
+
+<color name="black" weight="0.430925962056">
+ <shade name="neutral" weight="0.478767140176" />
+ <shade name="cool" weight="0.397584885972" />
+ <shade name="dark" weight="0.123646817941" />
+</color>
+
+<color name="red" weight="0.0336660907857">
+ <shade name="neutral" weight="0.478767140176" />
+ <shade name="cool" weight="0.397584885972" />
+ <shade name="dark" weight="0.123646817941" />
+</color>
+
+<color name="green" weight="0.0280937723108">
+ <shade name="neutral" weight="0.478767140176" />
+ <shade name="cool" weight="0.397584885972" />
+ <shade name="dark" weight="0.123646817941" />
+</color>
+
+<color name="blue" weight="0.0243788933275">
+ <shade name="neutral" weight="0.478767140176" />
+ <shade name="cool" weight="0.397584885972" />
+ <shade name="dark" weight="0.123646817941" />
+</color>
+
+</colors>

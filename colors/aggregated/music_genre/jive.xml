@@ -1,0 +1,33 @@
+<colors query="jive">
+
+<color name="black" weight="0.328610408636">
+ <shade name="fresh" weight="0.96109743322" />
+ <shade name="cool" weight="0.0368364869875" />
+ <shade name="hard" weight="0.00206507578567" />
+</color>
+
+<color name="blue" weight="0.277055961293">
+ <shade name="fresh" weight="0.96109743322" />
+ <shade name="cool" weight="0.0368364869875" />
+ <shade name="hard" weight="0.00206507578567" />
+</color>
+
+<color name="white" weight="0.182211519998">
+ <shade name="fresh" weight="0.96109743322" />
+ <shade name="cool" weight="0.0368364869875" />
+ <shade name="hard" weight="0.00206507578567" />
+</color>
+
+<color name="green" weight="0.142463434642">
+ <shade name="fresh" weight="0.96109743322" />
+ <shade name="cool" weight="0.0368364869875" />
+ <shade name="hard" weight="0.00206507578567" />
+</color>
+
+<color name="pink" weight="0.0696575357229">
+ <shade name="fresh" weight="0.96109743322" />
+ <shade name="cool" weight="0.0368364869875" />
+ <shade name="hard" weight="0.00206507578567" />
+</color>
+
+</colors>

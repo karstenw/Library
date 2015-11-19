@@ -1,0 +1,33 @@
+<colors query="acid jazz">
+
+<color name="black" weight="0.97215339535">
+ <shade name="cool" weight="0.805175305686" />
+ <shade name="soft" weight="0.150251463293" />
+ <shade name="light" weight="0.0445722044219" />
+</color>
+
+<color name="green" weight="0.0161211367068">
+ <shade name="cool" weight="0.805175305686" />
+ <shade name="soft" weight="0.150251463293" />
+ <shade name="light" weight="0.0445722044219" />
+</color>
+
+<color name="blue" weight="0.00439667364731">
+ <shade name="cool" weight="0.805175305686" />
+ <shade name="soft" weight="0.150251463293" />
+ <shade name="light" weight="0.0445722044219" />
+</color>
+
+<color name="white" weight="0.00390815435316">
+ <shade name="cool" weight="0.805175305686" />
+ <shade name="soft" weight="0.150251463293" />
+ <shade name="light" weight="0.0445722044219" />
+</color>
+
+<color name="pink" weight="0.00341963505902">
+ <shade name="cool" weight="0.805175305686" />
+ <shade name="soft" weight="0.150251463293" />
+ <shade name="light" weight="0.0445722044219" />
+</color>
+
+</colors>

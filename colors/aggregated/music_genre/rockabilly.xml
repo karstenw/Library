@@ -1,0 +1,33 @@
+<colors query="rockabilly">
+
+<color name="blue" weight="0.542670235189">
+ <shade name="hard" weight="0.50892445461" />
+ <shade name="cool" weight="0.284845776834" />
+ <shade name="light" weight="0.206228342428" />
+</color>
+
+<color name="pink" weight="0.212078022947">
+ <shade name="hard" weight="0.50892445461" />
+ <shade name="cool" weight="0.284845776834" />
+ <shade name="light" weight="0.206228342428" />
+</color>
+
+<color name="white" weight="0.152537401532">
+ <shade name="hard" weight="0.50892445461" />
+ <shade name="cool" weight="0.284845776834" />
+ <shade name="light" weight="0.206228342428" />
+</color>
+
+<color name="black" weight="0.0524524521995">
+ <shade name="hard" weight="0.50892445461" />
+ <shade name="cool" weight="0.284845776834" />
+ <shade name="light" weight="0.206228342428" />
+</color>
+
+<color name="green" weight="0.0402608011478">
+ <shade name="hard" weight="0.50892445461" />
+ <shade name="cool" weight="0.284845776834" />
+ <shade name="light" weight="0.206228342428" />
+</color>
+
+</colors>

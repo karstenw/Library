@@ -1,0 +1,33 @@
+<colors query="zouk">
+
+<color name="black" weight="0.413792663636">
+ <shade name="hard" weight="0.561045873928" />
+ <shade name="fresh" weight="0.220929981443" />
+ <shade name="cool" weight="0.218023008003" />
+</color>
+
+<color name="orange" weight="0.411764268226">
+ <shade name="hard" weight="0.561045873928" />
+ <shade name="fresh" weight="0.220929981443" />
+ <shade name="cool" weight="0.218023008003" />
+</color>
+
+<color name="blue" weight="0.0811358163993">
+ <shade name="hard" weight="0.561045873928" />
+ <shade name="fresh" weight="0.220929981443" />
+ <shade name="cool" weight="0.218023008003" />
+</color>
+
+<color name="white" weight="0.0507098852495">
+ <shade name="hard" weight="0.561045873928" />
+ <shade name="fresh" weight="0.220929981443" />
+ <shade name="cool" weight="0.218023008003" />
+</color>
+
+<color name="yellow" weight="0.0425963036096">
+ <shade name="hard" weight="0.561045873928" />
+ <shade name="fresh" weight="0.220929981443" />
+ <shade name="cool" weight="0.218023008003" />
+</color>
+
+</colors>

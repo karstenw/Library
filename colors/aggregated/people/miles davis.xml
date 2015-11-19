@@ -1,0 +1,33 @@
+<colors query="miles davis">
+
+<color name="blue" weight="0.836682342135">
+ <shade name="cool" weight="0.97841507308" />
+ <shade name="hard" weight="0.0172167459211" />
+ <shade name="light" weight="0.00436717457512" />
+</color>
+
+<color name="green" weight="0.125034931017">
+ <shade name="cool" weight="0.97841507308" />
+ <shade name="hard" weight="0.0172167459211" />
+ <shade name="light" weight="0.00436717457512" />
+</color>
+
+<color name="purple" weight="0.0257081166578">
+ <shade name="cool" weight="0.97841507308" />
+ <shade name="hard" weight="0.0172167459211" />
+ <shade name="light" weight="0.00436717457512" />
+</color>
+
+<color name="white" weight="0.00786434659577">
+ <shade name="cool" weight="0.97841507308" />
+ <shade name="hard" weight="0.0172167459211" />
+ <shade name="light" weight="0.00436717457512" />
+</color>
+
+<color name="black" weight="0.0047092595514">
+ <shade name="cool" weight="0.97841507308" />
+ <shade name="hard" weight="0.0172167459211" />
+ <shade name="light" weight="0.00436717457512" />
+</color>
+
+</colors>

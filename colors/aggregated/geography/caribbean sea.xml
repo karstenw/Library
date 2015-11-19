@@ -1,0 +1,33 @@
+<colors query="caribbean sea">
+
+<color name="blue" weight="0.972380896749">
+ <shade name="cool" weight="0.642832151133" />
+ <shade name="fresh" weight="0.332391258635" />
+ <shade name="dark" weight="0.0247725560681" />
+</color>
+
+<color name="green" weight="0.0269967731398">
+ <shade name="cool" weight="0.642832151133" />
+ <shade name="fresh" weight="0.332391258635" />
+ <shade name="dark" weight="0.0247725560681" />
+</color>
+
+<color name="black" weight="0.000248531858594">
+ <shade name="warm" weight="0.756650255532" />
+ <shade name="cool" weight="0.160406724285" />
+ <shade name="fresh" weight="0.0829420135329" />
+</color>
+
+<color name="white" weight="0.000186398893945">
+ <shade name="warm" weight="0.756650255532" />
+ <shade name="cool" weight="0.160406724285" />
+ <shade name="fresh" weight="0.0829420135329" />
+</color>
+
+<color name="red" weight="0.000186398893945">
+ <shade name="warm" weight="0.756650255532" />
+ <shade name="cool" weight="0.160406724285" />
+ <shade name="fresh" weight="0.0829420135329" />
+</color>
+
+</colors>

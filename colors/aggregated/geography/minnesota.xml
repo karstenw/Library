@@ -1,0 +1,33 @@
+<colors query="minnesota">
+
+<color name="white" weight="0.607730626817">
+ <shade name="cool" weight="0.362939714512" />
+ <shade name="light" weight="0.330780499302" />
+ <shade name="hard" weight="0.306278240094" />
+</color>
+
+<color name="purple" weight="0.155259649187">
+ <shade name="cool" weight="0.362939714512" />
+ <shade name="light" weight="0.330780499302" />
+ <shade name="hard" weight="0.306278240094" />
+</color>
+
+<color name="red" weight="0.0982254923428">
+ <shade name="cool" weight="0.362939714512" />
+ <shade name="light" weight="0.330780499302" />
+ <shade name="hard" weight="0.306278240094" />
+</color>
+
+<color name="pink" weight="0.0754118296051">
+ <shade name="cool" weight="0.362939714512" />
+ <shade name="light" weight="0.330780499302" />
+ <shade name="hard" weight="0.306278240094" />
+</color>
+
+<color name="green" weight="0.0633712853824">
+ <shade name="cool" weight="0.362939714512" />
+ <shade name="light" weight="0.330780499302" />
+ <shade name="hard" weight="0.306278240094" />
+</color>
+
+</colors>

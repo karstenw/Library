@@ -1,0 +1,33 @@
+<colors query="ufie">
+
+<color name="green" weight="0.999999000001">
+ <shade name="hard" weight="0.399999440001" />
+ <shade name="cool" weight="0.399999440001" />
+ <shade name="fresh" weight="0.19999972" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="warm" weight="0.333332944445" />
+ <shade name="hard" weight="0.333332944445" />
+ <shade name="cool" weight="0.333332944445" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="warm" weight="0.333332944445" />
+ <shade name="hard" weight="0.333332944445" />
+ <shade name="cool" weight="0.333332944445" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="warm" weight="0.333332944445" />
+ <shade name="hard" weight="0.333332944445" />
+ <shade name="cool" weight="0.333332944445" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="hard" weight="0.399999440001" />
+ <shade name="cool" weight="0.399999440001" />
+ <shade name="fresh" weight="0.19999972" />
+</color>
+
+</colors>

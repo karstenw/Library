@@ -1,0 +1,33 @@
+<colors query="kwela">
+
+<color name="white" weight="0.428571">
+ <shade name="light" weight="0.363635966943" />
+ <shade name="cool" weight="0.363635966943" />
+ <shade name="warm" weight="0.272726975207" />
+</color>
+
+<color name="black" weight="0.428571">
+ <shade name="light" weight="0.363635966943" />
+ <shade name="cool" weight="0.363635966943" />
+ <shade name="warm" weight="0.272726975207" />
+</color>
+
+<color name="yellow" weight="0.142857">
+ <shade name="light" weight="0.363635966943" />
+ <shade name="cool" weight="0.363635966943" />
+ <shade name="warm" weight="0.272726975207" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="light" weight="0.363635966943" />
+ <shade name="cool" weight="0.363635966943" />
+ <shade name="warm" weight="0.272726975207" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="light" weight="0.444443851853" />
+ <shade name="cool" weight="0.444443851853" />
+ <shade name="hard" weight="0.111110962963" />
+</color>
+
+</colors>

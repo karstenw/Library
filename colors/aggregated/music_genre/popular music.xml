@@ -1,0 +1,33 @@
+<colors query="popular music">
+
+<color name="black" weight="0.952522699623">
+ <shade name="light" weight="0.900517708338" />
+ <shade name="cool" weight="0.0707212859951" />
+ <shade name="soft" weight="0.028759989638" />
+</color>
+
+<color name="white" weight="0.0402414084335">
+ <shade name="light" weight="0.900517708338" />
+ <shade name="cool" weight="0.0707212859951" />
+ <shade name="soft" weight="0.028759989638" />
+</color>
+
+<color name="green" weight="0.003039510637">
+ <shade name="light" weight="0.900517708338" />
+ <shade name="cool" weight="0.0707212859951" />
+ <shade name="soft" weight="0.028759989638" />
+</color>
+
+<color name="blue" weight="0.00237595549794">
+ <shade name="light" weight="0.900517708338" />
+ <shade name="cool" weight="0.0707212859951" />
+ <shade name="soft" weight="0.028759989638" />
+</color>
+
+<color name="red" weight="0.0018194253813">
+ <shade name="light" weight="0.900517708338" />
+ <shade name="cool" weight="0.0707212859951" />
+ <shade name="soft" weight="0.028759989638" />
+</color>
+
+</colors>

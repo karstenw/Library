@@ -1,0 +1,33 @@
+<colors query="sophie tucker">
+
+<color name="black" weight="0.562499437501">
+ <shade name="hard" weight="0.999999000001" />
+ <shade name="weak" weight="0.0" />
+ <shade name="warm" weight="0.0" />
+</color>
+
+<color name="blue" weight="0.21874978125">
+ <shade name="hard" weight="0.999999000001" />
+ <shade name="weak" weight="0.0" />
+ <shade name="soft" weight="0.0" />
+</color>
+
+<color name="white" weight="0.124999875">
+ <shade name="hard" weight="0.999999000001" />
+ <shade name="weak" weight="0.0" />
+ <shade name="warm" weight="0.0" />
+</color>
+
+<color name="green" weight="0.0624999375001">
+ <shade name="hard" weight="0.999999000001" />
+ <shade name="weak" weight="0.0" />
+ <shade name="soft" weight="0.0" />
+</color>
+
+<color name="red" weight="0.03124996875">
+ <shade name="hard" weight="0.999999000001" />
+ <shade name="weak" weight="0.0" />
+ <shade name="warm" weight="0.0" />
+</color>
+
+</colors>

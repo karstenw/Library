@@ -1,0 +1,33 @@
+<colors query="elizabeth arden">
+
+<color name="white" weight="0.419293381019">
+ <shade name="soft" weight="0.529354838478" />
+ <shade name="light" weight="0.44980956758" />
+ <shade name="warm" weight="0.0208332852353" />
+</color>
+
+<color name="red" weight="0.267969454035">
+ <shade name="intense" weight="0.566274588684" />
+ <shade name="soft" weight="0.234479625981" />
+ <shade name="light" weight="0.199244762685" />
+</color>
+
+<color name="green" weight="0.203341526885">
+ <shade name="intense" weight="0.566274588684" />
+ <shade name="soft" weight="0.234479625981" />
+ <shade name="light" weight="0.199244762685" />
+</color>
+
+<color name="black" weight="0.0638397816965">
+ <shade name="intense" weight="0.566274588684" />
+ <shade name="soft" weight="0.234479625981" />
+ <shade name="light" weight="0.199244762685" />
+</color>
+
+<color name="pink" weight="0.0455548071859">
+ <shade name="soft" weight="0.529354838478" />
+ <shade name="light" weight="0.44980956758" />
+ <shade name="warm" weight="0.0208332852353" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="sigmund freud">
+
+<color name="green" weight="0.320512486303">
+ <shade name="soft" weight="0.573769692288" />
+ <shade name="light" weight="0.278688136254" />
+ <shade name="hard" weight="0.147540778017" />
+</color>
+
+<color name="white" weight="0.290597987582">
+ <shade name="soft" weight="0.573769692288" />
+ <shade name="light" weight="0.278688136254" />
+ <shade name="hard" weight="0.147540778017" />
+</color>
+
+<color name="black" weight="0.239315989773">
+ <shade name="soft" weight="0.573769692288" />
+ <shade name="light" weight="0.278688136254" />
+ <shade name="hard" weight="0.147540778017" />
+</color>
+
+<color name="red" weight="0.128204994521">
+ <shade name="soft" weight="0.573769692288" />
+ <shade name="light" weight="0.278688136254" />
+ <shade name="hard" weight="0.147540778017" />
+</color>
+
+<color name="pink" weight="0.0213674990869">
+ <shade name="soft" weight="0.573769692288" />
+ <shade name="light" weight="0.278688136254" />
+ <shade name="hard" weight="0.147540778017" />
+</color>
+
+</colors>

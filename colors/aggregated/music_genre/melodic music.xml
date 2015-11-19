@@ -1,0 +1,33 @@
+<colors query="melodic music">
+
+<color name="black" weight="0.799999200001">
+ <shade name="soft" weight="0.519819118766" />
+ <shade name="dark" weight="0.288287899489" />
+ <shade name="light" weight="0.191891633098" />
+</color>
+
+<color name="green" weight="0.0999999000001">
+ <shade name="soft" weight="0.519819118766" />
+ <shade name="dark" weight="0.288287899489" />
+ <shade name="light" weight="0.191891633098" />
+</color>
+
+<color name="blue" weight="0.0999999000001">
+ <shade name="soft" weight="0.519819118766" />
+ <shade name="dark" weight="0.288287899489" />
+ <shade name="light" weight="0.191891633098" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="soft" weight="0.519819118766" />
+ <shade name="dark" weight="0.288287899489" />
+ <shade name="light" weight="0.191891633098" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="soft" weight="0.519819118766" />
+ <shade name="dark" weight="0.288287899489" />
+ <shade name="light" weight="0.191891633098" />
+</color>
+
+</colors>

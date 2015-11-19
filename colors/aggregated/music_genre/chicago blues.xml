@@ -1,0 +1,33 @@
+<colors query="chicago blues">
+
+<color name="blue" weight="0.933379899585">
+ <shade name="hard" weight="0.879628739141" />
+ <shade name="cool" weight="0.1134258111" />
+ <shade name="light" weight="0.00694443741427" />
+</color>
+
+<color name="white" weight="0.0397814588246">
+ <shade name="hard" weight="0.879628739141" />
+ <shade name="cool" weight="0.1134258111" />
+ <shade name="light" weight="0.00694443741427" />
+</color>
+
+<color name="red" weight="0.0251751321517">
+ <shade name="hard" weight="0.879628739141" />
+ <shade name="cool" weight="0.1134258111" />
+ <shade name="light" weight="0.00694443741427" />
+</color>
+
+<color name="black" weight="0.000950004986855">
+ <shade name="hard" weight="0.879628739141" />
+ <shade name="cool" weight="0.1134258111" />
+ <shade name="light" weight="0.00694443741427" />
+</color>
+
+<color name="green" weight="0.000712503740141">
+ <shade name="hard" weight="0.879628739141" />
+ <shade name="cool" weight="0.1134258111" />
+ <shade name="light" weight="0.00694443741427" />
+</color>
+
+</colors>

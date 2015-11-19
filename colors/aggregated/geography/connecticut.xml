@@ -1,0 +1,33 @@
+<colors query="connecticut">
+
+<color name="orange" weight="0.939798576788">
+ <shade name="dark" weight="0.534269843882" />
+ <shade name="light" weight="0.26748641526" />
+ <shade name="cool" weight="0.198242231546" />
+</color>
+
+<color name="green" weight="0.0215539500965">
+ <shade name="dark" weight="0.534269843882" />
+ <shade name="light" weight="0.26748641526" />
+ <shade name="cool" weight="0.198242231546" />
+</color>
+
+<color name="black" weight="0.0165710476548">
+ <shade name="dark" weight="0.534269843882" />
+ <shade name="light" weight="0.26748641526" />
+ <shade name="cool" weight="0.198242231546" />
+</color>
+
+<color name="white" weight="0.0154122331335">
+ <shade name="dark" weight="0.534269843882" />
+ <shade name="light" weight="0.26748641526" />
+ <shade name="cool" weight="0.198242231546" />
+</color>
+
+<color name="blue" weight="0.00666318349757">
+ <shade name="dark" weight="0.534269843882" />
+ <shade name="light" weight="0.26748641526" />
+ <shade name="cool" weight="0.198242231546" />
+</color>
+
+</colors>

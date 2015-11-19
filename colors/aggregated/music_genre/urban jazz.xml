@@ -1,0 +1,33 @@
+<colors query="urban jazz">
+
+<color name="black" weight="0.874999125001">
+ <shade name="cool" weight="0.973044828075" />
+ <shade name="soft" weight="0.0188679052535" />
+ <shade name="dark" weight="0.00808624510866" />
+</color>
+
+<color name="white" weight="0.124999875">
+ <shade name="cool" weight="0.973044828075" />
+ <shade name="soft" weight="0.0188679052535" />
+ <shade name="dark" weight="0.00808624510866" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="cool" weight="0.973044828075" />
+ <shade name="soft" weight="0.0188679052535" />
+ <shade name="dark" weight="0.00808624510866" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="cool" weight="0.973044828075" />
+ <shade name="soft" weight="0.0188679052535" />
+ <shade name="dark" weight="0.00808624510866" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="cool" weight="0.973044828075" />
+ <shade name="soft" weight="0.0188679052535" />
+ <shade name="dark" weight="0.00808624510866" />
+</color>
+
+</colors>

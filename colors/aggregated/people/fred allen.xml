@@ -1,0 +1,33 @@
+<colors query="fred allen">
+
+<color name="orange" weight="0.776594968086">
+ <shade name="weak" weight="0.0" />
+ <shade name="warm" weight="0.0" />
+ <shade name="soft" weight="0.0" />
+</color>
+
+<color name="green" weight="0.0957445851065">
+ <shade name="weak" weight="0.0" />
+ <shade name="soft" weight="0.0" />
+ <shade name="neutral" weight="0.0" />
+</color>
+
+<color name="white" weight="0.0638297234043">
+ <shade name="weak" weight="0.0" />
+ <shade name="warm" weight="0.0" />
+ <shade name="soft" weight="0.0" />
+</color>
+
+<color name="black" weight="0.0638297234043">
+ <shade name="weak" weight="0.0" />
+ <shade name="warm" weight="0.0" />
+ <shade name="soft" weight="0.0" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="weak" weight="0.0" />
+ <shade name="warm" weight="0.0" />
+ <shade name="soft" weight="0.0" />
+</color>
+
+</colors>

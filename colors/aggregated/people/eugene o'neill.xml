@@ -1,0 +1,33 @@
+<colors query="eugene o'neill">
+
+<color name="black" weight="0.664121473283">
+ <shade name="light" weight="0.934781643432" />
+ <shade name="intense" weight="0.0326086619802" />
+ <shade name="dark" weight="0.0326086619802" />
+</color>
+
+<color name="white" weight="0.22900740458">
+ <shade name="light" weight="0.955554546915" />
+ <shade name="dark" weight="0.0333332981482" />
+ <shade name="weak" weight="0.0111110993827" />
+</color>
+
+<color name="purple" weight="0.0534350610688">
+ <shade name="light" weight="0.955554546915" />
+ <shade name="dark" weight="0.0333332981482" />
+ <shade name="weak" weight="0.0111110993827" />
+</color>
+
+<color name="blue" weight="0.0305343206107">
+ <shade name="light" weight="0.934781643432" />
+ <shade name="intense" weight="0.0326086619802" />
+ <shade name="dark" weight="0.0326086619802" />
+</color>
+
+<color name="green" weight="0.022900740458">
+ <shade name="light" weight="0.934781643432" />
+ <shade name="intense" weight="0.0326086619802" />
+ <shade name="dark" weight="0.0326086619802" />
+</color>
+
+</colors>

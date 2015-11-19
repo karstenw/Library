@@ -1,0 +1,33 @@
+<colors query="federico fellini">
+
+<color name="white" weight="0.607842505575">
+ <shade name="soft" weight="0.444443901235" />
+ <shade name="hard" weight="0.333332925926" />
+ <shade name="dark" weight="0.222221950618" />
+</color>
+
+<color name="green" weight="0.137254759323">
+ <shade name="soft" weight="0.444443901235" />
+ <shade name="hard" weight="0.333332925926" />
+ <shade name="dark" weight="0.222221950618" />
+</color>
+
+<color name="orange" weight="0.0980391138025">
+ <shade name="soft" weight="0.444443901235" />
+ <shade name="hard" weight="0.333332925926" />
+ <shade name="dark" weight="0.222221950618" />
+</color>
+
+<color name="purple" weight="0.078431291042">
+ <shade name="soft" weight="0.444443901235" />
+ <shade name="hard" weight="0.333332925926" />
+ <shade name="dark" weight="0.222221950618" />
+</color>
+
+<color name="blue" weight="0.078431291042">
+ <shade name="soft" weight="0.444443901235" />
+ <shade name="hard" weight="0.333332925926" />
+ <shade name="dark" weight="0.222221950618" />
+</color>
+
+</colors>

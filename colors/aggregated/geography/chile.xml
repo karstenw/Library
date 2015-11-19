@@ -1,0 +1,33 @@
+<colors query="chile">
+
+<color name="green" weight="0.655187695667">
+ <shade name="fresh" weight="0.896794093913" />
+ <shade name="light" weight="0.0641967356845" />
+ <shade name="dark" weight="0.0390080928281" />
+</color>
+
+<color name="red" weight="0.327016080906">
+ <shade name="fresh" weight="0.896794093913" />
+ <shade name="light" weight="0.0641967356845" />
+ <shade name="dark" weight="0.0390080928281" />
+</color>
+
+<color name="white" weight="0.0145597265704">
+ <shade name="fresh" weight="0.896794093913" />
+ <shade name="light" weight="0.0641967356845" />
+ <shade name="dark" weight="0.0390080928281" />
+</color>
+
+<color name="orange" weight="0.00196440755315">
+ <shade name="fresh" weight="0.896794093913" />
+ <shade name="light" weight="0.0641967356845" />
+ <shade name="dark" weight="0.0390080928281" />
+</color>
+
+<color name="blue" weight="0.00127108724027">
+ <shade name="fresh" weight="0.896794093913" />
+ <shade name="light" weight="0.0641967356845" />
+ <shade name="dark" weight="0.0390080928281" />
+</color>
+
+</colors>

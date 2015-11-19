@@ -1,0 +1,33 @@
+<colors query="sadcore">
+
+<color name="black" weight="0.999999000001">
+ <shade name="dark" weight="0.411764221454" />
+ <shade name="soft" weight="0.352940761246" />
+ <shade name="hard" weight="0.235293840831" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="dark" weight="0.411764221454" />
+ <shade name="soft" weight="0.352940761246" />
+ <shade name="hard" weight="0.235293840831" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="dark" weight="0.411764221454" />
+ <shade name="soft" weight="0.352940761246" />
+ <shade name="hard" weight="0.235293840831" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="dark" weight="0.411764221454" />
+ <shade name="soft" weight="0.352940761246" />
+ <shade name="hard" weight="0.235293840831" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="dark" weight="0.411764221454" />
+ <shade name="soft" weight="0.352940761246" />
+ <shade name="hard" weight="0.235293840831" />
+</color>
+
+</colors>

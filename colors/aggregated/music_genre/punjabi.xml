@@ -1,0 +1,33 @@
+<colors query="punjabi">
+
+<color name="blue" weight="0.416167145459">
+ <shade name="cool" weight="0.697145784833" />
+ <shade name="fresh" weight="0.152399311103" />
+ <shade name="hard" weight="0.150453787983" />
+</color>
+
+<color name="black" weight="0.224251217229">
+ <shade name="cool" weight="0.697145784833" />
+ <shade name="fresh" weight="0.152399311103" />
+ <shade name="hard" weight="0.150453787983" />
+</color>
+
+<color name="pink" weight="0.131137560943">
+ <shade name="cool" weight="0.697145784833" />
+ <shade name="fresh" weight="0.152399311103" />
+ <shade name="hard" weight="0.150453787983" />
+</color>
+
+<color name="white" weight="0.125149544462">
+ <shade name="cool" weight="0.697145784833" />
+ <shade name="fresh" weight="0.152399311103" />
+ <shade name="hard" weight="0.150453787983" />
+</color>
+
+<color name="green" weight="0.103293284304">
+ <shade name="cool" weight="0.697145784833" />
+ <shade name="fresh" weight="0.152399311103" />
+ <shade name="hard" weight="0.150453787983" />
+</color>
+
+</colors>

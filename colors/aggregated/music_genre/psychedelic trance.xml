@@ -1,0 +1,33 @@
+<colors query="psychedelic trance">
+
+<color name="orange" weight="0.363636">
+ <shade name="hard" weight="0.500282459816" />
+ <shade name="dark" weight="0.475381522902" />
+ <shade name="cool" weight="0.0243350065295" />
+</color>
+
+<color name="blue" weight="0.272727">
+ <shade name="hard" weight="0.500282459816" />
+ <shade name="dark" weight="0.475381522902" />
+ <shade name="cool" weight="0.0243350065295" />
+</color>
+
+<color name="black" weight="0.272727">
+ <shade name="hard" weight="0.500282459816" />
+ <shade name="dark" weight="0.475381522902" />
+ <shade name="cool" weight="0.0243350065295" />
+</color>
+
+<color name="yellow" weight="0.0909090000001">
+ <shade name="hard" weight="0.500282459816" />
+ <shade name="dark" weight="0.475381522902" />
+ <shade name="cool" weight="0.0243350065295" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="hard" weight="0.500282459816" />
+ <shade name="dark" weight="0.475381522902" />
+ <shade name="cool" weight="0.0243350065295" />
+</color>
+
+</colors>

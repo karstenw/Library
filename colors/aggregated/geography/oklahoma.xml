@@ -1,0 +1,33 @@
+<colors query="oklahoma">
+
+<color name="blue" weight="0.584997038414">
+ <shade name="cool" weight="0.413104690937" />
+ <shade name="hard" weight="0.299144776196" />
+ <shade name="light" weight="0.287748784722" />
+</color>
+
+<color name="white" weight="0.234313329902">
+ <shade name="cool" weight="0.413104690937" />
+ <shade name="hard" weight="0.299144776196" />
+ <shade name="light" weight="0.287748784722" />
+</color>
+
+<color name="black" weight="0.14467668692">
+ <shade name="cool" weight="0.413104690937" />
+ <shade name="hard" weight="0.299144776196" />
+ <shade name="light" weight="0.287748784722" />
+</color>
+
+<color name="yellow" weight="0.0185563576701">
+ <shade name="cool" weight="0.413104690937" />
+ <shade name="hard" weight="0.299144776196" />
+ <shade name="light" weight="0.287748784722" />
+</color>
+
+<color name="pink" weight="0.0174555567914">
+ <shade name="cool" weight="0.413104690937" />
+ <shade name="hard" weight="0.299144776196" />
+ <shade name="light" weight="0.287748784722" />
+</color>
+
+</colors>

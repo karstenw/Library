@@ -1,0 +1,33 @@
+<colors query="amelia earhart">
+
+<color name="white" weight="0.429824101416">
+ <shade name="cool" weight="0.461537893492" />
+ <shade name="light" weight="0.384614911243" />
+ <shade name="hard" weight="0.153845964497" />
+</color>
+
+<color name="red" weight="0.35964873792">
+ <shade name="cool" weight="0.461537893492" />
+ <shade name="light" weight="0.384614911243" />
+ <shade name="hard" weight="0.153845964497" />
+</color>
+
+<color name="green" weight="0.0789472839336">
+ <shade name="cool" weight="0.461537893492" />
+ <shade name="light" weight="0.384614911243" />
+ <shade name="hard" weight="0.153845964497" />
+</color>
+
+<color name="black" weight="0.0789472839336">
+ <shade name="cool" weight="0.461537893492" />
+ <shade name="light" weight="0.384614911243" />
+ <shade name="hard" weight="0.153845964497" />
+</color>
+
+<color name="yellow" weight="0.0526315226224">
+ <shade name="cool" weight="0.461537893492" />
+ <shade name="light" weight="0.384614911243" />
+ <shade name="hard" weight="0.153845964497" />
+</color>
+
+</colors>

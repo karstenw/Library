@@ -1,0 +1,33 @@
+<colors query="johann wolfgang von goethe">
+
+<color name="green" weight="0.786665880001">
+ <shade name="light" weight="0.967740967743" />
+ <shade name="cool" weight="0.0215053548387" />
+ <shade name="hard" weight="0.0107526774194" />
+</color>
+
+<color name="red" weight="0.0933332400001">
+ <shade name="light" weight="0.967740967743" />
+ <shade name="cool" weight="0.0215053548387" />
+ <shade name="hard" weight="0.0107526774194" />
+</color>
+
+<color name="white" weight="0.0666666000001">
+ <shade name="light" weight="0.967740967743" />
+ <shade name="cool" weight="0.0215053548387" />
+ <shade name="hard" weight="0.0107526774194" />
+</color>
+
+<color name="black" weight="0.03999996">
+ <shade name="light" weight="0.967740967743" />
+ <shade name="cool" weight="0.0215053548387" />
+ <shade name="hard" weight="0.0107526774194" />
+</color>
+
+<color name="blue" weight="0.01333332">
+ <shade name="light" weight="0.967740967743" />
+ <shade name="cool" weight="0.0215053548387" />
+ <shade name="hard" weight="0.0107526774194" />
+</color>
+
+</colors>

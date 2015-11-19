@@ -1,0 +1,33 @@
+<colors query="funky breaks">
+
+<color name="white" weight="0.999999000001">
+ <shade name="hard" weight="0.993005995372" />
+ <shade name="dark" weight="0.00372959998262" />
+ <shade name="cool" weight="0.00326339998479" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="hard" weight="0.993005995372" />
+ <shade name="dark" weight="0.00372959998262" />
+ <shade name="cool" weight="0.00326339998479" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="hard" weight="0.993005995372" />
+ <shade name="dark" weight="0.00372959998262" />
+ <shade name="cool" weight="0.00326339998479" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="hard" weight="0.993005995372" />
+ <shade name="dark" weight="0.00372959998262" />
+ <shade name="cool" weight="0.00326339998479" />
+</color>
+
+<color name="pink" weight="0.0">
+ <shade name="hard" weight="0.993005995372" />
+ <shade name="dark" weight="0.00372959998262" />
+ <shade name="cool" weight="0.00326339998479" />
+</color>
+
+</colors>

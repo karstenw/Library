@@ -1,0 +1,33 @@
+<colors query="disco">
+
+<color name="black" weight="0.749503343295">
+ <shade name="light" weight="0.476548743187" />
+ <shade name="dark" weight="0.28140663921" />
+ <shade name="cool" weight="0.242043210511" />
+</color>
+
+<color name="blue" weight="0.137857609268">
+ <shade name="light" weight="0.476548743187" />
+ <shade name="dark" weight="0.28140663921" />
+ <shade name="cool" weight="0.242043210511" />
+</color>
+
+<color name="pink" weight="0.0633323240931">
+ <shade name="light" weight="0.476548743187" />
+ <shade name="dark" weight="0.28140663921" />
+ <shade name="cool" weight="0.242043210511" />
+</color>
+
+<color name="red" weight="0.0260696815059">
+ <shade name="light" weight="0.476548743187" />
+ <shade name="dark" weight="0.28140663921" />
+ <shade name="cool" weight="0.242043210511" />
+</color>
+
+<color name="white" weight="0.0232360204726">
+ <shade name="light" weight="0.476548743187" />
+ <shade name="dark" weight="0.28140663921" />
+ <shade name="cool" weight="0.242043210511" />
+</color>
+
+</colors>

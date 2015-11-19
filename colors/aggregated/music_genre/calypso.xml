@@ -1,0 +1,33 @@
+<colors query="calypso">
+
+<color name="blue" weight="0.330519327543">
+ <shade name="cool" weight="0.426970951558" />
+ <shade name="bright" weight="0.356975713598" />
+ <shade name="soft" weight="0.216051967837" />
+</color>
+
+<color name="black" weight="0.250177706386">
+ <shade name="cool" weight="0.426970951558" />
+ <shade name="bright" weight="0.356975713598" />
+ <shade name="soft" weight="0.216051967837" />
+</color>
+
+<color name="white" weight="0.188141771063">
+ <shade name="cool" weight="0.426970951558" />
+ <shade name="bright" weight="0.356975713598" />
+ <shade name="soft" weight="0.216051967837" />
+</color>
+
+<color name="red" weight="0.139326608841">
+ <shade name="cool" weight="0.426970951558" />
+ <shade name="bright" weight="0.356975713598" />
+ <shade name="soft" weight="0.216051967837" />
+</color>
+
+<color name="pink" weight="0.0918335239295">
+ <shade name="cool" weight="0.426970951558" />
+ <shade name="bright" weight="0.356975713598" />
+ <shade name="soft" weight="0.216051967837" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="w. e. b. du bois">
+
+<color name="red" weight="0.761012454847">
+ <shade name="light" weight="0.333333" />
+ <shade name="intense" weight="0.333333" />
+ <shade name="hard" weight="0.333333" />
+</color>
+
+<color name="white" weight="0.125550535242">
+ <shade name="light" weight="0.499999250001" />
+ <shade name="hard" weight="0.499999250001" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="black" weight="0.10572676652">
+ <shade name="light" weight="0.333333" />
+ <shade name="intense" weight="0.333333" />
+ <shade name="hard" weight="0.333333" />
+</color>
+
+<color name="green" weight="0.00770924339208">
+ <shade name="light" weight="0.333333" />
+ <shade name="intense" weight="0.333333" />
+ <shade name="hard" weight="0.333333" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="light" weight="0.333333" />
+ <shade name="intense" weight="0.333333" />
+ <shade name="hard" weight="0.333333" />
+</color>
+
+</colors>

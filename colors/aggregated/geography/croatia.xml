@@ -1,0 +1,33 @@
+<colors query="croatia">
+
+<color name="white" weight="0.577293657811">
+ <shade name="cool" weight="0.744214305072" />
+ <shade name="light" weight="0.18667896644" />
+ <shade name="hard" weight="0.0691056140424" />
+</color>
+
+<color name="red" weight="0.249166259602">
+ <shade name="cool" weight="0.744214305072" />
+ <shade name="light" weight="0.18667896644" />
+ <shade name="hard" weight="0.0691056140424" />
+</color>
+
+<color name="blue" weight="0.090542105602">
+ <shade name="cool" weight="0.744214305072" />
+ <shade name="light" weight="0.18667896644" />
+ <shade name="hard" weight="0.0691056140424" />
+</color>
+
+<color name="black" weight="0.0449201144072">
+ <shade name="cool" weight="0.744214305072" />
+ <shade name="light" weight="0.18667896644" />
+ <shade name="hard" weight="0.0691056140424" />
+</color>
+
+<color name="green" weight="0.038076815728">
+ <shade name="cool" weight="0.744214305072" />
+ <shade name="light" weight="0.18667896644" />
+ <shade name="hard" weight="0.0691056140424" />
+</color>
+
+</colors>

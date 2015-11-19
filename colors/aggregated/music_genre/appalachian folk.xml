@@ -1,0 +1,33 @@
+<colors query="appalachian folk">
+
+<color name="black" weight="0.855262302632">
+ <shade name="dark" weight="0.749999250001" />
+ <shade name="light" weight="0.124999875" />
+ <shade name="cool" weight="0.124999875" />
+</color>
+
+<color name="white" weight="0.13157881579">
+ <shade name="dark" weight="0.749999250001" />
+ <shade name="light" weight="0.124999875" />
+ <shade name="cool" weight="0.124999875" />
+</color>
+
+<color name="green" weight="0.013157881579">
+ <shade name="dark" weight="0.749999250001" />
+ <shade name="light" weight="0.124999875" />
+ <shade name="cool" weight="0.124999875" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="dark" weight="0.749999250001" />
+ <shade name="light" weight="0.124999875" />
+ <shade name="cool" weight="0.124999875" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="dark" weight="0.749999250001" />
+ <shade name="light" weight="0.124999875" />
+ <shade name="cool" weight="0.124999875" />
+</color>
+
+</colors>

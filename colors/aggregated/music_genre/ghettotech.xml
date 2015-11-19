@@ -1,0 +1,33 @@
+<colors query="ghettotech">
+
+<color name="red" weight="0.666666000001">
+ <shade name="fresh" weight="0.444443950618" />
+ <shade name="cool" weight="0.333332962963" />
+ <shade name="dark" weight="0.222221975309" />
+</color>
+
+<color name="orange" weight="0.333333">
+ <shade name="fresh" weight="0.444443950618" />
+ <shade name="cool" weight="0.333332962963" />
+ <shade name="dark" weight="0.222221975309" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="fresh" weight="0.444443950618" />
+ <shade name="cool" weight="0.333332962963" />
+ <shade name="dark" weight="0.222221975309" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="fresh" weight="0.444443950618" />
+ <shade name="cool" weight="0.333332962963" />
+ <shade name="dark" weight="0.222221975309" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="fresh" weight="0.444443950618" />
+ <shade name="cool" weight="0.333332962963" />
+ <shade name="dark" weight="0.222221975309" />
+</color>
+
+</colors>

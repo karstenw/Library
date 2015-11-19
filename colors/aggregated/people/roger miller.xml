@@ -1,0 +1,33 @@
+<colors query="roger miller">
+
+<color name="black" weight="0.75581316838">
+ <shade name="hard" weight="0.363635900827" />
+ <shade name="cool" weight="0.363635900827" />
+ <shade name="light" weight="0.27272692562" />
+</color>
+
+<color name="green" weight="0.162790528574">
+ <shade name="hard" weight="0.363635900827" />
+ <shade name="cool" weight="0.363635900827" />
+ <shade name="light" weight="0.27272692562" />
+</color>
+
+<color name="pink" weight="0.0310077197284">
+ <shade name="hard" weight="0.363635900827" />
+ <shade name="cool" weight="0.363635900827" />
+ <shade name="light" weight="0.27272692562" />
+</color>
+
+<color name="white" weight="0.0271317547624">
+ <shade name="hard" weight="0.363635900827" />
+ <shade name="cool" weight="0.363635900827" />
+ <shade name="light" weight="0.27272692562" />
+</color>
+
+<color name="purple" weight="0.0232557897963">
+ <shade name="hard" weight="0.363635900827" />
+ <shade name="cool" weight="0.363635900827" />
+ <shade name="light" weight="0.27272692562" />
+</color>
+
+</colors>

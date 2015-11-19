@@ -1,0 +1,33 @@
+<colors query="maria callas">
+
+<color name="white" weight="0.618420344703">
+ <shade name="light" weight="0.53846083432" />
+ <shade name="warm" weight="0.230768928994" />
+ <shade name="dark" weight="0.230768928994" />
+</color>
+
+<color name="pink" weight="0.118420917071">
+ <shade name="light" weight="0.53846083432" />
+ <shade name="warm" weight="0.230768928994" />
+ <shade name="dark" weight="0.230768928994" />
+</color>
+
+<color name="red" weight="0.105263037396">
+ <shade name="light" weight="0.53846083432" />
+ <shade name="warm" weight="0.230768928994" />
+ <shade name="dark" weight="0.230768928994" />
+</color>
+
+<color name="blue" weight="0.0789472780472">
+ <shade name="light" weight="0.583332506946" />
+ <shade name="dark" weight="0.249999645834" />
+ <shade name="fresh" weight="0.166666430556" />
+</color>
+
+<color name="black" weight="0.0789472780472">
+ <shade name="light" weight="0.53846083432" />
+ <shade name="warm" weight="0.230768928994" />
+ <shade name="dark" weight="0.230768928994" />
+</color>
+
+</colors>

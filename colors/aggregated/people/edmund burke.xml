@@ -1,0 +1,33 @@
+<colors query="edmund burke">
+
+<color name="white" weight="0.850466415408">
+ <shade name="light" weight="0.428570816327" />
+ <shade name="cool" weight="0.428570816327" />
+ <shade name="weak" weight="0.142856938776" />
+</color>
+
+<color name="black" weight="0.0747662782777">
+ <shade name="light" weight="0.428570816327" />
+ <shade name="cool" weight="0.428570816327" />
+ <shade name="weak" weight="0.142856938776" />
+</color>
+
+<color name="red" weight="0.0373831391388">
+ <shade name="light" weight="0.428570816327" />
+ <shade name="cool" weight="0.428570816327" />
+ <shade name="weak" weight="0.142856938776" />
+</color>
+
+<color name="yellow" weight="0.0186915695694">
+ <shade name="light" weight="0.428570816327" />
+ <shade name="cool" weight="0.428570816327" />
+ <shade name="weak" weight="0.142856938776" />
+</color>
+
+<color name="green" weight="0.0186915695694">
+ <shade name="light" weight="0.428570816327" />
+ <shade name="cool" weight="0.428570816327" />
+ <shade name="weak" weight="0.142856938776" />
+</color>
+
+</colors>

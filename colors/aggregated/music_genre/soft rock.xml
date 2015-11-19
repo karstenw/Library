@@ -1,0 +1,33 @@
+<colors query="soft rock">
+
+<color name="red" weight="0.279489622194">
+ <shade name="hard" weight="0.70538501161" />
+ <shade name="soft" weight="0.159364761882" />
+ <shade name="warm" weight="0.13524903499" />
+</color>
+
+<color name="blue" weight="0.250796771247">
+ <shade name="hard" weight="0.735539739938" />
+ <shade name="soft" weight="0.166177496801" />
+ <shade name="cool" weight="0.0982815208066" />
+</color>
+
+<color name="black" weight="0.249734073063">
+ <shade name="hard" weight="0.70538501161" />
+ <shade name="soft" weight="0.159364761882" />
+ <shade name="warm" weight="0.13524903499" />
+</color>
+
+<color name="white" weight="0.210414240283">
+ <shade name="hard" weight="0.70538501161" />
+ <shade name="soft" weight="0.159364761882" />
+ <shade name="warm" weight="0.13524903499" />
+</color>
+
+<color name="yellow" weight="0.00956428364924">
+ <shade name="hard" weight="0.70538501161" />
+ <shade name="soft" weight="0.159364761882" />
+ <shade name="warm" weight="0.13524903499" />
+</color>
+
+</colors>

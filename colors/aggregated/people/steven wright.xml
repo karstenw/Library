@@ -1,0 +1,33 @@
+<colors query="steven wright">
+
+<color name="black" weight="0.520832811054">
+ <shade name="dark" weight="0.868685991226" />
+ <shade name="cool" weight="0.0909089990818" />
+ <shade name="light" weight="0.0404039995919" />
+</color>
+
+<color name="white" weight="0.451388436247">
+ <shade name="dark" weight="0.868685991226" />
+ <shade name="cool" weight="0.0909089990818" />
+ <shade name="light" weight="0.0404039995919" />
+</color>
+
+<color name="green" weight="0.0124999874653">
+ <shade name="dark" weight="0.868685991226" />
+ <shade name="cool" weight="0.0909089990818" />
+ <shade name="light" weight="0.0404039995919" />
+</color>
+
+<color name="blue" weight="0.009722212473">
+ <shade name="dark" weight="0.868685991226" />
+ <shade name="cool" weight="0.0909089990818" />
+ <shade name="light" weight="0.0404039995919" />
+</color>
+
+<color name="purple" weight="0.00555554998457">
+ <shade name="dark" weight="0.868685991226" />
+ <shade name="cool" weight="0.0909089990818" />
+ <shade name="light" weight="0.0404039995919" />
+</color>
+
+</colors>

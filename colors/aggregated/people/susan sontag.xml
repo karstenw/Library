@@ -1,0 +1,33 @@
+<colors query="susan sontag">
+
+<color name="white" weight="0.803570610651">
+ <shade name="light" weight="0.428570816327" />
+ <shade name="hard" weight="0.285713877552" />
+ <shade name="bright" weight="0.285713877552" />
+</color>
+
+<color name="red" weight="0.107142748087">
+ <shade name="light" weight="0.428570816327" />
+ <shade name="intense" weight="0.285713877552" />
+ <shade name="hard" weight="0.285713877552" />
+</color>
+
+<color name="black" weight="0.0535713740434">
+ <shade name="light" weight="0.428570816327" />
+ <shade name="intense" weight="0.285713877552" />
+ <shade name="hard" weight="0.285713877552" />
+</color>
+
+<color name="purple" weight="0.0178571246811">
+ <shade name="light" weight="0.428570816327" />
+ <shade name="hard" weight="0.285713877552" />
+ <shade name="bright" weight="0.285713877552" />
+</color>
+
+<color name="pink" weight="0.0178571246811">
+ <shade name="light" weight="0.428570816327" />
+ <shade name="hard" weight="0.285713877552" />
+ <shade name="bright" weight="0.285713877552" />
+</color>
+
+</colors>

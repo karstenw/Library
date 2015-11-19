@@ -1,0 +1,33 @@
+<colors query="sulu sea">
+
+<color name="blue" weight="0.692307000001">
+ <shade name="dark" weight="0.666665333336" />
+ <shade name="fresh" weight="0.333332666668" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="orange" weight="0.153846">
+ <shade name="warm" weight="0.4999995" />
+ <shade name="dark" weight="0.333333" />
+ <shade name="fresh" weight="0.1666665" />
+</color>
+
+<color name="white" weight="0.0769230000001">
+ <shade name="warm" weight="0.4999995" />
+ <shade name="dark" weight="0.333333" />
+ <shade name="fresh" weight="0.1666665" />
+</color>
+
+<color name="cyan" weight="0.0769230000001">
+ <shade name="dark" weight="0.666665333336" />
+ <shade name="fresh" weight="0.333332666668" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="warm" weight="0.4999995" />
+ <shade name="dark" weight="0.333333" />
+ <shade name="fresh" weight="0.1666665" />
+</color>
+
+</colors>

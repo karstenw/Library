@@ -1,0 +1,33 @@
+<colors query="o. henry">
+
+<color name="white" weight="0.490384096709">
+ <shade name="hard" weight="0.617885535859" />
+ <shade name="dark" weight="0.357723204971" />
+ <shade name="light" weight="0.0243902185207" />
+</color>
+
+<color name="green" weight="0.355768854475">
+ <shade name="hard" weight="0.617885535859" />
+ <shade name="dark" weight="0.357723204971" />
+ <shade name="light" weight="0.0243902185207" />
+</color>
+
+<color name="red" weight="0.0673076211169">
+ <shade name="hard" weight="0.617885535859" />
+ <shade name="dark" weight="0.357723204971" />
+ <shade name="light" weight="0.0243902185207" />
+</color>
+
+<color name="yellow" weight="0.0480768722264">
+ <shade name="hard" weight="0.617885535859" />
+ <shade name="dark" weight="0.357723204971" />
+ <shade name="light" weight="0.0243902185207" />
+</color>
+
+<color name="black" weight="0.0384614977811">
+ <shade name="hard" weight="0.617885535859" />
+ <shade name="dark" weight="0.357723204971" />
+ <shade name="light" weight="0.0243902185207" />
+</color>
+
+</colors>

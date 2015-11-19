@@ -1,0 +1,33 @@
+<colors query="electro">
+
+<color name="black" weight="0.469858171328">
+ <shade name="dark" weight="0.830074924006" />
+ <shade name="hard" weight="0.0889858713547" />
+ <shade name="cool" weight="0.0809380535319" />
+</color>
+
+<color name="blue" weight="0.416594896846">
+ <shade name="dark" weight="0.830074924006" />
+ <shade name="hard" weight="0.0889858713547" />
+ <shade name="cool" weight="0.0809380535319" />
+</color>
+
+<color name="green" weight="0.0656279632017">
+ <shade name="dark" weight="0.830074924006" />
+ <shade name="hard" weight="0.0889858713547" />
+ <shade name="cool" weight="0.0809380535319" />
+</color>
+
+<color name="pink" weight="0.0338602244925">
+ <shade name="dark" weight="0.830074924006" />
+ <shade name="hard" weight="0.0889858713547" />
+ <shade name="cool" weight="0.0809380535319" />
+</color>
+
+<color name="orange" weight="0.0140576999438">
+ <shade name="dark" weight="0.830074924006" />
+ <shade name="hard" weight="0.0889858713547" />
+ <shade name="cool" weight="0.0809380535319" />
+</color>
+
+</colors>

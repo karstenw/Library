@@ -1,0 +1,33 @@
+<colors query="langston hughes">
+
+<color name="black" weight="0.469612775786">
+ <shade name="dark" weight="0.839505312606" />
+ <shade name="light" weight="0.0987653308948" />
+ <shade name="cool" weight="0.0617283318092" />
+</color>
+
+<color name="white" weight="0.332872585189">
+ <shade name="dark" weight="0.839505312606" />
+ <shade name="light" weight="0.0987653308948" />
+ <shade name="cool" weight="0.0617283318092" />
+</color>
+
+<color name="green" weight="0.131215334411">
+ <shade name="dark" weight="0.839505312606" />
+ <shade name="light" weight="0.0987653308948" />
+ <shade name="cool" weight="0.0617283318092" />
+</color>
+
+<color name="blue" weight="0.0414364213929">
+ <shade name="dark" weight="0.839505312606" />
+ <shade name="light" weight="0.0987653308948" />
+ <shade name="cool" weight="0.0617283318092" />
+</color>
+
+<color name="red" weight="0.0248618528357">
+ <shade name="dark" weight="0.839505312606" />
+ <shade name="light" weight="0.0987653308948" />
+ <shade name="cool" weight="0.0617283318092" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="rambutan">
+
+<color name="red" weight="0.54687444336">
+ <shade name="fresh" weight="0.992365418165" />
+ <shade name="cool" weight="0.00508905342649" />
+ <shade name="light" weight="0.00254452671324" />
+</color>
+
+<color name="yellow" weight="0.248883675243">
+ <shade name="fresh" weight="0.992365418165" />
+ <shade name="cool" weight="0.00508905342649" />
+ <shade name="light" weight="0.00254452671324" />
+</color>
+
+<color name="green" weight="0.131696294523">
+ <shade name="fresh" weight="0.992365418165" />
+ <shade name="cool" weight="0.00508905342649" />
+ <shade name="light" weight="0.00254452671324" />
+</color>
+
+<color name="orange" weight="0.0446428117029">
+ <shade name="fresh" weight="0.992365418165" />
+ <shade name="cool" weight="0.00508905342649" />
+ <shade name="light" weight="0.00254452671324" />
+</color>
+
+<color name="pink" weight="0.0279017573143">
+ <shade name="fresh" weight="0.992365418165" />
+ <shade name="cool" weight="0.00508905342649" />
+ <shade name="light" weight="0.00254452671324" />
+</color>
+
+</colors>

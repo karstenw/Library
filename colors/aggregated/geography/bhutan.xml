@@ -1,0 +1,33 @@
+<colors query="bhutan">
+
+<color name="red" weight="0.446428095106">
+ <shade name="cool" weight="0.399999360001" />
+ <shade name="light" weight="0.327272203637" />
+ <shade name="neutral" weight="0.272726836364" />
+</color>
+
+<color name="black" weight="0.276785418966">
+ <shade name="cool" weight="0.399999360001" />
+ <shade name="light" weight="0.327272203637" />
+ <shade name="neutral" weight="0.272726836364" />
+</color>
+
+<color name="green" weight="0.156249833287">
+ <shade name="cool" weight="0.399999360001" />
+ <shade name="light" weight="0.327272203637" />
+ <shade name="neutral" weight="0.272726836364" />
+</color>
+
+<color name="white" weight="0.075892776168">
+ <shade name="cool" weight="0.399999360001" />
+ <shade name="light" weight="0.327272203637" />
+ <shade name="neutral" weight="0.272726836364" />
+</color>
+
+<color name="blue" weight="0.0446428095106">
+ <shade name="cool" weight="0.399999360001" />
+ <shade name="light" weight="0.327272203637" />
+ <shade name="neutral" weight="0.272726836364" />
+</color>
+
+</colors>

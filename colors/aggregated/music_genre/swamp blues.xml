@@ -1,0 +1,33 @@
+<colors query="swamp blues">
+
+<color name="black" weight="0.996723383249">
+ <shade name="dark" weight="0.699999160001" />
+ <shade name="cool" weight="0.19999976" />
+ <shade name="warm" weight="0.0999998800001" />
+</color>
+
+<color name="white" weight="0.00140383575105">
+ <shade name="dark" weight="0.699999160001" />
+ <shade name="cool" weight="0.19999976" />
+ <shade name="warm" weight="0.0999998800001" />
+</color>
+
+<color name="green" weight="0.000935890500703">
+ <shade name="dark" weight="0.699999160001" />
+ <shade name="cool" weight="0.19999976" />
+ <shade name="intense" weight="0.0999998800001" />
+</color>
+
+<color name="red" weight="0.000467945250351">
+ <shade name="dark" weight="0.699999160001" />
+ <shade name="cool" weight="0.19999976" />
+ <shade name="warm" weight="0.0999998800001" />
+</color>
+
+<color name="blue" weight="0.000467945250351">
+ <shade name="dark" weight="0.699999160001" />
+ <shade name="cool" weight="0.19999976" />
+ <shade name="intense" weight="0.0999998800001" />
+</color>
+
+</colors>

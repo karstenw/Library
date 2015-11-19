@@ -1,0 +1,33 @@
+<colors query="taranto">
+
+<color name="blue" weight="0.503225286993">
+ <shade name="hard" weight="0.772562387599" />
+ <shade name="soft" weight="0.216606276897" />
+ <shade name="light" weight="0.0108303138448" />
+</color>
+
+<color name="red" weight="0.245161037253">
+ <shade name="hard" weight="0.772562387599" />
+ <shade name="soft" weight="0.216606276897" />
+ <shade name="light" weight="0.0108303138448" />
+</color>
+
+<color name="green" weight="0.122580518627">
+ <shade name="hard" weight="0.772562387599" />
+ <shade name="soft" weight="0.216606276897" />
+ <shade name="light" weight="0.0108303138448" />
+</color>
+
+<color name="black" weight="0.10967730614">
+ <shade name="hard" weight="0.772562387599" />
+ <shade name="soft" weight="0.216606276897" />
+ <shade name="light" weight="0.0108303138448" />
+</color>
+
+<color name="white" weight="0.0193548187305">
+ <shade name="hard" weight="0.772562387599" />
+ <shade name="soft" weight="0.216606276897" />
+ <shade name="light" weight="0.0108303138448" />
+</color>
+
+</colors>

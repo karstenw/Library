@@ -1,0 +1,33 @@
+<colors query="george herbert">
+
+<color name="green" weight="0.962388416013">
+ <shade name="cool" weight="0.416666232639" />
+ <shade name="bright" weight="0.416666232639" />
+ <shade name="light" weight="0.166666493056" />
+</color>
+
+<color name="white" weight="0.0199114844692">
+ <shade name="cool" weight="0.416666232639" />
+ <shade name="bright" weight="0.416666232639" />
+ <shade name="light" weight="0.166666493056" />
+</color>
+
+<color name="black" weight="0.0110619358162">
+ <shade name="cool" weight="0.416666232639" />
+ <shade name="bright" weight="0.416666232639" />
+ <shade name="light" weight="0.166666493056" />
+</color>
+
+<color name="red" weight="0.0044247743265">
+ <shade name="cool" weight="0.416666232639" />
+ <shade name="bright" weight="0.416666232639" />
+ <shade name="light" weight="0.166666493056" />
+</color>
+
+<color name="purple" weight="0.00221238716325">
+ <shade name="cool" weight="0.416666232639" />
+ <shade name="bright" weight="0.416666232639" />
+ <shade name="light" weight="0.166666493056" />
+</color>
+
+</colors>

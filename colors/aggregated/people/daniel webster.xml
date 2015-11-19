@@ -1,0 +1,33 @@
+<colors query="daniel webster">
+
+<color name="green" weight="0.339682197844">
+ <shade name="light" weight="0.699999090001" />
+ <shade name="dark" weight="0.19999974" />
+ <shade name="hard" weight="0.0999998700002" />
+</color>
+
+<color name="white" weight="0.288888598166">
+ <shade name="light" weight="0.636362884298" />
+ <shade name="warm" weight="0.181817966942" />
+ <shade name="dark" weight="0.181817966942" />
+</color>
+
+<color name="black" weight="0.241269598468">
+ <shade name="light" weight="0.636362884298" />
+ <shade name="warm" weight="0.181817966942" />
+ <shade name="dark" weight="0.181817966942" />
+</color>
+
+<color name="orange" weight="0.0761903995163">
+ <shade name="light" weight="0.636362884298" />
+ <shade name="warm" weight="0.181817966942" />
+ <shade name="dark" weight="0.181817966942" />
+</color>
+
+<color name="red" weight="0.0539681996574">
+ <shade name="light" weight="0.636362884298" />
+ <shade name="warm" weight="0.181817966942" />
+ <shade name="dark" weight="0.181817966942" />
+</color>
+
+</colors>

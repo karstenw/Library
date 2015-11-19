@@ -1,0 +1,33 @@
+<colors query="jazz groove">
+
+<color name="red" weight="0.749999250001">
+ <shade name="cool" weight="0.864311399531" />
+ <shade name="dark" weight="0.128252659285" />
+ <shade name="fresh" weight="0.00743493677016" />
+</color>
+
+<color name="purple" weight="0.124999875">
+ <shade name="cool" weight="0.864311399531" />
+ <shade name="dark" weight="0.128252659285" />
+ <shade name="fresh" weight="0.00743493677016" />
+</color>
+
+<color name="blue" weight="0.124999875">
+ <shade name="cool" weight="0.864311399531" />
+ <shade name="dark" weight="0.128252659285" />
+ <shade name="fresh" weight="0.00743493677016" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="cool" weight="0.864311399531" />
+ <shade name="dark" weight="0.128252659285" />
+ <shade name="fresh" weight="0.00743493677016" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="cool" weight="0.864311399531" />
+ <shade name="dark" weight="0.128252659285" />
+ <shade name="fresh" weight="0.00743493677016" />
+</color>
+
+</colors>

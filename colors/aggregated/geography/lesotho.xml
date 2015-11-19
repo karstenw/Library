@@ -1,0 +1,33 @@
+<colors query="lesotho">
+
+<color name="white" weight="0.282257745838">
+ <shade name="dark" weight="0.388888219137" />
+ <shade name="hard" weight="0.33333275926" />
+ <shade name="fresh" weight="0.277777299384" />
+</color>
+
+<color name="orange" weight="0.26612873179">
+ <shade name="dark" weight="0.388888219137" />
+ <shade name="hard" weight="0.33333275926" />
+ <shade name="fresh" weight="0.277777299384" />
+</color>
+
+<color name="black" weight="0.169354647503">
+ <shade name="dark" weight="0.388888219137" />
+ <shade name="hard" weight="0.33333275926" />
+ <shade name="fresh" weight="0.277777299384" />
+</color>
+
+<color name="green" weight="0.145161126431">
+ <shade name="dark" weight="0.388888219137" />
+ <shade name="hard" weight="0.33333275926" />
+ <shade name="fresh" weight="0.277777299384" />
+</color>
+
+<color name="blue" weight="0.137096619407">
+ <shade name="dark" weight="0.388888219137" />
+ <shade name="hard" weight="0.33333275926" />
+ <shade name="fresh" weight="0.277777299384" />
+</color>
+
+</colors>

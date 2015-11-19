@@ -1,0 +1,33 @@
+<colors query="symphony">
+
+<color name="black" weight="0.518572071984">
+ <shade name="dark" weight="0.618383765169" />
+ <shade name="soft" weight="0.224233752685" />
+ <shade name="light" weight="0.157381453748" />
+</color>
+
+<color name="green" weight="0.164857922281">
+ <shade name="dark" weight="0.618383765169" />
+ <shade name="soft" weight="0.224233752685" />
+ <shade name="light" weight="0.157381453748" />
+</color>
+
+<color name="white" weight="0.142946426281">
+ <shade name="dark" weight="0.618383765169" />
+ <shade name="soft" weight="0.224233752685" />
+ <shade name="light" weight="0.157381453748" />
+</color>
+
+<color name="blue" weight="0.138772807996">
+ <shade name="dark" weight="0.618383765169" />
+ <shade name="soft" weight="0.224233752685" />
+ <shade name="light" weight="0.157381453748" />
+</color>
+
+<color name="yellow" weight="0.0348497126846">
+ <shade name="dark" weight="0.618383765169" />
+ <shade name="soft" weight="0.224233752685" />
+ <shade name="light" weight="0.157381453748" />
+</color>
+
+</colors>

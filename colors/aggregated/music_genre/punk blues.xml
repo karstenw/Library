@@ -1,0 +1,33 @@
+<colors query="punk blues">
+
+<color name="black" weight="0.562499437501">
+ <shade name="hard" weight="0.692306893492" />
+ <shade name="soft" weight="0.153845976332" />
+ <shade name="cool" weight="0.153845976332" />
+</color>
+
+<color name="white" weight="0.374999625">
+ <shade name="hard" weight="0.692306893492" />
+ <shade name="soft" weight="0.153845976332" />
+ <shade name="cool" weight="0.153845976332" />
+</color>
+
+<color name="red" weight="0.0624999375001">
+ <shade name="hard" weight="0.692306893492" />
+ <shade name="soft" weight="0.153845976332" />
+ <shade name="cool" weight="0.153845976332" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="hard" weight="0.692306893492" />
+ <shade name="soft" weight="0.153845976332" />
+ <shade name="cool" weight="0.153845976332" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="hard" weight="0.692306893492" />
+ <shade name="soft" weight="0.153845976332" />
+ <shade name="cool" weight="0.153845976332" />
+</color>
+
+</colors>

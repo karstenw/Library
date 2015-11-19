@@ -1,0 +1,33 @@
+<colors query="bouncy techno">
+
+<color name="red" weight="0.999999000001">
+ <shade name="hard" weight="0.53846091716" />
+ <shade name="cool" weight="0.307691952663" />
+ <shade name="dark" weight="0.153845976332" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="hard" weight="0.53846091716" />
+ <shade name="cool" weight="0.307691952663" />
+ <shade name="dark" weight="0.153845976332" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="hard" weight="0.53846091716" />
+ <shade name="cool" weight="0.307691952663" />
+ <shade name="dark" weight="0.153845976332" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="hard" weight="0.53846091716" />
+ <shade name="cool" weight="0.307691952663" />
+ <shade name="dark" weight="0.153845976332" />
+</color>
+
+<color name="pink" weight="0.0">
+ <shade name="hard" weight="0.53846091716" />
+ <shade name="cool" weight="0.307691952663" />
+ <shade name="dark" weight="0.153845976332" />
+</color>
+
+</colors>

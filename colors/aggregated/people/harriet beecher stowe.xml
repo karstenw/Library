@@ -1,0 +1,33 @@
+<colors query="harriet beecher stowe">
+
+<color name="white" weight="0.374999609375">
+ <shade name="light" weight="0.4999995" />
+ <shade name="hard" weight="0.24999975" />
+ <shade name="dark" weight="0.24999975" />
+</color>
+
+<color name="black" weight="0.374999609375">
+ <shade name="light" weight="0.4999995" />
+ <shade name="hard" weight="0.24999975" />
+ <shade name="dark" weight="0.24999975" />
+</color>
+
+<color name="red" weight="0.166666493056">
+ <shade name="light" weight="0.4999995" />
+ <shade name="hard" weight="0.24999975" />
+ <shade name="dark" weight="0.24999975" />
+</color>
+
+<color name="purple" weight="0.0416666232639">
+ <shade name="light" weight="0.4999995" />
+ <shade name="hard" weight="0.24999975" />
+ <shade name="dark" weight="0.24999975" />
+</color>
+
+<color name="orange" weight="0.0416666232639">
+ <shade name="light" weight="0.4999995" />
+ <shade name="hard" weight="0.24999975" />
+ <shade name="dark" weight="0.24999975" />
+</color>
+
+</colors>

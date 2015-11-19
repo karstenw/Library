@@ -1,0 +1,33 @@
+<colors query="erik satie">
+
+<color name="white" weight="0.666665953217">
+ <shade name="light" weight="0.444443851853" />
+ <shade name="dark" weight="0.333332888889" />
+ <shade name="hard" weight="0.222221925926" />
+</color>
+
+<color name="purple" weight="0.105263045245">
+ <shade name="light" weight="0.444443851853" />
+ <shade name="dark" weight="0.333332888889" />
+ <shade name="hard" weight="0.222221925926" />
+</color>
+
+<color name="green" weight="0.105263045245">
+ <shade name="light" weight="0.444443851853" />
+ <shade name="dark" weight="0.333332888889" />
+ <shade name="hard" weight="0.222221925926" />
+</color>
+
+<color name="black" weight="0.0701753634965">
+ <shade name="light" weight="0.444443851853" />
+ <shade name="dark" weight="0.333332888889" />
+ <shade name="hard" weight="0.222221925926" />
+</color>
+
+<color name="blue" weight="0.0526315226224">
+ <shade name="light" weight="0.444443851853" />
+ <shade name="dark" weight="0.333332888889" />
+ <shade name="hard" weight="0.222221925926" />
+</color>
+
+</colors>

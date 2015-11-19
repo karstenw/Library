@@ -1,0 +1,33 @@
+<colors query="kwaito">
+
+<color name="white" weight="0.853657682928">
+ <shade name="cool" weight="0.55555484568" />
+ <shade name="fresh" weight="0.27777742284" />
+ <shade name="soft" weight="0.166666453704" />
+</color>
+
+<color name="black" weight="0.0975608780489">
+ <shade name="cool" weight="0.55555484568" />
+ <shade name="fresh" weight="0.27777742284" />
+ <shade name="soft" weight="0.166666453704" />
+</color>
+
+<color name="yellow" weight="0.0487804390244">
+ <shade name="cool" weight="0.55555484568" />
+ <shade name="fresh" weight="0.27777742284" />
+ <shade name="soft" weight="0.166666453704" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="cool" weight="0.55555484568" />
+ <shade name="fresh" weight="0.27777742284" />
+ <shade name="soft" weight="0.166666453704" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="cool" weight="0.55555484568" />
+ <shade name="fresh" weight="0.27777742284" />
+ <shade name="soft" weight="0.166666453704" />
+</color>
+
+</colors>

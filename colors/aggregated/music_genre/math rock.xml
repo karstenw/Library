@@ -1,0 +1,33 @@
+<colors query="math rock">
+
+<color name="black" weight="0.9705004987">
+ <shade name="hard" weight="0.899356692727" />
+ <shade name="intense" weight="0.0952889829199" />
+ <shade name="soft" weight="0.00535331364719" />
+</color>
+
+<color name="white" weight="0.0117993981605">
+ <shade name="hard" weight="0.988815852334" />
+ <shade name="soft" weight="0.00588580864485" />
+ <shade name="cool" weight="0.00529722778036" />
+</color>
+
+<color name="yellow" weight="0.00589969908024">
+ <shade name="hard" weight="0.899356692727" />
+ <shade name="intense" weight="0.0952889829199" />
+ <shade name="soft" weight="0.00535331364719" />
+</color>
+
+<color name="red" weight="0.00589969908024">
+ <shade name="hard" weight="0.899356692727" />
+ <shade name="intense" weight="0.0952889829199" />
+ <shade name="soft" weight="0.00535331364719" />
+</color>
+
+<color name="orange" weight="0.00589969908024">
+ <shade name="hard" weight="0.899356692727" />
+ <shade name="intense" weight="0.0952889829199" />
+ <shade name="soft" weight="0.00535331364719" />
+</color>
+
+</colors>

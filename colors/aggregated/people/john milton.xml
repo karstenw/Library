@@ -1,0 +1,33 @@
+<colors query="john milton">
+
+<color name="white" weight="0.691823206678">
+ <shade name="light" weight="0.99257785254" />
+ <shade name="bright" weight="0.00556585711705" />
+ <shade name="hard" weight="0.00185528570568" />
+</color>
+
+<color name="green" weight="0.288050026053">
+ <shade name="light" weight="0.99257785254" />
+ <shade name="bright" weight="0.00556585711705" />
+ <shade name="hard" weight="0.00185528570568" />
+</color>
+
+<color name="black" weight="0.00880502263044">
+ <shade name="light" weight="0.99257785254" />
+ <shade name="bright" weight="0.00556585711705" />
+ <shade name="hard" weight="0.00185528570568" />
+</color>
+
+<color name="red" weight="0.00628930187889">
+ <shade name="light" weight="0.99257785254" />
+ <shade name="bright" weight="0.00556585711705" />
+ <shade name="hard" weight="0.00185528570568" />
+</color>
+
+<color name="blue" weight="0.00503144150311">
+ <shade name="light" weight="0.99257785254" />
+ <shade name="bright" weight="0.00556585711705" />
+ <shade name="hard" weight="0.00185528570568" />
+</color>
+
+</colors>

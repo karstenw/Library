@@ -1,0 +1,33 @@
+<colors query="pow-wow">
+
+<color name="black" weight="0.503821128483">
+ <shade name="light" weight="0.529604696969" />
+ <shade name="cool" weight="0.444078472613" />
+ <shade name="intense" weight="0.0263157613401" />
+</color>
+
+<color name="blue" weight="0.267515643442">
+ <shade name="light" weight="0.529604696969" />
+ <shade name="cool" weight="0.444078472613" />
+ <shade name="intense" weight="0.0263157613401" />
+</color>
+
+<color name="red" weight="0.127388401639">
+ <shade name="light" weight="0.529604696969" />
+ <shade name="cool" weight="0.444078472613" />
+ <shade name="intense" weight="0.0263157613401" />
+</color>
+
+<color name="white" weight="0.0560508967212">
+ <shade name="light" weight="0.531352565381" />
+ <shade name="cool" weight="0.445544076562" />
+ <shade name="dark" weight="0.0231022854513" />
+</color>
+
+<color name="green" weight="0.0452228825819">
+ <shade name="light" weight="0.529604696969" />
+ <shade name="cool" weight="0.444078472613" />
+ <shade name="intense" weight="0.0263157613401" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="video game music">
+
+<color name="purple" weight="0.333333">
+ <shade name="cool" weight="0.994251873597" />
+ <shade name="dark" weight="0.00344827239398" />
+ <shade name="hard" weight="0.00229884826265" />
+</color>
+
+<color name="green" weight="0.333333">
+ <shade name="cool" weight="0.994251873597" />
+ <shade name="dark" weight="0.00344827239398" />
+ <shade name="intense" weight="0.00229884826265" />
+</color>
+
+<color name="blue" weight="0.333333">
+ <shade name="cool" weight="0.994251873597" />
+ <shade name="dark" weight="0.00344827239398" />
+ <shade name="intense" weight="0.00229884826265" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="cool" weight="0.994251873597" />
+ <shade name="dark" weight="0.00344827239398" />
+ <shade name="intense" weight="0.00229884826265" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="cool" weight="0.994251873597" />
+ <shade name="dark" weight="0.00344827239398" />
+ <shade name="hard" weight="0.00229884826265" />
+</color>
+
+</colors>

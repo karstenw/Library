@@ -1,0 +1,33 @@
+<colors query="rod steiger">
+
+<color name="black" weight="0.943477317392">
+ <shade name="dark" weight="0.428570877552" />
+ <shade name="light" weight="0.285713918368" />
+ <shade name="intense" weight="0.285713918368" />
+</color>
+
+<color name="white" weight="0.0347825739131">
+ <shade name="dark" weight="0.499999250001" />
+ <shade name="light" weight="0.333332833334" />
+ <shade name="cool" weight="0.166666416667" />
+</color>
+
+<color name="red" weight="0.00869564347827">
+ <shade name="dark" weight="0.428570877552" />
+ <shade name="light" weight="0.285713918368" />
+ <shade name="intense" weight="0.285713918368" />
+</color>
+
+<color name="green" weight="0.00869564347827">
+ <shade name="dark" weight="0.428570877552" />
+ <shade name="light" weight="0.285713918368" />
+ <shade name="intense" weight="0.285713918368" />
+</color>
+
+<color name="blue" weight="0.00434782173913">
+ <shade name="dark" weight="0.428570877552" />
+ <shade name="light" weight="0.285713918368" />
+ <shade name="intense" weight="0.285713918368" />
+</color>
+
+</colors>

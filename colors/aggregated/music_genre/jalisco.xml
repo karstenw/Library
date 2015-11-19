@@ -1,0 +1,33 @@
+<colors query="jalisco">
+
+<color name="red" weight="0.951671908895">
+ <shade name="warm" weight="0.868420081372" />
+ <shade name="light" weight="0.0789472801248" />
+ <shade name="cool" weight="0.0526315200832" />
+</color>
+
+<color name="blue" weight="0.0381660088463">
+ <shade name="light" weight="0.461535443807" />
+ <shade name="cool" weight="0.307690295871" />
+ <shade name="fresh" weight="0.230767721903" />
+</color>
+
+<color name="white" weight="0.00619578065687">
+ <shade name="warm" weight="0.868420081372" />
+ <shade name="light" weight="0.0789472801248" />
+ <shade name="cool" weight="0.0526315200832" />
+</color>
+
+<color name="yellow" weight="0.0019826498102">
+ <shade name="warm" weight="0.868420081372" />
+ <shade name="light" weight="0.0789472801248" />
+ <shade name="cool" weight="0.0526315200832" />
+</color>
+
+<color name="green" weight="0.0019826498102">
+ <shade name="light" weight="0.461535443807" />
+ <shade name="cool" weight="0.307690295871" />
+ <shade name="fresh" weight="0.230767721903" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="new orleans blues">
+
+<color name="black" weight="0.444444">
+ <shade name="hard" weight="0.333333" />
+ <shade name="dark" weight="0.333333" />
+ <shade name="cool" weight="0.333333" />
+</color>
+
+<color name="white" weight="0.333333">
+ <shade name="hard" weight="0.333333" />
+ <shade name="dark" weight="0.333333" />
+ <shade name="cool" weight="0.333333" />
+</color>
+
+<color name="blue" weight="0.222222">
+ <shade name="hard" weight="0.333333" />
+ <shade name="dark" weight="0.333333" />
+ <shade name="cool" weight="0.333333" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="hard" weight="0.333333" />
+ <shade name="dark" weight="0.333333" />
+ <shade name="cool" weight="0.333333" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="hard" weight="0.333333" />
+ <shade name="dark" weight="0.333333" />
+ <shade name="cool" weight="0.333333" />
+</color>
+
+</colors>

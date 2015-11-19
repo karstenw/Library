@@ -1,0 +1,33 @@
+<colors query="arabian sea">
+
+<color name="blue" weight="0.919722630602">
+ <shade name="cool" weight="0.636355551756" />
+ <shade name="dark" weight="0.227269839913" />
+ <shade name="intense" weight="0.136361903948" />
+</color>
+
+<color name="pink" weight="0.0558213157302">
+ <shade name="warm" weight="0.929758743558" />
+ <shade name="cool" weight="0.0517559539158" />
+ <shade name="dark" weight="0.0184842692556" />
+</color>
+
+<color name="green" weight="0.018075473665">
+ <shade name="cool" weight="0.636355551756" />
+ <shade name="dark" weight="0.227269839913" />
+ <shade name="intense" weight="0.136361903948" />
+</color>
+
+<color name="red" weight="0.00531631578383">
+ <shade name="warm" weight="0.929758743558" />
+ <shade name="cool" weight="0.0517559539158" />
+ <shade name="dark" weight="0.0184842692556" />
+</color>
+
+<color name="black" weight="0.00106326315677">
+ <shade name="warm" weight="0.929758743558" />
+ <shade name="cool" weight="0.0517559539158" />
+ <shade name="dark" weight="0.0184842692556" />
+</color>
+
+</colors>

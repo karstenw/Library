@@ -1,0 +1,33 @@
+<colors query="dean acheson">
+
+<color name="white" weight="0.4666662">
+ <shade name="weak" weight="0.0" />
+ <shade name="warm" weight="0.0" />
+ <shade name="soft" weight="0.0" />
+</color>
+
+<color name="red" weight="0.2666664">
+ <shade name="weak" weight="0.0" />
+ <shade name="warm" weight="0.0" />
+ <shade name="soft" weight="0.0" />
+</color>
+
+<color name="black" weight="0.1333332">
+ <shade name="weak" weight="0.0" />
+ <shade name="warm" weight="0.0" />
+ <shade name="soft" weight="0.0" />
+</color>
+
+<color name="orange" weight="0.0666666000001">
+ <shade name="weak" weight="0.0" />
+ <shade name="warm" weight="0.0" />
+ <shade name="soft" weight="0.0" />
+</color>
+
+<color name="blue" weight="0.0666666000001">
+ <shade name="weak" weight="0.0" />
+ <shade name="soft" weight="0.0" />
+ <shade name="neutral" weight="0.0" />
+</color>
+
+</colors>

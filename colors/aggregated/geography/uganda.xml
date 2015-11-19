@@ -1,0 +1,33 @@
+<colors query="uganda">
+
+<color name="black" weight="0.410164220713">
+ <shade name="cool" weight="0.600535375142" />
+ <shade name="dark" weight="0.214476919694" />
+ <shade name="light" weight="0.184986343236" />
+</color>
+
+<color name="red" weight="0.382963103109">
+ <shade name="cool" weight="0.600535375142" />
+ <shade name="dark" weight="0.214476919694" />
+ <shade name="light" weight="0.184986343236" />
+</color>
+
+<color name="white" weight="0.100930462689">
+ <shade name="cool" weight="0.600535375142" />
+ <shade name="dark" weight="0.214476919694" />
+ <shade name="light" weight="0.184986343236" />
+</color>
+
+<color name="green" weight="0.0765926206218">
+ <shade name="cool" weight="0.600535375142" />
+ <shade name="dark" weight="0.214476919694" />
+ <shade name="light" weight="0.184986343236" />
+</color>
+
+<color name="blue" weight="0.029348574257">
+ <shade name="cool" weight="0.600535375142" />
+ <shade name="dark" weight="0.214476919694" />
+ <shade name="light" weight="0.184986343236" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="roots rock reggae">
+
+<color name="green" weight="0.666666000001">
+ <shade name="hard" weight="0.959536601625" />
+ <shade name="light" weight="0.0289017048682" />
+ <shade name="fresh" weight="0.0115606819473" />
+</color>
+
+<color name="orange" weight="0.333333">
+ <shade name="hard" weight="0.959536601625" />
+ <shade name="light" weight="0.0289017048682" />
+ <shade name="fresh" weight="0.0115606819473" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="hard" weight="0.959536601625" />
+ <shade name="light" weight="0.0289017048682" />
+ <shade name="fresh" weight="0.0115606819473" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="hard" weight="0.959536601625" />
+ <shade name="light" weight="0.0289017048682" />
+ <shade name="fresh" weight="0.0115606819473" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="hard" weight="0.959536601625" />
+ <shade name="light" weight="0.0289017048682" />
+ <shade name="fresh" weight="0.0115606819473" />
+</color>
+
+</colors>

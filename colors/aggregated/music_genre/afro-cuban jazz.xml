@@ -1,0 +1,33 @@
+<colors query="afro-cuban jazz">
+
+<color name="blue" weight="0.999999000001">
+ <shade name="cool" weight="0.526315263158" />
+ <shade name="light" weight="0.263157631579" />
+ <shade name="fresh" weight="0.210526105263" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="cool" weight="0.526315263158" />
+ <shade name="light" weight="0.263157631579" />
+ <shade name="fresh" weight="0.210526105263" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="cool" weight="0.526315263158" />
+ <shade name="light" weight="0.263157631579" />
+ <shade name="fresh" weight="0.210526105263" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="cool" weight="0.526315263158" />
+ <shade name="light" weight="0.263157631579" />
+ <shade name="fresh" weight="0.210526105263" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="cool" weight="0.526315263158" />
+ <shade name="light" weight="0.263157631579" />
+ <shade name="fresh" weight="0.210526105263" />
+</color>
+
+</colors>

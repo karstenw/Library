@@ -1,0 +1,33 @@
+<colors query="denis diderot">
+
+<color name="blue" weight="0.999999000001">
+ <shade name="dark" weight="0.749999062501" />
+ <shade name="cool" weight="0.2499996875" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="dark" weight="0.599999400001" />
+ <shade name="warm" weight="0.1999998" />
+ <shade name="cool" weight="0.1999998" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="dark" weight="0.599999400001" />
+ <shade name="warm" weight="0.1999998" />
+ <shade name="cool" weight="0.1999998" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="dark" weight="0.599999400001" />
+ <shade name="warm" weight="0.1999998" />
+ <shade name="cool" weight="0.1999998" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="dark" weight="0.749999062501" />
+ <shade name="cool" weight="0.2499996875" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+</colors>

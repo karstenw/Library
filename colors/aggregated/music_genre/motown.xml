@@ -1,0 +1,33 @@
+<colors query="motown">
+
+<color name="black" weight="0.362636981271">
+ <shade name="cool" weight="0.53073098863" />
+ <shade name="hard" weight="0.344389777548" />
+ <shade name="weak" weight="0.124877879678" />
+</color>
+
+<color name="blue" weight="0.288461235102">
+ <shade name="cool" weight="0.53073098863" />
+ <shade name="hard" weight="0.344389777548" />
+ <shade name="weak" weight="0.124877879678" />
+</color>
+
+<color name="white" weight="0.141483367693">
+ <shade name="cool" weight="0.53073098863" />
+ <shade name="hard" weight="0.344389777548" />
+ <shade name="weak" weight="0.124877879678" />
+</color>
+
+<color name="green" weight="0.110439444296">
+ <shade name="cool" weight="0.53073098863" />
+ <shade name="hard" weight="0.344389777548" />
+ <shade name="weak" weight="0.124877879678" />
+</color>
+
+<color name="red" weight="0.0969779199914">
+ <shade name="cool" weight="0.53073098863" />
+ <shade name="hard" weight="0.344389777548" />
+ <shade name="weak" weight="0.124877879678" />
+</color>
+
+</colors>

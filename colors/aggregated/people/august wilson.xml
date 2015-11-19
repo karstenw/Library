@@ -1,0 +1,33 @@
+<colors query="august wilson">
+
+<color name="white" weight="0.909676503809">
+ <shade name="cool" weight="0.499999333334" />
+ <shade name="hard" weight="0.333332888889" />
+ <shade name="light" weight="0.166666444445" />
+</color>
+
+<color name="black" weight="0.04516124487">
+ <shade name="cool" weight="0.499999333334" />
+ <shade name="hard" weight="0.333332888889" />
+ <shade name="light" weight="0.166666444445" />
+</color>
+
+<color name="red" weight="0.01935481923">
+ <shade name="cool" weight="0.499999333334" />
+ <shade name="hard" weight="0.333332888889" />
+ <shade name="light" weight="0.166666444445" />
+</color>
+
+<color name="purple" weight="0.01290321282">
+ <shade name="cool" weight="0.499999333334" />
+ <shade name="hard" weight="0.333332888889" />
+ <shade name="light" weight="0.166666444445" />
+</color>
+
+<color name="blue" weight="0.01290321282">
+ <shade name="cool" weight="0.499999333334" />
+ <shade name="hard" weight="0.333332888889" />
+ <shade name="light" weight="0.166666444445" />
+</color>
+
+</colors>

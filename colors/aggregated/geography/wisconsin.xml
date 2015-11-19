@@ -1,0 +1,33 @@
+<colors query="wisconsin">
+
+<color name="green" weight="0.866608014311">
+ <shade name="cool" weight="0.551044442391" />
+ <shade name="hard" weight="0.273062201364" />
+ <shade name="light" weight="0.175891417995" />
+</color>
+
+<color name="white" weight="0.0805778797922">
+ <shade name="warm" weight="0.403914024477" />
+ <shade name="cool" weight="0.398575953669" />
+ <shade name="hard" weight="0.197508619899" />
+</color>
+
+<color name="blue" weight="0.0411638806798">
+ <shade name="cool" weight="0.551044442391" />
+ <shade name="hard" weight="0.273062201364" />
+ <shade name="light" weight="0.175891417995" />
+</color>
+
+<color name="black" weight="0.00689120026765">
+ <shade name="warm" weight="0.403914024477" />
+ <shade name="cool" weight="0.398575953669" />
+ <shade name="hard" weight="0.197508619899" />
+</color>
+
+<color name="red" weight="0.00475801130934">
+ <shade name="warm" weight="0.403914024477" />
+ <shade name="cool" weight="0.398575953669" />
+ <shade name="hard" weight="0.197508619899" />
+</color>
+
+</colors>

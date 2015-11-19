@@ -1,0 +1,33 @@
+<colors query="elie wiesel">
+
+<color name="white" weight="0.955222925374">
+ <shade name="light" weight="0.714285000001" />
+ <shade name="dark" weight="0.142857" />
+ <shade name="cool" weight="0.142857" />
+</color>
+
+<color name="yellow" weight="0.019900477612">
+ <shade name="light" weight="0.714285000001" />
+ <shade name="dark" weight="0.142857" />
+ <shade name="cool" weight="0.142857" />
+</color>
+
+<color name="green" weight="0.014925358209">
+ <shade name="light" weight="0.714285000001" />
+ <shade name="dark" weight="0.142857" />
+ <shade name="cool" weight="0.142857" />
+</color>
+
+<color name="black" weight="0.00746267910449">
+ <shade name="light" weight="0.714285000001" />
+ <shade name="dark" weight="0.142857" />
+ <shade name="cool" weight="0.142857" />
+</color>
+
+<color name="pink" weight="0.0024875597015">
+ <shade name="light" weight="0.714285000001" />
+ <shade name="dark" weight="0.142857" />
+ <shade name="cool" weight="0.142857" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="death punk">
+
+<color name="black" weight="0.998150573014">
+ <shade name="dark" weight="0.923808591203" />
+ <shade name="hard" weight="0.0666665993651" />
+ <shade name="soft" weight="0.00952379990931" />
+</color>
+
+<color name="pink" weight="0.00123228465804">
+ <shade name="dark" weight="0.923808591203" />
+ <shade name="hard" weight="0.0666665993651" />
+ <shade name="soft" weight="0.00952379990931" />
+</color>
+
+<color name="red" weight="0.000616142329021">
+ <shade name="dark" weight="0.923808591203" />
+ <shade name="hard" weight="0.0666665993651" />
+ <shade name="soft" weight="0.00952379990931" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="dark" weight="0.923808591203" />
+ <shade name="hard" weight="0.0666665993651" />
+ <shade name="soft" weight="0.00952379990931" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="dark" weight="0.923808591203" />
+ <shade name="hard" weight="0.0666665993651" />
+ <shade name="soft" weight="0.00952379990931" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="honduras">
+
+<color name="black" weight="0.591303728243">
+ <shade name="cool" weight="0.727968477049" />
+ <shade name="hard" weight="0.166666467114" />
+ <shade name="light" weight="0.10536385852" />
+</color>
+
+<color name="green" weight="0.208695433497">
+ <shade name="cool" weight="0.727968477049" />
+ <shade name="hard" weight="0.166666467114" />
+ <shade name="light" weight="0.10536385852" />
+</color>
+
+<color name="red" weight="0.112318722889">
+ <shade name="cool" weight="0.727968477049" />
+ <shade name="hard" weight="0.166666467114" />
+ <shade name="light" weight="0.10536385852" />
+</color>
+
+<color name="blue" weight="0.0507245845306">
+ <shade name="cool" weight="0.727968477049" />
+ <shade name="hard" weight="0.166666467114" />
+ <shade name="light" weight="0.10536385852" />
+</color>
+
+<color name="white" weight="0.0369564830152">
+ <shade name="cool" weight="0.727968477049" />
+ <shade name="hard" weight="0.166666467114" />
+ <shade name="light" weight="0.10536385852" />
+</color>
+
+</colors>

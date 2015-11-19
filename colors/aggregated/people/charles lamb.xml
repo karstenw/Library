@@ -1,0 +1,33 @@
+<colors query="charles lamb">
+
+<color name="green" weight="0.411764294118">
+ <shade name="dark" weight="0.499999416667" />
+ <shade name="light" weight="0.333332944445" />
+ <shade name="fresh" weight="0.166666472222" />
+</color>
+
+<color name="white" weight="0.35294082353">
+ <shade name="dark" weight="0.499999416667" />
+ <shade name="light" weight="0.333332944445" />
+ <shade name="fresh" weight="0.166666472222" />
+</color>
+
+<color name="orange" weight="0.117646941177">
+ <shade name="dark" weight="0.499999416667" />
+ <shade name="light" weight="0.333332944445" />
+ <shade name="fresh" weight="0.166666472222" />
+</color>
+
+<color name="yellow" weight="0.0588234705883">
+ <shade name="dark" weight="0.499999416667" />
+ <shade name="light" weight="0.333332944445" />
+ <shade name="fresh" weight="0.166666472222" />
+</color>
+
+<color name="red" weight="0.0588234705883">
+ <shade name="dark" weight="0.499999416667" />
+ <shade name="light" weight="0.333332944445" />
+ <shade name="fresh" weight="0.166666472222" />
+</color>
+
+</colors>

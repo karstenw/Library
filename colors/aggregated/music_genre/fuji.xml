@@ -1,0 +1,33 @@
+<colors query="fuji">
+
+<color name="red" weight="0.702887561065">
+ <shade name="fresh" weight="0.783319410249" />
+ <shade name="light" weight="0.164977719903" />
+ <shade name="soft" weight="0.0517016791507" />
+</color>
+
+<color name="green" weight="0.181983244977">
+ <shade name="fresh" weight="0.783319410249" />
+ <shade name="light" weight="0.164977719903" />
+ <shade name="soft" weight="0.0517016791507" />
+</color>
+
+<color name="white" weight="0.0498888585008">
+ <shade name="fresh" weight="0.783319410249" />
+ <shade name="light" weight="0.164977719903" />
+ <shade name="soft" weight="0.0517016791507" />
+</color>
+
+<color name="pink" weight="0.0444354205271">
+ <shade name="fresh" weight="0.783319410249" />
+ <shade name="light" weight="0.164977719903" />
+ <shade name="soft" weight="0.0517016791507" />
+</color>
+
+<color name="orange" weight="0.020803855974">
+ <shade name="fresh" weight="0.783319410249" />
+ <shade name="light" weight="0.164977719903" />
+ <shade name="soft" weight="0.0517016791507" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="marimba">
+
+<color name="black" weight="0.330246533593">
+ <shade name="hard" weight="0.401422343183" />
+ <shade name="soft" weight="0.324186651836" />
+ <shade name="dark" weight="0.2743899561" />
+</color>
+
+<color name="yellow" weight="0.202468902838">
+ <shade name="hard" weight="0.401422343183" />
+ <shade name="soft" weight="0.324186651836" />
+ <shade name="dark" weight="0.2743899561" />
+</color>
+
+<color name="white" weight="0.199999769877">
+ <shade name="hard" weight="0.401422343183" />
+ <shade name="soft" weight="0.324186651836" />
+ <shade name="dark" weight="0.2743899561" />
+</color>
+
+<color name="blue" weight="0.135802312879">
+ <shade name="hard" weight="0.401422343183" />
+ <shade name="soft" weight="0.324186651836" />
+ <shade name="dark" weight="0.2743899561" />
+</color>
+
+<color name="green" weight="0.131481330197">
+ <shade name="hard" weight="0.401422343183" />
+ <shade name="soft" weight="0.324186651836" />
+ <shade name="dark" weight="0.2743899561" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="pub rock">
+
+<color name="red" weight="0.352940782007">
+ <shade name="hard" weight="0.901784748088" />
+ <shade name="cool" weight="0.0535713711735" />
+ <shade name="soft" weight="0.0446428093113" />
+</color>
+
+<color name="pink" weight="0.235293854672">
+ <shade name="hard" weight="0.901784748088" />
+ <shade name="cool" weight="0.0535713711735" />
+ <shade name="soft" weight="0.0446428093113" />
+</color>
+
+<color name="blue" weight="0.235293854672">
+ <shade name="hard" weight="0.901784748088" />
+ <shade name="cool" weight="0.0535713711735" />
+ <shade name="soft" weight="0.0446428093113" />
+</color>
+
+<color name="white" weight="0.117646927336">
+ <shade name="hard" weight="0.901784748088" />
+ <shade name="cool" weight="0.0535713711735" />
+ <shade name="soft" weight="0.0446428093113" />
+</color>
+
+<color name="yellow" weight="0.0588234636679">
+ <shade name="hard" weight="0.901784748088" />
+ <shade name="cool" weight="0.0535713711735" />
+ <shade name="soft" weight="0.0446428093113" />
+</color>
+
+</colors>

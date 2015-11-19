@@ -1,0 +1,33 @@
+<colors query="bleak house">
+
+<color name="white" weight="0.886597042407">
+ <shade name="light" weight="0.363636" />
+ <shade name="dark" weight="0.363636" />
+ <shade name="hard" weight="0.272727" />
+</color>
+
+<color name="black" weight="0.0412370717399">
+ <shade name="light" weight="0.363636" />
+ <shade name="dark" weight="0.363636" />
+ <shade name="hard" weight="0.272727" />
+</color>
+
+<color name="blue" weight="0.0309278038049">
+ <shade name="light" weight="0.363636" />
+ <shade name="dark" weight="0.363636" />
+ <shade name="hard" weight="0.272727" />
+</color>
+
+<color name="orange" weight="0.0206185358699">
+ <shade name="light" weight="0.363636" />
+ <shade name="dark" weight="0.363636" />
+ <shade name="hard" weight="0.272727" />
+</color>
+
+<color name="green" weight="0.0206185358699">
+ <shade name="light" weight="0.363636" />
+ <shade name="dark" weight="0.363636" />
+ <shade name="hard" weight="0.272727" />
+</color>
+
+</colors>

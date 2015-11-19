@@ -1,0 +1,33 @@
+<colors query="ambient electronica">
+
+<color name="blue" weight="0.4999995">
+ <shade name="dark" weight="0.982450778336" />
+ <shade name="cool" weight="0.0168067051388" />
+ <shade name="soft" weight="0.000741472285536" />
+</color>
+
+<color name="white" weight="0.333333">
+ <shade name="dark" weight="0.942165446635" />
+ <shade name="warm" weight="0.0417160046812" />
+ <shade name="cool" weight="0.0161175472632" />
+</color>
+
+<color name="black" weight="0.1666665">
+ <shade name="dark" weight="0.942165446635" />
+ <shade name="warm" weight="0.0417160046812" />
+ <shade name="cool" weight="0.0161175472632" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="dark" weight="0.942165446635" />
+ <shade name="warm" weight="0.0417160046812" />
+ <shade name="cool" weight="0.0161175472632" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="dark" weight="0.942165446635" />
+ <shade name="warm" weight="0.0417160046812" />
+ <shade name="cool" weight="0.0161175472632" />
+</color>
+
+</colors>

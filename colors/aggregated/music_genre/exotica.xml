@@ -1,0 +1,33 @@
+<colors query="exotica">
+
+<color name="black" weight="0.255754168057">
+ <shade name="cool" weight="0.40927637454" />
+ <shade name="dark" weight="0.315142808396" />
+ <shade name="soft" weight="0.275579425524" />
+</color>
+
+<color name="orange" weight="0.250639084696">
+ <shade name="cool" weight="0.40927637454" />
+ <shade name="dark" weight="0.315142808396" />
+ <shade name="soft" weight="0.275579425524" />
+</color>
+
+<color name="blue" weight="0.188405570469">
+ <shade name="cool" weight="0.40927637454" />
+ <shade name="dark" weight="0.315142808396" />
+ <shade name="soft" weight="0.275579425524" />
+</color>
+
+<color name="red" weight="0.184143001001">
+ <shade name="cool" weight="0.40927637454" />
+ <shade name="dark" weight="0.315142808396" />
+ <shade name="soft" weight="0.275579425524" />
+</color>
+
+<color name="green" weight="0.12105697288">
+ <shade name="cool" weight="0.40927637454" />
+ <shade name="dark" weight="0.315142808396" />
+ <shade name="soft" weight="0.275579425524" />
+</color>
+
+</colors>

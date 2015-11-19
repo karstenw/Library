@@ -1,0 +1,33 @@
+<colors query="elizabeth barrett browning">
+
+<color name="white" weight="0.461538">
+ <shade name="light" weight="0.571427877552" />
+ <shade name="hard" weight="0.214285454082" />
+ <shade name="cool" weight="0.214285454082" />
+</color>
+
+<color name="red" weight="0.307692">
+ <shade name="light" weight="0.571427877552" />
+ <shade name="hard" weight="0.214285454082" />
+ <shade name="cool" weight="0.214285454082" />
+</color>
+
+<color name="green" weight="0.0769230000001">
+ <shade name="light" weight="0.571427877552" />
+ <shade name="hard" weight="0.214285454082" />
+ <shade name="cool" weight="0.214285454082" />
+</color>
+
+<color name="cyan" weight="0.0769230000001">
+ <shade name="light" weight="0.571427877552" />
+ <shade name="hard" weight="0.214285454082" />
+ <shade name="cool" weight="0.214285454082" />
+</color>
+
+<color name="black" weight="0.0769230000001">
+ <shade name="light" weight="0.571427877552" />
+ <shade name="hard" weight="0.214285454082" />
+ <shade name="cool" weight="0.214285454082" />
+</color>
+
+</colors>

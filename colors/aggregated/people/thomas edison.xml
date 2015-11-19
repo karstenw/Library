@@ -1,0 +1,33 @@
+<colors query="thomas edison">
+
+<color name="orange" weight="0.937169996383">
+ <shade name="light" weight="0.539448990552" />
+ <shade name="bright" weight="0.436696801875" />
+ <shade name="dark" weight="0.023853186657" />
+</color>
+
+<color name="black" weight="0.0319409998767">
+ <shade name="light" weight="0.539448990552" />
+ <shade name="bright" weight="0.436696801875" />
+ <shade name="dark" weight="0.023853186657" />
+</color>
+
+<color name="white" weight="0.0207089999201">
+ <shade name="light" weight="0.539448990552" />
+ <shade name="bright" weight="0.436696801875" />
+ <shade name="dark" weight="0.023853186657" />
+</color>
+
+<color name="blue" weight="0.0070199999729">
+ <shade name="light" weight="0.539448990552" />
+ <shade name="bright" weight="0.436696801875" />
+ <shade name="dark" weight="0.023853186657" />
+</color>
+
+<color name="purple" weight="0.00315899998781">
+ <shade name="light" weight="0.539448990552" />
+ <shade name="bright" weight="0.436696801875" />
+ <shade name="dark" weight="0.023853186657" />
+</color>
+
+</colors>

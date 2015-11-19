@@ -1,0 +1,33 @@
+<colors query="louis pasteur">
+
+<color name="white" weight="0.3999996">
+ <shade name="light" weight="0.58333270139" />
+ <shade name="cool" weight="0.333332972223" />
+ <shade name="warm" weight="0.0833332430557" />
+</color>
+
+<color name="black" weight="0.3999996">
+ <shade name="light" weight="0.58333270139" />
+ <shade name="cool" weight="0.333332972223" />
+ <shade name="warm" weight="0.0833332430557" />
+</color>
+
+<color name="yellow" weight="0.1999998">
+ <shade name="light" weight="0.58333270139" />
+ <shade name="cool" weight="0.333332972223" />
+ <shade name="warm" weight="0.0833332430557" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="light" weight="0.58333270139" />
+ <shade name="cool" weight="0.333332972223" />
+ <shade name="warm" weight="0.0833332430557" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="light" weight="0.58333270139" />
+ <shade name="cool" weight="0.333332972223" />
+ <shade name="hard" weight="0.0833332430557" />
+</color>
+
+</colors>

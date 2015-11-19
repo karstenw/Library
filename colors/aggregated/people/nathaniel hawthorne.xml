@@ -1,0 +1,33 @@
+<colors query="nathaniel hawthorne">
+
+<color name="green" weight="0.404254897692">
+ <shade name="light" weight="0.599999280001" />
+ <shade name="cool" weight="0.29999964" />
+ <shade name="weak" weight="0.0999998800001" />
+</color>
+
+<color name="white" weight="0.212765735627">
+ <shade name="light" weight="0.599999280001" />
+ <shade name="cool" weight="0.29999964" />
+ <shade name="weak" weight="0.0999998800001" />
+</color>
+
+<color name="black" weight="0.212765735627">
+ <shade name="light" weight="0.599999280001" />
+ <shade name="cool" weight="0.29999964" />
+ <shade name="weak" weight="0.0999998800001" />
+</color>
+
+<color name="red" weight="0.106382867814">
+ <shade name="light" weight="0.599999280001" />
+ <shade name="cool" weight="0.29999964" />
+ <shade name="weak" weight="0.0999998800001" />
+</color>
+
+<color name="blue" weight="0.0638297206882">
+ <shade name="light" weight="0.599999280001" />
+ <shade name="cool" weight="0.29999964" />
+ <shade name="weak" weight="0.0999998800001" />
+</color>
+
+</colors>

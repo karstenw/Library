@@ -1,0 +1,33 @@
+<colors query="aguinaldo">
+
+<color name="orange" weight="0.599999320001">
+ <shade name="weak" weight="0.399999520001" />
+ <shade name="hard" weight="0.399999520001" />
+ <shade name="light" weight="0.19999976" />
+</color>
+
+<color name="blue" weight="0.199999773334">
+ <shade name="weak" weight="0.399999520001" />
+ <shade name="hard" weight="0.399999520001" />
+ <shade name="light" weight="0.19999976" />
+</color>
+
+<color name="white" weight="0.0666665911112">
+ <shade name="weak" weight="0.399999520001" />
+ <shade name="hard" weight="0.399999520001" />
+ <shade name="light" weight="0.19999976" />
+</color>
+
+<color name="red" weight="0.0666665911112">
+ <shade name="weak" weight="0.399999520001" />
+ <shade name="hard" weight="0.399999520001" />
+ <shade name="light" weight="0.19999976" />
+</color>
+
+<color name="pink" weight="0.0666665911112">
+ <shade name="weak" weight="0.399999520001" />
+ <shade name="hard" weight="0.399999520001" />
+ <shade name="light" weight="0.19999976" />
+</color>
+
+</colors>

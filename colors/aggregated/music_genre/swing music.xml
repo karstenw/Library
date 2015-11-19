@@ -1,0 +1,33 @@
+<colors query="swing music">
+
+<color name="blue" weight="0.909089990818">
+ <shade name="cool" weight="0.754825485429" />
+ <shade name="soft" weight="0.229729495565" />
+ <shade name="hard" weight="0.0154439997019" />
+</color>
+
+<color name="black" weight="0.0454544995409">
+ <shade name="cool" weight="0.754825485429" />
+ <shade name="soft" weight="0.229729495565" />
+ <shade name="hard" weight="0.0154439997019" />
+</color>
+
+<color name="white" weight="0.0252524997449">
+ <shade name="cool" weight="0.754825485429" />
+ <shade name="soft" weight="0.229729495565" />
+ <shade name="hard" weight="0.0154439997019" />
+</color>
+
+<color name="red" weight="0.010100999898">
+ <shade name="cool" weight="0.754825485429" />
+ <shade name="soft" weight="0.229729495565" />
+ <shade name="hard" weight="0.0154439997019" />
+</color>
+
+<color name="pink" weight="0.010100999898">
+ <shade name="cool" weight="0.754825485429" />
+ <shade name="soft" weight="0.229729495565" />
+ <shade name="hard" weight="0.0154439997019" />
+</color>
+
+</colors>

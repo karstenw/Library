@@ -1,0 +1,33 @@
+<colors query="dunedin">
+
+<color name="white" weight="0.730145110919">
+ <shade name="warm" weight="0.661457508234" />
+ <shade name="dark" weight="0.169270622186" />
+ <shade name="cool" weight="0.169270622186" />
+</color>
+
+<color name="green" weight="0.130469881085">
+ <shade name="dark" weight="0.351350441639" />
+ <shade name="cool" weight="0.351350441639" />
+ <shade name="light" weight="0.29729652754" />
+</color>
+
+<color name="black" weight="0.0534845475257">
+ <shade name="warm" weight="0.661457508234" />
+ <shade name="dark" weight="0.169270622186" />
+ <shade name="cool" weight="0.169270622186" />
+</color>
+
+<color name="blue" weight="0.0461912001359">
+ <shade name="dark" weight="0.351350441639" />
+ <shade name="cool" weight="0.351350441639" />
+ <shade name="light" weight="0.29729652754" />
+</color>
+
+<color name="red" weight="0.0397082246782">
+ <shade name="warm" weight="0.661457508234" />
+ <shade name="dark" weight="0.169270622186" />
+ <shade name="cool" weight="0.169270622186" />
+</color>
+
+</colors>

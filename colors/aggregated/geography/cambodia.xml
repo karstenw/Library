@@ -1,0 +1,33 @@
+<colors query="cambodia">
+
+<color name="blue" weight="0.568616094686">
+ <shade name="neutral" weight="0.558927874765" />
+ <shade name="cool" weight="0.3633924042" />
+ <shade name="dark" weight="0.0776784746079" />
+</color>
+
+<color name="red" weight="0.154729187304">
+ <shade name="neutral" weight="0.558927874765" />
+ <shade name="cool" weight="0.3633924042" />
+ <shade name="dark" weight="0.0776784746079" />
+</color>
+
+<color name="white" weight="0.136139814978">
+ <shade name="neutral" weight="0.558927874765" />
+ <shade name="cool" weight="0.3633924042" />
+ <shade name="dark" weight="0.0776784746079" />
+</color>
+
+<color name="black" weight="0.0858391604477">
+ <shade name="neutral" weight="0.558927874765" />
+ <shade name="cool" weight="0.3633924042" />
+ <shade name="dark" weight="0.0776784746079" />
+</color>
+
+<color name="yellow" weight="0.054674624489">
+ <shade name="neutral" weight="0.558927874765" />
+ <shade name="cool" weight="0.3633924042" />
+ <shade name="dark" weight="0.0776784746079" />
+</color>
+
+</colors>

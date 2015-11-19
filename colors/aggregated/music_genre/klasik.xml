@@ -1,0 +1,33 @@
+<colors query="klasik">
+
+<color name="purple" weight="0.703098792594">
+ <shade name="cool" weight="0.656369820069" />
+ <shade name="soft" weight="0.173744952371" />
+ <shade name="light" weight="0.16988395343" />
+</color>
+
+<color name="black" weight="0.17455120837">
+ <shade name="cool" weight="0.656369820069" />
+ <shade name="soft" weight="0.173744952371" />
+ <shade name="light" weight="0.16988395343" />
+</color>
+
+<color name="orange" weight="0.0978791822637">
+ <shade name="cool" weight="0.656369820069" />
+ <shade name="soft" weight="0.173744952371" />
+ <shade name="light" weight="0.16988395343" />
+</color>
+
+<color name="white" weight="0.0130505576352">
+ <shade name="cool" weight="0.656369820069" />
+ <shade name="soft" weight="0.173744952371" />
+ <shade name="light" weight="0.16988395343" />
+</color>
+
+<color name="red" weight="0.0114192379308">
+ <shade name="cool" weight="0.656369820069" />
+ <shade name="soft" weight="0.173744952371" />
+ <shade name="light" weight="0.16988395343" />
+</color>
+
+</colors>

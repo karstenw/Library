@@ -1,0 +1,33 @@
+<colors query="martina navratilova">
+
+<color name="black" weight="0.666666000001">
+ <shade name="hard" weight="0.71428489796" />
+ <shade name="light" weight="0.142856979592" />
+ <shade name="fresh" weight="0.142856979592" />
+</color>
+
+<color name="green" weight="0.142857">
+ <shade name="hard" weight="0.71428489796" />
+ <shade name="light" weight="0.142856979592" />
+ <shade name="fresh" weight="0.142856979592" />
+</color>
+
+<color name="white" weight="0.0952380000001">
+ <shade name="hard" weight="0.71428489796" />
+ <shade name="light" weight="0.142856979592" />
+ <shade name="fresh" weight="0.142856979592" />
+</color>
+
+<color name="pink" weight="0.0952380000001">
+ <shade name="hard" weight="0.71428489796" />
+ <shade name="light" weight="0.142856979592" />
+ <shade name="fresh" weight="0.142856979592" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="hard" weight="0.71428489796" />
+ <shade name="light" weight="0.142856979592" />
+ <shade name="fresh" weight="0.142856979592" />
+</color>
+
+</colors>

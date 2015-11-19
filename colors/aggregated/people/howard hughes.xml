@@ -1,0 +1,33 @@
+<colors query="howard hughes">
+
+<color name="green" weight="0.479820145831">
+ <shade name="light" weight="0.428570816327" />
+ <shade name="cool" weight="0.35714234694" />
+ <shade name="bright" weight="0.214285408164" />
+</color>
+
+<color name="white" weight="0.349775433409">
+ <shade name="light" weight="0.428570816327" />
+ <shade name="cool" weight="0.35714234694" />
+ <shade name="bright" weight="0.214285408164" />
+</color>
+
+<color name="black" weight="0.15994004861">
+ <shade name="light" weight="0.428570816327" />
+ <shade name="cool" weight="0.35714234694" />
+ <shade name="bright" weight="0.214285408164" />
+</color>
+
+<color name="yellow" weight="0.00597906723777">
+ <shade name="light" weight="0.428570816327" />
+ <shade name="cool" weight="0.35714234694" />
+ <shade name="bright" weight="0.214285408164" />
+</color>
+
+<color name="orange" weight="0.00448430042833">
+ <shade name="light" weight="0.428570816327" />
+ <shade name="cool" weight="0.35714234694" />
+ <shade name="bright" weight="0.214285408164" />
+</color>
+
+</colors>

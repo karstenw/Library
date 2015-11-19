@@ -1,0 +1,33 @@
+<colors query="johnny cash">
+
+<color name="black" weight="0.640711832388">
+ <shade name="cool" weight="0.433226833419" />
+ <shade name="light" weight="0.296502034615" />
+ <shade name="hard" weight="0.270269951124" />
+</color>
+
+<color name="white" weight="0.266806686801">
+ <shade name="cool" weight="0.433226833419" />
+ <shade name="light" weight="0.296502034615" />
+ <shade name="hard" weight="0.270269951124" />
+</color>
+
+<color name="green" weight="0.054300797525">
+ <shade name="cool" weight="0.433226833419" />
+ <shade name="light" weight="0.296502034615" />
+ <shade name="hard" weight="0.270269951124" />
+</color>
+
+<color name="blue" weight="0.0216075837902">
+ <shade name="cool" weight="0.433226833419" />
+ <shade name="light" weight="0.296502034615" />
+ <shade name="hard" weight="0.270269951124" />
+</color>
+
+<color name="purple" weight="0.0165720773069">
+ <shade name="cool" weight="0.433226833419" />
+ <shade name="light" weight="0.296502034615" />
+ <shade name="hard" weight="0.270269951124" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="toni morrison">
+
+<color name="blue" weight="0.49853750587">
+ <shade name="dark" weight="0.960211228645" />
+ <shade name="light" weight="0.0238726548558" />
+ <shade name="hard" weight="0.0159151032372" />
+</color>
+
+<color name="purple" weight="0.207602128544">
+ <shade name="dark" weight="0.960211228645" />
+ <shade name="light" weight="0.0238726548558" />
+ <shade name="hard" weight="0.0159151032372" />
+</color>
+
+<color name="white" weight="0.204678154903">
+ <shade name="dark" weight="0.960211228645" />
+ <shade name="light" weight="0.0238726548558" />
+ <shade name="hard" weight="0.0159151032372" />
+</color>
+
+<color name="black" weight="0.0804092751403">
+ <shade name="dark" weight="0.960211228645" />
+ <shade name="light" weight="0.0238726548558" />
+ <shade name="hard" weight="0.0159151032372" />
+</color>
+
+<color name="green" weight="0.0087719209244">
+ <shade name="dark" weight="0.960211228645" />
+ <shade name="light" weight="0.0238726548558" />
+ <shade name="hard" weight="0.0159151032372" />
+</color>
+
+</colors>

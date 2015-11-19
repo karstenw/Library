@@ -1,0 +1,33 @@
+<colors query="angela davis">
+
+<color name="black" weight="0.638297220462">
+ <shade name="cool" weight="0.71428489796" />
+ <shade name="weak" weight="0.142856979592" />
+ <shade name="fresh" weight="0.142856979592" />
+</color>
+
+<color name="white" weight="0.148936018108">
+ <shade name="cool" weight="0.71428489796" />
+ <shade name="weak" weight="0.142856979592" />
+ <shade name="fresh" weight="0.142856979592" />
+</color>
+
+<color name="green" weight="0.0851062960617">
+ <shade name="cool" weight="0.71428489796" />
+ <shade name="weak" weight="0.142856979592" />
+ <shade name="fresh" weight="0.142856979592" />
+</color>
+
+<color name="red" weight="0.0638297220462">
+ <shade name="cool" weight="0.71428489796" />
+ <shade name="weak" weight="0.142856979592" />
+ <shade name="fresh" weight="0.142856979592" />
+</color>
+
+<color name="blue" weight="0.0638297220462">
+ <shade name="cool" weight="0.71428489796" />
+ <shade name="weak" weight="0.142856979592" />
+ <shade name="fresh" weight="0.142856979592" />
+</color>
+
+</colors>

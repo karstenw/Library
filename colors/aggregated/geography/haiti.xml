@@ -1,0 +1,33 @@
+<colors query="haiti">
+
+<color name="black" weight="0.492983927264">
+ <shade name="dark" weight="0.682453454831" />
+ <shade name="fresh" weight="0.204520751448" />
+ <shade name="cool" weight="0.1130246258" />
+</color>
+
+<color name="green" weight="0.304891598092">
+ <shade name="dark" weight="0.682453454831" />
+ <shade name="fresh" weight="0.204520751448" />
+ <shade name="cool" weight="0.1130246258" />
+</color>
+
+<color name="red" weight="0.0792566467678">
+ <shade name="dark" weight="0.682453454831" />
+ <shade name="fresh" weight="0.204520751448" />
+ <shade name="cool" weight="0.1130246258" />
+</color>
+
+<color name="orange" weight="0.0659840025722">
+ <shade name="dark" weight="0.682453454831" />
+ <shade name="fresh" weight="0.204520751448" />
+ <shade name="cool" weight="0.1130246258" />
+</color>
+
+<color name="white" weight="0.0568827608381">
+ <shade name="dark" weight="0.682453454831" />
+ <shade name="fresh" weight="0.204520751448" />
+ <shade name="cool" weight="0.1130246258" />
+</color>
+
+</colors>

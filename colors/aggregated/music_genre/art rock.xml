@@ -1,0 +1,33 @@
+<colors query="art rock">
+
+<color name="black" weight="0.97834547257">
+ <shade name="dark" weight="0.557224165748" />
+ <shade name="hard" weight="0.289538046908" />
+ <shade name="cool" weight="0.153236645581" />
+</color>
+
+<color name="white" weight="0.00787400782752">
+ <shade name="dark" weight="0.557224165748" />
+ <shade name="hard" weight="0.289538046908" />
+ <shade name="cool" weight="0.153236645581" />
+</color>
+
+<color name="purple" weight="0.00688975684908">
+ <shade name="dark" weight="0.557224165748" />
+ <shade name="hard" weight="0.289538046908" />
+ <shade name="cool" weight="0.153236645581" />
+</color>
+
+<color name="blue" weight="0.00393700391376">
+ <shade name="dark" weight="0.557224165748" />
+ <shade name="hard" weight="0.289538046908" />
+ <shade name="cool" weight="0.153236645581" />
+</color>
+
+<color name="red" weight="0.00295275293532">
+ <shade name="dark" weight="0.557224165748" />
+ <shade name="hard" weight="0.289538046908" />
+ <shade name="cool" weight="0.153236645581" />
+</color>
+
+</colors>

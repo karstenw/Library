@@ -1,0 +1,33 @@
+<colors query="anthony trollope">
+
+<color name="white" weight="0.666666000001">
+ <shade name="dark" weight="0.799999200001" />
+ <shade name="light" weight="0.0999999000001" />
+ <shade name="fresh" weight="0.0999999000001" />
+</color>
+
+<color name="red" weight="0.111111">
+ <shade name="dark" weight="0.799999200001" />
+ <shade name="light" weight="0.0999999000001" />
+ <shade name="fresh" weight="0.0999999000001" />
+</color>
+
+<color name="green" weight="0.111111">
+ <shade name="dark" weight="0.799999200001" />
+ <shade name="light" weight="0.0999999000001" />
+ <shade name="fresh" weight="0.0999999000001" />
+</color>
+
+<color name="black" weight="0.111111">
+ <shade name="dark" weight="0.799999200001" />
+ <shade name="light" weight="0.0999999000001" />
+ <shade name="fresh" weight="0.0999999000001" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="dark" weight="0.799999200001" />
+ <shade name="light" weight="0.0999999000001" />
+ <shade name="fresh" weight="0.0999999000001" />
+</color>
+
+</colors>

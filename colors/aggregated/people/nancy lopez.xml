@@ -1,0 +1,33 @@
+<colors query="nancy lopez">
+
+<color name="green" weight="0.473683736843">
+ <shade name="cool" weight="0.999999000001" />
+ <shade name="weak" weight="0.0" />
+ <shade name="soft" weight="0.0" />
+</color>
+
+<color name="red" weight="0.210526105263">
+ <shade name="cool" weight="0.999999000001" />
+ <shade name="weak" weight="0.0" />
+ <shade name="warm" weight="0.0" />
+</color>
+
+<color name="blue" weight="0.157894578948">
+ <shade name="cool" weight="0.999999000001" />
+ <shade name="weak" weight="0.0" />
+ <shade name="soft" weight="0.0" />
+</color>
+
+<color name="white" weight="0.105263052632">
+ <shade name="cool" weight="0.999999000001" />
+ <shade name="weak" weight="0.0" />
+ <shade name="warm" weight="0.0" />
+</color>
+
+<color name="yellow" weight="0.0526315263158">
+ <shade name="cool" weight="0.999999000001" />
+ <shade name="weak" weight="0.0" />
+ <shade name="warm" weight="0.0" />
+</color>
+
+</colors>

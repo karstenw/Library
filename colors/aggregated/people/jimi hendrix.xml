@@ -1,0 +1,33 @@
+<colors query="jimi hendrix">
+
+<color name="white" weight="0.493015100774">
+ <shade name="light" weight="0.655161648668" />
+ <shade name="cool" weight="0.258554864921" />
+ <shade name="hard" weight="0.0862824492666" />
+</color>
+
+<color name="purple" weight="0.300328365555">
+ <shade name="light" weight="0.655161648668" />
+ <shade name="cool" weight="0.258554864921" />
+ <shade name="hard" weight="0.0862824492666" />
+</color>
+
+<color name="green" weight="0.0981921742376">
+ <shade name="light" weight="0.655161648668" />
+ <shade name="cool" weight="0.258554864921" />
+ <shade name="hard" weight="0.0862824492666" />
+</color>
+
+<color name="black" weight="0.0583401202583">
+ <shade name="light" weight="0.655161648668" />
+ <shade name="cool" weight="0.258554864921" />
+ <shade name="hard" weight="0.0862824492666" />
+</color>
+
+<color name="blue" weight="0.0501232019121">
+ <shade name="light" weight="0.655161648668" />
+ <shade name="cool" weight="0.258554864921" />
+ <shade name="hard" weight="0.0862824492666" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="california">
+
+<color name="orange" weight="0.730617788806">
+ <shade name="fresh" weight="0.395721432386" />
+ <shade name="cool" weight="0.360070852892" />
+ <shade name="warm" weight="0.244206469536" />
+</color>
+
+<color name="blue" weight="0.108408375147">
+ <shade name="fresh" weight="0.448786428235" />
+ <shade name="cool" weight="0.408355218484" />
+ <shade name="light" weight="0.14285694112" />
+</color>
+
+<color name="red" weight="0.0584858628944">
+ <shade name="fresh" weight="0.395721432386" />
+ <shade name="cool" weight="0.360070852892" />
+ <shade name="warm" weight="0.244206469536" />
+</color>
+
+<color name="black" weight="0.0531109938745">
+ <shade name="fresh" weight="0.395721432386" />
+ <shade name="cool" weight="0.360070852892" />
+ <shade name="warm" weight="0.244206469536" />
+</color>
+
+<color name="white" weight="0.0493759154031">
+ <shade name="fresh" weight="0.395721432386" />
+ <shade name="cool" weight="0.360070852892" />
+ <shade name="warm" weight="0.244206469536" />
+</color>
+
+</colors>

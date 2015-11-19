@@ -1,0 +1,33 @@
+<colors query="modern classical music">
+
+<color name="yellow" weight="0.0">
+ <shade name="dark" weight="0.615384000001" />
+ <shade name="intense" weight="0.307692" />
+ <shade name="light" weight="0.0769230000001" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="dark" weight="0.88888760494" />
+ <shade name="light" weight="0.111110950618" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="dark" weight="0.615384000001" />
+ <shade name="intense" weight="0.307692" />
+ <shade name="light" weight="0.0769230000001" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="dark" weight="0.88888760494" />
+ <shade name="light" weight="0.111110950618" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="pink" weight="0.0">
+ <shade name="dark" weight="0.88888760494" />
+ <shade name="light" weight="0.111110950618" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+</colors>

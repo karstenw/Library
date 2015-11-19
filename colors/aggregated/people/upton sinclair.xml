@@ -1,0 +1,33 @@
+<colors query="upton sinclair">
+
+<color name="white" weight="0.333332984127">
+ <shade name="dark" weight="0.499999375001" />
+ <shade name="weak" weight="0.2499996875" />
+ <shade name="neutral" weight="0.2499996875" />
+</color>
+
+<color name="black" weight="0.238094988662">
+ <shade name="dark" weight="0.499999375001" />
+ <shade name="weak" weight="0.2499996875" />
+ <shade name="neutral" weight="0.2499996875" />
+</color>
+
+<color name="red" weight="0.19047599093">
+ <shade name="dark" weight="0.499999375001" />
+ <shade name="weak" weight="0.2499996875" />
+ <shade name="neutral" weight="0.2499996875" />
+</color>
+
+<color name="orange" weight="0.142856993197">
+ <shade name="dark" weight="0.499999375001" />
+ <shade name="weak" weight="0.2499996875" />
+ <shade name="neutral" weight="0.2499996875" />
+</color>
+
+<color name="green" weight="0.095237995465">
+ <shade name="dark" weight="0.499999375001" />
+ <shade name="weak" weight="0.2499996875" />
+ <shade name="neutral" weight="0.2499996875" />
+</color>
+
+</colors>

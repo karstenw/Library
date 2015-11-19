@@ -1,0 +1,33 @@
+<colors query="groucho marx">
+
+<color name="green" weight="0.517027335545">
+ <shade name="dark" weight="0.970349432394" />
+ <shade name="light" weight="0.0204851546839" />
+ <shade name="cool" weight="0.00916441130594" />
+</color>
+
+<color name="black" weight="0.309597206913">
+ <shade name="dark" weight="0.970349432394" />
+ <shade name="light" weight="0.0204851546839" />
+ <shade name="cool" weight="0.00916441130594" />
+</color>
+
+<color name="white" weight="0.133126798973">
+ <shade name="dark" weight="0.970349432394" />
+ <shade name="light" weight="0.0204851546839" />
+ <shade name="cool" weight="0.00916441130594" />
+</color>
+
+<color name="red" weight="0.0278637486222">
+ <shade name="dark" weight="0.970349432394" />
+ <shade name="light" weight="0.0204851546839" />
+ <shade name="cool" weight="0.00916441130594" />
+</color>
+
+<color name="blue" weight="0.0123838882765">
+ <shade name="dark" weight="0.970349432394" />
+ <shade name="light" weight="0.0204851546839" />
+ <shade name="cool" weight="0.00916441130594" />
+</color>
+
+</colors>

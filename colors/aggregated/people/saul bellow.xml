@@ -1,0 +1,33 @@
+<colors query="saul bellow">
+
+<color name="green" weight="0.888888000001">
+ <shade name="intense" weight="0.571427918368" />
+ <shade name="light" weight="0.285713959184" />
+ <shade name="cool" weight="0.142856979592" />
+</color>
+
+<color name="white" weight="0.0833332500001">
+ <shade name="light" weight="0.499999000002" />
+ <shade name="warm" weight="0.249999500001" />
+ <shade name="cool" weight="0.249999500001" />
+</color>
+
+<color name="yellow" weight="0.013888875">
+ <shade name="intense" weight="0.571427918368" />
+ <shade name="light" weight="0.285713959184" />
+ <shade name="warm" weight="0.142856979592" />
+</color>
+
+<color name="black" weight="0.013888875">
+ <shade name="intense" weight="0.571427918368" />
+ <shade name="light" weight="0.285713959184" />
+ <shade name="warm" weight="0.142856979592" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="intense" weight="0.571427918368" />
+ <shade name="light" weight="0.285713959184" />
+ <shade name="warm" weight="0.142856979592" />
+</color>
+
+</colors>

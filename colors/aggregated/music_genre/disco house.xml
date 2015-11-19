@@ -1,0 +1,33 @@
+<colors query="disco house">
+
+<color name="black" weight="0.984250982315">
+ <shade name="fresh" weight="0.550702907633" />
+ <shade name="dark" weight="0.264434435824" />
+ <shade name="hard" weight="0.184861504677" />
+</color>
+
+<color name="white" weight="0.00984250982315">
+ <shade name="fresh" weight="0.550702907633" />
+ <shade name="dark" weight="0.264434435824" />
+ <shade name="hard" weight="0.184861504677" />
+</color>
+
+<color name="yellow" weight="0.00196850196463">
+ <shade name="fresh" weight="0.550702907633" />
+ <shade name="dark" weight="0.264434435824" />
+ <shade name="hard" weight="0.184861504677" />
+</color>
+
+<color name="purple" weight="0.00196850196463">
+ <shade name="fresh" weight="0.550702907633" />
+ <shade name="dark" weight="0.264434435824" />
+ <shade name="hard" weight="0.184861504677" />
+</color>
+
+<color name="green" weight="0.00196850196463">
+ <shade name="fresh" weight="0.550702907633" />
+ <shade name="dark" weight="0.264434435824" />
+ <shade name="hard" weight="0.184861504677" />
+</color>
+
+</colors>

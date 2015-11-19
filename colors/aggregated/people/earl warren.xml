@@ -1,0 +1,33 @@
+<colors query="earl warren">
+
+<color name="white" weight="0.503730839553">
+ <shade name="dark" weight="0.666666000001" />
+ <shade name="cool" weight="0.333333" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="black" weight="0.483830361941">
+ <shade name="dark" weight="0.666666000001" />
+ <shade name="cool" weight="0.333333" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="green" weight="0.00746267910449">
+ <shade name="dark" weight="0.666666000001" />
+ <shade name="cool" weight="0.333333" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="blue" weight="0.00373133955224">
+ <shade name="dark" weight="0.666666000001" />
+ <shade name="cool" weight="0.333333" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="red" weight="0.00124377985075">
+ <shade name="dark" weight="0.666666000001" />
+ <shade name="cool" weight="0.333333" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+</colors>

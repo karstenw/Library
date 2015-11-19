@@ -1,0 +1,57 @@
+2, typography, graphic design
+2, typography, layout
+4, font, typography
+6, typeface, font
+1, weight, font
+6, point size, weight
+6, font size, weight
+1, italic, font
+1, bold, font
+3, serif, font
+3, sans-serif, font
+2, letterspacing, typography
+2, kerning, typography
+6, letterspacing, readability
+6, readability, legibility
+6, font size, readability
+6, leading, readability
+2, leading, typography
+6, linespacing, leading
+6, lineheight, leading
+2, paragraph, text
+2, title, text
+2, whitespace, layout
+2, whitespace, typography
+2, text, layout
+4, type designer, typography
+3, David Carson, type designer
+7, grunge, typography
+6, grunge, chaos
+9, David Carson, grunge
+2, icon, typography
+3, ampersand, icon
+3, smiley, icon
+6, smiley, e-mail
+6, smiley, chat
+4, Adobe InDesign, layout
+3, Helvetica, sans-serif
+3, Times, serif
+10, communication, graphic design
+8, noise, communication
+6, signal, icon
+2, signal, communication
+2, message, communication
+1, message, text
+6, David Carson, trash
+6, David Carson, surfing
+6, logo, abstraction
+6, icon, abstraction
+2, logo design, graphic design
+10, logo, logo design
+9, The Designers Republic, graphic design
+6, The Designers Republic, architecture
+2, Russian constructivism, The Designers Republic
+6, electronica, The Designers Republic
+9, The Designers Republic, web design
+2, anime, The Designers Republic
+2, minimalism, The Designers Republic

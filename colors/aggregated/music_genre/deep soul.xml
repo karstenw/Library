@@ -1,0 +1,33 @@
+<colors query="deep soul">
+
+<color name="white" weight="0.950309608697">
+ <shade name="dark" weight="0.905554589631" />
+ <shade name="warm" weight="0.0777776948149" />
+ <shade name="hard" weight="0.0166666488889" />
+</color>
+
+<color name="blue" weight="0.0248446956522">
+ <shade name="dark" weight="0.961650828101" />
+ <shade name="intense" weight="0.0206489441617" />
+ <shade name="hard" weight="0.0176990949957" />
+</color>
+
+<color name="black" weight="0.0186335217391">
+ <shade name="dark" weight="0.903046130832" />
+ <shade name="warm" weight="0.0775622443659" />
+ <shade name="intense" weight="0.0193905610915" />
+</color>
+
+<color name="green" weight="0.00621117391305">
+ <shade name="dark" weight="0.961650828101" />
+ <shade name="intense" weight="0.0206489441617" />
+ <shade name="hard" weight="0.0176990949957" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="dark" weight="0.903046130832" />
+ <shade name="warm" weight="0.0775622443659" />
+ <shade name="intense" weight="0.0193905610915" />
+</color>
+
+</colors>

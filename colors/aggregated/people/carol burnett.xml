@@ -1,0 +1,33 @@
+<colors query="carol burnett">
+
+<color name="green" weight="0.730815347138">
+ <shade name="light" weight="0.444443654322" />
+ <shade name="hard" weight="0.333332740742" />
+ <shade name="intense" weight="0.222221827161" />
+</color>
+
+<color name="black" weight="0.173264138551">
+ <shade name="light" weight="0.444443654322" />
+ <shade name="hard" weight="0.333332740742" />
+ <shade name="intense" weight="0.222221827161" />
+</color>
+
+<color name="white" weight="0.095005995128">
+ <shade name="light" weight="0.444443654322" />
+ <shade name="hard" weight="0.333332740742" />
+ <shade name="dark" weight="0.222221827161" />
+</color>
+
+<color name="blue" weight="0.000609012789282">
+ <shade name="light" weight="0.444443654322" />
+ <shade name="hard" weight="0.333332740742" />
+ <shade name="intense" weight="0.222221827161" />
+</color>
+
+<color name="red" weight="0.000304506394641">
+ <shade name="light" weight="0.444443654322" />
+ <shade name="hard" weight="0.333332740742" />
+ <shade name="intense" weight="0.222221827161" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="john mcenroe">
+
+<color name="black" weight="0.827956143486">
+ <shade name="hard" weight="0.624999296876" />
+ <shade name="cool" weight="0.24999971875" />
+ <shade name="weak" weight="0.124999859375" />
+</color>
+
+<color name="green" weight="0.0967740946931">
+ <shade name="hard" weight="0.624999296876" />
+ <shade name="cool" weight="0.24999971875" />
+ <shade name="weak" weight="0.124999859375" />
+</color>
+
+<color name="white" weight="0.0537633859406">
+ <shade name="hard" weight="0.624999296876" />
+ <shade name="cool" weight="0.24999971875" />
+ <shade name="weak" weight="0.124999859375" />
+</color>
+
+<color name="yellow" weight="0.0107526771881">
+ <shade name="hard" weight="0.624999296876" />
+ <shade name="cool" weight="0.24999971875" />
+ <shade name="weak" weight="0.124999859375" />
+</color>
+
+<color name="red" weight="0.0107526771881">
+ <shade name="hard" weight="0.624999296876" />
+ <shade name="cool" weight="0.24999971875" />
+ <shade name="weak" weight="0.124999859375" />
+</color>
+
+</colors>

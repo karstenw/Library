@@ -1,0 +1,33 @@
+<colors query="malta">
+
+<color name="orange" weight="0.394952959325">
+ <shade name="light" weight="0.64832443212" />
+ <shade name="cool" weight="0.22009537917" />
+ <shade name="warm" weight="0.131578759286" />
+</color>
+
+<color name="blue" weight="0.285243803957">
+ <shade name="light" weight="0.664214713558" />
+ <shade name="cool" weight="0.225489865857" />
+ <shade name="fresh" weight="0.110293956126" />
+</color>
+
+<color name="red" weight="0.169774917932">
+ <shade name="light" weight="0.64832443212" />
+ <shade name="cool" weight="0.22009537917" />
+ <shade name="warm" weight="0.131578759286" />
+</color>
+
+<color name="black" weight="0.0921556905092">
+ <shade name="light" weight="0.64832443212" />
+ <shade name="cool" weight="0.22009537917" />
+ <shade name="warm" weight="0.131578759286" />
+</color>
+
+<color name="white" weight="0.0578715794567">
+ <shade name="light" weight="0.64832443212" />
+ <shade name="cool" weight="0.22009537917" />
+ <shade name="warm" weight="0.131578759286" />
+</color>
+
+</colors>

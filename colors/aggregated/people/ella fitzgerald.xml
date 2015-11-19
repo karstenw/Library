@@ -1,0 +1,33 @@
+<colors query="ella fitzgerald">
+
+<color name="blue" weight="0.754051362226">
+ <shade name="light" weight="0.963424100457" />
+ <shade name="cool" weight="0.0303300179774" />
+ <shade name="dark" weight="0.00624441546593" />
+</color>
+
+<color name="green" weight="0.116513855347">
+ <shade name="light" weight="0.963424100457" />
+ <shade name="cool" weight="0.0303300179774" />
+ <shade name="dark" weight="0.00624441546593" />
+</color>
+
+<color name="white" weight="0.0580220207071">
+ <shade name="light" weight="0.665023957533" />
+ <shade name="warm" weight="0.314039091057" />
+ <shade name="cool" weight="0.0209359394038" />
+</color>
+
+<color name="purple" weight="0.0389945564266">
+ <shade name="light" weight="0.963424100457" />
+ <shade name="cool" weight="0.0303300179774" />
+ <shade name="dark" weight="0.00624441546593" />
+</color>
+
+<color name="red" weight="0.0324171613667">
+ <shade name="light" weight="0.665023957533" />
+ <shade name="warm" weight="0.314039091057" />
+ <shade name="cool" weight="0.0209359394038" />
+</color>
+
+</colors>

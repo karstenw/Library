@@ -1,0 +1,33 @@
+<colors query="lucille ball">
+
+<color name="white" weight="0.735268256795">
+ <shade name="light" weight="0.585491621252" />
+ <shade name="cool" weight="0.391191304465" />
+ <shade name="bright" weight="0.0233160380145" />
+</color>
+
+<color name="black" weight="0.108454202803">
+ <shade name="light" weight="0.585491621252" />
+ <shade name="cool" weight="0.391191304465" />
+ <shade name="bright" weight="0.0233160380145" />
+</color>
+
+<color name="red" weight="0.0836890698791">
+ <shade name="light" weight="0.585491621252" />
+ <shade name="cool" weight="0.391191304465" />
+ <shade name="bright" weight="0.0233160380145" />
+</color>
+
+<color name="pink" weight="0.0572159967541">
+ <shade name="light" weight="0.585491621252" />
+ <shade name="cool" weight="0.391191304465" />
+ <shade name="bright" weight="0.0233160380145" />
+</color>
+
+<color name="green" weight="0.0153714618145">
+ <shade name="light" weight="0.585491621252" />
+ <shade name="cool" weight="0.391191304465" />
+ <shade name="bright" weight="0.0233160380145" />
+</color>
+
+</colors>

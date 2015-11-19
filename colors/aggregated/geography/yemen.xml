@@ -1,0 +1,33 @@
+<colors query="yemen">
+
+<color name="green" weight="0.590688049648">
+ <shade name="light" weight="0.346938248022" />
+ <shade name="fresh" weight="0.326530115786" />
+ <shade name="cool" weight="0.326530115786" />
+</color>
+
+<color name="yellow" weight="0.154219047445">
+ <shade name="light" weight="0.346938248022" />
+ <shade name="fresh" weight="0.326530115786" />
+ <shade name="cool" weight="0.326530115786" />
+</color>
+
+<color name="red" weight="0.129000838429">
+ <shade name="light" weight="0.346938248022" />
+ <shade name="fresh" weight="0.326530115786" />
+ <shade name="cool" weight="0.326530115786" />
+</color>
+
+<color name="black" weight="0.0640154536564">
+ <shade name="light" weight="0.346938248022" />
+ <shade name="fresh" weight="0.326530115786" />
+ <shade name="cool" weight="0.326530115786" />
+</color>
+
+<color name="white" weight="0.0620755914244">
+ <shade name="light" weight="0.346938248022" />
+ <shade name="fresh" weight="0.326530115786" />
+ <shade name="cool" weight="0.326530115786" />
+</color>
+
+</colors>

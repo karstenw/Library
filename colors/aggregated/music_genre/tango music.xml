@@ -1,0 +1,33 @@
+<colors query="tango music">
+
+<color name="blue" weight="0.980197039605">
+ <shade name="soft" weight="0.775861212843" />
+ <shade name="cool" weight="0.120689521998" />
+ <shade name="light" weight="0.103448161712" />
+</color>
+
+<color name="red" weight="0.00990098019803">
+ <shade name="soft" weight="0.775861212843" />
+ <shade name="cool" weight="0.120689521998" />
+ <shade name="light" weight="0.103448161712" />
+</color>
+
+<color name="pink" weight="0.00396039207921">
+ <shade name="soft" weight="0.775861212843" />
+ <shade name="cool" weight="0.120689521998" />
+ <shade name="light" weight="0.103448161712" />
+</color>
+
+<color name="black" weight="0.00396039207921">
+ <shade name="soft" weight="0.775861212843" />
+ <shade name="cool" weight="0.120689521998" />
+ <shade name="light" weight="0.103448161712" />
+</color>
+
+<color name="yellow" weight="0.00198019603961">
+ <shade name="soft" weight="0.775861212843" />
+ <shade name="cool" weight="0.120689521998" />
+ <shade name="light" weight="0.103448161712" />
+</color>
+
+</colors>

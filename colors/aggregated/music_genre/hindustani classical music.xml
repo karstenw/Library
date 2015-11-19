@@ -1,0 +1,33 @@
+<colors query="hindustani classical music">
+
+<color name="yellow" weight="0.0">
+ <shade name="light" weight="0.843749156251" />
+ <shade name="soft" weight="0.15624984375" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="light" weight="0.843749156251" />
+ <shade name="soft" weight="0.15624984375" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="light" weight="0.843749156251" />
+ <shade name="soft" weight="0.15624984375" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="light" weight="0.843749156251" />
+ <shade name="soft" weight="0.15624984375" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="pink" weight="0.0">
+ <shade name="light" weight="0.843749156251" />
+ <shade name="soft" weight="0.15624984375" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+</colors>

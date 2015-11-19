@@ -1,0 +1,33 @@
+<colors query="contemporary christian music">
+
+<color name="white" weight="0.545454000001">
+ <shade name="light" weight="0.511058851974" />
+ <shade name="fresh" weight="0.477298700021" />
+ <shade name="cool" weight="0.0116414317078" />
+</color>
+
+<color name="green" weight="0.272727">
+ <shade name="light" weight="0.511058851974" />
+ <shade name="fresh" weight="0.477298700021" />
+ <shade name="cool" weight="0.0116414317078" />
+</color>
+
+<color name="red" weight="0.0909090000001">
+ <shade name="light" weight="0.511058851974" />
+ <shade name="fresh" weight="0.477298700021" />
+ <shade name="cool" weight="0.0116414317078" />
+</color>
+
+<color name="blue" weight="0.0909090000001">
+ <shade name="light" weight="0.511058851974" />
+ <shade name="fresh" weight="0.477298700021" />
+ <shade name="cool" weight="0.0116414317078" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="light" weight="0.511058851974" />
+ <shade name="fresh" weight="0.477298700021" />
+ <shade name="cool" weight="0.0116414317078" />
+</color>
+
+</colors>

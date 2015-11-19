@@ -1,0 +1,33 @@
+<colors query="plato">
+
+<color name="white" weight="0.316088599852">
+ <shade name="light" weight="0.962314721036" />
+ <shade name="hard" weight="0.0197466980757" />
+ <shade name="soft" weight="0.0179375464001" />
+</color>
+
+<color name="black" weight="0.286083462714">
+ <shade name="light" weight="0.962314721036" />
+ <shade name="hard" weight="0.0197466980757" />
+ <shade name="soft" weight="0.0179375464001" />
+</color>
+
+<color name="red" weight="0.214174599572">
+ <shade name="light" weight="0.962314721036" />
+ <shade name="hard" weight="0.0197466980757" />
+ <shade name="soft" weight="0.0179375464001" />
+</color>
+
+<color name="green" weight="0.113812589145">
+ <shade name="light" weight="0.962314721036" />
+ <shade name="hard" weight="0.0197466980757" />
+ <shade name="soft" weight="0.0179375464001" />
+</color>
+
+<color name="pink" weight="0.0698395433388">
+ <shade name="light" weight="0.962314721036" />
+ <shade name="hard" weight="0.0197466980757" />
+ <shade name="soft" weight="0.0179375464001" />
+</color>
+
+</colors>

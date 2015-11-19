@@ -1,0 +1,33 @@
+<colors query="herzegovina">
+
+<color name="green" weight="0.3999996">
+ <shade name="hard" weight="0.571427755103" />
+ <shade name="dark" weight="0.285713877552" />
+ <shade name="neutral" weight="0.142856938776" />
+</color>
+
+<color name="black" weight="0.2666664">
+ <shade name="hard" weight="0.571427755103" />
+ <shade name="dark" weight="0.285713877552" />
+ <shade name="warm" weight="0.142856938776" />
+</color>
+
+<color name="white" weight="0.1333332">
+ <shade name="hard" weight="0.571427755103" />
+ <shade name="dark" weight="0.285713877552" />
+ <shade name="warm" weight="0.142856938776" />
+</color>
+
+<color name="red" weight="0.1333332">
+ <shade name="hard" weight="0.571427755103" />
+ <shade name="dark" weight="0.285713877552" />
+ <shade name="warm" weight="0.142856938776" />
+</color>
+
+<color name="orange" weight="0.0666666000001">
+ <shade name="hard" weight="0.571427755103" />
+ <shade name="dark" weight="0.285713877552" />
+ <shade name="warm" weight="0.142856938776" />
+</color>
+
+</colors>

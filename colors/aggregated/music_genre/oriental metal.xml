@@ -1,0 +1,33 @@
+<colors query="oriental metal">
+
+<color name="purple" weight="0.29999967">
+ <shade name="dark" weight="0.833332500001" />
+ <shade name="cool" weight="0.1666665" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="green" weight="0.19999978">
+ <shade name="dark" weight="0.833332500001" />
+ <shade name="cool" weight="0.1666665" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="blue" weight="0.19999978">
+ <shade name="dark" weight="0.833332500001" />
+ <shade name="cool" weight="0.1666665" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="black" weight="0.19999978">
+ <shade name="dark" weight="0.833332500001" />
+ <shade name="cool" weight="0.1666665" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="white" weight="0.0999998900001">
+ <shade name="dark" weight="0.833332500001" />
+ <shade name="cool" weight="0.1666665" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+</colors>

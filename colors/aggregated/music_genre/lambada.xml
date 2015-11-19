@@ -1,0 +1,33 @@
+<colors query="lambada">
+
+<color name="orange" weight="0.935293175202">
+ <shade name="cool" weight="0.411764173011" />
+ <shade name="light" weight="0.352940719724" />
+ <shade name="dark" weight="0.235293813149" />
+</color>
+
+<color name="black" weight="0.0220588013019">
+ <shade name="cool" weight="0.411764173011" />
+ <shade name="light" weight="0.352940719724" />
+ <shade name="dark" weight="0.235293813149" />
+</color>
+
+<color name="green" weight="0.0214705666005">
+ <shade name="cool" weight="0.411764173011" />
+ <shade name="light" weight="0.352940719724" />
+ <shade name="dark" weight="0.235293813149" />
+</color>
+
+<color name="blue" weight="0.0123529287291">
+ <shade name="cool" weight="0.411764173011" />
+ <shade name="light" weight="0.352940719724" />
+ <shade name="dark" weight="0.235293813149" />
+</color>
+
+<color name="red" weight="0.00882352052077">
+ <shade name="cool" weight="0.411764173011" />
+ <shade name="light" weight="0.352940719724" />
+ <shade name="dark" weight="0.235293813149" />
+</color>
+
+</colors>

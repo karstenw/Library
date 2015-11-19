@@ -1,0 +1,33 @@
+<colors query="woodrow wilson">
+
+<color name="black" weight="0.387194730035">
+ <shade name="neutral" weight="0.428570632655" />
+ <shade name="light" weight="0.333332714287" />
+ <shade name="weak" weight="0.238094795919" />
+</color>
+
+<color name="white" weight="0.326219181998">
+ <shade name="neutral" weight="0.428570632655" />
+ <shade name="light" weight="0.333332714287" />
+ <shade name="weak" weight="0.238094795919" />
+</color>
+
+<color name="green" weight="0.204268085924">
+ <shade name="neutral" weight="0.428570632655" />
+ <shade name="light" weight="0.333332714287" />
+ <shade name="weak" weight="0.238094795919" />
+</color>
+
+<color name="red" weight="0.0518292158314">
+ <shade name="neutral" weight="0.428570632655" />
+ <shade name="light" weight="0.333332714287" />
+ <shade name="weak" weight="0.238094795919" />
+</color>
+
+<color name="blue" weight="0.0304877740185">
+ <shade name="neutral" weight="0.428570632655" />
+ <shade name="light" weight="0.333332714287" />
+ <shade name="weak" weight="0.238094795919" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="togo">
+
+<color name="black" weight="0.570345050477">
+ <shade name="soft" weight="0.918132166916" />
+ <shade name="hard" weight="0.0466717184849" />
+ <shade name="light" weight="0.0351950663984" />
+</color>
+
+<color name="orange" weight="0.240952734933">
+ <shade name="soft" weight="0.918132166916" />
+ <shade name="hard" weight="0.0466717184849" />
+ <shade name="light" weight="0.0351950663984" />
+</color>
+
+<color name="red" weight="0.108293364015">
+ <shade name="soft" weight="0.918132166916" />
+ <shade name="hard" weight="0.0466717184849" />
+ <shade name="light" weight="0.0351950663984" />
+</color>
+
+<color name="white" weight="0.0436783234859">
+ <shade name="soft" weight="0.918132166916" />
+ <shade name="hard" weight="0.0466717184849" />
+ <shade name="light" weight="0.0351950663984" />
+</color>
+
+<color name="blue" weight="0.036729499295">
+ <shade name="soft" weight="0.918132166916" />
+ <shade name="hard" weight="0.0466717184849" />
+ <shade name="light" weight="0.0351950663984" />
+</color>
+
+</colors>

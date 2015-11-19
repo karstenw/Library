@@ -1,0 +1,33 @@
+<colors query="buddha">
+
+<color name="red" weight="0.654236599089">
+ <shade name="light" weight="0.510327394201" />
+ <shade name="cool" weight="0.262454088446" />
+ <shade name="dark" weight="0.227217196942" />
+</color>
+
+<color name="blue" weight="0.174915070016">
+ <shade name="light" weight="0.510327394201" />
+ <shade name="cool" weight="0.262454088446" />
+ <shade name="dark" weight="0.227217196942" />
+</color>
+
+<color name="black" weight="0.0606779021953">
+ <shade name="light" weight="0.510327394201" />
+ <shade name="cool" weight="0.262454088446" />
+ <shade name="dark" weight="0.227217196942" />
+</color>
+
+<color name="white" weight="0.0599999368077">
+ <shade name="light" weight="0.510327394201" />
+ <shade name="cool" weight="0.262454088446" />
+ <shade name="dark" weight="0.227217196942" />
+</color>
+
+<color name="green" weight="0.0501694386866">
+ <shade name="light" weight="0.510327394201" />
+ <shade name="cool" weight="0.262454088446" />
+ <shade name="dark" weight="0.227217196942" />
+</color>
+
+</colors>

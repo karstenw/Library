@@ -1,0 +1,33 @@
+<colors query="bermuda">
+
+<color name="green" weight="0.309483869568">
+ <shade name="fresh" weight="0.433734303058" />
+ <shade name="cool" weight="0.315662187226" />
+ <shade name="light" weight="0.250602041767" />
+</color>
+
+<color name="white" weight="0.256239332868">
+ <shade name="fresh" weight="0.433734303058" />
+ <shade name="cool" weight="0.315662187226" />
+ <shade name="light" weight="0.250602041767" />
+</color>
+
+<color name="blue" weight="0.214642038571">
+ <shade name="fresh" weight="0.433734303058" />
+ <shade name="cool" weight="0.315662187226" />
+ <shade name="light" weight="0.250602041767" />
+</color>
+
+<color name="black" weight="0.194675337309">
+ <shade name="fresh" weight="0.433734303058" />
+ <shade name="cool" weight="0.315662187226" />
+ <shade name="light" weight="0.250602041767" />
+</color>
+
+<color name="orange" weight="0.024958376578">
+ <shade name="fresh" weight="0.433734303058" />
+ <shade name="cool" weight="0.315662187226" />
+ <shade name="light" weight="0.250602041767" />
+</color>
+
+</colors>

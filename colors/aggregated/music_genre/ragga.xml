@@ -1,0 +1,33 @@
+<colors query="ragga">
+
+<color name="black" weight="0.817437865751">
+ <shade name="hard" weight="0.635030637483" />
+ <shade name="cool" weight="0.22889016384" />
+ <shade name="dark" weight="0.136077993746" />
+</color>
+
+<color name="blue" weight="0.0933241563399">
+ <shade name="hard" weight="0.635030637483" />
+ <shade name="cool" weight="0.22889016384" />
+ <shade name="dark" weight="0.136077993746" />
+</color>
+
+<color name="white" weight="0.0656220953339">
+ <shade name="hard" weight="0.635030637483" />
+ <shade name="cool" weight="0.22889016384" />
+ <shade name="dark" weight="0.136077993746" />
+</color>
+
+<color name="red" weight="0.0179382198318">
+ <shade name="hard" weight="0.635030637483" />
+ <shade name="cool" weight="0.22889016384" />
+ <shade name="dark" weight="0.136077993746" />
+</color>
+
+<color name="pink" weight="0.00567665184549">
+ <shade name="hard" weight="0.635030637483" />
+ <shade name="cool" weight="0.22889016384" />
+ <shade name="dark" weight="0.136077993746" />
+</color>
+
+</colors>

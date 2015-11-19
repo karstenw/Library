@@ -1,0 +1,33 @@
+<colors query="cook islands">
+
+<color name="green" weight="0.530708121516">
+ <shade name="dark" weight="0.384614615386" />
+ <shade name="light" weight="0.307691692309" />
+ <shade name="fresh" weight="0.307691692309" />
+</color>
+
+<color name="black" weight="0.245669041414">
+ <shade name="warm" weight="0.470587515572" />
+ <shade name="dark" weight="0.294117197233" />
+ <shade name="light" weight="0.235293757786" />
+</color>
+
+<color name="red" weight="0.0992124974941">
+ <shade name="warm" weight="0.470587515572" />
+ <shade name="dark" weight="0.294117197233" />
+ <shade name="light" weight="0.235293757786" />
+</color>
+
+<color name="blue" weight="0.0787400773762">
+ <shade name="dark" weight="0.384614615386" />
+ <shade name="light" weight="0.307691692309" />
+ <shade name="fresh" weight="0.307691692309" />
+</color>
+
+<color name="yellow" weight="0.0456692448782">
+ <shade name="warm" weight="0.470587515572" />
+ <shade name="dark" weight="0.294117197233" />
+ <shade name="light" weight="0.235293757786" />
+</color>
+
+</colors>

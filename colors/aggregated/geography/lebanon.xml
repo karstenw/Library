@@ -1,0 +1,33 @@
+<colors query="lebanon">
+
+<color name="green" weight="0.804347005863">
+ <shade name="fresh" weight="0.606202228401" />
+ <shade name="weak" weight="0.265507177555" />
+ <shade name="light" weight="0.128289308801" />
+</color>
+
+<color name="red" weight="0.0860868687356">
+ <shade name="fresh" weight="0.606202228401" />
+ <shade name="weak" weight="0.265507177555" />
+ <shade name="light" weight="0.128289308801" />
+</color>
+
+<color name="blue" weight="0.0595651566504">
+ <shade name="fresh" weight="0.606202228401" />
+ <shade name="weak" weight="0.265507177555" />
+ <shade name="light" weight="0.128289308801" />
+</color>
+
+<color name="white" weight="0.0304782297897">
+ <shade name="fresh" weight="0.606202228401" />
+ <shade name="weak" weight="0.265507177555" />
+ <shade name="light" weight="0.128289308801" />
+</color>
+
+<color name="orange" weight="0.0195217192234">
+ <shade name="fresh" weight="0.606202228401" />
+ <shade name="weak" weight="0.265507177555" />
+ <shade name="light" weight="0.128289308801" />
+</color>
+
+</colors>

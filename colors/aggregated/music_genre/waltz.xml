@@ -1,0 +1,33 @@
+<colors query="waltz">
+
+<color name="black" weight="0.6302003107">
+ <shade name="dark" weight="0.893230042568" />
+ <shade name="light" weight="0.0666433352072" />
+ <shade name="hard" weight="0.0401255683185" />
+</color>
+
+<color name="blue" weight="0.299345147582">
+ <shade name="dark" weight="0.893230042568" />
+ <shade name="light" weight="0.0666433352072" />
+ <shade name="hard" weight="0.0401255683185" />
+</color>
+
+<color name="green" weight="0.0486972967359">
+ <shade name="dark" weight="0.893230042568" />
+ <shade name="light" weight="0.0666433352072" />
+ <shade name="hard" weight="0.0401255683185" />
+</color>
+
+<color name="red" weight="0.0136925340234">
+ <shade name="dark" weight="0.893230042568" />
+ <shade name="light" weight="0.0666433352072" />
+ <shade name="hard" weight="0.0401255683185" />
+</color>
+
+<color name="white" weight="0.00806369943009">
+ <shade name="dark" weight="0.893230042568" />
+ <shade name="light" weight="0.0666433352072" />
+ <shade name="hard" weight="0.0401255683185" />
+</color>
+
+</colors>

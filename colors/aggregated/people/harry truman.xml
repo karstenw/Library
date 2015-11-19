@@ -1,0 +1,33 @@
+<colors query="harry truman">
+
+<color name="black" weight="0.304347521739">
+ <shade name="weak" weight="0.428570816327" />
+ <shade name="hard" weight="0.35714234694" />
+ <shade name="light" weight="0.214285408164" />
+</color>
+
+<color name="white" weight="0.260869304348">
+ <shade name="weak" weight="0.428570816327" />
+ <shade name="hard" weight="0.35714234694" />
+ <shade name="light" weight="0.214285408164" />
+</color>
+
+<color name="blue" weight="0.260869304348">
+ <shade name="weak" weight="0.428570816327" />
+ <shade name="hard" weight="0.35714234694" />
+ <shade name="light" weight="0.214285408164" />
+</color>
+
+<color name="red" weight="0.130434652174">
+ <shade name="weak" weight="0.428570816327" />
+ <shade name="hard" weight="0.35714234694" />
+ <shade name="light" weight="0.214285408164" />
+</color>
+
+<color name="pink" weight="0.0434782173913">
+ <shade name="weak" weight="0.428570816327" />
+ <shade name="hard" weight="0.35714234694" />
+ <shade name="light" weight="0.214285408164" />
+</color>
+
+</colors>

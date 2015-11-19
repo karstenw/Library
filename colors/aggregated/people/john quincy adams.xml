@@ -1,0 +1,33 @@
+<colors query="john quincy adams">
+
+<color name="white" weight="0.906975832992">
+ <shade name="light" weight="0.399999440001" />
+ <shade name="dark" weight="0.399999440001" />
+ <shade name="weak" weight="0.19999972" />
+</color>
+
+<color name="orange" weight="0.0372092649433">
+ <shade name="light" weight="0.399999440001" />
+ <shade name="dark" weight="0.399999440001" />
+ <shade name="weak" weight="0.19999972" />
+</color>
+
+<color name="black" weight="0.0279069487074">
+ <shade name="light" weight="0.399999440001" />
+ <shade name="dark" weight="0.399999440001" />
+ <shade name="weak" weight="0.19999972" />
+</color>
+
+<color name="green" weight="0.0232557905895">
+ <shade name="light" weight="0.399999440001" />
+ <shade name="dark" weight="0.399999440001" />
+ <shade name="weak" weight="0.19999972" />
+</color>
+
+<color name="red" weight="0.00465115811791">
+ <shade name="light" weight="0.399999440001" />
+ <shade name="dark" weight="0.399999440001" />
+ <shade name="weak" weight="0.19999972" />
+</color>
+
+</colors>

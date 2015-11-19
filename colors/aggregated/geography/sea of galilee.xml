@@ -1,0 +1,33 @@
+<colors query="sea of galilee">
+
+<color name="blue" weight="0.997228919669">
+ <shade name="fresh" weight="0.4999995" />
+ <shade name="dark" weight="0.374999625" />
+ <shade name="light" weight="0.124999875" />
+</color>
+
+<color name="green" weight="0.00184672022161">
+ <shade name="fresh" weight="0.4999995" />
+ <shade name="dark" weight="0.374999625" />
+ <shade name="light" weight="0.124999875" />
+</color>
+
+<color name="white" weight="0.000923360110804">
+ <shade name="fresh" weight="0.4999995" />
+ <shade name="dark" weight="0.374999625" />
+ <shade name="light" weight="0.124999875" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="fresh" weight="0.4999995" />
+ <shade name="dark" weight="0.374999625" />
+ <shade name="light" weight="0.124999875" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="fresh" weight="0.4999995" />
+ <shade name="dark" weight="0.374999625" />
+ <shade name="light" weight="0.124999875" />
+</color>
+
+</colors>

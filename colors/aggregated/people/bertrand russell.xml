@@ -1,0 +1,33 @@
+<colors query="bertrand russell">
+
+<color name="green" weight="0.607142228317">
+ <shade name="light" weight="0.799999056001" />
+ <shade name="cool" weight="0.1199998584" />
+ <shade name="neutral" weight="0.0799999056001" />
+</color>
+
+<color name="black" weight="0.178571243623">
+ <shade name="light" weight="0.799999056001" />
+ <shade name="cool" weight="0.1199998584" />
+ <shade name="neutral" weight="0.0799999056001" />
+</color>
+
+<color name="white" weight="0.107142746174">
+ <shade name="light" weight="0.799999056001" />
+ <shade name="cool" weight="0.1199998584" />
+ <shade name="neutral" weight="0.0799999056001" />
+</color>
+
+<color name="red" weight="0.0714284974491">
+ <shade name="light" weight="0.799999056001" />
+ <shade name="cool" weight="0.1199998584" />
+ <shade name="neutral" weight="0.0799999056001" />
+</color>
+
+<color name="orange" weight="0.0357142487245">
+ <shade name="light" weight="0.799999056001" />
+ <shade name="cool" weight="0.1199998584" />
+ <shade name="neutral" weight="0.0799999056001" />
+</color>
+
+</colors>

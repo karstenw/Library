@@ -1,0 +1,33 @@
+<colors query="orgue">
+
+<color name="black" weight="0.333332944445">
+ <shade name="light" weight="0.4999995" />
+ <shade name="dark" weight="0.3124996875" />
+ <shade name="cool" weight="0.1874998125" />
+</color>
+
+<color name="orange" weight="0.249999708334">
+ <shade name="light" weight="0.4999995" />
+ <shade name="dark" weight="0.3124996875" />
+ <shade name="cool" weight="0.1874998125" />
+</color>
+
+<color name="white" weight="0.166666472222">
+ <shade name="light" weight="0.4999995" />
+ <shade name="dark" weight="0.3124996875" />
+ <shade name="cool" weight="0.1874998125" />
+</color>
+
+<color name="blue" weight="0.166666472222">
+ <shade name="light" weight="0.4999995" />
+ <shade name="dark" weight="0.3124996875" />
+ <shade name="cool" weight="0.1874998125" />
+</color>
+
+<color name="purple" weight="0.0833332361112">
+ <shade name="light" weight="0.4999995" />
+ <shade name="dark" weight="0.3124996875" />
+ <shade name="cool" weight="0.1874998125" />
+</color>
+
+</colors>

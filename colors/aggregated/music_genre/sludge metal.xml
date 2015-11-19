@@ -1,0 +1,33 @@
+<colors query="sludge metal">
+
+<color name="black" weight="0.983332350001">
+ <shade name="dark" weight="0.53846087574" />
+ <shade name="intense" weight="0.230768946746" />
+ <shade name="cool" weight="0.230768946746" />
+</color>
+
+<color name="yellow" weight="0.00833332500001">
+ <shade name="dark" weight="0.53846087574" />
+ <shade name="intense" weight="0.230768946746" />
+ <shade name="cool" weight="0.230768946746" />
+</color>
+
+<color name="white" weight="0.00833332500001">
+ <shade name="dark" weight="0.583332555557" />
+ <shade name="cool" weight="0.249999666667" />
+ <shade name="hard" weight="0.166666444445" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="dark" weight="0.53846087574" />
+ <shade name="intense" weight="0.230768946746" />
+ <shade name="cool" weight="0.230768946746" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="dark" weight="0.583332555557" />
+ <shade name="cool" weight="0.249999666667" />
+ <shade name="hard" weight="0.166666444445" />
+</color>
+
+</colors>

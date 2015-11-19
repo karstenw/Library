@@ -1,0 +1,33 @@
+<colors query="zinge">
+
+<color name="red" weight="0.888888000001">
+ <shade name="hard" weight="0.968749031251" />
+ <shade name="cool" weight="0.03124996875" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="orange" weight="0.111111">
+ <shade name="hard" weight="0.968749031251" />
+ <shade name="cool" weight="0.03124996875" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="hard" weight="0.968749031251" />
+ <shade name="cool" weight="0.03124996875" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="hard" weight="0.968749031251" />
+ <shade name="cool" weight="0.03124996875" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="hard" weight="0.968749031251" />
+ <shade name="cool" weight="0.03124996875" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+</colors>

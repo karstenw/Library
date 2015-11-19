@@ -1,0 +1,33 @@
+<colors query="samuel beckett">
+
+<color name="green" weight="0.836064707553">
+ <shade name="dark" weight="0.561537887042" />
+ <shade name="light" weight="0.415384190415" />
+ <shade name="intense" weight="0.0230768994675" />
+</color>
+
+<color name="red" weight="0.0885244984467">
+ <shade name="dark" weight="0.561537887042" />
+ <shade name="light" weight="0.415384190415" />
+ <shade name="intense" weight="0.0230768994675" />
+</color>
+
+<color name="white" weight="0.0295081661489">
+ <shade name="dark" weight="0.563705984765" />
+ <shade name="light" weight="0.41698798873" />
+ <shade name="cool" weight="0.0193049994783" />
+</color>
+
+<color name="blue" weight="0.0229507958936">
+ <shade name="dark" weight="0.561537887042" />
+ <shade name="light" weight="0.415384190415" />
+ <shade name="intense" weight="0.0230768994675" />
+</color>
+
+<color name="black" weight="0.0229507958936">
+ <shade name="dark" weight="0.561537887042" />
+ <shade name="light" weight="0.415384190415" />
+ <shade name="intense" weight="0.0230768994675" />
+</color>
+
+</colors>

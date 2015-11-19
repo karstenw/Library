@@ -1,0 +1,33 @@
+<colors query="xylophone">
+
+<color name="green" weight="0.453676643369">
+ <shade name="soft" weight="0.494744369907" />
+ <shade name="hard" weight="0.43322175396" />
+ <shade name="cool" weight="0.0720327295046" />
+</color>
+
+<color name="pink" weight="0.286532616865">
+ <shade name="soft" weight="0.494744369907" />
+ <shade name="hard" weight="0.43322175396" />
+ <shade name="cool" weight="0.0720327295046" />
+</color>
+
+<color name="yellow" weight="0.101241524625">
+ <shade name="soft" weight="0.494744369907" />
+ <shade name="hard" weight="0.43322175396" />
+ <shade name="cool" weight="0.0720327295046" />
+</color>
+
+<color name="blue" weight="0.0830944588907">
+ <shade name="soft" weight="0.494744369907" />
+ <shade name="hard" weight="0.43322175396" />
+ <shade name="cool" weight="0.0720327295046" />
+</color>
+
+<color name="red" weight="0.0754535891077">
+ <shade name="soft" weight="0.494744369907" />
+ <shade name="hard" weight="0.43322175396" />
+ <shade name="cool" weight="0.0720327295046" />
+</color>
+
+</colors>

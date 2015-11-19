@@ -1,0 +1,33 @@
+<colors query="john lennon">
+
+<color name="blue" weight="0.324366710847">
+ <shade name="hard" weight="0.767912134173" />
+ <shade name="light" weight="0.149148288527" />
+ <shade name="cool" weight="0.0829385415255" />
+</color>
+
+<color name="white" weight="0.261075645316">
+ <shade name="hard" weight="0.767912134173" />
+ <shade name="light" weight="0.149148288527" />
+ <shade name="cool" weight="0.0829385415255" />
+</color>
+
+<color name="green" weight="0.200421707515">
+ <shade name="hard" weight="0.767912134173" />
+ <shade name="light" weight="0.149148288527" />
+ <shade name="cool" weight="0.0829385415255" />
+</color>
+
+<color name="black" weight="0.148206578452">
+ <shade name="hard" weight="0.767912134173" />
+ <shade name="light" weight="0.149148288527" />
+ <shade name="cool" weight="0.0829385415255" />
+</color>
+
+<color name="pink" weight="0.0659281932616">
+ <shade name="hard" weight="0.767912134173" />
+ <shade name="light" weight="0.149148288527" />
+ <shade name="cool" weight="0.0829385415255" />
+</color>
+
+</colors>

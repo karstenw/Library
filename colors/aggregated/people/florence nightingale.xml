@@ -1,0 +1,33 @@
+<colors query="florence nightingale">
+
+<color name="black" weight="0.887972741181">
+ <shade name="light" weight="0.461537822486" />
+ <shade name="dark" weight="0.307691881657" />
+ <shade name="cool" weight="0.230768911243" />
+</color>
+
+<color name="white" weight="0.0757824602863">
+ <shade name="light" weight="0.461537822486" />
+ <shade name="dark" weight="0.307691881657" />
+ <shade name="cool" weight="0.230768911243" />
+</color>
+
+<color name="red" weight="0.0181218926772">
+ <shade name="light" weight="0.461537822486" />
+ <shade name="dark" weight="0.307691881657" />
+ <shade name="cool" weight="0.230768911243" />
+</color>
+
+<color name="green" weight="0.009884668733">
+ <shade name="light" weight="0.461537822486" />
+ <shade name="dark" weight="0.307691881657" />
+ <shade name="cool" weight="0.230768911243" />
+</color>
+
+<color name="purple" weight="0.00823722394416">
+ <shade name="light" weight="0.461537822486" />
+ <shade name="dark" weight="0.307691881657" />
+ <shade name="cool" weight="0.230768911243" />
+</color>
+
+</colors>

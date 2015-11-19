@@ -1,0 +1,33 @@
+<colors query="hip pop">
+
+<color name="black" weight="0.59231846146">
+ <shade name="light" weight="0.7324635686" />
+ <shade name="cool" weight="0.262569567388" />
+ <shade name="fresh" weight="0.00496585470237" />
+</color>
+
+<color name="white" weight="0.376661365766">
+ <shade name="light" weight="0.7324635686" />
+ <shade name="cool" weight="0.262569567388" />
+ <shade name="fresh" weight="0.00496585470237" />
+</color>
+
+<color name="blue" weight="0.0132939305564">
+ <shade name="light" weight="0.7324635686" />
+ <shade name="cool" weight="0.262569567388" />
+ <shade name="fresh" weight="0.00496585470237" />
+</color>
+
+<color name="pink" weight="0.0103397237661">
+ <shade name="light" weight="0.7324635686" />
+ <shade name="cool" weight="0.262569567388" />
+ <shade name="fresh" weight="0.00496585470237" />
+</color>
+
+<color name="green" weight="0.0073855169758">
+ <shade name="light" weight="0.7324635686" />
+ <shade name="cool" weight="0.262569567388" />
+ <shade name="fresh" weight="0.00496585470237" />
+</color>
+
+</colors>

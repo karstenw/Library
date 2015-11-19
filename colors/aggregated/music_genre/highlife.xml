@@ -1,0 +1,33 @@
+<colors query="highlife">
+
+<color name="black" weight="0.47368366205">
+ <shade name="cool" weight="0.774192649325" />
+ <shade name="hard" weight="0.129032108221" />
+ <shade name="warm" weight="0.0967740811656" />
+</color>
+
+<color name="yellow" weight="0.157894554017">
+ <shade name="cool" weight="0.774192649325" />
+ <shade name="hard" weight="0.129032108221" />
+ <shade name="warm" weight="0.0967740811656" />
+</color>
+
+<color name="white" weight="0.157894554017">
+ <shade name="cool" weight="0.774192649325" />
+ <shade name="hard" weight="0.129032108221" />
+ <shade name="warm" weight="0.0967740811656" />
+</color>
+
+<color name="red" weight="0.105263036011">
+ <shade name="cool" weight="0.774192649325" />
+ <shade name="hard" weight="0.129032108221" />
+ <shade name="warm" weight="0.0967740811656" />
+</color>
+
+<color name="purple" weight="0.105263036011">
+ <shade name="cool" weight="0.774192649325" />
+ <shade name="hard" weight="0.129032108221" />
+ <shade name="light" weight="0.0967740811656" />
+</color>
+
+</colors>

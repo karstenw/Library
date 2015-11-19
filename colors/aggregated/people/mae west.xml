@@ -1,0 +1,33 @@
+<colors query="mae west">
+
+<color name="yellow" weight="0.281016128671">
+ <shade name="hard" weight="0.428570816327" />
+ <shade name="bright" weight="0.35714234694" />
+ <shade name="soft" weight="0.214285408164" />
+</color>
+
+<color name="pink" weight="0.275037062104">
+ <shade name="hard" weight="0.428570816327" />
+ <shade name="bright" weight="0.35714234694" />
+ <shade name="soft" weight="0.214285408164" />
+</color>
+
+<color name="orange" weight="0.177877230382">
+ <shade name="hard" weight="0.428570816327" />
+ <shade name="bright" weight="0.35714234694" />
+ <shade name="soft" weight="0.214285408164" />
+</color>
+
+<color name="white" weight="0.170403397173">
+ <shade name="hard" weight="0.428570816327" />
+ <shade name="bright" weight="0.35714234694" />
+ <shade name="soft" weight="0.214285408164" />
+</color>
+
+<color name="black" weight="0.0956650650795">
+ <shade name="hard" weight="0.428570816327" />
+ <shade name="bright" weight="0.35714234694" />
+ <shade name="soft" weight="0.214285408164" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="brazil">
+
+<color name="blue" weight="0.571344912423">
+ <shade name="cool" weight="0.480324812311" />
+ <shade name="hard" weight="0.294436396247" />
+ <shade name="dark" weight="0.22523705888" />
+</color>
+
+<color name="black" weight="0.327832767815">
+ <shade name="cool" weight="0.441946861021" />
+ <shade name="warm" weight="0.287140615918" />
+ <shade name="hard" weight="0.270910928931" />
+</color>
+
+<color name="orange" weight="0.0668749770266">
+ <shade name="cool" weight="0.441946861021" />
+ <shade name="warm" weight="0.287140615918" />
+ <shade name="hard" weight="0.270910928931" />
+</color>
+
+<color name="pink" weight="0.0193355911838">
+ <shade name="cool" weight="0.441946861021" />
+ <shade name="warm" weight="0.287140615918" />
+ <shade name="hard" weight="0.270910928931" />
+</color>
+
+<color name="purple" weight="0.0146107286765">
+ <shade name="cool" weight="0.480324812311" />
+ <shade name="hard" weight="0.294436396247" />
+ <shade name="dark" weight="0.22523705888" />
+</color>
+
+</colors>

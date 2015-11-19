@@ -1,0 +1,33 @@
+<colors query="kriti">
+
+<color name="red" weight="0.285714">
+ <shade name="light" weight="0.599999040002" />
+ <shade name="warm" weight="0.199999680001" />
+ <shade name="soft" weight="0.199999680001" />
+</color>
+
+<color name="green" weight="0.285714">
+ <shade name="light" weight="0.599999040002" />
+ <shade name="soft" weight="0.199999680001" />
+ <shade name="dark" weight="0.199999680001" />
+</color>
+
+<color name="black" weight="0.285714">
+ <shade name="light" weight="0.599999040002" />
+ <shade name="warm" weight="0.199999680001" />
+ <shade name="soft" weight="0.199999680001" />
+</color>
+
+<color name="pink" weight="0.142857">
+ <shade name="light" weight="0.599999040002" />
+ <shade name="warm" weight="0.199999680001" />
+ <shade name="soft" weight="0.199999680001" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="light" weight="0.599999040002" />
+ <shade name="warm" weight="0.199999680001" />
+ <shade name="soft" weight="0.199999680001" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="concerto">
+
+<color name="purple" weight="0.464856021486">
+ <shade name="light" weight="0.481706537237" />
+ <shade name="dark" weight="0.265243473036" />
+ <shade name="soft" weight="0.253048370827" />
+</color>
+
+<color name="blue" weight="0.264859826195">
+ <shade name="light" weight="0.481706537237" />
+ <shade name="dark" weight="0.265243473036" />
+ <shade name="soft" weight="0.253048370827" />
+</color>
+
+<color name="red" weight="0.252247453519">
+ <shade name="light" weight="0.481706537237" />
+ <shade name="dark" weight="0.265243473036" />
+ <shade name="soft" weight="0.253048370827" />
+</color>
+
+<color name="white" weight="0.0113871707589">
+ <shade name="light" weight="0.481706537237" />
+ <shade name="dark" weight="0.265243473036" />
+ <shade name="soft" weight="0.253048370827" />
+</color>
+
+<color name="black" weight="0.00664852216776">
+ <shade name="light" weight="0.481706537237" />
+ <shade name="dark" weight="0.265243473036" />
+ <shade name="soft" weight="0.253048370827" />
+</color>
+
+</colors>

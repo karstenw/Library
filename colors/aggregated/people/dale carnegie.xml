@@ -1,0 +1,33 @@
+<colors query="dale carnegie">
+
+<color name="green" weight="0.291666362848">
+ <shade name="bright" weight="0.44444380247" />
+ <shade name="hard" weight="0.333332851853" />
+ <shade name="light" weight="0.222221901235" />
+</color>
+
+<color name="white" weight="0.20833311632">
+ <shade name="bright" weight="0.44444380247" />
+ <shade name="hard" weight="0.333332851853" />
+ <shade name="warm" weight="0.222221901235" />
+</color>
+
+<color name="red" weight="0.20833311632">
+ <shade name="bright" weight="0.44444380247" />
+ <shade name="hard" weight="0.333332851853" />
+ <shade name="warm" weight="0.222221901235" />
+</color>
+
+<color name="black" weight="0.20833311632">
+ <shade name="bright" weight="0.44444380247" />
+ <shade name="hard" weight="0.333332851853" />
+ <shade name="warm" weight="0.222221901235" />
+</color>
+
+<color name="purple" weight="0.0833332465279">
+ <shade name="bright" weight="0.44444380247" />
+ <shade name="hard" weight="0.333332851853" />
+ <shade name="light" weight="0.222221901235" />
+</color>
+
+</colors>

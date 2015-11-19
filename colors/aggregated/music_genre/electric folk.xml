@@ -1,0 +1,33 @@
+<colors query="electric folk">
+
+<color name="yellow" weight="0.4999995">
+ <shade name="soft" weight="0.49999938889" />
+ <shade name="dark" weight="0.333332925926" />
+ <shade name="intense" weight="0.166666462963" />
+</color>
+
+<color name="green" weight="0.4999995">
+ <shade name="soft" weight="0.49999938889" />
+ <shade name="dark" weight="0.333332925926" />
+ <shade name="intense" weight="0.166666462963" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="soft" weight="0.529411079586" />
+ <shade name="dark" weight="0.352940719724" />
+ <shade name="light" weight="0.117646906575" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="soft" weight="0.49999938889" />
+ <shade name="dark" weight="0.333332925926" />
+ <shade name="intense" weight="0.166666462963" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="soft" weight="0.529411079586" />
+ <shade name="dark" weight="0.352940719724" />
+ <shade name="light" weight="0.117646906575" />
+</color>
+
+</colors>

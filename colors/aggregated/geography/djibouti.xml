@@ -1,0 +1,33 @@
+<colors query="djibouti">
+
+<color name="blue" weight="0.361110654707">
+ <shade name="dark" weight="0.473683462605" />
+ <shade name="cool" weight="0.31578897507" />
+ <shade name="light" weight="0.21052598338" />
+</color>
+
+<color name="black" weight="0.305555169368">
+ <shade name="dark" weight="0.473683462605" />
+ <shade name="cool" weight="0.31578897507" />
+ <shade name="light" weight="0.21052598338" />
+</color>
+
+<color name="red" weight="0.124999842014">
+ <shade name="dark" weight="0.473683462605" />
+ <shade name="cool" weight="0.31578897507" />
+ <shade name="light" weight="0.21052598338" />
+</color>
+
+<color name="white" weight="0.111110970679">
+ <shade name="dark" weight="0.473683462605" />
+ <shade name="cool" weight="0.31578897507" />
+ <shade name="light" weight="0.21052598338" />
+</color>
+
+<color name="orange" weight="0.0972220993443">
+ <shade name="dark" weight="0.473683462605" />
+ <shade name="cool" weight="0.31578897507" />
+ <shade name="light" weight="0.21052598338" />
+</color>
+
+</colors>

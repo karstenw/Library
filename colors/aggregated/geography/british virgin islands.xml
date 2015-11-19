@@ -1,0 +1,33 @@
+<colors query="british virgin islands">
+
+<color name="blue" weight="0.2499997125">
+ <shade name="hard" weight="0.374999296876" />
+ <shade name="cool" weight="0.374999296876" />
+ <shade name="soft" weight="0.249999531251" />
+</color>
+
+<color name="black" weight="0.2499997125">
+ <shade name="hard" weight="0.374999296876" />
+ <shade name="cool" weight="0.374999296876" />
+ <shade name="soft" weight="0.249999531251" />
+</color>
+
+<color name="white" weight="0.22499974125">
+ <shade name="hard" weight="0.374999296876" />
+ <shade name="cool" weight="0.374999296876" />
+ <shade name="soft" weight="0.249999531251" />
+</color>
+
+<color name="red" weight="0.17499979875">
+ <shade name="hard" weight="0.374999296876" />
+ <shade name="cool" weight="0.374999296876" />
+ <shade name="soft" weight="0.249999531251" />
+</color>
+
+<color name="yellow" weight="0.0999998850001">
+ <shade name="hard" weight="0.374999296876" />
+ <shade name="cool" weight="0.374999296876" />
+ <shade name="soft" weight="0.249999531251" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="new wave of british heavy metal">
+
+<color name="black" weight="0.999999000001">
+ <shade name="hard" weight="0.399999480001" />
+ <shade name="dark" weight="0.299999610001" />
+ <shade name="cool" weight="0.299999610001" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="hard" weight="0.399999480001" />
+ <shade name="dark" weight="0.299999610001" />
+ <shade name="cool" weight="0.299999610001" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="hard" weight="0.399999480001" />
+ <shade name="dark" weight="0.299999610001" />
+ <shade name="cool" weight="0.299999610001" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="hard" weight="0.399999480001" />
+ <shade name="dark" weight="0.299999610001" />
+ <shade name="cool" weight="0.299999610001" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="hard" weight="0.399999480001" />
+ <shade name="dark" weight="0.299999610001" />
+ <shade name="cool" weight="0.299999610001" />
+</color>
+
+</colors>

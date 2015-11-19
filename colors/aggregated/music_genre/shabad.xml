@@ -1,0 +1,33 @@
+<colors query="shabad">
+
+<color name="red" weight="0.285714">
+ <shade name="dark" weight="0.727271933885" />
+ <shade name="intense" weight="0.181817983471" />
+ <shade name="hard" weight="0.0909089917356" />
+</color>
+
+<color name="green" weight="0.285714">
+ <shade name="dark" weight="0.727271933885" />
+ <shade name="intense" weight="0.181817983471" />
+ <shade name="hard" weight="0.0909089917356" />
+</color>
+
+<color name="blue" weight="0.285714">
+ <shade name="dark" weight="0.727271933885" />
+ <shade name="intense" weight="0.181817983471" />
+ <shade name="hard" weight="0.0909089917356" />
+</color>
+
+<color name="yellow" weight="0.142857">
+ <shade name="dark" weight="0.727271933885" />
+ <shade name="intense" weight="0.181817983471" />
+ <shade name="hard" weight="0.0909089917356" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="dark" weight="0.799999040001" />
+ <shade name="hard" weight="0.0999998800001" />
+ <shade name="cool" weight="0.0999998800001" />
+</color>
+
+</colors>

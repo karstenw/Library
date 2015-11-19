@@ -1,0 +1,33 @@
+<colors query="dominican republic">
+
+<color name="black" weight="0.397562908464">
+ <shade name="cool" weight="0.841378379026" />
+ <shade name="light" weight="0.134482609762" />
+ <shade name="dark" weight="0.0241379043163" />
+</color>
+
+<color name="green" weight="0.211285448934">
+ <shade name="cool" weight="0.841378379026" />
+ <shade name="light" weight="0.134482609762" />
+ <shade name="dark" weight="0.0241379043163" />
+</color>
+
+<color name="white" weight="0.187239305277">
+ <shade name="cool" weight="0.841378379026" />
+ <shade name="light" weight="0.134482609762" />
+ <shade name="dark" weight="0.0241379043163" />
+</color>
+
+<color name="blue" weight="0.115100874305">
+ <shade name="cool" weight="0.841378379026" />
+ <shade name="light" weight="0.134482609762" />
+ <shade name="dark" weight="0.0241379043163" />
+</color>
+
+<color name="orange" weight="0.0888104239068">
+ <shade name="cool" weight="0.841378379026" />
+ <shade name="light" weight="0.134482609762" />
+ <shade name="dark" weight="0.0241379043163" />
+</color>
+
+</colors>

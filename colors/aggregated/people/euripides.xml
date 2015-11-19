@@ -1,0 +1,33 @@
+<colors query="euripides">
+
+<color name="red" weight="0.461537928995">
+ <shade name="light" weight="0.853502260539" />
+ <shade name="hard" weight="0.108280137531" />
+ <shade name="soft" weight="0.0382165191286" />
+</color>
+
+<color name="black" weight="0.230768964497">
+ <shade name="light" weight="0.853502260539" />
+ <shade name="hard" weight="0.108280137531" />
+ <shade name="soft" weight="0.0382165191286" />
+</color>
+
+<color name="green" weight="0.153845976332">
+ <shade name="light" weight="0.853502260539" />
+ <shade name="hard" weight="0.108280137531" />
+ <shade name="soft" weight="0.0382165191286" />
+</color>
+
+<color name="yellow" weight="0.0769229881658">
+ <shade name="light" weight="0.853502260539" />
+ <shade name="hard" weight="0.108280137531" />
+ <shade name="soft" weight="0.0382165191286" />
+</color>
+
+<color name="white" weight="0.0769229881658">
+ <shade name="light" weight="0.853502260539" />
+ <shade name="hard" weight="0.108280137531" />
+ <shade name="soft" weight="0.0382165191286" />
+</color>
+
+</colors>

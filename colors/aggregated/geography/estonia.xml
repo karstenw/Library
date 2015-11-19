@@ -1,0 +1,33 @@
+<colors query="estonia">
+
+<color name="red" weight="0.641874030417">
+ <shade name="fresh" weight="0.414473095222" />
+ <shade name="cool" weight="0.404604688193" />
+ <shade name="light" weight="0.180920795534" />
+</color>
+
+<color name="green" weight="0.275088870179">
+ <shade name="fresh" weight="0.414473095222" />
+ <shade name="cool" weight="0.404604688193" />
+ <shade name="light" weight="0.180920795534" />
+</color>
+
+<color name="blue" weight="0.0336219730218">
+ <shade name="fresh" weight="0.414473095222" />
+ <shade name="cool" weight="0.404604688193" />
+ <shade name="light" weight="0.180920795534" />
+</color>
+
+<color name="white" weight="0.0295465823525">
+ <shade name="fresh" weight="0.414473095222" />
+ <shade name="cool" weight="0.404604688193" />
+ <shade name="light" weight="0.180920795534" />
+</color>
+
+<color name="black" weight="0.0198675295129">
+ <shade name="fresh" weight="0.414473095222" />
+ <shade name="cool" weight="0.404604688193" />
+ <shade name="light" weight="0.180920795534" />
+</color>
+
+</colors>

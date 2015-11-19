@@ -1,0 +1,33 @@
+<colors query="hank williams">
+
+<color name="white" weight="0.476343592775">
+ <shade name="light" weight="0.989701523309" />
+ <shade name="dark" weight="0.00686498166457" />
+ <shade name="cool" weight="0.00343249083229" />
+</color>
+
+<color name="black" weight="0.272580362909">
+ <shade name="light" weight="0.989701523309" />
+ <shade name="dark" weight="0.00686498166457" />
+ <shade name="cool" weight="0.00343249083229" />
+</color>
+
+<color name="blue" weight="0.123118152083">
+ <shade name="light" weight="0.989701523309" />
+ <shade name="dark" weight="0.00686498166457" />
+ <shade name="cool" weight="0.00343249083229" />
+</color>
+
+<color name="green" weight="0.0962364594885">
+ <shade name="light" weight="0.989701523309" />
+ <shade name="dark" weight="0.00686498166457" />
+ <shade name="cool" weight="0.00343249083229" />
+</color>
+
+<color name="red" weight="0.0317203972616">
+ <shade name="light" weight="0.989701523309" />
+ <shade name="dark" weight="0.00686498166457" />
+ <shade name="cool" weight="0.00343249083229" />
+</color>
+
+</colors>

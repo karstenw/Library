@@ -1,0 +1,33 @@
+<colors query="samuel pepys">
+
+<color name="green" weight="0.272726975207">
+ <shade name="light" weight="0.571427918368" />
+ <shade name="bright" weight="0.285713959184" />
+ <shade name="dark" weight="0.142856979592" />
+</color>
+
+<color name="black" weight="0.272726975207">
+ <shade name="light" weight="0.571427918368" />
+ <shade name="bright" weight="0.285713959184" />
+ <shade name="dark" weight="0.142856979592" />
+</color>
+
+<color name="white" weight="0.181817983471">
+ <shade name="light" weight="0.571427918368" />
+ <shade name="bright" weight="0.285713959184" />
+ <shade name="dark" weight="0.142856979592" />
+</color>
+
+<color name="orange" weight="0.181817983471">
+ <shade name="light" weight="0.571427918368" />
+ <shade name="bright" weight="0.285713959184" />
+ <shade name="dark" weight="0.142856979592" />
+</color>
+
+<color name="red" weight="0.0909089917356">
+ <shade name="light" weight="0.571427918368" />
+ <shade name="bright" weight="0.285713959184" />
+ <shade name="dark" weight="0.142856979592" />
+</color>
+
+</colors>

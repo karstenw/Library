@@ -1,0 +1,33 @@
+<colors query="gothic rock">
+
+<color name="black" weight="0.980050455069">
+ <shade name="light" weight="0.971758919141" />
+ <shade name="dark" weight="0.0142542537587" />
+ <shade name="hard" weight="0.0139858120683" />
+</color>
+
+<color name="blue" weight="0.0186974164832">
+ <shade name="light" weight="0.971758919141" />
+ <shade name="dark" weight="0.0142542537587" />
+ <shade name="hard" weight="0.0139858120683" />
+</color>
+
+<color name="pink" weight="0.00069507124473">
+ <shade name="light" weight="0.971758919141" />
+ <shade name="dark" weight="0.0142542537587" />
+ <shade name="hard" weight="0.0139858120683" />
+</color>
+
+<color name="green" weight="0.000347535622365">
+ <shade name="light" weight="0.971758919141" />
+ <shade name="dark" weight="0.0142542537587" />
+ <shade name="hard" weight="0.0139858120683" />
+</color>
+
+<color name="white" weight="0.000208521373419">
+ <shade name="light" weight="0.971758919141" />
+ <shade name="dark" weight="0.0142542537587" />
+ <shade name="hard" weight="0.0139858120683" />
+</color>
+
+</colors>

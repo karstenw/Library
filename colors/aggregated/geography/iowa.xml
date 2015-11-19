@@ -1,0 +1,33 @@
+<colors query="iowa">
+
+<color name="green" weight="0.536270896851">
+ <shade name="cool" weight="0.398489257259" />
+ <shade name="fresh" weight="0.394294633499" />
+ <shade name="hard" weight="0.207214413775" />
+</color>
+
+<color name="white" weight="0.216458434729">
+ <shade name="cool" weight="0.398489257259" />
+ <shade name="fresh" weight="0.394294633499" />
+ <shade name="hard" weight="0.207214413775" />
+</color>
+
+<color name="black" weight="0.17706689976">
+ <shade name="cool" weight="0.398489257259" />
+ <shade name="fresh" weight="0.394294633499" />
+ <shade name="hard" weight="0.207214413775" />
+</color>
+
+<color name="blue" weight="0.0382214893756">
+ <shade name="cool" weight="0.398489257259" />
+ <shade name="fresh" weight="0.394294633499" />
+ <shade name="hard" weight="0.207214413775" />
+</color>
+
+<color name="red" weight="0.0319812462122">
+ <shade name="cool" weight="0.398489257259" />
+ <shade name="fresh" weight="0.394294633499" />
+ <shade name="hard" weight="0.207214413775" />
+</color>
+
+</colors>

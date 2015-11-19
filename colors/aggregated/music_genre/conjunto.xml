@@ -1,0 +1,33 @@
+<colors query="conjunto">
+
+<color name="red" weight="0.678794792343">
+ <shade name="light" weight="0.905881432406" />
+ <shade name="soft" weight="0.0808822707505" />
+ <shade name="cool" weight="0.0132352806683" />
+</color>
+
+<color name="blue" weight="0.170639725986">
+ <shade name="light" weight="0.905881432406" />
+ <shade name="soft" weight="0.0808822707505" />
+ <shade name="cool" weight="0.0132352806683" />
+</color>
+
+<color name="black" weight="0.0878292707283">
+ <shade name="light" weight="0.905881432406" />
+ <shade name="soft" weight="0.0808822707505" />
+ <shade name="cool" weight="0.0132352806683" />
+</color>
+
+<color name="green" weight="0.0363864121589">
+ <shade name="light" weight="0.905881432406" />
+ <shade name="soft" weight="0.0808822707505" />
+ <shade name="cool" weight="0.0132352806683" />
+</color>
+
+<color name="pink" weight="0.0263487812185">
+ <shade name="light" weight="0.905881432406" />
+ <shade name="soft" weight="0.0808822707505" />
+ <shade name="cool" weight="0.0132352806683" />
+</color>
+
+</colors>

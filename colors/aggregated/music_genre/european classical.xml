@@ -1,0 +1,33 @@
+<colors query="european classical">
+
+<color name="white" weight="0.983782800001">
+ <shade name="cool" weight="0.555554938272" />
+ <shade name="light" weight="0.333332962963" />
+ <shade name="soft" weight="0.111110987654" />
+</color>
+
+<color name="orange" weight="0.0108108">
+ <shade name="cool" weight="0.555554938272" />
+ <shade name="light" weight="0.333332962963" />
+ <shade name="soft" weight="0.111110987654" />
+</color>
+
+<color name="black" weight="0.00540540000001">
+ <shade name="cool" weight="0.555554938272" />
+ <shade name="light" weight="0.333332962963" />
+ <shade name="soft" weight="0.111110987654" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="cool" weight="0.555554938272" />
+ <shade name="light" weight="0.333332962963" />
+ <shade name="soft" weight="0.111110987654" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="cool" weight="0.555554938272" />
+ <shade name="light" weight="0.333332962963" />
+ <shade name="soft" weight="0.111110987654" />
+</color>
+
+</colors>

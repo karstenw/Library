@@ -1,0 +1,33 @@
+<colors query="progressive house">
+
+<color name="blue" weight="0.438818117325">
+ <shade name="hard" weight="0.935235450279" />
+ <shade name="cool" weight="0.043705447513" />
+ <shade name="dark" weight="0.0210580792563" />
+</color>
+
+<color name="purple" weight="0.320674778045">
+ <shade name="hard" weight="0.935235450279" />
+ <shade name="cool" weight="0.043705447513" />
+ <shade name="dark" weight="0.0210580792563" />
+</color>
+
+<color name="black" weight="0.194092628817">
+ <shade name="hard" weight="0.935235450279" />
+ <shade name="cool" weight="0.043705447513" />
+ <shade name="dark" weight="0.0210580792563" />
+</color>
+
+<color name="red" weight="0.0253164298457">
+ <shade name="hard" weight="0.935235450279" />
+ <shade name="cool" weight="0.043705447513" />
+ <shade name="dark" weight="0.0210580792563" />
+</color>
+
+<color name="white" weight="0.0210970248714">
+ <shade name="hard" weight="0.935235450279" />
+ <shade name="cool" weight="0.043705447513" />
+ <shade name="dark" weight="0.0210580792563" />
+</color>
+
+</colors>

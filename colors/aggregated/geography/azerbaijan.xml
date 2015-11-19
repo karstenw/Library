@@ -1,0 +1,33 @@
+<colors query="azerbaijan">
+
+<color name="green" weight="0.850078873045">
+ <shade name="weak" weight="0.477875488763" />
+ <shade name="light" weight="0.380530481792" />
+ <shade name="cool" weight="0.141592737411" />
+</color>
+
+<color name="white" weight="0.0590111037574">
+ <shade name="weak" weight="0.477875488763" />
+ <shade name="light" weight="0.380530481792" />
+ <shade name="cool" weight="0.141592737411" />
+</color>
+
+<color name="red" weight="0.0526315249728">
+ <shade name="weak" weight="0.477875488763" />
+ <shade name="light" weight="0.380530481792" />
+ <shade name="cool" weight="0.141592737411" />
+</color>
+
+<color name="black" weight="0.0239234204422">
+ <shade name="weak" weight="0.477875488763" />
+ <shade name="light" weight="0.380530481792" />
+ <shade name="cool" weight="0.141592737411" />
+</color>
+
+<color name="blue" weight="0.0143540522653">
+ <shade name="weak" weight="0.477875488763" />
+ <shade name="light" weight="0.380530481792" />
+ <shade name="cool" weight="0.141592737411" />
+</color>
+
+</colors>

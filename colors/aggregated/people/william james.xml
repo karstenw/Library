@@ -1,0 +1,33 @@
+<colors query="william james">
+
+<color name="white" weight="0.556086292479">
+ <shade name="cool" weight="0.399999493334" />
+ <shade name="light" weight="0.333332911112" />
+ <shade name="bright" weight="0.266666328889" />
+</color>
+
+<color name="green" weight="0.396698501641">
+ <shade name="cool" weight="0.399999493334" />
+ <shade name="light" weight="0.333332911112" />
+ <shade name="bright" weight="0.266666328889" />
+</color>
+
+<color name="black" weight="0.0467537519791">
+ <shade name="cool" weight="0.399999493334" />
+ <shade name="light" weight="0.333332911112" />
+ <shade name="bright" weight="0.266666328889" />
+</color>
+
+<color name="red" weight="0.000283356072601">
+ <shade name="cool" weight="0.399999493334" />
+ <shade name="light" weight="0.333332911112" />
+ <shade name="bright" weight="0.266666328889" />
+</color>
+
+<color name="orange" weight="0.000177097545376">
+ <shade name="cool" weight="0.399999493334" />
+ <shade name="light" weight="0.333332911112" />
+ <shade name="bright" weight="0.266666328889" />
+</color>
+
+</colors>

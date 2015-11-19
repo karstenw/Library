@@ -1,0 +1,33 @@
+<colors query="gabba">
+
+<color name="red" weight="0.694625777541">
+ <shade name="hard" weight="0.615661951121" />
+ <shade name="dark" weight="0.246987671194" />
+ <shade name="cool" weight="0.137349241542" />
+</color>
+
+<color name="white" weight="0.18217543977">
+ <shade name="hard" weight="0.615661951121" />
+ <shade name="dark" weight="0.246987671194" />
+ <shade name="cool" weight="0.137349241542" />
+</color>
+
+<color name="black" weight="0.0629095043811">
+ <shade name="hard" weight="0.615661951121" />
+ <shade name="dark" weight="0.246987671194" />
+ <shade name="cool" weight="0.137349241542" />
+</color>
+
+<color name="green" weight="0.0570117383454">
+ <shade name="hard" weight="0.615661951121" />
+ <shade name="dark" weight="0.246987671194" />
+ <shade name="cool" weight="0.137349241542" />
+</color>
+
+<color name="blue" weight="0.00327653668652">
+ <shade name="hard" weight="0.615661951121" />
+ <shade name="dark" weight="0.246987671194" />
+ <shade name="cool" weight="0.137349241542" />
+</color>
+
+</colors>

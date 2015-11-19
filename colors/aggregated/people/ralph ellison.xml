@@ -1,0 +1,33 @@
+<colors query="ralph ellison">
+
+<color name="yellow" weight="0.581394766288">
+ <shade name="light" weight="0.599999160001" />
+ <shade name="hard" weight="0.19999972" />
+ <shade name="dark" weight="0.19999972" />
+</color>
+
+<color name="blue" weight="0.209302115864">
+ <shade name="light" weight="0.599999160001" />
+ <shade name="hard" weight="0.19999972" />
+ <shade name="dark" weight="0.19999972" />
+</color>
+
+<color name="black" weight="0.202779150193">
+ <shade name="light" weight="0.599999160001" />
+ <shade name="hard" weight="0.19999972" />
+ <shade name="dark" weight="0.19999972" />
+</color>
+
+<color name="white" weight="0.00538853685828">
+ <shade name="light" weight="0.599999160001" />
+ <shade name="hard" weight="0.19999972" />
+ <shade name="dark" weight="0.19999972" />
+</color>
+
+<color name="purple" weight="0.00113442881227">
+ <shade name="light" weight="0.599999160001" />
+ <shade name="hard" weight="0.19999972" />
+ <shade name="dark" weight="0.19999972" />
+</color>
+
+</colors>

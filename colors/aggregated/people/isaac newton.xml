@@ -1,0 +1,33 @@
+<colors query="isaac newton">
+
+<color name="white" weight="0.737573806312">
+ <shade name="light" weight="0.954917073956" />
+ <shade name="cool" weight="0.0409835654058" />
+ <shade name="warm" weight="0.00409835654058" />
+</color>
+
+<color name="green" weight="0.218687651467">
+ <shade name="light" weight="0.956223388749" />
+ <shade name="cool" weight="0.0410396304184" />
+ <shade name="hard" weight="0.00273597536123" />
+</color>
+
+<color name="blue" weight="0.0159045564703">
+ <shade name="light" weight="0.956223388749" />
+ <shade name="cool" weight="0.0410396304184" />
+ <shade name="hard" weight="0.00273597536123" />
+</color>
+
+<color name="black" weight="0.0159045564703">
+ <shade name="light" weight="0.954917073956" />
+ <shade name="cool" weight="0.0409835654058" />
+ <shade name="warm" weight="0.00409835654058" />
+</color>
+
+<color name="red" weight="0.0119284173528">
+ <shade name="light" weight="0.954917073956" />
+ <shade name="cool" weight="0.0409835654058" />
+ <shade name="warm" weight="0.00409835654058" />
+</color>
+
+</colors>

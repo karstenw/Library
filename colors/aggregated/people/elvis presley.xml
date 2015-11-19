@@ -1,0 +1,33 @@
+<colors query="elvis presley">
+
+<color name="blue" weight="0.593160585401">
+ <shade name="cool" weight="0.789079986389" />
+ <shade name="hard" weight="0.116442614208" />
+ <shade name="light" weight="0.0944763335055" />
+</color>
+
+<color name="green" weight="0.124447416937">
+ <shade name="cool" weight="0.789079986389" />
+ <shade name="hard" weight="0.116442614208" />
+ <shade name="light" weight="0.0944763335055" />
+</color>
+
+<color name="black" weight="0.117469057109">
+ <shade name="cool" weight="0.789079986389" />
+ <shade name="hard" weight="0.116442614208" />
+ <shade name="light" weight="0.0944763335055" />
+</color>
+
+<color name="white" weight="0.0865316618703">
+ <shade name="cool" weight="0.789079986389" />
+ <shade name="hard" weight="0.116442614208" />
+ <shade name="light" weight="0.0944763335055" />
+</color>
+
+<color name="purple" weight="0.0783902420707">
+ <shade name="cool" weight="0.789079986389" />
+ <shade name="hard" weight="0.116442614208" />
+ <shade name="light" weight="0.0944763335055" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="charles baudelaire">
+
+<color name="red" weight="0.3181815">
+ <shade name="light" weight="0.4999995" />
+ <shade name="dark" weight="0.4999995" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="white" weight="0.272727">
+ <shade name="light" weight="0.4999995" />
+ <shade name="dark" weight="0.4999995" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="black" weight="0.181818">
+ <shade name="light" weight="0.4999995" />
+ <shade name="dark" weight="0.4999995" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="purple" weight="0.1363635">
+ <shade name="light" weight="0.4999995" />
+ <shade name="dark" weight="0.4999995" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="green" weight="0.0909090000001">
+ <shade name="light" weight="0.4999995" />
+ <shade name="dark" weight="0.4999995" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+</colors>

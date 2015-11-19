@@ -1,0 +1,33 @@
+<colors query="maya angelou">
+
+<color name="blue" weight="0.492423736322">
+ <shade name="cool" weight="0.775509317785" />
+ <shade name="light" weight="0.142856979592" />
+ <shade name="hard" weight="0.0816325597669" />
+</color>
+
+<color name="black" weight="0.194444244599">
+ <shade name="cool" weight="0.775509317785" />
+ <shade name="light" weight="0.142856979592" />
+ <shade name="hard" weight="0.0816325597669" />
+</color>
+
+<color name="purple" weight="0.1691917453">
+ <shade name="cool" weight="0.775509317785" />
+ <shade name="light" weight="0.142856979592" />
+ <shade name="hard" weight="0.0816325597669" />
+</color>
+
+<color name="white" weight="0.0934342474047">
+ <shade name="cool" weight="0.775509317785" />
+ <shade name="light" weight="0.142856979592" />
+ <shade name="hard" weight="0.0816325597669" />
+</color>
+
+<color name="green" weight="0.0505049985971">
+ <shade name="cool" weight="0.775509317785" />
+ <shade name="light" weight="0.142856979592" />
+ <shade name="hard" weight="0.0816325597669" />
+</color>
+
+</colors>

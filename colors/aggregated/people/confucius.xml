@@ -1,0 +1,33 @@
+<colors query="confucius">
+
+<color name="white" weight="0.550577467396">
+ <shade name="light" weight="0.965124721044" />
+ <shade name="hard" weight="0.0267639628525" />
+ <shade name="weak" weight="0.00811029177348" />
+</color>
+
+<color name="green" weight="0.248554657197">
+ <shade name="light" weight="0.965124721044" />
+ <shade name="hard" weight="0.0267639628525" />
+ <shade name="weak" weight="0.00811029177348" />
+</color>
+
+<color name="black" weight="0.0939305390571">
+ <shade name="light" weight="0.965124721044" />
+ <shade name="hard" weight="0.0267639628525" />
+ <shade name="weak" weight="0.00811029177348" />
+</color>
+
+<color name="red" weight="0.0534681530017">
+ <shade name="light" weight="0.965124721044" />
+ <shade name="hard" weight="0.0267639628525" />
+ <shade name="weak" weight="0.00811029177348" />
+</color>
+
+<color name="blue" weight="0.0534681530017">
+ <shade name="light" weight="0.965124721044" />
+ <shade name="hard" weight="0.0267639628525" />
+ <shade name="weak" weight="0.00811029177348" />
+</color>
+
+</colors>

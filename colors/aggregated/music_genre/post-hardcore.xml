@@ -1,0 +1,33 @@
+<colors query="post-hardcore">
+
+<color name="black" weight="0.499999472223">
+ <shade name="intense" weight="0.618915769874" />
+ <shade name="dark" weight="0.228649891244" />
+ <shade name="cool" weight="0.15243326083" />
+</color>
+
+<color name="yellow" weight="0.166666490741">
+ <shade name="intense" weight="0.618915769874" />
+ <shade name="dark" weight="0.228649891244" />
+ <shade name="cool" weight="0.15243326083" />
+</color>
+
+<color name="white" weight="0.111110993827">
+ <shade name="dark" weight="0.52091922268" />
+ <shade name="cool" weight="0.347279481786" />
+ <shade name="light" weight="0.131798839473" />
+</color>
+
+<color name="red" weight="0.111110993827">
+ <shade name="intense" weight="0.618915769874" />
+ <shade name="dark" weight="0.228649891244" />
+ <shade name="cool" weight="0.15243326083" />
+</color>
+
+<color name="blue" weight="0.111110993827">
+ <shade name="intense" weight="0.618915769874" />
+ <shade name="dark" weight="0.228649891244" />
+ <shade name="cool" weight="0.15243326083" />
+</color>
+
+</colors>

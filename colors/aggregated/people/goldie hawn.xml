@@ -1,0 +1,33 @@
+<colors query="goldie hawn">
+
+<color name="green" weight="0.522910511389">
+ <shade name="hard" weight="0.63636294215" />
+ <shade name="cool" weight="0.204545231405" />
+ <shade name="light" weight="0.159090735537" />
+</color>
+
+<color name="white" weight="0.339622290902">
+ <shade name="hard" weight="0.63636294215" />
+ <shade name="cool" weight="0.204545231405" />
+ <shade name="light" weight="0.159090735537" />
+</color>
+
+<color name="black" weight="0.0997303552649">
+ <shade name="hard" weight="0.63636294215" />
+ <shade name="cool" weight="0.204545231405" />
+ <shade name="light" weight="0.159090735537" />
+</color>
+
+<color name="red" weight="0.0188679050501">
+ <shade name="hard" weight="0.63636294215" />
+ <shade name="cool" weight="0.204545231405" />
+ <shade name="light" weight="0.159090735537" />
+</color>
+
+<color name="pink" weight="0.0188679050501">
+ <shade name="hard" weight="0.63636294215" />
+ <shade name="cool" weight="0.204545231405" />
+ <shade name="light" weight="0.159090735537" />
+</color>
+
+</colors>

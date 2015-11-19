@@ -1,0 +1,33 @@
+<colors query="algeria">
+
+<color name="green" weight="0.392434554924">
+ <shade name="light" weight="0.447153824444" />
+ <shade name="cool" weight="0.357723059555" />
+ <shade name="fresh" weight="0.195121668848" />
+</color>
+
+<color name="white" weight="0.203309468214">
+ <shade name="light" weight="0.447153824444" />
+ <shade name="cool" weight="0.357723059555" />
+ <shade name="fresh" weight="0.195121668848" />
+</color>
+
+<color name="red" weight="0.146571942201">
+ <shade name="light" weight="0.447153824444" />
+ <shade name="cool" weight="0.357723059555" />
+ <shade name="fresh" weight="0.195121668848" />
+</color>
+
+<color name="black" weight="0.134751624281">
+ <shade name="light" weight="0.447153824444" />
+ <shade name="cool" weight="0.357723059555" />
+ <shade name="fresh" weight="0.195121668848" />
+</color>
+
+<color name="blue" weight="0.122931306362">
+ <shade name="light" weight="0.447153824444" />
+ <shade name="cool" weight="0.357723059555" />
+ <shade name="fresh" weight="0.195121668848" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="cyprus">
+
+<color name="black" weight="0.421920008351">
+ <shade name="light" weight="0.419503110593" />
+ <shade name="cool" weight="0.382165137399" />
+ <shade name="warm" weight="0.198330528202" />
+</color>
+
+<color name="green" weight="0.178467313877">
+ <shade name="light" weight="0.472420818123" />
+ <shade name="cool" weight="0.430372891903" />
+ <shade name="fresh" weight="0.0972049117918" />
+</color>
+
+<color name="white" weight="0.155916416879">
+ <shade name="light" weight="0.419503110593" />
+ <shade name="cool" weight="0.382165137399" />
+ <shade name="warm" weight="0.198330528202" />
+</color>
+
+<color name="blue" weight="0.129970761193">
+ <shade name="light" weight="0.472420818123" />
+ <shade name="cool" weight="0.430372891903" />
+ <shade name="fresh" weight="0.0972049117918" />
+</color>
+
+<color name="red" weight="0.113724416044">
+ <shade name="light" weight="0.419503110593" />
+ <shade name="cool" weight="0.382165137399" />
+ <shade name="warm" weight="0.198330528202" />
+</color>
+
+</colors>

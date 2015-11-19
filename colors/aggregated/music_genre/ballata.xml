@@ -1,0 +1,33 @@
+<colors query="ballata">
+
+<color name="black" weight="0.444444">
+ <shade name="light" weight="0.599999160001" />
+ <shade name="warm" weight="0.19999972" />
+ <shade name="soft" weight="0.19999972" />
+</color>
+
+<color name="red" weight="0.222222">
+ <shade name="light" weight="0.599999160001" />
+ <shade name="warm" weight="0.19999972" />
+ <shade name="soft" weight="0.19999972" />
+</color>
+
+<color name="blue" weight="0.222222">
+ <shade name="light" weight="0.599999160001" />
+ <shade name="soft" weight="0.19999972" />
+ <shade name="intense" weight="0.19999972" />
+</color>
+
+<color name="orange" weight="0.111111">
+ <shade name="light" weight="0.599999160001" />
+ <shade name="warm" weight="0.19999972" />
+ <shade name="soft" weight="0.19999972" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="light" weight="0.599999160001" />
+ <shade name="warm" weight="0.19999972" />
+ <shade name="soft" weight="0.19999972" />
+</color>
+
+</colors>

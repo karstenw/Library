@@ -1,0 +1,33 @@
+<colors query="chamber jazz">
+
+<color name="white" weight="0.4999995">
+ <shade name="cool" weight="0.963413635486" />
+ <shade name="soft" weight="0.0182926639649" />
+ <shade name="light" weight="0.0182926639649" />
+</color>
+
+<color name="black" weight="0.4999995">
+ <shade name="cool" weight="0.963413635486" />
+ <shade name="soft" weight="0.0182926639649" />
+ <shade name="light" weight="0.0182926639649" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="cool" weight="0.963413635486" />
+ <shade name="soft" weight="0.0182926639649" />
+ <shade name="light" weight="0.0182926639649" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="cool" weight="0.963413635486" />
+ <shade name="soft" weight="0.0182926639649" />
+ <shade name="light" weight="0.0182926639649" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="cool" weight="0.963413635486" />
+ <shade name="soft" weight="0.0182926639649" />
+ <shade name="light" weight="0.0182926639649" />
+</color>
+
+</colors>

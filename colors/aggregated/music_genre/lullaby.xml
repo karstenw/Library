@@ -1,0 +1,33 @@
+<colors query="lullaby">
+
+<color name="black" weight="0.623601808813">
+ <shade name="soft" weight="0.816064980381" />
+ <shade name="light" weight="0.120635692752" />
+ <shade name="dark" weight="0.0632982576087" />
+</color>
+
+<color name="green" weight="0.144927379206">
+ <shade name="soft" weight="0.816064980381" />
+ <shade name="light" weight="0.120635692752" />
+ <shade name="dark" weight="0.0632982576087" />
+</color>
+
+<color name="pink" weight="0.100206930765">
+ <shade name="soft" weight="0.816064980381" />
+ <shade name="light" weight="0.120635692752" />
+ <shade name="dark" weight="0.0632982576087" />
+</color>
+
+<color name="blue" weight="0.0685713542759">
+ <shade name="soft" weight="0.816064980381" />
+ <shade name="light" weight="0.120635692752" />
+ <shade name="dark" weight="0.0632982576087" />
+</color>
+
+<color name="red" weight="0.0626914434623">
+ <shade name="soft" weight="0.816064980381" />
+ <shade name="light" weight="0.120635692752" />
+ <shade name="dark" weight="0.0632982576087" />
+</color>
+
+</colors>

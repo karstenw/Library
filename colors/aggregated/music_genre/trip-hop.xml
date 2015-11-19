@@ -1,0 +1,33 @@
+<colors query="trip-hop">
+
+<color name="black" weight="0.538812226893">
+ <shade name="dark" weight="0.752894898113" />
+ <shade name="cool" weight="0.146074480232" />
+ <shade name="light" weight="0.101029486328" />
+</color>
+
+<color name="blue" weight="0.271689216103">
+ <shade name="dark" weight="0.752894898113" />
+ <shade name="cool" weight="0.146074480232" />
+ <shade name="light" weight="0.101029486328" />
+</color>
+
+<color name="white" weight="0.157534083287">
+ <shade name="dark" weight="0.752894898113" />
+ <shade name="cool" weight="0.146074480232" />
+ <shade name="light" weight="0.101029486328" />
+</color>
+
+<color name="red" weight="0.0159817185943">
+ <shade name="dark" weight="0.752894898113" />
+ <shade name="cool" weight="0.146074480232" />
+ <shade name="light" weight="0.101029486328" />
+</color>
+
+<color name="pink" weight="0.0159817185943">
+ <shade name="dark" weight="0.752894898113" />
+ <shade name="cool" weight="0.146074480232" />
+ <shade name="light" weight="0.101029486328" />
+</color>
+
+</colors>

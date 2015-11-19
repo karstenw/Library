@@ -1,0 +1,33 @@
+<colors query="guitar">
+
+<color name="blue" weight="0.346666263652">
+ <shade name="cool" weight="0.659375096507" />
+ <shade name="light" weight="0.173367403423" />
+ <shade name="hard" weight="0.167256122041" />
+</color>
+
+<color name="black" weight="0.219393684339">
+ <shade name="cool" weight="0.659375096507" />
+ <shade name="light" weight="0.173367403423" />
+ <shade name="hard" weight="0.167256122041" />
+</color>
+
+<color name="red" weight="0.173333131826">
+ <shade name="cool" weight="0.659375096507" />
+ <shade name="light" weight="0.173367403423" />
+ <shade name="hard" weight="0.167256122041" />
+</color>
+
+<color name="green" weight="0.134545298131">
+ <shade name="cool" weight="0.659375096507" />
+ <shade name="light" weight="0.173367403423" />
+ <shade name="hard" weight="0.167256122041" />
+</color>
+
+<color name="white" weight="0.12606045951">
+ <shade name="cool" weight="0.659375096507" />
+ <shade name="light" weight="0.173367403423" />
+ <shade name="hard" weight="0.167256122041" />
+</color>
+
+</colors>

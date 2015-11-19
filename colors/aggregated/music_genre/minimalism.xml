@@ -1,0 +1,33 @@
+<colors query="minimalism">
+
+<color name="black" weight="0.970551353444">
+ <shade name="intense" weight="0.552342147058" />
+ <shade name="cool" weight="0.42487857466" />
+ <shade name="soft" weight="0.0227782124748" />
+</color>
+
+<color name="white" weight="0.0159344252058">
+ <shade name="cool" weight="0.906798944852" />
+ <shade name="soft" weight="0.0486144989879" />
+ <shade name="dark" weight="0.0445842814552" />
+</color>
+
+<color name="red" weight="0.00697389778488">
+ <shade name="intense" weight="0.552342147058" />
+ <shade name="cool" weight="0.42487857466" />
+ <shade name="soft" weight="0.0227782124748" />
+</color>
+
+<color name="blue" weight="0.00578398940912">
+ <shade name="intense" weight="0.552342147058" />
+ <shade name="cool" weight="0.42487857466" />
+ <shade name="soft" weight="0.0227782124748" />
+</color>
+
+<color name="green" weight="0.000755333142872">
+ <shade name="intense" weight="0.552342147058" />
+ <shade name="cool" weight="0.42487857466" />
+ <shade name="soft" weight="0.0227782124748" />
+</color>
+
+</colors>

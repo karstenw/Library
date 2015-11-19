@@ -1,0 +1,33 @@
+<colors query="yang">
+
+<color name="red" weight="0.67955051842">
+ <shade name="light" weight="0.719449414852" />
+ <shade name="fresh" weight="0.140274559278" />
+ <shade name="dark" weight="0.140274559278" />
+</color>
+
+<color name="pink" weight="0.164673256815">
+ <shade name="light" weight="0.719449414852" />
+ <shade name="fresh" weight="0.140274559278" />
+ <shade name="dark" weight="0.140274559278" />
+</color>
+
+<color name="blue" weight="0.0738422469273">
+ <shade name="light" weight="0.719449414852" />
+ <shade name="fresh" weight="0.140274559278" />
+ <shade name="dark" weight="0.140274559278" />
+</color>
+
+<color name="green" weight="0.0664412016772">
+ <shade name="light" weight="0.719449414852" />
+ <shade name="fresh" weight="0.140274559278" />
+ <shade name="dark" weight="0.140274559278" />
+</color>
+
+<color name="purple" weight="0.0154917333531">
+ <shade name="light" weight="0.719449414852" />
+ <shade name="fresh" weight="0.140274559278" />
+ <shade name="dark" weight="0.140274559278" />
+</color>
+
+</colors>

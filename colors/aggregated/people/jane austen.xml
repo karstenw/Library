@@ -1,0 +1,33 @@
+<colors query="jane austen">
+
+<color name="black" weight="0.470319158371">
+ <shade name="hard" weight="0.865068464532" />
+ <shade name="cool" weight="0.105926750759" />
+ <shade name="light" weight="0.029003753184" />
+</color>
+
+<color name="green" weight="0.388584081334">
+ <shade name="hard" weight="0.865068464532" />
+ <shade name="cool" weight="0.105926750759" />
+ <shade name="light" weight="0.029003753184" />
+</color>
+
+<color name="white" weight="0.0794519743267">
+ <shade name="hard" weight="0.865068464532" />
+ <shade name="cool" weight="0.105926750759" />
+ <shade name="light" weight="0.029003753184" />
+</color>
+
+<color name="red" weight="0.0388127460791">
+ <shade name="hard" weight="0.865068464532" />
+ <shade name="cool" weight="0.105926750759" />
+ <shade name="light" weight="0.029003753184" />
+</color>
+
+<color name="pink" weight="0.0228310271054">
+ <shade name="hard" weight="0.865068464532" />
+ <shade name="cool" weight="0.105926750759" />
+ <shade name="light" weight="0.029003753184" />
+</color>
+
+</colors>

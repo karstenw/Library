@@ -1,0 +1,33 @@
+<colors query="work song">
+
+<color name="black" weight="0.475805975807">
+ <shade name="hard" weight="0.996360602583" />
+ <shade name="dark" weight="0.00195913601631" />
+ <shade name="light" weight="0.00167925944256" />
+</color>
+
+<color name="green" weight="0.362902862904">
+ <shade name="hard" weight="0.996360602583" />
+ <shade name="dark" weight="0.00195913601631" />
+ <shade name="light" weight="0.00167925944256" />
+</color>
+
+<color name="blue" weight="0.141128891129">
+ <shade name="hard" weight="0.996360602583" />
+ <shade name="dark" weight="0.00195913601631" />
+ <shade name="light" weight="0.00167925944256" />
+</color>
+
+<color name="white" weight="0.016129016129">
+ <shade name="hard" weight="0.996360602583" />
+ <shade name="dark" weight="0.00195913601631" />
+ <shade name="light" weight="0.00167925944256" />
+</color>
+
+<color name="yellow" weight="0.00403225403226">
+ <shade name="hard" weight="0.996360602583" />
+ <shade name="dark" weight="0.00195913601631" />
+ <shade name="light" weight="0.00167925944256" />
+</color>
+
+</colors>

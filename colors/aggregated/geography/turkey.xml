@@ -1,0 +1,33 @@
+<colors query="turkey">
+
+<color name="white" weight="0.711479362358">
+ <shade name="fresh" weight="0.795678723535" />
+ <shade name="dark" weight="0.103510241184" />
+ <shade name="light" weight="0.100809974022" />
+</color>
+
+<color name="red" weight="0.159792730065">
+ <shade name="fresh" weight="0.795678723535" />
+ <shade name="dark" weight="0.103510241184" />
+ <shade name="light" weight="0.100809974022" />
+</color>
+
+<color name="black" weight="0.0990893465768">
+ <shade name="fresh" weight="0.795678723535" />
+ <shade name="dark" weight="0.103510241184" />
+ <shade name="light" weight="0.100809974022" />
+</color>
+
+<color name="yellow" weight="0.0148187671457">
+ <shade name="fresh" weight="0.795678723535" />
+ <shade name="dark" weight="0.103510241184" />
+ <shade name="light" weight="0.100809974022" />
+</color>
+
+<color name="purple" weight="0.0148187671457">
+ <shade name="fresh" weight="0.795678723535" />
+ <shade name="dark" weight="0.103510241184" />
+ <shade name="light" weight="0.100809974022" />
+</color>
+
+</colors>

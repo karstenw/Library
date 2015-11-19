@@ -1,0 +1,33 @@
+<colors query="george macdonald">
+
+<color name="white" weight="0.333332977778">
+ <shade name="light" weight="0.967740952134" />
+ <shade name="warm" weight="0.0241935238034" />
+ <shade name="neutral" weight="0.00806450793445" />
+</color>
+
+<color name="red" weight="0.199999786667">
+ <shade name="light" weight="0.967740952134" />
+ <shade name="warm" weight="0.0241935238034" />
+ <shade name="neutral" weight="0.00806450793445" />
+</color>
+
+<color name="green" weight="0.199999786667">
+ <shade name="light" weight="0.983605541522" />
+ <shade name="neutral" weight="0.00819671284602" />
+ <shade name="cool" weight="0.00819671284602" />
+</color>
+
+<color name="black" weight="0.199999786667">
+ <shade name="light" weight="0.967740952134" />
+ <shade name="warm" weight="0.0241935238034" />
+ <shade name="neutral" weight="0.00806450793445" />
+</color>
+
+<color name="pink" weight="0.0666665955556">
+ <shade name="light" weight="0.967740952134" />
+ <shade name="warm" weight="0.0241935238034" />
+ <shade name="neutral" weight="0.00806450793445" />
+</color>
+
+</colors>

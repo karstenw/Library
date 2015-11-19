@@ -1,0 +1,33 @@
+<colors query="queensland">
+
+<color name="blue" weight="0.305383953921">
+ <shade name="fresh" weight="0.578407590993" />
+ <shade name="light" weight="0.264772040671" />
+ <shade name="cool" weight="0.156817775161" />
+</color>
+
+<color name="white" weight="0.27620190718">
+ <shade name="warm" weight="0.576483267389" />
+ <shade name="fresh" weight="0.290524735743" />
+ <shade name="light" weight="0.132990694358" />
+</color>
+
+<color name="red" weight="0.210439548327">
+ <shade name="warm" weight="0.576483267389" />
+ <shade name="fresh" weight="0.290524735743" />
+ <shade name="light" weight="0.132990694358" />
+</color>
+
+<color name="green" weight="0.123304422848">
+ <shade name="fresh" weight="0.578407590993" />
+ <shade name="light" weight="0.264772040671" />
+ <shade name="cool" weight="0.156817775161" />
+</color>
+
+<color name="purple" weight="0.0846690370224">
+ <shade name="fresh" weight="0.578407590993" />
+ <shade name="light" weight="0.264772040671" />
+ <shade name="cool" weight="0.156817775161" />
+</color>
+
+</colors>

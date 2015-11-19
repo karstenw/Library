@@ -1,0 +1,33 @@
+<colors query="virginia">
+
+<color name="orange" weight="0.344950931664">
+ <shade name="light" weight="0.836988569741" />
+ <shade name="warm" weight="0.0853863339292" />
+ <shade name="hard" weight="0.0776239399357" />
+</color>
+
+<color name="green" weight="0.232188368564">
+ <shade name="light" weight="0.862008010572" />
+ <shade name="hard" weight="0.0799442913031" />
+ <shade name="cool" weight="0.0580465071635" />
+</color>
+
+<color name="black" weight="0.194259142794">
+ <shade name="light" weight="0.836988569741" />
+ <shade name="warm" weight="0.0853863339292" />
+ <shade name="hard" weight="0.0776239399357" />
+</color>
+
+<color name="white" weight="0.143003432295">
+ <shade name="light" weight="0.836988569741" />
+ <shade name="warm" weight="0.0853863339292" />
+ <shade name="hard" weight="0.0776239399357" />
+</color>
+
+<color name="red" weight="0.0855970365347">
+ <shade name="light" weight="0.836988569741" />
+ <shade name="warm" weight="0.0853863339292" />
+ <shade name="hard" weight="0.0776239399357" />
+</color>
+
+</colors>

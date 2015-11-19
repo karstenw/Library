@@ -1,0 +1,33 @@
+<colors query="paraguay">
+
+<color name="red" weight="0.709281205608">
+ <shade name="soft" weight="0.652541548909" />
+ <shade name="cool" weight="0.207626856471" />
+ <shade name="weak" weight="0.139830331909" />
+</color>
+
+<color name="white" weight="0.0998247622708">
+ <shade name="soft" weight="0.652541548909" />
+ <shade name="cool" weight="0.207626856471" />
+ <shade name="weak" weight="0.139830331909" />
+</color>
+
+<color name="orange" weight="0.0770577112266">
+ <shade name="soft" weight="0.652541548909" />
+ <shade name="cool" weight="0.207626856471" />
+ <shade name="weak" weight="0.139830331909" />
+</color>
+
+<color name="green" weight="0.0647985298951">
+ <shade name="soft" weight="0.652541548909" />
+ <shade name="cool" weight="0.207626856471" />
+ <shade name="weak" weight="0.139830331909" />
+</color>
+
+<color name="blue" weight="0.049036725326">
+ <shade name="soft" weight="0.652541548909" />
+ <shade name="cool" weight="0.207626856471" />
+ <shade name="weak" weight="0.139830331909" />
+</color>
+
+</colors>

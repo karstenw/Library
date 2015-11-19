@@ -1,0 +1,33 @@
+<colors query="julie andrews">
+
+<color name="white" weight="0.561999432381">
+ <shade name="dark" weight="0.776469702146" />
+ <shade name="cool" weight="0.117646924568" />
+ <shade name="light" weight="0.105882232111" />
+</color>
+
+<color name="blue" weight="0.21799977982">
+ <shade name="dark" weight="0.776469702146" />
+ <shade name="cool" weight="0.117646924568" />
+ <shade name="light" weight="0.105882232111" />
+</color>
+
+<color name="green" weight="0.15199984648">
+ <shade name="dark" weight="0.776469702146" />
+ <shade name="cool" weight="0.117646924568" />
+ <shade name="light" weight="0.105882232111" />
+</color>
+
+<color name="black" weight="0.0539999454601">
+ <shade name="dark" weight="0.776469702146" />
+ <shade name="cool" weight="0.117646924568" />
+ <shade name="light" weight="0.105882232111" />
+</color>
+
+<color name="pink" weight="0.01399998586">
+ <shade name="dark" weight="0.776469702146" />
+ <shade name="cool" weight="0.117646924568" />
+ <shade name="light" weight="0.105882232111" />
+</color>
+
+</colors>

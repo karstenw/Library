@@ -1,0 +1,33 @@
+<colors query="nepal">
+
+<color name="green" weight="0.466956365754">
+ <shade name="fresh" weight="0.855516692704" />
+ <shade name="cool" weight="0.074402648541" />
+ <shade name="light" weight="0.0700795588704" />
+</color>
+
+<color name="white" weight="0.340324130973">
+ <shade name="fresh" weight="0.855516692704" />
+ <shade name="cool" weight="0.074402648541" />
+ <shade name="light" weight="0.0700795588704" />
+</color>
+
+<color name="black" weight="0.0900935587034">
+ <shade name="fresh" weight="0.855516692704" />
+ <shade name="cool" weight="0.074402648541" />
+ <shade name="light" weight="0.0700795588704" />
+</color>
+
+<color name="blue" weight="0.062524665923">
+ <shade name="fresh" weight="0.855516692704" />
+ <shade name="cool" weight="0.074402648541" />
+ <shade name="light" weight="0.0700795588704" />
+</color>
+
+<color name="red" weight="0.0401002076806">
+ <shade name="fresh" weight="0.855516692704" />
+ <shade name="cool" weight="0.074402648541" />
+ <shade name="light" weight="0.0700795588704" />
+</color>
+
+</colors>

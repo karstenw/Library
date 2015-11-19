@@ -1,0 +1,33 @@
+<colors query="tanzania">
+
+<color name="green" weight="0.333624438073">
+ <shade name="fresh" weight="0.591269034141" />
+ <shade name="dark" weight="0.261904404384" />
+ <shade name="light" weight="0.146825196397" />
+</color>
+
+<color name="yellow" weight="0.221687536177">
+ <shade name="fresh" weight="0.591269034141" />
+ <shade name="dark" weight="0.261904404384" />
+ <shade name="light" weight="0.146825196397" />
+</color>
+
+<color name="purple" weight="0.195889578318">
+ <shade name="fresh" weight="0.591269034141" />
+ <shade name="dark" weight="0.261904404384" />
+ <shade name="light" weight="0.146825196397" />
+</color>
+
+<color name="blue" weight="0.145168169646">
+ <shade name="fresh" weight="0.591269034141" />
+ <shade name="dark" weight="0.261904404384" />
+ <shade name="light" weight="0.146825196397" />
+</color>
+
+<color name="red" weight="0.103629084958">
+ <shade name="fresh" weight="0.591269034141" />
+ <shade name="dark" weight="0.261904404384" />
+ <shade name="light" weight="0.146825196397" />
+</color>
+
+</colors>

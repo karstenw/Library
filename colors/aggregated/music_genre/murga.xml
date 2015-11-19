@@ -1,0 +1,33 @@
+<colors query="murga">
+
+<color name="white" weight="0.624999375001">
+ <shade name="dark" weight="0.499999333334" />
+ <shade name="fresh" weight="0.333332888889" />
+ <shade name="light" weight="0.166666444445" />
+</color>
+
+<color name="red" weight="0.124999875">
+ <shade name="dark" weight="0.499999333334" />
+ <shade name="fresh" weight="0.333332888889" />
+ <shade name="light" weight="0.166666444445" />
+</color>
+
+<color name="green" weight="0.124999875">
+ <shade name="dark" weight="0.499999333334" />
+ <shade name="fresh" weight="0.333332888889" />
+ <shade name="light" weight="0.166666444445" />
+</color>
+
+<color name="black" weight="0.124999875">
+ <shade name="dark" weight="0.499999333334" />
+ <shade name="fresh" weight="0.333332888889" />
+ <shade name="light" weight="0.166666444445" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="dark" weight="0.499999333334" />
+ <shade name="fresh" weight="0.333332888889" />
+ <shade name="light" weight="0.166666444445" />
+</color>
+
+</colors>

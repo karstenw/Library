@@ -1,0 +1,33 @@
+<colors query="hard house">
+
+<color name="white" weight="0.647886653244">
+ <shade name="hard" weight="0.706298208873" />
+ <shade name="dark" weight="0.223630039749" />
+ <shade name="cool" weight="0.070070745788" />
+</color>
+
+<color name="blue" weight="0.27112647989">
+ <shade name="hard" weight="0.706298208873" />
+ <shade name="dark" weight="0.223630039749" />
+ <shade name="cool" weight="0.070070745788" />
+</color>
+
+<color name="green" weight="0.0316901080391">
+ <shade name="hard" weight="0.706298208873" />
+ <shade name="dark" weight="0.223630039749" />
+ <shade name="cool" weight="0.070070745788" />
+</color>
+
+<color name="red" weight="0.0281689849237">
+ <shade name="hard" weight="0.706298208873" />
+ <shade name="dark" weight="0.223630039749" />
+ <shade name="cool" weight="0.070070745788" />
+</color>
+
+<color name="orange" weight="0.0211267386927">
+ <shade name="hard" weight="0.706298208873" />
+ <shade name="dark" weight="0.223630039749" />
+ <shade name="cool" weight="0.070070745788" />
+</color>
+
+</colors>

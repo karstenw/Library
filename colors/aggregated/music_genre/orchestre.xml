@@ -1,0 +1,33 @@
+<colors query="orchestre">
+
+<color name="red" weight="0.85227187258">
+ <shade name="light" weight="0.784614539646" />
+ <shade name="dark" weight="0.176922886391" />
+ <shade name="cool" weight="0.0384614970415" />
+</color>
+
+<color name="orange" weight="0.126420327766">
+ <shade name="light" weight="0.784614539646" />
+ <shade name="dark" weight="0.176922886391" />
+ <shade name="cool" weight="0.0384614970415" />
+</color>
+
+<color name="blue" weight="0.0104166562204">
+ <shade name="light" weight="0.784614539646" />
+ <shade name="dark" weight="0.176922886391" />
+ <shade name="cool" weight="0.0384614970415" />
+</color>
+
+<color name="white" weight="0.00662878123117">
+ <shade name="light" weight="0.784614539646" />
+ <shade name="dark" weight="0.176922886391" />
+ <shade name="cool" weight="0.0384614970415" />
+</color>
+
+<color name="black" weight="0.0042613593629">
+ <shade name="light" weight="0.784614539646" />
+ <shade name="dark" weight="0.176922886391" />
+ <shade name="cool" weight="0.0384614970415" />
+</color>
+
+</colors>

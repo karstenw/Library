@@ -1,0 +1,33 @@
+<colors query="meringue">
+
+<color name="white" weight="0.323214529531">
+ <shade name="light" weight="0.523132020411" />
+ <shade name="soft" weight="0.256123018086" />
+ <shade name="fresh" weight="0.220743569307" />
+</color>
+
+<color name="orange" weight="0.251465733221">
+ <shade name="light" weight="0.523132020411" />
+ <shade name="soft" weight="0.256123018086" />
+ <shade name="fresh" weight="0.220743569307" />
+</color>
+
+<color name="pink" weight="0.24180724141">
+ <shade name="light" weight="0.523132020411" />
+ <shade name="soft" weight="0.256123018086" />
+ <shade name="fresh" weight="0.220743569307" />
+</color>
+
+<color name="yellow" weight="0.0996894333345">
+ <shade name="light" weight="0.523132020411" />
+ <shade name="soft" weight="0.256123018086" />
+ <shade name="fresh" weight="0.220743569307" />
+</color>
+
+<color name="blue" weight="0.0838219110736">
+ <shade name="light" weight="0.523132020411" />
+ <shade name="soft" weight="0.256123018086" />
+ <shade name="fresh" weight="0.220743569307" />
+</color>
+
+</colors>

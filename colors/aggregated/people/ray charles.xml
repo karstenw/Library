@@ -1,0 +1,33 @@
+<colors query="ray charles">
+
+<color name="blue" weight="0.513870108537">
+ <shade name="dark" weight="0.66176397113" />
+ <shade name="light" weight="0.22268882838" />
+ <shade name="cool" weight="0.115546090197" />
+</color>
+
+<color name="white" weight="0.231821101595">
+ <shade name="dark" weight="0.66176397113" />
+ <shade name="light" weight="0.22268882838" />
+ <shade name="cool" weight="0.115546090197" />
+</color>
+
+<color name="green" weight="0.173093089191">
+ <shade name="dark" weight="0.66176397113" />
+ <shade name="light" weight="0.22268882838" />
+ <shade name="cool" weight="0.115546090197" />
+</color>
+
+<color name="black" weight="0.05231429526">
+ <shade name="dark" weight="0.66176397113" />
+ <shade name="light" weight="0.22268882838" />
+ <shade name="cool" weight="0.115546090197" />
+</color>
+
+<color name="pink" weight="0.0289003639989">
+ <shade name="dark" weight="0.66176397113" />
+ <shade name="light" weight="0.22268882838" />
+ <shade name="cool" weight="0.115546090197" />
+</color>
+
+</colors>

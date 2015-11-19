@@ -1,0 +1,33 @@
+<colors query="leo durocher">
+
+<color name="white" weight="0.428571">
+ <shade name="dark" weight="0.921051686289" />
+ <shade name="hard" weight="0.0526315249308" />
+ <shade name="soft" weight="0.0263157624654" />
+</color>
+
+<color name="red" weight="0.285714">
+ <shade name="dark" weight="0.921051686289" />
+ <shade name="hard" weight="0.0526315249308" />
+ <shade name="soft" weight="0.0263157624654" />
+</color>
+
+<color name="black" weight="0.285714">
+ <shade name="dark" weight="0.921051686289" />
+ <shade name="hard" weight="0.0526315249308" />
+ <shade name="soft" weight="0.0263157624654" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="dark" weight="0.921051686289" />
+ <shade name="hard" weight="0.0526315249308" />
+ <shade name="soft" weight="0.0263157624654" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="dark" weight="0.921051686289" />
+ <shade name="hard" weight="0.0526315249308" />
+ <shade name="soft" weight="0.0263157624654" />
+</color>
+
+</colors>

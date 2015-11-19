@@ -1,0 +1,33 @@
+<colors query="sierra leone">
+
+<color name="white" weight="0.512473473897">
+ <shade name="dark" weight="0.622221378767" />
+ <shade name="light" weight="0.211110824939" />
+ <shade name="bright" weight="0.166666440741" />
+</color>
+
+<color name="black" weight="0.25051948724">
+ <shade name="dark" weight="0.622221378767" />
+ <shade name="light" weight="0.211110824939" />
+ <shade name="bright" weight="0.166666440741" />
+</color>
+
+<color name="red" weight="0.115384494123">
+ <shade name="dark" weight="0.622221378767" />
+ <shade name="light" weight="0.211110824939" />
+ <shade name="bright" weight="0.166666440741" />
+</color>
+
+<color name="blue" weight="0.0738044962408">
+ <shade name="dark" weight="0.622221378767" />
+ <shade name="light" weight="0.211110824939" />
+ <shade name="bright" weight="0.166666440741" />
+</color>
+
+<color name="orange" weight="0.0478169975645">
+ <shade name="dark" weight="0.622221378767" />
+ <shade name="light" weight="0.211110824939" />
+ <shade name="bright" weight="0.166666440741" />
+</color>
+
+</colors>

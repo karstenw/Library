@@ -1,0 +1,33 @@
+<colors query="electric blues">
+
+<color name="white" weight="0.560533278549">
+ <shade name="cool" weight="0.697371975733" />
+ <shade name="hard" weight="0.28186802182" />
+ <shade name="bright" weight="0.0207589797428" />
+</color>
+
+<color name="black" weight="0.426119686244">
+ <shade name="cool" weight="0.697371975733" />
+ <shade name="hard" weight="0.28186802182" />
+ <shade name="bright" weight="0.0207589797428" />
+</color>
+
+<color name="blue" weight="0.00667301522082">
+ <shade name="cool" weight="0.697371975733" />
+ <shade name="hard" weight="0.28186802182" />
+ <shade name="bright" weight="0.0207589797428" />
+</color>
+
+<color name="orange" weight="0.00381315155476">
+ <shade name="cool" weight="0.697371975733" />
+ <shade name="hard" weight="0.28186802182" />
+ <shade name="bright" weight="0.0207589797428" />
+</color>
+
+<color name="red" weight="0.00285986366607">
+ <shade name="cool" weight="0.697371975733" />
+ <shade name="hard" weight="0.28186802182" />
+ <shade name="bright" weight="0.0207589797428" />
+</color>
+
+</colors>

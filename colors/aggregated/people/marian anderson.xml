@@ -1,0 +1,33 @@
+<colors query="marian anderson">
+
+<color name="black" weight="0.523809000001">
+ <shade name="dark" weight="0.999999000001" />
+ <shade name="weak" weight="0.0" />
+ <shade name="warm" weight="0.0" />
+</color>
+
+<color name="white" weight="0.3095235">
+ <shade name="dark" weight="0.999999000001" />
+ <shade name="weak" weight="0.0" />
+ <shade name="warm" weight="0.0" />
+</color>
+
+<color name="red" weight="0.0714285000001">
+ <shade name="dark" weight="0.999999000001" />
+ <shade name="weak" weight="0.0" />
+ <shade name="warm" weight="0.0" />
+</color>
+
+<color name="pink" weight="0.047619">
+ <shade name="dark" weight="0.999999000001" />
+ <shade name="weak" weight="0.0" />
+ <shade name="warm" weight="0.0" />
+</color>
+
+<color name="green" weight="0.047619">
+ <shade name="dark" weight="0.999999000001" />
+ <shade name="weak" weight="0.0" />
+ <shade name="soft" weight="0.0" />
+</color>
+
+</colors>

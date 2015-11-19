@@ -1,0 +1,33 @@
+<colors query="guernsey">
+
+<color name="blue" weight="0.313652777162">
+ <shade name="fresh" weight="0.930231585144" />
+ <shade name="light" weight="0.0356949329183" />
+ <shade name="hard" weight="0.0340724359675" />
+</color>
+
+<color name="white" weight="0.243805730147">
+ <shade name="fresh" weight="0.930231585144" />
+ <shade name="light" weight="0.0356949329183" />
+ <shade name="hard" weight="0.0340724359675" />
+</color>
+
+<color name="black" weight="0.219820517775">
+ <shade name="fresh" weight="0.930231585144" />
+ <shade name="light" weight="0.0356949329183" />
+ <shade name="hard" weight="0.0340724359675" />
+</color>
+
+<color name="green" weight="0.123088947004">
+ <shade name="fresh" weight="0.930231585144" />
+ <shade name="light" weight="0.0356949329183" />
+ <shade name="hard" weight="0.0340724359675" />
+</color>
+
+<color name="red" weight="0.0996308821572">
+ <shade name="fresh" weight="0.930231585144" />
+ <shade name="light" weight="0.0356949329183" />
+ <shade name="hard" weight="0.0340724359675" />
+</color>
+
+</colors>

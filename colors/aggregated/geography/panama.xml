@@ -1,0 +1,33 @@
+<colors query="panama">
+
+<color name="white" weight="0.714499071453">
+ <shade name="cool" weight="0.553504796563" />
+ <shade name="light" weight="0.240379225936" />
+ <shade name="soft" weight="0.206114643291" />
+</color>
+
+<color name="blue" weight="0.0984309909624">
+ <shade name="cool" weight="0.553504796563" />
+ <shade name="light" weight="0.240379225936" />
+ <shade name="soft" weight="0.206114643291" />
+</color>
+
+<color name="green" weight="0.0769460538488">
+ <shade name="cool" weight="0.553504796563" />
+ <shade name="light" weight="0.240379225936" />
+ <shade name="soft" weight="0.206114643291" />
+</color>
+
+<color name="red" weight="0.0724492065459">
+ <shade name="cool" weight="0.553504796563" />
+ <shade name="light" weight="0.240379225936" />
+ <shade name="soft" weight="0.206114643291" />
+</color>
+
+<color name="pink" weight="0.0376735874039">
+ <shade name="cool" weight="0.553504796563" />
+ <shade name="light" weight="0.240379225936" />
+ <shade name="soft" weight="0.206114643291" />
+</color>
+
+</colors>

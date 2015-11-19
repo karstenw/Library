@@ -1,0 +1,33 @@
+<colors query="charlotte perkins gilman">
+
+<color name="yellow" weight="0.4999995">
+ <shade name="dark" weight="0.4999995" />
+ <shade name="weak" weight="0.24999975" />
+ <shade name="light" weight="0.24999975" />
+</color>
+
+<color name="black" weight="0.24999975">
+ <shade name="dark" weight="0.4999995" />
+ <shade name="weak" weight="0.24999975" />
+ <shade name="light" weight="0.24999975" />
+</color>
+
+<color name="white" weight="0.124999875">
+ <shade name="dark" weight="0.4999995" />
+ <shade name="weak" weight="0.24999975" />
+ <shade name="light" weight="0.24999975" />
+</color>
+
+<color name="green" weight="0.124999875">
+ <shade name="dark" weight="0.4999995" />
+ <shade name="weak" weight="0.24999975" />
+ <shade name="light" weight="0.24999975" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="dark" weight="0.4999995" />
+ <shade name="weak" weight="0.24999975" />
+ <shade name="light" weight="0.24999975" />
+</color>
+
+</colors>

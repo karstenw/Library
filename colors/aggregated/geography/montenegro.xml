@@ -1,0 +1,33 @@
+<colors query="montenegro">
+
+<color name="pink" weight="0.501957190994">
+ <shade name="cool" weight="0.431506317321" />
+ <shade name="neutral" weight="0.356163944455" />
+ <shade name="light" weight="0.212328505348" />
+</color>
+
+<color name="green" weight="0.234142277858">
+ <shade name="cool" weight="0.431506317321" />
+ <shade name="neutral" weight="0.356163944455" />
+ <shade name="light" weight="0.212328505348" />
+</color>
+
+<color name="red" weight="0.178543275424">
+ <shade name="cool" weight="0.431506317321" />
+ <shade name="neutral" weight="0.356163944455" />
+ <shade name="light" weight="0.212328505348" />
+</color>
+
+<color name="white" weight="0.0438527343146">
+ <shade name="cool" weight="0.431506317321" />
+ <shade name="neutral" weight="0.356163944455" />
+ <shade name="light" weight="0.212328505348" />
+</color>
+
+<color name="black" weight="0.0415034806906">
+ <shade name="cool" weight="0.431506317321" />
+ <shade name="neutral" weight="0.356163944455" />
+ <shade name="light" weight="0.212328505348" />
+</color>
+
+</colors>

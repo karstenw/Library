@@ -1,0 +1,33 @@
+<colors query="soca music">
+
+<color name="red" weight="0.3999996">
+ <shade name="fresh" weight="0.4999995" />
+ <shade name="cool" weight="0.333333" />
+ <shade name="intense" weight="0.1666665" />
+</color>
+
+<color name="purple" weight="0.3999996">
+ <shade name="fresh" weight="0.599999280001" />
+ <shade name="cool" weight="0.399999520001" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="green" weight="0.1999998">
+ <shade name="fresh" weight="0.4999995" />
+ <shade name="cool" weight="0.333333" />
+ <shade name="intense" weight="0.1666665" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="fresh" weight="0.4999995" />
+ <shade name="cool" weight="0.333333" />
+ <shade name="intense" weight="0.1666665" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="fresh" weight="0.599999280001" />
+ <shade name="cool" weight="0.399999520001" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+</colors>

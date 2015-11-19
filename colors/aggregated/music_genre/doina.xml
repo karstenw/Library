@@ -1,0 +1,33 @@
+<colors query="doina">
+
+<color name="white" weight="0.731763970675">
+ <shade name="dark" weight="0.444443851853" />
+ <shade name="light" weight="0.333332888889" />
+ <shade name="neutral" weight="0.222221925926" />
+</color>
+
+<color name="blue" weight="0.155293961622">
+ <shade name="dark" weight="0.444443851853" />
+ <shade name="light" weight="0.333332888889" />
+ <shade name="neutral" weight="0.222221925926" />
+</color>
+
+<color name="red" weight="0.108235185373">
+ <shade name="dark" weight="0.444443851853" />
+ <shade name="light" weight="0.333332888889" />
+ <shade name="neutral" weight="0.222221925926" />
+</color>
+
+<color name="yellow" weight="0.00235293881246">
+ <shade name="dark" weight="0.444443851853" />
+ <shade name="light" weight="0.333332888889" />
+ <shade name="neutral" weight="0.222221925926" />
+</color>
+
+<color name="purple" weight="0.00235293881246">
+ <shade name="dark" weight="0.444443851853" />
+ <shade name="light" weight="0.333332888889" />
+ <shade name="neutral" weight="0.222221925926" />
+</color>
+
+</colors>

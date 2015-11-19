@@ -1,0 +1,33 @@
+<colors query="grindcore">
+
+<color name="black" weight="0.450703773061">
+ <shade name="hard" weight="0.576064255304" />
+ <shade name="intense" weight="0.321703489054" />
+ <shade name="cool" weight="0.102231121364" />
+</color>
+
+<color name="green" weight="0.420774225631">
+ <shade name="hard" weight="0.576064255304" />
+ <shade name="intense" weight="0.321703489054" />
+ <shade name="cool" weight="0.102231121364" />
+</color>
+
+<color name="white" weight="0.12235903214">
+ <shade name="hard" weight="0.777654888103" />
+ <shade name="cool" weight="0.138006360424" />
+ <shade name="fresh" weight="0.0843372202591" />
+</color>
+
+<color name="red" weight="0.0044014040338">
+ <shade name="hard" weight="0.576064255304" />
+ <shade name="intense" weight="0.321703489054" />
+ <shade name="cool" weight="0.102231121364" />
+</color>
+
+<color name="pink" weight="0.00176056161352">
+ <shade name="hard" weight="0.777654888103" />
+ <shade name="cool" weight="0.138006360424" />
+ <shade name="fresh" weight="0.0843372202591" />
+</color>
+
+</colors>

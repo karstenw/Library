@@ -1,0 +1,33 @@
+<colors query="ligurian sea">
+
+<color name="blue" weight="0.971589937501">
+ <shade name="cool" weight="0.428570326533" />
+ <shade name="soft" weight="0.285713551022" />
+ <shade name="fresh" weight="0.285713551022" />
+</color>
+
+<color name="green" weight="0.011363625">
+ <shade name="cool" weight="0.428570326533" />
+ <shade name="soft" weight="0.285713551022" />
+ <shade name="fresh" weight="0.285713551022" />
+</color>
+
+<color name="black" weight="0.011363625">
+ <shade name="warm" weight="0.666665866668" />
+ <shade name="cool" weight="0.19999976" />
+ <shade name="soft" weight="0.133333173334" />
+</color>
+
+<color name="purple" weight="0.00568181250001">
+ <shade name="cool" weight="0.428570326533" />
+ <shade name="soft" weight="0.285713551022" />
+ <shade name="fresh" weight="0.285713551022" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="warm" weight="0.666665866668" />
+ <shade name="cool" weight="0.19999976" />
+ <shade name="soft" weight="0.133333173334" />
+</color>
+
+</colors>

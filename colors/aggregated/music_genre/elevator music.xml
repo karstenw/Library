@@ -1,0 +1,33 @@
+<colors query="elevator music">
+
+<color name="black" weight="0.910111449439">
+ <shade name="soft" weight="0.527620650169" />
+ <shade name="light" weight="0.253663774119" />
+ <shade name="cool" weight="0.218714543019" />
+</color>
+
+<color name="blue" weight="0.0449437752809">
+ <shade name="soft" weight="0.527620650169" />
+ <shade name="light" weight="0.253663774119" />
+ <shade name="cool" weight="0.218714543019" />
+</color>
+
+<color name="white" weight="0.0224718876405">
+ <shade name="soft" weight="0.527620650169" />
+ <shade name="light" weight="0.253663774119" />
+ <shade name="cool" weight="0.218714543019" />
+</color>
+
+<color name="pink" weight="0.0224718876405">
+ <shade name="soft" weight="0.527620650169" />
+ <shade name="light" weight="0.253663774119" />
+ <shade name="cool" weight="0.218714543019" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="soft" weight="0.527620650169" />
+ <shade name="light" weight="0.253663774119" />
+ <shade name="cool" weight="0.218714543019" />
+</color>
+
+</colors>

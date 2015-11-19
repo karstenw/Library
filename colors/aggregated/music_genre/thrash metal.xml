@@ -1,0 +1,33 @@
+<colors query="thrash metal">
+
+<color name="black" weight="0.997808687959">
+ <shade name="dark" weight="0.417055186772" />
+ <shade name="intense" weight="0.34858343969" />
+ <shade name="hard" weight="0.234360116149" />
+</color>
+
+<color name="orange" weight="0.000818601362627">
+ <shade name="dark" weight="0.417055186772" />
+ <shade name="intense" weight="0.34858343969" />
+ <shade name="hard" weight="0.234360116149" />
+</color>
+
+<color name="red" weight="0.000774352640323">
+ <shade name="dark" weight="0.417055186772" />
+ <shade name="intense" weight="0.34858343969" />
+ <shade name="hard" weight="0.234360116149" />
+</color>
+
+<color name="yellow" weight="0.000442487223042">
+ <shade name="dark" weight="0.417055186772" />
+ <shade name="intense" weight="0.34858343969" />
+ <shade name="hard" weight="0.234360116149" />
+</color>
+
+<color name="pink" weight="0.000154870528065">
+ <shade name="dark" weight="0.508152425887" />
+ <shade name="hard" weight="0.28555132589" />
+ <shade name="cool" weight="0.206294716181" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="karl marx">
+
+<color name="red" weight="0.436055028524">
+ <shade name="cool" weight="0.684209797092" />
+ <shade name="light" weight="0.249999733553" />
+ <shade name="weak" weight="0.0657894035666" />
+</color>
+
+<color name="white" weight="0.246532878317">
+ <shade name="cool" weight="0.684209797092" />
+ <shade name="light" weight="0.249999733553" />
+ <shade name="weak" weight="0.0657894035666" />
+</color>
+
+<color name="black" weight="0.17873633678">
+ <shade name="cool" weight="0.684209797092" />
+ <shade name="light" weight="0.249999733553" />
+ <shade name="weak" weight="0.0657894035666" />
+</color>
+
+<color name="orange" weight="0.0939906598585">
+ <shade name="cool" weight="0.684209797092" />
+ <shade name="light" weight="0.249999733553" />
+ <shade name="weak" weight="0.0657894035666" />
+</color>
+
+<color name="green" weight="0.044684084195">
+ <shade name="cool" weight="0.684209797092" />
+ <shade name="light" weight="0.249999733553" />
+ <shade name="weak" weight="0.0657894035666" />
+</color>
+
+</colors>

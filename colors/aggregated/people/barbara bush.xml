@@ -1,0 +1,33 @@
+<colors query="barbara bush">
+
+<color name="white" weight="0.415093869705">
+ <shade name="light" weight="0.714285000001" />
+ <shade name="cool" weight="0.142857" />
+ <shade name="bright" weight="0.142857" />
+</color>
+
+<color name="red" weight="0.188679031684">
+ <shade name="light" weight="0.714285000001" />
+ <shade name="cool" weight="0.142857" />
+ <shade name="bright" weight="0.142857" />
+</color>
+
+<color name="black" weight="0.188679031684">
+ <shade name="light" weight="0.714285000001" />
+ <shade name="cool" weight="0.142857" />
+ <shade name="bright" weight="0.142857" />
+</color>
+
+<color name="pink" weight="0.132075322179">
+ <shade name="light" weight="0.714285000001" />
+ <shade name="cool" weight="0.142857" />
+ <shade name="bright" weight="0.142857" />
+</color>
+
+<color name="blue" weight="0.0754716126736">
+ <shade name="light" weight="0.714285000001" />
+ <shade name="cool" weight="0.142857" />
+ <shade name="bright" weight="0.142857" />
+</color>
+
+</colors>

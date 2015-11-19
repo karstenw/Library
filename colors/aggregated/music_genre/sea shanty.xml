@@ -1,0 +1,33 @@
+<colors query="sea shanty">
+
+<color name="white" weight="0.942622000471">
+ <shade name="cool" weight="0.877549981676" />
+ <shade name="warm" weight="0.0612244173262" />
+ <shade name="soft" weight="0.0612244173262" />
+</color>
+
+<color name="yellow" weight="0.0163934260952">
+ <shade name="cool" weight="0.877549981676" />
+ <shade name="warm" weight="0.0612244173262" />
+ <shade name="soft" weight="0.0612244173262" />
+</color>
+
+<color name="red" weight="0.0163934260952">
+ <shade name="cool" weight="0.877549981676" />
+ <shade name="warm" weight="0.0612244173262" />
+ <shade name="soft" weight="0.0612244173262" />
+</color>
+
+<color name="blue" weight="0.0163934260952">
+ <shade name="cool" weight="0.877549981676" />
+ <shade name="soft" weight="0.0612244173262" />
+ <shade name="light" weight="0.0612244173262" />
+</color>
+
+<color name="green" weight="0.00819671304758">
+ <shade name="cool" weight="0.877549981676" />
+ <shade name="soft" weight="0.0612244173262" />
+ <shade name="light" weight="0.0612244173262" />
+</color>
+
+</colors>

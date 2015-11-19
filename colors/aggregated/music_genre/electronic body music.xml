@@ -1,0 +1,33 @@
+<colors query="electronic body music">
+
+<color name="blue" weight="0.454545">
+ <shade name="dark" weight="0.987636361435" />
+ <shade name="hard" weight="0.00686812490566" />
+ <shade name="soft" weight="0.00549449992453" />
+</color>
+
+<color name="red" weight="0.363636">
+ <shade name="dark" weight="0.987636361435" />
+ <shade name="hard" weight="0.00686812490566" />
+ <shade name="warm" weight="0.00549449992453" />
+</color>
+
+<color name="black" weight="0.181818">
+ <shade name="dark" weight="0.987636361435" />
+ <shade name="hard" weight="0.00686812490566" />
+ <shade name="warm" weight="0.00549449992453" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="dark" weight="0.987636361435" />
+ <shade name="hard" weight="0.00686812490566" />
+ <shade name="warm" weight="0.00549449992453" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="dark" weight="0.987636361435" />
+ <shade name="hard" weight="0.00686812490566" />
+ <shade name="warm" weight="0.00549449992453" />
+</color>
+
+</colors>

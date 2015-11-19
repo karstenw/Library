@@ -1,0 +1,33 @@
+<colors query="ted williams">
+
+<color name="black" weight="0.452423236214">
+ <shade name="cool" weight="0.499999300001" />
+ <shade name="hard" weight="0.299999580001" />
+ <shade name="light" weight="0.19999972" />
+</color>
+
+<color name="white" weight="0.364452051395">
+ <shade name="cool" weight="0.499999300001" />
+ <shade name="hard" weight="0.299999580001" />
+ <shade name="light" weight="0.19999972" />
+</color>
+
+<color name="red" weight="0.111310478751">
+ <shade name="cool" weight="0.499999300001" />
+ <shade name="hard" weight="0.299999580001" />
+ <shade name="light" weight="0.19999972" />
+</color>
+
+<color name="blue" weight="0.0430879272585">
+ <shade name="cool" weight="0.499999300001" />
+ <shade name="hard" weight="0.299999580001" />
+ <shade name="light" weight="0.19999972" />
+</color>
+
+<color name="green" weight="0.028725284839">
+ <shade name="cool" weight="0.499999300001" />
+ <shade name="hard" weight="0.299999580001" />
+ <shade name="light" weight="0.19999972" />
+</color>
+
+</colors>

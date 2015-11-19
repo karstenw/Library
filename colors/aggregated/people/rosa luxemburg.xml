@@ -1,0 +1,33 @@
+<colors query="rosa luxemburg">
+
+<color name="red" weight="0.968749031251">
+ <shade name="weak" weight="0.4999995" />
+ <shade name="intense" weight="0.4999995" />
+ <shade name="warm" weight="0.0" />
+</color>
+
+<color name="green" weight="0.015624984375">
+ <shade name="weak" weight="0.4999995" />
+ <shade name="intense" weight="0.4999995" />
+ <shade name="soft" weight="0.0" />
+</color>
+
+<color name="white" weight="0.01041665625">
+ <shade name="weak" weight="0.999998000004" />
+ <shade name="warm" weight="0.0" />
+ <shade name="soft" weight="0.0" />
+</color>
+
+<color name="pink" weight="0.00520832812501">
+ <shade name="weak" weight="0.999998000004" />
+ <shade name="warm" weight="0.0" />
+ <shade name="soft" weight="0.0" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="weak" weight="0.4999995" />
+ <shade name="intense" weight="0.4999995" />
+ <shade name="warm" weight="0.0" />
+</color>
+
+</colors>

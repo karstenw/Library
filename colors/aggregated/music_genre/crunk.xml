@@ -1,0 +1,33 @@
+<colors query="crunk">
+
+<color name="white" weight="0.605419993843">
+ <shade name="cool" weight="0.473933091051" />
+ <shade name="fresh" weight="0.290994917906" />
+ <shade name="hard" weight="0.235070813161" />
+</color>
+
+<color name="black" weight="0.280886718074">
+ <shade name="cool" weight="0.473933091051" />
+ <shade name="fresh" weight="0.290994917906" />
+ <shade name="hard" weight="0.235070813161" />
+</color>
+
+<color name="orange" weight="0.0661738132805">
+ <shade name="cool" weight="0.473933091051" />
+ <shade name="fresh" weight="0.290994917906" />
+ <shade name="hard" weight="0.235070813161" />
+</color>
+
+<color name="purple" weight="0.0239352090589">
+ <shade name="cool" weight="0.473933091051" />
+ <shade name="fresh" weight="0.290994917906" />
+ <shade name="hard" weight="0.235070813161" />
+</color>
+
+<color name="pink" weight="0.0235832206904">
+ <shade name="cool" weight="0.473933091051" />
+ <shade name="fresh" weight="0.290994917906" />
+ <shade name="hard" weight="0.235070813161" />
+</color>
+
+</colors>

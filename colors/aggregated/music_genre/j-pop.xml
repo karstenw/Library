@@ -1,0 +1,33 @@
+<colors query="j-pop">
+
+<color name="black" weight="0.334953722389">
+ <shade name="cool" weight="0.970872808535" />
+ <shade name="light" weight="0.0179435238541" />
+ <shade name="hard" weight="0.0111826604019" />
+</color>
+
+<color name="blue" weight="0.223662646885">
+ <shade name="cool" weight="0.970872808535" />
+ <shade name="light" weight="0.0179435238541" />
+ <shade name="hard" weight="0.0111826604019" />
+</color>
+
+<color name="pink" weight="0.166936613255">
+ <shade name="cool" weight="0.970872808535" />
+ <shade name="light" weight="0.0179435238541" />
+ <shade name="hard" weight="0.0111826604019" />
+</color>
+
+<color name="white" weight="0.150188927136">
+ <shade name="cool" weight="0.970872808535" />
+ <shade name="light" weight="0.0179435238541" />
+ <shade name="hard" weight="0.0111826604019" />
+</color>
+
+<color name="green" weight="0.124257026047">
+ <shade name="cool" weight="0.970872808535" />
+ <shade name="light" weight="0.0179435238541" />
+ <shade name="hard" weight="0.0111826604019" />
+</color>
+
+</colors>

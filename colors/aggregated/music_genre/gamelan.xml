@@ -1,0 +1,33 @@
+<colors query="gamelan">
+
+<color name="blue" weight="0.333333">
+ <shade name="soft" weight="0.656804014741" />
+ <shade name="cool" weight="0.21893467158" />
+ <shade name="light" weight="0.124260219005" />
+</color>
+
+<color name="white" weight="0.296296">
+ <shade name="soft" weight="0.656804014741" />
+ <shade name="cool" weight="0.21893467158" />
+ <shade name="light" weight="0.124260219005" />
+</color>
+
+<color name="green" weight="0.148148">
+ <shade name="soft" weight="0.656804014741" />
+ <shade name="cool" weight="0.21893467158" />
+ <shade name="light" weight="0.124260219005" />
+</color>
+
+<color name="black" weight="0.148148">
+ <shade name="soft" weight="0.656804014741" />
+ <shade name="cool" weight="0.21893467158" />
+ <shade name="light" weight="0.124260219005" />
+</color>
+
+<color name="red" weight="0.0740740000001">
+ <shade name="soft" weight="0.656804014741" />
+ <shade name="cool" weight="0.21893467158" />
+ <shade name="light" weight="0.124260219005" />
+</color>
+
+</colors>

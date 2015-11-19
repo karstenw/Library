@@ -1,0 +1,33 @@
+<colors query="south australia">
+
+<color name="white" weight="0.46955478729">
+ <shade name="light" weight="0.937703971105" />
+ <shade name="bright" weight="0.0590163338458" />
+ <shade name="dark" weight="0.00327868521366" />
+</color>
+
+<color name="red" weight="0.225233597155">
+ <shade name="light" weight="0.937703971105" />
+ <shade name="bright" weight="0.0590163338458" />
+ <shade name="dark" weight="0.00327868521366" />
+</color>
+
+<color name="black" weight="0.154609503132">
+ <shade name="light" weight="0.937703971105" />
+ <shade name="bright" weight="0.0590163338458" />
+ <shade name="dark" weight="0.00327868521366" />
+</color>
+
+<color name="blue" weight="0.0839854091087">
+ <shade name="light" weight="0.937703971105" />
+ <shade name="bright" weight="0.0590163338458" />
+ <shade name="dark" weight="0.00327868521366" />
+</color>
+
+<color name="green" weight="0.0666156994976">
+ <shade name="light" weight="0.937703971105" />
+ <shade name="bright" weight="0.0590163338458" />
+ <shade name="dark" weight="0.00327868521366" />
+</color>
+
+</colors>

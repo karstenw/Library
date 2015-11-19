@@ -1,0 +1,33 @@
+<colors query="martin luther king">
+
+<color name="black" weight="0.51627332189">
+ <shade name="light" weight="0.614886094901" />
+ <shade name="cool" weight="0.341192434614" />
+ <shade name="dark" weight="0.04392043535" />
+</color>
+
+<color name="white" weight="0.36756415852">
+ <shade name="light" weight="0.614886094901" />
+ <shade name="cool" weight="0.341192434614" />
+ <shade name="dark" weight="0.04392043535" />
+</color>
+
+<color name="green" weight="0.0521884988432">
+ <shade name="light" weight="0.614886094901" />
+ <shade name="cool" weight="0.341192434614" />
+ <shade name="dark" weight="0.04392043535" />
+</color>
+
+<color name="orange" weight="0.0339505825808">
+ <shade name="light" weight="0.614886094901" />
+ <shade name="cool" weight="0.341192434614" />
+ <shade name="dark" weight="0.04392043535" />
+</color>
+
+<color name="blue" weight="0.0300224160012">
+ <shade name="light" weight="0.614886094901" />
+ <shade name="cool" weight="0.341192434614" />
+ <shade name="dark" weight="0.04392043535" />
+</color>
+
+</colors>

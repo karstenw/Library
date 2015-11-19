@@ -1,0 +1,33 @@
+<colors query="alternative punk">
+
+<color name="black" weight="0.545453950414">
+ <shade name="hard" weight="0.71812007279" />
+ <shade name="cool" weight="0.270133952615" />
+ <shade name="dark" weight="0.0117449544615" />
+</color>
+
+<color name="red" weight="0.181817983471">
+ <shade name="hard" weight="0.71812007279" />
+ <shade name="cool" weight="0.270133952615" />
+ <shade name="dark" weight="0.0117449544615" />
+</color>
+
+<color name="white" weight="0.0909089917356">
+ <shade name="hard" weight="0.71812007279" />
+ <shade name="cool" weight="0.270133952615" />
+ <shade name="dark" weight="0.0117449544615" />
+</color>
+
+<color name="pink" weight="0.0909089917356">
+ <shade name="hard" weight="0.71812007279" />
+ <shade name="cool" weight="0.270133952615" />
+ <shade name="dark" weight="0.0117449544615" />
+</color>
+
+<color name="orange" weight="0.0909089917356">
+ <shade name="hard" weight="0.71812007279" />
+ <shade name="cool" weight="0.270133952615" />
+ <shade name="dark" weight="0.0117449544615" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="khaleeji">
+
+<color name="black" weight="0.749999250001">
+ <shade name="soft" weight="0.333332888889" />
+ <shade name="fresh" weight="0.333332888889" />
+ <shade name="dark" weight="0.333332888889" />
+</color>
+
+<color name="red" weight="0.124999875">
+ <shade name="soft" weight="0.333332888889" />
+ <shade name="fresh" weight="0.333332888889" />
+ <shade name="dark" weight="0.333332888889" />
+</color>
+
+<color name="blue" weight="0.124999875">
+ <shade name="soft" weight="0.333332888889" />
+ <shade name="fresh" weight="0.333332888889" />
+ <shade name="dark" weight="0.333332888889" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="soft" weight="0.333332888889" />
+ <shade name="fresh" weight="0.333332888889" />
+ <shade name="dark" weight="0.333332888889" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="soft" weight="0.333332888889" />
+ <shade name="fresh" weight="0.333332888889" />
+ <shade name="dark" weight="0.333332888889" />
+</color>
+
+</colors>

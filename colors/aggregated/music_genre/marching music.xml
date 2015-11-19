@@ -1,0 +1,33 @@
+<colors query="marching music">
+
+<color name="green" weight="0.636363000001">
+ <shade name="cool" weight="0.499999208335" />
+ <shade name="soft" weight="0.249999604167" />
+ <shade name="light" weight="0.249999604167" />
+</color>
+
+<color name="white" weight="0.181818">
+ <shade name="cool" weight="0.499999208335" />
+ <shade name="soft" weight="0.249999604167" />
+ <shade name="light" weight="0.249999604167" />
+</color>
+
+<color name="purple" weight="0.0909090000001">
+ <shade name="cool" weight="0.499999208335" />
+ <shade name="soft" weight="0.249999604167" />
+ <shade name="light" weight="0.249999604167" />
+</color>
+
+<color name="orange" weight="0.0909090000001">
+ <shade name="cool" weight="0.499999208335" />
+ <shade name="soft" weight="0.249999604167" />
+ <shade name="light" weight="0.249999604167" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="cool" weight="0.499999208335" />
+ <shade name="soft" weight="0.249999604167" />
+ <shade name="light" weight="0.249999604167" />
+</color>
+
+</colors>

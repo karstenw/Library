@@ -1,0 +1,33 @@
+<colors query="hymn">
+
+<color name="blue" weight="0.358072526307">
+ <shade name="dark" weight="0.458243398962" />
+ <shade name="light" weight="0.296787547178" />
+ <shade name="soft" weight="0.244967499258" />
+</color>
+
+<color name="red" weight="0.19889301234">
+ <shade name="dark" weight="0.458243398962" />
+ <shade name="light" weight="0.296787547178" />
+ <shade name="soft" weight="0.244967499258" />
+</color>
+
+<color name="green" weight="0.164713362101">
+ <shade name="dark" weight="0.458243398962" />
+ <shade name="light" weight="0.296787547178" />
+ <shade name="soft" weight="0.244967499258" />
+</color>
+
+<color name="white" weight="0.149088379135">
+ <shade name="dark" weight="0.458243398962" />
+ <shade name="light" weight="0.296787547178" />
+ <shade name="soft" weight="0.244967499258" />
+</color>
+
+<color name="black" weight="0.129231629949">
+ <shade name="dark" weight="0.458243398962" />
+ <shade name="light" weight="0.296787547178" />
+ <shade name="soft" weight="0.244967499258" />
+</color>
+
+</colors>

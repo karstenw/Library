@@ -1,0 +1,33 @@
+<colors query="improvisation">
+
+<color name="blue" weight="0.405492295239">
+ <shade name="intense" weight="0.57103936537" />
+ <shade name="cool" weight="0.296056718594" />
+ <shade name="dark" weight="0.132902614202" />
+</color>
+
+<color name="green" weight="0.374797659345">
+ <shade name="intense" weight="0.57103936537" />
+ <shade name="cool" weight="0.296056718594" />
+ <shade name="dark" weight="0.132902614202" />
+</color>
+
+<color name="black" weight="0.0969304291409">
+ <shade name="intense" weight="0.57103936537" />
+ <shade name="cool" weight="0.296056718594" />
+ <shade name="dark" weight="0.132902614202" />
+</color>
+
+<color name="purple" weight="0.0823908647697">
+ <shade name="cool" weight="0.593727147938" />
+ <shade name="dark" weight="0.266529638167" />
+ <shade name="fresh" weight="0.139740603131" />
+</color>
+
+<color name="red" weight="0.0403876788087">
+ <shade name="intense" weight="0.57103936537" />
+ <shade name="cool" weight="0.296056718594" />
+ <shade name="dark" weight="0.132902614202" />
+</color>
+
+</colors>

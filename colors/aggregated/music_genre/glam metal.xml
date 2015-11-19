@@ -1,0 +1,33 @@
+<colors query="glam metal">
+
+<color name="black" weight="0.827585365042">
+ <shade name="hard" weight="0.930441701434" />
+ <shade name="dark" weight="0.0605238776661" />
+ <shade name="cool" weight="0.00903341457703" />
+</color>
+
+<color name="white" weight="0.10344817063">
+ <shade name="hard" weight="0.930441701434" />
+ <shade name="dark" weight="0.0605238776661" />
+ <shade name="cool" weight="0.00903341457703" />
+</color>
+
+<color name="pink" weight="0.0344827235434">
+ <shade name="hard" weight="0.930441701434" />
+ <shade name="dark" weight="0.0605238776661" />
+ <shade name="cool" weight="0.00903341457703" />
+</color>
+
+<color name="red" weight="0.0172413617717">
+ <shade name="hard" weight="0.930441701434" />
+ <shade name="dark" weight="0.0605238776661" />
+ <shade name="cool" weight="0.00903341457703" />
+</color>
+
+<color name="green" weight="0.0172413617717">
+ <shade name="hard" weight="0.930441701434" />
+ <shade name="dark" weight="0.0605238776661" />
+ <shade name="cool" weight="0.00903341457703" />
+</color>
+
+</colors>

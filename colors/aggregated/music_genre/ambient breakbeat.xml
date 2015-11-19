@@ -1,0 +1,33 @@
+<colors query="ambient breakbeat">
+
+<color name="yellow" weight="0.0">
+ <shade name="dark" weight="0.999926541556" />
+ <shade name="soft" weight="7.24584450403e-05" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="dark" weight="0.999926541556" />
+ <shade name="soft" weight="7.24584450403e-05" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="dark" weight="0.999926541556" />
+ <shade name="soft" weight="7.24584450403e-05" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="dark" weight="0.999926541556" />
+ <shade name="soft" weight="7.24584450403e-05" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="pink" weight="0.0">
+ <shade name="dark" weight="0.999926541556" />
+ <shade name="soft" weight="7.24584450403e-05" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+</colors>

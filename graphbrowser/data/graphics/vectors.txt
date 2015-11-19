@@ -1,0 +1,15 @@
+2, geometric form, abstraction
+3, rectangle, geometric form
+3, circle, geometric form
+3, oval, geometric form
+3, line, geometric form
+3, star, geometric form
+6, drawing primitive, geometric form
+4, Adobe Illustrator, vector-based drawing
+3, PDF, vector graphics format
+3, EPS, vector graphics format
+3, SVG, vector graphics format
+3, document, vector graphics format
+6, BŽzier curve, vector-based drawing
+7, vector-based drawing, computer graphics
+2, BŽzier curve, curve

@@ -1,0 +1,33 @@
+<colors query="mary stewart">
+
+<color name="white" weight="0.947915718751">
+ <shade name="hard" weight="0.399999520001" />
+ <shade name="dark" weight="0.399999520001" />
+ <shade name="light" weight="0.19999976" />
+</color>
+
+<color name="green" weight="0.041666625">
+ <shade name="hard" weight="0.399999520001" />
+ <shade name="dark" weight="0.399999520001" />
+ <shade name="light" weight="0.19999976" />
+</color>
+
+<color name="black" weight="0.01041665625">
+ <shade name="hard" weight="0.399999520001" />
+ <shade name="dark" weight="0.399999520001" />
+ <shade name="light" weight="0.19999976" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="hard" weight="0.399999520001" />
+ <shade name="dark" weight="0.399999520001" />
+ <shade name="light" weight="0.19999976" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="hard" weight="0.399999520001" />
+ <shade name="dark" weight="0.399999520001" />
+ <shade name="light" weight="0.19999976" />
+</color>
+
+</colors>

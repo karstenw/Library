@@ -1,0 +1,33 @@
+<colors query="thailand">
+
+<color name="orange" weight="0.388380797206">
+ <shade name="cool" weight="0.516343954432" />
+ <shade name="soft" weight="0.341752833149" />
+ <shade name="light" weight="0.141901719851" />
+</color>
+
+<color name="yellow" weight="0.378589684671">
+ <shade name="cool" weight="0.516343954432" />
+ <shade name="soft" weight="0.341752833149" />
+ <shade name="light" weight="0.141901719851" />
+</color>
+
+<color name="green" weight="0.194190398603">
+ <shade name="cool" weight="0.516343954432" />
+ <shade name="soft" weight="0.341752833149" />
+ <shade name="light" weight="0.141901719851" />
+</color>
+
+<color name="blue" weight="0.0224379662251">
+ <shade name="cool" weight="0.516343954432" />
+ <shade name="soft" weight="0.341752833149" />
+ <shade name="light" weight="0.141901719851" />
+</color>
+
+<color name="white" weight="0.0164001134954">
+ <shade name="cool" weight="0.516343954432" />
+ <shade name="soft" weight="0.341752833149" />
+ <shade name="light" weight="0.141901719851" />
+</color>
+
+</colors>

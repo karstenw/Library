@@ -1,0 +1,33 @@
+<colors query="andrew young">
+
+<color name="white" weight="0.88461448866">
+ <shade name="light" weight="0.954544500001" />
+ <shade name="hard" weight="0.0454545" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="black" weight="0.0576922492604">
+ <shade name="light" weight="0.954544500001" />
+ <shade name="hard" weight="0.0454545" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="cyan" weight="0.0320512495891">
+ <shade name="light" weight="0.954544500001" />
+ <shade name="hard" weight="0.0454545" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="red" weight="0.0128204998356">
+ <shade name="light" weight="0.954544500001" />
+ <shade name="hard" weight="0.0454545" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="orange" weight="0.0128204998356">
+ <shade name="light" weight="0.954544500001" />
+ <shade name="hard" weight="0.0454545" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+</colors>

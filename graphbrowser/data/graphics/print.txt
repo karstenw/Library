@@ -1,0 +1,53 @@
+5, document, paper
+1, document, 300dpi
+1, document, CMYK
+3, CMYK, color model
+1, paper format, paper
+1, width, paper format
+1, height, paper format
+3, paper, medium
+3, A0, paper format
+3, A1, paper format
+3, A2, paper format
+3, A3, paper format
+3, A4, paper format
+3, A5, paper format
+3, B2, paper format
+3, B1, paper format
+6, poster, A2
+6, poster, A1
+6, poster, B2
+6, poster, B1
+1, A1, 60x84cm
+1, A0, 120x84cm
+1, cm, width
+1, cm, height
+1, B1, 70x100cm
+1, B2, 60x80cm
+1, B2, 50x70cm
+1, B3, 35x50cm
+1, A2, 42x60cm
+2, mm, cm
+1, A3, 42x30cm
+6, postcard, A5
+3, hypernym, abstraction
+6, concept, abstraction
+6, A4, book
+2, page, book
+1, layout, page
+1, layout, document
+2, logo, layout
+3, grid, layout
+3, template, layout
+6, composition, layout
+6, layout, composition
+1, 300dpi, image
+1, CMYK, image
+3, HSB, color model
+3, RGB, color model
+2, layout, graphic design
+6, flyer, A5
+6, paper, magazine
+6, paper, book
+2, page, magazine
+5, page, paper

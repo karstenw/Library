@@ -1,0 +1,33 @@
+<colors query="tuva">
+
+<color name="red" weight="0.482352453149">
+ <shade name="cool" weight="0.615384000001" />
+ <shade name="light" weight="0.230769" />
+ <shade name="soft" weight="0.153846" />
+</color>
+
+<color name="white" weight="0.341176125398">
+ <shade name="cool" weight="0.615384000001" />
+ <shade name="light" weight="0.230769" />
+ <shade name="soft" weight="0.153846" />
+</color>
+
+<color name="blue" weight="0.105882245813">
+ <shade name="cool" weight="0.615384000001" />
+ <shade name="light" weight="0.230769" />
+ <shade name="soft" weight="0.153846" />
+</color>
+
+<color name="pink" weight="0.0588234698963">
+ <shade name="cool" weight="0.615384000001" />
+ <shade name="light" weight="0.230769" />
+ <shade name="soft" weight="0.153846" />
+</color>
+
+<color name="yellow" weight="0.0117646939793">
+ <shade name="cool" weight="0.615384000001" />
+ <shade name="light" weight="0.230769" />
+ <shade name="soft" weight="0.153846" />
+</color>
+
+</colors>

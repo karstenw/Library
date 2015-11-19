@@ -1,0 +1,33 @@
+<colors query="duke ellington">
+
+<color name="blue" weight="0.598073398185">
+ <shade name="light" weight="0.951334148496" />
+ <shade name="cool" weight="0.0439255135393" />
+ <shade name="dark" weight="0.00473933172398" />
+</color>
+
+<color name="black" weight="0.182209649701">
+ <shade name="light" weight="0.951334148496" />
+ <shade name="cool" weight="0.0439255135393" />
+ <shade name="dark" weight="0.00473933172398" />
+</color>
+
+<color name="green" weight="0.169792024061">
+ <shade name="light" weight="0.951334148496" />
+ <shade name="cool" weight="0.0439255135393" />
+ <shade name="dark" weight="0.00473933172398" />
+</color>
+
+<color name="purple" weight="0.0397870862352">
+ <shade name="light" weight="0.951334148496" />
+ <shade name="cool" weight="0.0439255135393" />
+ <shade name="dark" weight="0.00473933172398" />
+</color>
+
+<color name="white" weight="0.0101368372574">
+ <shade name="light" weight="0.951334148496" />
+ <shade name="cool" weight="0.0439255135393" />
+ <shade name="dark" weight="0.00473933172398" />
+</color>
+
+</colors>

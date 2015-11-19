@@ -1,0 +1,33 @@
+<colors query="parang">
+
+<color name="red" weight="0.587972625077">
+ <shade name="cool" weight="0.73417626169" />
+ <shade name="fresh" weight="0.139240325493" />
+ <shade name="light" weight="0.126582114084" />
+</color>
+
+<color name="black" weight="0.145879571752">
+ <shade name="cool" weight="0.73417626169" />
+ <shade name="fresh" weight="0.139240325493" />
+ <shade name="light" weight="0.126582114084" />
+</color>
+
+<color name="blue" weight="0.105790529133">
+ <shade name="cool" weight="0.73417626169" />
+ <shade name="fresh" weight="0.139240325493" />
+ <shade name="light" weight="0.126582114084" />
+</color>
+
+<color name="pink" weight="0.0824052542722">
+ <shade name="cool" weight="0.73417626169" />
+ <shade name="fresh" weight="0.139240325493" />
+ <shade name="light" weight="0.126582114084" />
+</color>
+
+<color name="green" weight="0.0779509162034">
+ <shade name="cool" weight="0.73417626169" />
+ <shade name="fresh" weight="0.139240325493" />
+ <shade name="light" weight="0.126582114084" />
+</color>
+
+</colors>

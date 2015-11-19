@@ -1,0 +1,33 @@
+<colors query="europop">
+
+<color name="blue" weight="0.867923660378">
+ <shade name="light" weight="0.642307010474" />
+ <shade name="cool" weight="0.257692034142" />
+ <shade name="soft" weight="0.0999998938463" />
+</color>
+
+<color name="white" weight="0.0566037169812">
+ <shade name="light" weight="0.642307010474" />
+ <shade name="cool" weight="0.257692034142" />
+ <shade name="soft" weight="0.0999998938463" />
+</color>
+
+<color name="red" weight="0.0566037169812">
+ <shade name="light" weight="0.642307010474" />
+ <shade name="cool" weight="0.257692034142" />
+ <shade name="soft" weight="0.0999998938463" />
+</color>
+
+<color name="green" weight="0.0188679056604">
+ <shade name="light" weight="0.642307010474" />
+ <shade name="cool" weight="0.257692034142" />
+ <shade name="soft" weight="0.0999998938463" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="light" weight="0.642307010474" />
+ <shade name="cool" weight="0.257692034142" />
+ <shade name="soft" weight="0.0999998938463" />
+</color>
+
+</colors>

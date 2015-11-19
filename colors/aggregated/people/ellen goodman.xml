@@ -1,0 +1,33 @@
+<colors query="ellen goodman">
+
+<color name="black" weight="0.999999000001">
+ <shade name="weak" weight="0.333333" />
+ <shade name="light" weight="0.333333" />
+ <shade name="hard" weight="0.333333" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="weak" weight="0.333333" />
+ <shade name="light" weight="0.333333" />
+ <shade name="hard" weight="0.333333" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="weak" weight="0.333333" />
+ <shade name="light" weight="0.333333" />
+ <shade name="hard" weight="0.333333" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="weak" weight="0.333333" />
+ <shade name="light" weight="0.333333" />
+ <shade name="hard" weight="0.333333" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="weak" weight="0.333333" />
+ <shade name="light" weight="0.333333" />
+ <shade name="hard" weight="0.333333" />
+</color>
+
+</colors>

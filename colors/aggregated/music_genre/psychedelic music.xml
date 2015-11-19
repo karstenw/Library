@@ -1,0 +1,33 @@
+<colors query="psychedelic music">
+
+<color name="blue" weight="0.806450806452">
+ <shade name="dark" weight="0.900194786594" />
+ <shade name="cool" weight="0.0963795505212" />
+ <shade name="intense" weight="0.00342465407943" />
+</color>
+
+<color name="black" weight="0.129032129032">
+ <shade name="dark" weight="0.900194786594" />
+ <shade name="cool" weight="0.0963795505212" />
+ <shade name="intense" weight="0.00342465407943" />
+</color>
+
+<color name="white" weight="0.0322580322581">
+ <shade name="dark" weight="0.900194786594" />
+ <shade name="cool" weight="0.0963795505212" />
+ <shade name="hard" weight="0.00342465407943" />
+</color>
+
+<color name="pink" weight="0.0322580322581">
+ <shade name="dark" weight="0.900194786594" />
+ <shade name="cool" weight="0.0963795505212" />
+ <shade name="hard" weight="0.00342465407943" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="dark" weight="0.900194786594" />
+ <shade name="cool" weight="0.0963795505212" />
+ <shade name="intense" weight="0.00342465407943" />
+</color>
+
+</colors>

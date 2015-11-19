@@ -1,0 +1,33 @@
+<colors query="new caledonia">
+
+<color name="black" weight="0.99504734214">
+ <shade name="light" weight="0.43749926172" />
+ <shade name="fresh" weight="0.312499472657" />
+ <shade name="warm" weight="0.249999578126" />
+</color>
+
+<color name="white" weight="0.00235793209038">
+ <shade name="light" weight="0.43749926172" />
+ <shade name="fresh" weight="0.312499472657" />
+ <shade name="warm" weight="0.249999578126" />
+</color>
+
+<color name="green" weight="0.00165055246326">
+ <shade name="light" weight="0.43749926172" />
+ <shade name="fresh" weight="0.312499472657" />
+ <shade name="cool" weight="0.249999578126" />
+</color>
+
+<color name="red" weight="0.000707379627113">
+ <shade name="light" weight="0.43749926172" />
+ <shade name="fresh" weight="0.312499472657" />
+ <shade name="warm" weight="0.249999578126" />
+</color>
+
+<color name="yellow" weight="0.000235793209038">
+ <shade name="light" weight="0.43749926172" />
+ <shade name="fresh" weight="0.312499472657" />
+ <shade name="warm" weight="0.249999578126" />
+</color>
+
+</colors>

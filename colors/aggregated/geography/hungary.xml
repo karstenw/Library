@@ -1,0 +1,33 @@
+<colors query="hungary">
+
+<color name="red" weight="0.384431269956">
+ <shade name="hard" weight="0.516309705603" />
+ <shade name="neutral" weight="0.346456185895" />
+ <shade name="cool" weight="0.137232645062" />
+</color>
+
+<color name="white" weight="0.208930038019">
+ <shade name="hard" weight="0.516309705603" />
+ <shade name="neutral" weight="0.346456185895" />
+ <shade name="cool" weight="0.137232645062" />
+</color>
+
+<color name="black" weight="0.167860361974">
+ <shade name="hard" weight="0.516309705603" />
+ <shade name="neutral" weight="0.346456185895" />
+ <shade name="cool" weight="0.137232645062" />
+</color>
+
+<color name="blue" weight="0.132043784028">
+ <shade name="hard" weight="0.516309705603" />
+ <shade name="neutral" weight="0.346456185895" />
+ <shade name="cool" weight="0.137232645062" />
+</color>
+
+<color name="green" weight="0.10673340228">
+ <shade name="hard" weight="0.516309705603" />
+ <shade name="neutral" weight="0.346456185895" />
+ <shade name="cool" weight="0.137232645062" />
+</color>
+
+</colors>

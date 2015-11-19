@@ -1,0 +1,33 @@
+<colors query="charles dickens">
+
+<color name="white" weight="0.613496304717">
+ <shade name="hard" weight="0.640287051189" />
+ <shade name="light" weight="0.294963697739" />
+ <shade name="cool" weight="0.0647481287719" />
+</color>
+
+<color name="green" weight="0.317791085843">
+ <shade name="hard" weight="0.640287051189" />
+ <shade name="light" weight="0.294963697739" />
+ <shade name="cool" weight="0.0647481287719" />
+</color>
+
+<color name="blue" weight="0.0515336895962">
+ <shade name="hard" weight="0.640287051189" />
+ <shade name="light" weight="0.294963697739" />
+ <shade name="cool" weight="0.0647481287719" />
+</color>
+
+<color name="red" weight="0.00858894826603">
+ <shade name="hard" weight="0.640287051189" />
+ <shade name="light" weight="0.294963697739" />
+ <shade name="cool" weight="0.0647481287719" />
+</color>
+
+<color name="black" weight="0.00858894826603">
+ <shade name="hard" weight="0.640287051189" />
+ <shade name="light" weight="0.294963697739" />
+ <shade name="cool" weight="0.0647481287719" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="audre lorde">
+
+<color name="white" weight="0.3599996256">
+ <shade name="light" weight="0.954544500001" />
+ <shade name="weak" weight="0.02272725" />
+ <shade name="cool" weight="0.02272725" />
+</color>
+
+<color name="black" weight="0.3599996256">
+ <shade name="light" weight="0.954544500001" />
+ <shade name="weak" weight="0.02272725" />
+ <shade name="cool" weight="0.02272725" />
+</color>
+
+<color name="purple" weight="0.199999792">
+ <shade name="light" weight="0.954544500001" />
+ <shade name="weak" weight="0.02272725" />
+ <shade name="cool" weight="0.02272725" />
+</color>
+
+<color name="red" weight="0.0399999584">
+ <shade name="light" weight="0.954544500001" />
+ <shade name="weak" weight="0.02272725" />
+ <shade name="cool" weight="0.02272725" />
+</color>
+
+<color name="pink" weight="0.0399999584">
+ <shade name="light" weight="0.954544500001" />
+ <shade name="weak" weight="0.02272725" />
+ <shade name="cool" weight="0.02272725" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="elevator">
+
+<color name="red" weight="0.31312181306">
+ <shade name="cool" weight="0.485943114491" />
+ <shade name="dark" weight="0.313252586201" />
+ <shade name="light" weight="0.200802939872" />
+</color>
+
+<color name="black" weight="0.28054266488">
+ <shade name="cool" weight="0.485943114491" />
+ <shade name="dark" weight="0.313252586201" />
+ <shade name="light" weight="0.200802939872" />
+</color>
+
+<color name="blue" weight="0.142081285117">
+ <shade name="cool" weight="0.485943114491" />
+ <shade name="dark" weight="0.313252586201" />
+ <shade name="light" weight="0.200802939872" />
+</color>
+
+<color name="yellow" weight="0.132126545395">
+ <shade name="cool" weight="0.485943114491" />
+ <shade name="dark" weight="0.313252586201" />
+ <shade name="light" weight="0.200802939872" />
+</color>
+
+<color name="white" weight="0.132126545395">
+ <shade name="cool" weight="0.485943114491" />
+ <shade name="dark" weight="0.313252586201" />
+ <shade name="light" weight="0.200802939872" />
+</color>
+
+</colors>

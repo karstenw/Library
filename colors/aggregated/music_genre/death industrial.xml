@@ -1,0 +1,33 @@
+<colors query="death industrial">
+
+<color name="black" weight="0.99977021963">
+ <shade name="dark" weight="0.992659555978" />
+ <shade name="intense" weight="0.00550458164128" />
+ <shade name="hard" weight="0.00183486054709" />
+</color>
+
+<color name="purple" weight="0.000228780370625">
+ <shade name="dark" weight="0.996315756927" />
+ <shade name="hard" weight="0.00184161877436" />
+ <shade name="cool" weight="0.00184161877436" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="dark" weight="0.992659555978" />
+ <shade name="intense" weight="0.00550458164128" />
+ <shade name="hard" weight="0.00183486054709" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="dark" weight="0.996315756927" />
+ <shade name="hard" weight="0.00184161877436" />
+ <shade name="cool" weight="0.00184161877436" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="dark" weight="0.992659555978" />
+ <shade name="intense" weight="0.00550458164128" />
+ <shade name="hard" weight="0.00183486054709" />
+</color>
+
+</colors>

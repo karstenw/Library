@@ -1,0 +1,33 @@
+<colors query="recife">
+
+<color name="blue" weight="0.95343041538">
+ <shade name="dark" weight="0.690475401361" />
+ <shade name="hard" weight="0.190475972789" />
+ <shade name="cool" weight="0.119047482993" />
+</color>
+
+<color name="red" weight="0.0252450726951">
+ <shade name="dark" weight="0.690475401361" />
+ <shade name="hard" weight="0.190475972789" />
+ <shade name="cool" weight="0.119047482993" />
+</color>
+
+<color name="black" weight="0.0100490095194">
+ <shade name="dark" weight="0.690475401361" />
+ <shade name="hard" weight="0.190475972789" />
+ <shade name="cool" weight="0.119047482993" />
+</color>
+
+<color name="white" weight="0.00980391172627">
+ <shade name="dark" weight="0.690475401361" />
+ <shade name="hard" weight="0.190475972789" />
+ <shade name="cool" weight="0.119047482993" />
+</color>
+
+<color name="purple" weight="0.00147058675894">
+ <shade name="dark" weight="0.690475401361" />
+ <shade name="hard" weight="0.190475972789" />
+ <shade name="cool" weight="0.119047482993" />
+</color>
+
+</colors>

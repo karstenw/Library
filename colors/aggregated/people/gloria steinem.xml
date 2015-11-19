@@ -1,0 +1,33 @@
+<colors query="gloria steinem">
+
+<color name="white" weight="0.716665914167">
+ <shade name="light" weight="0.333332972223" />
+ <shade name="cool" weight="0.333332972223" />
+ <shade name="bright" weight="0.333332972223" />
+</color>
+
+<color name="pink" weight="0.0999998950001">
+ <shade name="light" weight="0.333332972223" />
+ <shade name="cool" weight="0.333332972223" />
+ <shade name="bright" weight="0.333332972223" />
+</color>
+
+<color name="red" weight="0.0666665966667">
+ <shade name="light" weight="0.333332972223" />
+ <shade name="cool" weight="0.333332972223" />
+ <shade name="bright" weight="0.333332972223" />
+</color>
+
+<color name="purple" weight="0.0666665966667">
+ <shade name="light" weight="0.333332972223" />
+ <shade name="cool" weight="0.333332972223" />
+ <shade name="bright" weight="0.333332972223" />
+</color>
+
+<color name="green" weight="0.0499999475001">
+ <shade name="light" weight="0.333332972223" />
+ <shade name="cool" weight="0.333332972223" />
+ <shade name="bright" weight="0.333332972223" />
+</color>
+
+</colors>

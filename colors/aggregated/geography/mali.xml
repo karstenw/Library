@@ -1,0 +1,33 @@
+<colors query="mali">
+
+<color name="green" weight="0.491094995317">
+ <shade name="cool" weight="0.723789393037" />
+ <shade name="light" weight="0.167338494769" />
+ <shade name="soft" weight="0.108870827922" />
+</color>
+
+<color name="black" weight="0.19248045604">
+ <shade name="cool" weight="0.723789393037" />
+ <shade name="light" weight="0.167338494769" />
+ <shade name="soft" weight="0.108870827922" />
+</color>
+
+<color name="orange" weight="0.174311740096">
+ <shade name="cool" weight="0.723789393037" />
+ <shade name="light" weight="0.167338494769" />
+ <shade name="soft" weight="0.108870827922" />
+</color>
+
+<color name="red" weight="0.0730346403292">
+ <shade name="cool" weight="0.723789393037" />
+ <shade name="light" weight="0.167338494769" />
+ <shade name="soft" weight="0.108870827922" />
+</color>
+
+<color name="blue" weight="0.0690770982424">
+ <shade name="cool" weight="0.723789393037" />
+ <shade name="light" weight="0.167338494769" />
+ <shade name="soft" weight="0.108870827922" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="breakbeat">
+
+<color name="black" weight="0.604360760708">
+ <shade name="dark" weight="0.610464417155" />
+ <shade name="hard" weight="0.297092683016" />
+ <shade name="cool" weight="0.0924417545978" />
+</color>
+
+<color name="white" weight="0.168224129269">
+ <shade name="dark" weight="0.610464417155" />
+ <shade name="hard" weight="0.297092683016" />
+ <shade name="cool" weight="0.0924417545978" />
+</color>
+
+<color name="blue" weight="0.144859666871">
+ <shade name="dark" weight="0.610464417155" />
+ <shade name="hard" weight="0.297092683016" />
+ <shade name="cool" weight="0.0924417545978" />
+</color>
+
+<color name="red" weight="0.046728924797">
+ <shade name="dark" weight="0.610464417155" />
+ <shade name="hard" weight="0.297092683016" />
+ <shade name="cool" weight="0.0924417545978" />
+</color>
+
+<color name="green" weight="0.035825509011">
+ <shade name="dark" weight="0.610464417155" />
+ <shade name="hard" weight="0.297092683016" />
+ <shade name="cool" weight="0.0924417545978" />
+</color>
+
+</colors>

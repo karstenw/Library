@@ -1,0 +1,33 @@
+<colors query="senegal">
+
+<color name="black" weight="0.626674965202">
+ <shade name="cool" weight="0.648808681903" />
+ <shade name="dark" weight="0.23214255591" />
+ <shade name="hard" weight="0.119047464569" />
+</color>
+
+<color name="orange" weight="0.184651286538">
+ <shade name="cool" weight="0.648808681903" />
+ <shade name="dark" weight="0.23214255591" />
+ <shade name="hard" weight="0.119047464569" />
+</color>
+
+<color name="green" weight="0.125670113343">
+ <shade name="cool" weight="0.648808681903" />
+ <shade name="dark" weight="0.23214255591" />
+ <shade name="hard" weight="0.119047464569" />
+</color>
+
+<color name="red" weight="0.0449061205011">
+ <shade name="cool" weight="0.648808681903" />
+ <shade name="dark" weight="0.23214255591" />
+ <shade name="hard" weight="0.119047464569" />
+</color>
+
+<color name="white" weight="0.0180964963213">
+ <shade name="cool" weight="0.648808681903" />
+ <shade name="dark" weight="0.23214255591" />
+ <shade name="hard" weight="0.119047464569" />
+</color>
+
+</colors>

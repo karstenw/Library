@@ -1,0 +1,33 @@
+<colors query="psychobilly">
+
+<color name="pink" weight="0.449314603176">
+ <shade name="cool" weight="0.412915314725" />
+ <shade name="hard" weight="0.332680585323" />
+ <shade name="dark" weight="0.254402800541" />
+</color>
+
+<color name="red" weight="0.156164221835">
+ <shade name="cool" weight="0.412915314725" />
+ <shade name="hard" weight="0.332680585323" />
+ <shade name="dark" weight="0.254402800541" />
+</color>
+
+<color name="black" weight="0.156164221835">
+ <shade name="cool" weight="0.412915314725" />
+ <shade name="hard" weight="0.332680585323" />
+ <shade name="dark" weight="0.254402800541" />
+</color>
+
+<color name="white" weight="0.134246436315">
+ <shade name="cool" weight="0.412915314725" />
+ <shade name="hard" weight="0.332680585323" />
+ <shade name="dark" weight="0.254402800541" />
+</color>
+
+<color name="blue" weight="0.104109481224">
+ <shade name="cool" weight="0.412915314725" />
+ <shade name="hard" weight="0.332680585323" />
+ <shade name="dark" weight="0.254402800541" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="sunda">
+
+<color name="red" weight="0.608433119176">
+ <shade name="dark" weight="0.785123071513" />
+ <shade name="light" weight="0.181817974456" />
+ <shade name="hard" weight="0.0330578135374" />
+</color>
+
+<color name="black" weight="0.325300875599">
+ <shade name="dark" weight="0.785123071513" />
+ <shade name="light" weight="0.181817974456" />
+ <shade name="hard" weight="0.0330578135374" />
+</color>
+
+<color name="white" weight="0.0502007524073">
+ <shade name="dark" weight="0.785123071513" />
+ <shade name="light" weight="0.181817974456" />
+ <shade name="hard" weight="0.0330578135374" />
+</color>
+
+<color name="blue" weight="0.0100401504815">
+ <shade name="dark" weight="0.785123071513" />
+ <shade name="light" weight="0.181817974456" />
+ <shade name="hard" weight="0.0330578135374" />
+</color>
+
+<color name="pink" weight="0.00602409028887">
+ <shade name="dark" weight="0.785123071513" />
+ <shade name="light" weight="0.181817974456" />
+ <shade name="hard" weight="0.0330578135374" />
+</color>
+
+</colors>

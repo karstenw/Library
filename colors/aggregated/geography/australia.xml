@@ -1,0 +1,33 @@
+<colors query="australia">
+
+<color name="white" weight="0.654326722076">
+ <shade name="light" weight="0.61446894401" />
+ <shade name="hard" weight="0.206639959397" />
+ <shade name="cool" weight="0.178889749022" />
+</color>
+
+<color name="blue" weight="0.119655763121">
+ <shade name="light" weight="0.61446894401" />
+ <shade name="hard" weight="0.206639959397" />
+ <shade name="cool" weight="0.178889749022" />
+</color>
+
+<color name="black" weight="0.0938476573495">
+ <shade name="light" weight="0.61446894401" />
+ <shade name="hard" weight="0.206639959397" />
+ <shade name="cool" weight="0.178889749022" />
+</color>
+
+<color name="green" weight="0.0664754239559">
+ <shade name="light" weight="0.61446894401" />
+ <shade name="hard" weight="0.206639959397" />
+ <shade name="cool" weight="0.178889749022" />
+</color>
+
+<color name="red" weight="0.0656933601446">
+ <shade name="light" weight="0.61446894401" />
+ <shade name="hard" weight="0.206639959397" />
+ <shade name="cool" weight="0.178889749022" />
+</color>
+
+</colors>

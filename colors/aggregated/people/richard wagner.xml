@@ -1,0 +1,33 @@
+<colors query="richard wagner">
+
+<color name="red" weight="0.760415866646">
+ <shade name="light" weight="0.428570908164" />
+ <shade name="dark" weight="0.35714242347" />
+ <shade name="cool" weight="0.214285454082" />
+</color>
+
+<color name="purple" weight="0.0937499013673">
+ <shade name="light" weight="0.428570908164" />
+ <shade name="dark" weight="0.35714242347" />
+ <shade name="cool" weight="0.214285454082" />
+</color>
+
+<color name="white" weight="0.0520832785374">
+ <shade name="light" weight="0.428570908164" />
+ <shade name="dark" weight="0.35714242347" />
+ <shade name="cool" weight="0.214285454082" />
+</color>
+
+<color name="black" weight="0.0520832785374">
+ <shade name="light" weight="0.428570908164" />
+ <shade name="dark" weight="0.35714242347" />
+ <shade name="cool" weight="0.214285454082" />
+</color>
+
+<color name="orange" weight="0.0416666228299">
+ <shade name="light" weight="0.428570908164" />
+ <shade name="dark" weight="0.35714242347" />
+ <shade name="cool" weight="0.214285454082" />
+</color>
+
+</colors>

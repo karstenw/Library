@@ -1,0 +1,33 @@
+<colors query="loretta lynn">
+
+<color name="white" weight="0.573348573793">
+ <shade name="cool" weight="0.666665844445" />
+ <shade name="light" weight="0.166666461111" />
+ <shade name="hard" weight="0.166666461111" />
+</color>
+
+<color name="green" weight="0.342822905847">
+ <shade name="cool" weight="0.666665844445" />
+ <shade name="light" weight="0.166666461111" />
+ <shade name="hard" weight="0.166666461111" />
+</color>
+
+<color name="black" weight="0.06484770076">
+ <shade name="cool" weight="0.666665844445" />
+ <shade name="light" weight="0.166666461111" />
+ <shade name="hard" weight="0.166666461111" />
+</color>
+
+<color name="blue" weight="0.01621192519">
+ <shade name="cool" weight="0.666665844445" />
+ <shade name="light" weight="0.166666461111" />
+ <shade name="hard" weight="0.166666461111" />
+</color>
+
+<color name="pink" weight="0.00276788966658">
+ <shade name="cool" weight="0.666665844445" />
+ <shade name="light" weight="0.166666461111" />
+ <shade name="hard" weight="0.166666461111" />
+</color>
+
+</colors>

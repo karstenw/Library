@@ -1,0 +1,33 @@
+<colors query="walter cronkite">
+
+<color name="white" weight="0.78947288435">
+ <shade name="cool" weight="0.461537928995" />
+ <shade name="dark" weight="0.384614940829" />
+ <shade name="neutral" weight="0.153845976332" />
+</color>
+
+<color name="black" weight="0.0921051698408">
+ <shade name="cool" weight="0.461537928995" />
+ <shade name="dark" weight="0.384614940829" />
+ <shade name="neutral" weight="0.153845976332" />
+</color>
+
+<color name="green" weight="0.0657894070292">
+ <shade name="cool" weight="0.461537928995" />
+ <shade name="dark" weight="0.384614940829" />
+ <shade name="neutral" weight="0.153845976332" />
+</color>
+
+<color name="pink" weight="0.0394736442175">
+ <shade name="cool" weight="0.461537928995" />
+ <shade name="dark" weight="0.384614940829" />
+ <shade name="neutral" weight="0.153845976332" />
+</color>
+
+<color name="purple" weight="0.0131578814058">
+ <shade name="cool" weight="0.461537928995" />
+ <shade name="dark" weight="0.384614940829" />
+ <shade name="neutral" weight="0.153845976332" />
+</color>
+
+</colors>

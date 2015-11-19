@@ -1,0 +1,33 @@
+<colors query="nat king cole">
+
+<color name="green" weight="0.328888553356">
+ <shade name="cool" weight="0.703447544519" />
+ <shade name="light" weight="0.279310054441" />
+ <shade name="hard" weight="0.0172413613853" />
+</color>
+
+<color name="black" weight="0.279595674352">
+ <shade name="cool" weight="0.703447544519" />
+ <shade name="light" weight="0.279310054441" />
+ <shade name="hard" weight="0.0172413613853" />
+</color>
+
+<color name="blue" weight="0.21535331565">
+ <shade name="cool" weight="0.703447544519" />
+ <shade name="light" weight="0.279310054441" />
+ <shade name="hard" weight="0.0172413613853" />
+</color>
+
+<color name="white" weight="0.157979636809">
+ <shade name="cool" weight="0.703447544519" />
+ <shade name="light" weight="0.279310054441" />
+ <shade name="hard" weight="0.0172413613853" />
+</color>
+
+<color name="purple" weight="0.0181817996327">
+ <shade name="cool" weight="0.703447544519" />
+ <shade name="light" weight="0.279310054441" />
+ <shade name="hard" weight="0.0172413613853" />
+</color>
+
+</colors>

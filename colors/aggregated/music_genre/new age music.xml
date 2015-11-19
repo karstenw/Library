@@ -1,0 +1,33 @@
+<colors query="new age music">
+
+<color name="white" weight="0.29411733564">
+ <shade name="soft" weight="0.471399888861" />
+ <shade name="cool" weight="0.297830055306" />
+ <shade name="light" weight="0.23076898325" />
+</color>
+
+<color name="blue" weight="0.29411733564">
+ <shade name="soft" weight="0.471399888861" />
+ <shade name="cool" weight="0.297830055306" />
+ <shade name="light" weight="0.23076898325" />
+</color>
+
+<color name="black" weight="0.176470401384">
+ <shade name="soft" weight="0.471399888861" />
+ <shade name="cool" weight="0.297830055306" />
+ <shade name="light" weight="0.23076898325" />
+</color>
+
+<color name="yellow" weight="0.117646934256">
+ <shade name="soft" weight="0.471399888861" />
+ <shade name="cool" weight="0.297830055306" />
+ <shade name="light" weight="0.23076898325" />
+</color>
+
+<color name="red" weight="0.117646934256">
+ <shade name="soft" weight="0.471399888861" />
+ <shade name="cool" weight="0.297830055306" />
+ <shade name="light" weight="0.23076898325" />
+</color>
+
+</colors>

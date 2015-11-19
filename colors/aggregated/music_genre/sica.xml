@@ -1,0 +1,33 @@
+<colors query="sica">
+
+<color name="red" weight="0.380951909298">
+ <shade name="hard" weight="0.416666111112" />
+ <shade name="cool" weight="0.416666111112" />
+ <shade name="light" weight="0.166666444445" />
+</color>
+
+<color name="black" weight="0.238094943311">
+ <shade name="hard" weight="0.416666111112" />
+ <shade name="cool" weight="0.416666111112" />
+ <shade name="light" weight="0.166666444445" />
+</color>
+
+<color name="blue" weight="0.190475954649">
+ <shade name="hard" weight="0.416666111112" />
+ <shade name="cool" weight="0.416666111112" />
+ <shade name="light" weight="0.166666444445" />
+</color>
+
+<color name="white" weight="0.0952379773244">
+ <shade name="hard" weight="0.416666111112" />
+ <shade name="cool" weight="0.416666111112" />
+ <shade name="light" weight="0.166666444445" />
+</color>
+
+<color name="pink" weight="0.0952379773244">
+ <shade name="hard" weight="0.416666111112" />
+ <shade name="cool" weight="0.416666111112" />
+ <shade name="light" weight="0.166666444445" />
+</color>
+
+</colors>

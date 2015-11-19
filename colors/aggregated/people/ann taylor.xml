@@ -1,0 +1,33 @@
+<colors query="ann taylor">
+
+<color name="black" weight="0.416224342914">
+ <shade name="soft" weight="0.492646515463" />
+ <shade name="light" weight="0.279411456531" />
+ <shade name="cool" weight="0.227940925065" />
+</color>
+
+<color name="blue" weight="0.173912846466">
+ <shade name="soft" weight="0.492646515463" />
+ <shade name="light" weight="0.279411456531" />
+ <shade name="cool" weight="0.227940925065" />
+</color>
+
+<color name="white" weight="0.16914084763">
+ <shade name="soft" weight="0.492646515463" />
+ <shade name="light" weight="0.279411456531" />
+ <shade name="cool" weight="0.227940925065" />
+</color>
+
+<color name="pink" weight="0.128313746478">
+ <shade name="soft" weight="0.492646515463" />
+ <shade name="light" weight="0.279411456531" />
+ <shade name="cool" weight="0.227940925065" />
+</color>
+
+<color name="red" weight="0.112407083692">
+ <shade name="soft" weight="0.492646515463" />
+ <shade name="light" weight="0.279411456531" />
+ <shade name="cool" weight="0.227940925065" />
+</color>
+
+</colors>

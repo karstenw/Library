@@ -1,0 +1,33 @@
+<colors query="george bernard shaw">
+
+<color name="white" weight="0.786665859023">
+ <shade name="hard" weight="0.370369917696" />
+ <shade name="light" weight="0.333332925926" />
+ <shade name="dark" weight="0.296295934157" />
+</color>
+
+<color name="black" weight="0.0933332375112">
+ <shade name="hard" weight="0.370369917696" />
+ <shade name="light" weight="0.333332925926" />
+ <shade name="dark" weight="0.296295934157" />
+</color>
+
+<color name="red" weight="0.0533332785778">
+ <shade name="hard" weight="0.370369917696" />
+ <shade name="light" weight="0.333332925926" />
+ <shade name="dark" weight="0.296295934157" />
+</color>
+
+<color name="orange" weight="0.0399999589334">
+ <shade name="hard" weight="0.370369917696" />
+ <shade name="light" weight="0.333332925926" />
+ <shade name="dark" weight="0.296295934157" />
+</color>
+
+<color name="blue" weight="0.0266666392889">
+ <shade name="hard" weight="0.370369917696" />
+ <shade name="light" weight="0.333332925926" />
+ <shade name="dark" weight="0.296295934157" />
+</color>
+
+</colors>

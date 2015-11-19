@@ -1,0 +1,33 @@
+<colors query="death rock">
+
+<color name="black" weight="0.99835110272">
+ <shade name="dark" weight="0.913977578681" />
+ <shade name="hard" weight="0.0795698127322" />
+ <shade name="cool" weight="0.00645160643774" />
+</color>
+
+<color name="red" weight="0.00068662386707">
+ <shade name="dark" weight="0.913977578681" />
+ <shade name="hard" weight="0.0795698127322" />
+ <shade name="cool" weight="0.00645160643774" />
+</color>
+
+<color name="white" weight="0.000411974320242">
+ <shade name="dark" weight="0.913977578681" />
+ <shade name="hard" weight="0.0795698127322" />
+ <shade name="cool" weight="0.00645160643774" />
+</color>
+
+<color name="pink" weight="0.000411974320242">
+ <shade name="dark" weight="0.913977578681" />
+ <shade name="hard" weight="0.0795698127322" />
+ <shade name="cool" weight="0.00645160643774" />
+</color>
+
+<color name="orange" weight="0.000137324773414">
+ <shade name="dark" weight="0.913977578681" />
+ <shade name="hard" weight="0.0795698127322" />
+ <shade name="cool" weight="0.00645160643774" />
+</color>
+
+</colors>

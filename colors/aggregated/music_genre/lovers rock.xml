@@ -1,0 +1,33 @@
+<colors query="lovers rock">
+
+<color name="purple" weight="0.622221558519">
+ <shade name="cool" weight="0.969854845862" />
+ <shade name="soft" weight="0.0249016784748" />
+ <shade name="light" weight="0.00524245862628" />
+</color>
+
+<color name="green" weight="0.15555538963">
+ <shade name="cool" weight="0.969854845862" />
+ <shade name="soft" weight="0.0249016784748" />
+ <shade name="light" weight="0.00524245862628" />
+</color>
+
+<color name="red" weight="0.0888887940742">
+ <shade name="cool" weight="0.967319280209" />
+ <shade name="soft" weight="0.0248365761135" />
+ <shade name="warm" weight="0.007843129299" />
+</color>
+
+<color name="blue" weight="0.0666665955556">
+ <shade name="cool" weight="0.969854845862" />
+ <shade name="soft" weight="0.0249016784748" />
+ <shade name="light" weight="0.00524245862628" />
+</color>
+
+<color name="black" weight="0.0666665955556">
+ <shade name="cool" weight="0.967319280209" />
+ <shade name="soft" weight="0.0248365761135" />
+ <shade name="warm" weight="0.007843129299" />
+</color>
+
+</colors>

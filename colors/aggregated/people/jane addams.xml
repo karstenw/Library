@@ -1,0 +1,33 @@
+<colors query="jane addams">
+
+<color name="white" weight="0.470587764706">
+ <shade name="light" weight="0.888887901236" />
+ <shade name="neutral" weight="0.111110987654" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="green" weight="0.235293882353">
+ <shade name="light" weight="0.799999200001" />
+ <shade name="neutral" weight="0.0999999000001" />
+ <shade name="intense" weight="0.0999999000001" />
+</color>
+
+<color name="black" weight="0.176470411765">
+ <shade name="light" weight="0.799999200001" />
+ <shade name="neutral" weight="0.0999999000001" />
+ <shade name="intense" weight="0.0999999000001" />
+</color>
+
+<color name="red" weight="0.0588234705883">
+ <shade name="light" weight="0.799999200001" />
+ <shade name="neutral" weight="0.0999999000001" />
+ <shade name="intense" weight="0.0999999000001" />
+</color>
+
+<color name="purple" weight="0.0588234705883">
+ <shade name="light" weight="0.888887901236" />
+ <shade name="neutral" weight="0.111110987654" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+</colors>

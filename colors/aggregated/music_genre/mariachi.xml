@@ -1,0 +1,33 @@
+<colors query="mariachi">
+
+<color name="black" weight="0.374308953848">
+ <shade name="hard" weight="0.588527989976" />
+ <shade name="cool" weight="0.28678270698" />
+ <shade name="light" weight="0.124688133469" />
+</color>
+
+<color name="red" weight="0.21823178859">
+ <shade name="hard" weight="0.588527989976" />
+ <shade name="cool" weight="0.28678270698" />
+ <shade name="light" weight="0.124688133469" />
+</color>
+
+<color name="white" weight="0.164364448369">
+ <shade name="hard" weight="0.588527989976" />
+ <shade name="cool" weight="0.28678270698" />
+ <shade name="light" weight="0.124688133469" />
+</color>
+
+<color name="green" weight="0.129834102073">
+ <shade name="hard" weight="0.588527989976" />
+ <shade name="cool" weight="0.28678270698" />
+ <shade name="light" weight="0.124688133469" />
+</color>
+
+<color name="blue" weight="0.113259535851">
+ <shade name="hard" weight="0.588527989976" />
+ <shade name="cool" weight="0.28678270698" />
+ <shade name="light" weight="0.124688133469" />
+</color>
+
+</colors>

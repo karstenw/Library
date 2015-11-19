@@ -1,0 +1,33 @@
+<colors query="new south wales">
+
+<color name="orange" weight="0.831513768492">
+ <shade name="light" weight="0.955296039412" />
+ <shade name="weak" weight="0.0434782171784" />
+ <shade name="fresh" weight="0.00122473851207" />
+</color>
+
+<color name="blue" weight="0.0626363389914">
+ <shade name="light" weight="0.955296039412" />
+ <shade name="weak" weight="0.0434782171784" />
+ <shade name="fresh" weight="0.00122473851207" />
+</color>
+
+<color name="white" weight="0.0429942814679">
+ <shade name="light" weight="0.955296039412" />
+ <shade name="weak" weight="0.0434782171784" />
+ <shade name="fresh" weight="0.00122473851207" />
+</color>
+
+<color name="black" weight="0.0357921937094">
+ <shade name="light" weight="0.955296039412" />
+ <shade name="weak" weight="0.0434782171784" />
+ <shade name="fresh" weight="0.00122473851207" />
+</color>
+
+<color name="red" weight="0.0270623903656">
+ <shade name="light" weight="0.955296039412" />
+ <shade name="weak" weight="0.0434782171784" />
+ <shade name="fresh" weight="0.00122473851207" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="iceland">
+
+<color name="white" weight="0.289582208082">
+ <shade name="cool" weight="0.581582505318" />
+ <shade name="warm" weight="0.246526361977" />
+ <shade name="light" weight="0.171889940461" />
+</color>
+
+<color name="green" weight="0.231289685676">
+ <shade name="cool" weight="0.707546143536" />
+ <shade name="light" weight="0.209119193534" />
+ <shade name="dark" weight="0.0833332124609" />
+</color>
+
+<color name="blue" weight="0.22564847383">
+ <shade name="cool" weight="0.707546143536" />
+ <shade name="light" weight="0.209119193534" />
+ <shade name="dark" weight="0.0833332124609" />
+</color>
+
+<color name="orange" weight="0.17957857709">
+ <shade name="cool" weight="0.581582505318" />
+ <shade name="warm" weight="0.246526361977" />
+ <shade name="light" weight="0.171889940461" />
+</color>
+
+<color name="red" weight="0.0738998751795">
+ <shade name="cool" weight="0.581582505318" />
+ <shade name="warm" weight="0.246526361977" />
+ <shade name="light" weight="0.171889940461" />
+</color>
+
+</colors>

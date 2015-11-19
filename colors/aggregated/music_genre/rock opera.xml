@@ -1,0 +1,33 @@
+<colors query="rock opera">
+
+<color name="black" weight="0.994896962172">
+ <shade name="hard" weight="0.882393567924" />
+ <shade name="soft" weight="0.104475398442" />
+ <shade name="light" weight="0.0131300162907" />
+</color>
+
+<color name="green" weight="0.00212584820977">
+ <shade name="hard" weight="0.882393567924" />
+ <shade name="soft" weight="0.104475398442" />
+ <shade name="light" weight="0.0131300162907" />
+</color>
+
+<color name="blue" weight="0.00127550892586">
+ <shade name="hard" weight="0.882393567924" />
+ <shade name="soft" weight="0.104475398442" />
+ <shade name="light" weight="0.0131300162907" />
+</color>
+
+<color name="yellow" weight="0.000850339283907">
+ <shade name="hard" weight="0.882393567924" />
+ <shade name="soft" weight="0.104475398442" />
+ <shade name="light" weight="0.0131300162907" />
+</color>
+
+<color name="white" weight="0.000850339283907">
+ <shade name="hard" weight="0.882393567924" />
+ <shade name="soft" weight="0.104475398442" />
+ <shade name="light" weight="0.0131300162907" />
+</color>
+
+</colors>

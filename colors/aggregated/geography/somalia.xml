@@ -1,0 +1,33 @@
+<colors query="somalia">
+
+<color name="black" weight="0.358361394367">
+ <shade name="fresh" weight="0.833734034505" />
+ <shade name="weak" weight="0.102168563766" />
+ <shade name="cool" weight="0.0640963159475" />
+</color>
+
+<color name="blue" weight="0.252559458887">
+ <shade name="fresh" weight="0.833734034505" />
+ <shade name="weak" weight="0.102168563766" />
+ <shade name="cool" weight="0.0640963159475" />
+</color>
+
+<color name="red" weight="0.225255733602">
+ <shade name="fresh" weight="0.833734034505" />
+ <shade name="weak" weight="0.102168563766" />
+ <shade name="cool" weight="0.0640963159475" />
+</color>
+
+<color name="white" weight="0.0887371071767">
+ <shade name="fresh" weight="0.833734034505" />
+ <shade name="weak" weight="0.102168563766" />
+ <shade name="cool" weight="0.0640963159475" />
+</color>
+
+<color name="green" weight="0.0750852445341">
+ <shade name="fresh" weight="0.833734034505" />
+ <shade name="weak" weight="0.102168563766" />
+ <shade name="cool" weight="0.0640963159475" />
+</color>
+
+</colors>

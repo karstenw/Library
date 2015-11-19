@@ -1,0 +1,33 @@
+<colors query="lily tomlin">
+
+<color name="black" weight="0.951878747369">
+ <shade name="light" weight="0.461537928995" />
+ <shade name="cool" weight="0.384614940829" />
+ <shade name="bright" weight="0.153845976332" />
+</color>
+
+<color name="white" weight="0.0406014631579">
+ <shade name="light" weight="0.461537928995" />
+ <shade name="cool" weight="0.384614940829" />
+ <shade name="bright" weight="0.153845976332" />
+</color>
+
+<color name="green" weight="0.00451127368422">
+ <shade name="light" weight="0.461537928995" />
+ <shade name="cool" weight="0.384614940829" />
+ <shade name="bright" weight="0.153845976332" />
+</color>
+
+<color name="yellow" weight="0.00150375789474">
+ <shade name="light" weight="0.461537928995" />
+ <shade name="cool" weight="0.384614940829" />
+ <shade name="bright" weight="0.153845976332" />
+</color>
+
+<color name="orange" weight="0.00150375789474">
+ <shade name="light" weight="0.461537928995" />
+ <shade name="cool" weight="0.384614940829" />
+ <shade name="bright" weight="0.153845976332" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="costa rica">
+
+<color name="red" weight="0.464794718287">
+ <shade name="soft" weight="0.365978859169" />
+ <shade name="cool" weight="0.345360331892" />
+ <shade name="fresh" weight="0.28865938188" />
+</color>
+
+<color name="green" weight="0.175333453136">
+ <shade name="soft" weight="0.365978859169" />
+ <shade name="cool" weight="0.345360331892" />
+ <shade name="fresh" weight="0.28865938188" />
+</color>
+
+<color name="black" weight="0.151633524431">
+ <shade name="soft" weight="0.365978859169" />
+ <shade name="cool" weight="0.345360331892" />
+ <shade name="fresh" weight="0.28865938188" />
+</color>
+
+<color name="white" weight="0.1196501255">
+ <shade name="soft" weight="0.365978859169" />
+ <shade name="cool" weight="0.345360331892" />
+ <shade name="fresh" weight="0.28865938188" />
+</color>
+
+<color name="blue" weight="0.0885871121488">
+ <shade name="soft" weight="0.365978859169" />
+ <shade name="cool" weight="0.345360331892" />
+ <shade name="fresh" weight="0.28865938188" />
+</color>
+
+</colors>

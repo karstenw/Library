@@ -1,0 +1,33 @@
+<colors query="mexico">
+
+<color name="white" weight="0.638598521426">
+ <shade name="hard" weight="0.387499293976" />
+ <shade name="warm" weight="0.314999426071" />
+ <shade name="cool" weight="0.297499457956" />
+</color>
+
+<color name="red" weight="0.31885393399">
+ <shade name="hard" weight="0.387499293976" />
+ <shade name="warm" weight="0.314999426071" />
+ <shade name="cool" weight="0.297499457956" />
+</color>
+
+<color name="yellow" weight="0.0203068985893">
+ <shade name="hard" weight="0.387499293976" />
+ <shade name="warm" weight="0.314999426071" />
+ <shade name="cool" weight="0.297499457956" />
+</color>
+
+<color name="orange" weight="0.0138051284269">
+ <shade name="hard" weight="0.387499293976" />
+ <shade name="warm" weight="0.314999426071" />
+ <shade name="cool" weight="0.297499457956" />
+</color>
+
+<color name="black" weight="0.00843448814213">
+ <shade name="hard" weight="0.387499293976" />
+ <shade name="warm" weight="0.314999426071" />
+ <shade name="cool" weight="0.297499457956" />
+</color>
+
+</colors>

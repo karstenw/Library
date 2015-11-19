@@ -1,0 +1,33 @@
+<colors query="elizabeth i">
+
+<color name="black" weight="0.739129631381">
+ <shade name="cool" weight="0.917807225935" />
+ <shade name="dark" weight="0.0547944612498" />
+ <shade name="warm" weight="0.0273972306249" />
+</color>
+
+<color name="white" weight="0.0978259806239">
+ <shade name="cool" weight="0.917807225935" />
+ <shade name="dark" weight="0.0547944612498" />
+ <shade name="warm" weight="0.0273972306249" />
+</color>
+
+<color name="green" weight="0.065217320416">
+ <shade name="cool" weight="0.917807225935" />
+ <shade name="dark" weight="0.0547944612498" />
+ <shade name="hard" weight="0.0273972306249" />
+</color>
+
+<color name="purple" weight="0.0543477670133">
+ <shade name="cool" weight="0.917807225935" />
+ <shade name="dark" weight="0.0547944612498" />
+ <shade name="hard" weight="0.0273972306249" />
+</color>
+
+<color name="orange" weight="0.0434782136106">
+ <shade name="cool" weight="0.917807225935" />
+ <shade name="dark" weight="0.0547944612498" />
+ <shade name="warm" weight="0.0273972306249" />
+</color>
+
+</colors>

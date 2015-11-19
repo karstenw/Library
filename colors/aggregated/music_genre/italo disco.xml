@@ -1,0 +1,33 @@
+<colors query="italo disco">
+
+<color name="blue" weight="0.648324708976">
+ <shade name="dark" weight="0.682818658329" />
+ <shade name="cool" weight="0.273127463332" />
+ <shade name="light" weight="0.0440528166664" />
+</color>
+
+<color name="black" weight="0.188995025864">
+ <shade name="dark" weight="0.682818658329" />
+ <shade name="cool" weight="0.273127463332" />
+ <shade name="light" weight="0.0440528166664" />
+</color>
+
+<color name="white" weight="0.131578815475">
+ <shade name="dark" weight="0.682818658329" />
+ <shade name="cool" weight="0.273127463332" />
+ <shade name="light" weight="0.0440528166664" />
+</color>
+
+<color name="yellow" weight="0.0167463946968">
+ <shade name="dark" weight="0.682818658329" />
+ <shade name="cool" weight="0.273127463332" />
+ <shade name="light" weight="0.0440528166664" />
+</color>
+
+<color name="red" weight="0.0143540525973">
+ <shade name="dark" weight="0.682818658329" />
+ <shade name="cool" weight="0.273127463332" />
+ <shade name="light" weight="0.0440528166664" />
+</color>
+
+</colors>

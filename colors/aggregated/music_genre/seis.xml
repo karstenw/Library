@@ -1,0 +1,33 @@
+<colors query="seis">
+
+<color name="red" weight="0.751605218361">
+ <shade name="hard" weight="0.364485303434" />
+ <shade name="intense" weight="0.345793749412" />
+ <shade name="light" weight="0.289719087345" />
+</color>
+
+<color name="blue" weight="0.141327476957">
+ <shade name="hard" weight="0.364485303434" />
+ <shade name="intense" weight="0.345793749412" />
+ <shade name="light" weight="0.289719087345" />
+</color>
+
+<color name="white" weight="0.0471091589856">
+ <shade name="hard" weight="0.393938602083" />
+ <shade name="light" weight="0.313130683707" />
+ <shade name="cool" weight="0.292928704113" />
+</color>
+
+<color name="black" weight="0.0449678335772">
+ <shade name="hard" weight="0.364485303434" />
+ <shade name="intense" weight="0.345793749412" />
+ <shade name="light" weight="0.289719087345" />
+</color>
+
+<color name="green" weight="0.0149892778591">
+ <shade name="hard" weight="0.364485303434" />
+ <shade name="intense" weight="0.345793749412" />
+ <shade name="light" weight="0.289719087345" />
+</color>
+
+</colors>

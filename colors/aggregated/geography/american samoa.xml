@@ -1,0 +1,33 @@
+<colors query="american samoa">
+
+<color name="white" weight="0.299999625">
+ <shade name="fresh" weight="0.374999062502" />
+ <shade name="cool" weight="0.374999062502" />
+ <shade name="warm" weight="0.249999375002" />
+</color>
+
+<color name="red" weight="0.19999975">
+ <shade name="fresh" weight="0.374999062502" />
+ <shade name="cool" weight="0.374999062502" />
+ <shade name="warm" weight="0.249999375002" />
+</color>
+
+<color name="black" weight="0.19999975">
+ <shade name="fresh" weight="0.374999062502" />
+ <shade name="cool" weight="0.374999062502" />
+ <shade name="warm" weight="0.249999375002" />
+</color>
+
+<color name="purple" weight="0.1499998125">
+ <shade name="fresh" weight="0.374999062502" />
+ <shade name="cool" weight="0.374999062502" />
+ <shade name="soft" weight="0.249999375002" />
+</color>
+
+<color name="orange" weight="0.1499998125">
+ <shade name="fresh" weight="0.374999062502" />
+ <shade name="cool" weight="0.374999062502" />
+ <shade name="warm" weight="0.249999375002" />
+</color>
+
+</colors>

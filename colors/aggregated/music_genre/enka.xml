@@ -1,0 +1,33 @@
+<colors query="enka">
+
+<color name="red" weight="0.764044162607">
+ <shade name="soft" weight="0.919999069487" />
+ <shade name="cool" weight="0.0609523193035" />
+ <shade name="hard" weight="0.0190475997823" />
+</color>
+
+<color name="black" weight="0.0898875485419">
+ <shade name="soft" weight="0.919999069487" />
+ <shade name="cool" weight="0.0609523193035" />
+ <shade name="hard" weight="0.0190475997823" />
+</color>
+
+<color name="blue" weight="0.0786516049742">
+ <shade name="soft" weight="0.919999069487" />
+ <shade name="cool" weight="0.0609523193035" />
+ <shade name="hard" weight="0.0190475997823" />
+</color>
+
+<color name="white" weight="0.0561797178387">
+ <shade name="soft" weight="0.919999069487" />
+ <shade name="cool" weight="0.0609523193035" />
+ <shade name="hard" weight="0.0190475997823" />
+</color>
+
+<color name="purple" weight="0.0112359435677">
+ <shade name="soft" weight="0.919999069487" />
+ <shade name="cool" weight="0.0609523193035" />
+ <shade name="hard" weight="0.0190475997823" />
+</color>
+
+</colors>

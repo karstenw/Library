@@ -1,0 +1,33 @@
+<colors query="ross sea">
+
+<color name="white" weight="0.333333">
+ <shade name="warm" weight="0.833332361112" />
+ <shade name="weak" weight="0.166666472222" />
+ <shade name="soft" weight="0.0" />
+</color>
+
+<color name="orange" weight="0.333333">
+ <shade name="warm" weight="0.714285000001" />
+ <shade name="weak" weight="0.142857" />
+ <shade name="intense" weight="0.142857" />
+</color>
+
+<color name="blue" weight="0.333333">
+ <shade name="weak" weight="0.499998250006" />
+ <shade name="intense" weight="0.499998250006" />
+ <shade name="soft" weight="0.0" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="warm" weight="0.714285000001" />
+ <shade name="weak" weight="0.142857" />
+ <shade name="intense" weight="0.142857" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="warm" weight="0.714285000001" />
+ <shade name="weak" weight="0.142857" />
+ <shade name="intense" weight="0.142857" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="benin">
+
+<color name="black" weight="0.337078280521">
+ <shade name="dark" weight="0.787877677688" />
+ <shade name="light" weight="0.106060456612" />
+ <shade name="hard" weight="0.106060456612" />
+</color>
+
+<color name="red" weight="0.320224366495">
+ <shade name="dark" weight="0.787877677688" />
+ <shade name="light" weight="0.106060456612" />
+ <shade name="hard" weight="0.106060456612" />
+</color>
+
+<color name="white" weight="0.174157111602">
+ <shade name="dark" weight="0.787877677688" />
+ <shade name="light" weight="0.106060456612" />
+ <shade name="hard" weight="0.106060456612" />
+</color>
+
+<color name="green" weight="0.11235942684">
+ <shade name="dark" weight="0.787877677688" />
+ <shade name="light" weight="0.106060456612" />
+ <shade name="hard" weight="0.106060456612" />
+</color>
+
+<color name="blue" weight="0.0561797134201">
+ <shade name="dark" weight="0.787877677688" />
+ <shade name="light" weight="0.106060456612" />
+ <shade name="hard" weight="0.106060456612" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="joseph addison">
+
+<color name="white" weight="0.910890178219">
+ <shade name="light" weight="0.999999000001" />
+ <shade name="weak" weight="0.0" />
+ <shade name="warm" weight="0.0" />
+</color>
+
+<color name="green" weight="0.0297029405941">
+ <shade name="light" weight="0.999999000001" />
+ <shade name="weak" weight="0.0" />
+ <shade name="soft" weight="0.0" />
+</color>
+
+<color name="black" weight="0.0297029405941">
+ <shade name="light" weight="0.999999000001" />
+ <shade name="weak" weight="0.0" />
+ <shade name="warm" weight="0.0" />
+</color>
+
+<color name="red" weight="0.0198019603961">
+ <shade name="light" weight="0.999999000001" />
+ <shade name="weak" weight="0.0" />
+ <shade name="warm" weight="0.0" />
+</color>
+
+<color name="blue" weight="0.00990098019803">
+ <shade name="light" weight="0.999999000001" />
+ <shade name="weak" weight="0.0" />
+ <shade name="soft" weight="0.0" />
+</color>
+
+</colors>

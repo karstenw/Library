@@ -1,0 +1,33 @@
+<colors query="gospel music">
+
+<color name="black" weight="0.968557036363">
+ <shade name="light" weight="0.738433332964" />
+ <shade name="cool" weight="0.147686666593" />
+ <shade name="soft" weight="0.113878875445" />
+</color>
+
+<color name="white" weight="0.0276111035739">
+ <shade name="light" weight="0.738433332964" />
+ <shade name="cool" weight="0.147686666593" />
+ <shade name="soft" weight="0.113878875445" />
+</color>
+
+<color name="green" weight="0.00349114215346">
+ <shade name="light" weight="0.738433332964" />
+ <shade name="cool" weight="0.147686666593" />
+ <shade name="soft" weight="0.113878875445" />
+</color>
+
+<color name="purple" weight="0.000274665428222">
+ <shade name="light" weight="0.738433332964" />
+ <shade name="cool" weight="0.147686666593" />
+ <shade name="soft" weight="0.113878875445" />
+</color>
+
+<color name="blue" weight="6.50523382632e-05">
+ <shade name="light" weight="0.738433332964" />
+ <shade name="cool" weight="0.147686666593" />
+ <shade name="soft" weight="0.113878875445" />
+</color>
+
+</colors>

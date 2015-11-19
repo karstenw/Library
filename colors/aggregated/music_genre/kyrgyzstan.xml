@@ -1,0 +1,33 @@
+<colors query="kyrgyzstan">
+
+<color name="black" weight="0.639999302401">
+ <shade name="weak" weight="0.70270169613" />
+ <shade name="dark" weight="0.162161929876" />
+ <shade name="light" weight="0.135134941563" />
+</color>
+
+<color name="green" weight="0.1599998256">
+ <shade name="weak" weight="0.70270169613" />
+ <shade name="dark" weight="0.162161929876" />
+ <shade name="light" weight="0.135134941563" />
+</color>
+
+<color name="orange" weight="0.0699999237001">
+ <shade name="weak" weight="0.70270169613" />
+ <shade name="dark" weight="0.162161929876" />
+ <shade name="light" weight="0.135134941563" />
+</color>
+
+<color name="blue" weight="0.0699999237001">
+ <shade name="weak" weight="0.70270169613" />
+ <shade name="dark" weight="0.162161929876" />
+ <shade name="light" weight="0.135134941563" />
+</color>
+
+<color name="white" weight="0.0599999346001">
+ <shade name="weak" weight="0.70270169613" />
+ <shade name="dark" weight="0.162161929876" />
+ <shade name="light" weight="0.135134941563" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="comoros">
+
+<color name="black" weight="0.447367903048">
+ <shade name="light" weight="0.388888175927" />
+ <shade name="hard" weight="0.333332722223" />
+ <shade name="fresh" weight="0.277777268519" />
+</color>
+
+<color name="red" weight="0.18421031302">
+ <shade name="light" weight="0.388888175927" />
+ <shade name="hard" weight="0.333332722223" />
+ <shade name="fresh" weight="0.277777268519" />
+</color>
+
+<color name="green" weight="0.18421031302">
+ <shade name="light" weight="0.388888175927" />
+ <shade name="hard" weight="0.333332722223" />
+ <shade name="fresh" weight="0.277777268519" />
+</color>
+
+<color name="yellow" weight="0.105263036011">
+ <shade name="light" weight="0.388888175927" />
+ <shade name="hard" weight="0.333332722223" />
+ <shade name="fresh" weight="0.277777268519" />
+</color>
+
+<color name="white" weight="0.0789472770084">
+ <shade name="light" weight="0.388888175927" />
+ <shade name="hard" weight="0.333332722223" />
+ <shade name="fresh" weight="0.277777268519" />
+</color>
+
+</colors>

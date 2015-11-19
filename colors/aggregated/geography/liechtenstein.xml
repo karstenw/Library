@@ -1,0 +1,33 @@
+<colors query="liechtenstein">
+
+<color name="orange" weight="0.805470290995">
+ <shade name="neutral" weight="0.75789386327" />
+ <shade name="cool" weight="0.142105099363" />
+ <shade name="soft" weight="0.099999884737" />
+</color>
+
+<color name="black" weight="0.0607902106411">
+ <shade name="neutral" weight="0.75789386327" />
+ <shade name="cool" weight="0.142105099363" />
+ <shade name="soft" weight="0.099999884737" />
+</color>
+
+<color name="red" weight="0.0592704553751">
+ <shade name="neutral" weight="0.75789386327" />
+ <shade name="cool" weight="0.142105099363" />
+ <shade name="soft" weight="0.099999884737" />
+</color>
+
+<color name="white" weight="0.0501519237789">
+ <shade name="neutral" weight="0.75789386327" />
+ <shade name="cool" weight="0.142105099363" />
+ <shade name="soft" weight="0.099999884737" />
+</color>
+
+<color name="blue" weight="0.0243160842565">
+ <shade name="neutral" weight="0.75789386327" />
+ <shade name="cool" weight="0.142105099363" />
+ <shade name="soft" weight="0.099999884737" />
+</color>
+
+</colors>

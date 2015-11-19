@@ -1,0 +1,33 @@
+<colors query="tunisia">
+
+<color name="blue" weight="0.925924997801">
+ <shade name="light" weight="0.539061687196" />
+ <shade name="cool" weight="0.249999623047" />
+ <shade name="hard" weight="0.210937181946" />
+</color>
+
+<color name="green" weight="0.0393313273402">
+ <shade name="light" weight="0.539061687196" />
+ <shade name="cool" weight="0.249999623047" />
+ <shade name="hard" weight="0.210937181946" />
+</color>
+
+<color name="black" weight="0.0198295442007">
+ <shade name="light" weight="0.539061687196" />
+ <shade name="cool" weight="0.249999623047" />
+ <shade name="hard" weight="0.210937181946" />
+</color>
+
+<color name="white" weight="0.00770238493746">
+ <shade name="light" weight="0.539061687196" />
+ <shade name="cool" weight="0.249999623047" />
+ <shade name="hard" weight="0.210937181946" />
+</color>
+
+<color name="red" weight="0.0072107433457">
+ <shade name="light" weight="0.539061687196" />
+ <shade name="cool" weight="0.249999623047" />
+ <shade name="hard" weight="0.210937181946" />
+</color>
+
+</colors>

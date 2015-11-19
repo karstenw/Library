@@ -1,0 +1,33 @@
+<colors query="dancehall">
+
+<color name="black" weight="0.649238687609">
+ <shade name="light" weight="0.378702395681" />
+ <shade name="hard" weight="0.361088330765" />
+ <shade name="cool" weight="0.260207777159" />
+</color>
+
+<color name="white" weight="0.162202536805">
+ <shade name="light" weight="0.378702395681" />
+ <shade name="hard" weight="0.361088330765" />
+ <shade name="cool" weight="0.260207777159" />
+</color>
+
+<color name="green" weight="0.145703731873">
+ <shade name="light" weight="0.378702395681" />
+ <shade name="hard" weight="0.361088330765" />
+ <shade name="cool" weight="0.260207777159" />
+</color>
+
+<color name="red" weight="0.0295692867624">
+ <shade name="light" weight="0.378702395681" />
+ <shade name="hard" weight="0.361088330765" />
+ <shade name="cool" weight="0.260207777159" />
+</color>
+
+<color name="blue" weight="0.0132847520237">
+ <shade name="light" weight="0.378702395681" />
+ <shade name="hard" weight="0.361088330765" />
+ <shade name="cool" weight="0.260207777159" />
+</color>
+
+</colors>

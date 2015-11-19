@@ -1,0 +1,33 @@
+<colors query="mahalia jackson">
+
+<color name="white" weight="0.503144143033">
+ <shade name="light" weight="0.948496877085" />
+ <shade name="hard" weight="0.0300428875095" />
+ <shade name="cool" weight="0.0214592053639" />
+</color>
+
+<color name="green" weight="0.320754391183">
+ <shade name="light" weight="0.948496877085" />
+ <shade name="hard" weight="0.0300428875095" />
+ <shade name="cool" weight="0.0214592053639" />
+</color>
+
+<color name="black" weight="0.15094324291">
+ <shade name="light" weight="0.948496877085" />
+ <shade name="hard" weight="0.0300428875095" />
+ <shade name="cool" weight="0.0214592053639" />
+</color>
+
+<color name="red" weight="0.0125786035758">
+ <shade name="light" weight="0.948496877085" />
+ <shade name="hard" weight="0.0300428875095" />
+ <shade name="cool" weight="0.0214592053639" />
+</color>
+
+<color name="purple" weight="0.0125786035758">
+ <shade name="light" weight="0.948496877085" />
+ <shade name="hard" weight="0.0300428875095" />
+ <shade name="cool" weight="0.0214592053639" />
+</color>
+
+</colors>

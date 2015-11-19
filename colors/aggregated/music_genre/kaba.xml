@@ -1,0 +1,33 @@
+<colors query="kaba">
+
+<color name="white" weight="0.420042214925">
+ <shade name="soft" weight="0.758619843838" />
+ <shade name="cool" weight="0.160919360814" />
+ <shade name="light" weight="0.080459680407" />
+</color>
+
+<color name="pink" weight="0.234541338283">
+ <shade name="soft" weight="0.758619843838" />
+ <shade name="cool" weight="0.160919360814" />
+ <shade name="light" weight="0.080459680407" />
+</color>
+
+<color name="red" weight="0.196161846564">
+ <shade name="soft" weight="0.758619843838" />
+ <shade name="cool" weight="0.160919360814" />
+ <shade name="light" weight="0.080459680407" />
+</color>
+
+<color name="blue" weight="0.08741995336">
+ <shade name="soft" weight="0.758619843838" />
+ <shade name="cool" weight="0.160919360814" />
+ <shade name="light" weight="0.080459680407" />
+</color>
+
+<color name="black" weight="0.0618336255473">
+ <shade name="soft" weight="0.758619843838" />
+ <shade name="cool" weight="0.160919360814" />
+ <shade name="light" weight="0.080459680407" />
+</color>
+
+</colors>

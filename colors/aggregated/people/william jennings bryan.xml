@@ -1,0 +1,33 @@
+<colors query="william jennings bryan">
+
+<color name="white" weight="0.444444">
+ <shade name="bright" weight="0.499999450001" />
+ <shade name="weak" weight="0.39999956" />
+ <shade name="warm" weight="0.0999998900001" />
+</color>
+
+<color name="black" weight="0.222222">
+ <shade name="bright" weight="0.499999450001" />
+ <shade name="weak" weight="0.39999956" />
+ <shade name="warm" weight="0.0999998900001" />
+</color>
+
+<color name="red" weight="0.111111">
+ <shade name="bright" weight="0.499999450001" />
+ <shade name="weak" weight="0.39999956" />
+ <shade name="warm" weight="0.0999998900001" />
+</color>
+
+<color name="green" weight="0.111111">
+ <shade name="bright" weight="0.499999450001" />
+ <shade name="weak" weight="0.39999956" />
+ <shade name="light" weight="0.0999998900001" />
+</color>
+
+<color name="blue" weight="0.111111">
+ <shade name="bright" weight="0.499999450001" />
+ <shade name="weak" weight="0.39999956" />
+ <shade name="light" weight="0.0999998900001" />
+</color>
+
+</colors>

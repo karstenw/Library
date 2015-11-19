@@ -1,0 +1,33 @@
+<colors query="cyber-metal">
+
+<color name="black" weight="0.994772524391">
+ <shade name="dark" weight="0.994340153598" />
+ <shade name="intense" weight="0.00404203314471" />
+ <shade name="cool" weight="0.00161681325788" />
+</color>
+
+<color name="blue" weight="0.00348431707317">
+ <shade name="dark" weight="0.994340153598" />
+ <shade name="intense" weight="0.00404203314471" />
+ <shade name="cool" weight="0.00161681325788" />
+</color>
+
+<color name="pink" weight="0.00174215853659">
+ <shade name="dark" weight="0.998375620949" />
+ <shade name="cool" weight="0.00162337499341" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="dark" weight="0.994340153598" />
+ <shade name="intense" weight="0.00404203314471" />
+ <shade name="cool" weight="0.00161681325788" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="dark" weight="0.998375620949" />
+ <shade name="cool" weight="0.00162337499341" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+</colors>

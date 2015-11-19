@@ -1,0 +1,33 @@
+<colors query="oliver wendell holmes">
+
+<color name="white" weight="0.634920000001">
+ <shade name="light" weight="0.727272000001" />
+ <shade name="cool" weight="0.181818" />
+ <shade name="dark" weight="0.0909090000001" />
+</color>
+
+<color name="green" weight="0.222222">
+ <shade name="light" weight="0.727272000001" />
+ <shade name="cool" weight="0.181818" />
+ <shade name="dark" weight="0.0909090000001" />
+</color>
+
+<color name="black" weight="0.126984">
+ <shade name="light" weight="0.727272000001" />
+ <shade name="cool" weight="0.181818" />
+ <shade name="dark" weight="0.0909090000001" />
+</color>
+
+<color name="red" weight="0.00793650000001">
+ <shade name="light" weight="0.727272000001" />
+ <shade name="cool" weight="0.181818" />
+ <shade name="dark" weight="0.0909090000001" />
+</color>
+
+<color name="pink" weight="0.00793650000001">
+ <shade name="light" weight="0.727272000001" />
+ <shade name="cool" weight="0.181818" />
+ <shade name="dark" weight="0.0909090000001" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="punk rock">
+
+<color name="white" weight="0.374999560518">
+ <shade name="dark" weight="0.623968934161" />
+ <shade name="soft" weight="0.267247071801" />
+ <shade name="cool" weight="0.108782508522" />
+</color>
+
+<color name="pink" weight="0.364427433605">
+ <shade name="dark" weight="0.623968934161" />
+ <shade name="soft" weight="0.267247071801" />
+ <shade name="cool" weight="0.108782508522" />
+</color>
+
+<color name="red" weight="0.124377963688">
+ <shade name="dark" weight="0.561439927516" />
+ <shade name="soft" weight="0.240465780276" />
+ <shade name="intense" weight="0.198092955558" />
+</color>
+
+<color name="blue" weight="0.0690297698466">
+ <shade name="dark" weight="0.561439927516" />
+ <shade name="soft" weight="0.240465780276" />
+ <shade name="intense" weight="0.198092955558" />
+</color>
+
+<color name="orange" weight="0.0671641003913">
+ <shade name="dark" weight="0.561439927516" />
+ <shade name="soft" weight="0.240465780276" />
+ <shade name="intense" weight="0.198092955558" />
+</color>
+
+</colors>

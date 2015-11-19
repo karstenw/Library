@@ -1,0 +1,33 @@
+<colors query="mary lyon">
+
+<color name="green" weight="0.534652930694">
+ <shade name="light" weight="0.999999000001" />
+ <shade name="weak" weight="0.0" />
+ <shade name="soft" weight="0.0" />
+</color>
+
+<color name="purple" weight="0.445544108911">
+ <shade name="light" weight="0.999999000001" />
+ <shade name="weak" weight="0.0" />
+ <shade name="soft" weight="0.0" />
+</color>
+
+<color name="white" weight="0.00990098019803">
+ <shade name="light" weight="0.999999000001" />
+ <shade name="weak" weight="0.0" />
+ <shade name="warm" weight="0.0" />
+</color>
+
+<color name="black" weight="0.00990098019803">
+ <shade name="light" weight="0.999999000001" />
+ <shade name="weak" weight="0.0" />
+ <shade name="warm" weight="0.0" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="light" weight="0.999999000001" />
+ <shade name="weak" weight="0.0" />
+ <shade name="warm" weight="0.0" />
+</color>
+
+</colors>

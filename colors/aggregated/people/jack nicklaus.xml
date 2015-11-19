@@ -1,0 +1,33 @@
+<colors query="jack nicklaus">
+
+<color name="green" weight="0.919880380844">
+ <shade name="cool" weight="0.434782041589" />
+ <shade name="dark" weight="0.304347429112" />
+ <shade name="hard" weight="0.260869224953" />
+</color>
+
+<color name="red" weight="0.0664687759062">
+ <shade name="cool" weight="0.434782041589" />
+ <shade name="dark" weight="0.304347429112" />
+ <shade name="hard" weight="0.260869224953" />
+</color>
+
+<color name="blue" weight="0.00534124092103">
+ <shade name="cool" weight="0.434782041589" />
+ <shade name="dark" weight="0.304347429112" />
+ <shade name="hard" weight="0.260869224953" />
+</color>
+
+<color name="pink" weight="0.00415429849414">
+ <shade name="cool" weight="0.434782041589" />
+ <shade name="dark" weight="0.304347429112" />
+ <shade name="hard" weight="0.260869224953" />
+</color>
+
+<color name="black" weight="0.00415429849414">
+ <shade name="cool" weight="0.434782041589" />
+ <shade name="dark" weight="0.304347429112" />
+ <shade name="hard" weight="0.260869224953" />
+</color>
+
+</colors>

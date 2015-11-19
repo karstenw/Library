@@ -1,0 +1,33 @@
+<colors query="west coast hip hop">
+
+<color name="green" weight="0.363636">
+ <shade name="hard" weight="0.38095198186" />
+ <shade name="fresh" weight="0.333332984127" />
+ <shade name="cool" weight="0.285713986395" />
+</color>
+
+<color name="black" weight="0.363636">
+ <shade name="hard" weight="0.38095198186" />
+ <shade name="fresh" weight="0.333332984127" />
+ <shade name="cool" weight="0.285713986395" />
+</color>
+
+<color name="red" weight="0.181818">
+ <shade name="hard" weight="0.38095198186" />
+ <shade name="fresh" weight="0.333332984127" />
+ <shade name="cool" weight="0.285713986395" />
+</color>
+
+<color name="orange" weight="0.0909090000001">
+ <shade name="hard" weight="0.38095198186" />
+ <shade name="fresh" weight="0.333332984127" />
+ <shade name="cool" weight="0.285713986395" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="hard" weight="0.38095198186" />
+ <shade name="fresh" weight="0.333332984127" />
+ <shade name="cool" weight="0.285713986395" />
+</color>
+
+</colors>

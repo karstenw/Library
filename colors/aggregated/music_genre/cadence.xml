@@ -1,0 +1,33 @@
+<colors query="cadence">
+
+<color name="blue" weight="0.664525781186">
+ <shade name="soft" weight="0.566318151009" />
+ <shade name="dark" weight="0.318926537674" />
+ <shade name="cool" weight="0.114753941126" />
+</color>
+
+<color name="green" weight="0.144783153292">
+ <shade name="soft" weight="0.566318151009" />
+ <shade name="dark" weight="0.318926537674" />
+ <shade name="cool" weight="0.114753941126" />
+</color>
+
+<color name="black" weight="0.100160407599">
+ <shade name="soft" weight="0.566318151009" />
+ <shade name="dark" weight="0.318926537674" />
+ <shade name="cool" weight="0.114753941126" />
+</color>
+
+<color name="red" weight="0.0481540421149">
+ <shade name="soft" weight="0.566318151009" />
+ <shade name="dark" weight="0.318926537674" />
+ <shade name="cool" weight="0.114753941126" />
+</color>
+
+<color name="white" weight="0.0423755570611">
+ <shade name="soft" weight="0.566318151009" />
+ <shade name="dark" weight="0.318926537674" />
+ <shade name="cool" weight="0.114753941126" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="louisiana blues">
+
+<color name="blue" weight="0.374999625">
+ <shade name="fresh" weight="0.571428000001" />
+ <shade name="cool" weight="0.285714" />
+ <shade name="dark" weight="0.142857" />
+</color>
+
+<color name="red" weight="0.333333">
+ <shade name="fresh" weight="0.571428000001" />
+ <shade name="cool" weight="0.285714" />
+ <shade name="dark" weight="0.142857" />
+</color>
+
+<color name="white" weight="0.124999875">
+ <shade name="fresh" weight="0.571428000001" />
+ <shade name="cool" weight="0.285714" />
+ <shade name="dark" weight="0.142857" />
+</color>
+
+<color name="black" weight="0.124999875">
+ <shade name="fresh" weight="0.571428000001" />
+ <shade name="cool" weight="0.285714" />
+ <shade name="dark" weight="0.142857" />
+</color>
+
+<color name="green" weight="0.041666625">
+ <shade name="fresh" weight="0.571428000001" />
+ <shade name="cool" weight="0.285714" />
+ <shade name="dark" weight="0.142857" />
+</color>
+
+</colors>

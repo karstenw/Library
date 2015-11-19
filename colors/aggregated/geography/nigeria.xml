@@ -1,0 +1,33 @@
+<colors query="nigeria">
+
+<color name="black" weight="0.366830650058">
+ <shade name="light" weight="0.567469188641" />
+ <shade name="fresh" weight="0.231325019574" />
+ <shade name="dark" weight="0.201204574317" />
+</color>
+
+<color name="green" weight="0.186189674483">
+ <shade name="light" weight="0.567469188641" />
+ <shade name="fresh" weight="0.231325019574" />
+ <shade name="dark" weight="0.201204574317" />
+</color>
+
+<color name="blue" weight="0.172934449313">
+ <shade name="light" weight="0.567469188641" />
+ <shade name="fresh" weight="0.231325019574" />
+ <shade name="dark" weight="0.201204574317" />
+</color>
+
+<color name="pink" weight="0.154438786285">
+ <shade name="light" weight="0.567469188641" />
+ <shade name="fresh" weight="0.231325019574" />
+ <shade name="dark" weight="0.201204574317" />
+</color>
+
+<color name="red" weight="0.119605287582">
+ <shade name="light" weight="0.567469188641" />
+ <shade name="fresh" weight="0.231325019574" />
+ <shade name="dark" weight="0.201204574317" />
+</color>
+
+</colors>

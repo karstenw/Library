@@ -1,0 +1,33 @@
+<colors query="jota">
+
+<color name="black" weight="0.592874661831">
+ <shade name="cool" weight="0.547618343538" />
+ <shade name="dark" weight="0.238094931973" />
+ <shade name="light" weight="0.214285438776" />
+</color>
+
+<color name="red" weight="0.137404428064">
+ <shade name="cool" weight="0.547618343538" />
+ <shade name="dark" weight="0.238094931973" />
+ <shade name="light" weight="0.214285438776" />
+</color>
+
+<color name="green" weight="0.0966920049338">
+ <shade name="cool" weight="0.547618343538" />
+ <shade name="dark" weight="0.238094931973" />
+ <shade name="light" weight="0.214285438776" />
+</color>
+
+<color name="orange" weight="0.0890584255969">
+ <shade name="cool" weight="0.547618343538" />
+ <shade name="dark" weight="0.238094931973" />
+ <shade name="light" weight="0.214285438776" />
+</color>
+
+<color name="blue" weight="0.0839693727057">
+ <shade name="cool" weight="0.547618343538" />
+ <shade name="dark" weight="0.238094931973" />
+ <shade name="light" weight="0.214285438776" />
+</color>
+
+</colors>

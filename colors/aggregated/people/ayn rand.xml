@@ -1,0 +1,33 @@
+<colors query="ayn rand">
+
+<color name="black" weight="0.457285956491">
+ <shade name="hard" weight="0.768867057739" />
+ <shade name="cool" weight="0.188679032574" />
+ <shade name="weak" weight="0.0424527823292" />
+</color>
+
+<color name="white" weight="0.341708187268">
+ <shade name="hard" weight="0.768867057739" />
+ <shade name="cool" weight="0.188679032574" />
+ <shade name="weak" weight="0.0424527823292" />
+</color>
+
+<color name="orange" weight="0.115577769223">
+ <shade name="hard" weight="0.768867057739" />
+ <shade name="cool" weight="0.188679032574" />
+ <shade name="weak" weight="0.0424527823292" />
+</color>
+
+<color name="green" weight="0.045226083609">
+ <shade name="hard" weight="0.768867057739" />
+ <shade name="cool" weight="0.188679032574" />
+ <shade name="weak" weight="0.0424527823292" />
+</color>
+
+<color name="blue" weight="0.040200963208">
+ <shade name="hard" weight="0.768867057739" />
+ <shade name="cool" weight="0.188679032574" />
+ <shade name="weak" weight="0.0424527823292" />
+</color>
+
+</colors>

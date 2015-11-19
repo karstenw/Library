@@ -1,0 +1,33 @@
+<colors query="skacore">
+
+<color name="black" weight="0.934209592106">
+ <shade name="hard" weight="0.555554814816" />
+ <shade name="cool" weight="0.277777407408" />
+ <shade name="intense" weight="0.166666444445" />
+</color>
+
+<color name="blue" weight="0.0394736447369">
+ <shade name="hard" weight="0.555554814816" />
+ <shade name="cool" weight="0.277777407408" />
+ <shade name="intense" weight="0.166666444445" />
+</color>
+
+<color name="green" weight="0.0263157631579">
+ <shade name="hard" weight="0.555554814816" />
+ <shade name="cool" weight="0.277777407408" />
+ <shade name="intense" weight="0.166666444445" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="hard" weight="0.555554814816" />
+ <shade name="cool" weight="0.277777407408" />
+ <shade name="intense" weight="0.166666444445" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="hard" weight="0.555554814816" />
+ <shade name="cool" weight="0.277777407408" />
+ <shade name="dark" weight="0.166666444445" />
+</color>
+
+</colors>

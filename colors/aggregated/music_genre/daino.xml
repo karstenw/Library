@@ -1,0 +1,33 @@
+<colors query="daino">
+
+<color name="black" weight="0.708912938137">
+ <shade name="dark" weight="0.599999400001" />
+ <shade name="soft" weight="0.1999998" />
+ <shade name="light" weight="0.1999998" />
+</color>
+
+<color name="white" weight="0.115598769873">
+ <shade name="dark" weight="0.599999400001" />
+ <shade name="soft" weight="0.1999998" />
+ <shade name="light" weight="0.1999998" />
+</color>
+
+<color name="orange" weight="0.0919219133931">
+ <shade name="dark" weight="0.599999400001" />
+ <shade name="soft" weight="0.1999998" />
+ <shade name="light" weight="0.1999998" />
+</color>
+
+<color name="red" weight="0.0752088382307">
+ <shade name="dark" weight="0.599999400001" />
+ <shade name="soft" weight="0.1999998" />
+ <shade name="light" weight="0.1999998" />
+</color>
+
+<color name="pink" weight="0.00835653758119">
+ <shade name="dark" weight="0.599999400001" />
+ <shade name="soft" weight="0.1999998" />
+ <shade name="light" weight="0.1999998" />
+</color>
+
+</colors>

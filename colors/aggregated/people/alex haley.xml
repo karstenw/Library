@@ -1,0 +1,33 @@
+<colors query="alex haley">
+
+<color name="white" weight="0.588234705883">
+ <shade name="light" weight="0.4999995" />
+ <shade name="hard" weight="0.4999995" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="black" weight="0.176470411765">
+ <shade name="light" weight="0.4999995" />
+ <shade name="hard" weight="0.4999995" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="purple" weight="0.117646941177">
+ <shade name="light" weight="0.4999995" />
+ <shade name="hard" weight="0.4999995" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="red" weight="0.0588234705883">
+ <shade name="light" weight="0.4999995" />
+ <shade name="hard" weight="0.4999995" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="green" weight="0.0588234705883">
+ <shade name="light" weight="0.4999995" />
+ <shade name="hard" weight="0.4999995" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+</colors>

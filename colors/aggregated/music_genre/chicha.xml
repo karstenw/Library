@@ -1,0 +1,33 @@
+<colors query="chicha">
+
+<color name="purple" weight="0.842489962968">
+ <shade name="fresh" weight="0.594338949805" />
+ <shade name="cool" weight="0.367924111784" />
+ <shade name="light" weight="0.0377358063368" />
+</color>
+
+<color name="white" weight="0.0805859964578">
+ <shade name="fresh" weight="0.583332685186" />
+ <shade name="cool" weight="0.361110709877" />
+ <shade name="warm" weight="0.0555554938272" />
+</color>
+
+<color name="yellow" weight="0.0256409988729">
+ <shade name="fresh" weight="0.583332685186" />
+ <shade name="cool" weight="0.361110709877" />
+ <shade name="warm" weight="0.0555554938272" />
+</color>
+
+<color name="pink" weight="0.0256409988729">
+ <shade name="fresh" weight="0.583332685186" />
+ <shade name="cool" weight="0.361110709877" />
+ <shade name="warm" weight="0.0555554938272" />
+</color>
+
+<color name="black" weight="0.0256409988729">
+ <shade name="fresh" weight="0.583332685186" />
+ <shade name="cool" weight="0.361110709877" />
+ <shade name="warm" weight="0.0555554938272" />
+</color>
+
+</colors>

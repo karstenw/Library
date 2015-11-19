@@ -1,0 +1,33 @@
+<colors query="david letterman">
+
+<color name="black" weight="0.429143951293">
+ <shade name="cool" weight="0.405144269849" />
+ <shade name="hard" weight="0.305465917743" />
+ <shade name="light" weight="0.289388764178" />
+</color>
+
+<color name="white" weight="0.340908746354">
+ <shade name="cool" weight="0.405144269849" />
+ <shade name="hard" weight="0.305465917743" />
+ <shade name="light" weight="0.289388764178" />
+</color>
+
+<color name="green" weight="0.21256663008">
+ <shade name="cool" weight="0.405144269849" />
+ <shade name="hard" weight="0.305465917743" />
+ <shade name="light" weight="0.289388764178" />
+</color>
+
+<color name="pink" weight="0.00935827931169">
+ <shade name="cool" weight="0.405144269849" />
+ <shade name="hard" weight="0.305465917743" />
+ <shade name="light" weight="0.289388764178" />
+</color>
+
+<color name="red" weight="0.00802138226716">
+ <shade name="cool" weight="0.405144269849" />
+ <shade name="hard" weight="0.305465917743" />
+ <shade name="light" weight="0.289388764178" />
+</color>
+
+</colors>

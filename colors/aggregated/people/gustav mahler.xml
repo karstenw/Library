@@ -1,0 +1,33 @@
+<colors query="gustav mahler">
+
+<color name="blue" weight="0.2399997024">
+ <shade name="light" weight="0.971152865663" />
+ <shade name="cool" weight="0.0192307498151" />
+ <shade name="dark" weight="0.00961537490755" />
+</color>
+
+<color name="white" weight="0.199999752">
+ <shade name="light" weight="0.971152865663" />
+ <shade name="cool" weight="0.0192307498151" />
+ <shade name="dark" weight="0.00961537490755" />
+</color>
+
+<color name="red" weight="0.199999752">
+ <shade name="light" weight="0.971152865663" />
+ <shade name="cool" weight="0.0192307498151" />
+ <shade name="dark" weight="0.00961537490755" />
+</color>
+
+<color name="green" weight="0.199999752">
+ <shade name="light" weight="0.971152865663" />
+ <shade name="cool" weight="0.0192307498151" />
+ <shade name="dark" weight="0.00961537490755" />
+</color>
+
+<color name="black" weight="0.1599998016">
+ <shade name="light" weight="0.971152865663" />
+ <shade name="cool" weight="0.0192307498151" />
+ <shade name="dark" weight="0.00961537490755" />
+</color>
+
+</colors>

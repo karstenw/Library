@@ -1,0 +1,33 @@
+<colors query="missouri">
+
+<color name="green" weight="0.493134287343">
+ <shade name="light" weight="0.358538949608" />
+ <shade name="fresh" weight="0.351368170616" />
+ <shade name="cool" weight="0.290090604683" />
+</color>
+
+<color name="white" weight="0.237864773895">
+ <shade name="light" weight="0.358538949608" />
+ <shade name="fresh" weight="0.351368170616" />
+ <shade name="cool" weight="0.290090604683" />
+</color>
+
+<color name="black" weight="0.199187574888">
+ <shade name="light" weight="0.358538949608" />
+ <shade name="fresh" weight="0.351368170616" />
+ <shade name="cool" weight="0.290090604683" />
+</color>
+
+<color name="blue" weight="0.0466060248038">
+ <shade name="light" weight="0.358538949608" />
+ <shade name="fresh" weight="0.351368170616" />
+ <shade name="cool" weight="0.290090604683" />
+</color>
+
+<color name="red" weight="0.0232063194044">
+ <shade name="light" weight="0.358538949608" />
+ <shade name="fresh" weight="0.351368170616" />
+ <shade name="cool" weight="0.290090604683" />
+</color>
+
+</colors>

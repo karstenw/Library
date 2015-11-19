@@ -1,0 +1,33 @@
+<colors query="louis armstrong">
+
+<color name="blue" weight="0.63512693685">
+ <shade name="light" weight="0.630378862709" />
+ <shade name="cool" weight="0.194936435456" />
+ <shade name="dark" weight="0.174683299305" />
+</color>
+
+<color name="white" weight="0.163531217171">
+ <shade name="light" weight="0.579069021385" />
+ <shade name="warm" weight="0.24186015351" />
+ <shade name="cool" weight="0.179069536734" />
+</color>
+
+<color name="green" weight="0.141553217597">
+ <shade name="light" weight="0.630378862709" />
+ <shade name="cool" weight="0.194936435456" />
+ <shade name="dark" weight="0.174683299305" />
+</color>
+
+<color name="black" weight="0.0433972364476">
+ <shade name="light" weight="0.579069021385" />
+ <shade name="warm" weight="0.24186015351" />
+ <shade name="cool" weight="0.179069536734" />
+</color>
+
+<color name="purple" weight="0.0163903725639">
+ <shade name="light" weight="0.630378862709" />
+ <shade name="cool" weight="0.194936435456" />
+ <shade name="dark" weight="0.174683299305" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="william butler yeats">
+
+<color name="green" weight="0.333333">
+ <shade name="dark" weight="0.461537964498" />
+ <shade name="cool" weight="0.461537964498" />
+ <shade name="soft" weight="0.0769229940829" />
+</color>
+
+<color name="blue" weight="0.333333">
+ <shade name="dark" weight="0.461537964498" />
+ <shade name="cool" weight="0.461537964498" />
+ <shade name="soft" weight="0.0769229940829" />
+</color>
+
+<color name="yellow" weight="0.1666665">
+ <shade name="dark" weight="0.461537964498" />
+ <shade name="cool" weight="0.461537964498" />
+ <shade name="soft" weight="0.0769229940829" />
+</color>
+
+<color name="white" weight="0.1666665">
+ <shade name="dark" weight="0.461537964498" />
+ <shade name="cool" weight="0.461537964498" />
+ <shade name="soft" weight="0.0769229940829" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="dark" weight="0.461537964498" />
+ <shade name="cool" weight="0.461537964498" />
+ <shade name="soft" weight="0.0769229940829" />
+</color>
+
+</colors>

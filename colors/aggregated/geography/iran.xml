@@ -1,0 +1,33 @@
+<colors query="iran">
+
+<color name="black" weight="0.224342150623">
+ <shade name="cool" weight="0.94689626529" />
+ <shade name="weak" weight="0.0332875646705" />
+ <shade name="hard" weight="0.0198150976181" />
+</color>
+
+<color name="white" weight="0.20706522638">
+ <shade name="cool" weight="0.94689626529" />
+ <shade name="weak" weight="0.0332875646705" />
+ <shade name="hard" weight="0.0198150976181" />
+</color>
+
+<color name="pink" weight="0.203197258266">
+ <shade name="cool" weight="0.94689626529" />
+ <shade name="weak" weight="0.0332875646705" />
+ <shade name="hard" weight="0.0198150976181" />
+</color>
+
+<color name="green" weight="0.198297831988">
+ <shade name="cool" weight="0.94689626529" />
+ <shade name="weak" weight="0.0332875646705" />
+ <shade name="hard" weight="0.0198150976181" />
+</color>
+
+<color name="red" weight="0.167096222533">
+ <shade name="cool" weight="0.94689626529" />
+ <shade name="weak" weight="0.0332875646705" />
+ <shade name="hard" weight="0.0198150976181" />
+</color>
+
+</colors>

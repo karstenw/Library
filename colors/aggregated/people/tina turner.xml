@@ -1,0 +1,33 @@
+<colors query="tina turner">
+
+<color name="green" weight="0.567582769677">
+ <shade name="cool" weight="0.452281656601" />
+ <shade name="light" weight="0.394190434652" />
+ <shade name="dark" weight="0.153526800864" />
+</color>
+
+<color name="red" weight="0.172197423495">
+ <shade name="cool" weight="0.452281656601" />
+ <shade name="light" weight="0.394190434652" />
+ <shade name="dark" weight="0.153526800864" />
+</color>
+
+<color name="white" weight="0.168853784204">
+ <shade name="cool" weight="0.452281656601" />
+ <shade name="light" weight="0.394190434652" />
+ <shade name="dark" weight="0.153526800864" />
+</color>
+
+<color name="blue" weight="0.049067906598">
+ <shade name="cool" weight="0.452281656601" />
+ <shade name="light" weight="0.394190434652" />
+ <shade name="dark" weight="0.153526800864" />
+</color>
+
+<color name="purple" weight="0.0422970370333">
+ <shade name="cool" weight="0.452281656601" />
+ <shade name="light" weight="0.394190434652" />
+ <shade name="dark" weight="0.153526800864" />
+</color>
+
+</colors>

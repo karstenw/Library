@@ -1,0 +1,33 @@
+<colors query="armenia">
+
+<color name="white" weight="0.268733523066">
+ <shade name="weak" weight="0.416083371975" />
+ <shade name="cool" weight="0.35314639134" />
+ <shade name="hard" weight="0.230768928994" />
+</color>
+
+<color name="pink" weight="0.204134118483">
+ <shade name="weak" weight="0.416083371975" />
+ <shade name="cool" weight="0.35314639134" />
+ <shade name="hard" weight="0.230768928994" />
+</color>
+
+<color name="blue" weight="0.186046285199">
+ <shade name="weak" weight="0.416083371975" />
+ <shade name="cool" weight="0.35314639134" />
+ <shade name="hard" weight="0.230768928994" />
+</color>
+
+<color name="red" weight="0.183462309016">
+ <shade name="weak" weight="0.416083371975" />
+ <shade name="cool" weight="0.35314639134" />
+ <shade name="hard" weight="0.230768928994" />
+</color>
+
+<color name="black" weight="0.157622547183">
+ <shade name="weak" weight="0.416083371975" />
+ <shade name="cool" weight="0.35314639134" />
+ <shade name="hard" weight="0.230768928994" />
+</color>
+
+</colors>

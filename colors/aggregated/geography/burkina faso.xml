@@ -1,0 +1,33 @@
+<colors query="burkina faso">
+
+<color name="black" weight="0.448275357115">
+ <shade name="weak" weight="0.384614704143" />
+ <shade name="fresh" weight="0.307691763315" />
+ <shade name="cool" weight="0.307691763315" />
+</color>
+
+<color name="orange" weight="0.218390558595">
+ <shade name="weak" weight="0.384614704143" />
+ <shade name="fresh" weight="0.307691763315" />
+ <shade name="cool" weight="0.307691763315" />
+</color>
+
+<color name="white" weight="0.17241359889">
+ <shade name="weak" weight="0.384614704143" />
+ <shade name="fresh" weight="0.307691763315" />
+ <shade name="cool" weight="0.307691763315" />
+</color>
+
+<color name="red" weight="0.0919539194082">
+ <shade name="weak" weight="0.384614704143" />
+ <shade name="fresh" weight="0.307691763315" />
+ <shade name="cool" weight="0.307691763315" />
+</color>
+
+<color name="green" weight="0.0689654395562">
+ <shade name="weak" weight="0.384614704143" />
+ <shade name="fresh" weight="0.307691763315" />
+ <shade name="cool" weight="0.307691763315" />
+</color>
+
+</colors>

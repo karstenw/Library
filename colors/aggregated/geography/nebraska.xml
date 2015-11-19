@@ -1,0 +1,33 @@
+<colors query="nebraska">
+
+<color name="black" weight="0.55056991828">
+ <shade name="cool" weight="0.695806401845" />
+ <shade name="hard" weight="0.184656314336" />
+ <shade name="light" weight="0.119535971599" />
+</color>
+
+<color name="blue" weight="0.160629050605">
+ <shade name="cool" weight="0.695806401845" />
+ <shade name="hard" weight="0.184656314336" />
+ <shade name="light" weight="0.119535971599" />
+</color>
+
+<color name="green" weight="0.159521264049">
+ <shade name="cool" weight="0.695806401845" />
+ <shade name="hard" weight="0.184656314336" />
+ <shade name="light" weight="0.119535971599" />
+</color>
+
+<color name="red" weight="0.069901331677">
+ <shade name="cool" weight="0.695806401845" />
+ <shade name="hard" weight="0.184656314336" />
+ <shade name="light" weight="0.119535971599" />
+</color>
+
+<color name="white" weight="0.059377359396">
+ <shade name="cool" weight="0.695806401845" />
+ <shade name="hard" weight="0.184656314336" />
+ <shade name="light" weight="0.119535971599" />
+</color>
+
+</colors>

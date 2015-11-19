@@ -1,0 +1,33 @@
+<colors query="science fiction">
+
+<color name="black" weight="0.814860000546">
+ <shade name="hard" weight="0.922373469986" />
+ <shade name="dark" weight="0.0389649518674" />
+ <shade name="soft" weight="0.0386605381809" />
+</color>
+
+<color name="green" weight="0.0794143220871">
+ <shade name="hard" weight="0.922373469986" />
+ <shade name="dark" weight="0.0389649518674" />
+ <shade name="soft" weight="0.0386605381809" />
+</color>
+
+<color name="blue" weight="0.0444720203688">
+ <shade name="hard" weight="0.922373469986" />
+ <shade name="dark" weight="0.0389649518674" />
+ <shade name="soft" weight="0.0386605381809" />
+</color>
+
+<color name="white" weight="0.0383260423986">
+ <shade name="hard" weight="0.922373469986" />
+ <shade name="dark" weight="0.0389649518674" />
+ <shade name="soft" weight="0.0386605381809" />
+</color>
+
+<color name="red" weight="0.0229265695069">
+ <shade name="hard" weight="0.922373469986" />
+ <shade name="dark" weight="0.0389649518674" />
+ <shade name="soft" weight="0.0386605381809" />
+</color>
+
+</colors>

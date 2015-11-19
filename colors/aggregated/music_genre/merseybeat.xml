@@ -1,0 +1,33 @@
+<colors query="merseybeat">
+
+<color name="white" weight="0.3999996">
+ <shade name="cool" weight="0.624999322917" />
+ <shade name="weak" weight="0.249999729167" />
+ <shade name="hard" weight="0.124999864583" />
+</color>
+
+<color name="green" weight="0.3999996">
+ <shade name="cool" weight="0.624999322917" />
+ <shade name="weak" weight="0.249999729167" />
+ <shade name="hard" weight="0.124999864583" />
+</color>
+
+<color name="black" weight="0.1999998">
+ <shade name="cool" weight="0.624999322917" />
+ <shade name="weak" weight="0.249999729167" />
+ <shade name="hard" weight="0.124999864583" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="cool" weight="0.624999322917" />
+ <shade name="weak" weight="0.249999729167" />
+ <shade name="hard" weight="0.124999864583" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="cool" weight="0.624999322917" />
+ <shade name="weak" weight="0.249999729167" />
+ <shade name="hard" weight="0.124999864583" />
+</color>
+
+</colors>

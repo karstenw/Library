@@ -1,0 +1,33 @@
+<colors query="belgium">
+
+<color name="green" weight="0.483710946664">
+ <shade name="neutral" weight="0.783817019802" />
+ <shade name="dark" weight="0.139696420465" />
+ <shade name="cool" weight="0.0764853704807" />
+</color>
+
+<color name="white" weight="0.247264381681">
+ <shade name="neutral" weight="0.783817019802" />
+ <shade name="dark" weight="0.139696420465" />
+ <shade name="cool" weight="0.0764853704807" />
+</color>
+
+<color name="orange" weight="0.241082772139">
+ <shade name="neutral" weight="0.783817019802" />
+ <shade name="dark" weight="0.139696420465" />
+ <shade name="cool" weight="0.0764853704807" />
+</color>
+
+<color name="red" weight="0.0176175871948">
+ <shade name="neutral" weight="0.783817019802" />
+ <shade name="dark" weight="0.139696420465" />
+ <shade name="cool" weight="0.0764853704807" />
+</color>
+
+<color name="yellow" weight="0.0103232879352">
+ <shade name="neutral" weight="0.783817019802" />
+ <shade name="dark" weight="0.139696420465" />
+ <shade name="cool" weight="0.0764853704807" />
+</color>
+
+</colors>

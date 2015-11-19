@@ -1,0 +1,33 @@
+<colors query="beat music">
+
+<color name="blue" weight="0.576636322333">
+ <shade name="hard" weight="0.816248226878" />
+ <shade name="light" weight="0.180713560927" />
+ <shade name="cool" weight="0.00303720270466" />
+</color>
+
+<color name="black" weight="0.260416403634">
+ <shade name="hard" weight="0.816248226878" />
+ <shade name="light" weight="0.180713560927" />
+ <shade name="cool" weight="0.00303720270466" />
+</color>
+
+<color name="green" weight="0.0710564758488">
+ <shade name="hard" weight="0.816248226878" />
+ <shade name="light" weight="0.180713560927" />
+ <shade name="cool" weight="0.00303720270466" />
+</color>
+
+<color name="yellow" weight="0.0580356556671">
+ <shade name="hard" weight="0.816248226878" />
+ <shade name="light" weight="0.180713560927" />
+ <shade name="cool" weight="0.00303720270466" />
+</color>
+
+<color name="red" weight="0.0338541324725">
+ <shade name="hard" weight="0.816248226878" />
+ <shade name="light" weight="0.180713560927" />
+ <shade name="cool" weight="0.00303720270466" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="simone de beauvoir">
+
+<color name="green" weight="0.333332984127">
+ <shade name="cool" weight="0.444443950618" />
+ <shade name="light" weight="0.333332962963" />
+ <shade name="neutral" weight="0.222221975309" />
+</color>
+
+<color name="white" weight="0.285713986395">
+ <shade name="cool" weight="0.444443950618" />
+ <shade name="light" weight="0.333332962963" />
+ <shade name="neutral" weight="0.222221975309" />
+</color>
+
+<color name="red" weight="0.238094988662">
+ <shade name="cool" weight="0.444443950618" />
+ <shade name="light" weight="0.333332962963" />
+ <shade name="neutral" weight="0.222221975309" />
+</color>
+
+<color name="black" weight="0.095237995465">
+ <shade name="cool" weight="0.444443950618" />
+ <shade name="light" weight="0.333332962963" />
+ <shade name="neutral" weight="0.222221975309" />
+</color>
+
+<color name="pink" weight="0.0476189977325">
+ <shade name="cool" weight="0.444443950618" />
+ <shade name="light" weight="0.333332962963" />
+ <shade name="neutral" weight="0.222221975309" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="reba mcentire">
+
+<color name="blue" weight="0.556862184742">
+ <shade name="cool" weight="0.65833262014" />
+ <shade name="light" weight="0.274999702084" />
+ <shade name="hard" weight="0.0666665944445" />
+</color>
+
+<color name="black" weight="0.296470289905">
+ <shade name="cool" weight="0.65833262014" />
+ <shade name="light" weight="0.274999702084" />
+ <shade name="hard" weight="0.0666665944445" />
+</color>
+
+<color name="white" weight="0.0568626878786">
+ <shade name="cool" weight="0.65833262014" />
+ <shade name="light" weight="0.274999702084" />
+ <shade name="hard" weight="0.0666665944445" />
+</color>
+
+<color name="green" weight="0.052156810261">
+ <shade name="cool" weight="0.65833262014" />
+ <shade name="light" weight="0.274999702084" />
+ <shade name="hard" weight="0.0666665944445" />
+</color>
+
+<color name="pink" weight="0.0376470209403">
+ <shade name="cool" weight="0.65833262014" />
+ <shade name="light" weight="0.274999702084" />
+ <shade name="hard" weight="0.0666665944445" />
+</color>
+
+</colors>

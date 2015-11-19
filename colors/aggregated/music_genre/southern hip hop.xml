@@ -1,0 +1,33 @@
+<colors query="southern hip hop">
+
+<color name="white" weight="0.454545">
+ <shade name="hard" weight="0.962263175063" />
+ <shade name="fresh" weight="0.0188679053934" />
+ <shade name="dark" weight="0.0188679053934" />
+</color>
+
+<color name="red" weight="0.272727">
+ <shade name="hard" weight="0.962263175063" />
+ <shade name="fresh" weight="0.0188679053934" />
+ <shade name="dark" weight="0.0188679053934" />
+</color>
+
+<color name="black" weight="0.181818">
+ <shade name="hard" weight="0.962263175063" />
+ <shade name="fresh" weight="0.0188679053934" />
+ <shade name="dark" weight="0.0188679053934" />
+</color>
+
+<color name="pink" weight="0.0909090000001">
+ <shade name="hard" weight="0.962263175063" />
+ <shade name="fresh" weight="0.0188679053934" />
+ <shade name="dark" weight="0.0188679053934" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="hard" weight="0.962263175063" />
+ <shade name="fresh" weight="0.0188679053934" />
+ <shade name="dark" weight="0.0188679053934" />
+</color>
+
+</colors>

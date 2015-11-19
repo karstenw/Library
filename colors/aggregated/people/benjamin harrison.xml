@@ -1,0 +1,33 @@
+<colors query="benjamin harrison">
+
+<color name="white" weight="0.849999150001">
+ <shade name="light" weight="0.999999000001" />
+ <shade name="weak" weight="0.0" />
+ <shade name="warm" weight="0.0" />
+</color>
+
+<color name="green" weight="0.0642856500001">
+ <shade name="light" weight="0.999999000001" />
+ <shade name="weak" weight="0.0" />
+ <shade name="soft" weight="0.0" />
+</color>
+
+<color name="orange" weight="0.0428571">
+ <shade name="light" weight="0.999999000001" />
+ <shade name="weak" weight="0.0" />
+ <shade name="warm" weight="0.0" />
+</color>
+
+<color name="black" weight="0.0285714">
+ <shade name="light" weight="0.999999000001" />
+ <shade name="weak" weight="0.0" />
+ <shade name="warm" weight="0.0" />
+</color>
+
+<color name="blue" weight="0.0142857">
+ <shade name="light" weight="0.999999000001" />
+ <shade name="weak" weight="0.0" />
+ <shade name="soft" weight="0.0" />
+</color>
+
+</colors>

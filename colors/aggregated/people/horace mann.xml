@@ -1,0 +1,33 @@
+<colors query="horace mann">
+
+<color name="black" weight="0.919430351476">
+ <shade name="light" weight="0.333332944445" />
+ <shade name="hard" weight="0.333332944445" />
+ <shade name="cool" weight="0.333332944445" />
+</color>
+
+<color name="white" weight="0.0379146536691">
+ <shade name="light" weight="0.333332944445" />
+ <shade name="hard" weight="0.333332944445" />
+ <shade name="cool" weight="0.333332944445" />
+</color>
+
+<color name="green" weight="0.0189573268345">
+ <shade name="light" weight="0.333332944445" />
+ <shade name="hard" weight="0.333332944445" />
+ <shade name="cool" weight="0.333332944445" />
+</color>
+
+<color name="blue" weight="0.0189573268345">
+ <shade name="light" weight="0.333332944445" />
+ <shade name="hard" weight="0.333332944445" />
+ <shade name="cool" weight="0.333332944445" />
+</color>
+
+<color name="yellow" weight="0.00473933170864">
+ <shade name="light" weight="0.333332944445" />
+ <shade name="hard" weight="0.333332944445" />
+ <shade name="cool" weight="0.333332944445" />
+</color>
+
+</colors>

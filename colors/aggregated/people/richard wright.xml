@@ -1,0 +1,33 @@
+<colors query="richard wright">
+
+<color name="green" weight="0.575448989578">
+ <shade name="light" weight="0.444443901235" />
+ <shade name="hard" weight="0.333332925926" />
+ <shade name="bright" weight="0.222221950618" />
+</color>
+
+<color name="white" weight="0.175918509042">
+ <shade name="light" weight="0.444443901235" />
+ <shade name="hard" weight="0.333332925926" />
+ <shade name="bright" weight="0.222221950618" />
+</color>
+
+<color name="pink" weight="0.137607367073">
+ <shade name="light" weight="0.444443901235" />
+ <shade name="hard" weight="0.333332925926" />
+ <shade name="bright" weight="0.222221950618" />
+</color>
+
+<color name="purple" weight="0.0758404238982">
+ <shade name="light" weight="0.444443901235" />
+ <shade name="hard" weight="0.333332925926" />
+ <shade name="bright" weight="0.222221950618" />
+</color>
+
+<color name="black" weight="0.0351837018085">
+ <shade name="light" weight="0.444443901235" />
+ <shade name="hard" weight="0.333332925926" />
+ <shade name="bright" weight="0.222221950618" />
+</color>
+
+</colors>

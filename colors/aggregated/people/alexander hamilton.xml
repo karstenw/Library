@@ -1,0 +1,33 @@
+<colors query="alexander hamilton">
+
+<color name="green" weight="0.52562521743">
+ <shade name="light" weight="0.449999437501" />
+ <shade name="neutral" weight="0.299999625" />
+ <shade name="cool" weight="0.2499996875" />
+</color>
+
+<color name="white" weight="0.250297722586">
+ <shade name="light" weight="0.449999437501" />
+ <shade name="neutral" weight="0.299999625" />
+ <shade name="cool" weight="0.2499996875" />
+</color>
+
+<color name="black" weight="0.209773329405">
+ <shade name="light" weight="0.449999437501" />
+ <shade name="neutral" weight="0.299999625" />
+ <shade name="cool" weight="0.2499996875" />
+</color>
+
+<color name="red" weight="0.00834325741952">
+ <shade name="light" weight="0.449999437501" />
+ <shade name="neutral" weight="0.299999625" />
+ <shade name="cool" weight="0.2499996875" />
+</color>
+
+<color name="blue" weight="0.00595946958537">
+ <shade name="light" weight="0.449999437501" />
+ <shade name="neutral" weight="0.299999625" />
+ <shade name="cool" weight="0.2499996875" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="qawwali">
+
+<color name="white" weight="0.272726975207">
+ <shade name="cool" weight="0.809522845806" />
+ <shade name="light" weight="0.142856972789" />
+ <shade name="hard" weight="0.0476189909298" />
+</color>
+
+<color name="green" weight="0.272726975207">
+ <shade name="cool" weight="0.708332595487" />
+ <shade name="intense" weight="0.166666493056" />
+ <shade name="light" weight="0.124999869792" />
+</color>
+
+<color name="blue" weight="0.272726975207">
+ <shade name="cool" weight="0.708332595487" />
+ <shade name="intense" weight="0.166666493056" />
+ <shade name="light" weight="0.124999869792" />
+</color>
+
+<color name="red" weight="0.0909089917356">
+ <shade name="cool" weight="0.708332595487" />
+ <shade name="intense" weight="0.166666493056" />
+ <shade name="light" weight="0.124999869792" />
+</color>
+
+<color name="purple" weight="0.0909089917356">
+ <shade name="cool" weight="0.809522845806" />
+ <shade name="light" weight="0.142856972789" />
+ <shade name="hard" weight="0.0476189909298" />
+</color>
+
+</colors>

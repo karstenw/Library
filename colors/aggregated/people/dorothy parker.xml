@@ -1,0 +1,33 @@
+<colors query="dorothy parker">
+
+<color name="white" weight="0.967740962067">
+ <shade name="cool" weight="0.666665919193" />
+ <shade name="dark" weight="0.242423970616" />
+ <shade name="light" weight="0.0909089889808" />
+</color>
+
+<color name="black" weight="0.0131964676646">
+ <shade name="cool" weight="0.666665919193" />
+ <shade name="dark" weight="0.242423970616" />
+ <shade name="light" weight="0.0909089889808" />
+</color>
+
+<color name="red" weight="0.0087976451097">
+ <shade name="cool" weight="0.666665919193" />
+ <shade name="dark" weight="0.242423970616" />
+ <shade name="light" weight="0.0909089889808" />
+</color>
+
+<color name="green" weight="0.0058650967398">
+ <shade name="cool" weight="0.666665919193" />
+ <shade name="dark" weight="0.242423970616" />
+ <shade name="light" weight="0.0909089889808" />
+</color>
+
+<color name="pink" weight="0.00439882255485">
+ <shade name="cool" weight="0.666665919193" />
+ <shade name="dark" weight="0.242423970616" />
+ <shade name="light" weight="0.0909089889808" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="alfred hitchcock">
+
+<color name="black" weight="0.389237627976">
+ <shade name="cool" weight="0.397111493308" />
+ <shade name="dark" weight="0.350180135008" />
+ <shade name="light" weight="0.252707313923" />
+</color>
+
+<color name="white" weight="0.297721616555">
+ <shade name="cool" weight="0.397111493308" />
+ <shade name="dark" weight="0.350180135008" />
+ <shade name="light" weight="0.252707313923" />
+</color>
+
+<color name="orange" weight="0.212097193852">
+ <shade name="cool" weight="0.397111493308" />
+ <shade name="dark" weight="0.350180135008" />
+ <shade name="light" weight="0.252707313923" />
+</color>
+
+<color name="green" weight="0.0773761984978">
+ <shade name="cool" weight="0.397111493308" />
+ <shade name="dark" weight="0.350180135008" />
+ <shade name="light" weight="0.252707313923" />
+</color>
+
+<color name="red" weight="0.0235663548724">
+ <shade name="cool" weight="0.397111493308" />
+ <shade name="dark" weight="0.350180135008" />
+ <shade name="light" weight="0.252707313923" />
+</color>
+
+</colors>

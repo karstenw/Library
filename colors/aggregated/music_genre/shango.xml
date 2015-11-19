@@ -1,0 +1,33 @@
+<colors query="shango">
+
+<color name="black" weight="0.90607644199">
+ <shade name="intense" weight="0.695651357279" />
+ <shade name="dark" weight="0.17391283932" />
+ <shade name="light" weight="0.13043462949" />
+</color>
+
+<color name="red" weight="0.0676794903316">
+ <shade name="intense" weight="0.695651357279" />
+ <shade name="dark" weight="0.17391283932" />
+ <shade name="light" weight="0.13043462949" />
+</color>
+
+<color name="white" weight="0.0124309267956">
+ <shade name="dark" weight="0.399998920003" />
+ <shade name="light" weight="0.299999190002" />
+ <shade name="cool" weight="0.299999190002" />
+</color>
+
+<color name="blue" weight="0.0110497127072">
+ <shade name="intense" weight="0.695651357279" />
+ <shade name="dark" weight="0.17391283932" />
+ <shade name="light" weight="0.13043462949" />
+</color>
+
+<color name="green" weight="0.0027624281768">
+ <shade name="intense" weight="0.695651357279" />
+ <shade name="dark" weight="0.17391283932" />
+ <shade name="light" weight="0.13043462949" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="samuel johnson">
+
+<color name="black" weight="0.423076443048">
+ <shade name="light" weight="0.809522845806" />
+ <shade name="neutral" weight="0.0952379818595" />
+ <shade name="dark" weight="0.0952379818595" />
+</color>
+
+<color name="green" weight="0.192307474113">
+ <shade name="light" weight="0.809522845806" />
+ <shade name="neutral" weight="0.0952379818595" />
+ <shade name="dark" weight="0.0952379818595" />
+</color>
+
+<color name="white" weight="0.15384597929">
+ <shade name="light" weight="0.809522845806" />
+ <shade name="neutral" weight="0.0952379818595" />
+ <shade name="dark" weight="0.0952379818595" />
+</color>
+
+<color name="orange" weight="0.134615231879">
+ <shade name="light" weight="0.809522845806" />
+ <shade name="neutral" weight="0.0952379818595" />
+ <shade name="dark" weight="0.0952379818595" />
+</color>
+
+<color name="blue" weight="0.0961537370563">
+ <shade name="light" weight="0.809522845806" />
+ <shade name="neutral" weight="0.0952379818595" />
+ <shade name="dark" weight="0.0952379818595" />
+</color>
+
+</colors>

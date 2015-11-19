@@ -1,0 +1,33 @@
+<colors query="jibaro">
+
+<color name="white" weight="0.599999400001">
+ <shade name="cool" weight="0.499999333334" />
+ <shade name="hard" weight="0.333332888889" />
+ <shade name="weak" weight="0.166666444445" />
+</color>
+
+<color name="red" weight="0.2999997">
+ <shade name="cool" weight="0.499999333334" />
+ <shade name="hard" weight="0.333332888889" />
+ <shade name="weak" weight="0.166666444445" />
+</color>
+
+<color name="blue" weight="0.0999999000001">
+ <shade name="cool" weight="0.499999333334" />
+ <shade name="hard" weight="0.333332888889" />
+ <shade name="weak" weight="0.166666444445" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="cool" weight="0.499999333334" />
+ <shade name="hard" weight="0.333332888889" />
+ <shade name="weak" weight="0.166666444445" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="cool" weight="0.499999333334" />
+ <shade name="hard" weight="0.333332888889" />
+ <shade name="weak" weight="0.166666444445" />
+</color>
+
+</colors>

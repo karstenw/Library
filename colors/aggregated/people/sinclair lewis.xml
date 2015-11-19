@@ -1,0 +1,33 @@
+<colors query="sinclair lewis">
+
+<color name="green" weight="0.346153473373">
+ <shade name="light" weight="0.555555000001" />
+ <shade name="dark" weight="0.222222" />
+ <shade name="cool" weight="0.222222" />
+</color>
+
+<color name="white" weight="0.26923047929">
+ <shade name="light" weight="0.555555000001" />
+ <shade name="dark" weight="0.222222" />
+ <shade name="cool" weight="0.222222" />
+</color>
+
+<color name="black" weight="0.153845988166">
+ <shade name="light" weight="0.555555000001" />
+ <shade name="dark" weight="0.222222" />
+ <shade name="cool" weight="0.222222" />
+</color>
+
+<color name="yellow" weight="0.115384491124">
+ <shade name="light" weight="0.555555000001" />
+ <shade name="dark" weight="0.222222" />
+ <shade name="cool" weight="0.222222" />
+</color>
+
+<color name="red" weight="0.115384491124">
+ <shade name="light" weight="0.555555000001" />
+ <shade name="dark" weight="0.222222" />
+ <shade name="cool" weight="0.222222" />
+</color>
+
+</colors>

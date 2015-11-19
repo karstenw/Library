@@ -1,0 +1,33 @@
+<colors query="taiwan">
+
+<color name="black" weight="0.276906667137">
+ <shade name="cool" weight="0.716489805347" />
+ <shade name="light" weight="0.268120398856" />
+ <shade name="hard" weight="0.0153887590268" />
+</color>
+
+<color name="white" weight="0.250783396652">
+ <shade name="cool" weight="0.716489805347" />
+ <shade name="light" weight="0.268120398856" />
+ <shade name="hard" weight="0.0153887590268" />
+</color>
+
+<color name="red" weight="0.224660126167">
+ <shade name="cool" weight="0.716489805347" />
+ <shade name="light" weight="0.268120398856" />
+ <shade name="hard" weight="0.0153887590268" />
+</color>
+
+<color name="green" weight="0.12974557674">
+ <shade name="cool" weight="0.716489805347" />
+ <shade name="light" weight="0.268120398856" />
+ <shade name="hard" weight="0.0153887590268" />
+</color>
+
+<color name="orange" weight="0.117903027454">
+ <shade name="cool" weight="0.716489805347" />
+ <shade name="light" weight="0.268120398856" />
+ <shade name="hard" weight="0.0153887590268" />
+</color>
+
+</colors>

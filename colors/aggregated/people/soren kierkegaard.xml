@@ -1,0 +1,33 @@
+<colors query="soren kierkegaard">
+
+<color name="red" weight="0.3999996">
+ <shade name="light" weight="0.874999125001" />
+ <shade name="dark" weight="0.124999875" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="green" weight="0.3999996">
+ <shade name="light" weight="0.874999125001" />
+ <shade name="dark" weight="0.124999875" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="pink" weight="0.0999999000001">
+ <shade name="light" weight="0.874999125001" />
+ <shade name="dark" weight="0.124999875" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="black" weight="0.0999999000001">
+ <shade name="light" weight="0.874999125001" />
+ <shade name="dark" weight="0.124999875" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="light" weight="0.874999125001" />
+ <shade name="dark" weight="0.124999875" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+</colors>

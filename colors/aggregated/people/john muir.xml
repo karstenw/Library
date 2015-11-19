@@ -1,0 +1,33 @@
+<colors query="john muir">
+
+<color name="green" weight="0.477272248451">
+ <shade name="light" weight="0.985735930406" />
+ <shade name="cool" weight="0.00792392227015" />
+ <shade name="bright" weight="0.00633913781612" />
+</color>
+
+<color name="white" weight="0.42207749863">
+ <shade name="light" weight="0.985735930406" />
+ <shade name="cool" weight="0.00792392227015" />
+ <shade name="bright" weight="0.00633913781612" />
+</color>
+
+<color name="blue" weight="0.0957791246891">
+ <shade name="light" weight="0.985735930406" />
+ <shade name="cool" weight="0.00792392227015" />
+ <shade name="bright" weight="0.00633913781612" />
+</color>
+
+<color name="purple" weight="0.00324674998946">
+ <shade name="light" weight="0.985735930406" />
+ <shade name="cool" weight="0.00792392227015" />
+ <shade name="bright" weight="0.00633913781612" />
+</color>
+
+<color name="pink" weight="0.00162337499473">
+ <shade name="light" weight="0.985735930406" />
+ <shade name="cool" weight="0.00792392227015" />
+ <shade name="bright" weight="0.00633913781612" />
+</color>
+
+</colors>

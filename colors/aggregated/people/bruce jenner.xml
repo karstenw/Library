@@ -1,0 +1,33 @@
+<colors query="bruce jenner">
+
+<color name="white" weight="0.44999955">
+ <shade name="light" weight="0.399999520001" />
+ <shade name="hard" weight="0.399999520001" />
+ <shade name="cool" weight="0.19999976" />
+</color>
+
+<color name="black" weight="0.24999975">
+ <shade name="light" weight="0.399999520001" />
+ <shade name="hard" weight="0.399999520001" />
+ <shade name="intense" weight="0.19999976" />
+</color>
+
+<color name="blue" weight="0.14999985">
+ <shade name="light" weight="0.399999520001" />
+ <shade name="hard" weight="0.399999520001" />
+ <shade name="intense" weight="0.19999976" />
+</color>
+
+<color name="green" weight="0.0999999000001">
+ <shade name="light" weight="0.399999520001" />
+ <shade name="hard" weight="0.399999520001" />
+ <shade name="intense" weight="0.19999976" />
+</color>
+
+<color name="orange" weight="0.0499999500001">
+ <shade name="light" weight="0.399999520001" />
+ <shade name="hard" weight="0.399999520001" />
+ <shade name="intense" weight="0.19999976" />
+</color>
+
+</colors>

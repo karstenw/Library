@@ -1,0 +1,33 @@
+<colors query="raggamuffin">
+
+<color name="red" weight="0.960628953067">
+ <shade name="cool" weight="0.95237995465" />
+ <shade name="light" weight="0.0317459984883" />
+ <shade name="soft" weight="0.0158729992442" />
+</color>
+
+<color name="black" weight="0.0196850195301">
+ <shade name="cool" weight="0.95237995465" />
+ <shade name="light" weight="0.0317459984883" />
+ <shade name="soft" weight="0.0158729992442" />
+</color>
+
+<color name="yellow" weight="0.00787400781202">
+ <shade name="cool" weight="0.95237995465" />
+ <shade name="light" weight="0.0317459984883" />
+ <shade name="soft" weight="0.0158729992442" />
+</color>
+
+<color name="green" weight="0.00787400781202">
+ <shade name="cool" weight="0.95237995465" />
+ <shade name="light" weight="0.0317459984883" />
+ <shade name="soft" weight="0.0158729992442" />
+</color>
+
+<color name="white" weight="0.00393700390601">
+ <shade name="cool" weight="0.95237995465" />
+ <shade name="light" weight="0.0317459984883" />
+ <shade name="soft" weight="0.0158729992442" />
+</color>
+
+</colors>

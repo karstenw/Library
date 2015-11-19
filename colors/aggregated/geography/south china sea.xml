@@ -1,0 +1,33 @@
+<colors query="south china sea">
+
+<color name="blue" weight="0.798706489946">
+ <shade name="fresh" weight="0.428562551204" />
+ <shade name="dark" weight="0.28570836747" />
+ <shade name="cool" weight="0.28570836747" />
+</color>
+
+<color name="green" weight="0.159741297989">
+ <shade name="fresh" weight="0.428562551204" />
+ <shade name="dark" weight="0.28570836747" />
+ <shade name="cool" weight="0.28570836747" />
+</color>
+
+<color name="purple" weight="0.0323176036394">
+ <shade name="fresh" weight="0.428562551204" />
+ <shade name="dark" weight="0.28570836747" />
+ <shade name="cool" weight="0.28570836747" />
+</color>
+
+<color name="white" weight="0.0055401606239">
+ <shade name="warm" weight="0.964538015191" />
+ <shade name="fresh" weight="0.0212765738645" />
+ <shade name="dark" weight="0.0141843825763" />
+</color>
+
+<color name="pink" weight="0.00369344041593">
+ <shade name="warm" weight="0.964538015191" />
+ <shade name="fresh" weight="0.0212765738645" />
+ <shade name="dark" weight="0.0141843825763" />
+</color>
+
+</colors>

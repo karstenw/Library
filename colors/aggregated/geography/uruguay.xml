@@ -1,0 +1,33 @@
+<colors query="uruguay">
+
+<color name="red" weight="0.534531105336">
+ <shade name="dark" weight="0.535745176328" />
+ <shade name="neutral" weight="0.398057783401" />
+ <shade name="cool" weight="0.0661958619846" />
+</color>
+
+<color name="purple" weight="0.152790749578">
+ <shade name="dark" weight="0.535745176328" />
+ <shade name="neutral" weight="0.398057783401" />
+ <shade name="cool" weight="0.0661958619846" />
+</color>
+
+<color name="green" weight="0.140018767415">
+ <shade name="dark" weight="0.535745176328" />
+ <shade name="neutral" weight="0.398057783401" />
+ <shade name="cool" weight="0.0661958619846" />
+</color>
+
+<color name="black" weight="0.0976820117274">
+ <shade name="dark" weight="0.535745176328" />
+ <shade name="neutral" weight="0.398057783401" />
+ <shade name="cool" weight="0.0661958619846" />
+</color>
+
+<color name="white" weight="0.07497626566">
+ <shade name="dark" weight="0.535745176328" />
+ <shade name="neutral" weight="0.398057783401" />
+ <shade name="cool" weight="0.0661958619846" />
+</color>
+
+</colors>

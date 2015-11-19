@@ -1,0 +1,33 @@
+<colors query="peru">
+
+<color name="red" weight="0.553478639656">
+ <shade name="soft" weight="0.498720454881" />
+ <shade name="light" weight="0.326512708067" />
+ <shade name="dark" weight="0.174765287608" />
+</color>
+
+<color name="black" weight="0.359475817509">
+ <shade name="soft" weight="0.498720454881" />
+ <shade name="light" weight="0.326512708067" />
+ <shade name="dark" weight="0.174765287608" />
+</color>
+
+<color name="blue" weight="0.037659371358">
+ <shade name="soft" weight="0.498720454881" />
+ <shade name="light" weight="0.326512708067" />
+ <shade name="dark" weight="0.174765287608" />
+</color>
+
+<color name="green" weight="0.0333798973401">
+ <shade name="soft" weight="0.498720454881" />
+ <shade name="light" weight="0.326512708067" />
+ <shade name="dark" weight="0.174765287608" />
+</color>
+
+<color name="pink" weight="0.0160052328272">
+ <shade name="soft" weight="0.498720454881" />
+ <shade name="light" weight="0.326512708067" />
+ <shade name="dark" weight="0.174765287608" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="jorge luis borges">
+
+<color name="red" weight="0.290322243497">
+ <shade name="light" weight="0.3999996" />
+ <shade name="cool" weight="0.3999996" />
+ <shade name="dark" weight="0.1999998" />
+</color>
+
+<color name="white" weight="0.258064216442">
+ <shade name="light" weight="0.3999996" />
+ <shade name="cool" weight="0.3999996" />
+ <shade name="dark" weight="0.1999998" />
+</color>
+
+<color name="green" weight="0.193548162331">
+ <shade name="light" weight="0.3999996" />
+ <shade name="cool" weight="0.3999996" />
+ <shade name="dark" weight="0.1999998" />
+</color>
+
+<color name="black" weight="0.193548162331">
+ <shade name="light" weight="0.3999996" />
+ <shade name="cool" weight="0.3999996" />
+ <shade name="dark" weight="0.1999998" />
+</color>
+
+<color name="purple" weight="0.0645160541104">
+ <shade name="light" weight="0.3999996" />
+ <shade name="cool" weight="0.3999996" />
+ <shade name="dark" weight="0.1999998" />
+</color>
+
+</colors>

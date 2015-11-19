@@ -1,0 +1,33 @@
+<colors query="greece">
+
+<color name="blue" weight="0.314590393333">
+ <shade name="hard" weight="0.677003533827" />
+ <shade name="cool" weight="0.198184274707" />
+ <shade name="light" weight="0.124810707354" />
+</color>
+
+<color name="red" weight="0.27615627288">
+ <shade name="hard" weight="0.677003533827" />
+ <shade name="cool" weight="0.198184274707" />
+ <shade name="light" weight="0.124810707354" />
+</color>
+
+<color name="green" weight="0.163700883408">
+ <shade name="hard" weight="0.677003533827" />
+ <shade name="cool" weight="0.198184274707" />
+ <shade name="light" weight="0.124810707354" />
+</color>
+
+<color name="black" weight="0.162277397466">
+ <shade name="hard" weight="0.677003533827" />
+ <shade name="cool" weight="0.198184274707" />
+ <shade name="light" weight="0.124810707354" />
+</color>
+
+<color name="white" weight="0.0832739276469">
+ <shade name="hard" weight="0.677003533827" />
+ <shade name="cool" weight="0.198184274707" />
+ <shade name="light" weight="0.124810707354" />
+</color>
+
+</colors>

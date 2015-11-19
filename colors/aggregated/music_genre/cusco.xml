@@ -1,0 +1,33 @@
+<colors query="cusco">
+
+<color name="red" weight="0.651112806877">
+ <shade name="cool" weight="0.901379726563" />
+ <shade name="light" weight="0.0808677654028" />
+ <shade name="weak" weight="0.0177514606982" />
+</color>
+
+<color name="blue" weight="0.213149306486">
+ <shade name="cool" weight="0.901379726563" />
+ <shade name="light" weight="0.0808677654028" />
+ <shade name="weak" weight="0.0177514606982" />
+</color>
+
+<color name="white" weight="0.0689288802069">
+ <shade name="cool" weight="0.901379726563" />
+ <shade name="light" weight="0.0808677654028" />
+ <shade name="weak" weight="0.0177514606982" />
+</color>
+
+<color name="black" weight="0.0583244370981">
+ <shade name="cool" weight="0.901379726563" />
+ <shade name="light" weight="0.0808677654028" />
+ <shade name="weak" weight="0.0177514606982" />
+</color>
+
+<color name="pink" weight="0.008483554487">
+ <shade name="cool" weight="0.901379726563" />
+ <shade name="light" weight="0.0808677654028" />
+ <shade name="weak" weight="0.0177514606982" />
+</color>
+
+</colors>

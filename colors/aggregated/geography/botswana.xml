@@ -1,0 +1,33 @@
+<colors query="botswana">
+
+<color name="orange" weight="0.743398341391">
+ <shade name="light" weight="0.9347171107" />
+ <shade name="cool" weight="0.0378337878141" />
+ <shade name="warm" weight="0.0274480421396" />
+</color>
+
+<color name="pink" weight="0.121763521435">
+ <shade name="light" weight="0.9347171107" />
+ <shade name="cool" weight="0.0378337878141" />
+ <shade name="warm" weight="0.0274480421396" />
+</color>
+
+<color name="yellow" weight="0.0704946703043">
+ <shade name="light" weight="0.9347171107" />
+ <shade name="cool" weight="0.0378337878141" />
+ <shade name="warm" weight="0.0274480421396" />
+</color>
+
+<color name="red" weight="0.0424890603743">
+ <shade name="light" weight="0.9347171107" />
+ <shade name="cool" weight="0.0378337878141" />
+ <shade name="warm" weight="0.0274480421396" />
+</color>
+
+<color name="green" weight="0.0218533477943">
+ <shade name="light" weight="0.936801979366" />
+ <shade name="cool" weight="0.0379181753553" />
+ <shade name="dark" weight="0.0252787835702" />
+</color>
+
+</colors>

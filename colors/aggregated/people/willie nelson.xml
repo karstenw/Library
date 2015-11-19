@@ -1,0 +1,33 @@
+<colors query="willie nelson">
+
+<color name="green" weight="0.519588246842">
+ <shade name="cool" weight="0.701042134475" />
+ <shade name="hard" weight="0.162224626159" />
+ <shade name="light" weight="0.136732184906" />
+</color>
+
+<color name="black" weight="0.165601387764">
+ <shade name="cool" weight="0.701042134475" />
+ <shade name="hard" weight="0.162224626159" />
+ <shade name="light" weight="0.136732184906" />
+</color>
+
+<color name="blue" weight="0.146985124374">
+ <shade name="cool" weight="0.701042134475" />
+ <shade name="hard" weight="0.162224626159" />
+ <shade name="light" weight="0.136732184906" />
+</color>
+
+<color name="white" weight="0.145317996309">
+ <shade name="cool" weight="0.701042134475" />
+ <shade name="hard" weight="0.162224626159" />
+ <shade name="light" weight="0.136732184906" />
+</color>
+
+<color name="red" weight="0.0225062288739">
+ <shade name="cool" weight="0.701042134475" />
+ <shade name="hard" weight="0.162224626159" />
+ <shade name="light" weight="0.136732184906" />
+</color>
+
+</colors>

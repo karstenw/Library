@@ -1,0 +1,33 @@
+<colors query="henrik ibsen">
+
+<color name="red" weight="0.665071105264">
+ <shade name="light" weight="0.981981000001" />
+ <shade name="weak" weight="0.00900900000001" />
+ <shade name="cool" weight="0.00900900000001" />
+</color>
+
+<color name="green" weight="0.196172052632">
+ <shade name="light" weight="0.981981000001" />
+ <shade name="weak" weight="0.00900900000001" />
+ <shade name="cool" weight="0.00900900000001" />
+</color>
+
+<color name="black" weight="0.133971157895">
+ <shade name="light" weight="0.981981000001" />
+ <shade name="weak" weight="0.00900900000001" />
+ <shade name="cool" weight="0.00900900000001" />
+</color>
+
+<color name="blue" weight="0.00478468421053">
+ <shade name="light" weight="0.981981000001" />
+ <shade name="weak" weight="0.00900900000001" />
+ <shade name="cool" weight="0.00900900000001" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="light" weight="0.981981000001" />
+ <shade name="weak" weight="0.00900900000001" />
+ <shade name="cool" weight="0.00900900000001" />
+</color>
+
+</colors>

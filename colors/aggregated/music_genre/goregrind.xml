@@ -1,0 +1,33 @@
+<colors query="goregrind">
+
+<color name="black" weight="0.999999000001">
+ <shade name="hard" weight="0.572326450101" />
+ <shade name="cool" weight="0.295597177525" />
+ <shade name="intense" weight="0.132075334639" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="hard" weight="0.572326450101" />
+ <shade name="cool" weight="0.295597177525" />
+ <shade name="intense" weight="0.132075334639" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="hard" weight="0.640844325779" />
+ <shade name="cool" weight="0.330985530897" />
+ <shade name="dark" weight="0.0281689813529" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="hard" weight="0.572326450101" />
+ <shade name="cool" weight="0.295597177525" />
+ <shade name="intense" weight="0.132075334639" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="hard" weight="0.640844325779" />
+ <shade name="cool" weight="0.330985530897" />
+ <shade name="dark" weight="0.0281689813529" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="ranchera">
+
+<color name="red" weight="0.697673720931">
+ <shade name="fresh" weight="0.411763955019" />
+ <shade name="warm" weight="0.294117110728" />
+ <shade name="bright" weight="0.294117110728" />
+</color>
+
+<color name="green" weight="0.162790534884">
+ <shade name="fresh" weight="0.437499152345" />
+ <shade name="bright" weight="0.312499394532" />
+ <shade name="light" weight="0.249999515626" />
+</color>
+
+<color name="white" weight="0.0930231627908">
+ <shade name="fresh" weight="0.411763955019" />
+ <shade name="warm" weight="0.294117110728" />
+ <shade name="bright" weight="0.294117110728" />
+</color>
+
+<color name="pink" weight="0.0232557906977">
+ <shade name="fresh" weight="0.411763955019" />
+ <shade name="warm" weight="0.294117110728" />
+ <shade name="bright" weight="0.294117110728" />
+</color>
+
+<color name="orange" weight="0.0232557906977">
+ <shade name="fresh" weight="0.411763955019" />
+ <shade name="warm" weight="0.294117110728" />
+ <shade name="bright" weight="0.294117110728" />
+</color>
+
+</colors>

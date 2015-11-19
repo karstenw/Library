@@ -1,0 +1,33 @@
+<colors query="dick gregory">
+
+<color name="white" weight="0.982831635194">
+ <shade name="dark" weight="0.962263170524" />
+ <shade name="light" weight="0.0188679053044" />
+ <shade name="hard" weight="0.0188679053044" />
+</color>
+
+<color name="black" weight="0.0141630759657">
+ <shade name="dark" weight="0.962263170524" />
+ <shade name="light" weight="0.0188679053044" />
+ <shade name="hard" weight="0.0188679053044" />
+</color>
+
+<color name="green" weight="0.00171673648069">
+ <shade name="dark" weight="0.962263170524" />
+ <shade name="light" weight="0.0188679053044" />
+ <shade name="hard" weight="0.0188679053044" />
+</color>
+
+<color name="pink" weight="0.000858368240344">
+ <shade name="dark" weight="0.962263170524" />
+ <shade name="light" weight="0.0188679053044" />
+ <shade name="hard" weight="0.0188679053044" />
+</color>
+
+<color name="purple" weight="0.000429184120172">
+ <shade name="dark" weight="0.962263170524" />
+ <shade name="light" weight="0.0188679053044" />
+ <shade name="hard" weight="0.0188679053044" />
+</color>
+
+</colors>

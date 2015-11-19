@@ -1,0 +1,33 @@
+<colors query="nu jazz">
+
+<color name="red" weight="0.411764294118">
+ <shade name="cool" weight="0.718807440058" />
+ <shade name="fresh" weight="0.217876866546" />
+ <shade name="light" weight="0.0633146449792" />
+</color>
+
+<color name="blue" weight="0.235293882353">
+ <shade name="cool" weight="0.718807440058" />
+ <shade name="fresh" weight="0.217876866546" />
+ <shade name="light" weight="0.0633146449792" />
+</color>
+
+<color name="black" weight="0.235293882353">
+ <shade name="cool" weight="0.718807440058" />
+ <shade name="fresh" weight="0.217876866546" />
+ <shade name="light" weight="0.0633146449792" />
+</color>
+
+<color name="white" weight="0.0588234705883">
+ <shade name="cool" weight="0.718807440058" />
+ <shade name="fresh" weight="0.217876866546" />
+ <shade name="light" weight="0.0633146449792" />
+</color>
+
+<color name="purple" weight="0.0588234705883">
+ <shade name="cool" weight="0.718807440058" />
+ <shade name="fresh" weight="0.217876866546" />
+ <shade name="light" weight="0.0633146449792" />
+</color>
+
+</colors>

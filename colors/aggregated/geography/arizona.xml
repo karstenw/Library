@@ -1,0 +1,33 @@
+<colors query="arizona">
+
+<color name="white" weight="0.261660693559">
+ <shade name="warm" weight="0.728650224946" />
+ <shade name="hard" weight="0.172386033503" />
+ <shade name="weak" weight="0.0989623525666" />
+</color>
+
+<color name="black" weight="0.237011497789">
+ <shade name="warm" weight="0.728650224946" />
+ <shade name="hard" weight="0.172386033503" />
+ <shade name="weak" weight="0.0989623525666" />
+</color>
+
+<color name="blue" weight="0.221842761931">
+ <shade name="hard" weight="0.473682402638" />
+ <shade name="weak" weight="0.2719287867" />
+ <shade name="bright" weight="0.25438499401" />
+</color>
+
+<color name="green" weight="0.20477793409">
+ <shade name="hard" weight="0.473682402638" />
+ <shade name="weak" weight="0.2719287867" />
+ <shade name="bright" weight="0.25438499401" />
+</color>
+
+<color name="yellow" weight="0.0747060241032">
+ <shade name="warm" weight="0.728650224946" />
+ <shade name="hard" weight="0.172386033503" />
+ <shade name="weak" weight="0.0989623525666" />
+</color>
+
+</colors>

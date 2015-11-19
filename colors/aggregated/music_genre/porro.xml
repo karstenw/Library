@@ -1,0 +1,33 @@
+<colors query="porro">
+
+<color name="black" weight="0.904544550001">
+ <shade name="light" weight="0.893938459367" />
+ <shade name="cool" weight="0.0606059972452" />
+ <shade name="hard" weight="0.0454544979339" />
+</color>
+
+<color name="green" weight="0.0454545">
+ <shade name="light" weight="0.893938459367" />
+ <shade name="cool" weight="0.0606059972452" />
+ <shade name="hard" weight="0.0454544979339" />
+</color>
+
+<color name="white" weight="0.0272727">
+ <shade name="light" weight="0.893938459367" />
+ <shade name="cool" weight="0.0606059972452" />
+ <shade name="hard" weight="0.0454544979339" />
+</color>
+
+<color name="pink" weight="0.01363635">
+ <shade name="light" weight="0.893938459367" />
+ <shade name="cool" weight="0.0606059972452" />
+ <shade name="hard" weight="0.0454544979339" />
+</color>
+
+<color name="blue" weight="0.00909090000001">
+ <shade name="light" weight="0.893938459367" />
+ <shade name="cool" weight="0.0606059972452" />
+ <shade name="hard" weight="0.0454544979339" />
+</color>
+
+</colors>

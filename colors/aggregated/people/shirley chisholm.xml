@@ -1,0 +1,33 @@
+<colors query="shirley chisholm">
+
+<color name="black" weight="0.924999075001">
+ <shade name="cool" weight="0.599999400001" />
+ <shade name="light" weight="0.1999998" />
+ <shade name="fresh" weight="0.1999998" />
+</color>
+
+<color name="red" weight="0.04999995">
+ <shade name="cool" weight="0.599999400001" />
+ <shade name="light" weight="0.1999998" />
+ <shade name="fresh" weight="0.1999998" />
+</color>
+
+<color name="white" weight="0.024999975">
+ <shade name="cool" weight="0.599999400001" />
+ <shade name="light" weight="0.1999998" />
+ <shade name="fresh" weight="0.1999998" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="cool" weight="0.599999400001" />
+ <shade name="light" weight="0.1999998" />
+ <shade name="fresh" weight="0.1999998" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="cool" weight="0.599999400001" />
+ <shade name="light" weight="0.1999998" />
+ <shade name="fresh" weight="0.1999998" />
+</color>
+
+</colors>

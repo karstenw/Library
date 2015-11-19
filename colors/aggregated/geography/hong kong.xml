@@ -1,0 +1,33 @@
+<colors query="hong kong">
+
+<color name="green" weight="0.68696970086">
+ <shade name="light" weight="0.866505543347" />
+ <shade name="cool" weight="0.107240785068" />
+ <shade name="dark" weight="0.0262525441846" />
+</color>
+
+<color name="red" weight="0.127089394659">
+ <shade name="light" weight="0.866505543347" />
+ <shade name="cool" weight="0.107240785068" />
+ <shade name="dark" weight="0.0262525441846" />
+</color>
+
+<color name="white" weight="0.0910234853639">
+ <shade name="light" weight="0.866505543347" />
+ <shade name="cool" weight="0.107240785068" />
+ <shade name="dark" weight="0.0262525441846" />
+</color>
+
+<color name="orange" weight="0.0506640154384">
+ <shade name="light" weight="0.866505543347" />
+ <shade name="cool" weight="0.107240785068" />
+ <shade name="dark" weight="0.0262525441846" />
+</color>
+
+<color name="pink" weight="0.0442522982304">
+ <shade name="light" weight="0.866505543347" />
+ <shade name="cool" weight="0.107240785068" />
+ <shade name="dark" weight="0.0262525441846" />
+</color>
+
+</colors>

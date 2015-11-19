@@ -1,0 +1,33 @@
+<colors query="alexander calder">
+
+<color name="red" weight="0.62831790015">
+ <shade name="bright" weight="0.444444" />
+ <shade name="cool" weight="0.333333" />
+ <shade name="light" weight="0.222222" />
+</color>
+
+<color name="orange" weight="0.221238697236">
+ <shade name="bright" weight="0.444444" />
+ <shade name="cool" weight="0.333333" />
+ <shade name="light" weight="0.222222" />
+</color>
+
+<color name="black" weight="0.0707963831154">
+ <shade name="bright" weight="0.444444" />
+ <shade name="cool" weight="0.333333" />
+ <shade name="light" weight="0.222222" />
+</color>
+
+<color name="blue" weight="0.0442477394472">
+ <shade name="bright" weight="0.444444" />
+ <shade name="cool" weight="0.333333" />
+ <shade name="light" weight="0.222222" />
+</color>
+
+<color name="yellow" weight="0.0353981915577">
+ <shade name="bright" weight="0.444444" />
+ <shade name="cool" weight="0.333333" />
+ <shade name="light" weight="0.222222" />
+</color>
+
+</colors>

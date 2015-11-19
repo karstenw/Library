@@ -1,0 +1,33 @@
+<colors query="bette davis">
+
+<color name="black" weight="0.779684481354">
+ <shade name="cool" weight="0.909573461749" />
+ <shade name="hard" weight="0.0478722874604" />
+ <shade name="light" weight="0.0425531444093" />
+</color>
+
+<color name="green" weight="0.140200145271">
+ <shade name="cool" weight="0.909573461749" />
+ <shade name="hard" weight="0.0478722874604" />
+ <shade name="light" weight="0.0425531444093" />
+</color>
+
+<color name="blue" weight="0.0525750544766">
+ <shade name="cool" weight="0.909573461749" />
+ <shade name="hard" weight="0.0478722874604" />
+ <shade name="light" weight="0.0425531444093" />
+</color>
+
+<color name="white" weight="0.0185979784543">
+ <shade name="cool" weight="0.909573461749" />
+ <shade name="hard" weight="0.0478722874604" />
+ <shade name="light" weight="0.0425531444093" />
+</color>
+
+<color name="red" weight="0.00894133579535">
+ <shade name="cool" weight="0.909573461749" />
+ <shade name="hard" weight="0.0478722874604" />
+ <shade name="light" weight="0.0425531444093" />
+</color>
+
+</colors>

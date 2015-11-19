@@ -1,0 +1,33 @@
+<colors query="walt whitman">
+
+<color name="white" weight="0.823594675546">
+ <shade name="light" weight="0.923727795893" />
+ <shade name="dark" weight="0.042372834674" />
+ <shade name="hard" weight="0.0338982677392" />
+</color>
+
+<color name="green" weight="0.152808834753">
+ <shade name="light" weight="0.923727795893" />
+ <shade name="dark" weight="0.042372834674" />
+ <shade name="hard" weight="0.0338982677392" />
+</color>
+
+<color name="blue" weight="0.00898875498549">
+ <shade name="light" weight="0.923727795893" />
+ <shade name="dark" weight="0.042372834674" />
+ <shade name="hard" weight="0.0338982677392" />
+</color>
+
+<color name="black" weight="0.0078651606123">
+ <shade name="light" weight="0.923727795893" />
+ <shade name="dark" weight="0.042372834674" />
+ <shade name="hard" weight="0.0338982677392" />
+</color>
+
+<color name="red" weight="0.00674156623912">
+ <shade name="light" weight="0.923727795893" />
+ <shade name="dark" weight="0.042372834674" />
+ <shade name="hard" weight="0.0338982677392" />
+</color>
+
+</colors>

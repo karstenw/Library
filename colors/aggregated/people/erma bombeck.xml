@@ -1,0 +1,33 @@
+<colors query="erma bombeck">
+
+<color name="green" weight="0.499999500001">
+ <shade name="cool" weight="0.4999995" />
+ <shade name="intense" weight="0.333333" />
+ <shade name="light" weight="0.1666665" />
+</color>
+
+<color name="black" weight="0.428571">
+ <shade name="cool" weight="0.4999995" />
+ <shade name="intense" weight="0.333333" />
+ <shade name="light" weight="0.1666665" />
+</color>
+
+<color name="red" weight="0.0714285000001">
+ <shade name="cool" weight="0.4999995" />
+ <shade name="intense" weight="0.333333" />
+ <shade name="light" weight="0.1666665" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="cool" weight="0.4999995" />
+ <shade name="intense" weight="0.333333" />
+ <shade name="light" weight="0.1666665" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="cool" weight="0.749998875002" />
+ <shade name="light" weight="0.249999625001" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+</colors>

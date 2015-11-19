@@ -1,0 +1,33 @@
+<colors query="switzerland">
+
+<color name="orange" weight="0.877158323296">
+ <shade name="neutral" weight="0.969101385842" />
+ <shade name="cool" weight="0.0218346917181" />
+ <shade name="fresh" weight="0.00906289258982" />
+</color>
+
+<color name="white" weight="0.0580925029902">
+ <shade name="neutral" weight="0.969101385842" />
+ <shade name="cool" weight="0.0218346917181" />
+ <shade name="fresh" weight="0.00906289258982" />
+</color>
+
+<color name="red" weight="0.0236986634715">
+ <shade name="neutral" weight="0.969101385842" />
+ <shade name="cool" weight="0.0218346917181" />
+ <shade name="fresh" weight="0.00906289258982" />
+</color>
+
+<color name="purple" weight="0.0215057676633">
+ <shade name="neutral" weight="0.969101385842" />
+ <shade name="cool" weight="0.0218346917181" />
+ <shade name="fresh" weight="0.00906289258982" />
+</color>
+
+<color name="green" weight="0.0195437029927">
+ <shade name="neutral" weight="0.969101385842" />
+ <shade name="cool" weight="0.0218346917181" />
+ <shade name="fresh" weight="0.00906289258982" />
+</color>
+
+</colors>

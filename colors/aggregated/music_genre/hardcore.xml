@@ -1,0 +1,33 @@
+<colors query="hardcore">
+
+<color name="black" weight="0.845875501204">
+ <shade name="hard" weight="0.840479325111" />
+ <shade name="intense" weight="0.0855181587358" />
+ <shade name="dark" weight="0.0740013866424" />
+</color>
+
+<color name="white" weight="0.0695359419372">
+ <shade name="hard" weight="0.874552771217" />
+ <shade name="dark" weight="0.0770014393317" />
+ <shade name="cool" weight="0.0484446141491" />
+</color>
+
+<color name="pink" weight="0.0347057742406">
+ <shade name="hard" weight="0.874552771217" />
+ <shade name="dark" weight="0.0770014393317" />
+ <shade name="cool" weight="0.0484446141491" />
+</color>
+
+<color name="blue" weight="0.0268689865088">
+ <shade name="hard" weight="0.840479325111" />
+ <shade name="intense" weight="0.0855181587358" />
+ <shade name="dark" weight="0.0740013866424" />
+</color>
+
+<color name="red" weight="0.023012789371">
+ <shade name="hard" weight="0.840479325111" />
+ <shade name="intense" weight="0.0855181587358" />
+ <shade name="dark" weight="0.0740013866424" />
+</color>
+
+</colors>

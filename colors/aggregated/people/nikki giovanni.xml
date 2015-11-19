@@ -1,0 +1,33 @@
+<colors query="nikki giovanni">
+
+<color name="black" weight="0.555555000001">
+ <shade name="light" weight="0.333332777779" />
+ <shade name="hard" weight="0.333332777779" />
+ <shade name="fresh" weight="0.333332777779" />
+</color>
+
+<color name="white" weight="0.333333">
+ <shade name="light" weight="0.333332777779" />
+ <shade name="hard" weight="0.333332777779" />
+ <shade name="fresh" weight="0.333332777779" />
+</color>
+
+<color name="blue" weight="0.111111">
+ <shade name="light" weight="0.333332777779" />
+ <shade name="hard" weight="0.333332777779" />
+ <shade name="fresh" weight="0.333332777779" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="light" weight="0.333332777779" />
+ <shade name="hard" weight="0.333332777779" />
+ <shade name="fresh" weight="0.333332777779" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="light" weight="0.333332777779" />
+ <shade name="hard" weight="0.333332777779" />
+ <shade name="fresh" weight="0.333332777779" />
+</color>
+
+</colors>

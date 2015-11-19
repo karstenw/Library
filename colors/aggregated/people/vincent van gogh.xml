@@ -1,0 +1,33 @@
+<colors query="vincent van gogh">
+
+<color name="orange" weight="0.347647886384">
+ <shade name="cool" weight="0.539061893555" />
+ <shade name="light" weight="0.398437051758" />
+ <shade name="hard" weight="0.0624999296876" />
+</color>
+
+<color name="blue" weight="0.259713421005">
+ <shade name="cool" weight="0.539061893555" />
+ <shade name="light" weight="0.398437051758" />
+ <shade name="hard" weight="0.0624999296876" />
+</color>
+
+<color name="green" weight="0.190183843728">
+ <shade name="cool" weight="0.539061893555" />
+ <shade name="light" weight="0.398437051758" />
+ <shade name="hard" weight="0.0624999296876" />
+</color>
+
+<color name="red" weight="0.104294365915">
+ <shade name="cool" weight="0.539061893555" />
+ <shade name="light" weight="0.398437051758" />
+ <shade name="hard" weight="0.0624999296876" />
+</color>
+
+<color name="white" weight="0.0981594032144">
+ <shade name="cool" weight="0.539061893555" />
+ <shade name="light" weight="0.398437051758" />
+ <shade name="hard" weight="0.0624999296876" />
+</color>
+
+</colors>

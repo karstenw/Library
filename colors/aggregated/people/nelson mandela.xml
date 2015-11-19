@@ -1,0 +1,33 @@
+<colors query="nelson mandela">
+
+<color name="white" weight="0.49787181713">
+ <shade name="light" weight="0.621620932798" />
+ <shade name="cool" weight="0.315314965912" />
+ <shade name="hard" weight="0.0630629931824" />
+</color>
+
+<color name="black" weight="0.280850768638">
+ <shade name="light" weight="0.621620932798" />
+ <shade name="cool" weight="0.315314965912" />
+ <shade name="hard" weight="0.0630629931824" />
+</color>
+
+<color name="red" weight="0.123404125614">
+ <shade name="light" weight="0.621620932798" />
+ <shade name="cool" weight="0.315314965912" />
+ <shade name="hard" weight="0.0630629931824" />
+</color>
+
+<color name="blue" weight="0.0595744054686">
+ <shade name="light" weight="0.621620932798" />
+ <shade name="cool" weight="0.315314965912" />
+ <shade name="hard" weight="0.0630629931824" />
+</color>
+
+<color name="green" weight="0.038297832087">
+ <shade name="light" weight="0.621620932798" />
+ <shade name="cool" weight="0.315314965912" />
+ <shade name="hard" weight="0.0630629931824" />
+</color>
+
+</colors>

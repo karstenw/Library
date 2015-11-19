@@ -1,0 +1,33 @@
+<colors query="shelley winters">
+
+<color name="white" weight="0.929960159534">
+ <shade name="weak" weight="0.999998500002" />
+ <shade name="warm" weight="0.0" />
+ <shade name="soft" weight="0.0" />
+</color>
+
+<color name="blue" weight="0.0486380836576">
+ <shade name="weak" weight="0.666666000001" />
+ <shade name="intense" weight="0.333333" />
+ <shade name="soft" weight="0.0" />
+</color>
+
+<color name="black" weight="0.00972761673153">
+ <shade name="weak" weight="0.666666000001" />
+ <shade name="intense" weight="0.333333" />
+ <shade name="warm" weight="0.0" />
+</color>
+
+<color name="green" weight="0.00778209338522">
+ <shade name="weak" weight="0.666666000001" />
+ <shade name="intense" weight="0.333333" />
+ <shade name="soft" weight="0.0" />
+</color>
+
+<color name="orange" weight="0.00389104669261">
+ <shade name="weak" weight="0.666666000001" />
+ <shade name="intense" weight="0.333333" />
+ <shade name="warm" weight="0.0" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="tonga">
+
+<color name="green" weight="0.292397291846">
+ <shade name="light" weight="0.783581133466" />
+ <shade name="cool" weight="0.123134178116" />
+ <shade name="fresh" weight="0.0932834682698" />
+</color>
+
+<color name="black" weight="0.234172091992">
+ <shade name="light" weight="0.783581133466" />
+ <shade name="cool" weight="0.123134178116" />
+ <shade name="fresh" weight="0.0932834682698" />
+</color>
+
+<color name="blue" weight="0.210780308644">
+ <shade name="light" weight="0.783581133466" />
+ <shade name="cool" weight="0.123134178116" />
+ <shade name="fresh" weight="0.0932834682698" />
+</color>
+
+<color name="yellow" weight="0.170861721844">
+ <shade name="light" weight="0.783581133466" />
+ <shade name="cool" weight="0.123134178116" />
+ <shade name="fresh" weight="0.0932834682698" />
+</color>
+
+<color name="red" weight="0.0917873237883">
+ <shade name="light" weight="0.783581133466" />
+ <shade name="cool" weight="0.123134178116" />
+ <shade name="fresh" weight="0.0932834682698" />
+</color>
+
+</colors>

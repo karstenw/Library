@@ -1,0 +1,33 @@
+<colors query="john locke">
+
+<color name="green" weight="0.942385886951">
+ <shade name="cool" weight="0.879999014401" />
+ <shade name="light" weight="0.0699999216001" />
+ <shade name="dark" weight="0.0499999440001" />
+</color>
+
+<color name="red" weight="0.0185184999619">
+ <shade name="cool" weight="0.879999014401" />
+ <shade name="light" weight="0.0699999216001" />
+ <shade name="dark" weight="0.0499999440001" />
+</color>
+
+<color name="black" weight="0.0185184999619">
+ <shade name="cool" weight="0.879999014401" />
+ <shade name="light" weight="0.0699999216001" />
+ <shade name="dark" weight="0.0499999440001" />
+</color>
+
+<color name="white" weight="0.0102880555344">
+ <shade name="cool" weight="0.879999014401" />
+ <shade name="light" weight="0.0699999216001" />
+ <shade name="dark" weight="0.0499999440001" />
+</color>
+
+<color name="orange" weight="0.0102880555344">
+ <shade name="cool" weight="0.879999014401" />
+ <shade name="light" weight="0.0699999216001" />
+ <shade name="dark" weight="0.0499999440001" />
+</color>
+
+</colors>

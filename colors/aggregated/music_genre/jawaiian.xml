@@ -1,0 +1,33 @@
+<colors query="jawaiian">
+
+<color name="green" weight="0.999999000001">
+ <shade name="cool" weight="0.599999160001" />
+ <shade name="soft" weight="0.19999972" />
+ <shade name="hard" weight="0.19999972" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="cool" weight="0.599999160001" />
+ <shade name="soft" weight="0.19999972" />
+ <shade name="hard" weight="0.19999972" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="cool" weight="0.599999160001" />
+ <shade name="soft" weight="0.19999972" />
+ <shade name="hard" weight="0.19999972" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="cool" weight="0.599999160001" />
+ <shade name="soft" weight="0.19999972" />
+ <shade name="hard" weight="0.19999972" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="cool" weight="0.599999160001" />
+ <shade name="soft" weight="0.19999972" />
+ <shade name="hard" weight="0.19999972" />
+</color>
+
+</colors>

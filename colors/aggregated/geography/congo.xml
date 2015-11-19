@@ -1,0 +1,33 @@
+<colors query="congo">
+
+<color name="blue" weight="0.71437525716">
+ <shade name="fresh" weight="0.730489094763" />
+ <shade name="cool" weight="0.141106899672" />
+ <shade name="dark" weight="0.128402741502" />
+</color>
+
+<color name="green" weight="0.125173717626">
+ <shade name="fresh" weight="0.730489094763" />
+ <shade name="cool" weight="0.141106899672" />
+ <shade name="dark" weight="0.128402741502" />
+</color>
+
+<color name="white" weight="0.0618914492708">
+ <shade name="fresh" weight="0.730489094763" />
+ <shade name="cool" weight="0.141106899672" />
+ <shade name="dark" weight="0.128402741502" />
+</color>
+
+<color name="red" weight="0.0584776206082">
+ <shade name="fresh" weight="0.730489094763" />
+ <shade name="cool" weight="0.141106899672" />
+ <shade name="dark" weight="0.128402741502" />
+</color>
+
+<color name="black" weight="0.0400808772601">
+ <shade name="fresh" weight="0.730489094763" />
+ <shade name="cool" weight="0.141106899672" />
+ <shade name="dark" weight="0.128402741502" />
+</color>
+
+</colors>

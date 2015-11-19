@@ -1,0 +1,33 @@
+<colors query="frank sinatra">
+
+<color name="black" weight="0.446966543069">
+ <shade name="dark" weight="0.377209734186" />
+ <shade name="warm" weight="0.36345729596" />
+ <shade name="cool" weight="0.259331692253" />
+</color>
+
+<color name="white" weight="0.344093291093">
+ <shade name="dark" weight="0.377209734186" />
+ <shade name="warm" weight="0.36345729596" />
+ <shade name="cool" weight="0.259331692253" />
+</color>
+
+<color name="purple" weight="0.0766228359548">
+ <shade name="dark" weight="0.467038910933" />
+ <shade name="cool" weight="0.321089251267" />
+ <shade name="light" weight="0.211870255949" />
+</color>
+
+<color name="blue" weight="0.0736075854658">
+ <shade name="dark" weight="0.467038910933" />
+ <shade name="cool" weight="0.321089251267" />
+ <shade name="light" weight="0.211870255949" />
+</color>
+
+<color name="green" weight="0.0587087006968">
+ <shade name="dark" weight="0.467038910933" />
+ <shade name="cool" weight="0.321089251267" />
+ <shade name="light" weight="0.211870255949" />
+</color>
+
+</colors>

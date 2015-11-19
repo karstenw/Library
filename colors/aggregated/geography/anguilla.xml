@@ -1,0 +1,33 @@
+<colors query="anguilla">
+
+<color name="black" weight="0.544512905528">
+ <shade name="cool" weight="0.640717826241" />
+ <shade name="fresh" weight="0.245508699774" />
+ <shade name="light" weight="0.113772324286" />
+</color>
+
+<color name="green" weight="0.365078994961">
+ <shade name="cool" weight="0.640717826241" />
+ <shade name="fresh" weight="0.245508699774" />
+ <shade name="light" weight="0.113772324286" />
+</color>
+
+<color name="blue" weight="0.0448584776418">
+ <shade name="cool" weight="0.640717826241" />
+ <shade name="fresh" weight="0.245508699774" />
+ <shade name="light" weight="0.113772324286" />
+</color>
+
+<color name="red" weight="0.0345065212629">
+ <shade name="cool" weight="0.640717826241" />
+ <shade name="fresh" weight="0.245508699774" />
+ <shade name="light" weight="0.113772324286" />
+</color>
+
+<color name="white" weight="0.0110420868041">
+ <shade name="cool" weight="0.640717826241" />
+ <shade name="fresh" weight="0.245508699774" />
+ <shade name="light" weight="0.113772324286" />
+</color>
+
+</colors>

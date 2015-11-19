@@ -1,0 +1,33 @@
+<colors query="accordion">
+
+<color name="red" weight="0.256696139043">
+ <shade name="cool" weight="0.609755311544" />
+ <shade name="soft" weight="0.270099019484" />
+ <shade name="bright" weight="0.120144379904" />
+</color>
+
+<color name="black" weight="0.235118782428">
+ <shade name="cool" weight="0.609755311544" />
+ <shade name="soft" weight="0.270099019484" />
+ <shade name="bright" weight="0.120144379904" />
+</color>
+
+<color name="white" weight="0.215773566152">
+ <shade name="cool" weight="0.609755311544" />
+ <shade name="soft" weight="0.270099019484" />
+ <shade name="bright" weight="0.120144379904" />
+</color>
+
+<color name="green" weight="0.1808033675">
+ <shade name="cool" weight="0.609755311544" />
+ <shade name="soft" weight="0.270099019484" />
+ <shade name="bright" weight="0.120144379904" />
+</color>
+
+<color name="blue" weight="0.111607016975">
+ <shade name="cool" weight="0.609755311544" />
+ <shade name="soft" weight="0.270099019484" />
+ <shade name="bright" weight="0.120144379904" />
+</color>
+
+</colors>

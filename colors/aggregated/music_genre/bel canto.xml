@@ -1,0 +1,33 @@
+<colors query="bel canto">
+
+<color name="red" weight="0.210526049862">
+ <shade name="bright" weight="0.75749922167" />
+ <shade name="light" weight="0.129999866425" />
+ <shade name="warm" weight="0.112499884406" />
+</color>
+
+<color name="green" weight="0.210526049862">
+ <shade name="bright" weight="0.844010175799" />
+ <shade name="light" weight="0.14484663083" />
+ <shade name="fresh" weight="0.0111420485254" />
+</color>
+
+<color name="blue" weight="0.210526049862">
+ <shade name="bright" weight="0.844010175799" />
+ <shade name="light" weight="0.14484663083" />
+ <shade name="fresh" weight="0.0111420485254" />
+</color>
+
+<color name="black" weight="0.210526049862">
+ <shade name="bright" weight="0.75749922167" />
+ <shade name="light" weight="0.129999866425" />
+ <shade name="warm" weight="0.112499884406" />
+</color>
+
+<color name="white" weight="0.157894537396">
+ <shade name="bright" weight="0.75749922167" />
+ <shade name="light" weight="0.129999866425" />
+ <shade name="warm" weight="0.112499884406" />
+</color>
+
+</colors>

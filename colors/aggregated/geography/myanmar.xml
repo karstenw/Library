@@ -1,0 +1,33 @@
+<colors query="myanmar">
+
+<color name="red" weight="0.392580719001">
+ <shade name="light" weight="0.705328362598" />
+ <shade name="fresh" weight="0.211598508779" />
+ <shade name="cool" weight="0.0830720071504" />
+</color>
+
+<color name="white" weight="0.170015272008">
+ <shade name="light" weight="0.705328362598" />
+ <shade name="fresh" weight="0.211598508779" />
+ <shade name="cool" weight="0.0830720071504" />
+</color>
+
+<color name="green" weight="0.168469678626">
+ <shade name="light" weight="0.705328362598" />
+ <shade name="fresh" weight="0.211598508779" />
+ <shade name="cool" weight="0.0830720071504" />
+</color>
+
+<color name="black" weight="0.145285777898">
+ <shade name="light" weight="0.705328362598" />
+ <shade name="fresh" weight="0.211598508779" />
+ <shade name="cool" weight="0.0830720071504" />
+</color>
+
+<color name="blue" weight="0.123647470551">
+ <shade name="light" weight="0.705328362598" />
+ <shade name="fresh" weight="0.211598508779" />
+ <shade name="cool" weight="0.0830720071504" />
+</color>
+
+</colors>

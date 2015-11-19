@@ -1,0 +1,33 @@
+<colors query="zambia">
+
+<color name="blue" weight="0.505088062456">
+ <shade name="dark" weight="0.446601169951" />
+ <shade name="hard" weight="0.291261632577" />
+ <shade name="cool" weight="0.262135469319" />
+</color>
+
+<color name="white" weight="0.289483307438">
+ <shade name="dark" weight="0.446601169951" />
+ <shade name="hard" weight="0.291261632577" />
+ <shade name="cool" weight="0.262135469319" />
+</color>
+
+<color name="black" weight="0.0900866021843">
+ <shade name="dark" weight="0.446601169951" />
+ <shade name="hard" weight="0.291261632577" />
+ <shade name="cool" weight="0.262135469319" />
+</color>
+
+<color name="red" weight="0.0712400326897">
+ <shade name="dark" weight="0.446601169951" />
+ <shade name="hard" weight="0.291261632577" />
+ <shade name="cool" weight="0.262135469319" />
+</color>
+
+<color name="yellow" weight="0.0441009726174">
+ <shade name="dark" weight="0.446601169951" />
+ <shade name="hard" weight="0.291261632577" />
+ <shade name="cool" weight="0.262135469319" />
+</color>
+
+</colors>

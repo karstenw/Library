@@ -1,0 +1,33 @@
+<colors query="john huston">
+
+<color name="white" weight="0.38095198186">
+ <shade name="light" weight="0.990565044056" />
+ <shade name="cool" weight="0.00628930186702" />
+ <shade name="fresh" weight="0.00314465093351" />
+</color>
+
+<color name="red" weight="0.333332984127">
+ <shade name="light" weight="0.990565044056" />
+ <shade name="cool" weight="0.00628930186702" />
+ <shade name="intense" weight="0.00314465093351" />
+</color>
+
+<color name="green" weight="0.142856993197">
+ <shade name="light" weight="0.990565044056" />
+ <shade name="cool" weight="0.00628930186702" />
+ <shade name="intense" weight="0.00314465093351" />
+</color>
+
+<color name="blue" weight="0.095237995465">
+ <shade name="light" weight="0.990565044056" />
+ <shade name="cool" weight="0.00628930186702" />
+ <shade name="intense" weight="0.00314465093351" />
+</color>
+
+<color name="orange" weight="0.0476189977325">
+ <shade name="light" weight="0.990565044056" />
+ <shade name="cool" weight="0.00628930186702" />
+ <shade name="intense" weight="0.00314465093351" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="heavy metal">
+
+<color name="black" weight="0.627421396307">
+ <shade name="hard" weight="0.741112516189" />
+ <shade name="cool" weight="0.152246643597" />
+ <shade name="soft" weight="0.106639719524" />
+</color>
+
+<color name="purple" weight="0.313710698154">
+ <shade name="hard" weight="0.741112516189" />
+ <shade name="cool" weight="0.152246643597" />
+ <shade name="soft" weight="0.106639719524" />
+</color>
+
+<color name="white" weight="0.0382604027944">
+ <shade name="hard" weight="0.741112516189" />
+ <shade name="cool" weight="0.152246643597" />
+ <shade name="soft" weight="0.106639719524" />
+</color>
+
+<color name="blue" weight="0.0111213518091">
+ <shade name="hard" weight="0.741112516189" />
+ <shade name="cool" weight="0.152246643597" />
+ <shade name="soft" weight="0.106639719524" />
+</color>
+
+<color name="red" weight="0.00948513522653">
+ <shade name="hard" weight="0.741112516189" />
+ <shade name="cool" weight="0.152246643597" />
+ <shade name="soft" weight="0.106639719524" />
+</color>
+
+</colors>

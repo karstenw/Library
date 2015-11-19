@@ -1,0 +1,33 @@
+<colors query="solea">
+
+<color name="blue" weight="0.477272184918">
+ <shade name="light" weight="0.751591585947" />
+ <shade name="cool" weight="0.184713186377" />
+ <shade name="soft" weight="0.0636942021989" />
+</color>
+
+<color name="red" weight="0.181817975207">
+ <shade name="light" weight="0.751591585947" />
+ <shade name="cool" weight="0.184713186377" />
+ <shade name="soft" weight="0.0636942021989" />
+</color>
+
+<color name="yellow" weight="0.113636234504">
+ <shade name="light" weight="0.751591585947" />
+ <shade name="cool" weight="0.184713186377" />
+ <shade name="soft" weight="0.0636942021989" />
+</color>
+
+<color name="white" weight="0.113636234504">
+ <shade name="light" weight="0.751591585947" />
+ <shade name="cool" weight="0.184713186377" />
+ <shade name="soft" weight="0.0636942021989" />
+</color>
+
+<color name="green" weight="0.113636234504">
+ <shade name="light" weight="0.751591585947" />
+ <shade name="cool" weight="0.184713186377" />
+ <shade name="soft" weight="0.0636942021989" />
+</color>
+
+</colors>

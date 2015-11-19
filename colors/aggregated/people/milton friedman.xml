@@ -1,0 +1,33 @@
+<colors query="milton friedman">
+
+<color name="black" weight="0.880596134329">
+ <shade name="cool" weight="0.473683562328" />
+ <shade name="weak" weight="0.263157534627" />
+ <shade name="light" weight="0.263157534627" />
+</color>
+
+<color name="white" weight="0.0746267910449">
+ <shade name="cool" weight="0.473683562328" />
+ <shade name="weak" weight="0.263157534627" />
+ <shade name="light" weight="0.263157534627" />
+</color>
+
+<color name="red" weight="0.0298507164179">
+ <shade name="cool" weight="0.473683562328" />
+ <shade name="weak" weight="0.263157534627" />
+ <shade name="light" weight="0.263157534627" />
+</color>
+
+<color name="pink" weight="0.014925358209">
+ <shade name="cool" weight="0.473683562328" />
+ <shade name="weak" weight="0.263157534627" />
+ <shade name="light" weight="0.263157534627" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="cool" weight="0.473683562328" />
+ <shade name="weak" weight="0.263157534627" />
+ <shade name="light" weight="0.263157534627" />
+</color>
+
+</colors>

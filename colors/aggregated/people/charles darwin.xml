@@ -1,0 +1,33 @@
+<colors query="charles darwin">
+
+<color name="white" weight="0.729322567981">
+ <shade name="light" weight="0.581080350804" />
+ <shade name="cool" weight="0.324323916728" />
+ <shade name="weak" weight="0.0945944757123" />
+</color>
+
+<color name="black" weight="0.112781840409">
+ <shade name="light" weight="0.581080350804" />
+ <shade name="cool" weight="0.324323916728" />
+ <shade name="weak" weight="0.0945944757123" />
+</color>
+
+<color name="blue" weight="0.101503656368">
+ <shade name="light" weight="0.581080350804" />
+ <shade name="cool" weight="0.324323916728" />
+ <shade name="weak" weight="0.0945944757123" />
+</color>
+
+<color name="red" weight="0.0338345521228">
+ <shade name="light" weight="0.581080350804" />
+ <shade name="cool" weight="0.324323916728" />
+ <shade name="weak" weight="0.0945944757123" />
+</color>
+
+<color name="green" weight="0.0225563680819">
+ <shade name="light" weight="0.581080350804" />
+ <shade name="cool" weight="0.324323916728" />
+ <shade name="weak" weight="0.0945944757123" />
+</color>
+
+</colors>

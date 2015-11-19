@@ -1,0 +1,33 @@
+<colors query="leo tolstoy">
+
+<color name="white" weight="0.259258990398">
+ <shade name="light" weight="0.918366391088" />
+ <shade name="warm" weight="0.0408162840484" />
+ <shade name="bright" weight="0.0408162840484" />
+</color>
+
+<color name="green" weight="0.259258990398">
+ <shade name="light" weight="0.937499003907" />
+ <shade name="bright" weight="0.0416666223959" />
+ <shade name="soft" weight="0.0208333111979" />
+</color>
+
+<color name="red" weight="0.22222199177">
+ <shade name="light" weight="0.918366391088" />
+ <shade name="warm" weight="0.0408162840484" />
+ <shade name="bright" weight="0.0408162840484" />
+</color>
+
+<color name="black" weight="0.185184993141">
+ <shade name="light" weight="0.918366391088" />
+ <shade name="warm" weight="0.0408162840484" />
+ <shade name="bright" weight="0.0408162840484" />
+</color>
+
+<color name="purple" weight="0.0740739972566">
+ <shade name="light" weight="0.937499003907" />
+ <shade name="bright" weight="0.0416666223959" />
+ <shade name="soft" weight="0.0208333111979" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="aegean sea">
+
+<color name="blue" weight="0.991618507002">
+ <shade name="dark" weight="0.980834644359" />
+ <shade name="cool" weight="0.0121951021501" />
+ <shade name="bright" weight="0.00696862980006" />
+</color>
+
+<color name="green" weight="0.0065376618382">
+ <shade name="dark" weight="0.980834644359" />
+ <shade name="cool" weight="0.0121951021501" />
+ <shade name="bright" weight="0.00696862980006" />
+</color>
+
+<color name="black" weight="0.00109692312721">
+ <shade name="dark" weight="0.608648035395" />
+ <shade name="warm" weight="0.383783397096" />
+ <shade name="cool" weight="0.00756755994274" />
+</color>
+
+<color name="white" weight="0.000438769250886">
+ <shade name="dark" weight="0.608648035395" />
+ <shade name="warm" weight="0.383783397096" />
+ <shade name="cool" weight="0.00756755994274" />
+</color>
+
+<color name="pink" weight="0.00030713847562">
+ <shade name="dark" weight="0.608648035395" />
+ <shade name="warm" weight="0.383783397096" />
+ <shade name="cool" weight="0.00756755994274" />
+</color>
+
+</colors>

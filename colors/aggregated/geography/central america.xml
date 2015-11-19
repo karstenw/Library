@@ -1,0 +1,33 @@
+<colors query="central america">
+
+<color name="green" weight="0.459379153181">
+ <shade name="light" weight="0.411760806265" />
+ <shade name="bright" weight="0.352937833942" />
+ <shade name="fresh" weight="0.235291889294" />
+</color>
+
+<color name="black" weight="0.257015989239">
+ <shade name="warm" weight="0.912750691592" />
+ <shade name="light" weight="0.0469798150084" />
+ <shade name="bright" weight="0.0402684128643" />
+</color>
+
+<color name="white" weight="0.174790567395">
+ <shade name="warm" weight="0.912750691592" />
+ <shade name="light" weight="0.0469798150084" />
+ <shade name="bright" weight="0.0402684128643" />
+</color>
+
+<color name="blue" weight="0.104381972641">
+ <shade name="light" weight="0.411760806265" />
+ <shade name="bright" weight="0.352937833942" />
+ <shade name="fresh" weight="0.235291889294" />
+</color>
+
+<color name="red" weight="0.0044313101593">
+ <shade name="warm" weight="0.912750691592" />
+ <shade name="light" weight="0.0469798150084" />
+ <shade name="bright" weight="0.0402684128643" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="virginia woolf">
+
+<color name="white" weight="0.75365267057">
+ <shade name="light" weight="0.522221624569" />
+ <shade name="dark" weight="0.377777345433" />
+ <shade name="cool" weight="0.0999998855557" />
+</color>
+
+<color name="black" weight="0.0939456237552">
+ <shade name="light" weight="0.522221624569" />
+ <shade name="dark" weight="0.377777345433" />
+ <shade name="cool" weight="0.0999998855557" />
+</color>
+
+<color name="green" weight="0.0730688184763">
+ <shade name="light" weight="0.522221624569" />
+ <shade name="dark" weight="0.377777345433" />
+ <shade name="cool" weight="0.0999998855557" />
+</color>
+
+<color name="blue" weight="0.058455054781">
+ <shade name="light" weight="0.522221624569" />
+ <shade name="dark" weight="0.377777345433" />
+ <shade name="cool" weight="0.0999998855557" />
+</color>
+
+<color name="red" weight="0.0208768052789">
+ <shade name="light" weight="0.522221624569" />
+ <shade name="dark" weight="0.377777345433" />
+ <shade name="cool" weight="0.0999998855557" />
+</color>
+
+</colors>

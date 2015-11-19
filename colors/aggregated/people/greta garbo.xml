@@ -1,0 +1,33 @@
+<colors query="greta garbo">
+
+<color name="white" weight="0.681480759617">
+ <shade name="dark" weight="0.42857089796" />
+ <shade name="cool" weight="0.333332920635" />
+ <shade name="light" weight="0.238094943311" />
+</color>
+
+<color name="blue" weight="0.125925792538">
+ <shade name="dark" weight="0.42857089796" />
+ <shade name="cool" weight="0.333332920635" />
+ <shade name="light" weight="0.238094943311" />
+</color>
+
+<color name="black" weight="0.0740739956105">
+ <shade name="dark" weight="0.42857089796" />
+ <shade name="cool" weight="0.333332920635" />
+ <shade name="light" weight="0.238094943311" />
+</color>
+
+<color name="green" weight="0.0666665960495">
+ <shade name="dark" weight="0.42857089796" />
+ <shade name="cool" weight="0.333332920635" />
+ <shade name="light" weight="0.238094943311" />
+</color>
+
+<color name="red" weight="0.0518517969274">
+ <shade name="dark" weight="0.42857089796" />
+ <shade name="cool" weight="0.333332920635" />
+ <shade name="light" weight="0.238094943311" />
+</color>
+
+</colors>

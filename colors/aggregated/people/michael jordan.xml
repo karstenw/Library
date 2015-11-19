@@ -1,0 +1,33 @@
+<colors query="michael jordan">
+
+<color name="white" weight="0.507613702593">
+ <shade name="cool" weight="0.581172658786" />
+ <shade name="hard" weight="0.347885042231" />
+ <shade name="light" weight="0.0709412635138" />
+</color>
+
+<color name="black" weight="0.346725969737">
+ <shade name="cool" weight="0.581172658786" />
+ <shade name="hard" weight="0.347885042231" />
+ <shade name="light" weight="0.0709412635138" />
+</color>
+
+<color name="blue" weight="0.0800136853239">
+ <shade name="cool" weight="0.581172658786" />
+ <shade name="hard" weight="0.347885042231" />
+ <shade name="light" weight="0.0709412635138" />
+</color>
+
+<color name="green" weight="0.0361352127269">
+ <shade name="cool" weight="0.581172658786" />
+ <shade name="hard" weight="0.347885042231" />
+ <shade name="light" weight="0.0709412635138" />
+</color>
+
+<color name="red" weight="0.029510423727">
+ <shade name="cool" weight="0.581172658786" />
+ <shade name="hard" weight="0.347885042231" />
+ <shade name="light" weight="0.0709412635138" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="avant-garde jazz">
+
+<color name="black" weight="0.981981000001">
+ <shade name="cool" weight="0.869157928117" />
+ <shade name="light" weight="0.0747662733864" />
+ <shade name="intense" weight="0.0560747050398" />
+</color>
+
+<color name="white" weight="0.018018">
+ <shade name="cool" weight="0.885713298777" />
+ <shade name="light" weight="0.0761903912926" />
+ <shade name="dark" weight="0.0380951956463" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="cool" weight="0.869157928117" />
+ <shade name="light" weight="0.0747662733864" />
+ <shade name="intense" weight="0.0560747050398" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="cool" weight="0.869157928117" />
+ <shade name="light" weight="0.0747662733864" />
+ <shade name="intense" weight="0.0560747050398" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="cool" weight="0.885713298777" />
+ <shade name="light" weight="0.0761903912926" />
+ <shade name="dark" weight="0.0380951956463" />
+</color>
+
+</colors>

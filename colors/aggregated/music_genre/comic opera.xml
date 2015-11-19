@@ -1,0 +1,33 @@
+<colors query="comic opera">
+
+<color name="black" weight="0.562499367188">
+ <shade name="light" weight="0.979126140735" />
+ <shade name="dark" weight="0.015180250244" />
+ <shade name="warm" weight="0.00569259384148" />
+</color>
+
+<color name="white" weight="0.187499789063">
+ <shade name="light" weight="0.979126140735" />
+ <shade name="dark" weight="0.015180250244" />
+ <shade name="warm" weight="0.00569259384148" />
+</color>
+
+<color name="green" weight="0.124999859375">
+ <shade name="light" weight="0.979126140735" />
+ <shade name="dark" weight="0.015180250244" />
+ <shade name="fresh" weight="0.00569259384148" />
+</color>
+
+<color name="red" weight="0.0624999296876">
+ <shade name="light" weight="0.979126140735" />
+ <shade name="dark" weight="0.015180250244" />
+ <shade name="warm" weight="0.00569259384148" />
+</color>
+
+<color name="pink" weight="0.0624999296876">
+ <shade name="light" weight="0.979126140735" />
+ <shade name="dark" weight="0.015180250244" />
+ <shade name="warm" weight="0.00569259384148" />
+</color>
+
+</colors>

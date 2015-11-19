@@ -1,0 +1,33 @@
+<colors query="piano rock">
+
+<color name="green" weight="0.411764245675">
+ <shade name="soft" weight="0.929076992859" />
+ <shade name="intense" weight="0.0354609539259" />
+ <shade name="hard" weight="0.0354609539259" />
+</color>
+
+<color name="white" weight="0.235293854672">
+ <shade name="soft" weight="0.929076992859" />
+ <shade name="hard" weight="0.0354609539259" />
+ <shade name="cool" weight="0.0354609539259" />
+</color>
+
+<color name="orange" weight="0.176470391004">
+ <shade name="soft" weight="0.929076992859" />
+ <shade name="intense" weight="0.0354609539259" />
+ <shade name="hard" weight="0.0354609539259" />
+</color>
+
+<color name="purple" weight="0.117646927336">
+ <shade name="soft" weight="0.929076992859" />
+ <shade name="hard" weight="0.0354609539259" />
+ <shade name="cool" weight="0.0354609539259" />
+</color>
+
+<color name="yellow" weight="0.0588234636679">
+ <shade name="soft" weight="0.929076992859" />
+ <shade name="intense" weight="0.0354609539259" />
+ <shade name="hard" weight="0.0354609539259" />
+</color>
+
+</colors>

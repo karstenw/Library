@@ -1,0 +1,33 @@
+<colors query="norfolk island">
+
+<color name="green" weight="0.980294582345">
+ <shade name="light" weight="0.399999400001" />
+ <shade name="fresh" weight="0.299999550001" />
+ <shade name="cool" weight="0.299999550001" />
+</color>
+
+<color name="black" weight="0.00689654480041">
+ <shade name="light" weight="0.399999400001" />
+ <shade name="fresh" weight="0.299999550001" />
+ <shade name="cool" weight="0.299999550001" />
+</color>
+
+<color name="blue" weight="0.00591132411464">
+ <shade name="light" weight="0.399999400001" />
+ <shade name="fresh" weight="0.299999550001" />
+ <shade name="cool" weight="0.299999550001" />
+</color>
+
+<color name="white" weight="0.00394088274309">
+ <shade name="light" weight="0.399999400001" />
+ <shade name="fresh" weight="0.299999550001" />
+ <shade name="cool" weight="0.299999550001" />
+</color>
+
+<color name="orange" weight="0.00295566205732">
+ <shade name="light" weight="0.399999400001" />
+ <shade name="fresh" weight="0.299999550001" />
+ <shade name="cool" weight="0.299999550001" />
+</color>
+
+</colors>

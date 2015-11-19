@@ -1,0 +1,33 @@
+<colors query="voltaire">
+
+<color name="red" weight="0.995383103904">
+ <shade name="hard" weight="0.517679794691" />
+ <shade name="light" weight="0.434228680246" />
+ <shade name="cool" weight="0.0480904727308" />
+</color>
+
+<color name="black" weight="0.00302225128957">
+ <shade name="hard" weight="0.517679794691" />
+ <shade name="light" weight="0.434228680246" />
+ <shade name="cool" weight="0.0480904727308" />
+</color>
+
+<color name="white" weight="0.00088191974491">
+ <shade name="hard" weight="0.517679794691" />
+ <shade name="light" weight="0.434228680246" />
+ <shade name="cool" weight="0.0480904727308" />
+</color>
+
+<color name="blue" weight="0.000422908883524">
+ <shade name="hard" weight="0.517679794691" />
+ <shade name="light" weight="0.434228680246" />
+ <shade name="cool" weight="0.0480904727308" />
+</color>
+
+<color name="green" weight="0.000288815822894">
+ <shade name="hard" weight="0.517679794691" />
+ <shade name="light" weight="0.434228680246" />
+ <shade name="cool" weight="0.0480904727308" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="sufi">
+
+<color name="green" weight="0.564780452995">
+ <shade name="cool" weight="0.510971146118" />
+ <shade name="intense" weight="0.27272693075" />
+ <shade name="soft" weight="0.216300669215" />
+</color>
+
+<color name="black" weight="0.281934022577">
+ <shade name="cool" weight="0.510971146118" />
+ <shade name="intense" weight="0.27272693075" />
+ <shade name="soft" weight="0.216300669215" />
+</color>
+
+<color name="blue" weight="0.0748174428846">
+ <shade name="cool" weight="0.510971146118" />
+ <shade name="intense" weight="0.27272693075" />
+ <shade name="soft" weight="0.216300669215" />
+</color>
+
+<color name="white" weight="0.049270023363">
+ <shade name="cool" weight="0.554421014393" />
+ <shade name="soft" weight="0.23469355824" />
+ <shade name="light" weight="0.210884066824" />
+</color>
+
+<color name="red" weight="0.0291970508818">
+ <shade name="cool" weight="0.510971146118" />
+ <shade name="intense" weight="0.27272693075" />
+ <shade name="soft" weight="0.216300669215" />
+</color>
+
+</colors>

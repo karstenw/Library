@@ -1,0 +1,33 @@
+<colors query="rhode island">
+
+<color name="red" weight="0.33207771713">
+ <shade name="fresh" weight="0.95771494557" />
+ <shade name="light" weight="0.0242139250389" />
+ <shade name="cool" weight="0.0180700933126" />
+</color>
+
+<color name="white" weight="0.309825086601">
+ <shade name="fresh" weight="0.95771494557" />
+ <shade name="light" weight="0.0242139250389" />
+ <shade name="cool" weight="0.0180700933126" />
+</color>
+
+<color name="black" weight="0.181444525855">
+ <shade name="fresh" weight="0.95771494557" />
+ <shade name="light" weight="0.0242139250389" />
+ <shade name="cool" weight="0.0180700933126" />
+</color>
+
+<color name="blue" weight="0.112803719376">
+ <shade name="fresh" weight="0.95771494557" />
+ <shade name="light" weight="0.0242139250389" />
+ <shade name="cool" weight="0.0180700933126" />
+</color>
+
+<color name="green" weight="0.0638479322111">
+ <shade name="fresh" weight="0.95771494557" />
+ <shade name="light" weight="0.0242139250389" />
+ <shade name="cool" weight="0.0180700933126" />
+</color>
+
+</colors>

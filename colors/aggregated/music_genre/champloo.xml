@@ -1,0 +1,33 @@
+<colors query="champloo">
+
+<color name="pink" weight="0.457446341331">
+ <shade name="cool" weight="0.639999283201" />
+ <shade name="hard" weight="0.199999776" />
+ <shade name="dark" weight="0.1599998208" />
+</color>
+
+<color name="blue" weight="0.382978332277">
+ <shade name="cool" weight="0.639999283201" />
+ <shade name="hard" weight="0.199999776" />
+ <shade name="dark" weight="0.1599998208" />
+</color>
+
+<color name="black" weight="0.106382870077">
+ <shade name="cool" weight="0.639999283201" />
+ <shade name="hard" weight="0.199999776" />
+ <shade name="dark" weight="0.1599998208" />
+</color>
+
+<color name="white" weight="0.0319148610231">
+ <shade name="cool" weight="0.639999283201" />
+ <shade name="hard" weight="0.199999776" />
+ <shade name="dark" weight="0.1599998208" />
+</color>
+
+<color name="red" weight="0.0212765740154">
+ <shade name="cool" weight="0.639999283201" />
+ <shade name="hard" weight="0.199999776" />
+ <shade name="dark" weight="0.1599998208" />
+</color>
+
+</colors>

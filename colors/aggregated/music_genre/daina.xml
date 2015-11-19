@@ -1,0 +1,33 @@
+<colors query="daina">
+
+<color name="red" weight="0.326530270721">
+ <shade name="cool" weight="0.97014826669" />
+ <shade name="hard" weight="0.0199004772654" />
+ <shade name="dark" weight="0.00995023863272" />
+</color>
+
+<color name="green" weight="0.244897703041">
+ <shade name="cool" weight="0.97014826669" />
+ <shade name="hard" weight="0.0199004772654" />
+ <shade name="dark" weight="0.00995023863272" />
+</color>
+
+<color name="pink" weight="0.224489561121">
+ <shade name="cool" weight="0.97014826669" />
+ <shade name="hard" weight="0.0199004772654" />
+ <shade name="dark" weight="0.00995023863272" />
+</color>
+
+<color name="blue" weight="0.17346920632">
+ <shade name="cool" weight="0.97014826669" />
+ <shade name="hard" weight="0.0199004772654" />
+ <shade name="dark" weight="0.00995023863272" />
+</color>
+
+<color name="black" weight="0.0306122128801">
+ <shade name="cool" weight="0.97014826669" />
+ <shade name="hard" weight="0.0199004772654" />
+ <shade name="dark" weight="0.00995023863272" />
+</color>
+
+</colors>

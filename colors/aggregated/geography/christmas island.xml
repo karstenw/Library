@@ -1,0 +1,33 @@
+<colors query="christmas island">
+
+<color name="red" weight="0.925924988269">
+ <shade name="light" weight="0.454544876034" />
+ <shade name="hard" weight="0.363635900827" />
+ <shade name="cool" weight="0.181817950414" />
+</color>
+
+<color name="orange" weight="0.0467835783546">
+ <shade name="light" weight="0.454544876034" />
+ <shade name="hard" weight="0.363635900827" />
+ <shade name="cool" weight="0.181817950414" />
+</color>
+
+<color name="blue" weight="0.00974657882388">
+ <shade name="light" weight="0.454544876034" />
+ <shade name="hard" weight="0.363635900827" />
+ <shade name="cool" weight="0.181817950414" />
+</color>
+
+<color name="black" weight="0.00974657882388">
+ <shade name="light" weight="0.454544876034" />
+ <shade name="hard" weight="0.363635900827" />
+ <shade name="cool" weight="0.181817950414" />
+</color>
+
+<color name="white" weight="0.00779726305911">
+ <shade name="light" weight="0.454544876034" />
+ <shade name="hard" weight="0.363635900827" />
+ <shade name="cool" weight="0.181817950414" />
+</color>
+
+</colors>

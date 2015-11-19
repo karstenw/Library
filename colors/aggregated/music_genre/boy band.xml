@@ -1,0 +1,33 @@
+<colors query="boy band">
+
+<color name="white" weight="0.727146768242">
+ <shade name="cool" weight="0.689056714478" />
+ <shade name="hard" weight="0.273022471774" />
+ <shade name="weak" weight="0.0379197877464" />
+</color>
+
+<color name="black" weight="0.206631693276">
+ <shade name="cool" weight="0.689056714478" />
+ <shade name="hard" weight="0.273022471774" />
+ <shade name="weak" weight="0.0379197877464" />
+</color>
+
+<color name="blue" weight="0.0652365774485">
+ <shade name="cool" weight="0.689056714478" />
+ <shade name="hard" weight="0.273022471774" />
+ <shade name="weak" weight="0.0379197877464" />
+</color>
+
+<color name="red" weight="0.000590376266502">
+ <shade name="cool" weight="0.689056714478" />
+ <shade name="hard" weight="0.273022471774" />
+ <shade name="weak" weight="0.0379197877464" />
+</color>
+
+<color name="green" weight="0.000393584177668">
+ <shade name="cool" weight="0.689056714478" />
+ <shade name="hard" weight="0.273022471774" />
+ <shade name="weak" weight="0.0379197877464" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="ambient techno">
+
+<color name="blue" weight="0.4999995">
+ <shade name="dark" weight="0.996891804292" />
+ <shade name="cool" weight="0.00263248485116" />
+ <shade name="fresh" weight="0.000474710382996" />
+</color>
+
+<color name="black" weight="0.4999995">
+ <shade name="dark" weight="0.996891804292" />
+ <shade name="cool" weight="0.00263248485116" />
+ <shade name="fresh" weight="0.000474710382996" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="dark" weight="0.996891804292" />
+ <shade name="cool" weight="0.00263248485116" />
+ <shade name="fresh" weight="0.000474710382996" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="dark" weight="0.996891804292" />
+ <shade name="cool" weight="0.00263248485116" />
+ <shade name="fresh" weight="0.000474710382996" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="dark" weight="0.996891804292" />
+ <shade name="cool" weight="0.00263248485116" />
+ <shade name="fresh" weight="0.000474710382996" />
+</color>
+
+</colors>

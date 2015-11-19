@@ -1,0 +1,33 @@
+<colors query="stevie wonder">
+
+<color name="white" weight="0.281035875738">
+ <shade name="soft" weight="0.589783363624" />
+ <shade name="cool" weight="0.271721621098" />
+ <shade name="bright" weight="0.138493771994" />
+</color>
+
+<color name="green" weight="0.244867780425">
+ <shade name="soft" weight="0.589783363624" />
+ <shade name="cool" weight="0.271721621098" />
+ <shade name="bright" weight="0.138493771994" />
+</color>
+
+<color name="blue" weight="0.203323346621">
+ <shade name="soft" weight="0.589783363624" />
+ <shade name="cool" weight="0.271721621098" />
+ <shade name="bright" weight="0.138493771994" />
+</color>
+
+<color name="red" weight="0.187683089188">
+ <shade name="soft" weight="0.589783363624" />
+ <shade name="cool" weight="0.271721621098" />
+ <shade name="bright" weight="0.138493771994" />
+</color>
+
+<color name="black" weight="0.0830888676093">
+ <shade name="soft" weight="0.589783363624" />
+ <shade name="cool" weight="0.271721621098" />
+ <shade name="bright" weight="0.138493771994" />
+</color>
+
+</colors>

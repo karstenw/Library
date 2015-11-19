@@ -1,0 +1,33 @@
+<colors query="guatemala">
+
+<color name="red" weight="0.484617423511">
+ <shade name="dark" weight="0.440250961098" />
+ <shade name="fresh" weight="0.308175672769" />
+ <shade name="cool" weight="0.25157197777" />
+</color>
+
+<color name="green" weight="0.428381954571">
+ <shade name="dark" weight="0.440250961098" />
+ <shade name="fresh" weight="0.308175672769" />
+ <shade name="cool" weight="0.25157197777" />
+</color>
+
+<color name="black" weight="0.0342374766781">
+ <shade name="dark" weight="0.440250961098" />
+ <shade name="fresh" weight="0.308175672769" />
+ <shade name="cool" weight="0.25157197777" />
+</color>
+
+<color name="blue" weight="0.0324180938595">
+ <shade name="dark" weight="0.440250961098" />
+ <shade name="fresh" weight="0.308175672769" />
+ <shade name="cool" weight="0.25157197777" />
+</color>
+
+<color name="white" weight="0.0203440078812">
+ <shade name="dark" weight="0.440250961098" />
+ <shade name="fresh" weight="0.308175672769" />
+ <shade name="cool" weight="0.25157197777" />
+</color>
+
+</colors>

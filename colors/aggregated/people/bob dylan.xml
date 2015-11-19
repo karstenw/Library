@@ -1,0 +1,33 @@
+<colors query="bob dylan">
+
+<color name="blue" weight="0.687673388729">
+ <shade name="cool" weight="0.59720390681" />
+ <shade name="hard" weight="0.245658344645" />
+ <shade name="light" weight="0.157136630799" />
+</color>
+
+<color name="purple" weight="0.109157269553">
+ <shade name="cool" weight="0.59720390681" />
+ <shade name="hard" weight="0.245658344645" />
+ <shade name="light" weight="0.157136630799" />
+</color>
+
+<color name="white" weight="0.0907032495007">
+ <shade name="cool" weight="0.59720390681" />
+ <shade name="hard" weight="0.245658344645" />
+ <shade name="light" weight="0.157136630799" />
+</color>
+
+<color name="black" weight="0.0755570254958">
+ <shade name="cool" weight="0.59720390681" />
+ <shade name="hard" weight="0.245658344645" />
+ <shade name="light" weight="0.157136630799" />
+</color>
+
+<color name="green" weight="0.0369080401039">
+ <shade name="cool" weight="0.59720390681" />
+ <shade name="hard" weight="0.245658344645" />
+ <shade name="light" weight="0.157136630799" />
+</color>
+
+</colors>

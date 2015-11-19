@@ -1,0 +1,33 @@
+<colors query="kentucky">
+
+<color name="green" weight="0.690322504363">
+ <shade name="dark" weight="0.369564232021" />
+ <shade name="neutral" weight="0.315216550841" />
+ <shade name="light" weight="0.315216550841" />
+</color>
+
+<color name="blue" weight="0.267397649911">
+ <shade name="dark" weight="0.369564232021" />
+ <shade name="neutral" weight="0.315216550841" />
+ <shade name="light" weight="0.315216550841" />
+</color>
+
+<color name="white" weight="0.0279676113428">
+ <shade name="warm" weight="0.434976621527" />
+ <shade name="dark" weight="0.304932064575" />
+ <shade name="neutral" weight="0.260089113903" />
+</color>
+
+<color name="red" weight="0.0123876054143">
+ <shade name="warm" weight="0.434976621527" />
+ <shade name="dark" weight="0.304932064575" />
+ <shade name="neutral" weight="0.260089113903" />
+</color>
+
+<color name="purple" weight="0.00192362595089">
+ <shade name="dark" weight="0.369564232021" />
+ <shade name="neutral" weight="0.315216550841" />
+ <shade name="light" weight="0.315216550841" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="gore vidal">
+
+<color name="red" weight="0.49870751034">
+ <shade name="cool" weight="0.766665772223" />
+ <shade name="bright" weight="0.166666472222" />
+ <shade name="light" weight="0.066666588889" />
+</color>
+
+<color name="white" weight="0.354004813039">
+ <shade name="cool" weight="0.766665772223" />
+ <shade name="bright" weight="0.166666472222" />
+ <shade name="light" weight="0.066666588889" />
+</color>
+
+<color name="green" weight="0.118862929926">
+ <shade name="cool" weight="0.766665772223" />
+ <shade name="bright" weight="0.166666472222" />
+ <shade name="light" weight="0.066666588889" />
+</color>
+
+<color name="black" weight="0.0232557906376">
+ <shade name="cool" weight="0.766665772223" />
+ <shade name="bright" weight="0.166666472222" />
+ <shade name="light" weight="0.066666588889" />
+</color>
+
+<color name="orange" weight="0.00516795347502">
+ <shade name="cool" weight="0.766665772223" />
+ <shade name="bright" weight="0.166666472222" />
+ <shade name="light" weight="0.066666588889" />
+</color>
+
+</colors>

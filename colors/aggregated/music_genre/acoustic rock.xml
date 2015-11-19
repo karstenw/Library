@@ -1,0 +1,33 @@
+<colors query="acoustic rock">
+
+<color name="black" weight="0.595237498712">
+ <shade name="light" weight="0.574031216599" />
+ <shade name="soft" weight="0.318906231444" />
+ <shade name="dark" weight="0.107061377699" />
+</color>
+
+<color name="blue" weight="0.385280999166">
+ <shade name="light" weight="0.574031216599" />
+ <shade name="soft" weight="0.318906231444" />
+ <shade name="dark" weight="0.107061377699" />
+</color>
+
+<color name="red" weight="0.0108224999766">
+ <shade name="light" weight="0.574031216599" />
+ <shade name="soft" weight="0.318906231444" />
+ <shade name="dark" weight="0.107061377699" />
+</color>
+
+<color name="white" weight="0.00649349998595">
+ <shade name="light" weight="0.574031216599" />
+ <shade name="soft" weight="0.318906231444" />
+ <shade name="dark" weight="0.107061377699" />
+</color>
+
+<color name="pink" weight="0.00216449999532">
+ <shade name="light" weight="0.574031216599" />
+ <shade name="soft" weight="0.318906231444" />
+ <shade name="dark" weight="0.107061377699" />
+</color>
+
+</colors>

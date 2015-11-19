@@ -1,0 +1,33 @@
+<colors query="mpb">
+
+<color name="red" weight="0.456310221086">
+ <shade name="light" weight="0.959255863375" />
+ <shade name="soft" weight="0.0376129272744" />
+ <shade name="fresh" weight="0.00313020334364" />
+</color>
+
+<color name="black" weight="0.249190688111">
+ <shade name="light" weight="0.959255863375" />
+ <shade name="soft" weight="0.0376129272744" />
+ <shade name="fresh" weight="0.00313020334364" />
+</color>
+
+<color name="white" weight="0.181229591353">
+ <shade name="light" weight="0.959255863375" />
+ <shade name="soft" weight="0.0376129272744" />
+ <shade name="fresh" weight="0.00313020334364" />
+</color>
+
+<color name="green" weight="0.074433582163">
+ <shade name="light" weight="0.959255863375" />
+ <shade name="soft" weight="0.0376129272744" />
+ <shade name="fresh" weight="0.00313020334364" />
+</color>
+
+<color name="blue" weight="0.0388349124329">
+ <shade name="light" weight="0.959255863375" />
+ <shade name="soft" weight="0.0376129272744" />
+ <shade name="fresh" weight="0.00313020334364" />
+</color>
+
+</colors>

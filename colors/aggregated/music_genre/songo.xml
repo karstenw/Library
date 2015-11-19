@@ -1,0 +1,33 @@
+<colors query="songo">
+
+<color name="blue" weight="0.965216426088">
+ <shade name="cool" weight="0.868420115652" />
+ <shade name="soft" weight="0.0789472832411" />
+ <shade name="light" weight="0.0526315221607" />
+</color>
+
+<color name="pink" weight="0.0173912869565">
+ <shade name="cool" weight="0.868420115652" />
+ <shade name="soft" weight="0.0789472832411" />
+ <shade name="light" weight="0.0526315221607" />
+</color>
+
+<color name="black" weight="0.0130434652174">
+ <shade name="cool" weight="0.868420115652" />
+ <shade name="soft" weight="0.0789472832411" />
+ <shade name="light" weight="0.0526315221607" />
+</color>
+
+<color name="red" weight="0.00434782173913">
+ <shade name="cool" weight="0.868420115652" />
+ <shade name="soft" weight="0.0789472832411" />
+ <shade name="light" weight="0.0526315221607" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="cool" weight="0.868420115652" />
+ <shade name="soft" weight="0.0789472832411" />
+ <shade name="light" weight="0.0526315221607" />
+</color>
+
+</colors>

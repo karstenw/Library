@@ -1,0 +1,33 @@
+<colors query="percussion">
+
+<color name="black" weight="0.353372713338">
+ <shade name="light" weight="0.731859073689" />
+ <shade name="soft" weight="0.212676995773" />
+ <shade name="intense" weight="0.0554628243879" />
+</color>
+
+<color name="red" weight="0.29830164113">
+ <shade name="light" weight="0.731859073689" />
+ <shade name="soft" weight="0.212676995773" />
+ <shade name="intense" weight="0.0554628243879" />
+</color>
+
+<color name="blue" weight="0.133317887305">
+ <shade name="light" weight="0.731859073689" />
+ <shade name="soft" weight="0.212676995773" />
+ <shade name="intense" weight="0.0554628243879" />
+</color>
+
+<color name="white" weight="0.126434003279">
+ <shade name="light" weight="0.746966596567" />
+ <shade name="soft" weight="0.217067216096" />
+ <shade name="dark" weight="0.0359650583532" />
+</color>
+
+<color name="orange" weight="0.0885726411355">
+ <shade name="light" weight="0.731859073689" />
+ <shade name="soft" weight="0.212676995773" />
+ <shade name="intense" weight="0.0554628243879" />
+</color>
+
+</colors>

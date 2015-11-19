@@ -1,0 +1,33 @@
+<colors query="paul klee">
+
+<color name="red" weight="0.471909603333">
+ <shade name="light" weight="0.53333272889" />
+ <shade name="cool" weight="0.399999546667" />
+ <shade name="weak" weight="0.0666665911112" />
+</color>
+
+<color name="yellow" weight="0.247190744603">
+ <shade name="light" weight="0.53333272889" />
+ <shade name="cool" weight="0.399999546667" />
+ <shade name="weak" weight="0.0666665911112" />
+</color>
+
+<color name="black" weight="0.101123486429">
+ <shade name="light" weight="0.53333272889" />
+ <shade name="cool" weight="0.399999546667" />
+ <shade name="weak" weight="0.0666665911112" />
+</color>
+
+<color name="white" weight="0.0898875434921">
+ <shade name="light" weight="0.53333272889" />
+ <shade name="cool" weight="0.399999546667" />
+ <shade name="weak" weight="0.0666665911112" />
+</color>
+
+<color name="green" weight="0.0898875434921">
+ <shade name="light" weight="0.53333272889" />
+ <shade name="cool" weight="0.399999546667" />
+ <shade name="weak" weight="0.0666665911112" />
+</color>
+
+</colors>

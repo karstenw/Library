@@ -1,0 +1,33 @@
+<colors query="tokelau">
+
+<color name="blue" weight="0.454545">
+ <shade name="fresh" weight="0.777776827162" />
+ <shade name="hard" weight="0.222221950618" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="black" weight="0.363636">
+ <shade name="fresh" weight="0.636363000001" />
+ <shade name="warm" weight="0.181818" />
+ <shade name="hard" weight="0.181818" />
+</color>
+
+<color name="white" weight="0.0909090000001">
+ <shade name="fresh" weight="0.636363000001" />
+ <shade name="warm" weight="0.181818" />
+ <shade name="hard" weight="0.181818" />
+</color>
+
+<color name="green" weight="0.0909090000001">
+ <shade name="fresh" weight="0.777776827162" />
+ <shade name="hard" weight="0.222221950618" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="fresh" weight="0.636363000001" />
+ <shade name="warm" weight="0.181818" />
+ <shade name="hard" weight="0.181818" />
+</color>
+
+</colors>

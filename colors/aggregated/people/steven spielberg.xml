@@ -1,0 +1,33 @@
+<colors query="steven spielberg">
+
+<color name="purple" weight="0.707911245046">
+ <shade name="cool" weight="0.504853812613" />
+ <shade name="hard" weight="0.451455813202" />
+ <shade name="dark" weight="0.0436892722453" />
+</color>
+
+<color name="black" weight="0.149910616598">
+ <shade name="cool" weight="0.504853812613" />
+ <shade name="hard" weight="0.451455813202" />
+ <shade name="dark" weight="0.0436892722453" />
+</color>
+
+<color name="red" weight="0.074955308299">
+ <shade name="cool" weight="0.504853812613" />
+ <shade name="hard" weight="0.451455813202" />
+ <shade name="dark" weight="0.0436892722453" />
+</color>
+
+<color name="white" weight="0.0416418379439">
+ <shade name="cool" weight="0.504853812613" />
+ <shade name="hard" weight="0.451455813202" />
+ <shade name="dark" weight="0.0436892722453" />
+</color>
+
+<color name="green" weight="0.0255799861655">
+ <shade name="cool" weight="0.504853812613" />
+ <shade name="hard" weight="0.451455813202" />
+ <shade name="dark" weight="0.0436892722453" />
+</color>
+
+</colors>

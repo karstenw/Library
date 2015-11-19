@@ -1,0 +1,33 @@
+<colors query="noise rock">
+
+<color name="white" weight="0.882873291162">
+ <shade name="dark" weight="0.737880493328" />
+ <shade name="cool" weight="0.249550823778" />
+ <shade name="hard" weight="0.0125673076722" />
+</color>
+
+<color name="pink" weight="0.115836842399">
+ <shade name="dark" weight="0.737880493328" />
+ <shade name="cool" weight="0.249550823778" />
+ <shade name="hard" weight="0.0125673076722" />
+</color>
+
+<color name="black" weight="0.000966649588863">
+ <shade name="dark" weight="0.545816177828" />
+ <shade name="intense" weight="0.269588039171" />
+ <shade name="cool" weight="0.184594765738" />
+</color>
+
+<color name="red" weight="0.000161108264811">
+ <shade name="dark" weight="0.545816177828" />
+ <shade name="intense" weight="0.269588039171" />
+ <shade name="cool" weight="0.184594765738" />
+</color>
+
+<color name="orange" weight="0.000161108264811">
+ <shade name="dark" weight="0.545816177828" />
+ <shade name="intense" weight="0.269588039171" />
+ <shade name="cool" weight="0.184594765738" />
+</color>
+
+</colors>

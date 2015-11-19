@@ -1,0 +1,33 @@
+<colors query="galileo">
+
+<color name="red" weight="0.678892484492">
+ <shade name="light" weight="0.789515202625" />
+ <shade name="cool" weight="0.149999823992" />
+ <shade name="soft" weight="0.0604837999968" />
+</color>
+
+<color name="white" weight="0.169562246127">
+ <shade name="light" weight="0.789515202625" />
+ <shade name="cool" weight="0.149999823992" />
+ <shade name="soft" weight="0.0604837999968" />
+</color>
+
+<color name="black" weight="0.0768982482434">
+ <shade name="light" weight="0.789515202625" />
+ <shade name="cool" weight="0.149999823992" />
+ <shade name="soft" weight="0.0604837999968" />
+</color>
+
+<color name="blue" weight="0.0469754989269">
+ <shade name="light" weight="0.789515202625" />
+ <shade name="cool" weight="0.149999823992" />
+ <shade name="soft" weight="0.0604837999968" />
+</color>
+
+<color name="green" weight="0.0276704993679">
+ <shade name="light" weight="0.789515202625" />
+ <shade name="cool" weight="0.149999823992" />
+ <shade name="soft" weight="0.0604837999968" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="slovakia">
+
+<color name="orange" weight="0.939483181256">
+ <shade name="light" weight="0.798746187749" />
+ <shade name="soft" weight="0.148002970083" />
+ <shade name="cool" weight="0.0532497458499" />
+</color>
+
+<color name="white" weight="0.023015849847">
+ <shade name="light" weight="0.798746187749" />
+ <shade name="soft" weight="0.148002970083" />
+ <shade name="cool" weight="0.0532497458499" />
+</color>
+
+<color name="red" weight="0.017757918632">
+ <shade name="light" weight="0.798746187749" />
+ <shade name="soft" weight="0.148002970083" />
+ <shade name="cool" weight="0.0532497458499" />
+</color>
+
+<color name="green" weight="0.0120039561702">
+ <shade name="light" weight="0.798746187749" />
+ <shade name="soft" weight="0.148002970083" />
+ <shade name="cool" weight="0.0532497458499" />
+</color>
+
+<color name="black" weight="0.00773808744857">
+ <shade name="light" weight="0.798746187749" />
+ <shade name="soft" weight="0.148002970083" />
+ <shade name="cool" weight="0.0532497458499" />
+</color>
+
+</colors>

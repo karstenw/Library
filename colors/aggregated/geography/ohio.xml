@@ -1,0 +1,33 @@
+<colors query="ohio">
+
+<color name="green" weight="0.86259246232">
+ <shade name="cool" weight="0.50191984218" />
+ <shade name="hard" weight="0.322662755687" />
+ <shade name="bright" weight="0.175415863211" />
+</color>
+
+<color name="blue" weight="0.086259246232">
+ <shade name="cool" weight="0.50191984218" />
+ <shade name="hard" weight="0.322662755687" />
+ <shade name="bright" weight="0.175415863211" />
+</color>
+
+<color name="black" weight="0.0252552844638">
+ <shade name="cool" weight="0.50191984218" />
+ <shade name="hard" weight="0.322662755687" />
+ <shade name="bright" weight="0.175415863211" />
+</color>
+
+<color name="white" weight="0.0241881597682">
+ <shade name="cool" weight="0.50191984218" />
+ <shade name="hard" weight="0.322662755687" />
+ <shade name="bright" weight="0.175415863211" />
+</color>
+
+<color name="pink" weight="0.00170384243073">
+ <shade name="cool" weight="0.50191984218" />
+ <shade name="hard" weight="0.322662755687" />
+ <shade name="bright" weight="0.175415863211" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="robert frost">
+
+<color name="white" weight="0.49491473248">
+ <shade name="dark" weight="0.867131890852" />
+ <shade name="cool" weight="0.0699299911977" />
+ <shade name="hard" weight="0.0629369920779" />
+</color>
+
+<color name="green" weight="0.318643731871">
+ <shade name="dark" weight="0.867131890852" />
+ <shade name="cool" weight="0.0699299911977" />
+ <shade name="hard" weight="0.0629369920779" />
+</color>
+
+<color name="red" weight="0.128813423522">
+ <shade name="dark" weight="0.867131890852" />
+ <shade name="cool" weight="0.0699299911977" />
+ <shade name="hard" weight="0.0629369920779" />
+</color>
+
+<color name="blue" weight="0.0305084424131">
+ <shade name="dark" weight="0.867131890852" />
+ <shade name="cool" weight="0.0699299911977" />
+ <shade name="hard" weight="0.0629369920779" />
+</color>
+
+<color name="black" weight="0.0271186154783">
+ <shade name="dark" weight="0.867131890852" />
+ <shade name="cool" weight="0.0699299911977" />
+ <shade name="hard" weight="0.0629369920779" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="mazurka">
+
+<color name="blue" weight="0.650762703048">
+ <shade name="light" weight="0.690475269842" />
+ <shade name="soft" weight="0.166666444445" />
+ <shade name="cool" weight="0.142856952381" />
+</color>
+
+<color name="white" weight="0.284350858517">
+ <shade name="light" weight="0.690475269842" />
+ <shade name="soft" weight="0.166666444445" />
+ <shade name="cool" weight="0.142856952381" />
+</color>
+
+<color name="red" weight="0.0438930855428">
+ <shade name="light" weight="0.690475269842" />
+ <shade name="soft" weight="0.166666444445" />
+ <shade name="cool" weight="0.142856952381" />
+</color>
+
+<color name="orange" weight="0.0114503701416">
+ <shade name="light" weight="0.690475269842" />
+ <shade name="soft" weight="0.166666444445" />
+ <shade name="cool" weight="0.142856952381" />
+</color>
+
+<color name="black" weight="0.00954197511801">
+ <shade name="light" weight="0.690475269842" />
+ <shade name="soft" weight="0.166666444445" />
+ <shade name="cool" weight="0.142856952381" />
+</color>
+
+</colors>

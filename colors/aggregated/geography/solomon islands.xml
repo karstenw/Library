@@ -1,0 +1,33 @@
+<colors query="solomon islands">
+
+<color name="red" weight="0.372880941971">
+ <shade name="weak" weight="0.740739753088" />
+ <shade name="hard" weight="0.148147950618" />
+ <shade name="dark" weight="0.111110962963" />
+</color>
+
+<color name="black" weight="0.288135273341">
+ <shade name="weak" weight="0.740739753088" />
+ <shade name="hard" weight="0.148147950618" />
+ <shade name="dark" weight="0.111110962963" />
+</color>
+
+<color name="white" weight="0.245762439026">
+ <shade name="weak" weight="0.740739753088" />
+ <shade name="hard" weight="0.148147950618" />
+ <shade name="dark" weight="0.111110962963" />
+</color>
+
+<color name="blue" weight="0.0508474011779">
+ <shade name="weak" weight="0.740739753088" />
+ <shade name="hard" weight="0.148147950618" />
+ <shade name="dark" weight="0.111110962963" />
+</color>
+
+<color name="yellow" weight="0.0423728343149">
+ <shade name="weak" weight="0.740739753088" />
+ <shade name="hard" weight="0.148147950618" />
+ <shade name="dark" weight="0.111110962963" />
+</color>
+
+</colors>

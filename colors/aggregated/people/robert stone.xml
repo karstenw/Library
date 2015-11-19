@@ -1,0 +1,33 @@
+<colors query="robert stone">
+
+<color name="green" weight="0.979590857144">
+ <shade name="light" weight="0.999999000001" />
+ <shade name="weak" weight="0.0" />
+ <shade name="soft" weight="0.0" />
+</color>
+
+<color name="white" weight="0.0122448857143">
+ <shade name="light" weight="0.999999000001" />
+ <shade name="weak" weight="0.0" />
+ <shade name="warm" weight="0.0" />
+</color>
+
+<color name="black" weight="0.00816325714287">
+ <shade name="light" weight="0.999999000001" />
+ <shade name="weak" weight="0.0" />
+ <shade name="warm" weight="0.0" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="light" weight="0.999999000001" />
+ <shade name="weak" weight="0.0" />
+ <shade name="warm" weight="0.0" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="light" weight="0.999999000001" />
+ <shade name="weak" weight="0.0" />
+ <shade name="warm" weight="0.0" />
+</color>
+
+</colors>

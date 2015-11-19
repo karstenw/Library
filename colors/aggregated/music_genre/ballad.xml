@@ -1,0 +1,33 @@
+<colors query="ballad">
+
+<color name="white" weight="0.312836766082">
+ <shade name="soft" weight="0.789987316797" />
+ <shade name="cool" weight="0.105983446956" />
+ <shade name="warm" weight="0.104028032806" />
+</color>
+
+<color name="black" weight="0.296655554043">
+ <shade name="soft" weight="0.789987316797" />
+ <shade name="cool" weight="0.105983446956" />
+ <shade name="warm" weight="0.104028032806" />
+</color>
+
+<color name="red" weight="0.173948029416">
+ <shade name="soft" weight="0.789987316797" />
+ <shade name="cool" weight="0.105983446956" />
+ <shade name="warm" weight="0.104028032806" />
+</color>
+
+<color name="green" weight="0.136191867993">
+ <shade name="soft" weight="0.819139286028" />
+ <shade name="cool" weight="0.109894428967" />
+ <shade name="intense" weight="0.0709650371559" />
+</color>
+
+<color name="blue" weight="0.0803666864589">
+ <shade name="soft" weight="0.819139286028" />
+ <shade name="cool" weight="0.109894428967" />
+ <shade name="intense" weight="0.0709650371559" />
+</color>
+
+</colors>

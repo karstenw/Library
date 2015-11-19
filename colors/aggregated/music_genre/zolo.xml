@@ -1,0 +1,33 @@
+<colors query="zolo">
+
+<color name="red" weight="0.429751604399">
+ <shade name="dark" weight="0.507245825457" />
+ <shade name="cool" weight="0.434782136106" />
+ <shade name="hard" weight="0.0579709514808" />
+</color>
+
+<color name="black" weight="0.239669163992">
+ <shade name="dark" weight="0.507245825457" />
+ <shade name="cool" weight="0.434782136106" />
+ <shade name="hard" weight="0.0579709514808" />
+</color>
+
+<color name="blue" weight="0.190082440407">
+ <shade name="dark" weight="0.507245825457" />
+ <shade name="cool" weight="0.434782136106" />
+ <shade name="hard" weight="0.0579709514808" />
+</color>
+
+<color name="pink" weight="0.0826445393075">
+ <shade name="dark" weight="0.507245825457" />
+ <shade name="cool" weight="0.434782136106" />
+ <shade name="hard" weight="0.0579709514808" />
+</color>
+
+<color name="green" weight="0.0578511775153">
+ <shade name="dark" weight="0.507245825457" />
+ <shade name="cool" weight="0.434782136106" />
+ <shade name="hard" weight="0.0579709514808" />
+</color>
+
+</colors>

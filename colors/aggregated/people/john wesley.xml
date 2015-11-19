@@ -1,0 +1,33 @@
+<colors query="john wesley">
+
+<color name="black" weight="0.568015744061">
+ <shade name="bright" weight="0.930655966289" />
+ <shade name="hard" weight="0.0364963124035" />
+ <shade name="light" weight="0.0328466811631" />
+</color>
+
+<color name="white" weight="0.3076751947">
+ <shade name="bright" weight="0.930655966289" />
+ <shade name="hard" weight="0.0364963124035" />
+ <shade name="light" weight="0.0328466811631" />
+</color>
+
+<color name="green" weight="0.123798303193">
+ <shade name="bright" weight="0.930655966289" />
+ <shade name="hard" weight="0.0364963124035" />
+ <shade name="light" weight="0.0328466811631" />
+</color>
+
+<color name="blue" weight="0.00029129012516">
+ <shade name="bright" weight="0.930655966289" />
+ <shade name="hard" weight="0.0364963124035" />
+ <shade name="light" weight="0.0328466811631" />
+</color>
+
+<color name="red" weight="0.00021846759387">
+ <shade name="bright" weight="0.930655966289" />
+ <shade name="hard" weight="0.0364963124035" />
+ <shade name="light" weight="0.0328466811631" />
+</color>
+
+</colors>

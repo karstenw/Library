@@ -1,0 +1,33 @@
+<colors query="instrumental rock">
+
+<color name="red" weight="0.719999251201">
+ <shade name="cool" weight="0.5894624525" />
+ <shade name="light" weight="0.222663725733" />
+ <shade name="intense" weight="0.187872518588" />
+</color>
+
+<color name="blue" weight="0.1199998752">
+ <shade name="cool" weight="0.5894624525" />
+ <shade name="light" weight="0.222663725733" />
+ <shade name="intense" weight="0.187872518588" />
+</color>
+
+<color name="green" weight="0.0799999168001">
+ <shade name="cool" weight="0.5894624525" />
+ <shade name="light" weight="0.222663725733" />
+ <shade name="intense" weight="0.187872518588" />
+</color>
+
+<color name="purple" weight="0.0399999584">
+ <shade name="cool" weight="0.593592814614" />
+ <shade name="light" weight="0.224223929972" />
+ <shade name="hard" weight="0.182181943103" />
+</color>
+
+<color name="pink" weight="0.0399999584">
+ <shade name="cool" weight="0.593592814614" />
+ <shade name="light" weight="0.224223929972" />
+ <shade name="hard" weight="0.182181943103" />
+</color>
+
+</colors>

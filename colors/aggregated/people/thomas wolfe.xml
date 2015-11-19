@@ -1,0 +1,33 @@
+<colors query="thomas wolfe">
+
+<color name="green" weight="0.473683736843">
+ <shade name="hard" weight="0.666666000001" />
+ <shade name="weak" weight="0.333333" />
+ <shade name="soft" weight="0.0" />
+</color>
+
+<color name="white" weight="0.263157631579">
+ <shade name="hard" weight="0.666666000001" />
+ <shade name="weak" weight="0.333333" />
+ <shade name="warm" weight="0.0" />
+</color>
+
+<color name="black" weight="0.157894578948">
+ <shade name="hard" weight="0.666666000001" />
+ <shade name="weak" weight="0.333333" />
+ <shade name="warm" weight="0.0" />
+</color>
+
+<color name="purple" weight="0.0526315263158">
+ <shade name="hard" weight="0.666666000001" />
+ <shade name="weak" weight="0.333333" />
+ <shade name="soft" weight="0.0" />
+</color>
+
+<color name="orange" weight="0.0526315263158">
+ <shade name="hard" weight="0.666666000001" />
+ <shade name="weak" weight="0.333333" />
+ <shade name="warm" weight="0.0" />
+</color>
+
+</colors>

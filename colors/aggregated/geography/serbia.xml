@@ -1,0 +1,33 @@
+<colors query="serbia">
+
+<color name="white" weight="0.641293918722">
+ <shade name="weak" weight="0.62151701015" />
+ <shade name="cool" weight="0.286262857843" />
+ <shade name="light" weight="0.0922189072247" />
+</color>
+
+<color name="pink" weight="0.13185482441">
+ <shade name="weak" weight="0.62151701015" />
+ <shade name="cool" weight="0.286262857843" />
+ <shade name="light" weight="0.0922189072247" />
+</color>
+
+<color name="red" weight="0.103086499084">
+ <shade name="weak" weight="0.62151701015" />
+ <shade name="cool" weight="0.286262857843" />
+ <shade name="light" weight="0.0922189072247" />
+</color>
+
+<color name="black" weight="0.0809109149789">
+ <shade name="weak" weight="0.62151701015" />
+ <shade name="cool" weight="0.286262857843" />
+ <shade name="light" weight="0.0922189072247" />
+</color>
+
+<color name="green" weight="0.0428528179333">
+ <shade name="weak" weight="0.62151701015" />
+ <shade name="cool" weight="0.286262857843" />
+ <shade name="light" weight="0.0922189072247" />
+</color>
+
+</colors>

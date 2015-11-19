@@ -1,0 +1,33 @@
+<colors query="bubblegum pop">
+
+<color name="blue" weight="0.437499507813">
+ <shade name="light" weight="0.951491518365" />
+ <shade name="cool" weight="0.026119375014" />
+ <shade name="fresh" weight="0.0223880357262" />
+</color>
+
+<color name="pink" weight="0.312499648438">
+ <shade name="light" weight="0.951491518365" />
+ <shade name="cool" weight="0.026119375014" />
+ <shade name="fresh" weight="0.0223880357262" />
+</color>
+
+<color name="black" weight="0.124999859375">
+ <shade name="light" weight="0.951491518365" />
+ <shade name="cool" weight="0.026119375014" />
+ <shade name="fresh" weight="0.0223880357262" />
+</color>
+
+<color name="yellow" weight="0.0624999296876">
+ <shade name="light" weight="0.951491518365" />
+ <shade name="cool" weight="0.026119375014" />
+ <shade name="fresh" weight="0.0223880357262" />
+</color>
+
+<color name="white" weight="0.0624999296876">
+ <shade name="light" weight="0.951491518365" />
+ <shade name="cool" weight="0.026119375014" />
+ <shade name="fresh" weight="0.0223880357262" />
+</color>
+
+</colors>

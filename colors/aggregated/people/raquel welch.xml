@@ -1,0 +1,33 @@
+<colors query="raquel welch">
+
+<color name="white" weight="0.433120574953">
+ <shade name="light" weight="0.606059917356" />
+ <shade name="dark" weight="0.257575464876" />
+ <shade name="cool" weight="0.136363481405" />
+</color>
+
+<color name="pink" weight="0.254776808796">
+ <shade name="light" weight="0.606059917356" />
+ <shade name="dark" weight="0.257575464876" />
+ <shade name="cool" weight="0.136363481405" />
+</color>
+
+<color name="black" weight="0.210190867256">
+ <shade name="light" weight="0.606059917356" />
+ <shade name="dark" weight="0.257575464876" />
+ <shade name="cool" weight="0.136363481405" />
+</color>
+
+<color name="yellow" weight="0.0509553617592">
+ <shade name="light" weight="0.606059917356" />
+ <shade name="dark" weight="0.257575464876" />
+ <shade name="cool" weight="0.136363481405" />
+</color>
+
+<color name="green" weight="0.0509553617592">
+ <shade name="light" weight="0.606059917356" />
+ <shade name="dark" weight="0.257575464876" />
+ <shade name="cool" weight="0.136363481405" />
+</color>
+
+</colors>

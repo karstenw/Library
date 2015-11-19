@@ -1,0 +1,33 @@
+<colors query="georgia">
+
+<color name="green" weight="0.387678615913">
+ <shade name="fresh" weight="0.745855286894" />
+ <shade name="dark" weight="0.127071641471" />
+ <shade name="cool" weight="0.127071641471" />
+</color>
+
+<color name="white" weight="0.314379817494">
+ <shade name="fresh" weight="0.745855286894" />
+ <shade name="warm" weight="0.127071641471" />
+ <shade name="dark" weight="0.127071641471" />
+</color>
+
+<color name="red" weight="0.170748067992">
+ <shade name="fresh" weight="0.745855286894" />
+ <shade name="warm" weight="0.127071641471" />
+ <shade name="dark" weight="0.127071641471" />
+</color>
+
+<color name="black" weight="0.111854813771">
+ <shade name="fresh" weight="0.745855286894" />
+ <shade name="warm" weight="0.127071641471" />
+ <shade name="dark" weight="0.127071641471" />
+</color>
+
+<color name="yellow" weight="0.0153376676459">
+ <shade name="fresh" weight="0.745855286894" />
+ <shade name="warm" weight="0.127071641471" />
+ <shade name="dark" weight="0.127071641471" />
+</color>
+
+</colors>

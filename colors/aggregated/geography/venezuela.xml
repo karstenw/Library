@@ -1,0 +1,33 @@
+<colors query="venezuela">
+
+<color name="black" weight="0.462446214849">
+ <shade name="cool" weight="0.505907767871" />
+ <shade name="light" weight="0.346380646907" />
+ <shade name="fresh" weight="0.147710297189" />
+</color>
+
+<color name="red" weight="0.26828439982">
+ <shade name="cool" weight="0.505907767871" />
+ <shade name="light" weight="0.346380646907" />
+ <shade name="fresh" weight="0.147710297189" />
+</color>
+
+<color name="green" weight="0.191210030679">
+ <shade name="cool" weight="0.505907767871" />
+ <shade name="light" weight="0.346380646907" />
+ <shade name="fresh" weight="0.147710297189" />
+</color>
+
+<color name="white" weight="0.0495243818739">
+ <shade name="cool" weight="0.505907767871" />
+ <shade name="light" weight="0.346380646907" />
+ <shade name="fresh" weight="0.147710297189" />
+</color>
+
+<color name="orange" weight="0.0285339153843">
+ <shade name="cool" weight="0.505907767871" />
+ <shade name="light" weight="0.346380646907" />
+ <shade name="fresh" weight="0.147710297189" />
+</color>
+
+</colors>

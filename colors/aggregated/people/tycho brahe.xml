@@ -1,0 +1,33 @@
+<colors query="tycho brahe">
+
+<color name="white" weight="0.428571">
+ <shade name="light" weight="0.666665777779" />
+ <shade name="cool" weight="0.222221925926" />
+ <shade name="weak" weight="0.111110962963" />
+</color>
+
+<color name="red" weight="0.428571">
+ <shade name="light" weight="0.666665777779" />
+ <shade name="cool" weight="0.222221925926" />
+ <shade name="weak" weight="0.111110962963" />
+</color>
+
+<color name="black" weight="0.142857">
+ <shade name="light" weight="0.666665777779" />
+ <shade name="cool" weight="0.222221925926" />
+ <shade name="weak" weight="0.111110962963" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="light" weight="0.666665777779" />
+ <shade name="cool" weight="0.222221925926" />
+ <shade name="weak" weight="0.111110962963" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="light" weight="0.666665777779" />
+ <shade name="cool" weight="0.222221925926" />
+ <shade name="weak" weight="0.111110962963" />
+</color>
+
+</colors>

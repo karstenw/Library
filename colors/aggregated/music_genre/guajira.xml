@@ -1,0 +1,33 @@
+<colors query="guajira">
+
+<color name="green" weight="0.758619931035">
+ <shade name="soft" weight="0.499999375001" />
+ <shade name="dark" weight="0.2499996875" />
+ <shade name="bright" weight="0.2499996875" />
+</color>
+
+<color name="black" weight="0.103448172414">
+ <shade name="soft" weight="0.499999375001" />
+ <shade name="warm" weight="0.2499996875" />
+ <shade name="dark" weight="0.2499996875" />
+</color>
+
+<color name="white" weight="0.0689654482759">
+ <shade name="soft" weight="0.499999375001" />
+ <shade name="warm" weight="0.2499996875" />
+ <shade name="dark" weight="0.2499996875" />
+</color>
+
+<color name="red" weight="0.0689654482759">
+ <shade name="soft" weight="0.499999375001" />
+ <shade name="warm" weight="0.2499996875" />
+ <shade name="dark" weight="0.2499996875" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="soft" weight="0.499999375001" />
+ <shade name="warm" weight="0.2499996875" />
+ <shade name="dark" weight="0.2499996875" />
+</color>
+
+</colors>

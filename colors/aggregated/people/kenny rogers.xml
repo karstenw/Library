@@ -1,0 +1,33 @@
+<colors query="kenny rogers">
+
+<color name="white" weight="0.231543352473">
+ <shade name="dark" weight="0.873785510652" />
+ <shade name="hard" weight="0.0770630276756" />
+ <shade name="cool" weight="0.0491504349742" />
+</color>
+
+<color name="green" weight="0.229306218633">
+ <shade name="dark" weight="0.873785510652" />
+ <shade name="hard" weight="0.0770630276756" />
+ <shade name="cool" weight="0.0491504349742" />
+</color>
+
+<color name="blue" weight="0.194630644108">
+ <shade name="dark" weight="0.873785510652" />
+ <shade name="hard" weight="0.0770630276756" />
+ <shade name="cool" weight="0.0491504349742" />
+</color>
+
+<color name="black" weight="0.187919242587">
+ <shade name="dark" weight="0.873785510652" />
+ <shade name="hard" weight="0.0770630276756" />
+ <shade name="cool" weight="0.0491504349742" />
+</color>
+
+<color name="red" weight="0.156599368822">
+ <shade name="dark" weight="0.873785510652" />
+ <shade name="hard" weight="0.0770630276756" />
+ <shade name="cool" weight="0.0491504349742" />
+</color>
+
+</colors>

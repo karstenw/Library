@@ -1,0 +1,33 @@
+<colors query="billie holiday">
+
+<color name="blue" weight="0.318505008862">
+ <shade name="light" weight="0.699822621946" />
+ <shade name="dark" weight="0.296654369303" />
+ <shade name="cool" weight="0.00352112011042" />
+</color>
+
+<color name="white" weight="0.295373360174">
+ <shade name="warm" weight="0.469042679957" />
+ <shade name="light" weight="0.372888930566" />
+ <shade name="dark" weight="0.158067383146" />
+</color>
+
+<color name="green" weight="0.250889420388">
+ <shade name="light" weight="0.699822621946" />
+ <shade name="dark" weight="0.296654369303" />
+ <shade name="cool" weight="0.00352112011042" />
+</color>
+
+<color name="black" weight="0.104626226375">
+ <shade name="warm" weight="0.469042679957" />
+ <shade name="light" weight="0.372888930566" />
+ <shade name="dark" weight="0.158067383146" />
+</color>
+
+<color name="red" weight="0.0306049505722">
+ <shade name="warm" weight="0.469042679957" />
+ <shade name="light" weight="0.372888930566" />
+ <shade name="dark" weight="0.158067383146" />
+</color>
+
+</colors>

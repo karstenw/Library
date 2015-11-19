@@ -1,0 +1,33 @@
+<colors query="palau">
+
+<color name="green" weight="0.42399952399">
+ <shade name="cool" weight="0.78048677692" />
+ <shade name="dark" weight="0.121951058894" />
+ <shade name="light" weight="0.097560847115" />
+</color>
+
+<color name="blue" weight="0.234666403215">
+ <shade name="cool" weight="0.78048677692" />
+ <shade name="dark" weight="0.121951058894" />
+ <shade name="light" weight="0.097560847115" />
+</color>
+
+<color name="white" weight="0.133333183645">
+ <shade name="cool" weight="0.78048677692" />
+ <shade name="dark" weight="0.121951058894" />
+ <shade name="light" weight="0.097560847115" />
+</color>
+
+<color name="yellow" weight="0.109333210589">
+ <shade name="cool" weight="0.78048677692" />
+ <shade name="dark" weight="0.121951058894" />
+ <shade name="light" weight="0.097560847115" />
+</color>
+
+<color name="red" weight="0.098666555897">
+ <shade name="cool" weight="0.78048677692" />
+ <shade name="dark" weight="0.121951058894" />
+ <shade name="light" weight="0.097560847115" />
+</color>
+
+</colors>

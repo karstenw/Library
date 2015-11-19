@@ -1,0 +1,33 @@
+<colors query="montserrat">
+
+<color name="black" weight="0.473015366965">
+ <shade name="light" weight="0.850573725196" />
+ <shade name="dark" weight="0.103448155767" />
+ <shade name="soft" weight="0.0459769581187" />
+</color>
+
+<color name="blue" weight="0.196825186254">
+ <shade name="light" weight="0.850573725196" />
+ <shade name="dark" weight="0.103448155767" />
+ <shade name="soft" weight="0.0459769581187" />
+</color>
+
+<color name="red" weight="0.177777587584">
+ <shade name="light" weight="0.850573725196" />
+ <shade name="dark" weight="0.103448155767" />
+ <shade name="soft" weight="0.0459769581187" />
+</color>
+
+<color name="white" weight="0.0952379933486">
+ <shade name="light" weight="0.850573725196" />
+ <shade name="dark" weight="0.103448155767" />
+ <shade name="soft" weight="0.0459769581187" />
+</color>
+
+<color name="green" weight="0.0571427960091">
+ <shade name="light" weight="0.850573725196" />
+ <shade name="dark" weight="0.103448155767" />
+ <shade name="soft" weight="0.0459769581187" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="diane arbus">
+
+<color name="white" weight="0.972221242285">
+ <shade name="cool" weight="0.461537928995" />
+ <shade name="light" weight="0.307691952663" />
+ <shade name="dark" weight="0.230768964497" />
+</color>
+
+<color name="green" weight="0.00793649993702">
+ <shade name="cool" weight="0.461537928995" />
+ <shade name="light" weight="0.307691952663" />
+ <shade name="dark" weight="0.230768964497" />
+</color>
+
+<color name="blue" weight="0.00793649993702">
+ <shade name="cool" weight="0.461537928995" />
+ <shade name="light" weight="0.307691952663" />
+ <shade name="dark" weight="0.230768964497" />
+</color>
+
+<color name="black" weight="0.00793649993702">
+ <shade name="cool" weight="0.461537928995" />
+ <shade name="light" weight="0.307691952663" />
+ <shade name="dark" weight="0.230768964497" />
+</color>
+
+<color name="red" weight="0.00396824996851">
+ <shade name="cool" weight="0.461537928995" />
+ <shade name="light" weight="0.307691952663" />
+ <shade name="dark" weight="0.230768964497" />
+</color>
+
+</colors>

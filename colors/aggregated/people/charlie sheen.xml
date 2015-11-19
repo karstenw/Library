@@ -1,0 +1,33 @@
+<colors query="charlie sheen">
+
+<color name="green" weight="0.919092931247">
+ <shade name="cool" weight="0.664061789246" />
+ <shade name="hard" weight="0.296874682251" />
+ <shade name="light" weight="0.039062458191" />
+</color>
+
+<color name="black" weight="0.0709815902301">
+ <shade name="cool" weight="0.664061789246" />
+ <shade name="hard" weight="0.296874682251" />
+ <shade name="light" weight="0.039062458191" />
+</color>
+
+<color name="white" weight="0.0075512330032">
+ <shade name="cool" weight="0.664061789246" />
+ <shade name="hard" weight="0.296874682251" />
+ <shade name="light" weight="0.039062458191" />
+</color>
+
+<color name="red" weight="0.00151024660064">
+ <shade name="cool" weight="0.664061789246" />
+ <shade name="hard" weight="0.296874682251" />
+ <shade name="light" weight="0.039062458191" />
+</color>
+
+<color name="pink" weight="0.000862998057509">
+ <shade name="cool" weight="0.664061789246" />
+ <shade name="hard" weight="0.296874682251" />
+ <shade name="light" weight="0.039062458191" />
+</color>
+
+</colors>

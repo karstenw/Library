@@ -1,0 +1,33 @@
+<colors query="thurgood marshall">
+
+<color name="white" weight="0.942369481014">
+ <shade name="light" weight="0.642856454082" />
+ <shade name="cool" weight="0.214285484694" />
+ <shade name="hard" weight="0.142856989796" />
+</color>
+
+<color name="black" weight="0.0547299198589">
+ <shade name="light" weight="0.642856454082" />
+ <shade name="cool" weight="0.214285484694" />
+ <shade name="hard" weight="0.142856989796" />
+</color>
+
+<color name="green" weight="0.00181224900195">
+ <shade name="light" weight="0.642856454082" />
+ <shade name="cool" weight="0.214285484694" />
+ <shade name="hard" weight="0.142856989796" />
+</color>
+
+<color name="blue" weight="0.00072489960078">
+ <shade name="light" weight="0.642856454082" />
+ <shade name="cool" weight="0.214285484694" />
+ <shade name="hard" weight="0.142856989796" />
+</color>
+
+<color name="yellow" weight="0.00036244980039">
+ <shade name="light" weight="0.642856454082" />
+ <shade name="cool" weight="0.214285484694" />
+ <shade name="hard" weight="0.142856989796" />
+</color>
+
+</colors>

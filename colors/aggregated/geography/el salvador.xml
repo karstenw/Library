@@ -1,0 +1,33 @@
+<colors query="el salvador">
+
+<color name="red" weight="0.532879282241">
+ <shade name="light" weight="0.538299542344" />
+ <shade name="cool" weight="0.374606114263" />
+ <shade name="fresh" weight="0.087093298274" />
+</color>
+
+<color name="blue" weight="0.154194856138">
+ <shade name="light" weight="0.538299542344" />
+ <shade name="cool" weight="0.374606114263" />
+ <shade name="fresh" weight="0.087093298274" />
+</color>
+
+<color name="white" weight="0.136054284827">
+ <shade name="light" weight="0.538299542344" />
+ <shade name="cool" weight="0.374606114263" />
+ <shade name="fresh" weight="0.087093298274" />
+</color>
+
+<color name="green" weight="0.104591731461">
+ <shade name="light" weight="0.538299542344" />
+ <shade name="cool" weight="0.374606114263" />
+ <shade name="fresh" weight="0.087093298274" />
+</color>
+
+<color name="black" weight="0.0722788388146">
+ <shade name="light" weight="0.538299542344" />
+ <shade name="cool" weight="0.374606114263" />
+ <shade name="fresh" weight="0.087093298274" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="hillary rodham clinton">
+
+<color name="white" weight="0.259259">
+ <shade name="hard" weight="0.499999250001" />
+ <shade name="light" weight="0.249999625001" />
+ <shade name="fresh" weight="0.249999625001" />
+</color>
+
+<color name="green" weight="0.259259">
+ <shade name="hard" weight="0.499999250001" />
+ <shade name="light" weight="0.249999625001" />
+ <shade name="fresh" weight="0.249999625001" />
+</color>
+
+<color name="black" weight="0.259259">
+ <shade name="hard" weight="0.499999250001" />
+ <shade name="light" weight="0.249999625001" />
+ <shade name="fresh" weight="0.249999625001" />
+</color>
+
+<color name="red" weight="0.148148">
+ <shade name="hard" weight="0.499999250001" />
+ <shade name="light" weight="0.249999625001" />
+ <shade name="fresh" weight="0.249999625001" />
+</color>
+
+<color name="pink" weight="0.0740740000001">
+ <shade name="hard" weight="0.499999250001" />
+ <shade name="light" weight="0.249999625001" />
+ <shade name="fresh" weight="0.249999625001" />
+</color>
+
+</colors>

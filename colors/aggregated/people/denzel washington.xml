@@ -1,0 +1,33 @@
+<colors query="denzel washington">
+
+<color name="black" weight="0.361193665423">
+ <shade name="intense" weight="0.781170965513" />
+ <shade name="cool" weight="0.14371542763" />
+ <shade name="hard" weight="0.0751125928378" />
+</color>
+
+<color name="purple" weight="0.327362853785">
+ <shade name="cool" weight="0.644940885381" />
+ <shade name="hard" weight="0.337077117795" />
+ <shade name="light" weight="0.0179774462824" />
+</color>
+
+<color name="white" weight="0.294029554084">
+ <shade name="cool" weight="0.644940885381" />
+ <shade name="hard" weight="0.337077117795" />
+ <shade name="light" weight="0.0179774462824" />
+</color>
+
+<color name="blue" weight="0.0129353103319">
+ <shade name="intense" weight="0.781170965513" />
+ <shade name="cool" weight="0.14371542763" />
+ <shade name="hard" weight="0.0751125928378" />
+</color>
+
+<color name="green" weight="0.00447760742259">
+ <shade name="intense" weight="0.781170965513" />
+ <shade name="cool" weight="0.14371542763" />
+ <shade name="hard" weight="0.0751125928378" />
+</color>
+
+</colors>

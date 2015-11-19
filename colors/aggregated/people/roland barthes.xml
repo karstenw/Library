@@ -1,0 +1,33 @@
+<colors query="roland barthes">
+
+<color name="white" weight="0.864405885953">
+ <shade name="neutral" weight="0.955222903989" />
+ <shade name="light" weight="0.0223880368122" />
+ <shade name="cool" weight="0.0223880368122" />
+</color>
+
+<color name="red" weight="0.0508474050561">
+ <shade name="neutral" weight="0.955222903989" />
+ <shade name="light" weight="0.0223880368122" />
+ <shade name="cool" weight="0.0223880368122" />
+</color>
+
+<color name="purple" weight="0.0338982700374">
+ <shade name="neutral" weight="0.955222903989" />
+ <shade name="light" weight="0.0223880368122" />
+ <shade name="cool" weight="0.0223880368122" />
+</color>
+
+<color name="blue" weight="0.0338982700374">
+ <shade name="neutral" weight="0.955222903989" />
+ <shade name="light" weight="0.0223880368122" />
+ <shade name="cool" weight="0.0223880368122" />
+</color>
+
+<color name="pink" weight="0.0169491350187">
+ <shade name="neutral" weight="0.955222903989" />
+ <shade name="light" weight="0.0223880368122" />
+ <shade name="cool" weight="0.0223880368122" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="funk metal">
+
+<color name="black" weight="0.924656603257">
+ <shade name="hard" weight="0.641446712204" />
+ <shade name="cool" weight="0.335525972538" />
+ <shade name="dark" weight="0.023026292233" />
+</color>
+
+<color name="white" weight="0.0342465408614">
+ <shade name="hard" weight="0.641446712204" />
+ <shade name="cool" weight="0.335525972538" />
+ <shade name="dark" weight="0.023026292233" />
+</color>
+
+<color name="green" weight="0.0205479245168">
+ <shade name="hard" weight="0.641446712204" />
+ <shade name="cool" weight="0.335525972538" />
+ <shade name="dark" weight="0.023026292233" />
+</color>
+
+<color name="pink" weight="0.0136986163445">
+ <shade name="hard" weight="0.641446712204" />
+ <shade name="cool" weight="0.335525972538" />
+ <shade name="dark" weight="0.023026292233" />
+</color>
+
+<color name="red" weight="0.00684930817227">
+ <shade name="hard" weight="0.641446712204" />
+ <shade name="cool" weight="0.335525972538" />
+ <shade name="dark" weight="0.023026292233" />
+</color>
+
+</colors>

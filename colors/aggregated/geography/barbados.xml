@@ -1,0 +1,33 @@
+<colors query="barbados">
+
+<color name="white" weight="0.949439860349">
+ <shade name="dark" weight="0.465085065455" />
+ <shade name="warm" weight="0.285902150719" />
+ <shade name="light" weight="0.249011550626" />
+</color>
+
+<color name="black" weight="0.0230078984563">
+ <shade name="dark" weight="0.465085065455" />
+ <shade name="warm" weight="0.285902150719" />
+ <shade name="light" weight="0.249011550626" />
+</color>
+
+<color name="blue" weight="0.0115330731503">
+ <shade name="dark" weight="0.576796503462" />
+ <shade name="light" weight="0.308823057094" />
+ <shade name="cool" weight="0.114378910035" />
+</color>
+
+<color name="red" weight="0.00862068094059">
+ <shade name="dark" weight="0.465085065455" />
+ <shade name="warm" weight="0.285902150719" />
+ <shade name="light" weight="0.249011550626" />
+</color>
+
+<color name="green" weight="0.00739747621253">
+ <shade name="dark" weight="0.576796503462" />
+ <shade name="light" weight="0.308823057094" />
+ <shade name="cool" weight="0.114378910035" />
+</color>
+
+</colors>

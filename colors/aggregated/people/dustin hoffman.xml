@@ -1,0 +1,33 @@
+<colors query="dustin hoffman">
+
+<color name="black" weight="0.998268897856">
+ <shade name="cool" weight="0.815383561658" />
+ <shade name="intense" weight="0.0923075730179" />
+ <shade name="hard" weight="0.0923075730179" />
+</color>
+
+<color name="white" weight="0.000934255121044">
+ <shade name="cool" weight="0.828123913087" />
+ <shade name="hard" weight="0.0937498769533" />
+ <shade name="bright" weight="0.0781248974611" />
+</color>
+
+<color name="green" weight="0.000692040830403">
+ <shade name="cool" weight="0.815383561658" />
+ <shade name="intense" weight="0.0923075730179" />
+ <shade name="hard" weight="0.0923075730179" />
+</color>
+
+<color name="red" weight="5.19030622802e-05">
+ <shade name="cool" weight="0.815383561658" />
+ <shade name="intense" weight="0.0923075730179" />
+ <shade name="hard" weight="0.0923075730179" />
+</color>
+
+<color name="pink" weight="5.19030622802e-05">
+ <shade name="cool" weight="0.828123913087" />
+ <shade name="hard" weight="0.0937498769533" />
+ <shade name="bright" weight="0.0781248974611" />
+</color>
+
+</colors>

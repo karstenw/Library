@@ -1,0 +1,33 @@
+<colors query="cajun">
+
+<color name="white" weight="0.319135699061">
+ <shade name="warm" weight="0.476649924773" />
+ <shade name="cool" weight="0.288244380184" />
+ <shade name="fresh" weight="0.235104354787" />
+</color>
+
+<color name="red" weight="0.240261857088">
+ <shade name="warm" weight="0.476649924773" />
+ <shade name="cool" weight="0.288244380184" />
+ <shade name="fresh" weight="0.235104354787" />
+</color>
+
+<color name="black" weight="0.229340863584">
+ <shade name="warm" weight="0.476649924773" />
+ <shade name="cool" weight="0.288244380184" />
+ <shade name="fresh" weight="0.235104354787" />
+</color>
+
+<color name="blue" weight="0.190510664459">
+ <shade name="cool" weight="0.439694507596" />
+ <shade name="fresh" weight="0.358633508989" />
+ <shade name="light" weight="0.201669938959" />
+</color>
+
+<color name="green" weight="0.0207498876576">
+ <shade name="cool" weight="0.439694507596" />
+ <shade name="fresh" weight="0.358633508989" />
+ <shade name="light" weight="0.201669938959" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="sophia loren">
+
+<color name="white" weight="0.572726668761">
+ <shade name="cool" weight="0.65384527367" />
+ <shade name="light" weight="0.192307433432" />
+ <shade name="dark" weight="0.153845946746" />
+</color>
+
+<color name="black" weight="0.227272487604">
+ <shade name="cool" weight="0.65384527367" />
+ <shade name="light" weight="0.192307433432" />
+ <shade name="dark" weight="0.153845946746" />
+</color>
+
+<color name="red" weight="0.0818180955373">
+ <shade name="cool" weight="0.65384527367" />
+ <shade name="light" weight="0.192307433432" />
+ <shade name="dark" weight="0.153845946746" />
+</color>
+
+<color name="green" weight="0.063636296529">
+ <shade name="cool" weight="0.65384527367" />
+ <shade name="light" weight="0.192307433432" />
+ <shade name="dark" weight="0.153845946746" />
+</color>
+
+<color name="pink" weight="0.0545453970249">
+ <shade name="cool" weight="0.65384527367" />
+ <shade name="light" weight="0.192307433432" />
+ <shade name="dark" weight="0.153845946746" />
+</color>
+
+</colors>

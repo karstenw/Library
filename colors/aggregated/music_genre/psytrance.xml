@@ -1,0 +1,33 @@
+<colors query="psytrance">
+
+<color name="green" weight="0.296295945131">
+ <shade name="dark" weight="0.896637793908" />
+ <shade name="hard" weight="0.0626294740469" />
+ <shade name="cool" weight="0.0407316867183" />
+</color>
+
+<color name="pink" weight="0.259258951989">
+ <shade name="dark" weight="0.896637793908" />
+ <shade name="hard" weight="0.0626294740469" />
+ <shade name="cool" weight="0.0407316867183" />
+</color>
+
+<color name="blue" weight="0.185184965707">
+ <shade name="dark" weight="0.896637793908" />
+ <shade name="hard" weight="0.0626294740469" />
+ <shade name="cool" weight="0.0407316867183" />
+</color>
+
+<color name="orange" weight="0.148147972565">
+ <shade name="dark" weight="0.896637793908" />
+ <shade name="hard" weight="0.0626294740469" />
+ <shade name="cool" weight="0.0407316867183" />
+</color>
+
+<color name="white" weight="0.111110979424">
+ <shade name="dark" weight="0.896637793908" />
+ <shade name="hard" weight="0.0626294740469" />
+ <shade name="cool" weight="0.0407316867183" />
+</color>
+
+</colors>

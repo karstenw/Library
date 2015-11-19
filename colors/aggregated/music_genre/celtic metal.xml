@@ -1,0 +1,33 @@
+<colors query="celtic metal">
+
+<color name="black" weight="0.972476091744">
+ <shade name="dark" weight="0.555555000001" />
+ <shade name="cool" weight="0.333333" />
+ <shade name="light" weight="0.111111" />
+</color>
+
+<color name="white" weight="0.0091743027523">
+ <shade name="dark" weight="0.555555000001" />
+ <shade name="cool" weight="0.333333" />
+ <shade name="light" weight="0.111111" />
+</color>
+
+<color name="red" weight="0.0091743027523">
+ <shade name="dark" weight="0.555555000001" />
+ <shade name="cool" weight="0.333333" />
+ <shade name="light" weight="0.111111" />
+</color>
+
+<color name="blue" weight="0.0091743027523">
+ <shade name="dark" weight="0.555555000001" />
+ <shade name="cool" weight="0.333333" />
+ <shade name="light" weight="0.111111" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="dark" weight="0.555555000001" />
+ <shade name="cool" weight="0.333333" />
+ <shade name="light" weight="0.111111" />
+</color>
+
+</colors>

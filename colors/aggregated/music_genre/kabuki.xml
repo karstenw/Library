@@ -1,0 +1,33 @@
+<colors query="kabuki">
+
+<color name="pink" weight="0.510840457974">
+ <shade name="soft" weight="0.66063604558" />
+ <shade name="light" weight="0.253979465497" />
+ <shade name="cool" weight="0.0853834100531" />
+</color>
+
+<color name="black" weight="0.206964301301">
+ <shade name="soft" weight="0.66063604558" />
+ <shade name="light" weight="0.253979465497" />
+ <shade name="cool" weight="0.0853834100531" />
+</color>
+
+<color name="white" weight="0.169185103445">
+ <shade name="soft" weight="0.66063604558" />
+ <shade name="light" weight="0.253979465497" />
+ <shade name="cool" weight="0.0853834100531" />
+</color>
+
+<color name="red" weight="0.0809788893187">
+ <shade name="soft" weight="0.66063604558" />
+ <shade name="light" weight="0.253979465497" />
+ <shade name="cool" weight="0.0853834100531" />
+</color>
+
+<color name="purple" weight="0.0320301894871">
+ <shade name="soft" weight="0.66063604558" />
+ <shade name="light" weight="0.253979465497" />
+ <shade name="cool" weight="0.0853834100531" />
+</color>
+
+</colors>

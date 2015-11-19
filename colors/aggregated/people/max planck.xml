@@ -1,0 +1,33 @@
+<colors query="max planck">
+
+<color name="white" weight="0.955950308383">
+ <shade name="light" weight="0.981202022628" />
+ <shade name="cool" weight="0.0150375788909" />
+ <shade name="soft" weight="0.00375939472271" />
+</color>
+
+<color name="green" weight="0.0299905979101">
+ <shade name="light" weight="0.981202022628" />
+ <shade name="cool" weight="0.0150375788909" />
+ <shade name="soft" weight="0.00375939472271" />
+</color>
+
+<color name="red" weight="0.0093720618469">
+ <shade name="light" weight="0.981202022628" />
+ <shade name="cool" weight="0.0150375788909" />
+ <shade name="soft" weight="0.00375939472271" />
+</color>
+
+<color name="blue" weight="0.00281161855407">
+ <shade name="light" weight="0.981202022628" />
+ <shade name="cool" weight="0.0150375788909" />
+ <shade name="soft" weight="0.00375939472271" />
+</color>
+
+<color name="pink" weight="0.00187441236938">
+ <shade name="light" weight="0.981202022628" />
+ <shade name="cool" weight="0.0150375788909" />
+ <shade name="soft" weight="0.00375939472271" />
+</color>
+
+</colors>

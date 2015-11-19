@@ -1,0 +1,33 @@
+<colors query="nicaragua">
+
+<color name="red" weight="0.588293029234">
+ <shade name="cool" weight="0.365713811331" />
+ <shade name="dark" weight="0.354285254727" />
+ <shade name="light" weight="0.2799996368" />
+</color>
+
+<color name="black" weight="0.177579177459">
+ <shade name="cool" weight="0.365713811331" />
+ <shade name="dark" weight="0.354285254727" />
+ <shade name="light" weight="0.2799996368" />
+</color>
+
+<color name="orange" weight="0.107142743941">
+ <shade name="cool" weight="0.365713811331" />
+ <shade name="dark" weight="0.354285254727" />
+ <shade name="light" weight="0.2799996368" />
+</color>
+
+<color name="white" weight="0.0704364335171">
+ <shade name="cool" weight="0.365713811331" />
+ <shade name="dark" weight="0.354285254727" />
+ <shade name="light" weight="0.2799996368" />
+</color>
+
+<color name="green" weight="0.0565475593024">
+ <shade name="cool" weight="0.365713811331" />
+ <shade name="dark" weight="0.354285254727" />
+ <shade name="light" weight="0.2799996368" />
+</color>
+
+</colors>

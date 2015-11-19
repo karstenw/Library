@@ -1,0 +1,33 @@
+<colors query="silat">
+
+<color name="black" weight="0.749999240132">
+ <shade name="cool" weight="0.95967643646" />
+ <shade name="light" weight="0.0201612696735" />
+ <shade name="hard" weight="0.0201612696735" />
+</color>
+
+<color name="white" weight="0.118420932652">
+ <shade name="cool" weight="0.95967643646" />
+ <shade name="light" weight="0.0201612696735" />
+ <shade name="hard" weight="0.0201612696735" />
+</color>
+
+<color name="red" weight="0.078947288435">
+ <shade name="cool" weight="0.95967643646" />
+ <shade name="light" weight="0.0201612696735" />
+ <shade name="hard" weight="0.0201612696735" />
+</color>
+
+<color name="yellow" weight="0.0394736442175">
+ <shade name="cool" weight="0.95967643646" />
+ <shade name="light" weight="0.0201612696735" />
+ <shade name="hard" weight="0.0201612696735" />
+</color>
+
+<color name="pink" weight="0.0131578814058">
+ <shade name="cool" weight="0.95967643646" />
+ <shade name="light" weight="0.0201612696735" />
+ <shade name="hard" weight="0.0201612696735" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="country rock">
+
+<color name="black" weight="0.919550861351">
+ <shade name="hard" weight="0.452492313945" />
+ <shade name="cool" weight="0.298212190271" />
+ <shade name="soft" weight="0.249294102277" />
+</color>
+
+<color name="blue" weight="0.079392915898">
+ <shade name="hard" weight="0.452492313945" />
+ <shade name="cool" weight="0.298212190271" />
+ <shade name="soft" weight="0.249294102277" />
+</color>
+
+<color name="white" weight="0.000401989447585">
+ <shade name="hard" weight="0.452492313945" />
+ <shade name="cool" weight="0.298212190271" />
+ <shade name="soft" weight="0.249294102277" />
+</color>
+
+<color name="green" weight="0.000401989447585">
+ <shade name="hard" weight="0.452492313945" />
+ <shade name="cool" weight="0.298212190271" />
+ <shade name="soft" weight="0.249294102277" />
+</color>
+
+<color name="red" weight="0.000251243404741">
+ <shade name="hard" weight="0.452492313945" />
+ <shade name="cool" weight="0.298212190271" />
+ <shade name="soft" weight="0.249294102277" />
+</color>
+
+</colors>

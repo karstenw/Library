@@ -1,0 +1,33 @@
+<colors query="philip larkin">
+
+<color name="white" weight="0.562499437501">
+ <shade name="light" weight="0.833332500001" />
+ <shade name="dark" weight="0.1333332" />
+ <shade name="cool" weight="0.0333333" />
+</color>
+
+<color name="red" weight="0.1874998125">
+ <shade name="light" weight="0.833332500001" />
+ <shade name="dark" weight="0.1333332" />
+ <shade name="cool" weight="0.0333333" />
+</color>
+
+<color name="green" weight="0.1874998125">
+ <shade name="light" weight="0.833332500001" />
+ <shade name="dark" weight="0.1333332" />
+ <shade name="cool" weight="0.0333333" />
+</color>
+
+<color name="black" weight="0.0624999375001">
+ <shade name="light" weight="0.833332500001" />
+ <shade name="dark" weight="0.1333332" />
+ <shade name="cool" weight="0.0333333" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="light" weight="0.833332500001" />
+ <shade name="dark" weight="0.1333332" />
+ <shade name="cool" weight="0.0333333" />
+</color>
+
+</colors>

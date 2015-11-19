@@ -1,0 +1,33 @@
+<colors query="morocco">
+
+<color name="red" weight="0.483931458528">
+ <shade name="light" weight="0.587499337105" />
+ <shade name="dark" weight="0.335416288205" />
+ <shade name="soft" weight="0.0770832463577" />
+</color>
+
+<color name="green" weight="0.221171799405">
+ <shade name="light" weight="0.587499337105" />
+ <shade name="dark" weight="0.335416288205" />
+ <shade name="soft" weight="0.0770832463577" />
+</color>
+
+<color name="black" weight="0.155387366762">
+ <shade name="light" weight="0.587499337105" />
+ <shade name="dark" weight="0.335416288205" />
+ <shade name="soft" weight="0.0770832463577" />
+</color>
+
+<color name="blue" weight="0.135349579807">
+ <shade name="light" weight="0.587499337105" />
+ <shade name="dark" weight="0.335416288205" />
+ <shade name="soft" weight="0.0770832463577" />
+</color>
+
+<color name="orange" weight="0.00415878597172">
+ <shade name="light" weight="0.587499337105" />
+ <shade name="dark" weight="0.335416288205" />
+ <shade name="soft" weight="0.0770832463577" />
+</color>
+
+</colors>

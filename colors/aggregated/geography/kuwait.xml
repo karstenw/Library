@@ -1,0 +1,33 @@
+<colors query="kuwait">
+
+<color name="white" weight="0.520393232586">
+ <shade name="cool" weight="0.412370564885" />
+ <shade name="light" weight="0.40850459084" />
+ <shade name="weak" weight="0.179123464122" />
+</color>
+
+<color name="black" weight="0.230660784173">
+ <shade name="cool" weight="0.412370564885" />
+ <shade name="light" weight="0.40850459084" />
+ <shade name="weak" weight="0.179123464122" />
+</color>
+
+<color name="blue" weight="0.094233369144">
+ <shade name="cool" weight="0.412370564885" />
+ <shade name="light" weight="0.40850459084" />
+ <shade name="weak" weight="0.179123464122" />
+</color>
+
+<color name="green" weight="0.0886074963593">
+ <shade name="cool" weight="0.412370564885" />
+ <shade name="light" weight="0.40850459084" />
+ <shade name="weak" weight="0.179123464122" />
+</color>
+
+<color name="red" weight="0.0661040052204">
+ <shade name="cool" weight="0.412370564885" />
+ <shade name="light" weight="0.40850459084" />
+ <shade name="weak" weight="0.179123464122" />
+</color>
+
+</colors>

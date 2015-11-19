@@ -1,0 +1,33 @@
+<colors query="power metal">
+
+<color name="white" weight="0.823099713332">
+ <shade name="soft" weight="0.47349538823" />
+ <shade name="hard" weight="0.31864155057" />
+ <shade name="dark" weight="0.207861497474" />
+</color>
+
+<color name="black" weight="0.109938493179">
+ <shade name="soft" weight="0.47349538823" />
+ <shade name="hard" weight="0.31864155057" />
+ <shade name="dark" weight="0.207861497474" />
+</color>
+
+<color name="red" weight="0.0650421451794">
+ <shade name="soft" weight="0.47349538823" />
+ <shade name="hard" weight="0.31864155057" />
+ <shade name="dark" weight="0.207861497474" />
+</color>
+
+<color name="blue" weight="0.00115118841026">
+ <shade name="soft" weight="0.47349538823" />
+ <shade name="hard" weight="0.31864155057" />
+ <shade name="dark" weight="0.207861497474" />
+</color>
+
+<color name="purple" weight="0.00076745894017">
+ <shade name="soft" weight="0.47349538823" />
+ <shade name="hard" weight="0.31864155057" />
+ <shade name="dark" weight="0.207861497474" />
+</color>
+
+</colors>

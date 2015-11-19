@@ -1,0 +1,33 @@
+<colors query="electronic rock">
+
+<color name="black" weight="0.666666000001">
+ <shade name="dark" weight="0.753301632785" />
+ <shade name="cool" weight="0.132809576965" />
+ <shade name="hard" weight="0.113887782397" />
+</color>
+
+<color name="blue" weight="0.333333">
+ <shade name="dark" weight="0.753301632785" />
+ <shade name="cool" weight="0.132809576965" />
+ <shade name="hard" weight="0.113887782397" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="dark" weight="0.753301632785" />
+ <shade name="cool" weight="0.132809576965" />
+ <shade name="hard" weight="0.113887782397" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="dark" weight="0.753301632785" />
+ <shade name="cool" weight="0.132809576965" />
+ <shade name="hard" weight="0.113887782397" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="dark" weight="0.753301632785" />
+ <shade name="cool" weight="0.132809576965" />
+ <shade name="hard" weight="0.113887782397" />
+</color>
+
+</colors>

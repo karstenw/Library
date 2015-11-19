@@ -1,0 +1,33 @@
+<colors query="salvador dali">
+
+<color name="blue" weight="0.398884806984">
+ <shade name="cool" weight="0.676327744406" />
+ <shade name="light" weight="0.246376535462" />
+ <shade name="soft" weight="0.0772945993606" />
+</color>
+
+<color name="green" weight="0.299599069001">
+ <shade name="cool" weight="0.676327744406" />
+ <shade name="light" weight="0.246376535462" />
+ <shade name="soft" weight="0.0772945993606" />
+</color>
+
+<color name="pink" weight="0.269987533111">
+ <shade name="cool" weight="0.676327744406" />
+ <shade name="light" weight="0.246376535462" />
+ <shade name="soft" weight="0.0772945993606" />
+</color>
+
+<color name="black" weight="0.0165476229972">
+ <shade name="cool" weight="0.676327744406" />
+ <shade name="light" weight="0.246376535462" />
+ <shade name="soft" weight="0.0772945993606" />
+</color>
+
+<color name="white" weight="0.0149799534501">
+ <shade name="cool" weight="0.676327744406" />
+ <shade name="light" weight="0.246376535462" />
+ <shade name="soft" weight="0.0772945993606" />
+</color>
+
+</colors>

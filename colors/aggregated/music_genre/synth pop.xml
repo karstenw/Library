@@ -1,0 +1,33 @@
+<colors query="synth pop">
+
+<color name="white" weight="0.249999714286">
+ <shade name="dark" weight="0.650253890834" />
+ <shade name="light" weight="0.176570247119" />
+ <shade name="soft" weight="0.173174665444" />
+</color>
+
+<color name="pink" weight="0.249999714286">
+ <shade name="dark" weight="0.650253890834" />
+ <shade name="light" weight="0.176570247119" />
+ <shade name="soft" weight="0.173174665444" />
+</color>
+
+<color name="black" weight="0.214285469388">
+ <shade name="dark" weight="0.650253890834" />
+ <shade name="light" weight="0.176570247119" />
+ <shade name="soft" weight="0.173174665444" />
+</color>
+
+<color name="red" weight="0.142856979592">
+ <shade name="dark" weight="0.650253890834" />
+ <shade name="light" weight="0.176570247119" />
+ <shade name="soft" weight="0.173174665444" />
+</color>
+
+<color name="blue" weight="0.142856979592">
+ <shade name="dark" weight="0.650253890834" />
+ <shade name="light" weight="0.176570247119" />
+ <shade name="soft" weight="0.173174665444" />
+</color>
+
+</colors>

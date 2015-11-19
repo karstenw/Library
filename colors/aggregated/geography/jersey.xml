@@ -1,0 +1,33 @@
+<colors query="jersey">
+
+<color name="yellow" weight="0.278393749002">
+ <shade name="soft" weight="0.526554080135" />
+ <shade name="dark" weight="0.275079114277" />
+ <shade name="light" weight="0.198365631913" />
+</color>
+
+<color name="white" weight="0.260961123353">
+ <shade name="soft" weight="0.526554080135" />
+ <shade name="dark" weight="0.275079114277" />
+ <shade name="light" weight="0.198365631913" />
+</color>
+
+<color name="blue" weight="0.206550200873">
+ <shade name="soft" weight="0.526554080135" />
+ <shade name="dark" weight="0.275079114277" />
+ <shade name="light" weight="0.198365631913" />
+</color>
+
+<color name="black" weight="0.139989266576">
+ <shade name="soft" weight="0.526554080135" />
+ <shade name="dark" weight="0.275079114277" />
+ <shade name="light" weight="0.198365631913" />
+</color>
+
+<color name="red" weight="0.114104458794">
+ <shade name="soft" weight="0.526554080135" />
+ <shade name="dark" weight="0.275079114277" />
+ <shade name="light" weight="0.198365631913" />
+</color>
+
+</colors>

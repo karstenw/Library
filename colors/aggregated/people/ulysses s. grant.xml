@@ -1,0 +1,33 @@
+<colors query="ulysses s. grant">
+
+<color name="red" weight="0.627906348838">
+ <shade name="cool" weight="0.454544876034" />
+ <shade name="bright" weight="0.363635900827" />
+ <shade name="hard" weight="0.181817950414" />
+</color>
+
+<color name="yellow" weight="0.162790534884">
+ <shade name="cool" weight="0.454544876034" />
+ <shade name="bright" weight="0.363635900827" />
+ <shade name="hard" weight="0.181817950414" />
+</color>
+
+<color name="green" weight="0.162790534884">
+ <shade name="cool" weight="0.454544876034" />
+ <shade name="bright" weight="0.363635900827" />
+ <shade name="hard" weight="0.181817950414" />
+</color>
+
+<color name="white" weight="0.0232557906977">
+ <shade name="cool" weight="0.454544876034" />
+ <shade name="bright" weight="0.363635900827" />
+ <shade name="hard" weight="0.181817950414" />
+</color>
+
+<color name="black" weight="0.0232557906977">
+ <shade name="cool" weight="0.454544876034" />
+ <shade name="bright" weight="0.363635900827" />
+ <shade name="hard" weight="0.181817950414" />
+</color>
+
+</colors>

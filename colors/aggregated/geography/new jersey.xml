@@ -1,0 +1,33 @@
+<colors query="new jersey">
+
+<color name="orange" weight="0.719307260489">
+ <shade name="cool" weight="0.500308954476" />
+ <shade name="fresh" weight="0.401857068632" />
+ <shade name="light" weight="0.0978326915931" />
+</color>
+
+<color name="pink" weight="0.246322261229">
+ <shade name="cool" weight="0.500308954476" />
+ <shade name="fresh" weight="0.401857068632" />
+ <shade name="light" weight="0.0978326915931" />
+</color>
+
+<color name="red" weight="0.0161901955737">
+ <shade name="cool" weight="0.500308954476" />
+ <shade name="fresh" weight="0.401857068632" />
+ <shade name="light" weight="0.0978326915931" />
+</color>
+
+<color name="blue" weight="0.0146868202704">
+ <shade name="cool" weight="0.500308954476" />
+ <shade name="fresh" weight="0.401857068632" />
+ <shade name="light" weight="0.0978326915931" />
+</color>
+
+<color name="yellow" weight="0.00349245647376">
+ <shade name="cool" weight="0.500308954476" />
+ <shade name="fresh" weight="0.401857068632" />
+ <shade name="light" weight="0.0978326915931" />
+</color>
+
+</colors>

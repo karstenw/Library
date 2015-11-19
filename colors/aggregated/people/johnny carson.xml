@@ -1,0 +1,33 @@
+<colors query="johnny carson">
+
+<color name="black" weight="0.595050021615">
+ <shade name="cool" weight="0.855669194496" />
+ <shade name="light" weight="0.0721648718249" />
+ <shade name="hard" weight="0.0721648718249" />
+</color>
+
+<color name="white" weight="0.388076101053">
+ <shade name="cool" weight="0.855669194496" />
+ <shade name="light" weight="0.0721648718249" />
+ <shade name="hard" weight="0.0721648718249" />
+</color>
+
+<color name="green" weight="0.00787400784745">
+ <shade name="cool" weight="0.855669194496" />
+ <shade name="light" weight="0.0721648718249" />
+ <shade name="hard" weight="0.0721648718249" />
+</color>
+
+<color name="blue" weight="0.00674914958353">
+ <shade name="cool" weight="0.855669194496" />
+ <shade name="light" weight="0.0721648718249" />
+ <shade name="hard" weight="0.0721648718249" />
+</color>
+
+<color name="yellow" weight="0.00224971652784">
+ <shade name="cool" weight="0.855669194496" />
+ <shade name="light" weight="0.0721648718249" />
+ <shade name="hard" weight="0.0721648718249" />
+</color>
+
+</colors>

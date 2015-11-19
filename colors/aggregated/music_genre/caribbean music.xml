@@ -1,0 +1,33 @@
+<colors query="caribbean music">
+
+<color name="black" weight="0.624999375001">
+ <shade name="soft" weight="0.96779864845" />
+ <shade name="cool" weight="0.0161001623587" />
+ <shade name="bright" weight="0.0161001623587" />
+</color>
+
+<color name="yellow" weight="0.124999875">
+ <shade name="soft" weight="0.96779864845" />
+ <shade name="cool" weight="0.0161001623587" />
+ <shade name="bright" weight="0.0161001623587" />
+</color>
+
+<color name="white" weight="0.124999875">
+ <shade name="soft" weight="0.96779864845" />
+ <shade name="cool" weight="0.0161001623587" />
+ <shade name="bright" weight="0.0161001623587" />
+</color>
+
+<color name="blue" weight="0.124999875">
+ <shade name="soft" weight="0.96779864845" />
+ <shade name="cool" weight="0.0161001623587" />
+ <shade name="bright" weight="0.0161001623587" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="soft" weight="0.96779864845" />
+ <shade name="cool" weight="0.0161001623587" />
+ <shade name="bright" weight="0.0161001623587" />
+</color>
+
+</colors>

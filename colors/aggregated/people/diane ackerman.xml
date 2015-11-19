@@ -1,0 +1,33 @@
+<colors query="diane ackerman">
+
+<color name="blue" weight="0.4999995">
+ <shade name="light" weight="0.96491131579" />
+ <shade name="intense" weight="0.0175438421053" />
+ <shade name="hard" weight="0.0175438421053" />
+</color>
+
+<color name="red" weight="0.333333">
+ <shade name="light" weight="0.96491131579" />
+ <shade name="intense" weight="0.0175438421053" />
+ <shade name="hard" weight="0.0175438421053" />
+</color>
+
+<color name="green" weight="0.1666665">
+ <shade name="light" weight="0.96491131579" />
+ <shade name="intense" weight="0.0175438421053" />
+ <shade name="hard" weight="0.0175438421053" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="light" weight="0.96491131579" />
+ <shade name="intense" weight="0.0175438421053" />
+ <shade name="hard" weight="0.0175438421053" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="light" weight="0.982141857463" />
+ <shade name="hard" weight="0.0178571246811" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+</colors>

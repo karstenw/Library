@@ -1,0 +1,33 @@
+<colors query="john updike">
+
+<color name="white" weight="0.756894687933">
+ <shade name="light" weight="0.624999062501" />
+ <shade name="bright" weight="0.249999625001" />
+ <shade name="weak" weight="0.1249998125" />
+</color>
+
+<color name="green" weight="0.237331385199">
+ <shade name="light" weight="0.624999062501" />
+ <shade name="bright" weight="0.249999625001" />
+ <shade name="weak" weight="0.1249998125" />
+</color>
+
+<color name="red" weight="0.00320718088107">
+ <shade name="light" weight="0.624999062501" />
+ <shade name="bright" weight="0.249999625001" />
+ <shade name="weak" weight="0.1249998125" />
+</color>
+
+<color name="purple" weight="0.00128287235243">
+ <shade name="light" weight="0.624999062501" />
+ <shade name="bright" weight="0.249999625001" />
+ <shade name="weak" weight="0.1249998125" />
+</color>
+
+<color name="black" weight="0.00128287235243">
+ <shade name="light" weight="0.624999062501" />
+ <shade name="bright" weight="0.249999625001" />
+ <shade name="weak" weight="0.1249998125" />
+</color>
+
+</colors>

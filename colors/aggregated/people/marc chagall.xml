@@ -1,0 +1,33 @@
+<colors query="marc chagall">
+
+<color name="white" weight="0.72850602586">
+ <shade name="cool" weight="0.499999375001" />
+ <shade name="light" weight="0.374999531251" />
+ <shade name="fresh" weight="0.12499984375" />
+</color>
+
+<color name="blue" weight="0.158370875187">
+ <shade name="cool" weight="0.499999375001" />
+ <shade name="light" weight="0.374999531251" />
+ <shade name="fresh" weight="0.12499984375" />
+</color>
+
+<color name="red" weight="0.045248821482">
+ <shade name="cool" weight="0.499999375001" />
+ <shade name="light" weight="0.374999531251" />
+ <shade name="fresh" weight="0.12499984375" />
+</color>
+
+<color name="pink" weight="0.0407239393338">
+ <shade name="cool" weight="0.499999375001" />
+ <shade name="light" weight="0.374999531251" />
+ <shade name="fresh" weight="0.12499984375" />
+</color>
+
+<color name="green" weight="0.0271492928892">
+ <shade name="cool" weight="0.499999375001" />
+ <shade name="light" weight="0.374999531251" />
+ <shade name="fresh" weight="0.12499984375" />
+</color>
+
+</colors>

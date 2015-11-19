@@ -1,0 +1,33 @@
+<colors query="madchester">
+
+<color name="white" weight="0.374999625">
+ <shade name="cool" weight="0.437499535157" />
+ <shade name="dark" weight="0.312499667969" />
+ <shade name="hard" weight="0.249999734375" />
+</color>
+
+<color name="black" weight="0.374999625">
+ <shade name="cool" weight="0.437499535157" />
+ <shade name="dark" weight="0.312499667969" />
+ <shade name="hard" weight="0.249999734375" />
+</color>
+
+<color name="yellow" weight="0.124999875">
+ <shade name="cool" weight="0.437499535157" />
+ <shade name="dark" weight="0.312499667969" />
+ <shade name="hard" weight="0.249999734375" />
+</color>
+
+<color name="blue" weight="0.124999875">
+ <shade name="cool" weight="0.437499535157" />
+ <shade name="dark" weight="0.312499667969" />
+ <shade name="hard" weight="0.249999734375" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="cool" weight="0.437499535157" />
+ <shade name="dark" weight="0.312499667969" />
+ <shade name="hard" weight="0.249999734375" />
+</color>
+
+</colors>

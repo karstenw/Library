@@ -1,0 +1,33 @@
+<colors query="scottish">
+
+<color name="blue" weight="0.352122418916">
+ <shade name="fresh" weight="0.802673676686" />
+ <shade name="cool" weight="0.134197005321" />
+ <shade name="hard" weight="0.0631269401977" />
+</color>
+
+<color name="black" weight="0.335627886055">
+ <shade name="warm" weight="0.569947564442" />
+ <shade name="fresh" weight="0.368450950751" />
+ <shade name="cool" weight="0.0616003933286" />
+</color>
+
+<color name="white" weight="0.282558519456">
+ <shade name="warm" weight="0.569947564442" />
+ <shade name="fresh" weight="0.368450950751" />
+ <shade name="cool" weight="0.0616003933286" />
+</color>
+
+<color name="red" weight="0.0204388776764">
+ <shade name="warm" weight="0.569947564442" />
+ <shade name="fresh" weight="0.368450950751" />
+ <shade name="cool" weight="0.0616003933286" />
+</color>
+
+<color name="pink" weight="0.00925128147458">
+ <shade name="warm" weight="0.569947564442" />
+ <shade name="fresh" weight="0.368450950751" />
+ <shade name="cool" weight="0.0616003933286" />
+</color>
+
+</colors>

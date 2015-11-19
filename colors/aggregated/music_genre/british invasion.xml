@@ -1,0 +1,33 @@
+<colors query="british invasion">
+
+<color name="black" weight="0.994450562108">
+ <shade name="light" weight="0.93616923344" />
+ <shade name="cool" weight="0.0354609558121" />
+ <shade name="bright" weight="0.0283687646497" />
+</color>
+
+<color name="white" weight="0.00170721126542">
+ <shade name="light" weight="0.93616923344" />
+ <shade name="cool" weight="0.0354609558121" />
+ <shade name="bright" weight="0.0283687646497" />
+</color>
+
+<color name="red" weight="0.00170721126542">
+ <shade name="light" weight="0.93616923344" />
+ <shade name="cool" weight="0.0354609558121" />
+ <shade name="bright" weight="0.0283687646497" />
+</color>
+
+<color name="blue" weight="0.00128040844907">
+ <shade name="light" weight="0.93616923344" />
+ <shade name="cool" weight="0.0354609558121" />
+ <shade name="bright" weight="0.0283687646497" />
+</color>
+
+<color name="pink" weight="0.000853605632711">
+ <shade name="light" weight="0.93616923344" />
+ <shade name="cool" weight="0.0354609558121" />
+ <shade name="bright" weight="0.0283687646497" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="mother teresa">
+
+<color name="white" weight="0.951647392681">
+ <shade name="light" weight="0.997546016766" />
+ <shade name="cool" weight="0.00136276778247" />
+ <shade name="dark" weight="0.00109021422597" />
+</color>
+
+<color name="blue" weight="0.0296702997718">
+ <shade name="light" weight="0.997546016766" />
+ <shade name="cool" weight="0.00136276778247" />
+ <shade name="dark" weight="0.00109021422597" />
+</color>
+
+<color name="green" weight="0.00769229994084">
+ <shade name="light" weight="0.997546016766" />
+ <shade name="cool" weight="0.00136276778247" />
+ <shade name="dark" weight="0.00109021422597" />
+</color>
+
+<color name="orange" weight="0.00549449995774">
+ <shade name="light" weight="0.997546016766" />
+ <shade name="cool" weight="0.00136276778247" />
+ <shade name="dark" weight="0.00109021422597" />
+</color>
+
+<color name="black" weight="0.00549449995774">
+ <shade name="light" weight="0.997546016766" />
+ <shade name="cool" weight="0.00136276778247" />
+ <shade name="dark" weight="0.00109021422597" />
+</color>
+
+</colors>

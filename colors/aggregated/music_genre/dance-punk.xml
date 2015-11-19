@@ -1,0 +1,33 @@
+<colors query="dance-punk">
+
+<color name="pink" weight="0.999999000001">
+ <shade name="cool" weight="0.535894305214" />
+ <shade name="dark" weight="0.459049084089" />
+ <shade name="hard" weight="0.00505560665297" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="cool" weight="0.535894305214" />
+ <shade name="dark" weight="0.459049084089" />
+ <shade name="hard" weight="0.00505560665297" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="cool" weight="0.535894305214" />
+ <shade name="dark" weight="0.459049084089" />
+ <shade name="hard" weight="0.00505560665297" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="cool" weight="0.535894305214" />
+ <shade name="dark" weight="0.459049084089" />
+ <shade name="hard" weight="0.00505560665297" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="cool" weight="0.535894305214" />
+ <shade name="dark" weight="0.459049084089" />
+ <shade name="hard" weight="0.00505560665297" />
+</color>
+
+</colors>

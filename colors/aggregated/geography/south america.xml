@@ -1,0 +1,33 @@
+<colors query="south america">
+
+<color name="white" weight="0.469517991098">
+ <shade name="light" weight="0.843659756196" />
+ <shade name="warm" weight="0.079122892389" />
+ <shade name="cool" weight="0.0772163166688" />
+</color>
+
+<color name="black" weight="0.354569006676">
+ <shade name="light" weight="0.843659756196" />
+ <shade name="warm" weight="0.079122892389" />
+ <shade name="cool" weight="0.0772163166688" />
+</color>
+
+<color name="blue" weight="0.0732013433137">
+ <shade name="light" weight="0.904305950464" />
+ <shade name="cool" weight="0.0827669852967" />
+ <shade name="soft" weight="0.0129259551111" />
+</color>
+
+<color name="green" weight="0.0646230608941">
+ <shade name="light" weight="0.904305950464" />
+ <shade name="cool" weight="0.0827669852967" />
+ <shade name="soft" weight="0.0129259551111" />
+</color>
+
+<color name="red" weight="0.0380875739429">
+ <shade name="light" weight="0.843659756196" />
+ <shade name="warm" weight="0.079122892389" />
+ <shade name="cool" weight="0.0772163166688" />
+</color>
+
+</colors>

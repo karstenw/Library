@@ -1,0 +1,33 @@
+<colors query="urban folk">
+
+<color name="black" weight="0.939188250001">
+ <shade name="dark" weight="0.895347921039" />
+ <shade name="cool" weight="0.081395265549" />
+ <shade name="fresh" weight="0.0232557901569" />
+</color>
+
+<color name="white" weight="0.0608107500001">
+ <shade name="dark" weight="0.895347921039" />
+ <shade name="cool" weight="0.081395265549" />
+ <shade name="fresh" weight="0.0232557901569" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="dark" weight="0.895347921039" />
+ <shade name="cool" weight="0.081395265549" />
+ <shade name="fresh" weight="0.0232557901569" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="dark" weight="0.895347921039" />
+ <shade name="cool" weight="0.081395265549" />
+ <shade name="fresh" weight="0.0232557901569" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="dark" weight="0.895347921039" />
+ <shade name="cool" weight="0.081395265549" />
+ <shade name="fresh" weight="0.0232557901569" />
+</color>
+
+</colors>

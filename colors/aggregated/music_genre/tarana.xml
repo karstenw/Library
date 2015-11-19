@@ -1,0 +1,33 @@
+<colors query="tarana">
+
+<color name="red" weight="0.890755381824">
+ <shade name="hard" weight="0.999999000001" />
+ <shade name="weak" weight="0.0" />
+ <shade name="warm" weight="0.0" />
+</color>
+
+<color name="green" weight="0.0336134106349">
+ <shade name="hard" weight="0.999999000001" />
+ <shade name="weak" weight="0.0" />
+ <shade name="soft" weight="0.0" />
+</color>
+
+<color name="yellow" weight="0.0252100579762">
+ <shade name="hard" weight="0.999999000001" />
+ <shade name="weak" weight="0.0" />
+ <shade name="warm" weight="0.0" />
+</color>
+
+<color name="white" weight="0.0252100579762">
+ <shade name="hard" weight="0.999999000001" />
+ <shade name="weak" weight="0.0" />
+ <shade name="warm" weight="0.0" />
+</color>
+
+<color name="orange" weight="0.0252100579762">
+ <shade name="hard" weight="0.999999000001" />
+ <shade name="weak" weight="0.0" />
+ <shade name="warm" weight="0.0" />
+</color>
+
+</colors>

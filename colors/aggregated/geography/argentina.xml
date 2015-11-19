@@ -1,0 +1,33 @@
+<colors query="argentina">
+
+<color name="red" weight="0.963310458597">
+ <shade name="soft" weight="0.803003146499" />
+ <shade name="cool" weight="0.10283061876" />
+ <shade name="hard" weight="0.0941651171794" />
+</color>
+
+<color name="black" weight="0.018438825956">
+ <shade name="soft" weight="0.803003146499" />
+ <shade name="cool" weight="0.10283061876" />
+ <shade name="hard" weight="0.0941651171794" />
+</color>
+
+<color name="blue" weight="0.00975130218825">
+ <shade name="soft" weight="0.803003146499" />
+ <shade name="cool" weight="0.10283061876" />
+ <shade name="hard" weight="0.0941651171794" />
+</color>
+
+<color name="white" weight="0.00499975857652">
+ <shade name="soft" weight="0.803003146499" />
+ <shade name="cool" weight="0.10283061876" />
+ <shade name="hard" weight="0.0941651171794" />
+</color>
+
+<color name="pink" weight="0.00349864902754">
+ <shade name="soft" weight="0.803003146499" />
+ <shade name="cool" weight="0.10283061876" />
+ <shade name="hard" weight="0.0941651171794" />
+</color>
+
+</colors>

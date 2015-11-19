@@ -1,0 +1,33 @@
+<colors query="arabic music">
+
+<color name="black" weight="0.388888456791">
+ <shade name="cool" weight="0.530611698645" />
+ <shade name="soft" weight="0.451246700984" />
+ <shade name="fresh" weight="0.0181405708938" />
+</color>
+
+<color name="yellow" weight="0.166666481482">
+ <shade name="cool" weight="0.530611698645" />
+ <shade name="soft" weight="0.451246700984" />
+ <shade name="fresh" weight="0.0181405708938" />
+</color>
+
+<color name="red" weight="0.166666481482">
+ <shade name="cool" weight="0.530611698645" />
+ <shade name="soft" weight="0.451246700984" />
+ <shade name="fresh" weight="0.0181405708938" />
+</color>
+
+<color name="green" weight="0.166666481482">
+ <shade name="cool" weight="0.530611698645" />
+ <shade name="soft" weight="0.451246700984" />
+ <shade name="fresh" weight="0.0181405708938" />
+</color>
+
+<color name="white" weight="0.111110987654">
+ <shade name="cool" weight="0.530611698645" />
+ <shade name="soft" weight="0.451246700984" />
+ <shade name="fresh" weight="0.0181405708938" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="irish folk">
+
+<color name="green" weight="0.978069195225">
+ <shade name="cool" weight="0.94755146687" />
+ <shade name="light" weight="0.027971999022" />
+ <shade name="hard" weight="0.0244754991442" />
+</color>
+
+<color name="black" weight="0.00986841116258">
+ <shade name="cool" weight="0.94755146687" />
+ <shade name="light" weight="0.027971999022" />
+ <shade name="hard" weight="0.0244754991442" />
+</color>
+
+<color name="white" weight="0.00548245064588">
+ <shade name="cool" weight="0.94755146687" />
+ <shade name="light" weight="0.027971999022" />
+ <shade name="hard" weight="0.0244754991442" />
+</color>
+
+<color name="blue" weight="0.00548245064588">
+ <shade name="cool" weight="0.94755146687" />
+ <shade name="light" weight="0.027971999022" />
+ <shade name="hard" weight="0.0244754991442" />
+</color>
+
+<color name="red" weight="0.00109649012918">
+ <shade name="cool" weight="0.94755146687" />
+ <shade name="light" weight="0.027971999022" />
+ <shade name="hard" weight="0.0244754991442" />
+</color>
+
+</colors>

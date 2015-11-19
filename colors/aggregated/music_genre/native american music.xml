@@ -1,0 +1,33 @@
+<colors query="native american music">
+
+<color name="red" weight="0.799999200001">
+ <shade name="soft" weight="0.499999444445" />
+ <shade name="cool" weight="0.277777469136" />
+ <shade name="light" weight="0.222221975309" />
+</color>
+
+<color name="blue" weight="0.1999998">
+ <shade name="soft" weight="0.499999444445" />
+ <shade name="cool" weight="0.277777469136" />
+ <shade name="light" weight="0.222221975309" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="soft" weight="0.499999444445" />
+ <shade name="cool" weight="0.277777469136" />
+ <shade name="light" weight="0.222221975309" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="soft" weight="0.499999444445" />
+ <shade name="cool" weight="0.277777469136" />
+ <shade name="light" weight="0.222221975309" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="soft" weight="0.499999444445" />
+ <shade name="cool" weight="0.277777469136" />
+ <shade name="light" weight="0.222221975309" />
+</color>
+
+</colors>

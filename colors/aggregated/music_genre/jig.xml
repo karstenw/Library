@@ -1,0 +1,33 @@
+<colors query="jig">
+
+<color name="yellow" weight="0.381994690715">
+ <shade name="light" weight="0.807197068684" />
+ <shade name="soft" weight="0.120308352912" />
+ <shade name="hard" weight="0.0724934947035" />
+</color>
+
+<color name="red" weight="0.250607981807">
+ <shade name="light" weight="0.807197068684" />
+ <shade name="soft" weight="0.120308352912" />
+ <shade name="hard" weight="0.0724934947035" />
+</color>
+
+<color name="green" weight="0.176398822146">
+ <shade name="light" weight="0.807197068684" />
+ <shade name="soft" weight="0.120308352912" />
+ <shade name="hard" weight="0.0724934947035" />
+</color>
+
+<color name="pink" weight="0.105231021487">
+ <shade name="light" weight="0.807197068684" />
+ <shade name="soft" weight="0.120308352912" />
+ <shade name="hard" weight="0.0724934947035" />
+</color>
+
+<color name="orange" weight="0.0857663238708">
+ <shade name="light" weight="0.807197068684" />
+ <shade name="soft" weight="0.120308352912" />
+ <shade name="hard" weight="0.0724934947035" />
+</color>
+
+</colors>

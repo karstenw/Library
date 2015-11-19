@@ -1,0 +1,33 @@
+<colors query="gavotte">
+
+<color name="blue" weight="0.891303456523">
+ <shade name="light" weight="0.533332622223" />
+ <shade name="hard" weight="0.333332888889" />
+ <shade name="weak" weight="0.133333155556" />
+</color>
+
+<color name="black" weight="0.0434782173913">
+ <shade name="light" weight="0.533332622223" />
+ <shade name="hard" weight="0.333332888889" />
+ <shade name="weak" weight="0.133333155556" />
+</color>
+
+<color name="white" weight="0.0217391086957">
+ <shade name="light" weight="0.533332622223" />
+ <shade name="hard" weight="0.333332888889" />
+ <shade name="weak" weight="0.133333155556" />
+</color>
+
+<color name="red" weight="0.0217391086957">
+ <shade name="light" weight="0.533332622223" />
+ <shade name="hard" weight="0.333332888889" />
+ <shade name="weak" weight="0.133333155556" />
+</color>
+
+<color name="pink" weight="0.0217391086957">
+ <shade name="light" weight="0.533332622223" />
+ <shade name="hard" weight="0.333332888889" />
+ <shade name="weak" weight="0.133333155556" />
+</color>
+
+</colors>

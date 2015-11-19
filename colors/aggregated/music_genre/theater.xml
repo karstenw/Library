@@ -1,0 +1,33 @@
+<colors query="theater">
+
+<color name="black" weight="0.547454176156">
+ <shade name="dark" weight="0.602587511777" />
+ <shade name="light" weight="0.301293755889" />
+ <shade name="cool" weight="0.0961176473704" />
+</color>
+
+<color name="red" weight="0.246712405188">
+ <shade name="dark" weight="0.602587511777" />
+ <shade name="light" weight="0.301293755889" />
+ <shade name="cool" weight="0.0961176473704" />
+</color>
+
+<color name="green" weight="0.0729070959922">
+ <shade name="dark" weight="0.602587511777" />
+ <shade name="light" weight="0.301293755889" />
+ <shade name="cool" weight="0.0961176473704" />
+</color>
+
+<color name="blue" weight="0.0703032711354">
+ <shade name="dark" weight="0.602587511777" />
+ <shade name="light" weight="0.301293755889" />
+ <shade name="cool" weight="0.0961176473704" />
+</color>
+
+<color name="white" weight="0.0626219878076">
+ <shade name="dark" weight="0.602587511777" />
+ <shade name="light" weight="0.301293755889" />
+ <shade name="cool" weight="0.0961176473704" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="niger">
+
+<color name="white" weight="0.364979446637">
+ <shade name="cool" weight="0.907371453248" />
+ <shade name="dark" weight="0.069565144749" />
+ <shade name="fresh" weight="0.02306235777" />
+</color>
+
+<color name="green" weight="0.203537617787">
+ <shade name="cool" weight="0.907371453248" />
+ <shade name="dark" weight="0.069565144749" />
+ <shade name="fresh" weight="0.02306235777" />
+</color>
+
+<color name="red" weight="0.158530949828">
+ <shade name="cool" weight="0.907371453248" />
+ <shade name="dark" weight="0.069565144749" />
+ <shade name="fresh" weight="0.02306235777" />
+</color>
+
+<color name="yellow" weight="0.155620070805">
+ <shade name="cool" weight="0.907371453248" />
+ <shade name="dark" weight="0.069565144749" />
+ <shade name="fresh" weight="0.02306235777" />
+</color>
+
+<color name="black" weight="0.117330815974">
+ <shade name="cool" weight="0.907371453248" />
+ <shade name="dark" weight="0.069565144749" />
+ <shade name="fresh" weight="0.02306235777" />
+</color>
+
+</colors>

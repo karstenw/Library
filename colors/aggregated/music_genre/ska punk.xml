@@ -1,0 +1,33 @@
+<colors query="ska punk">
+
+<color name="green" weight="0.43055512201">
+ <shade name="cool" weight="0.704104624228" />
+ <shade name="hard" weight="0.252517169965" />
+ <shade name="fresh" weight="0.0433771825707" />
+</color>
+
+<color name="black" weight="0.333332997686">
+ <shade name="cool" weight="0.704104624228" />
+ <shade name="hard" weight="0.252517169965" />
+ <shade name="fresh" weight="0.0433771825707" />
+</color>
+
+<color name="orange" weight="0.190972029924">
+ <shade name="cool" weight="0.704104624228" />
+ <shade name="hard" weight="0.252517169965" />
+ <shade name="fresh" weight="0.0433771825707" />
+</color>
+
+<color name="red" weight="0.0243055310812">
+ <shade name="cool" weight="0.704104624228" />
+ <shade name="hard" weight="0.252517169965" />
+ <shade name="fresh" weight="0.0433771825707" />
+</color>
+
+<color name="white" weight="0.0208333123553">
+ <shade name="cool" weight="0.704104624228" />
+ <shade name="hard" weight="0.252517169965" />
+ <shade name="fresh" weight="0.0433771825707" />
+</color>
+
+</colors>

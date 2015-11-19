@@ -1,0 +1,33 @@
+<colors query="james earl jones">
+
+<color name="white" weight="0.574712059057">
+ <shade name="light" weight="0.643834946144" />
+ <shade name="cool" weight="0.333332986302" />
+ <shade name="dark" weight="0.022831026459" />
+</color>
+
+<color name="black" weight="0.390804200159">
+ <shade name="light" weight="0.643834946144" />
+ <shade name="cool" weight="0.333332986302" />
+ <shade name="dark" weight="0.022831026459" />
+</color>
+
+<color name="pink" weight="0.0143678014764">
+ <shade name="light" weight="0.643834946144" />
+ <shade name="cool" weight="0.333332986302" />
+ <shade name="dark" weight="0.022831026459" />
+</color>
+
+<color name="green" weight="0.0114942411811">
+ <shade name="light" weight="0.643834946144" />
+ <shade name="cool" weight="0.333332986302" />
+ <shade name="dark" weight="0.022831026459" />
+</color>
+
+<color name="red" weight="0.00862068088586">
+ <shade name="light" weight="0.643834946144" />
+ <shade name="cool" weight="0.333332986302" />
+ <shade name="dark" weight="0.022831026459" />
+</color>
+
+</colors>

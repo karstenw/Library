@@ -1,0 +1,33 @@
+<colors query="joyce carol oates">
+
+<color name="white" weight="0.783269172752">
+ <shade name="light" weight="0.9834973566" />
+ <shade name="dark" weight="0.0132013068" />
+ <shade name="soft" weight="0.0033003267" />
+</color>
+
+<color name="black" weight="0.182509321806">
+ <shade name="light" weight="0.9834973566" />
+ <shade name="dark" weight="0.0132013068" />
+ <shade name="soft" weight="0.0033003267" />
+</color>
+
+<color name="green" weight="0.0266159427634">
+ <shade name="light" weight="0.9834973566" />
+ <shade name="dark" weight="0.0132013068" />
+ <shade name="soft" weight="0.0033003267" />
+</color>
+
+<color name="yellow" weight="0.00380227753763">
+ <shade name="light" weight="0.9834973566" />
+ <shade name="dark" weight="0.0132013068" />
+ <shade name="soft" weight="0.0033003267" />
+</color>
+
+<color name="red" weight="0.00380227753763">
+ <shade name="light" weight="0.9834973566" />
+ <shade name="dark" weight="0.0132013068" />
+ <shade name="soft" weight="0.0033003267" />
+</color>
+
+</colors>

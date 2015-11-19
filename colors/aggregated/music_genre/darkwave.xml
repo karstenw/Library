@@ -1,0 +1,33 @@
+<colors query="darkwave">
+
+<color name="black" weight="0.867297690349">
+ <shade name="dark" weight="0.97527964409" />
+ <shade name="hard" weight="0.0143531721206" />
+ <shade name="cool" weight="0.0103661798649" />
+</color>
+
+<color name="blue" weight="0.0616113113363">
+ <shade name="dark" weight="0.97527964409" />
+ <shade name="hard" weight="0.0143531721206" />
+ <shade name="cool" weight="0.0103661798649" />
+</color>
+
+<color name="white" weight="0.03791465313">
+ <shade name="dark" weight="0.97527964409" />
+ <shade name="hard" weight="0.0143531721206" />
+ <shade name="cool" weight="0.0103661798649" />
+</color>
+
+<color name="red" weight="0.018957326565">
+ <shade name="dark" weight="0.97527964409" />
+ <shade name="hard" weight="0.0143531721206" />
+ <shade name="cool" weight="0.0103661798649" />
+</color>
+
+<color name="orange" weight="0.0142179949238">
+ <shade name="dark" weight="0.97527964409" />
+ <shade name="hard" weight="0.0143531721206" />
+ <shade name="cool" weight="0.0103661798649" />
+</color>
+
+</colors>

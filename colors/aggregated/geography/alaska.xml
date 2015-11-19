@@ -1,0 +1,33 @@
+<colors query="alaska">
+
+<color name="black" weight="0.702478552231">
+ <shade name="dark" weight="0.752673156185" />
+ <shade name="warm" weight="0.128880602827" />
+ <shade name="fresh" weight="0.118444926485" />
+</color>
+
+<color name="pink" weight="0.151514981854">
+ <shade name="dark" weight="0.752673156185" />
+ <shade name="warm" weight="0.128880602827" />
+ <shade name="fresh" weight="0.118444926485" />
+</color>
+
+<color name="white" weight="0.0552340979304">
+ <shade name="dark" weight="0.752673156185" />
+ <shade name="warm" weight="0.128880602827" />
+ <shade name="fresh" weight="0.118444926485" />
+</color>
+
+<color name="yellow" weight="0.0492423691025">
+ <shade name="dark" weight="0.752673156185" />
+ <shade name="warm" weight="0.128880602827" />
+ <shade name="fresh" weight="0.118444926485" />
+</color>
+
+<color name="blue" weight="0.0415288791172">
+ <shade name="dark" weight="0.768205599626" />
+ <shade name="fresh" weight="0.12088920008" />
+ <shade name="light" weight="0.110903858664" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="poland">
+
+<color name="black" weight="0.533159394491">
+ <shade name="soft" weight="0.65263053657" />
+ <shade name="cool" weight="0.182104972301" />
+ <shade name="fresh" weight="0.165262893938" />
+</color>
+
+<color name="white" weight="0.367824251252">
+ <shade name="soft" weight="0.65263053657" />
+ <shade name="cool" weight="0.182104972301" />
+ <shade name="fresh" weight="0.165262893938" />
+</color>
+
+<color name="green" weight="0.0414266707218">
+ <shade name="soft" weight="0.65263053657" />
+ <shade name="cool" weight="0.182104972301" />
+ <shade name="fresh" weight="0.165262893938" />
+</color>
+
+<color name="red" weight="0.0354820363581">
+ <shade name="soft" weight="0.65263053657" />
+ <shade name="cool" weight="0.182104972301" />
+ <shade name="fresh" weight="0.165262893938" />
+</color>
+
+<color name="pink" weight="0.0221066090399">
+ <shade name="soft" weight="0.65263053657" />
+ <shade name="cool" weight="0.182104972301" />
+ <shade name="fresh" weight="0.165262893938" />
+</color>
+
+</colors>

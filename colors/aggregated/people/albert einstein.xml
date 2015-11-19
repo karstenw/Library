@@ -1,0 +1,33 @@
+<colors query="albert einstein">
+
+<color name="green" weight="0.443525718313">
+ <shade name="light" weight="0.647563777819" />
+ <shade name="cool" weight="0.27507133925" />
+ <shade name="hard" weight="0.0773638141642" />
+</color>
+
+<color name="white" weight="0.278236630743">
+ <shade name="light" weight="0.647563777819" />
+ <shade name="cool" weight="0.27507133925" />
+ <shade name="hard" weight="0.0773638141642" />
+</color>
+
+<color name="black" weight="0.135904360891">
+ <shade name="light" weight="0.647563777819" />
+ <shade name="cool" weight="0.27507133925" />
+ <shade name="hard" weight="0.0773638141642" />
+</color>
+
+<color name="red" weight="0.116620634008">
+ <shade name="light" weight="0.647563777819" />
+ <shade name="cool" weight="0.27507133925" />
+ <shade name="hard" weight="0.0773638141642" />
+</color>
+
+<color name="orange" weight="0.0257116358442">
+ <shade name="light" weight="0.647563777819" />
+ <shade name="cool" weight="0.27507133925" />
+ <shade name="hard" weight="0.0773638141642" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="laptev sea">
+
+<color name="black" weight="0.999999000001">
+ <shade name="fresh" weight="0.333332888889" />
+ <shade name="dark" weight="0.333332888889" />
+ <shade name="cool" weight="0.333332888889" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="fresh" weight="0.333332888889" />
+ <shade name="dark" weight="0.333332888889" />
+ <shade name="cool" weight="0.333332888889" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="fresh" weight="0.333332888889" />
+ <shade name="dark" weight="0.333332888889" />
+ <shade name="cool" weight="0.333332888889" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="fresh" weight="0.333332888889" />
+ <shade name="dark" weight="0.333332888889" />
+ <shade name="cool" weight="0.333332888889" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="fresh" weight="0.333332888889" />
+ <shade name="dark" weight="0.333332888889" />
+ <shade name="cool" weight="0.333332888889" />
+</color>
+
+</colors>

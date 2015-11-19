@@ -1,0 +1,33 @@
+<colors query="william morris">
+
+<color name="blue" weight="0.334900885848">
+ <shade name="light" weight="0.428570785715" />
+ <shade name="hard" weight="0.285713857144" />
+ <shade name="dark" weight="0.285713857144" />
+</color>
+
+<color name="white" weight="0.259642259814">
+ <shade name="light" weight="0.428570785715" />
+ <shade name="hard" weight="0.285713857144" />
+ <shade name="dark" weight="0.285713857144" />
+</color>
+
+<color name="green" weight="0.246472000259">
+ <shade name="light" weight="0.428570785715" />
+ <shade name="hard" weight="0.285713857144" />
+ <shade name="dark" weight="0.285713857144" />
+</color>
+
+<color name="black" weight="0.114769404701">
+ <shade name="light" weight="0.428570785715" />
+ <shade name="hard" weight="0.285713857144" />
+ <shade name="dark" weight="0.285713857144" />
+</color>
+
+<color name="red" weight="0.0442144427945">
+ <shade name="light" weight="0.428570785715" />
+ <shade name="hard" weight="0.285713857144" />
+ <shade name="dark" weight="0.285713857144" />
+</color>
+
+</colors>

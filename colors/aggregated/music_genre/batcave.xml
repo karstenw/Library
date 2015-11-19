@@ -1,0 +1,33 @@
+<colors query="batcave">
+
+<color name="pink" weight="0.576470004983">
+ <shade name="cool" weight="0.922076976051" />
+ <shade name="soft" weight="0.0649349983134" />
+ <shade name="warm" weight="0.0129869996627" />
+</color>
+
+<color name="black" weight="0.223529185606">
+ <shade name="cool" weight="0.922076976051" />
+ <shade name="soft" weight="0.0649349983134" />
+ <shade name="warm" weight="0.0129869996627" />
+</color>
+
+<color name="green" weight="0.094117551834">
+ <shade name="cool" weight="0.922076976051" />
+ <shade name="soft" weight="0.0649349983134" />
+ <shade name="intense" weight="0.0129869996627" />
+</color>
+
+<color name="purple" weight="0.0588234698963">
+ <shade name="cool" weight="0.92810361673" />
+ <shade name="soft" weight="0.0653594096288" />
+ <shade name="hard" weight="0.00653594096288" />
+</color>
+
+<color name="blue" weight="0.047058775917">
+ <shade name="cool" weight="0.922076976051" />
+ <shade name="soft" weight="0.0649349983134" />
+ <shade name="intense" weight="0.0129869996627" />
+</color>
+
+</colors>

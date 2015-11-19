@@ -1,0 +1,33 @@
+<colors query="jerome k. jerome">
+
+<color name="green" weight="0.991934491936">
+ <shade name="light" weight="0.4999995" />
+ <shade name="hard" weight="0.4999995" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="black" weight="0.00403225403226">
+ <shade name="light" weight="0.4999995" />
+ <shade name="hard" weight="0.4999995" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="yellow" weight="0.00201612701613">
+ <shade name="light" weight="0.4999995" />
+ <shade name="hard" weight="0.4999995" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="pink" weight="0.00201612701613">
+ <shade name="light" weight="0.4999995" />
+ <shade name="hard" weight="0.4999995" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="light" weight="0.4999995" />
+ <shade name="hard" weight="0.4999995" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+</colors>

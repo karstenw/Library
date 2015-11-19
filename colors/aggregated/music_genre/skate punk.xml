@@ -1,0 +1,33 @@
+<colors query="skate punk">
+
+<color name="orange" weight="0.312499638672">
+ <shade name="cool" weight="0.768816410684" />
+ <shade name="hard" weight="0.204300864378" />
+ <shade name="light" weight="0.0268816926813" />
+</color>
+
+<color name="black" weight="0.281249674805">
+ <shade name="cool" weight="0.768816410684" />
+ <shade name="hard" weight="0.204300864378" />
+ <shade name="light" weight="0.0268816926813" />
+</color>
+
+<color name="green" weight="0.156249819336">
+ <shade name="cool" weight="0.768816410684" />
+ <shade name="hard" weight="0.204300864378" />
+ <shade name="light" weight="0.0268816926813" />
+</color>
+
+<color name="white" weight="0.124999855469">
+ <shade name="cool" weight="0.768816410684" />
+ <shade name="hard" weight="0.204300864378" />
+ <shade name="light" weight="0.0268816926813" />
+</color>
+
+<color name="pink" weight="0.124999855469">
+ <shade name="cool" weight="0.768816410684" />
+ <shade name="hard" weight="0.204300864378" />
+ <shade name="light" weight="0.0268816926813" />
+</color>
+
+</colors>

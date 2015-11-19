@@ -1,0 +1,33 @@
+<colors query="quiet storm">
+
+<color name="green" weight="0.614034441367">
+ <shade name="soft" weight="0.466665857779" />
+ <shade name="cool" weight="0.333332755557" />
+ <shade name="light" weight="0.199999653334" />
+</color>
+
+<color name="white" weight="0.122806888273">
+ <shade name="warm" weight="0.399999480001" />
+ <shade name="soft" weight="0.349999545001" />
+ <shade name="cool" weight="0.249999675" />
+</color>
+
+<color name="black" weight="0.105263047092">
+ <shade name="warm" weight="0.399999480001" />
+ <shade name="soft" weight="0.349999545001" />
+ <shade name="cool" weight="0.249999675" />
+</color>
+
+<color name="blue" weight="0.0877192059096">
+ <shade name="soft" weight="0.466665857779" />
+ <shade name="cool" weight="0.333332755557" />
+ <shade name="light" weight="0.199999653334" />
+</color>
+
+<color name="red" weight="0.0701753647277">
+ <shade name="warm" weight="0.399999480001" />
+ <shade name="soft" weight="0.349999545001" />
+ <shade name="cool" weight="0.249999675" />
+</color>
+
+</colors>

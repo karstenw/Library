@@ -1,0 +1,33 @@
+<colors query="barbara stanwyck">
+
+<color name="green" weight="0.883210789175">
+ <shade name="intense" weight="0.3999996" />
+ <shade name="cool" weight="0.3999996" />
+ <shade name="dark" weight="0.1999998" />
+</color>
+
+<color name="red" weight="0.0510948390432">
+ <shade name="intense" weight="0.3999996" />
+ <shade name="cool" weight="0.3999996" />
+ <shade name="dark" weight="0.1999998" />
+</color>
+
+<color name="white" weight="0.0364963136023">
+ <shade name="cool" weight="0.666665555557" />
+ <shade name="dark" weight="0.333332777779" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="black" weight="0.0218977881614">
+ <shade name="intense" weight="0.3999996" />
+ <shade name="cool" weight="0.3999996" />
+ <shade name="dark" weight="0.1999998" />
+</color>
+
+<color name="orange" weight="0.00729926272045">
+ <shade name="intense" weight="0.3999996" />
+ <shade name="cool" weight="0.3999996" />
+ <shade name="dark" weight="0.1999998" />
+</color>
+
+</colors>

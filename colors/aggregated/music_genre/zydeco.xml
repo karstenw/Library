@@ -1,0 +1,33 @@
+<colors query="zydeco">
+
+<color name="red" weight="0.401944464043">
+ <shade name="cool" weight="0.525925298711" />
+ <shade name="light" weight="0.34814773295" />
+ <shade name="hard" weight="0.125925775748" />
+</color>
+
+<color name="black" weight="0.233387108154">
+ <shade name="cool" weight="0.525925298711" />
+ <shade name="light" weight="0.34814773295" />
+ <shade name="hard" weight="0.125925775748" />
+</color>
+
+<color name="yellow" weight="0.170178099696">
+ <shade name="cool" weight="0.525925298711" />
+ <shade name="light" weight="0.34814773295" />
+ <shade name="hard" weight="0.125925775748" />
+</color>
+
+<color name="blue" weight="0.145866942596">
+ <shade name="cool" weight="0.525925298711" />
+ <shade name="light" weight="0.34814773295" />
+ <shade name="hard" weight="0.125925775748" />
+</color>
+
+<color name="white" weight="0.0486223141988">
+ <shade name="cool" weight="0.525925298711" />
+ <shade name="light" weight="0.34814773295" />
+ <shade name="hard" weight="0.125925775748" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="techno-tribal">
+
+<color name="black" weight="0.999999000001">
+ <shade name="hard" weight="0.995460425121" />
+ <shade name="dark" weight="0.00272314402009" />
+ <shade name="intense" weight="0.00181542934673" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="hard" weight="0.995460425121" />
+ <shade name="dark" weight="0.00272314402009" />
+ <shade name="intense" weight="0.00181542934673" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="hard" weight="0.995761714294" />
+ <shade name="dark" weight="0.0027239682154" />
+ <shade name="cool" weight="0.00151331567522" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="hard" weight="0.995460425121" />
+ <shade name="dark" weight="0.00272314402009" />
+ <shade name="intense" weight="0.00181542934673" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="hard" weight="0.995761714294" />
+ <shade name="dark" weight="0.0027239682154" />
+ <shade name="cool" weight="0.00151331567522" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="vocal house">
+
+<color name="black" weight="0.399999573334">
+ <shade name="cool" weight="0.525241585887" />
+ <shade name="hard" weight="0.254461700347" />
+ <shade name="dark" weight="0.2202955001" />
+</color>
+
+<color name="white" weight="0.266666382223">
+ <shade name="cool" weight="0.525241585887" />
+ <shade name="hard" weight="0.254461700347" />
+ <shade name="dark" weight="0.2202955001" />
+</color>
+
+<color name="yellow" weight="0.133333191111">
+ <shade name="cool" weight="0.525241585887" />
+ <shade name="hard" weight="0.254461700347" />
+ <shade name="dark" weight="0.2202955001" />
+</color>
+
+<color name="red" weight="0.133333191111">
+ <shade name="cool" weight="0.525241585887" />
+ <shade name="hard" weight="0.254461700347" />
+ <shade name="dark" weight="0.2202955001" />
+</color>
+
+<color name="pink" weight="0.0666665955556">
+ <shade name="cool" weight="0.525241585887" />
+ <shade name="hard" weight="0.254461700347" />
+ <shade name="dark" weight="0.2202955001" />
+</color>
+
+</colors>

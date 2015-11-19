@@ -1,0 +1,33 @@
+<colors query="vaudeville">
+
+<color name="black" weight="0.825812216293">
+ <shade name="dark" weight="0.481927089564" />
+ <shade name="light" weight="0.337348962695" />
+ <shade name="bright" weight="0.180722658586" />
+</color>
+
+<color name="blue" weight="0.13962185925">
+ <shade name="dark" weight="0.481927089564" />
+ <shade name="light" weight="0.337348962695" />
+ <shade name="bright" weight="0.180722658586" />
+</color>
+
+<color name="white" weight="0.0329047857317">
+ <shade name="dark" weight="0.481927089564" />
+ <shade name="light" weight="0.337348962695" />
+ <shade name="bright" weight="0.180722658586" />
+</color>
+
+<color name="red" weight="0.000893920440317">
+ <shade name="dark" weight="0.481927089564" />
+ <shade name="light" weight="0.337348962695" />
+ <shade name="bright" weight="0.180722658586" />
+</color>
+
+<color name="green" weight="0.000766217520272">
+ <shade name="dark" weight="0.481927089564" />
+ <shade name="light" weight="0.337348962695" />
+ <shade name="bright" weight="0.180722658586" />
+</color>
+
+</colors>

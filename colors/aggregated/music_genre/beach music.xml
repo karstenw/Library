@@ -1,0 +1,33 @@
+<colors query="beach music">
+
+<color name="black" weight="0.712176403025">
+ <shade name="cool" weight="0.993376484585" />
+ <shade name="soft" weight="0.00441500659816" />
+ <shade name="light" weight="0.00220750329908" />
+</color>
+
+<color name="red" weight="0.254612289164">
+ <shade name="cool" weight="0.993376484585" />
+ <shade name="soft" weight="0.00441500659816" />
+ <shade name="light" weight="0.00220750329908" />
+</color>
+
+<color name="orange" weight="0.0184501658815">
+ <shade name="cool" weight="0.993376484585" />
+ <shade name="soft" weight="0.00441500659816" />
+ <shade name="light" weight="0.00220750329908" />
+</color>
+
+<color name="blue" weight="0.00922508294074">
+ <shade name="cool" weight="0.993376484585" />
+ <shade name="soft" weight="0.00441500659816" />
+ <shade name="light" weight="0.00220750329908" />
+</color>
+
+<color name="white" weight="0.00553504976444">
+ <shade name="cool" weight="0.993376484585" />
+ <shade name="soft" weight="0.00441500659816" />
+ <shade name="light" weight="0.00220750329908" />
+</color>
+
+</colors>

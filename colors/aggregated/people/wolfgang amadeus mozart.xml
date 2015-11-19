@@ -1,0 +1,33 @@
+<colors query="wolfgang amadeus mozart">
+
+<color name="white" weight="0.479289445468">
+ <shade name="hard" weight="0.978526610826" />
+ <shade name="cool" weight="0.0122699261546" />
+ <shade name="light" weight="0.00920244461592" />
+</color>
+
+<color name="red" weight="0.305719605134">
+ <shade name="hard" weight="0.978526610826" />
+ <shade name="cool" weight="0.0122699261546" />
+ <shade name="light" weight="0.00920244461592" />
+</color>
+
+<color name="black" weight="0.0986192274626">
+ <shade name="hard" weight="0.978526610826" />
+ <shade name="cool" weight="0.0122699261546" />
+ <shade name="light" weight="0.00920244461592" />
+</color>
+
+<color name="green" weight="0.0769229974208">
+ <shade name="hard" weight="0.978526610826" />
+ <shade name="cool" weight="0.0122699261546" />
+ <shade name="light" weight="0.00920244461592" />
+</color>
+
+<color name="purple" weight="0.039447690985">
+ <shade name="hard" weight="0.978526610826" />
+ <shade name="cool" weight="0.0122699261546" />
+ <shade name="light" weight="0.00920244461592" />
+</color>
+
+</colors>

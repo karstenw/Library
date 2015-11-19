@@ -1,0 +1,33 @@
+<colors query="jumpstyle">
+
+<color name="blue" weight="0.869167484304">
+ <shade name="hard" weight="0.971329121346" />
+ <shade name="cool" weight="0.0250665579702" />
+ <shade name="fresh" weight="0.00360331770822" />
+</color>
+
+<color name="white" weight="0.0699796457608">
+ <shade name="hard" weight="0.971329121346" />
+ <shade name="cool" weight="0.0250665579702" />
+ <shade name="fresh" weight="0.00360331770822" />
+</color>
+
+<color name="black" weight="0.0496956904678">
+ <shade name="hard" weight="0.971329121346" />
+ <shade name="cool" weight="0.0250665579702" />
+ <shade name="fresh" weight="0.00360331770822" />
+</color>
+
+<color name="red" weight="0.00709938435255">
+ <shade name="hard" weight="0.971329121346" />
+ <shade name="cool" weight="0.0250665579702" />
+ <shade name="fresh" weight="0.00360331770822" />
+</color>
+
+<color name="green" weight="0.0040567910586">
+ <shade name="hard" weight="0.971329121346" />
+ <shade name="cool" weight="0.0250665579702" />
+ <shade name="fresh" weight="0.00360331770822" />
+</color>
+
+</colors>

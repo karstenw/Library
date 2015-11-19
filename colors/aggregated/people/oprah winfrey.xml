@@ -1,0 +1,33 @@
+<colors query="oprah winfrey">
+
+<color name="green" weight="0.440251119682">
+ <shade name="light" weight="0.44837709571" />
+ <shade name="fresh" weight="0.421828451885" />
+ <shade name="cool" weight="0.129793369811" />
+</color>
+
+<color name="white" weight="0.377358102584">
+ <shade name="light" weight="0.44837709571" />
+ <shade name="fresh" weight="0.421828451885" />
+ <shade name="cool" weight="0.129793369811" />
+</color>
+
+<color name="purple" weight="0.0886492050516">
+ <shade name="light" weight="0.44837709571" />
+ <shade name="fresh" weight="0.421828451885" />
+ <shade name="cool" weight="0.129793369811" />
+</color>
+
+<color name="black" weight="0.0578016776181">
+ <shade name="light" weight="0.44837709571" />
+ <shade name="fresh" weight="0.421828451885" />
+ <shade name="cool" weight="0.129793369811" />
+</color>
+
+<color name="pink" weight="0.0359388669128">
+ <shade name="light" weight="0.44837709571" />
+ <shade name="fresh" weight="0.421828451885" />
+ <shade name="cool" weight="0.129793369811" />
+</color>
+
+</colors>

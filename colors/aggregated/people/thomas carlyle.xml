@@ -1,0 +1,33 @@
+<colors query="thomas carlyle">
+
+<color name="green" weight="0.3999996">
+ <shade name="weak" weight="0.4999995" />
+ <shade name="light" weight="0.374999625" />
+ <shade name="bright" weight="0.124999875" />
+</color>
+
+<color name="black" weight="0.333333">
+ <shade name="weak" weight="0.4999995" />
+ <shade name="light" weight="0.374999625" />
+ <shade name="bright" weight="0.124999875" />
+</color>
+
+<color name="red" weight="0.1333332">
+ <shade name="weak" weight="0.4999995" />
+ <shade name="light" weight="0.374999625" />
+ <shade name="bright" weight="0.124999875" />
+</color>
+
+<color name="orange" weight="0.0666666000001">
+ <shade name="weak" weight="0.4999995" />
+ <shade name="light" weight="0.374999625" />
+ <shade name="bright" weight="0.124999875" />
+</color>
+
+<color name="blue" weight="0.0666666000001">
+ <shade name="weak" weight="0.4999995" />
+ <shade name="light" weight="0.374999625" />
+ <shade name="bright" weight="0.124999875" />
+</color>
+
+</colors>

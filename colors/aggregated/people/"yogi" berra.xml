@@ -1,0 +1,33 @@
+<colors query=""yogi" berra">
+
+<color name="white" weight="0.682463766044">
+ <shade name="cool" weight="0.910713358738" />
+ <shade name="hard" weight="0.0714284987246" />
+ <shade name="dark" weight="0.0178571246811" />
+</color>
+
+<color name="green" weight="0.227487922015">
+ <shade name="cool" weight="0.910713358738" />
+ <shade name="hard" weight="0.0714284987246" />
+ <shade name="dark" weight="0.0178571246811" />
+</color>
+
+<color name="blue" weight="0.0379146536691">
+ <shade name="cool" weight="0.910713358738" />
+ <shade name="hard" weight="0.0714284987246" />
+ <shade name="dark" weight="0.0178571246811" />
+</color>
+
+<color name="black" weight="0.0331753219605">
+ <shade name="cool" weight="0.910713358738" />
+ <shade name="hard" weight="0.0714284987246" />
+ <shade name="dark" weight="0.0178571246811" />
+</color>
+
+<color name="red" weight="0.0189573268345">
+ <shade name="cool" weight="0.910713358738" />
+ <shade name="hard" weight="0.0714284987246" />
+ <shade name="dark" weight="0.0178571246811" />
+</color>
+
+</colors>

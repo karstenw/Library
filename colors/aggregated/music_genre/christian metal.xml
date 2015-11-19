@@ -1,0 +1,33 @@
+<colors query="christian metal">
+
+<color name="white" weight="0.641997506676">
+ <shade name="cool" weight="0.972915507276" />
+ <shade name="hard" weight="0.0166666468056" />
+ <shade name="light" weight="0.0104166542535" />
+</color>
+
+<color name="black" weight="0.344125464674">
+ <shade name="cool" weight="0.829484059565" />
+ <shade name="intense" weight="0.156305347413" />
+ <shade name="hard" weight="0.0142095770375" />
+</color>
+
+<color name="green" weight="0.00832561608081">
+ <shade name="cool" weight="0.829484059565" />
+ <shade name="intense" weight="0.156305347413" />
+ <shade name="hard" weight="0.0142095770375" />
+</color>
+
+<color name="blue" weight="0.00370027381369">
+ <shade name="cool" weight="0.829484059565" />
+ <shade name="intense" weight="0.156305347413" />
+ <shade name="hard" weight="0.0142095770375" />
+</color>
+
+<color name="orange" weight="0.00185013690685">
+ <shade name="cool" weight="0.829484059565" />
+ <shade name="intense" weight="0.156305347413" />
+ <shade name="hard" weight="0.0142095770375" />
+</color>
+
+</colors>

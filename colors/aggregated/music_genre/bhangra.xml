@@ -1,0 +1,33 @@
+<colors query="bhangra">
+
+<color name="orange" weight="0.722606754964">
+ <shade name="cool" weight="0.871407450154" />
+ <shade name="fresh" weight="0.082430434474" />
+ <shade name="soft" weight="0.0461610433054" />
+</color>
+
+<color name="white" weight="0.0957003187957">
+ <shade name="cool" weight="0.871407450154" />
+ <shade name="fresh" weight="0.082430434474" />
+ <shade name="soft" weight="0.0461610433054" />
+</color>
+
+<color name="black" weight="0.0929263965117">
+ <shade name="cool" weight="0.871407450154" />
+ <shade name="fresh" weight="0.082430434474" />
+ <shade name="soft" weight="0.0461610433054" />
+</color>
+
+<color name="blue" weight="0.0790567850921">
+ <shade name="cool" weight="0.871407450154" />
+ <shade name="fresh" weight="0.082430434474" />
+ <shade name="soft" weight="0.0461610433054" />
+</color>
+
+<color name="red" weight="0.00970872799376">
+ <shade name="cool" weight="0.871407450154" />
+ <shade name="fresh" weight="0.082430434474" />
+ <shade name="soft" weight="0.0461610433054" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="roots rock">
+
+<color name="red" weight="0.796295448389">
+ <shade name="hard" weight="0.574433044415" />
+ <shade name="cool" weight="0.360841039168" />
+ <shade name="soft" weight="0.064724850075" />
+</color>
+
+<color name="blue" weight="0.0648147457991">
+ <shade name="hard" weight="0.574433044415" />
+ <shade name="cool" weight="0.360841039168" />
+ <shade name="soft" weight="0.064724850075" />
+</color>
+
+<color name="black" weight="0.0555554963992">
+ <shade name="hard" weight="0.574433044415" />
+ <shade name="cool" weight="0.360841039168" />
+ <shade name="soft" weight="0.064724850075" />
+</color>
+
+<color name="green" weight="0.0462962469994">
+ <shade name="hard" weight="0.574433044415" />
+ <shade name="cool" weight="0.360841039168" />
+ <shade name="soft" weight="0.064724850075" />
+</color>
+
+<color name="pink" weight="0.0370369975995">
+ <shade name="hard" weight="0.574433044415" />
+ <shade name="cool" weight="0.360841039168" />
+ <shade name="soft" weight="0.064724850075" />
+</color>
+
+</colors>

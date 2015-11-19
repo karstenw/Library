@@ -1,0 +1,33 @@
+<colors query="acid rock">
+
+<color name="black" weight="0.979517088052">
+ <shade name="hard" weight="0.947062734103" />
+ <shade name="cool" weight="0.0310173384532" />
+ <shade name="dark" weight="0.0219189191736" />
+</color>
+
+<color name="white" weight="0.00602409033242">
+ <shade name="hard" weight="0.947062734103" />
+ <shade name="cool" weight="0.0310173384532" />
+ <shade name="dark" weight="0.0219189191736" />
+</color>
+
+<color name="purple" weight="0.00602409033242">
+ <shade name="hard" weight="0.947062734103" />
+ <shade name="cool" weight="0.0310173384532" />
+ <shade name="dark" weight="0.0219189191736" />
+</color>
+
+<color name="blue" weight="0.00481927226594">
+ <shade name="hard" weight="0.947062734103" />
+ <shade name="cool" weight="0.0310173384532" />
+ <shade name="dark" weight="0.0219189191736" />
+</color>
+
+<color name="red" weight="0.00361445419945">
+ <shade name="hard" weight="0.947062734103" />
+ <shade name="cool" weight="0.0310173384532" />
+ <shade name="dark" weight="0.0219189191736" />
+</color>
+
+</colors>

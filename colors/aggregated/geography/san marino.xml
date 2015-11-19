@@ -1,0 +1,33 @@
+<colors query="san marino">
+
+<color name="orange" weight="0.503412395428">
+ <shade name="light" weight="0.959094808774" />
+ <shade name="weak" weight="0.0226049281529" />
+ <shade name="fresh" weight="0.0182992275524" />
+</color>
+
+<color name="green" weight="0.151450339302">
+ <shade name="light" weight="0.959094808774" />
+ <shade name="weak" weight="0.0226049281529" />
+ <shade name="fresh" weight="0.0182992275524" />
+</color>
+
+<color name="blue" weight="0.123719995486">
+ <shade name="light" weight="0.959094808774" />
+ <shade name="weak" weight="0.0226049281529" />
+ <shade name="fresh" weight="0.0182992275524" />
+</color>
+
+<color name="black" weight="0.117320685375">
+ <shade name="light" weight="0.959094808774" />
+ <shade name="weak" weight="0.0226049281529" />
+ <shade name="fresh" weight="0.0182992275524" />
+</color>
+
+<color name="white" weight="0.104095444478">
+ <shade name="light" weight="0.959094808774" />
+ <shade name="weak" weight="0.0226049281529" />
+ <shade name="fresh" weight="0.0182992275524" />
+</color>
+
+</colors>

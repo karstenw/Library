@@ -1,0 +1,33 @@
+<colors query="colombia">
+
+<color name="red" weight="0.921307495687">
+ <shade name="cool" weight="0.362102668091" />
+ <shade name="dark" weight="0.342261426003" />
+ <shade name="soft" weight="0.295634507099" />
+</color>
+
+<color name="green" weight="0.0329642131484">
+ <shade name="cool" weight="0.362102668091" />
+ <shade name="dark" weight="0.342261426003" />
+ <shade name="soft" weight="0.295634507099" />
+</color>
+
+<color name="black" weight="0.0238920108973">
+ <shade name="cool" weight="0.362102668091" />
+ <shade name="dark" weight="0.342261426003" />
+ <shade name="soft" weight="0.295634507099" />
+</color>
+
+<color name="blue" weight="0.0143126669055">
+ <shade name="cool" weight="0.362102668091" />
+ <shade name="dark" weight="0.342261426003" />
+ <shade name="soft" weight="0.295634507099" />
+</color>
+
+<color name="white" weight="0.00752260248772">
+ <shade name="cool" weight="0.362102668091" />
+ <shade name="dark" weight="0.342261426003" />
+ <shade name="soft" weight="0.295634507099" />
+</color>
+
+</colors>

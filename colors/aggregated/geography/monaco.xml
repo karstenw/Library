@@ -1,0 +1,33 @@
+<colors query="monaco">
+
+<color name="blue" weight="0.412358290245">
+ <shade name="cool" weight="0.440593375832" />
+ <shade name="neutral" weight="0.318811386557" />
+ <shade name="light" weight="0.240593686128" />
+</color>
+
+<color name="red" weight="0.234431097953">
+ <shade name="cool" weight="0.440593375832" />
+ <shade name="neutral" weight="0.318811386557" />
+ <shade name="light" weight="0.240593686128" />
+</color>
+
+<color name="pink" weight="0.182736035327">
+ <shade name="cool" weight="0.440593375832" />
+ <shade name="neutral" weight="0.318811386557" />
+ <shade name="light" weight="0.240593686128" />
+</color>
+
+<color name="white" weight="0.125029918908">
+ <shade name="cool" weight="0.440593375832" />
+ <shade name="neutral" weight="0.318811386557" />
+ <shade name="light" weight="0.240593686128" />
+</color>
+
+<color name="green" weight="0.0454435666801">
+ <shade name="cool" weight="0.440593375832" />
+ <shade name="neutral" weight="0.318811386557" />
+ <shade name="light" weight="0.240593686128" />
+</color>
+
+</colors>

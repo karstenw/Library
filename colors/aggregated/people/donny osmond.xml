@@ -1,0 +1,33 @@
+<colors query="donny osmond">
+
+<color name="white" weight="0.521028980108">
+ <shade name="hard" weight="0.473683562328" />
+ <shade name="cool" weight="0.315789041552" />
+ <shade name="light" weight="0.210526027701" />
+</color>
+
+<color name="black" weight="0.382924913091">
+ <shade name="hard" weight="0.473683562328" />
+ <shade name="cool" weight="0.315789041552" />
+ <shade name="light" weight="0.210526027701" />
+</color>
+
+<color name="green" weight="0.0784682198957">
+ <shade name="hard" weight="0.473683562328" />
+ <shade name="cool" weight="0.315789041552" />
+ <shade name="light" weight="0.210526027701" />
+</color>
+
+<color name="blue" weight="0.011299423665">
+ <shade name="hard" weight="0.473683562328" />
+ <shade name="cool" weight="0.315789041552" />
+ <shade name="light" weight="0.210526027701" />
+</color>
+
+<color name="purple" weight="0.00627745759166">
+ <shade name="hard" weight="0.473683562328" />
+ <shade name="cool" weight="0.315789041552" />
+ <shade name="light" weight="0.210526027701" />
+</color>
+
+</colors>

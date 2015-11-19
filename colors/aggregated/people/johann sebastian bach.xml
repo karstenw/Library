@@ -1,0 +1,33 @@
+<colors query="johann sebastian bach">
+
+<color name="white" weight="0.416341970189">
+ <shade name="light" weight="0.552630880887" />
+ <shade name="cool" weight="0.236841806095" />
+ <shade name="dark" weight="0.210526049862" />
+</color>
+
+<color name="blue" weight="0.276264297976">
+ <shade name="light" weight="0.552630880887" />
+ <shade name="cool" weight="0.236841806095" />
+ <shade name="dark" weight="0.210526049862" />
+</color>
+
+<color name="purple" weight="0.140077672213">
+ <shade name="light" weight="0.552630880887" />
+ <shade name="cool" weight="0.236841806095" />
+ <shade name="dark" weight="0.210526049862" />
+</color>
+
+<color name="black" weight="0.128404532862">
+ <shade name="light" weight="0.552630880887" />
+ <shade name="cool" weight="0.236841806095" />
+ <shade name="dark" weight="0.210526049862" />
+</color>
+
+<color name="red" weight="0.0389104645037">
+ <shade name="light" weight="0.552630880887" />
+ <shade name="cool" weight="0.236841806095" />
+ <shade name="dark" weight="0.210526049862" />
+</color>
+
+</colors>

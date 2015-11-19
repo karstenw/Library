@@ -1,0 +1,33 @@
+<colors query="ghazal">
+
+<color name="green" weight="0.721738389868">
+ <shade name="soft" weight="0.460110725683" />
+ <shade name="cool" weight="0.311687910947" />
+ <shade name="hard" weight="0.228200077657" />
+</color>
+
+<color name="red" weight="0.113043362269">
+ <shade name="soft" weight="0.460110725683" />
+ <shade name="cool" weight="0.311687910947" />
+ <shade name="hard" weight="0.228200077657" />
+</color>
+
+<color name="yellow" weight="0.0695651460114">
+ <shade name="soft" weight="0.460110725683" />
+ <shade name="cool" weight="0.311687910947" />
+ <shade name="hard" weight="0.228200077657" />
+</color>
+
+<color name="blue" weight="0.06086950276">
+ <shade name="soft" weight="0.460110725683" />
+ <shade name="cool" weight="0.311687910947" />
+ <shade name="hard" weight="0.228200077657" />
+</color>
+
+<color name="black" weight="0.0347825730057">
+ <shade name="soft" weight="0.460110725683" />
+ <shade name="cool" weight="0.311687910947" />
+ <shade name="hard" weight="0.228200077657" />
+</color>
+
+</colors>

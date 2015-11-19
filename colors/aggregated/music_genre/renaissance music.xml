@@ -1,0 +1,33 @@
+<colors query="renaissance music">
+
+<color name="blue" weight="0.988842824545">
+ <shade name="light" weight="0.499999464286" />
+ <shade name="cool" weight="0.285713979592" />
+ <shade name="dark" weight="0.214285484694" />
+</color>
+
+<color name="black" weight="0.00811358215011">
+ <shade name="light" weight="0.499999464286" />
+ <shade name="cool" weight="0.285713979592" />
+ <shade name="dark" weight="0.214285484694" />
+</color>
+
+<color name="red" weight="0.00202839553753">
+ <shade name="light" weight="0.499999464286" />
+ <shade name="cool" weight="0.285713979592" />
+ <shade name="dark" weight="0.214285484694" />
+</color>
+
+<color name="yellow" weight="0.00101419776876">
+ <shade name="light" weight="0.499999464286" />
+ <shade name="cool" weight="0.285713979592" />
+ <shade name="dark" weight="0.214285484694" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="light" weight="0.499999464286" />
+ <shade name="cool" weight="0.285713979592" />
+ <shade name="dark" weight="0.214285484694" />
+</color>
+
+</colors>

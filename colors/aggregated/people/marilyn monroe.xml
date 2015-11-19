@@ -1,0 +1,33 @@
+<colors query="marilyn monroe">
+
+<color name="white" weight="0.443886389705">
+ <shade name="cool" weight="0.67206402146" />
+ <shade name="hard" weight="0.263157598764" />
+ <shade name="dark" weight="0.0647772550805" />
+</color>
+
+<color name="black" weight="0.295620123873">
+ <shade name="cool" weight="0.67206402146" />
+ <shade name="hard" weight="0.263157598764" />
+ <shade name="dark" weight="0.0647772550805" />
+</color>
+
+<color name="pink" weight="0.100364856871">
+ <shade name="cool" weight="0.67206402146" />
+ <shade name="hard" weight="0.263157598764" />
+ <shade name="dark" weight="0.0647772550805" />
+</color>
+
+<color name="red" weight="0.095346614027">
+ <shade name="cool" weight="0.67206402146" />
+ <shade name="hard" weight="0.263157598764" />
+ <shade name="dark" weight="0.0647772550805" />
+</color>
+
+<color name="orange" weight="0.064780953071">
+ <shade name="cool" weight="0.67206402146" />
+ <shade name="hard" weight="0.263157598764" />
+ <shade name="dark" weight="0.0647772550805" />
+</color>
+
+</colors>

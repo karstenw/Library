@@ -1,0 +1,33 @@
+<colors query="sudan">
+
+<color name="black" weight="0.439825505147">
+ <shade name="fresh" weight="0.701106004685" />
+ <shade name="weak" weight="0.160516374757" />
+ <shade name="hard" weight="0.138376185135" />
+</color>
+
+<color name="red" weight="0.23658745579">
+ <shade name="fresh" weight="0.701106004685" />
+ <shade name="weak" weight="0.160516374757" />
+ <shade name="hard" weight="0.138376185135" />
+</color>
+
+<color name="blue" weight="0.1273560666">
+ <shade name="fresh" weight="0.701106004685" />
+ <shade name="weak" weight="0.160516374757" />
+ <shade name="hard" weight="0.138376185135" />
+</color>
+
+<color name="white" weight="0.126389417138">
+ <shade name="fresh" weight="0.701106004685" />
+ <shade name="weak" weight="0.160516374757" />
+ <shade name="hard" weight="0.138376185135" />
+</color>
+
+<color name="orange" weight="0.0698404236195">
+ <shade name="fresh" weight="0.701106004685" />
+ <shade name="weak" weight="0.160516374757" />
+ <shade name="hard" weight="0.138376185135" />
+</color>
+
+</colors>

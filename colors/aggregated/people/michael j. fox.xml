@@ -1,0 +1,33 @@
+<colors query="michael j. fox">
+
+<color name="black" weight="0.54802204156">
+ <shade name="cool" weight="0.942674180536" />
+ <shade name="light" weight="0.0318471006938" />
+ <shade name="hard" weight="0.025477680555" />
+</color>
+
+<color name="white" weight="0.392654967922">
+ <shade name="cool" weight="0.942674180536" />
+ <shade name="light" weight="0.0318471006938" />
+ <shade name="hard" weight="0.025477680555" />
+</color>
+
+<color name="green" weight="0.0282485588433">
+ <shade name="cool" weight="0.942674180536" />
+ <shade name="light" weight="0.0318471006938" />
+ <shade name="hard" weight="0.025477680555" />
+</color>
+
+<color name="blue" weight="0.0197739911903">
+ <shade name="cool" weight="0.942674180536" />
+ <shade name="light" weight="0.0318471006938" />
+ <shade name="hard" weight="0.025477680555" />
+</color>
+
+<color name="red" weight="0.0112994235373">
+ <shade name="cool" weight="0.942674180536" />
+ <shade name="light" weight="0.0318471006938" />
+ <shade name="hard" weight="0.025477680555" />
+</color>
+
+</colors>

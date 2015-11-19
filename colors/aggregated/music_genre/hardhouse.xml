@@ -1,0 +1,33 @@
+<colors query="hardhouse">
+
+<color name="black" weight="0.428571">
+ <shade name="fresh" weight="0.475290206265" />
+ <shade name="dark" weight="0.307654720671" />
+ <shade name="hard" weight="0.217054039151" />
+</color>
+
+<color name="white" weight="0.238095">
+ <shade name="fresh" weight="0.475290206265" />
+ <shade name="dark" weight="0.307654720671" />
+ <shade name="hard" weight="0.217054039151" />
+</color>
+
+<color name="orange" weight="0.238095">
+ <shade name="fresh" weight="0.475290206265" />
+ <shade name="dark" weight="0.307654720671" />
+ <shade name="hard" weight="0.217054039151" />
+</color>
+
+<color name="pink" weight="0.0952380000001">
+ <shade name="fresh" weight="0.475290206265" />
+ <shade name="dark" weight="0.307654720671" />
+ <shade name="hard" weight="0.217054039151" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="fresh" weight="0.475290206265" />
+ <shade name="dark" weight="0.307654720671" />
+ <shade name="hard" weight="0.217054039151" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="niue">
+
+<color name="blue" weight="0.595237443311">
+ <shade name="fresh" weight="0.684209698062" />
+ <shade name="cool" weight="0.210526060942" />
+ <shade name="neutral" weight="0.105263030471" />
+</color>
+
+<color name="black" weight="0.19047598186">
+ <shade name="fresh" weight="0.684209698062" />
+ <shade name="cool" weight="0.210526060942" />
+ <shade name="neutral" weight="0.105263030471" />
+</color>
+
+<color name="red" weight="0.0952379909298">
+ <shade name="fresh" weight="0.684209698062" />
+ <shade name="cool" weight="0.210526060942" />
+ <shade name="neutral" weight="0.105263030471" />
+</color>
+
+<color name="green" weight="0.0714284931974">
+ <shade name="fresh" weight="0.684209698062" />
+ <shade name="cool" weight="0.210526060942" />
+ <shade name="neutral" weight="0.105263030471" />
+</color>
+
+<color name="yellow" weight="0.0476189954649">
+ <shade name="fresh" weight="0.684209698062" />
+ <shade name="cool" weight="0.210526060942" />
+ <shade name="neutral" weight="0.105263030471" />
+</color>
+
+</colors>

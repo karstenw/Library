@@ -1,0 +1,33 @@
+<colors query="leonard bernstein">
+
+<color name="green" weight="0.616793275583">
+ <shade name="cool" weight="0.979165678758" />
+ <shade name="dark" weight="0.0148809373671" />
+ <shade name="light" weight="0.00595237494686" />
+</color>
+
+<color name="blue" weight="0.323663798078">
+ <shade name="cool" weight="0.979165678758" />
+ <shade name="dark" weight="0.0148809373671" />
+ <shade name="light" weight="0.00595237494686" />
+</color>
+
+<color name="white" weight="0.0564884930608">
+ <shade name="cool" weight="0.979165678758" />
+ <shade name="dark" weight="0.0148809373671" />
+ <shade name="light" weight="0.00595237494686" />
+</color>
+
+<color name="black" weight="0.00213740244014">
+ <shade name="cool" weight="0.979165678758" />
+ <shade name="dark" weight="0.0148809373671" />
+ <shade name="light" weight="0.00595237494686" />
+</color>
+
+<color name="red" weight="0.000916029617203">
+ <shade name="cool" weight="0.979165678758" />
+ <shade name="dark" weight="0.0148809373671" />
+ <shade name="light" weight="0.00595237494686" />
+</color>
+
+</colors>

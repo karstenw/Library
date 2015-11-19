@@ -1,0 +1,33 @@
+<colors query="honky tonk">
+
+<color name="black" weight="0.573355236463">
+ <shade name="hard" weight="0.831196488884" />
+ <shade name="cool" weight="0.0992309464703" />
+ <shade name="light" weight="0.0695715122854" />
+</color>
+
+<color name="blue" weight="0.293422973954">
+ <shade name="hard" weight="0.831196488884" />
+ <shade name="cool" weight="0.0992309464703" />
+ <shade name="light" weight="0.0695715122854" />
+</color>
+
+<color name="white" weight="0.089375963331">
+ <shade name="hard" weight="0.831196488884" />
+ <shade name="cool" weight="0.0992309464703" />
+ <shade name="light" weight="0.0695715122854" />
+</color>
+
+<color name="green" weight="0.0320404396847">
+ <shade name="hard" weight="0.831196488884" />
+ <shade name="cool" weight="0.0992309464703" />
+ <shade name="light" weight="0.0695715122854" />
+</color>
+
+<color name="red" weight="0.0118043725154">
+ <shade name="hard" weight="0.831196488884" />
+ <shade name="cool" weight="0.0992309464703" />
+ <shade name="light" weight="0.0695715122854" />
+</color>
+
+</colors>

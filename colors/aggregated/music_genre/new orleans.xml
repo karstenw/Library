@@ -1,0 +1,33 @@
+<colors query="new orleans">
+
+<color name="black" weight="0.596505514596">
+ <shade name="cool" weight="0.573004425746" />
+ <shade name="fresh" weight="0.265279826734" />
+ <shade name="light" weight="0.161714582377" />
+</color>
+
+<color name="pink" weight="0.207924779373">
+ <shade name="cool" weight="0.573004425746" />
+ <shade name="fresh" weight="0.265279826734" />
+ <shade name="light" weight="0.161714582377" />
+</color>
+
+<color name="white" weight="0.0677459834434">
+ <shade name="cool" weight="0.573004425746" />
+ <shade name="fresh" weight="0.265279826734" />
+ <shade name="light" weight="0.161714582377" />
+</color>
+
+<color name="green" weight="0.0668938327083">
+ <shade name="cool" weight="0.573004425746" />
+ <shade name="fresh" weight="0.265279826734" />
+ <shade name="light" weight="0.161714582377" />
+</color>
+
+<color name="blue" weight="0.0609287775623">
+ <shade name="cool" weight="0.573004425746" />
+ <shade name="fresh" weight="0.265279826734" />
+ <shade name="light" weight="0.161714582377" />
+</color>
+
+</colors>

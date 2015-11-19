@@ -1,0 +1,33 @@
+<colors query="pop">
+
+<color name="orange" weight="0.497792093292">
+ <shade name="soft" weight="0.453557881233" />
+ <shade name="weak" weight="0.406513313764" />
+ <shade name="cool" weight="0.139927431444" />
+</color>
+
+<color name="pink" weight="0.164408397784">
+ <shade name="soft" weight="0.453557881233" />
+ <shade name="weak" weight="0.406513313764" />
+ <shade name="cool" weight="0.139927431444" />
+</color>
+
+<color name="black" weight="0.140660518105">
+ <shade name="soft" weight="0.453557881233" />
+ <shade name="weak" weight="0.406513313764" />
+ <shade name="cool" weight="0.139927431444" />
+</color>
+
+<color name="red" weight="0.11204127849">
+ <shade name="soft" weight="0.453557881233" />
+ <shade name="weak" weight="0.406513313764" />
+ <shade name="cool" weight="0.139927431444" />
+</color>
+
+<color name="white" weight="0.0850965688533">
+ <shade name="soft" weight="0.453557881233" />
+ <shade name="weak" weight="0.406513313764" />
+ <shade name="cool" weight="0.139927431444" />
+</color>
+
+</colors>

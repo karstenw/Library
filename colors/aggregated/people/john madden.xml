@@ -1,0 +1,33 @@
+<colors query="john madden">
+
+<color name="white" weight="0.752326991612">
+ <shade name="dark" weight="0.384614733729" />
+ <shade name="cool" weight="0.384614733729" />
+ <shade name="light" weight="0.230768840237" />
+</color>
+
+<color name="green" weight="0.206703703141">
+ <shade name="dark" weight="0.384614733729" />
+ <shade name="cool" weight="0.384614733729" />
+ <shade name="light" weight="0.230768840237" />
+</color>
+
+<color name="red" weight="0.0186219552379">
+ <shade name="dark" weight="0.384614733729" />
+ <shade name="cool" weight="0.384614733729" />
+ <shade name="light" weight="0.230768840237" />
+</color>
+
+<color name="black" weight="0.0130353686665">
+ <shade name="dark" weight="0.384614733729" />
+ <shade name="cool" weight="0.384614733729" />
+ <shade name="light" weight="0.230768840237" />
+</color>
+
+<color name="blue" weight="0.00931097761896">
+ <shade name="dark" weight="0.384614733729" />
+ <shade name="cool" weight="0.384614733729" />
+ <shade name="light" weight="0.230768840237" />
+</color>
+
+</colors>

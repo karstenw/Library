@@ -1,0 +1,33 @@
+<colors query="bali">
+
+<color name="pink" weight="0.264054183783">
+ <shade name="bright" weight="0.408296382849" />
+ <shade name="light" weight="0.366811723629" />
+ <shade name="cool" weight="0.224890521035" />
+</color>
+
+<color name="black" weight="0.262350608404">
+ <shade name="bright" weight="0.408296382849" />
+ <shade name="light" weight="0.366811723629" />
+ <shade name="cool" weight="0.224890521035" />
+</color>
+
+<color name="red" weight="0.216354073164">
+ <shade name="bright" weight="0.408296382849" />
+ <shade name="light" weight="0.366811723629" />
+ <shade name="cool" weight="0.224890521035" />
+</color>
+
+<color name="purple" weight="0.139693181098">
+ <shade name="bright" weight="0.408296382849" />
+ <shade name="light" weight="0.366811723629" />
+ <shade name="cool" weight="0.224890521035" />
+</color>
+
+<color name="orange" weight="0.117546701168">
+ <shade name="bright" weight="0.408296382849" />
+ <shade name="light" weight="0.366811723629" />
+ <shade name="cool" weight="0.224890521035" />
+</color>
+
+</colors>

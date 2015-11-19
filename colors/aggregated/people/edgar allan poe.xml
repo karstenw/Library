@@ -1,0 +1,33 @@
+<colors query="edgar allan poe">
+
+<color name="black" weight="0.574577877802">
+ <shade name="dark" weight="0.836857146431" />
+ <shade name="light" weight="0.135951521983" />
+ <shade name="cool" weight="0.0271903043967" />
+</color>
+
+<color name="green" weight="0.229571748016">
+ <shade name="dark" weight="0.836857146431" />
+ <shade name="light" weight="0.135951521983" />
+ <shade name="cool" weight="0.0271903043967" />
+</color>
+
+<color name="white" weight="0.173800080419">
+ <shade name="dark" weight="0.836857146431" />
+ <shade name="light" weight="0.135951521983" />
+ <shade name="cool" weight="0.0271903043967" />
+</color>
+
+<color name="orange" weight="0.0116731397296">
+ <shade name="dark" weight="0.836857146431" />
+ <shade name="light" weight="0.135951521983" />
+ <shade name="cool" weight="0.0271903043967" />
+</color>
+
+<color name="purple" weight="0.0103761242041">
+ <shade name="dark" weight="0.836857146431" />
+ <shade name="light" weight="0.135951521983" />
+ <shade name="cool" weight="0.0271903043967" />
+</color>
+
+</colors>

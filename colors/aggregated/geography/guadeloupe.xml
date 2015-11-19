@@ -1,0 +1,33 @@
+<colors query="guadeloupe">
+
+<color name="orange" weight="0.670341090638">
+ <shade name="soft" weight="0.399999353334" />
+ <shade name="dark" weight="0.316666154723" />
+ <shade name="cool" weight="0.283332875279" />
+</color>
+
+<color name="black" weight="0.12899655856">
+ <shade name="soft" weight="0.399999353334" />
+ <shade name="dark" weight="0.316666154723" />
+ <shade name="cool" weight="0.283332875279" />
+</color>
+
+<color name="green" weight="0.0915103791497">
+ <shade name="soft" weight="0.399999353334" />
+ <shade name="dark" weight="0.316666154723" />
+ <shade name="cool" weight="0.283332875279" />
+</color>
+
+<color name="red" weight="0.0727672894443">
+ <shade name="soft" weight="0.399999353334" />
+ <shade name="dark" weight="0.316666154723" />
+ <shade name="cool" weight="0.283332875279" />
+</color>
+
+<color name="white" weight="0.0363836447222">
+ <shade name="soft" weight="0.399999353334" />
+ <shade name="dark" weight="0.316666154723" />
+ <shade name="cool" weight="0.283332875279" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="latin music">
+
+<color name="black" weight="0.96745464526">
+ <shade name="soft" weight="0.84716711848" />
+ <shade name="cool" weight="0.121215698653" />
+ <shade name="fresh" weight="0.0316161792055" />
+</color>
+
+<color name="white" weight="0.0133135960357">
+ <shade name="soft" weight="0.84716711848" />
+ <shade name="cool" weight="0.121215698653" />
+ <shade name="fresh" weight="0.0316161792055" />
+</color>
+
+<color name="green" weight="0.00887573069046">
+ <shade name="soft" weight="0.84716711848" />
+ <shade name="cool" weight="0.121215698653" />
+ <shade name="fresh" weight="0.0316161792055" />
+</color>
+
+<color name="pink" weight="0.00591715379364">
+ <shade name="soft" weight="0.84716711848" />
+ <shade name="cool" weight="0.121215698653" />
+ <shade name="fresh" weight="0.0316161792055" />
+</color>
+
+<color name="yellow" weight="0.00443786534523">
+ <shade name="soft" weight="0.84716711848" />
+ <shade name="cool" weight="0.121215698653" />
+ <shade name="fresh" weight="0.0316161792055" />
+</color>
+
+</colors>

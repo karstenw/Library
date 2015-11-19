@@ -1,0 +1,33 @@
+<colors query="marty robbins">
+
+<color name="blue" weight="0.373643033155">
+ <shade name="cool" weight="0.499999500001" />
+ <shade name="hard" weight="0.428571" />
+ <shade name="fresh" weight="0.0714285000001" />
+</color>
+
+<color name="red" weight="0.206201341948">
+ <shade name="cool" weight="0.499999500001" />
+ <shade name="hard" weight="0.428571" />
+ <shade name="fresh" weight="0.0714285000001" />
+</color>
+
+<color name="black" weight="0.206201341948">
+ <shade name="cool" weight="0.499999500001" />
+ <shade name="hard" weight="0.428571" />
+ <shade name="fresh" weight="0.0714285000001" />
+</color>
+
+<color name="white" weight="0.204650955919">
+ <shade name="cool" weight="0.499999500001" />
+ <shade name="hard" weight="0.428571" />
+ <shade name="fresh" weight="0.0714285000001" />
+</color>
+
+<color name="green" weight="0.00930231617812">
+ <shade name="cool" weight="0.499999500001" />
+ <shade name="hard" weight="0.428571" />
+ <shade name="fresh" weight="0.0714285000001" />
+</color>
+
+</colors>

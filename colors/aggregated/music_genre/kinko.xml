@@ -1,0 +1,33 @@
+<colors query="kinko">
+
+<color name="white" weight="0.410255915845">
+ <shade name="fresh" weight="0.388888348766" />
+ <shade name="cool" weight="0.333332870371" />
+ <shade name="light" weight="0.277777391976" />
+</color>
+
+<color name="blue" weight="0.230768952663">
+ <shade name="fresh" weight="0.388888348766" />
+ <shade name="cool" weight="0.333332870371" />
+ <shade name="light" weight="0.277777391976" />
+</color>
+
+<color name="black" weight="0.153845968442">
+ <shade name="fresh" weight="0.388888348766" />
+ <shade name="cool" weight="0.333332870371" />
+ <shade name="light" weight="0.277777391976" />
+</color>
+
+<color name="yellow" weight="0.102563978961">
+ <shade name="fresh" weight="0.388888348766" />
+ <shade name="cool" weight="0.333332870371" />
+ <shade name="light" weight="0.277777391976" />
+</color>
+
+<color name="green" weight="0.102563978961">
+ <shade name="fresh" weight="0.388888348766" />
+ <shade name="cool" weight="0.333332870371" />
+ <shade name="light" weight="0.277777391976" />
+</color>
+
+</colors>

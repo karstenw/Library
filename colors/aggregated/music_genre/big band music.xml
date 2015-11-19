@@ -1,0 +1,33 @@
+<colors query="big band music">
+
+<color name="white" weight="0.3999996">
+ <shade name="soft" weight="0.615383921105" />
+ <shade name="cool" weight="0.205127973702" />
+ <shade name="light" weight="0.179486976989" />
+</color>
+
+<color name="black" weight="0.333333">
+ <shade name="soft" weight="0.615383921105" />
+ <shade name="cool" weight="0.205127973702" />
+ <shade name="light" weight="0.179486976989" />
+</color>
+
+<color name="pink" weight="0.1333332">
+ <shade name="soft" weight="0.615383921105" />
+ <shade name="cool" weight="0.205127973702" />
+ <shade name="light" weight="0.179486976989" />
+</color>
+
+<color name="red" weight="0.0666666000001">
+ <shade name="soft" weight="0.615383921105" />
+ <shade name="cool" weight="0.205127973702" />
+ <shade name="light" weight="0.179486976989" />
+</color>
+
+<color name="green" weight="0.0666666000001">
+ <shade name="soft" weight="0.615383921105" />
+ <shade name="cool" weight="0.205127973702" />
+ <shade name="light" weight="0.179486976989" />
+</color>
+
+</colors>

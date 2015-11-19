@@ -1,0 +1,33 @@
+<colors query="frank lloyd wright">
+
+<color name="white" weight="0.668202078299">
+ <shade name="light" weight="0.636530718213" />
+ <shade name="cool" weight="0.346863116012" />
+ <shade name="warm" weight="0.0166051491708" />
+</color>
+
+<color name="green" weight="0.290322282296">
+ <shade name="light" weight="0.641263283762" />
+ <shade name="cool" weight="0.349442021296" />
+ <shade name="bright" weight="0.00929367077916" />
+</color>
+
+<color name="blue" weight="0.0153609673172">
+ <shade name="light" weight="0.641263283762" />
+ <shade name="cool" weight="0.349442021296" />
+ <shade name="bright" weight="0.00929367077916" />
+</color>
+
+<color name="black" weight="0.0153609673172">
+ <shade name="light" weight="0.636530718213" />
+ <shade name="cool" weight="0.346863116012" />
+ <shade name="warm" weight="0.0166051491708" />
+</color>
+
+<color name="red" weight="0.0107526771221">
+ <shade name="light" weight="0.636530718213" />
+ <shade name="cool" weight="0.346863116012" />
+ <shade name="warm" weight="0.0166051491708" />
+</color>
+
+</colors>

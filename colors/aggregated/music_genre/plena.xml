@@ -1,0 +1,33 @@
+<colors query="plena">
+
+<color name="red" weight="0.577611356652">
+ <shade name="fresh" weight="0.599999400001" />
+ <shade name="cool" weight="0.3999996" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="pink" weight="0.34626830683">
+ <shade name="fresh" weight="0.599999400001" />
+ <shade name="cool" weight="0.3999996" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="blue" weight="0.0574626285042">
+ <shade name="fresh" weight="0.599999400001" />
+ <shade name="cool" weight="0.3999996" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="purple" weight="0.0126865543451">
+ <shade name="fresh" weight="0.599999400001" />
+ <shade name="cool" weight="0.3999996" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="yellow" weight="0.00597014322121">
+ <shade name="fresh" weight="0.599999400001" />
+ <shade name="cool" weight="0.3999996" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+</colors>

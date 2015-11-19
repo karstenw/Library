@@ -1,0 +1,33 @@
+<colors query="hard rock">
+
+<color name="orange" weight="0.465594300634">
+ <shade name="hard" weight="0.540436292793" />
+ <shade name="soft" weight="0.269834858246" />
+ <shade name="cool" weight="0.189727634704" />
+</color>
+
+<color name="white" weight="0.191639643079">
+ <shade name="hard" weight="0.540436292793" />
+ <shade name="soft" weight="0.269834858246" />
+ <shade name="cool" weight="0.189727634704" />
+</color>
+
+<color name="blue" weight="0.169774717358">
+ <shade name="hard" weight="0.540436292793" />
+ <shade name="soft" weight="0.269834858246" />
+ <shade name="cool" weight="0.189727634704" />
+</color>
+
+<color name="pink" weight="0.0887458749828">
+ <shade name="hard" weight="0.540436292793" />
+ <shade name="soft" weight="0.269834858246" />
+ <shade name="cool" weight="0.189727634704" />
+</color>
+
+<color name="red" weight="0.0842442726286">
+ <shade name="hard" weight="0.540436292793" />
+ <shade name="soft" weight="0.269834858246" />
+ <shade name="cool" weight="0.189727634704" />
+</color>
+
+</colors>

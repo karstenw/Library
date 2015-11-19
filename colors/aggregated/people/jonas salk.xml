@@ -1,0 +1,33 @@
+<colors query="jonas salk">
+
+<color name="blue" weight="0.4999995">
+ <shade name="hard" weight="0.985220689656" />
+ <shade name="light" weight="0.00985220689656" />
+ <shade name="dark" weight="0.00492610344828" />
+</color>
+
+<color name="white" weight="0.2142855">
+ <shade name="hard" weight="0.985220689656" />
+ <shade name="light" weight="0.00985220689656" />
+ <shade name="dark" weight="0.00492610344828" />
+</color>
+
+<color name="black" weight="0.2142855">
+ <shade name="hard" weight="0.985220689656" />
+ <shade name="light" weight="0.00985220689656" />
+ <shade name="dark" weight="0.00492610344828" />
+</color>
+
+<color name="red" weight="0.0714285000001">
+ <shade name="hard" weight="0.985220689656" />
+ <shade name="light" weight="0.00985220689656" />
+ <shade name="dark" weight="0.00492610344828" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="hard" weight="0.985220689656" />
+ <shade name="light" weight="0.00985220689656" />
+ <shade name="dark" weight="0.00492610344828" />
+</color>
+
+</colors>

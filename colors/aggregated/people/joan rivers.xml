@@ -1,0 +1,33 @@
+<colors query="joan rivers">
+
+<color name="black" weight="0.369261055454">
+ <shade name="cool" weight="0.609755383701" />
+ <shade name="light" weight="0.195121722784" />
+ <shade name="hard" weight="0.195121722784" />
+</color>
+
+<color name="white" weight="0.229540656093">
+ <shade name="cool" weight="0.609755383701" />
+ <shade name="light" weight="0.195121722784" />
+ <shade name="hard" weight="0.195121722784" />
+</color>
+
+<color name="green" weight="0.219560627568">
+ <shade name="cool" weight="0.609755383701" />
+ <shade name="light" weight="0.195121722784" />
+ <shade name="hard" weight="0.195121722784" />
+</color>
+
+<color name="blue" weight="0.111776319489">
+ <shade name="cool" weight="0.609755383701" />
+ <shade name="light" weight="0.195121722784" />
+ <shade name="hard" weight="0.195121722784" />
+</color>
+
+<color name="pink" weight="0.0698601996806">
+ <shade name="cool" weight="0.609755383701" />
+ <shade name="light" weight="0.195121722784" />
+ <shade name="hard" weight="0.195121722784" />
+</color>
+
+</colors>

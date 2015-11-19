@@ -1,0 +1,33 @@
+<colors query="tango">
+
+<color name="blue" weight="0.534540607052">
+ <shade name="hard" weight="0.833678060871" />
+ <shade name="cool" weight="0.109083248761" />
+ <shade name="dark" weight="0.057237598209" />
+</color>
+
+<color name="red" weight="0.321948503026">
+ <shade name="hard" weight="0.833678060871" />
+ <shade name="cool" weight="0.109083248761" />
+ <shade name="dark" weight="0.057237598209" />
+</color>
+
+<color name="black" weight="0.0632471710633">
+ <shade name="hard" weight="0.833678060871" />
+ <shade name="cool" weight="0.109083248761" />
+ <shade name="dark" weight="0.057237598209" />
+</color>
+
+<color name="orange" weight="0.0403965802276">
+ <shade name="hard" weight="0.833678060871" />
+ <shade name="cool" weight="0.109083248761" />
+ <shade name="dark" weight="0.057237598209" />
+</color>
+
+<color name="green" weight="0.0398661200832">
+ <shade name="hard" weight="0.833678060871" />
+ <shade name="cool" weight="0.109083248761" />
+ <shade name="dark" weight="0.057237598209" />
+</color>
+
+</colors>

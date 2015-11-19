@@ -1,0 +1,33 @@
+<colors query="latvia">
+
+<color name="white" weight="0.507313304259">
+ <shade name="light" weight="0.372092420408" />
+ <shade name="hard" weight="0.325580867857" />
+ <shade name="cool" weight="0.302325091582" />
+</color>
+
+<color name="red" weight="0.208776379472">
+ <shade name="light" weight="0.372092420408" />
+ <shade name="hard" weight="0.325580867857" />
+ <shade name="cool" weight="0.302325091582" />
+</color>
+
+<color name="green" weight="0.194148735051">
+ <shade name="light" weight="0.372092420408" />
+ <shade name="hard" weight="0.325580867857" />
+ <shade name="cool" weight="0.302325091582" />
+</color>
+
+<color name="black" weight="0.0618350423278">
+ <shade name="light" weight="0.372092420408" />
+ <shade name="hard" weight="0.325580867857" />
+ <shade name="cool" weight="0.302325091582" />
+</color>
+
+<color name="blue" weight="0.0279255029867">
+ <shade name="light" weight="0.372092420408" />
+ <shade name="hard" weight="0.325580867857" />
+ <shade name="cool" weight="0.302325091582" />
+</color>
+
+</colors>

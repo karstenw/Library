@@ -1,0 +1,33 @@
+<colors query="saki">
+
+<color name="blue" weight="0.485059601037">
+ <shade name="cool" weight="0.4666630488" />
+ <shade name="dark" weight="0.378944430604" />
+ <shade name="fresh" weight="0.154384768024" />
+</color>
+
+<color name="black" weight="0.219634987349">
+ <shade name="warm" weight="0.882781152478" />
+ <shade name="cool" weight="0.064688646435" />
+ <shade name="dark" weight="0.0525291264285" />
+</color>
+
+<color name="white" weight="0.165308312033">
+ <shade name="warm" weight="0.882781152478" />
+ <shade name="cool" weight="0.064688646435" />
+ <shade name="dark" weight="0.0525291264285" />
+</color>
+
+<color name="red" weight="0.0721768686343">
+ <shade name="warm" weight="0.882781152478" />
+ <shade name="cool" weight="0.064688646435" />
+ <shade name="dark" weight="0.0525291264285" />
+</color>
+
+<color name="yellow" weight="0.0578191044436">
+ <shade name="warm" weight="0.882781152478" />
+ <shade name="cool" weight="0.064688646435" />
+ <shade name="dark" weight="0.0525291264285" />
+</color>
+
+</colors>

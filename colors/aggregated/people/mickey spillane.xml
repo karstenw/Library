@@ -1,0 +1,33 @@
+<colors query="mickey spillane">
+
+<color name="white" weight="0.727272000001">
+ <shade name="dark" weight="0.71428489796" />
+ <shade name="hard" weight="0.142856979592" />
+ <shade name="cool" weight="0.142856979592" />
+</color>
+
+<color name="black" weight="0.181818">
+ <shade name="dark" weight="0.71428489796" />
+ <shade name="intense" weight="0.142856979592" />
+ <shade name="hard" weight="0.142856979592" />
+</color>
+
+<color name="green" weight="0.0909090000001">
+ <shade name="dark" weight="0.71428489796" />
+ <shade name="intense" weight="0.142856979592" />
+ <shade name="hard" weight="0.142856979592" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="dark" weight="0.71428489796" />
+ <shade name="intense" weight="0.142856979592" />
+ <shade name="hard" weight="0.142856979592" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="dark" weight="0.71428489796" />
+ <shade name="intense" weight="0.142856979592" />
+ <shade name="hard" weight="0.142856979592" />
+</color>
+
+</colors>

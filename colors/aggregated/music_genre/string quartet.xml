@@ -1,0 +1,33 @@
+<colors query="string quartet">
+
+<color name="green" weight="0.342335915099">
+ <shade name="light" weight="0.563062488768" />
+ <shade name="intense" weight="0.291505494185" />
+ <shade name="cool" weight="0.145430997099" />
+</color>
+
+<color name="white" weight="0.274138819586">
+ <shade name="light" weight="0.788287162671" />
+ <shade name="cool" weight="0.203603312873" />
+ <shade name="dark" weight="0.00810809653033" />
+</color>
+
+<color name="black" weight="0.214044349283">
+ <shade name="light" weight="0.563062488768" />
+ <shade name="intense" weight="0.291505494185" />
+ <shade name="cool" weight="0.145430997099" />
+</color>
+
+<color name="blue" weight="0.166779035561">
+ <shade name="light" weight="0.563062488768" />
+ <shade name="intense" weight="0.291505494185" />
+ <shade name="cool" weight="0.145430997099" />
+</color>
+
+<color name="yellow" weight="0.00270087506982">
+ <shade name="light" weight="0.563062488768" />
+ <shade name="intense" weight="0.291505494185" />
+ <shade name="cool" weight="0.145430997099" />
+</color>
+
+</colors>

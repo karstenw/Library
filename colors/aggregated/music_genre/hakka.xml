@@ -1,0 +1,33 @@
+<colors query="hakka">
+
+<color name="black" weight="0.58181753124">
+ <shade name="hard" weight="0.534481966113" />
+ <shade name="cool" weight="0.293103013675" />
+ <shade name="fresh" weight="0.172413537456" />
+</color>
+
+<color name="blue" weight="0.227272473141">
+ <shade name="hard" weight="0.534481966113" />
+ <shade name="cool" weight="0.293103013675" />
+ <shade name="fresh" weight="0.172413537456" />
+</color>
+
+<color name="green" weight="0.072727191405">
+ <shade name="hard" weight="0.534481966113" />
+ <shade name="cool" weight="0.293103013675" />
+ <shade name="fresh" weight="0.172413537456" />
+</color>
+
+<color name="purple" weight="0.0636362924794">
+ <shade name="hard" weight="0.534481966113" />
+ <shade name="cool" weight="0.293103013675" />
+ <shade name="fresh" weight="0.172413537456" />
+</color>
+
+<color name="white" weight="0.0545453935538">
+ <shade name="hard" weight="0.534481966113" />
+ <shade name="cool" weight="0.293103013675" />
+ <shade name="fresh" weight="0.172413537456" />
+</color>
+
+</colors>

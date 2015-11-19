@@ -1,0 +1,33 @@
+<colors query="george burns">
+
+<color name="white" weight="0.69230698935">
+ <shade name="cool" weight="0.63636294215" />
+ <shade name="light" weight="0.181817983471" />
+ <shade name="hard" weight="0.181817983471" />
+</color>
+
+<color name="blue" weight="0.107692198343">
+ <shade name="cool" weight="0.63636294215" />
+ <shade name="light" weight="0.181817983471" />
+ <shade name="hard" weight="0.181817983471" />
+</color>
+
+<color name="black" weight="0.09230759858">
+ <shade name="cool" weight="0.63636294215" />
+ <shade name="light" weight="0.181817983471" />
+ <shade name="hard" weight="0.181817983471" />
+</color>
+
+<color name="red" weight="0.0615383990533">
+ <shade name="cool" weight="0.63636294215" />
+ <shade name="light" weight="0.181817983471" />
+ <shade name="hard" weight="0.181817983471" />
+</color>
+
+<color name="green" weight="0.04615379929">
+ <shade name="cool" weight="0.63636294215" />
+ <shade name="light" weight="0.181817983471" />
+ <shade name="hard" weight="0.181817983471" />
+</color>
+
+</colors>

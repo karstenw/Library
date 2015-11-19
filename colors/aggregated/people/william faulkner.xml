@@ -1,0 +1,33 @@
+<colors query="william faulkner">
+
+<color name="white" weight="0.862274581664">
+ <shade name="light" weight="0.615383810652" />
+ <shade name="hard" weight="0.230768928994" />
+ <shade name="fresh" weight="0.153845952663" />
+</color>
+
+<color name="black" weight="0.0479041434258">
+ <shade name="light" weight="0.615383810652" />
+ <shade name="hard" weight="0.230768928994" />
+ <shade name="fresh" weight="0.153845952663" />
+</color>
+
+<color name="green" weight="0.0419161254976">
+ <shade name="light" weight="0.615383810652" />
+ <shade name="hard" weight="0.230768928994" />
+ <shade name="fresh" weight="0.153845952663" />
+</color>
+
+<color name="red" weight="0.0359281075693">
+ <shade name="light" weight="0.615383810652" />
+ <shade name="hard" weight="0.230768928994" />
+ <shade name="fresh" weight="0.153845952663" />
+</color>
+
+<color name="purple" weight="0.0119760358564">
+ <shade name="light" weight="0.615383810652" />
+ <shade name="hard" weight="0.230768928994" />
+ <shade name="fresh" weight="0.153845952663" />
+</color>
+
+</colors>

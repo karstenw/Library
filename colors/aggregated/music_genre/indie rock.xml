@@ -1,0 +1,33 @@
+<colors query="indie rock">
+
+<color name="white" weight="0.418923375895">
+ <shade name="dark" weight="0.419466290668" />
+ <shade name="soft" weight="0.36500519768" />
+ <shade name="bright" weight="0.21552687863" />
+</color>
+
+<color name="black" weight="0.243047786187">
+ <shade name="dark" weight="0.419466290668" />
+ <shade name="soft" weight="0.36500519768" />
+ <shade name="bright" weight="0.21552687863" />
+</color>
+
+<color name="green" weight="0.162152237739">
+ <shade name="dark" weight="0.419466290668" />
+ <shade name="soft" weight="0.36500519768" />
+ <shade name="bright" weight="0.21552687863" />
+</color>
+
+<color name="red" weight="0.0982303088305">
+ <shade name="dark" weight="0.419466290668" />
+ <shade name="soft" weight="0.36500519768" />
+ <shade name="bright" weight="0.21552687863" />
+</color>
+
+<color name="blue" weight="0.077645280877">
+ <shade name="dark" weight="0.419466290668" />
+ <shade name="soft" weight="0.36500519768" />
+ <shade name="bright" weight="0.21552687863" />
+</color>
+
+</colors>

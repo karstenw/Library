@@ -1,0 +1,33 @@
+<colors query="british blues">
+
+<color name="white" weight="0.960647187501">
+ <shade name="hard" weight="0.839999126401" />
+ <shade name="cool" weight="0.1399998544" />
+ <shade name="warm" weight="0.0199999792" />
+</color>
+
+<color name="black" weight="0.0162036875">
+ <shade name="hard" weight="0.823528572089" />
+ <shade name="cool" weight="0.137254762015" />
+ <shade name="intense" weight="0.0392156462899" />
+</color>
+
+<color name="green" weight="0.013888875">
+ <shade name="hard" weight="0.823528572089" />
+ <shade name="cool" weight="0.137254762015" />
+ <shade name="intense" weight="0.0392156462899" />
+</color>
+
+<color name="blue" weight="0.00694443750001">
+ <shade name="hard" weight="0.823528572089" />
+ <shade name="cool" weight="0.137254762015" />
+ <shade name="intense" weight="0.0392156462899" />
+</color>
+
+<color name="purple" weight="0.0023148125">
+ <shade name="hard" weight="0.857141947523" />
+ <shade name="cool" weight="0.142856991254" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+</colors>

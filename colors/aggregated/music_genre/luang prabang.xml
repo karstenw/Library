@@ -1,0 +1,33 @@
+<colors query="luang prabang">
+
+<color name="green" weight="0.3999996">
+ <shade name="cool" weight="0.499999464286" />
+ <shade name="light" weight="0.285713979592" />
+ <shade name="neutral" weight="0.214285484694" />
+</color>
+
+<color name="white" weight="0.2999997">
+ <shade name="cool" weight="0.499999464286" />
+ <shade name="light" weight="0.285713979592" />
+ <shade name="neutral" weight="0.214285484694" />
+</color>
+
+<color name="red" weight="0.0999999000001">
+ <shade name="cool" weight="0.499999464286" />
+ <shade name="light" weight="0.285713979592" />
+ <shade name="neutral" weight="0.214285484694" />
+</color>
+
+<color name="orange" weight="0.0999999000001">
+ <shade name="cool" weight="0.499999464286" />
+ <shade name="light" weight="0.285713979592" />
+ <shade name="neutral" weight="0.214285484694" />
+</color>
+
+<color name="blue" weight="0.0999999000001">
+ <shade name="cool" weight="0.499999464286" />
+ <shade name="light" weight="0.285713979592" />
+ <shade name="neutral" weight="0.214285484694" />
+</color>
+
+</colors>

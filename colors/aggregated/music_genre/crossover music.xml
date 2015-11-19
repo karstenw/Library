@@ -1,0 +1,33 @@
+<colors query="crossover music">
+
+<color name="black" weight="0.727272000001">
+ <shade name="light" weight="0.428570877552" />
+ <shade name="hard" weight="0.285713918368" />
+ <shade name="fresh" weight="0.285713918368" />
+</color>
+
+<color name="white" weight="0.272727">
+ <shade name="light" weight="0.428570877552" />
+ <shade name="hard" weight="0.285713918368" />
+ <shade name="fresh" weight="0.285713918368" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="light" weight="0.428570877552" />
+ <shade name="hard" weight="0.285713918368" />
+ <shade name="fresh" weight="0.285713918368" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="light" weight="0.428570877552" />
+ <shade name="hard" weight="0.285713918368" />
+ <shade name="fresh" weight="0.285713918368" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="light" weight="0.428570877552" />
+ <shade name="hard" weight="0.285713918368" />
+ <shade name="fresh" weight="0.285713918368" />
+</color>
+
+</colors>

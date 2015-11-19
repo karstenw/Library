@@ -1,0 +1,33 @@
+<colors query="klezmer">
+
+<color name="blue" weight="0.895733695055">
+ <shade name="cool" weight="0.801947112004" />
+ <shade name="dark" weight="0.175324469831" />
+ <shade name="light" weight="0.0227272460892" />
+</color>
+
+<color name="black" weight="0.0758293075179">
+ <shade name="cool" weight="0.753047951676" />
+ <shade name="dark" weight="0.164633965144" />
+ <shade name="warm" weight="0.0823169825719" />
+</color>
+
+<color name="green" weight="0.0189573268795">
+ <shade name="cool" weight="0.801947112004" />
+ <shade name="dark" weight="0.175324469831" />
+ <shade name="light" weight="0.0227272460892" />
+</color>
+
+<color name="white" weight="0.00473933171987">
+ <shade name="cool" weight="0.753047951676" />
+ <shade name="dark" weight="0.164633965144" />
+ <shade name="warm" weight="0.0823169825719" />
+</color>
+
+<color name="red" weight="0.00473933171987">
+ <shade name="cool" weight="0.753047951676" />
+ <shade name="dark" weight="0.164633965144" />
+ <shade name="warm" weight="0.0823169825719" />
+</color>
+
+</colors>

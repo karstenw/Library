@@ -1,0 +1,33 @@
+<colors query="industrial">
+
+<color name="green" weight="0.391992929449">
+ <shade name="light" weight="0.922148345279" />
+ <shade name="dark" weight="0.0625110176367" />
+ <shade name="weak" weight="0.0153395830513" />
+</color>
+
+<color name="black" weight="0.270641926822">
+ <shade name="light" weight="0.922148345279" />
+ <shade name="dark" weight="0.0625110176367" />
+ <shade name="weak" weight="0.0153395830513" />
+</color>
+
+<color name="white" weight="0.170975639441">
+ <shade name="light" weight="0.922148345279" />
+ <shade name="dark" weight="0.0625110176367" />
+ <shade name="weak" weight="0.0153395830513" />
+</color>
+
+<color name="red" weight="0.112593713778">
+ <shade name="light" weight="0.922148345279" />
+ <shade name="dark" weight="0.0625110176367" />
+ <shade name="weak" weight="0.0153395830513" />
+</color>
+
+<color name="blue" weight="0.0537947743606">
+ <shade name="light" weight="0.922148345279" />
+ <shade name="dark" weight="0.0625110176367" />
+ <shade name="weak" weight="0.0153395830513" />
+</color>
+
+</colors>

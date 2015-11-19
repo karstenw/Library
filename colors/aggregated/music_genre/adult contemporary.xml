@@ -1,0 +1,33 @@
+<colors query="adult contemporary">
+
+<color name="black" weight="0.990711081401">
+ <shade name="soft" weight="0.914566442078" />
+ <shade name="light" weight="0.0711937948923" />
+ <shade name="bright" weight="0.0142387589785" />
+</color>
+
+<color name="white" weight="0.00442281732769">
+ <shade name="soft" weight="0.914566442078" />
+ <shade name="light" weight="0.0711937948923" />
+ <shade name="bright" weight="0.0142387589785" />
+</color>
+
+<color name="red" weight="0.00221140866384">
+ <shade name="soft" weight="0.914566442078" />
+ <shade name="light" weight="0.0711937948923" />
+ <shade name="bright" weight="0.0142387589785" />
+</color>
+
+<color name="blue" weight="0.00176912693107">
+ <shade name="soft" weight="0.914566442078" />
+ <shade name="light" weight="0.0711937948923" />
+ <shade name="bright" weight="0.0142387589785" />
+</color>
+
+<color name="yellow" weight="0.000884563465537">
+ <shade name="soft" weight="0.914566442078" />
+ <shade name="light" weight="0.0711937948923" />
+ <shade name="bright" weight="0.0142387589785" />
+</color>
+
+</colors>

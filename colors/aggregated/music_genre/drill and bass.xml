@@ -1,0 +1,33 @@
+<colors query="drill and bass">
+
+<color name="yellow" weight="0.0">
+ <shade name="dark" weight="0.812499187501" />
+ <shade name="intense" weight="0.124999875" />
+ <shade name="light" weight="0.0624999375001" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="dark" weight="0.928570367348" />
+ <shade name="light" weight="0.071428489796" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="dark" weight="0.812499187501" />
+ <shade name="intense" weight="0.124999875" />
+ <shade name="light" weight="0.0624999375001" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="dark" weight="0.928570367348" />
+ <shade name="light" weight="0.071428489796" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="pink" weight="0.0">
+ <shade name="dark" weight="0.928570367348" />
+ <shade name="light" weight="0.071428489796" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+</colors>

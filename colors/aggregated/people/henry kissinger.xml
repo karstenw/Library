@@ -1,0 +1,33 @@
+<colors query="henry kissinger">
+
+<color name="black" weight="0.835248200497">
+ <shade name="light" weight="0.411764173011" />
+ <shade name="cool" weight="0.352940719724" />
+ <shade name="weak" weight="0.235293813149" />
+</color>
+
+<color name="white" weight="0.130268067967">
+ <shade name="light" weight="0.411764173011" />
+ <shade name="cool" weight="0.352940719724" />
+ <shade name="weak" weight="0.235293813149" />
+</color>
+
+<color name="green" weight="0.015325655055">
+ <shade name="light" weight="0.411764173011" />
+ <shade name="cool" weight="0.352940719724" />
+ <shade name="weak" weight="0.235293813149" />
+</color>
+
+<color name="blue" weight="0.0114942412912">
+ <shade name="light" weight="0.411764173011" />
+ <shade name="cool" weight="0.352940719724" />
+ <shade name="weak" weight="0.235293813149" />
+</color>
+
+<color name="red" weight="0.0076628275275">
+ <shade name="light" weight="0.411764173011" />
+ <shade name="cool" weight="0.352940719724" />
+ <shade name="weak" weight="0.235293813149" />
+</color>
+
+</colors>

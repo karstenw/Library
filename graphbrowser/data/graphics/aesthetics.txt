@@ -1,0 +1,99 @@
+10, dynamic, curve
+1, straight, line
+10, tranquility, horizontal
+10, tranquility, straight
+1, tranquility, nature
+6, aesthetics, tranquility
+6, slow, tranquility
+6, noise, clutter
+4, odd, attention 
+4, even, symmetry
+2, repetition, rhythm
+2, length, rhythm
+2, time, rhythm
+1, balance, composition
+1, rhythm, composition
+1, unity, composition
+6, unity, harmony
+4, aesthetics, layout
+4, whitespace, aesthetics
+4, golden ratio, aesthetics
+1, 1.618033989, golden ratio
+9, Fibonacci sequence, golden ratio
+2, golden ratio, nature
+6, golden ratio, tree
+2, tree, nature
+1, recursion, nature
+4, symmetry, aesthetics
+1, symmetry, nature
+6, symmetry, mirror
+4, scale, symmetry
+4, rotation, symmetry
+4, flip, symmetry
+6, symmetry, architecture
+6, symmetry, recursion
+3, pattern, symmetry
+6, all-over, complexity
+6, simplicity, aesthetics
+8, simplicity, complexity
+6, noise, complexity
+8, symmetry, asymmetry
+4, asymmetry, attention
+10, attention, layout
+7, radial symmetry, symmetry
+7, bilateral symmetry, symmetry
+6, focus, attention
+2, gravity, focus
+2, direction, focus
+2, direction, dynamic
+2, speed, dynamic
+1, relative, aesthetics
+6, symmetry, harmony
+1, harmony, nature
+6, beauty, harmony
+6, beauty, spirituality
+8, ugliness, beauty
+2, beauty, aesthetics
+6, beauty, good
+8, good, bad
+1, big, nearby
+1, sharp, nearby
+4, sharpen, sharp
+4, shadow, depth
+6, shadow, darkness
+1, black, darkness
+1, dark, darkness
+8, light, dark
+6, gloom, darkness
+6, sadness, darkness
+6, joy, light
+6, light, whitespace
+1, saturation, hue
+1, intense, saturation
+1, vivid, saturation
+1, brightness, darkness
+1, brightness, light
+6, white, light
+6, math, aesthetics
+3, dynamic, composition
+2, whitespace, minimalism
+8, emotion, abstraction
+3, fear, emotion
+3, anger, emotion
+3, joy, emotion
+3, disgust, emotion
+8, complexity, abstraction
+6, simplicity, abstraction
+7, less is more, minimalism
+1, clean, minimalism
+8, chaos, minimalism
+6, minimalism, aesthetics
+1, static, minimalism
+8, static, dynamic
+1, abstraction, minimalism
+6, pattern, abstraction
+6, horror vacui, all-over
+8, all-over, whitespace
+6, crammed, all-over
+3, all-over, layout
+6, chaos, all-over

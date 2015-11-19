@@ -1,0 +1,33 @@
+<colors query="tasmania">
+
+<color name="white" weight="0.313160079428">
+ <shade name="light" weight="0.495937927417" />
+ <shade name="cool" weight="0.267207935031" />
+ <shade name="fresh" weight="0.236853113611" />
+</color>
+
+<color name="green" weight="0.295869032097">
+ <shade name="light" weight="0.495937927417" />
+ <shade name="cool" weight="0.267207935031" />
+ <shade name="fresh" weight="0.236853113611" />
+</color>
+
+<color name="blue" weight="0.156580039714">
+ <shade name="light" weight="0.495937927417" />
+ <shade name="cool" weight="0.267207935031" />
+ <shade name="fresh" weight="0.236853113611" />
+</color>
+
+<color name="black" weight="0.138328378643">
+ <shade name="light" weight="0.495937927417" />
+ <shade name="cool" weight="0.267207935031" />
+ <shade name="fresh" weight="0.236853113611" />
+</color>
+
+<color name="red" weight="0.0960613740576">
+ <shade name="light" weight="0.495937927417" />
+ <shade name="cool" weight="0.267207935031" />
+ <shade name="fresh" weight="0.236853113611" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="richard nixon">
+
+<color name="black" weight="0.307228603252">
+ <shade name="cool" weight="0.920288874765" />
+ <shade name="light" weight="0.0507245836485" />
+ <shade name="hard" weight="0.0289854763705" />
+</color>
+
+<color name="white" weight="0.3060237852">
+ <shade name="cool" weight="0.920288874765" />
+ <shade name="light" weight="0.0507245836485" />
+ <shade name="hard" weight="0.0289854763705" />
+</color>
+
+<color name="orange" weight="0.23855397429">
+ <shade name="cool" weight="0.920288874765" />
+ <shade name="light" weight="0.0507245836485" />
+ <shade name="hard" weight="0.0289854763705" />
+</color>
+
+<color name="blue" weight="0.137349257924">
+ <shade name="cool" weight="0.920288874765" />
+ <shade name="light" weight="0.0507245836485" />
+ <shade name="hard" weight="0.0289854763705" />
+</color>
+
+<color name="red" weight="0.0108433624677">
+ <shade name="cool" weight="0.920288874765" />
+ <shade name="light" weight="0.0507245836485" />
+ <shade name="hard" weight="0.0289854763705" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="aldous huxley">
+
+<color name="yellow" weight="0.918792583409">
+ <shade name="light" weight="0.957141893164" />
+ <shade name="cool" weight="0.0285713997959" />
+ <shade name="soft" weight="0.014285699898" />
+</color>
+
+<color name="orange" weight="0.0385150426378">
+ <shade name="light" weight="0.957141893164" />
+ <shade name="cool" weight="0.0285713997959" />
+ <shade name="soft" weight="0.014285699898" />
+</color>
+
+<color name="green" weight="0.0361948593464">
+ <shade name="light" weight="0.957141893164" />
+ <shade name="cool" weight="0.0285713997959" />
+ <shade name="soft" weight="0.014285699898" />
+</color>
+
+<color name="white" weight="0.00324825660801">
+ <shade name="light" weight="0.957141893164" />
+ <shade name="cool" weight="0.0285713997959" />
+ <shade name="soft" weight="0.014285699898" />
+</color>
+
+<color name="black" weight="0.00324825660801">
+ <shade name="light" weight="0.957141893164" />
+ <shade name="cool" weight="0.0285713997959" />
+ <shade name="soft" weight="0.014285699898" />
+</color>
+
+</colors>

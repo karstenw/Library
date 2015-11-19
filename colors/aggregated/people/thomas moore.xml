@@ -1,0 +1,33 @@
+<colors query="thomas moore">
+
+<color name="white" weight="0.380952">
+ <shade name="bright" weight="0.863012835617" />
+ <shade name="light" weight="0.123287547945" />
+ <shade name="cool" weight="0.0136986164384" />
+</color>
+
+<color name="green" weight="0.285714">
+ <shade name="bright" weight="0.863012835617" />
+ <shade name="light" weight="0.123287547945" />
+ <shade name="cool" weight="0.0136986164384" />
+</color>
+
+<color name="blue" weight="0.142857">
+ <shade name="bright" weight="0.863012835617" />
+ <shade name="light" weight="0.123287547945" />
+ <shade name="cool" weight="0.0136986164384" />
+</color>
+
+<color name="black" weight="0.142857">
+ <shade name="bright" weight="0.863012835617" />
+ <shade name="light" weight="0.123287547945" />
+ <shade name="cool" weight="0.0136986164384" />
+</color>
+
+<color name="orange" weight="0.047619">
+ <shade name="bright" weight="0.863012835617" />
+ <shade name="light" weight="0.123287547945" />
+ <shade name="cool" weight="0.0136986164384" />
+</color>
+
+</colors>

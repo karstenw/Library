@@ -1,0 +1,33 @@
+<colors query="blaise pascal">
+
+<color name="white" weight="0.703703000001">
+ <shade name="light" weight="0.571427836736" />
+ <shade name="cool" weight="0.35714239796" />
+ <shade name="warm" weight="0.071428479592" />
+</color>
+
+<color name="black" weight="0.148148">
+ <shade name="light" weight="0.571427836736" />
+ <shade name="cool" weight="0.35714239796" />
+ <shade name="warm" weight="0.071428479592" />
+</color>
+
+<color name="orange" weight="0.0740740000001">
+ <shade name="light" weight="0.571427836736" />
+ <shade name="cool" weight="0.35714239796" />
+ <shade name="warm" weight="0.071428479592" />
+</color>
+
+<color name="red" weight="0.037037">
+ <shade name="light" weight="0.571427836736" />
+ <shade name="cool" weight="0.35714239796" />
+ <shade name="warm" weight="0.071428479592" />
+</color>
+
+<color name="green" weight="0.037037">
+ <shade name="light" weight="0.571427836736" />
+ <shade name="cool" weight="0.35714239796" />
+ <shade name="soft" weight="0.071428479592" />
+</color>
+
+</colors>

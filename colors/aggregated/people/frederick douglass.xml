@@ -1,0 +1,33 @@
+<colors query="frederick douglass">
+
+<color name="black" weight="0.348082242654">
+ <shade name="warm" weight="0.374999343751" />
+ <shade name="cool" weight="0.374999343751" />
+ <shade name="weak" weight="0.249999562501" />
+</color>
+
+<color name="green" weight="0.33038314557">
+ <shade name="cool" weight="0.42857057143" />
+ <shade name="weak" weight="0.285713714287" />
+ <shade name="hard" weight="0.285713714287" />
+</color>
+
+<color name="white" weight="0.30088465043">
+ <shade name="warm" weight="0.374999343751" />
+ <shade name="cool" weight="0.374999343751" />
+ <shade name="weak" weight="0.249999562501" />
+</color>
+
+<color name="blue" weight="0.0117993980561">
+ <shade name="cool" weight="0.42857057143" />
+ <shade name="weak" weight="0.285713714287" />
+ <shade name="hard" weight="0.285713714287" />
+</color>
+
+<color name="purple" weight="0.00884954854205">
+ <shade name="cool" weight="0.42857057143" />
+ <shade name="weak" weight="0.285713714287" />
+ <shade name="hard" weight="0.285713714287" />
+</color>
+
+</colors>

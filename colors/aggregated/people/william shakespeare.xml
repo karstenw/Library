@@ -1,0 +1,33 @@
+<colors query="william shakespeare">
+
+<color name="white" weight="0.400262062202">
+ <shade name="light" weight="0.956186131956" />
+ <shade name="cool" weight="0.0399644358558" />
+ <shade name="dark" weight="0.00384842715648" />
+</color>
+
+<color name="green" weight="0.300524630309">
+ <shade name="light" weight="0.956186131956" />
+ <shade name="cool" weight="0.0399644358558" />
+ <shade name="dark" weight="0.00384842715648" />
+</color>
+
+<color name="black" weight="0.215222879348">
+ <shade name="light" weight="0.956186131956" />
+ <shade name="cool" weight="0.0399644358558" />
+ <shade name="dark" weight="0.00384842715648" />
+</color>
+
+<color name="red" weight="0.0708660700292">
+ <shade name="light" weight="0.956186131956" />
+ <shade name="cool" weight="0.0399644358558" />
+ <shade name="dark" weight="0.00384842715648" />
+</color>
+
+<color name="blue" weight="0.0131233463017">
+ <shade name="light" weight="0.956186131956" />
+ <shade name="cool" weight="0.0399644358558" />
+ <shade name="dark" weight="0.00384842715648" />
+</color>
+
+</colors>

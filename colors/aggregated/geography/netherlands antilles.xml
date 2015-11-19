@@ -1,0 +1,33 @@
+<colors query="netherlands antilles">
+
+<color name="black" weight="0.529411204153">
+ <shade name="neutral" weight="0.333332703705" />
+ <shade name="dark" weight="0.333332703705" />
+ <shade name="cool" weight="0.333332703705" />
+</color>
+
+<color name="blue" weight="0.352940802769">
+ <shade name="neutral" weight="0.333332703705" />
+ <shade name="dark" weight="0.333332703705" />
+ <shade name="cool" weight="0.333332703705" />
+</color>
+
+<color name="white" weight="0.0588234671281">
+ <shade name="neutral" weight="0.333332703705" />
+ <shade name="dark" weight="0.333332703705" />
+ <shade name="cool" weight="0.333332703705" />
+</color>
+
+<color name="red" weight="0.0392156447521">
+ <shade name="neutral" weight="0.333332703705" />
+ <shade name="dark" weight="0.333332703705" />
+ <shade name="cool" weight="0.333332703705" />
+</color>
+
+<color name="yellow" weight="0.019607822376">
+ <shade name="neutral" weight="0.333332703705" />
+ <shade name="dark" weight="0.333332703705" />
+ <shade name="cool" weight="0.333332703705" />
+</color>
+
+</colors>

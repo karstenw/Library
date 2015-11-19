@@ -1,0 +1,33 @@
+<colors query="choro">
+
+<color name="red" weight="0.366960529878">
+ <shade name="cool" weight="0.649999155001" />
+ <shade name="hard" weight="0.19999974" />
+ <shade name="dark" weight="0.149999805" />
+</color>
+
+<color name="black" weight="0.334173678411">
+ <shade name="cool" weight="0.649999155001" />
+ <shade name="hard" weight="0.19999974" />
+ <shade name="dark" weight="0.149999805" />
+</color>
+
+<color name="blue" weight="0.221941763775">
+ <shade name="cool" weight="0.649999155001" />
+ <shade name="hard" weight="0.19999974" />
+ <shade name="dark" weight="0.149999805" />
+</color>
+
+<color name="white" weight="0.0580075064412">
+ <shade name="cool" weight="0.649999155001" />
+ <shade name="hard" weight="0.19999974" />
+ <shade name="dark" weight="0.149999805" />
+</color>
+
+<color name="yellow" weight="0.0189154912308">
+ <shade name="cool" weight="0.649999155001" />
+ <shade name="hard" weight="0.19999974" />
+ <shade name="dark" weight="0.149999805" />
+</color>
+
+</colors>

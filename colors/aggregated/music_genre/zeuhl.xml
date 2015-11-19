@@ -1,0 +1,33 @@
+<colors query="zeuhl">
+
+<color name="yellow" weight="0.4999995">
+ <shade name="dark" weight="0.910713326213" />
+ <shade name="intense" weight="0.0535713721302" />
+ <shade name="soft" weight="0.0357142480868" />
+</color>
+
+<color name="black" weight="0.4999995">
+ <shade name="dark" weight="0.910713326213" />
+ <shade name="intense" weight="0.0535713721302" />
+ <shade name="soft" weight="0.0357142480868" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="dark" weight="0.927271732563" />
+ <shade name="soft" weight="0.0363635973554" />
+ <shade name="cool" weight="0.0363635973554" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="dark" weight="0.910713326213" />
+ <shade name="intense" weight="0.0535713721302" />
+ <shade name="soft" weight="0.0357142480868" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="dark" weight="0.927271732563" />
+ <shade name="soft" weight="0.0363635973554" />
+ <shade name="cool" weight="0.0363635973554" />
+</color>
+
+</colors>

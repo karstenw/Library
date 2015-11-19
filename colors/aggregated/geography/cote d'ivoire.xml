@@ -1,0 +1,33 @@
+<colors query="cote d'ivoire">
+
+<color name="orange" weight="0.997919999835">
+ <shade name="hard" weight="0.568181133782" />
+ <shade name="cool" weight="0.227272453513" />
+ <shade name="fresh" weight="0.204545208161" />
+</color>
+
+<color name="white" weight="0.000748439999876">
+ <shade name="hard" weight="0.568181133782" />
+ <shade name="cool" weight="0.227272453513" />
+ <shade name="fresh" weight="0.204545208161" />
+</color>
+
+<color name="black" weight="0.000748439999876">
+ <shade name="hard" weight="0.568181133782" />
+ <shade name="cool" weight="0.227272453513" />
+ <shade name="fresh" weight="0.204545208161" />
+</color>
+
+<color name="red" weight="0.000415799999931">
+ <shade name="hard" weight="0.568181133782" />
+ <shade name="cool" weight="0.227272453513" />
+ <shade name="fresh" weight="0.204545208161" />
+</color>
+
+<color name="green" weight="0.000166319999973">
+ <shade name="hard" weight="0.568181133782" />
+ <shade name="cool" weight="0.227272453513" />
+ <shade name="fresh" weight="0.204545208161" />
+</color>
+
+</colors>

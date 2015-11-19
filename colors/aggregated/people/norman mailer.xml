@@ -1,0 +1,33 @@
+<colors query="norman mailer">
+
+<color name="white" weight="0.96748515464">
+ <shade name="light" weight="0.954022023518" />
+ <shade name="hard" weight="0.0344827237416" />
+ <shade name="warm" weight="0.0114942412472" />
+</color>
+
+<color name="green" weight="0.0261696804124">
+ <shade name="light" weight="0.954022023518" />
+ <shade name="hard" weight="0.0344827237416" />
+ <shade name="cool" weight="0.0114942412472" />
+</color>
+
+<color name="black" weight="0.00396510309279">
+ <shade name="light" weight="0.954022023518" />
+ <shade name="hard" weight="0.0344827237416" />
+ <shade name="warm" weight="0.0114942412472" />
+</color>
+
+<color name="red" weight="0.00158604123711">
+ <shade name="light" weight="0.954022023518" />
+ <shade name="hard" weight="0.0344827237416" />
+ <shade name="warm" weight="0.0114942412472" />
+</color>
+
+<color name="orange" weight="0.000793020618557">
+ <shade name="light" weight="0.954022023518" />
+ <shade name="hard" weight="0.0344827237416" />
+ <shade name="warm" weight="0.0114942412472" />
+</color>
+
+</colors>

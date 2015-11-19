@@ -1,0 +1,33 @@
+<colors query="andre malraux">
+
+<color name="green" weight="0.936841168422">
+ <shade name="cool" weight="0.666666000001" />
+ <shade name="intense" weight="0.333333" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="red" weight="0.0315789157895">
+ <shade name="cool" weight="0.666666000001" />
+ <shade name="intense" weight="0.333333" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="white" weight="0.0210526105263">
+ <shade name="cool" weight="0.999998500002" />
+ <shade name="weak" weight="0.0" />
+ <shade name="warm" weight="0.0" />
+</color>
+
+<color name="yellow" weight="0.0105263052632">
+ <shade name="cool" weight="0.666666000001" />
+ <shade name="intense" weight="0.333333" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="cool" weight="0.999998500002" />
+ <shade name="weak" weight="0.0" />
+ <shade name="soft" weight="0.0" />
+</color>
+
+</colors>

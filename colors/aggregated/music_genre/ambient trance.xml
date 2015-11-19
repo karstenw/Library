@@ -1,0 +1,33 @@
+<colors query="ambient trance">
+
+<color name="yellow" weight="0.0">
+ <shade name="dark" weight="0.966149505191" />
+ <shade name="cool" weight="0.0328901959214" />
+ <shade name="light" weight="0.000959297381041" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="dark" weight="0.966149505191" />
+ <shade name="cool" weight="0.0328901959214" />
+ <shade name="light" weight="0.000959297381041" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="dark" weight="0.966149505191" />
+ <shade name="cool" weight="0.0328901959214" />
+ <shade name="light" weight="0.000959297381041" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="dark" weight="0.966149505191" />
+ <shade name="cool" weight="0.0328901959214" />
+ <shade name="light" weight="0.000959297381041" />
+</color>
+
+<color name="pink" weight="0.0">
+ <shade name="dark" weight="0.966149505191" />
+ <shade name="cool" weight="0.0328901959214" />
+ <shade name="light" weight="0.000959297381041" />
+</color>
+
+</colors>

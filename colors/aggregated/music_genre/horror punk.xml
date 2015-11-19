@@ -1,0 +1,33 @@
+<colors query="horror punk">
+
+<color name="red" weight="0.3999996">
+ <shade name="dark" weight="0.945700386091" />
+ <shade name="cool" weight="0.0361990578408" />
+ <shade name="hard" weight="0.0180995289204" />
+</color>
+
+<color name="black" weight="0.2999997">
+ <shade name="dark" weight="0.945700386091" />
+ <shade name="cool" weight="0.0361990578408" />
+ <shade name="hard" weight="0.0180995289204" />
+</color>
+
+<color name="orange" weight="0.0999999000001">
+ <shade name="dark" weight="0.945700386091" />
+ <shade name="cool" weight="0.0361990578408" />
+ <shade name="hard" weight="0.0180995289204" />
+</color>
+
+<color name="green" weight="0.0999999000001">
+ <shade name="dark" weight="0.945700386091" />
+ <shade name="cool" weight="0.0361990578408" />
+ <shade name="hard" weight="0.0180995289204" />
+</color>
+
+<color name="blue" weight="0.0999999000001">
+ <shade name="dark" weight="0.945700386091" />
+ <shade name="cool" weight="0.0361990578408" />
+ <shade name="hard" weight="0.0180995289204" />
+</color>
+
+</colors>

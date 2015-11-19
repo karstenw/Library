@@ -1,0 +1,33 @@
+<colors query="marcel marceau">
+
+<color name="white" weight="0.967508057763">
+ <shade name="cool" weight="0.666665666668" />
+ <shade name="weak" weight="0.166666416667" />
+ <shade name="soft" weight="0.166666416667" />
+</color>
+
+<color name="red" weight="0.0180505234657">
+ <shade name="cool" weight="0.666665666668" />
+ <shade name="weak" weight="0.166666416667" />
+ <shade name="soft" weight="0.166666416667" />
+</color>
+
+<color name="blue" weight="0.0108303140794">
+ <shade name="cool" weight="0.666665666668" />
+ <shade name="weak" weight="0.166666416667" />
+ <shade name="soft" weight="0.166666416667" />
+</color>
+
+<color name="black" weight="0.00361010469314">
+ <shade name="cool" weight="0.666665666668" />
+ <shade name="weak" weight="0.166666416667" />
+ <shade name="soft" weight="0.166666416667" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="cool" weight="0.666665666668" />
+ <shade name="weak" weight="0.166666416667" />
+ <shade name="soft" weight="0.166666416667" />
+</color>
+
+</colors>

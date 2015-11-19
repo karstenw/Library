@@ -1,0 +1,33 @@
+<colors query="ibo">
+
+<color name="black" weight="0.442970362273">
+ <shade name="cool" weight="0.745900661114" />
+ <shade name="light" weight="0.172130921796" />
+ <shade name="hard" weight="0.0819671056169" />
+</color>
+
+<color name="yellow" weight="0.423739613013">
+ <shade name="cool" weight="0.745900661114" />
+ <shade name="light" weight="0.172130921796" />
+ <shade name="hard" weight="0.0819671056169" />
+</color>
+
+<color name="red" weight="0.0636604113447">
+ <shade name="cool" weight="0.745900661114" />
+ <shade name="light" weight="0.172130921796" />
+ <shade name="hard" weight="0.0819671056169" />
+</color>
+
+<color name="green" weight="0.0470821792237">
+ <shade name="cool" weight="0.745900661114" />
+ <shade name="light" weight="0.172130921796" />
+ <shade name="hard" weight="0.0819671056169" />
+</color>
+
+<color name="orange" weight="0.0225463956846">
+ <shade name="cool" weight="0.745900661114" />
+ <shade name="light" weight="0.172130921796" />
+ <shade name="hard" weight="0.0819671056169" />
+</color>
+
+</colors>

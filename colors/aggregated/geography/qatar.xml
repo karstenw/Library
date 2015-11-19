@@ -1,0 +1,33 @@
+<colors query="qatar">
+
+<color name="green" weight="0.259335778375">
+ <shade name="cool" weight="0.99358211242" />
+ <shade name="light" weight="0.00397432844968" />
+ <shade name="dark" weight="0.00244255602637" />
+</color>
+
+<color name="purple" weight="0.236514229878">
+ <shade name="cool" weight="0.99358211242" />
+ <shade name="light" weight="0.00397432844968" />
+ <shade name="dark" weight="0.00244255602637" />
+</color>
+
+<color name="red" weight="0.205393936473">
+ <shade name="cool" weight="0.99358211242" />
+ <shade name="light" weight="0.00397432844968" />
+ <shade name="dark" weight="0.00244255602637" />
+</color>
+
+<color name="orange" weight="0.192945819111">
+ <shade name="cool" weight="0.99358211242" />
+ <shade name="light" weight="0.00397432844968" />
+ <shade name="dark" weight="0.00244255602637" />
+</color>
+
+<color name="pink" weight="0.105808997577">
+ <shade name="cool" weight="0.99358211242" />
+ <shade name="light" weight="0.00397432844968" />
+ <shade name="dark" weight="0.00244255602637" />
+</color>
+
+</colors>

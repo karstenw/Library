@@ -1,0 +1,33 @@
+<colors query="czech republic">
+
+<color name="blue" weight="0.306566130333">
+ <shade name="dark" weight="0.723513455656" />
+ <shade name="light" weight="0.263565615989" />
+ <shade name="hard" weight="0.0129198831367" />
+</color>
+
+<color name="white" weight="0.261075672284">
+ <shade name="dark" weight="0.723513455656" />
+ <shade name="light" weight="0.263565615989" />
+ <shade name="hard" weight="0.0129198831367" />
+</color>
+
+<color name="black" weight="0.151700788365">
+ <shade name="dark" weight="0.723513455656" />
+ <shade name="light" weight="0.263565615989" />
+ <shade name="hard" weight="0.0129198831367" />
+</color>
+
+<color name="green" weight="0.150514080764">
+ <shade name="dark" weight="0.723513455656" />
+ <shade name="light" weight="0.263565615989" />
+ <shade name="hard" weight="0.0129198831367" />
+</color>
+
+<color name="red" weight="0.130142266942">
+ <shade name="dark" weight="0.723513455656" />
+ <shade name="light" weight="0.263565615989" />
+ <shade name="hard" weight="0.0129198831367" />
+</color>
+
+</colors>

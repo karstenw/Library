@@ -1,0 +1,33 @@
+<colors query="ovid">
+
+<color name="green" weight="0.403464901125">
+ <shade name="light" weight="0.392156378317" />
+ <shade name="soft" weight="0.333332921569" />
+ <shade name="hard" weight="0.274509464822" />
+</color>
+
+<color name="white" weight="0.254950213595">
+ <shade name="light" weight="0.392156378317" />
+ <shade name="soft" weight="0.333332921569" />
+ <shade name="hard" weight="0.274509464822" />
+</color>
+
+<color name="blue" weight="0.163366156284">
+ <shade name="light" weight="0.392156378317" />
+ <shade name="soft" weight="0.333332921569" />
+ <shade name="hard" weight="0.274509464822" />
+</color>
+
+<color name="black" weight="0.111386015648">
+ <shade name="light" weight="0.392156378317" />
+ <shade name="soft" weight="0.333332921569" />
+ <shade name="hard" weight="0.274509464822" />
+</color>
+
+<color name="red" weight="0.0668316093889">
+ <shade name="light" weight="0.392156378317" />
+ <shade name="soft" weight="0.333332921569" />
+ <shade name="hard" weight="0.274509464822" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="isaac asimov">
+
+<color name="white" weight="0.549341546886">
+ <shade name="bright" weight="0.632183192298" />
+ <shade name="light" weight="0.224137677269" />
+ <shade name="hard" weight="0.14367799825" />
+</color>
+
+<color name="green" weight="0.286183919635">
+ <shade name="bright" weight="0.632183192298" />
+ <shade name="light" weight="0.224137677269" />
+ <shade name="hard" weight="0.14367799825" />
+</color>
+
+<color name="black" weight="0.0855262288566">
+ <shade name="bright" weight="0.632183192298" />
+ <shade name="light" weight="0.224137677269" />
+ <shade name="hard" weight="0.14367799825" />
+</color>
+
+<color name="red" weight="0.0624999364721">
+ <shade name="bright" weight="0.632183192298" />
+ <shade name="light" weight="0.224137677269" />
+ <shade name="hard" weight="0.14367799825" />
+</color>
+
+<color name="orange" weight="0.0164473517032">
+ <shade name="bright" weight="0.632183192298" />
+ <shade name="light" weight="0.224137677269" />
+ <shade name="hard" weight="0.14367799825" />
+</color>
+
+</colors>

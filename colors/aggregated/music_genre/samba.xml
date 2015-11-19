@@ -1,0 +1,33 @@
+<colors query="samba">
+
+<color name="black" weight="0.697016476889">
+ <shade name="soft" weight="0.608952488452" />
+ <shade name="cool" weight="0.204739701523" />
+ <shade name="light" weight="0.186306545116" />
+</color>
+
+<color name="white" weight="0.138147409834">
+ <shade name="soft" weight="0.608952488452" />
+ <shade name="cool" weight="0.204739701523" />
+ <shade name="light" weight="0.186306545116" />
+</color>
+
+<color name="red" weight="0.0598429461689">
+ <shade name="soft" weight="0.608952488452" />
+ <shade name="cool" weight="0.204739701523" />
+ <shade name="light" weight="0.186306545116" />
+</color>
+
+<color name="yellow" weight="0.0528727814">
+ <shade name="soft" weight="0.608952488452" />
+ <shade name="cool" weight="0.204739701523" />
+ <shade name="light" weight="0.186306545116" />
+</color>
+
+<color name="pink" weight="0.0521192500737">
+ <shade name="soft" weight="0.608952488452" />
+ <shade name="cool" weight="0.204739701523" />
+ <shade name="light" weight="0.186306545116" />
+</color>
+
+</colors>

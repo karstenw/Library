@@ -1,0 +1,33 @@
+<colors query="jimmy swaggart">
+
+<color name="white" weight="0.3124996875">
+ <shade name="hard" weight="0.833332361112" />
+ <shade name="bright" weight="0.166666472222" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="green" weight="0.3124996875">
+ <shade name="hard" weight="0.714285000001" />
+ <shade name="intense" weight="0.142857" />
+ <shade name="bright" weight="0.142857" />
+</color>
+
+<color name="black" weight="0.3124996875">
+ <shade name="hard" weight="0.714285000001" />
+ <shade name="intense" weight="0.142857" />
+ <shade name="bright" weight="0.142857" />
+</color>
+
+<color name="red" weight="0.0624999375001">
+ <shade name="hard" weight="0.714285000001" />
+ <shade name="intense" weight="0.142857" />
+ <shade name="bright" weight="0.142857" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="hard" weight="0.714285000001" />
+ <shade name="intense" weight="0.142857" />
+ <shade name="bright" weight="0.142857" />
+</color>
+
+</colors>

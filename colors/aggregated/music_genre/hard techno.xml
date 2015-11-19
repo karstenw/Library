@@ -1,0 +1,33 @@
+<colors query="hard techno">
+
+<color name="white" weight="0.4999995">
+ <shade name="hard" weight="0.658857316304" />
+ <shade name="dark" weight="0.337847390527" />
+ <shade name="fresh" weight="0.00329428658152" />
+</color>
+
+<color name="red" weight="0.333333">
+ <shade name="hard" weight="0.658857316304" />
+ <shade name="dark" weight="0.337847390527" />
+ <shade name="fresh" weight="0.00329428658152" />
+</color>
+
+<color name="blue" weight="0.1666665">
+ <shade name="hard" weight="0.658857316304" />
+ <shade name="dark" weight="0.337847390527" />
+ <shade name="fresh" weight="0.00329428658152" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="hard" weight="0.658857316304" />
+ <shade name="dark" weight="0.337847390527" />
+ <shade name="fresh" weight="0.00329428658152" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="hard" weight="0.658857316304" />
+ <shade name="dark" weight="0.337847390527" />
+ <shade name="fresh" weight="0.00329428658152" />
+</color>
+
+</colors>

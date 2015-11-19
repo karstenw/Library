@@ -1,0 +1,33 @@
+<colors query="nancy reagan">
+
+<color name="red" weight="0.704224637969">
+ <shade name="cool" weight="0.454544958678" />
+ <shade name="light" weight="0.363635966943" />
+ <shade name="dark" weight="0.181817983471" />
+</color>
+
+<color name="black" weight="0.0985914493157">
+ <shade name="cool" weight="0.454544958678" />
+ <shade name="light" weight="0.363635966943" />
+ <shade name="dark" weight="0.181817983471" />
+</color>
+
+<color name="blue" weight="0.0845069565563">
+ <shade name="cool" weight="0.454544958678" />
+ <shade name="light" weight="0.363635966943" />
+ <shade name="dark" weight="0.181817983471" />
+</color>
+
+<color name="green" weight="0.0704224637969">
+ <shade name="cool" weight="0.454544958678" />
+ <shade name="light" weight="0.363635966943" />
+ <shade name="dark" weight="0.181817983471" />
+</color>
+
+<color name="white" weight="0.0422534782782">
+ <shade name="cool" weight="0.454544958678" />
+ <shade name="light" weight="0.363635966943" />
+ <shade name="dark" weight="0.181817983471" />
+</color>
+
+</colors>

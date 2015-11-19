@@ -1,0 +1,33 @@
+<colors query="g. k. chesterton">
+
+<color name="green" weight="0.569891903226">
+ <shade name="light" weight="0.990803597787" />
+ <shade name="dark" weight="0.00459769650945" />
+ <shade name="cool" weight="0.00459769650945" />
+</color>
+
+<color name="white" weight="0.34408567742">
+ <shade name="light" weight="0.990803597787" />
+ <shade name="dark" weight="0.00459769650945" />
+ <shade name="cool" weight="0.00459769650945" />
+</color>
+
+<color name="black" weight="0.0537633870968">
+ <shade name="light" weight="0.990803597787" />
+ <shade name="dark" weight="0.00459769650945" />
+ <shade name="cool" weight="0.00459769650945" />
+</color>
+
+<color name="blue" weight="0.0215053548387">
+ <shade name="light" weight="0.990803597787" />
+ <shade name="dark" weight="0.00459769650945" />
+ <shade name="cool" weight="0.00459769650945" />
+</color>
+
+<color name="pink" weight="0.0107526774194">
+ <shade name="light" weight="0.990803597787" />
+ <shade name="dark" weight="0.00459769650945" />
+ <shade name="cool" weight="0.00459769650945" />
+</color>
+
+</colors>

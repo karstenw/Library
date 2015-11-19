@@ -1,0 +1,33 @@
+<colors query="lounge music">
+
+<color name="orange" weight="0.945453586631">
+ <shade name="cool" weight="0.521816779901" />
+ <shade name="soft" weight="0.368420640292" />
+ <shade name="dark" weight="0.1097614606" />
+</color>
+
+<color name="black" weight="0.0202019997143">
+ <shade name="cool" weight="0.521816779901" />
+ <shade name="soft" weight="0.368420640292" />
+ <shade name="dark" weight="0.1097614606" />
+</color>
+
+<color name="blue" weight="0.0161615997715">
+ <shade name="cool" weight="0.521816779901" />
+ <shade name="soft" weight="0.368420640292" />
+ <shade name="dark" weight="0.1097614606" />
+</color>
+
+<color name="green" weight="0.0101009998572">
+ <shade name="cool" weight="0.521816779901" />
+ <shade name="soft" weight="0.368420640292" />
+ <shade name="dark" weight="0.1097614606" />
+</color>
+
+<color name="yellow" weight="0.00808079988573">
+ <shade name="cool" weight="0.521816779901" />
+ <shade name="soft" weight="0.368420640292" />
+ <shade name="dark" weight="0.1097614606" />
+</color>
+
+</colors>

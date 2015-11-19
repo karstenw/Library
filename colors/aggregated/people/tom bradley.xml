@@ -1,0 +1,33 @@
+<colors query="tom bradley">
+
+<color name="black" weight="0.881719548388">
+ <shade name="soft" weight="0.4999995" />
+ <shade name="light" weight="0.24999975" />
+ <shade name="intense" weight="0.24999975" />
+</color>
+
+<color name="white" weight="0.0967740967743">
+ <shade name="soft" weight="0.666665777779" />
+ <shade name="light" weight="0.333332888889" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="red" weight="0.0107526774194">
+ <shade name="soft" weight="0.4999995" />
+ <shade name="light" weight="0.24999975" />
+ <shade name="intense" weight="0.24999975" />
+</color>
+
+<color name="orange" weight="0.0107526774194">
+ <shade name="soft" weight="0.4999995" />
+ <shade name="light" weight="0.24999975" />
+ <shade name="intense" weight="0.24999975" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="soft" weight="0.4999995" />
+ <shade name="light" weight="0.24999975" />
+ <shade name="intense" weight="0.24999975" />
+</color>
+
+</colors>

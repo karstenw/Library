@@ -1,0 +1,33 @@
+<colors query="rachel carson">
+
+<color name="white" weight="0.91743027523">
+ <shade name="light" weight="0.909090000001" />
+ <shade name="hard" weight="0.0909090000001" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="green" weight="0.0458715137615">
+ <shade name="light" weight="0.909090000001" />
+ <shade name="hard" weight="0.0909090000001" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="black" weight="0.0229357568808">
+ <shade name="light" weight="0.909090000001" />
+ <shade name="hard" weight="0.0909090000001" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="red" weight="0.0091743027523">
+ <shade name="light" weight="0.909090000001" />
+ <shade name="hard" weight="0.0909090000001" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="orange" weight="0.00458715137615">
+ <shade name="light" weight="0.909090000001" />
+ <shade name="hard" weight="0.0909090000001" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+</colors>

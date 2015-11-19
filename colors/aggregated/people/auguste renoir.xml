@@ -1,0 +1,33 @@
+<colors query="auguste renoir">
+
+<color name="black" weight="0.597825489131">
+ <shade name="light" weight="0.4999995" />
+ <shade name="intense" weight="0.4999995" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="white" weight="0.315217076087">
+ <shade name="light" weight="0.999998000004" />
+ <shade name="weak" weight="0.0" />
+ <shade name="warm" weight="0.0" />
+</color>
+
+<color name="blue" weight="0.0434782173913">
+ <shade name="light" weight="0.4999995" />
+ <shade name="intense" weight="0.4999995" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="red" weight="0.0217391086957">
+ <shade name="light" weight="0.4999995" />
+ <shade name="intense" weight="0.4999995" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="green" weight="0.0217391086957">
+ <shade name="light" weight="0.4999995" />
+ <shade name="intense" weight="0.4999995" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+</colors>

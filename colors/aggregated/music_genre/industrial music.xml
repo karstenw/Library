@@ -1,0 +1,33 @@
+<colors query="industrial music">
+
+<color name="black" weight="0.986802530812">
+ <shade name="dark" weight="0.70724464646" />
+ <shade name="hard" weight="0.233442609467" />
+ <shade name="cool" weight="0.0593117148498" />
+</color>
+
+<color name="orange" weight="0.0058650967656">
+ <shade name="dark" weight="0.70724464646" />
+ <shade name="hard" weight="0.233442609467" />
+ <shade name="cool" weight="0.0593117148498" />
+</color>
+
+<color name="white" weight="0.0029325483828">
+ <shade name="dark" weight="0.70724464646" />
+ <shade name="hard" weight="0.233442609467" />
+ <shade name="cool" weight="0.0593117148498" />
+</color>
+
+<color name="red" weight="0.0029325483828">
+ <shade name="dark" weight="0.70724464646" />
+ <shade name="hard" weight="0.233442609467" />
+ <shade name="cool" weight="0.0593117148498" />
+</color>
+
+<color name="pink" weight="0.0014662741914">
+ <shade name="dark" weight="0.70724464646" />
+ <shade name="hard" weight="0.233442609467" />
+ <shade name="cool" weight="0.0593117148498" />
+</color>
+
+</colors>

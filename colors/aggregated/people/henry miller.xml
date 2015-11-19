@@ -1,0 +1,33 @@
+<colors query="henry miller">
+
+<color name="green" weight="0.749999190001">
+ <shade name="light" weight="0.890410007507" />
+ <shade name="dark" weight="0.0684930775005" />
+ <shade name="cool" weight="0.0410958465003" />
+</color>
+
+<color name="white" weight="0.0999998920001">
+ <shade name="light" weight="0.890410007507" />
+ <shade name="dark" weight="0.0684930775005" />
+ <shade name="cool" weight="0.0410958465003" />
+</color>
+
+<color name="red" weight="0.0799999136001">
+ <shade name="light" weight="0.890410007507" />
+ <shade name="dark" weight="0.0684930775005" />
+ <shade name="cool" weight="0.0410958465003" />
+</color>
+
+<color name="orange" weight="0.0399999568">
+ <shade name="light" weight="0.890410007507" />
+ <shade name="dark" weight="0.0684930775005" />
+ <shade name="cool" weight="0.0410958465003" />
+</color>
+
+<color name="pink" weight="0.0299999676">
+ <shade name="light" weight="0.890410007507" />
+ <shade name="dark" weight="0.0684930775005" />
+ <shade name="cool" weight="0.0410958465003" />
+</color>
+
+</colors>

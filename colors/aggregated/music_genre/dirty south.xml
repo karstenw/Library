@@ -1,0 +1,33 @@
+<colors query="dirty south">
+
+<color name="black" weight="0.758121977897">
+ <shade name="dark" weight="0.943977034353" />
+ <shade name="hard" weight="0.0392770343942" />
+ <shade name="fresh" weight="0.0167449192526" />
+</color>
+
+<color name="white" weight="0.224548509644">
+ <shade name="dark" weight="0.943977034353" />
+ <shade name="hard" weight="0.0392770343942" />
+ <shade name="fresh" weight="0.0167449192526" />
+</color>
+
+<color name="red" weight="0.00577616745064">
+ <shade name="dark" weight="0.943977034353" />
+ <shade name="hard" weight="0.0392770343942" />
+ <shade name="fresh" weight="0.0167449192526" />
+</color>
+
+<color name="pink" weight="0.00577616745064">
+ <shade name="dark" weight="0.943977034353" />
+ <shade name="hard" weight="0.0392770343942" />
+ <shade name="fresh" weight="0.0167449192526" />
+</color>
+
+<color name="blue" weight="0.00577616745064">
+ <shade name="dark" weight="0.943977034353" />
+ <shade name="hard" weight="0.0392770343942" />
+ <shade name="fresh" weight="0.0167449192526" />
+</color>
+
+</colors>

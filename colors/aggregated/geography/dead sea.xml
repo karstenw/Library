@@ -1,0 +1,33 @@
+<colors query="dead sea">
+
+<color name="red" weight="0.588234703206">
+ <shade name="fresh" weight="0.897171326878" />
+ <shade name="warm" weight="0.0686374625434" />
+ <shade name="dark" weight="0.0341901966977" />
+</color>
+
+<color name="black" weight="0.23765356204">
+ <shade name="fresh" weight="0.897171326878" />
+ <shade name="warm" weight="0.0686374625434" />
+ <shade name="dark" weight="0.0341901966977" />
+</color>
+
+<color name="blue" weight="0.090510611926">
+ <shade name="fresh" weight="0.95303010411" />
+ <shade name="dark" weight="0.036318912277" />
+ <shade name="light" weight="0.0106499066075" />
+</color>
+
+<color name="orange" weight="0.0600033106995">
+ <shade name="fresh" weight="0.897171326878" />
+ <shade name="warm" weight="0.0686374625434" />
+ <shade name="dark" weight="0.0341901966977" />
+</color>
+
+<color name="green" weight="0.0235968075785">
+ <shade name="fresh" weight="0.95303010411" />
+ <shade name="dark" weight="0.036318912277" />
+ <shade name="light" weight="0.0106499066075" />
+</color>
+
+</colors>

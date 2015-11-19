@@ -1,0 +1,33 @@
+<colors query="ambient acoustic">
+
+<color name="yellow" weight="0.0">
+ <shade name="dark" weight="0.978042914611" />
+ <shade name="soft" weight="0.0119760356891" />
+ <shade name="warm" weight="0.00998002974093" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="dark" weight="0.978042914611" />
+ <shade name="soft" weight="0.0119760356891" />
+ <shade name="warm" weight="0.00998002974093" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="dark" weight="0.978042914611" />
+ <shade name="soft" weight="0.0119760356891" />
+ <shade name="warm" weight="0.00998002974093" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="dark" weight="0.981962922278" />
+ <shade name="soft" weight="0.012024035783" />
+ <shade name="light" weight="0.0060120178915" />
+</color>
+
+<color name="pink" weight="0.0">
+ <shade name="dark" weight="0.978042914611" />
+ <shade name="soft" weight="0.0119760356891" />
+ <shade name="warm" weight="0.00998002974093" />
+</color>
+
+</colors>

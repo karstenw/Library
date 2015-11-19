@@ -1,0 +1,33 @@
+<colors query="cybergrind">
+
+<color name="black" weight="0.999999000001">
+ <shade name="intense" weight="0.3999996" />
+ <shade name="cool" weight="0.3999996" />
+ <shade name="hard" weight="0.1999998" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="intense" weight="0.3999996" />
+ <shade name="cool" weight="0.3999996" />
+ <shade name="hard" weight="0.1999998" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="cool" weight="0.666665555557" />
+ <shade name="hard" weight="0.333332777779" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="intense" weight="0.3999996" />
+ <shade name="cool" weight="0.3999996" />
+ <shade name="hard" weight="0.1999998" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="cool" weight="0.666665555557" />
+ <shade name="hard" weight="0.333332777779" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+</colors>

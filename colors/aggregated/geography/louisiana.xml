@@ -1,0 +1,33 @@
+<colors query="louisiana">
+
+<color name="black" weight="0.876662676264">
+ <shade name="fresh" weight="0.837283210243" />
+ <shade name="light" weight="0.0826548810112" />
+ <shade name="warm" weight="0.0800607343128" />
+</color>
+
+<color name="green" weight="0.0530444445421">
+ <shade name="fresh" weight="0.86283081415" />
+ <shade name="light" weight="0.0851768880635" />
+ <shade name="cool" weight="0.0519910875193" />
+</color>
+
+<color name="white" weight="0.0306196673884">
+ <shade name="fresh" weight="0.837283210243" />
+ <shade name="light" weight="0.0826548810112" />
+ <shade name="warm" weight="0.0800607343128" />
+</color>
+
+<color name="yellow" weight="0.0211860146764">
+ <shade name="fresh" weight="0.837283210243" />
+ <shade name="light" weight="0.0826548810112" />
+ <shade name="warm" weight="0.0800607343128" />
+</color>
+
+<color name="purple" weight="0.0184861477386">
+ <shade name="fresh" weight="0.86283081415" />
+ <shade name="light" weight="0.0851768880635" />
+ <shade name="cool" weight="0.0519910875193" />
+</color>
+
+</colors>

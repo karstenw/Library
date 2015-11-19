@@ -1,0 +1,33 @@
+<colors query="p. g. wodehouse">
+
+<color name="blue" weight="0.612499386544">
+ <shade name="fresh" weight="0.986586192311" />
+ <shade name="light" weight="0.00894186881249" />
+ <shade name="dark" weight="0.00447093440624" />
+</color>
+
+<color name="green" weight="0.193749805947">
+ <shade name="fresh" weight="0.986586192311" />
+ <shade name="light" weight="0.00894186881249" />
+ <shade name="dark" weight="0.00447093440624" />
+</color>
+
+<color name="white" weight="0.181249818467">
+ <shade name="fresh" weight="0.986586192311" />
+ <shade name="light" weight="0.00894186881249" />
+ <shade name="dark" weight="0.00447093440624" />
+</color>
+
+<color name="orange" weight="0.0078124921753">
+ <shade name="fresh" weight="0.986586192311" />
+ <shade name="light" weight="0.00894186881249" />
+ <shade name="dark" weight="0.00447093440624" />
+</color>
+
+<color name="red" weight="0.00468749530518">
+ <shade name="fresh" weight="0.986586192311" />
+ <shade name="light" weight="0.00894186881249" />
+ <shade name="dark" weight="0.00447093440624" />
+</color>
+
+</colors>

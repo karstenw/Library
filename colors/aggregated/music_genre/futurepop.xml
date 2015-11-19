@@ -1,0 +1,33 @@
+<colors query="futurepop">
+
+<color name="yellow" weight="0.0">
+ <shade name="dark" weight="0.797014106947" />
+ <shade name="hard" weight="0.191044579942" />
+ <shade name="soft" weight="0.0119402862464" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="dark" weight="0.797014106947" />
+ <shade name="hard" weight="0.191044579942" />
+ <shade name="soft" weight="0.0119402862464" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="dark" weight="0.797014106947" />
+ <shade name="hard" weight="0.191044579942" />
+ <shade name="soft" weight="0.0119402862464" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="dark" weight="0.797014106947" />
+ <shade name="hard" weight="0.191044579942" />
+ <shade name="soft" weight="0.0119402862464" />
+</color>
+
+<color name="pink" weight="0.0">
+ <shade name="dark" weight="0.797014106947" />
+ <shade name="hard" weight="0.191044579942" />
+ <shade name="soft" weight="0.0119402862464" />
+</color>
+
+</colors>

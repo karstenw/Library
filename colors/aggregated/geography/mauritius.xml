@@ -1,0 +1,33 @@
+<colors query="mauritius">
+
+<color name="blue" weight="0.941904353151">
+ <shade name="cool" weight="0.539534231261" />
+ <shade name="light" weight="0.2465113298" />
+ <shade name="dark" weight="0.213953229638" />
+</color>
+
+<color name="orange" weight="0.0240217217582">
+ <shade name="cool" weight="0.539534231261" />
+ <shade name="light" weight="0.2465113298" />
+ <shade name="dark" weight="0.213953229638" />
+</color>
+
+<color name="black" weight="0.0180795063759">
+ <shade name="cool" weight="0.539534231261" />
+ <shade name="light" weight="0.2465113298" />
+ <shade name="dark" weight="0.213953229638" />
+</color>
+
+<color name="red" weight="0.00929261341699">
+ <shade name="cool" weight="0.539534231261" />
+ <shade name="light" weight="0.2465113298" />
+ <shade name="dark" weight="0.213953229638" />
+</color>
+
+<color name="green" weight="0.0067007960694">
+ <shade name="cool" weight="0.539534231261" />
+ <shade name="light" weight="0.2465113298" />
+ <shade name="dark" weight="0.213953229638" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="ghetto house">
+
+<color name="blue" weight="0.285714">
+ <shade name="cool" weight="0.428571" />
+ <shade name="hard" weight="0.285714" />
+ <shade name="fresh" weight="0.285714" />
+</color>
+
+<color name="black" weight="0.285714">
+ <shade name="cool" weight="0.428571" />
+ <shade name="hard" weight="0.285714" />
+ <shade name="fresh" weight="0.285714" />
+</color>
+
+<color name="yellow" weight="0.142857">
+ <shade name="cool" weight="0.428571" />
+ <shade name="hard" weight="0.285714" />
+ <shade name="fresh" weight="0.285714" />
+</color>
+
+<color name="pink" weight="0.142857">
+ <shade name="cool" weight="0.428571" />
+ <shade name="hard" weight="0.285714" />
+ <shade name="fresh" weight="0.285714" />
+</color>
+
+<color name="green" weight="0.142857">
+ <shade name="cool" weight="0.428571" />
+ <shade name="hard" weight="0.285714" />
+ <shade name="fresh" weight="0.285714" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="film score">
+
+<color name="black" weight="0.921359523432">
+ <shade name="dark" weight="0.807092605248" />
+ <shade name="hard" weight="0.184255868079" />
+ <shade name="cool" weight="0.00865051023845" />
+</color>
+
+<color name="blue" weight="0.0523663322888">
+ <shade name="dark" weight="0.807092605248" />
+ <shade name="hard" weight="0.184255868079" />
+ <shade name="cool" weight="0.00865051023845" />
+</color>
+
+<color name="orange" weight="0.0230339880858">
+ <shade name="dark" weight="0.807092605248" />
+ <shade name="hard" weight="0.184255868079" />
+ <shade name="cool" weight="0.00865051023845" />
+</color>
+
+<color name="purple" weight="0.00161957728728">
+ <shade name="dark" weight="0.807092605248" />
+ <shade name="hard" weight="0.184255868079" />
+ <shade name="cool" weight="0.00865051023845" />
+</color>
+
+<color name="green" weight="0.00161957728728">
+ <shade name="dark" weight="0.807092605248" />
+ <shade name="hard" weight="0.184255868079" />
+ <shade name="cool" weight="0.00865051023845" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="woody allen">
+
+<color name="green" weight="0.338886093327">
+ <shade name="hard" weight="0.683229075921" />
+ <shade name="light" weight="0.209746548482" />
+ <shade name="dark" weight="0.107023295809" />
+</color>
+
+<color name="black" weight="0.32617238478">
+ <shade name="hard" weight="0.683229075921" />
+ <shade name="light" weight="0.209746548482" />
+ <shade name="dark" weight="0.107023295809" />
+</color>
+
+<color name="white" weight="0.182375957082">
+ <shade name="hard" weight="0.683229075921" />
+ <shade name="light" weight="0.209746548482" />
+ <shade name="dark" weight="0.107023295809" />
+</color>
+
+<color name="orange" weight="0.0832967111671">
+ <shade name="hard" weight="0.683229075921" />
+ <shade name="light" weight="0.209746548482" />
+ <shade name="dark" weight="0.107023295809" />
+</color>
+
+<color name="red" weight="0.0692677913916">
+ <shade name="hard" weight="0.683229075921" />
+ <shade name="light" weight="0.209746548482" />
+ <shade name="dark" weight="0.107023295809" />
+</color>
+
+</colors>

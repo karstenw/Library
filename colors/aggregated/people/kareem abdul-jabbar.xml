@@ -1,0 +1,33 @@
+<colors query="kareem abdul-jabbar">
+
+<color name="black" weight="0.346231830879">
+ <shade name="light" weight="0.374999390626" />
+ <shade name="cool" weight="0.374999390626" />
+ <shade name="weak" weight="0.249999593751" />
+</color>
+
+<color name="red" weight="0.31364530562">
+ <shade name="light" weight="0.374999390626" />
+ <shade name="cool" weight="0.374999390626" />
+ <shade name="weak" weight="0.249999593751" />
+</color>
+
+<color name="green" weight="0.25050891293">
+ <shade name="light" weight="0.374999390626" />
+ <shade name="cool" weight="0.374999390626" />
+ <shade name="weak" weight="0.249999593751" />
+</color>
+
+<color name="white" weight="0.0814663131479">
+ <shade name="light" weight="0.374999390626" />
+ <shade name="cool" weight="0.374999390626" />
+ <shade name="weak" weight="0.249999593751" />
+</color>
+
+<color name="blue" weight="0.00814663131479">
+ <shade name="light" weight="0.374999390626" />
+ <shade name="cool" weight="0.374999390626" />
+ <shade name="weak" weight="0.249999593751" />
+</color>
+
+</colors>

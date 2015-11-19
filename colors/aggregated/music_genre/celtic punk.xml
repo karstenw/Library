@@ -1,0 +1,33 @@
+<colors query="celtic punk">
+
+<color name="yellow" weight="0.0">
+ <shade name="cool" weight="0.599999400001" />
+ <shade name="hard" weight="0.2999997" />
+ <shade name="fresh" weight="0.0999999000001" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="cool" weight="0.599999400001" />
+ <shade name="hard" weight="0.2999997" />
+ <shade name="fresh" weight="0.0999999000001" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="cool" weight="0.599999400001" />
+ <shade name="hard" weight="0.2999997" />
+ <shade name="fresh" weight="0.0999999000001" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="cool" weight="0.599999400001" />
+ <shade name="hard" weight="0.2999997" />
+ <shade name="fresh" weight="0.0999999000001" />
+</color>
+
+<color name="pink" weight="0.0">
+ <shade name="cool" weight="0.599999400001" />
+ <shade name="hard" weight="0.2999997" />
+ <shade name="fresh" weight="0.0999999000001" />
+</color>
+
+</colors>

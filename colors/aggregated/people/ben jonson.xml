@@ -1,0 +1,33 @@
+<colors query="ben jonson">
+
+<color name="white" weight="0.285714">
+ <shade name="light" weight="0.588234636679" />
+ <shade name="bright" weight="0.294117318339" />
+ <shade name="dark" weight="0.117646927336" />
+</color>
+
+<color name="green" weight="0.285714">
+ <shade name="light" weight="0.588234636679" />
+ <shade name="bright" weight="0.294117318339" />
+ <shade name="dark" weight="0.117646927336" />
+</color>
+
+<color name="black" weight="0.285714">
+ <shade name="light" weight="0.588234636679" />
+ <shade name="bright" weight="0.294117318339" />
+ <shade name="dark" weight="0.117646927336" />
+</color>
+
+<color name="orange" weight="0.0952380000001">
+ <shade name="light" weight="0.588234636679" />
+ <shade name="bright" weight="0.294117318339" />
+ <shade name="dark" weight="0.117646927336" />
+</color>
+
+<color name="yellow" weight="0.047619">
+ <shade name="light" weight="0.588234636679" />
+ <shade name="bright" weight="0.294117318339" />
+ <shade name="dark" weight="0.117646927336" />
+</color>
+
+</colors>

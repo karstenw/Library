@@ -1,0 +1,33 @@
+<colors query="malawi">
+
+<color name="blue" weight="0.401459426475">
+ <shade name="cool" weight="0.592726496794" />
+ <shade name="dark" weight="0.207272455934" />
+ <shade name="light" weight="0.199999738182" />
+</color>
+
+<color name="green" weight="0.32700695102">
+ <shade name="cool" weight="0.592726496794" />
+ <shade name="dark" weight="0.207272455934" />
+ <shade name="light" weight="0.199999738182" />
+</color>
+
+<color name="white" weight="0.114598418103">
+ <shade name="cool" weight="0.592726496794" />
+ <shade name="dark" weight="0.207272455934" />
+ <shade name="light" weight="0.199999738182" />
+</color>
+
+<color name="yellow" weight="0.0937955205492">
+ <shade name="cool" weight="0.592726496794" />
+ <shade name="dark" weight="0.207272455934" />
+ <shade name="light" weight="0.199999738182" />
+</color>
+
+<color name="black" weight="0.0631386188911">
+ <shade name="cool" weight="0.592726496794" />
+ <shade name="dark" weight="0.207272455934" />
+ <shade name="light" weight="0.199999738182" />
+</color>
+
+</colors>

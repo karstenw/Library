@@ -1,0 +1,33 @@
+<colors query="fidel castro">
+
+<color name="red" weight="0.334615041635">
+ <shade name="hard" weight="0.930025626511" />
+ <shade name="cool" weight="0.0407439798281" />
+ <shade name="weak" weight="0.0292293768332" />
+</color>
+
+<color name="black" weight="0.226922844327">
+ <shade name="hard" weight="0.930025626511" />
+ <shade name="cool" weight="0.0407439798281" />
+ <shade name="weak" weight="0.0292293768332" />
+</color>
+
+<color name="blue" weight="0.201922869952">
+ <shade name="hard" weight="0.930025626511" />
+ <shade name="cool" weight="0.0407439798281" />
+ <shade name="weak" weight="0.0292293768332" />
+</color>
+
+<color name="white" weight="0.167307520817">
+ <shade name="hard" weight="0.930025626511" />
+ <shade name="cool" weight="0.0407439798281" />
+ <shade name="weak" weight="0.0292293768332" />
+</color>
+
+<color name="green" weight="0.0692306982693">
+ <shade name="hard" weight="0.930025626511" />
+ <shade name="cool" weight="0.0407439798281" />
+ <shade name="weak" weight="0.0292293768332" />
+</color>
+
+</colors>

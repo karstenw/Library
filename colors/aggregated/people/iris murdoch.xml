@@ -1,0 +1,33 @@
+<colors query="iris murdoch">
+
+<color name="green" weight="0.981837835457">
+ <shade name="dark" weight="0.599999400001" />
+ <shade name="light" weight="0.3999996" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="red" weight="0.00794550849502">
+ <shade name="dark" weight="0.599999400001" />
+ <shade name="light" weight="0.3999996" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="white" weight="0.00454029056859">
+ <shade name="dark" weight="0.599999400001" />
+ <shade name="light" weight="0.3999996" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="orange" weight="0.00340521792644">
+ <shade name="dark" weight="0.599999400001" />
+ <shade name="light" weight="0.3999996" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="black" weight="0.00227014528429">
+ <shade name="dark" weight="0.599999400001" />
+ <shade name="light" weight="0.3999996" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+</colors>

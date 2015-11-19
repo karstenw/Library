@@ -1,0 +1,33 @@
+<colors query="progressive metal">
+
+<color name="black" weight="0.967031998938">
+ <shade name="dark" weight="0.800421231034" />
+ <shade name="hard" weight="0.117123784654" />
+ <shade name="intense" weight="0.0824539384888" />
+</color>
+
+<color name="red" weight="0.0280219499692">
+ <shade name="dark" weight="0.800421231034" />
+ <shade name="hard" weight="0.117123784654" />
+ <shade name="intense" weight="0.0824539384888" />
+</color>
+
+<color name="white" weight="0.00219779999759">
+ <shade name="dark" weight="0.834642283755" />
+ <shade name="hard" weight="0.12213127203" />
+ <shade name="light" weight="0.0432253536785" />
+</color>
+
+<color name="blue" weight="0.00164834999819">
+ <shade name="dark" weight="0.800421231034" />
+ <shade name="hard" weight="0.117123784654" />
+ <shade name="intense" weight="0.0824539384888" />
+</color>
+
+<color name="pink" weight="0.00109889999879">
+ <shade name="dark" weight="0.834642283755" />
+ <shade name="hard" weight="0.12213127203" />
+ <shade name="light" weight="0.0432253536785" />
+</color>
+
+</colors>

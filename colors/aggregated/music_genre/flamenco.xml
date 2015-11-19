@@ -1,0 +1,33 @@
+<colors query="flamenco">
+
+<color name="blue" weight="0.344779597167">
+ <shade name="soft" weight="0.411586182887" />
+ <shade name="cool" weight="0.378336870683" />
+ <shade name="hard" weight="0.210075199833" />
+</color>
+
+<color name="white" weight="0.22755453413">
+ <shade name="soft" weight="0.411586182887" />
+ <shade name="cool" weight="0.378336870683" />
+ <shade name="hard" weight="0.210075199833" />
+</color>
+
+<color name="green" weight="0.172389798583">
+ <shade name="soft" weight="0.411586182887" />
+ <shade name="cool" weight="0.378336870683" />
+ <shade name="hard" weight="0.210075199833" />
+</color>
+
+<color name="purple" weight="0.166873325029">
+ <shade name="soft" weight="0.411586182887" />
+ <shade name="cool" weight="0.378336870683" />
+ <shade name="hard" weight="0.210075199833" />
+</color>
+
+<color name="pink" weight="0.0884014887136">
+ <shade name="soft" weight="0.411586182887" />
+ <shade name="cool" weight="0.378336870683" />
+ <shade name="hard" weight="0.210075199833" />
+</color>
+
+</colors>

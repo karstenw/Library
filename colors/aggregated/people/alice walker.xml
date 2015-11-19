@@ -1,0 +1,33 @@
+<colors query="alice walker">
+
+<color name="purple" weight="0.981414380486">
+ <shade name="dark" weight="0.368420548477" />
+ <shade name="light" weight="0.315789041552" />
+ <shade name="hard" weight="0.315789041552" />
+</color>
+
+<color name="blue" weight="0.0105465425963">
+ <shade name="dark" weight="0.368420548477" />
+ <shade name="light" weight="0.315789041552" />
+ <shade name="hard" weight="0.315789041552" />
+</color>
+
+<color name="white" weight="0.00726905800472">
+ <shade name="dark" weight="0.368420548477" />
+ <shade name="light" weight="0.315789041552" />
+ <shade name="hard" weight="0.315789041552" />
+</color>
+
+<color name="pink" weight="0.000640848942481">
+ <shade name="dark" weight="0.368420548477" />
+ <shade name="light" weight="0.315789041552" />
+ <shade name="hard" weight="0.315789041552" />
+</color>
+
+<color name="red" weight="0.000128169788496">
+ <shade name="dark" weight="0.368420548477" />
+ <shade name="light" weight="0.315789041552" />
+ <shade name="hard" weight="0.315789041552" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="elizabeth taylor">
+
+<color name="white" weight="0.568167946115">
+ <shade name="fresh" weight="0.380951600909" />
+ <shade name="dark" weight="0.333332650795" />
+ <shade name="light" weight="0.285713700681" />
+</color>
+
+<color name="black" weight="0.262141338681">
+ <shade name="fresh" weight="0.380951600909" />
+ <shade name="dark" weight="0.333332650795" />
+ <shade name="light" weight="0.285713700681" />
+</color>
+
+<color name="blue" weight="0.0983030020055">
+ <shade name="fresh" weight="0.380951600909" />
+ <shade name="dark" weight="0.333332650795" />
+ <shade name="light" weight="0.285713700681" />
+</color>
+
+<color name="red" weight="0.066120471587">
+ <shade name="fresh" weight="0.380951600909" />
+ <shade name="dark" weight="0.333332650795" />
+ <shade name="light" weight="0.285713700681" />
+</color>
+
+<color name="green" weight="0.00526623225029">
+ <shade name="fresh" weight="0.380951600909" />
+ <shade name="dark" weight="0.333332650795" />
+ <shade name="light" weight="0.285713700681" />
+</color>
+
+</colors>

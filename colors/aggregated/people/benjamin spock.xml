@@ -1,0 +1,33 @@
+<colors query="benjamin spock">
+
+<color name="white" weight="0.999999000001">
+ <shade name="hard" weight="0.428570938776" />
+ <shade name="soft" weight="0.285713959184" />
+ <shade name="light" weight="0.285713959184" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="hard" weight="0.428570938776" />
+ <shade name="soft" weight="0.285713959184" />
+ <shade name="light" weight="0.285713959184" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="hard" weight="0.428570938776" />
+ <shade name="soft" weight="0.285713959184" />
+ <shade name="light" weight="0.285713959184" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="hard" weight="0.428570938776" />
+ <shade name="soft" weight="0.285713959184" />
+ <shade name="light" weight="0.285713959184" />
+</color>
+
+<color name="pink" weight="0.0">
+ <shade name="hard" weight="0.428570938776" />
+ <shade name="soft" weight="0.285713959184" />
+ <shade name="light" weight="0.285713959184" />
+</color>
+
+</colors>

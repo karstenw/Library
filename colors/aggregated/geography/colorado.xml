@@ -1,0 +1,33 @@
+<colors query="colorado">
+
+<color name="white" weight="0.326957766971">
+ <shade name="light" weight="0.75872619128" />
+ <shade name="cool" weight="0.213632628604" />
+ <shade name="warm" weight="0.0276400978246" />
+</color>
+
+<color name="green" weight="0.31876105415">
+ <shade name="light" weight="0.759144175728" />
+ <shade name="cool" weight="0.213750319436" />
+ <shade name="hard" weight="0.0271044219491" />
+</color>
+
+<color name="black" weight="0.16393425642">
+ <shade name="light" weight="0.75872619128" />
+ <shade name="cool" weight="0.213632628604" />
+ <shade name="warm" weight="0.0276400978246" />
+</color>
+
+<color name="blue" weight="0.162112764682">
+ <shade name="light" weight="0.759144175728" />
+ <shade name="cool" weight="0.213750319436" />
+ <shade name="hard" weight="0.0271044219491" />
+</color>
+
+<color name="orange" weight="0.028233121939">
+ <shade name="light" weight="0.75872619128" />
+ <shade name="cool" weight="0.213632628604" />
+ <shade name="warm" weight="0.0276400978246" />
+</color>
+
+</colors>

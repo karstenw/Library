@@ -1,0 +1,33 @@
+<colors query="new zealand">
+
+<color name="white" weight="0.45988371726">
+ <shade name="cool" weight="0.767675847505" />
+ <shade name="light" weight="0.152525069702" />
+ <shade name="bright" weight="0.0797978841485" />
+</color>
+
+<color name="green" weight="0.1637715396">
+ <shade name="cool" weight="0.767675847505" />
+ <shade name="light" weight="0.152525069702" />
+ <shade name="bright" weight="0.0797978841485" />
+</color>
+
+<color name="pink" weight="0.157154507697">
+ <shade name="cool" weight="0.767675847505" />
+ <shade name="light" weight="0.152525069702" />
+ <shade name="bright" weight="0.0797978841485" />
+</color>
+
+<color name="black" weight="0.131513509073">
+ <shade name="cool" weight="0.767675847505" />
+ <shade name="light" weight="0.152525069702" />
+ <shade name="bright" weight="0.0797978841485" />
+</color>
+
+<color name="orange" weight="0.0876756727151">
+ <shade name="cool" weight="0.767675847505" />
+ <shade name="light" weight="0.152525069702" />
+ <shade name="bright" weight="0.0797978841485" />
+</color>
+
+</colors>

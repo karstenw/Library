@@ -1,0 +1,33 @@
+<colors query="gary player">
+
+<color name="green" weight="0.903360441177">
+ <shade name="hard" weight="0.399999520001" />
+ <shade name="dark" weight="0.399999520001" />
+ <shade name="light" weight="0.19999976" />
+</color>
+
+<color name="black" weight="0.0756301764707">
+ <shade name="hard" weight="0.399999520001" />
+ <shade name="dark" weight="0.399999520001" />
+ <shade name="warm" weight="0.19999976" />
+</color>
+
+<color name="blue" weight="0.0140055882353">
+ <shade name="hard" weight="0.399999520001" />
+ <shade name="dark" weight="0.399999520001" />
+ <shade name="light" weight="0.19999976" />
+</color>
+
+<color name="white" weight="0.00700279411765">
+ <shade name="hard" weight="0.399999520001" />
+ <shade name="dark" weight="0.399999520001" />
+ <shade name="warm" weight="0.19999976" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="hard" weight="0.399999520001" />
+ <shade name="dark" weight="0.399999520001" />
+ <shade name="warm" weight="0.19999976" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="haile selassie">
+
+<color name="black" weight="0.594487589808">
+ <shade name="light" weight="0.666666000001" />
+ <shade name="cool" weight="0.222222" />
+ <shade name="dark" weight="0.111111" />
+</color>
+
+<color name="white" weight="0.338582335917">
+ <shade name="light" weight="0.666666000001" />
+ <shade name="cool" weight="0.222222" />
+ <shade name="dark" weight="0.111111" />
+</color>
+
+<color name="green" weight="0.0354330351541">
+ <shade name="light" weight="0.666666000001" />
+ <shade name="cool" weight="0.222222" />
+ <shade name="dark" weight="0.111111" />
+</color>
+
+<color name="red" weight="0.0236220234361">
+ <shade name="light" weight="0.666666000001" />
+ <shade name="cool" weight="0.222222" />
+ <shade name="dark" weight="0.111111" />
+</color>
+
+<color name="yellow" weight="0.00787400781202">
+ <shade name="light" weight="0.666666000001" />
+ <shade name="cool" weight="0.222222" />
+ <shade name="dark" weight="0.111111" />
+</color>
+
+</colors>

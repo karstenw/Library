@@ -1,0 +1,33 @@
+<colors query="sephardic">
+
+<color name="white" weight="0.515624468262">
+ <shade name="dark" weight="0.773583956925" />
+ <shade name="warm" weight="0.113207408331" />
+ <shade name="light" weight="0.113207408331" />
+</color>
+
+<color name="black" weight="0.374999613282">
+ <shade name="dark" weight="0.773583956925" />
+ <shade name="warm" weight="0.113207408331" />
+ <shade name="light" weight="0.113207408331" />
+</color>
+
+<color name="blue" weight="0.0624999355469">
+ <shade name="dark" weight="0.803920544023" />
+ <shade name="light" weight="0.117646908881" />
+ <shade name="cool" weight="0.0784312725876" />
+</color>
+
+<color name="yellow" weight="0.0312499677735">
+ <shade name="dark" weight="0.773583956925" />
+ <shade name="warm" weight="0.113207408331" />
+ <shade name="light" weight="0.113207408331" />
+</color>
+
+<color name="red" weight="0.0156249838867">
+ <shade name="dark" weight="0.773583956925" />
+ <shade name="warm" weight="0.113207408331" />
+ <shade name="light" weight="0.113207408331" />
+</color>
+
+</colors>

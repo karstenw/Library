@@ -1,0 +1,33 @@
+<colors query="democratic republic">
+
+<color name="white" weight="0.35714247449">
+ <shade name="neutral" weight="0.437499453126" />
+ <shade name="weak" weight="0.374999531251" />
+ <shade name="fresh" weight="0.187499765625" />
+</color>
+
+<color name="green" weight="0.214285484694">
+ <shade name="neutral" weight="0.437499453126" />
+ <shade name="weak" weight="0.374999531251" />
+ <shade name="fresh" weight="0.187499765625" />
+</color>
+
+<color name="black" weight="0.214285484694">
+ <shade name="neutral" weight="0.437499453126" />
+ <shade name="weak" weight="0.374999531251" />
+ <shade name="fresh" weight="0.187499765625" />
+</color>
+
+<color name="red" weight="0.142856989796">
+ <shade name="neutral" weight="0.437499453126" />
+ <shade name="weak" weight="0.374999531251" />
+ <shade name="fresh" weight="0.187499765625" />
+</color>
+
+<color name="yellow" weight="0.071428494898">
+ <shade name="neutral" weight="0.437499453126" />
+ <shade name="weak" weight="0.374999531251" />
+ <shade name="fresh" weight="0.187499765625" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="mark twain">
+
+<color name="black" weight="0.601092274964">
+ <shade name="dark" weight="0.684563010161" />
+ <shade name="hard" weight="0.173537681848" />
+ <shade name="light" weight="0.141898214991" />
+</color>
+
+<color name="green" weight="0.168487986164">
+ <shade name="dark" weight="0.684563010161" />
+ <shade name="hard" weight="0.173537681848" />
+ <shade name="light" weight="0.141898214991" />
+</color>
+
+<color name="white" weight="0.147540831128">
+ <shade name="dark" weight="0.684563010161" />
+ <shade name="hard" weight="0.173537681848" />
+ <shade name="light" weight="0.141898214991" />
+</color>
+
+<color name="blue" weight="0.0646629568522">
+ <shade name="dark" weight="0.684563010161" />
+ <shade name="hard" weight="0.173537681848" />
+ <shade name="light" weight="0.141898214991" />
+</color>
+
+<color name="purple" weight="0.0182149174232">
+ <shade name="dark" weight="0.684563010161" />
+ <shade name="hard" weight="0.173537681848" />
+ <shade name="light" weight="0.141898214991" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="france">
+
+<color name="orange" weight="0.832265473418">
+ <shade name="soft" weight="0.826253698084" />
+ <shade name="dark" weight="0.0949805652937" />
+ <shade name="warm" weight="0.0787643712192" />
+</color>
+
+<color name="red" weight="0.0696908011807">
+ <shade name="soft" weight="0.826253698084" />
+ <shade name="dark" weight="0.0949805652937" />
+ <shade name="warm" weight="0.0787643712192" />
+</color>
+
+<color name="white" weight="0.0376805906646">
+ <shade name="soft" weight="0.826253698084" />
+ <shade name="dark" weight="0.0949805652937" />
+ <shade name="warm" weight="0.0787643712192" />
+</color>
+
+<color name="black" weight="0.0309127175841">
+ <shade name="soft" weight="0.826253698084" />
+ <shade name="dark" weight="0.0949805652937" />
+ <shade name="warm" weight="0.0787643712192" />
+</color>
+
+<color name="blue" weight="0.0294493936748">
+ <shade name="soft" weight="0.830421832866" />
+ <shade name="dark" weight="0.0954597060211" />
+ <shade name="light" weight="0.0741170888212" />
+</color>
+
+</colors>

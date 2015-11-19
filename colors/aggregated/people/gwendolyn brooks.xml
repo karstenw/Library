@@ -1,0 +1,33 @@
+<colors query="gwendolyn brooks">
+
+<color name="black" weight="0.855171552724">
+ <shade name="cool" weight="0.995103042847" />
+ <shade name="warm" weight="0.00244797796518" />
+ <shade name="light" weight="0.00244797796518" />
+</color>
+
+<color name="white" weight="0.0689654478003">
+ <shade name="cool" weight="0.995103042847" />
+ <shade name="warm" weight="0.00244797796518" />
+ <shade name="light" weight="0.00244797796518" />
+</color>
+
+<color name="green" weight="0.0551723582402">
+ <shade name="cool" weight="0.996322530647" />
+ <shade name="light" weight="0.00245097793517" />
+ <shade name="soft" weight="0.00122548896759" />
+</color>
+
+<color name="red" weight="0.0137930895601">
+ <shade name="cool" weight="0.995103042847" />
+ <shade name="warm" weight="0.00244797796518" />
+ <shade name="light" weight="0.00244797796518" />
+</color>
+
+<color name="orange" weight="0.00689654478003">
+ <shade name="cool" weight="0.995103042847" />
+ <shade name="warm" weight="0.00244797796518" />
+ <shade name="light" weight="0.00244797796518" />
+</color>
+
+</colors>

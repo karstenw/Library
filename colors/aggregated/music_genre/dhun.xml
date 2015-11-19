@@ -1,0 +1,33 @@
+<colors query="dhun">
+
+<color name="white" weight="0.4999995">
+ <shade name="light" weight="0.999998996297" />
+ <shade name="weak" weight="0.0" />
+ <shade name="warm" weight="0.0" />
+</color>
+
+<color name="blue" weight="0.4999995">
+ <shade name="light" weight="0.996308966791" />
+ <shade name="intense" weight="0.00369003321034" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="light" weight="0.996308966791" />
+ <shade name="intense" weight="0.00369003321034" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="light" weight="0.996308966791" />
+ <shade name="intense" weight="0.00369003321034" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="light" weight="0.999998996297" />
+ <shade name="weak" weight="0.0" />
+ <shade name="soft" weight="0.0" />
+</color>
+
+</colors>

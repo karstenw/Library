@@ -1,0 +1,33 @@
+<colors query="pakistan">
+
+<color name="green" weight="0.335328950636">
+ <shade name="soft" weight="0.44213998907" />
+ <shade name="fresh" weight="0.440615368418" />
+ <shade name="cool" weight="0.117243328136" />
+</color>
+
+<color name="black" weight="0.279440792196">
+ <shade name="soft" weight="0.44213998907" />
+ <shade name="fresh" weight="0.440615368418" />
+ <shade name="cool" weight="0.117243328136" />
+</color>
+
+<color name="blue" weight="0.131337172332">
+ <shade name="soft" weight="0.44213998907" />
+ <shade name="fresh" weight="0.440615368418" />
+ <shade name="cool" weight="0.117243328136" />
+</color>
+
+<color name="red" weight="0.127145560449">
+ <shade name="soft" weight="0.44213998907" />
+ <shade name="fresh" weight="0.440615368418" />
+ <shade name="cool" weight="0.117243328136" />
+</color>
+
+<color name="orange" weight="0.126746359318">
+ <shade name="soft" weight="0.44213998907" />
+ <shade name="fresh" weight="0.440615368418" />
+ <shade name="cool" weight="0.117243328136" />
+</color>
+
+</colors>

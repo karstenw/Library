@@ -1,0 +1,33 @@
+<colors query="slide">
+
+<color name="black" weight="0.32212351701">
+ <shade name="dark" weight="0.469170172349" />
+ <shade name="cool" weight="0.360027866394" />
+ <shade name="hard" weight="0.170800621656" />
+</color>
+
+<color name="white" weight="0.246017411343">
+ <shade name="dark" weight="0.469170172349" />
+ <shade name="cool" weight="0.360027866394" />
+ <shade name="hard" weight="0.170800621656" />
+</color>
+
+<color name="blue" weight="0.233038075493">
+ <shade name="dark" weight="0.469170172349" />
+ <shade name="cool" weight="0.360027866394" />
+ <shade name="hard" weight="0.170800621656" />
+</color>
+
+<color name="red" weight="0.107964475481">
+ <shade name="dark" weight="0.469170172349" />
+ <shade name="cool" weight="0.360027866394" />
+ <shade name="hard" weight="0.170800621656" />
+</color>
+
+<color name="green" weight="0.0908553509516">
+ <shade name="dark" weight="0.469170172349" />
+ <shade name="cool" weight="0.360027866394" />
+ <shade name="hard" weight="0.170800621656" />
+</color>
+
+</colors>

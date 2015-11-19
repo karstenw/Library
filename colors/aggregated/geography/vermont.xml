@@ -1,0 +1,33 @@
+<colors query="vermont">
+
+<color name="orange" weight="0.532069413491">
+ <shade name="light" weight="0.559314556643" />
+ <shade name="cool" weight="0.292595159525" />
+ <shade name="fresh" weight="0.148088978698" />
+</color>
+
+<color name="white" weight="0.33309003009">
+ <shade name="light" weight="0.559314556643" />
+ <shade name="cool" weight="0.292595159525" />
+ <shade name="fresh" weight="0.148088978698" />
+</color>
+
+<color name="blue" weight="0.0521136480337">
+ <shade name="light" weight="0.559314556643" />
+ <shade name="cool" weight="0.292595159525" />
+ <shade name="fresh" weight="0.148088978698" />
+</color>
+
+<color name="red" weight="0.0448250259311">
+ <shade name="light" weight="0.559314556643" />
+ <shade name="cool" weight="0.292595159525" />
+ <shade name="fresh" weight="0.148088978698" />
+</color>
+
+<color name="black" weight="0.0379008349336">
+ <shade name="light" weight="0.559314556643" />
+ <shade name="cool" weight="0.292595159525" />
+ <shade name="fresh" weight="0.148088978698" />
+</color>
+
+</colors>

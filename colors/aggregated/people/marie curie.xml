@@ -1,0 +1,33 @@
+<colors query="marie curie">
+
+<color name="red" weight="0.522471364159">
+ <shade name="light" weight="0.717947907956" />
+ <shade name="cool" weight="0.205127973702" />
+ <shade name="dark" weight="0.0769229901382" />
+</color>
+
+<color name="white" weight="0.280898582881">
+ <shade name="light" weight="0.717947907956" />
+ <shade name="cool" weight="0.205127973702" />
+ <shade name="dark" weight="0.0769229901382" />
+</color>
+
+<color name="yellow" weight="0.112359433153">
+ <shade name="light" weight="0.717947907956" />
+ <shade name="cool" weight="0.205127973702" />
+ <shade name="dark" weight="0.0769229901382" />
+</color>
+
+<color name="green" weight="0.044943773261">
+ <shade name="light" weight="0.717947907956" />
+ <shade name="cool" weight="0.205127973702" />
+ <shade name="dark" weight="0.0769229901382" />
+</color>
+
+<color name="blue" weight="0.0393258016034">
+ <shade name="light" weight="0.717947907956" />
+ <shade name="cool" weight="0.205127973702" />
+ <shade name="dark" weight="0.0769229901382" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="rod stewart">
+
+<color name="pink" weight="0.34299478603">
+ <shade name="dark" weight="0.487548537546" />
+ <shade name="weak" weight="0.380733468164" />
+ <shade name="light" weight="0.131716741998" />
+</color>
+
+<color name="blue" weight="0.187197858573">
+ <shade name="dark" weight="0.487548537546" />
+ <shade name="weak" weight="0.380733468164" />
+ <shade name="light" weight="0.131716741998" />
+</color>
+
+<color name="black" weight="0.176328305494">
+ <shade name="dark" weight="0.487548537546" />
+ <shade name="weak" weight="0.380733468164" />
+ <shade name="light" weight="0.131716741998" />
+</color>
+
+<color name="red" weight="0.152173743098">
+ <shade name="dark" weight="0.487548537546" />
+ <shade name="weak" weight="0.380733468164" />
+ <shade name="light" weight="0.131716741998" />
+</color>
+
+<color name="white" weight="0.141304190019">
+ <shade name="dark" weight="0.487548537546" />
+ <shade name="weak" weight="0.380733468164" />
+ <shade name="light" weight="0.131716741998" />
+</color>
+
+</colors>

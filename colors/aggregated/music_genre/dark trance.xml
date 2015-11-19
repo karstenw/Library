@@ -1,0 +1,33 @@
+<colors query="dark trance">
+
+<color name="black" weight="0.333333">
+ <shade name="hard" weight="0.765863561713" />
+ <shade name="dark" weight="0.224288614502" />
+ <shade name="cool" weight="0.00984681722202" />
+</color>
+
+<color name="white" weight="0.222222">
+ <shade name="hard" weight="0.765863561713" />
+ <shade name="dark" weight="0.224288614502" />
+ <shade name="cool" weight="0.00984681722202" />
+</color>
+
+<color name="blue" weight="0.222222">
+ <shade name="hard" weight="0.765863561713" />
+ <shade name="dark" weight="0.224288614502" />
+ <shade name="cool" weight="0.00984681722202" />
+</color>
+
+<color name="pink" weight="0.111111">
+ <shade name="hard" weight="0.765863561713" />
+ <shade name="dark" weight="0.224288614502" />
+ <shade name="cool" weight="0.00984681722202" />
+</color>
+
+<color name="green" weight="0.111111">
+ <shade name="hard" weight="0.765863561713" />
+ <shade name="dark" weight="0.224288614502" />
+ <shade name="cool" weight="0.00984681722202" />
+</color>
+
+</colors>

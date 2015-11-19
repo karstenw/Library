@@ -1,0 +1,33 @@
+<colors query="helena rubinstein">
+
+<color name="black" weight="0.734013635811">
+ <shade name="fresh" weight="0.540615548393" />
+ <shade name="neutral" weight="0.257702748457" />
+ <shade name="dark" weight="0.201680411836" />
+</color>
+
+<color name="pink" weight="0.177449688245">
+ <shade name="fresh" weight="0.540615548393" />
+ <shade name="neutral" weight="0.257702748457" />
+ <shade name="dark" weight="0.201680411836" />
+</color>
+
+<color name="blue" weight="0.0563752740907">
+ <shade name="fresh" weight="0.540615548393" />
+ <shade name="neutral" weight="0.257702748457" />
+ <shade name="dark" weight="0.201680411836" />
+</color>
+
+<color name="red" weight="0.0234581677424">
+ <shade name="fresh" weight="0.540615548393" />
+ <shade name="neutral" weight="0.257702748457" />
+ <shade name="dark" weight="0.201680411836" />
+</color>
+
+<color name="white" weight="0.00870222351735">
+ <shade name="fresh" weight="0.540615548393" />
+ <shade name="neutral" weight="0.257702748457" />
+ <shade name="dark" weight="0.201680411836" />
+</color>
+
+</colors>

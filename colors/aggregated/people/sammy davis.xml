@@ -1,0 +1,33 @@
+<colors query="sammy davis">
+
+<color name="white" weight="0.551828709734">
+ <shade name="cool" weight="0.863635411675" />
+ <shade name="hard" weight="0.0681817430269" />
+ <shade name="dark" weight="0.0681817430269" />
+</color>
+
+<color name="black" weight="0.225609527737">
+ <shade name="cool" weight="0.863635411675" />
+ <shade name="hard" weight="0.0681817430269" />
+ <shade name="dark" weight="0.0681817430269" />
+</color>
+
+<color name="green" weight="0.19817053112">
+ <shade name="cool" weight="0.863635411675" />
+ <shade name="hard" weight="0.0681817430269" />
+ <shade name="dark" weight="0.0681817430269" />
+</color>
+
+<color name="pink" weight="0.0152438870092">
+ <shade name="cool" weight="0.863635411675" />
+ <shade name="hard" weight="0.0681817430269" />
+ <shade name="dark" weight="0.0681817430269" />
+</color>
+
+<color name="blue" weight="0.00914633220554">
+ <shade name="cool" weight="0.863635411675" />
+ <shade name="hard" weight="0.0681817430269" />
+ <shade name="dark" weight="0.0681817430269" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="marcus garvey">
+
+<color name="black" weight="0.451127368422">
+ <shade name="cool" weight="0.428570877552" />
+ <shade name="light" weight="0.285713918368" />
+ <shade name="intense" weight="0.285713918368" />
+</color>
+
+<color name="green" weight="0.383458263158">
+ <shade name="cool" weight="0.428570877552" />
+ <shade name="light" weight="0.285713918368" />
+ <shade name="intense" weight="0.285713918368" />
+</color>
+
+<color name="white" weight="0.120300631579">
+ <shade name="cool" weight="0.499999250001" />
+ <shade name="light" weight="0.333332833334" />
+ <shade name="soft" weight="0.166666416667" />
+</color>
+
+<color name="red" weight="0.0300751578948">
+ <shade name="cool" weight="0.428570877552" />
+ <shade name="light" weight="0.285713918368" />
+ <shade name="intense" weight="0.285713918368" />
+</color>
+
+<color name="yellow" weight="0.0150375789474">
+ <shade name="cool" weight="0.428570877552" />
+ <shade name="light" weight="0.285713918368" />
+ <shade name="intense" weight="0.285713918368" />
+</color>
+
+</colors>

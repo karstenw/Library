@@ -1,0 +1,33 @@
+<colors query="dorothy thompson">
+
+<color name="white" weight="0.789472894738">
+ <shade name="light" weight="0.857142000001" />
+ <shade name="hard" weight="0.0952380000001" />
+ <shade name="cool" weight="0.047619" />
+</color>
+
+<color name="red" weight="0.157894578948">
+ <shade name="light" weight="0.857142000001" />
+ <shade name="hard" weight="0.0952380000001" />
+ <shade name="cool" weight="0.047619" />
+</color>
+
+<color name="green" weight="0.0263157631579">
+ <shade name="light" weight="0.857142000001" />
+ <shade name="hard" weight="0.0952380000001" />
+ <shade name="cool" weight="0.047619" />
+</color>
+
+<color name="blue" weight="0.0263157631579">
+ <shade name="light" weight="0.857142000001" />
+ <shade name="hard" weight="0.0952380000001" />
+ <shade name="cool" weight="0.047619" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="light" weight="0.857142000001" />
+ <shade name="hard" weight="0.0952380000001" />
+ <shade name="cool" weight="0.047619" />
+</color>
+
+</colors>

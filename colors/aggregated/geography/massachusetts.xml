@@ -1,0 +1,33 @@
+<colors query="massachusetts">
+
+<color name="orange" weight="0.87760746354">
+ <shade name="light" weight="0.600197509127" />
+ <shade name="cool" weight="0.217261577684" />
+ <shade name="hard" weight="0.182539407735" />
+</color>
+
+<color name="black" weight="0.0628215414549">
+ <shade name="light" weight="0.600197509127" />
+ <shade name="cool" weight="0.217261577684" />
+ <shade name="hard" weight="0.182539407735" />
+</color>
+
+<color name="blue" weight="0.0216560690643">
+ <shade name="light" weight="0.600197509127" />
+ <shade name="cool" weight="0.217261577684" />
+ <shade name="hard" weight="0.182539407735" />
+</color>
+
+<color name="white" weight="0.0214982259954">
+ <shade name="light" weight="0.600197509127" />
+ <shade name="cool" weight="0.217261577684" />
+ <shade name="hard" weight="0.182539407735" />
+</color>
+
+<color name="green" weight="0.0164156791741">
+ <shade name="light" weight="0.600197509127" />
+ <shade name="cool" weight="0.217261577684" />
+ <shade name="hard" weight="0.182539407735" />
+</color>
+
+</colors>

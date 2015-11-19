@@ -1,0 +1,33 @@
+<colors query="new hampshire">
+
+<color name="orange" weight="0.254327554264">
+ <shade name="cool" weight="0.471495872962" />
+ <shade name="fresh" weight="0.35391881648" />
+ <shade name="light" weight="0.17458411417" />
+</color>
+
+<color name="green" weight="0.224406665527">
+ <shade name="cool" weight="0.471495872962" />
+ <shade name="fresh" weight="0.35391881648" />
+ <shade name="light" weight="0.17458411417" />
+</color>
+
+<color name="black" weight="0.210301103694">
+ <shade name="cool" weight="0.471495872962" />
+ <shade name="fresh" weight="0.35391881648" />
+ <shade name="light" weight="0.17458411417" />
+</color>
+
+<color name="white" weight="0.167556976927">
+ <shade name="cool" weight="0.471495872962" />
+ <shade name="fresh" weight="0.35391881648" />
+ <shade name="light" weight="0.17458411417" />
+</color>
+
+<color name="blue" weight="0.143406545304">
+ <shade name="cool" weight="0.471495872962" />
+ <shade name="fresh" weight="0.35391881648" />
+ <shade name="light" weight="0.17458411417" />
+</color>
+
+</colors>

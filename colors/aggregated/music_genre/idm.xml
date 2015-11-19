@@ -1,0 +1,33 @@
+<colors query="idm">
+
+<color name="black" weight="0.396284402765">
+ <shade name="hard" weight="0.779497296283" />
+ <shade name="soft" weight="0.123331421535" />
+ <shade name="dark" weight="0.0971702109066" />
+</color>
+
+<color name="green" weight="0.167182482416">
+ <shade name="hard" weight="0.779497296283" />
+ <shade name="soft" weight="0.123331421535" />
+ <shade name="dark" weight="0.0971702109066" />
+</color>
+
+<color name="blue" weight="0.15479859483">
+ <shade name="hard" weight="0.779497296283" />
+ <shade name="soft" weight="0.123331421535" />
+ <shade name="dark" weight="0.0971702109066" />
+</color>
+
+<color name="white" weight="0.151702622933">
+ <shade name="hard" weight="0.779497296283" />
+ <shade name="soft" weight="0.123331421535" />
+ <shade name="dark" weight="0.0971702109066" />
+</color>
+
+<color name="red" weight="0.130030819657">
+ <shade name="hard" weight="0.779497296283" />
+ <shade name="soft" weight="0.123331421535" />
+ <shade name="dark" weight="0.0971702109066" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="mary tyler moore">
+
+<color name="white" weight="0.960936530055">
+ <shade name="cool" weight="0.499999416667" />
+ <shade name="hard" weight="0.249999708334" />
+ <shade name="bright" weight="0.249999708334" />
+</color>
+
+<color name="black" weight="0.0124999873828">
+ <shade name="cool" weight="0.499999416667" />
+ <shade name="hard" weight="0.249999708334" />
+ <shade name="bright" weight="0.249999708334" />
+</color>
+
+<color name="green" weight="0.00937499053712">
+ <shade name="cool" weight="0.499999416667" />
+ <shade name="hard" weight="0.249999708334" />
+ <shade name="bright" weight="0.249999708334" />
+</color>
+
+<color name="blue" weight="0.00937499053712">
+ <shade name="cool" weight="0.499999416667" />
+ <shade name="hard" weight="0.249999708334" />
+ <shade name="bright" weight="0.249999708334" />
+</color>
+
+<color name="red" weight="0.00781249211427">
+ <shade name="cool" weight="0.499999416667" />
+ <shade name="hard" weight="0.249999708334" />
+ <shade name="bright" weight="0.249999708334" />
+</color>
+
+</colors>

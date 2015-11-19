@@ -1,0 +1,33 @@
+<colors query="schranz">
+
+<color name="black" weight="0.816512929973">
+ <shade name="hard" weight="0.992566735234" />
+ <shade name="cool" weight="0.00460320804746" />
+ <shade name="dark" weight="0.00282905494583" />
+</color>
+
+<color name="white" weight="0.0550458155038">
+ <shade name="hard" weight="0.992566735234" />
+ <shade name="cool" weight="0.00460320804746" />
+ <shade name="dark" weight="0.00282905494583" />
+</color>
+
+<color name="pink" weight="0.0550458155038">
+ <shade name="hard" weight="0.992566735234" />
+ <shade name="cool" weight="0.00460320804746" />
+ <shade name="dark" weight="0.00282905494583" />
+</color>
+
+<color name="green" weight="0.0550458155038">
+ <shade name="hard" weight="0.992566735234" />
+ <shade name="cool" weight="0.00460320804746" />
+ <shade name="dark" weight="0.00282905494583" />
+</color>
+
+<color name="red" weight="0.0183486051679">
+ <shade name="hard" weight="0.992566735234" />
+ <shade name="cool" weight="0.00460320804746" />
+ <shade name="dark" weight="0.00282905494583" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="arab">
+
+<color name="black" weight="0.530393606775">
+ <shade name="cool" weight="0.448978695636" />
+ <shade name="intense" weight="0.284013038527" />
+ <shade name="weak" weight="0.267006269753" />
+</color>
+
+<color name="white" weight="0.412090200059">
+ <shade name="cool" weight="0.46315694104" />
+ <shade name="weak" weight="0.27543802933" />
+ <shade name="fresh" weight="0.261402970511" />
+</color>
+
+<color name="blue" weight="0.0254352324438">
+ <shade name="cool" weight="0.448978695636" />
+ <shade name="intense" weight="0.284013038527" />
+ <shade name="weak" weight="0.267006269753" />
+</color>
+
+<color name="green" weight="0.016641345878">
+ <shade name="cool" weight="0.448978695636" />
+ <shade name="intense" weight="0.284013038527" />
+ <shade name="weak" weight="0.267006269753" />
+</color>
+
+<color name="pink" weight="0.0154385945764">
+ <shade name="cool" weight="0.46315694104" />
+ <shade name="weak" weight="0.27543802933" />
+ <shade name="fresh" weight="0.261402970511" />
+</color>
+
+</colors>

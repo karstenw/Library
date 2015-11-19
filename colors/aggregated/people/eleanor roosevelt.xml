@@ -1,0 +1,33 @@
+<colors query="eleanor roosevelt">
+
+<color name="black" weight="0.623187762288">
+ <shade name="light" weight="0.333332796297" />
+ <shade name="hard" weight="0.333332796297" />
+ <shade name="cool" weight="0.333332796297" />
+</color>
+
+<color name="white" weight="0.311593881144">
+ <shade name="light" weight="0.333332796297" />
+ <shade name="hard" weight="0.333332796297" />
+ <shade name="cool" weight="0.333332796297" />
+</color>
+
+<color name="blue" weight="0.0289854773157">
+ <shade name="light" weight="0.333332796297" />
+ <shade name="hard" weight="0.333332796297" />
+ <shade name="cool" weight="0.333332796297" />
+</color>
+
+<color name="red" weight="0.0217391079868">
+ <shade name="light" weight="0.333332796297" />
+ <shade name="hard" weight="0.333332796297" />
+ <shade name="cool" weight="0.333332796297" />
+</color>
+
+<color name="green" weight="0.0144927386579">
+ <shade name="light" weight="0.333332796297" />
+ <shade name="hard" weight="0.333332796297" />
+ <shade name="cool" weight="0.333332796297" />
+</color>
+
+</colors>

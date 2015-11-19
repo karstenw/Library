@@ -1,0 +1,33 @@
+<colors query="pop punk">
+
+<color name="pink" weight="0.615211907935">
+ <shade name="dark" weight="0.539032676754" />
+ <shade name="cool" weight="0.237917871119" />
+ <shade name="soft" weight="0.223048004174" />
+</color>
+
+<color name="black" weight="0.166666498695">
+ <shade name="dark" weight="0.539032676754" />
+ <shade name="cool" weight="0.237917871119" />
+ <shade name="soft" weight="0.223048004174" />
+</color>
+
+<color name="white" weight="0.137024470404">
+ <shade name="dark" weight="0.539032676754" />
+ <shade name="cool" weight="0.237917871119" />
+ <shade name="soft" weight="0.223048004174" />
+</color>
+
+<color name="blue" weight="0.0771811302682">
+ <shade name="dark" weight="0.539032676754" />
+ <shade name="cool" weight="0.237917871119" />
+ <shade name="soft" weight="0.223048004174" />
+</color>
+
+<color name="orange" weight="0.00391498486868">
+ <shade name="dark" weight="0.539032676754" />
+ <shade name="cool" weight="0.237917871119" />
+ <shade name="soft" weight="0.223048004174" />
+</color>
+
+</colors>

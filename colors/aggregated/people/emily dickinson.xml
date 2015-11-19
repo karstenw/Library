@@ -1,0 +1,33 @@
+<colors query="emily dickinson">
+
+<color name="white" weight="0.478570898725">
+ <shade name="light" weight="0.950059944337" />
+ <shade name="dark" weight="0.0438489205078" />
+ <shade name="cool" weight="0.00609012784831" />
+</color>
+
+<color name="blue" weight="0.197618828827">
+ <shade name="light" weight="0.950059944337" />
+ <shade name="dark" weight="0.0438489205078" />
+ <shade name="cool" weight="0.00609012784831" />
+</color>
+
+<color name="black" weight="0.169047431888">
+ <shade name="light" weight="0.950059944337" />
+ <shade name="dark" weight="0.0438489205078" />
+ <shade name="cool" weight="0.00609012784831" />
+</color>
+
+<color name="red" weight="0.0928570400511">
+ <shade name="light" weight="0.950059944337" />
+ <shade name="dark" weight="0.0438489205078" />
+ <shade name="cool" weight="0.00609012784831" />
+</color>
+
+<color name="green" weight="0.0619046933674">
+ <shade name="light" weight="0.950059944337" />
+ <shade name="dark" weight="0.0438489205078" />
+ <shade name="cool" weight="0.00609012784831" />
+</color>
+
+</colors>

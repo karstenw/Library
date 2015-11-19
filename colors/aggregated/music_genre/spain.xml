@@ -1,0 +1,33 @@
+<colors query="spain">
+
+<color name="green" weight="0.689509371939">
+ <shade name="dark" weight="0.77727366891" />
+ <shade name="soft" weight="0.113001232187" />
+ <shade name="fresh" weight="0.109723572137" />
+</color>
+
+<color name="red" weight="0.13866693333">
+ <shade name="dark" weight="0.77727366891" />
+ <shade name="soft" weight="0.113001232187" />
+ <shade name="fresh" weight="0.109723572137" />
+</color>
+
+<color name="orange" weight="0.128147372871">
+ <shade name="dark" weight="0.77727366891" />
+ <shade name="soft" weight="0.113001232187" />
+ <shade name="fresh" weight="0.109723572137" />
+</color>
+
+<color name="blue" weight="0.0353839760912">
+ <shade name="dark" weight="0.77727366891" />
+ <shade name="soft" weight="0.113001232187" />
+ <shade name="fresh" weight="0.109723572137" />
+</color>
+
+<color name="white" weight="0.00829132628947">
+ <shade name="dark" weight="0.77727366891" />
+ <shade name="soft" weight="0.113001232187" />
+ <shade name="fresh" weight="0.109723572137" />
+</color>
+
+</colors>

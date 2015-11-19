@@ -1,0 +1,33 @@
+<colors query="mauritania">
+
+<color name="black" weight="0.450979901385">
+ <shade name="light" weight="0.384614778107" />
+ <shade name="cool" weight="0.346153300297" />
+ <shade name="dark" weight="0.269230344675" />
+</color>
+
+<color name="green" weight="0.30392123789">
+ <shade name="light" weight="0.384614778107" />
+ <shade name="cool" weight="0.346153300297" />
+ <shade name="dark" weight="0.269230344675" />
+</color>
+
+<color name="red" weight="0.0980391089967">
+ <shade name="light" weight="0.384614778107" />
+ <shade name="cool" weight="0.346153300297" />
+ <shade name="dark" weight="0.269230344675" />
+</color>
+
+<color name="blue" weight="0.088235198097">
+ <shade name="light" weight="0.384614778107" />
+ <shade name="cool" weight="0.346153300297" />
+ <shade name="dark" weight="0.269230344675" />
+</color>
+
+<color name="white" weight="0.058823465398">
+ <shade name="light" weight="0.384614778107" />
+ <shade name="cool" weight="0.346153300297" />
+ <shade name="dark" weight="0.269230344675" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="doo wop">
+
+<color name="black" weight="0.74019713177">
+ <shade name="cool" weight="0.676374686567" />
+ <shade name="dark" weight="0.166666489752" />
+ <shade name="hard" weight="0.156957762194" />
+</color>
+
+<color name="white" weight="0.190179362074">
+ <shade name="cool" weight="0.676374686567" />
+ <shade name="dark" weight="0.166666489752" />
+ <shade name="hard" weight="0.156957762194" />
+</color>
+
+<color name="blue" weight="0.0403077646013">
+ <shade name="cool" weight="0.676374686567" />
+ <shade name="dark" weight="0.166666489752" />
+ <shade name="hard" weight="0.156957762194" />
+</color>
+
+<color name="red" weight="0.0274825667736">
+ <shade name="cool" weight="0.676374686567" />
+ <shade name="dark" weight="0.166666489752" />
+ <shade name="hard" weight="0.156957762194" />
+</color>
+
+<color name="purple" weight="0.00183217111824">
+ <shade name="cool" weight="0.676374686567" />
+ <shade name="dark" weight="0.166666489752" />
+ <shade name="hard" weight="0.156957762194" />
+</color>
+
+</colors>

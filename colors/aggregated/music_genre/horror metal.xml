@@ -1,0 +1,33 @@
+<colors query="horror metal">
+
+<color name="black" weight="0.993787826088">
+ <shade name="dark" weight="0.95061631573" />
+ <shade name="hard" weight="0.0308641660951" />
+ <shade name="cool" weight="0.0185184996571" />
+</color>
+
+<color name="pink" weight="0.00310558695652">
+ <shade name="dark" weight="0.95061631573" />
+ <shade name="hard" weight="0.0308641660951" />
+ <shade name="cool" weight="0.0185184996571" />
+</color>
+
+<color name="orange" weight="0.00155279347826">
+ <shade name="dark" weight="0.95061631573" />
+ <shade name="hard" weight="0.0308641660951" />
+ <shade name="cool" weight="0.0185184996571" />
+</color>
+
+<color name="green" weight="0.00155279347826">
+ <shade name="dark" weight="0.95061631573" />
+ <shade name="hard" weight="0.0308641660951" />
+ <shade name="cool" weight="0.0185184996571" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="dark" weight="0.95061631573" />
+ <shade name="hard" weight="0.0308641660951" />
+ <shade name="cool" weight="0.0185184996571" />
+</color>
+
+</colors>

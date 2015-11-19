@@ -1,0 +1,33 @@
+<colors query="frank capra">
+
+<color name="white" weight="0.428571">
+ <shade name="dark" weight="0.571427714287" />
+ <shade name="light" weight="0.285713857144" />
+ <shade name="hard" weight="0.142856928572" />
+</color>
+
+<color name="blue" weight="0.238095">
+ <shade name="dark" weight="0.533332586668" />
+ <shade name="light" weight="0.266666293334" />
+ <shade name="intense" weight="0.19999972" />
+</color>
+
+<color name="green" weight="0.190476">
+ <shade name="dark" weight="0.533332586668" />
+ <shade name="light" weight="0.266666293334" />
+ <shade name="intense" weight="0.19999972" />
+</color>
+
+<color name="red" weight="0.0952380000001">
+ <shade name="dark" weight="0.533332586668" />
+ <shade name="light" weight="0.266666293334" />
+ <shade name="intense" weight="0.19999972" />
+</color>
+
+<color name="black" weight="0.047619">
+ <shade name="dark" weight="0.533332586668" />
+ <shade name="light" weight="0.266666293334" />
+ <shade name="intense" weight="0.19999972" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="music drama">
+
+<color name="black" weight="0.545454000001">
+ <shade name="intense" weight="0.795917571429" />
+ <shade name="light" weight="0.163265142857" />
+ <shade name="cool" weight="0.0408162857143" />
+</color>
+
+<color name="purple" weight="0.272727">
+ <shade name="light" weight="0.799996080019" />
+ <shade name="cool" weight="0.199999020005" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="white" weight="0.181818">
+ <shade name="light" weight="0.799996080019" />
+ <shade name="cool" weight="0.199999020005" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="intense" weight="0.795917571429" />
+ <shade name="light" weight="0.163265142857" />
+ <shade name="cool" weight="0.0408162857143" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="intense" weight="0.795917571429" />
+ <shade name="light" weight="0.163265142857" />
+ <shade name="cool" weight="0.0408162857143" />
+</color>
+
+</colors>

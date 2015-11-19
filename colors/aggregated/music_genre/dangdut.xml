@@ -1,0 +1,33 @@
+<colors query="dangdut">
+
+<color name="black" weight="0.63855357062">
+ <shade name="cool" weight="0.685713443266" />
+ <shade name="hard" weight="0.171428360817" />
+ <shade name="fresh" weight="0.142856967347" />
+</color>
+
+<color name="pink" weight="0.289156333866">
+ <shade name="cool" weight="0.685713443266" />
+ <shade name="hard" weight="0.171428360817" />
+ <shade name="fresh" weight="0.142856967347" />
+</color>
+
+<color name="green" weight="0.0361445417332">
+ <shade name="cool" weight="0.685713443266" />
+ <shade name="hard" weight="0.171428360817" />
+ <shade name="fresh" weight="0.142856967347" />
+</color>
+
+<color name="blue" weight="0.0240963611555">
+ <shade name="cool" weight="0.685713443266" />
+ <shade name="hard" weight="0.171428360817" />
+ <shade name="fresh" weight="0.142856967347" />
+</color>
+
+<color name="white" weight="0.0120481805777">
+ <shade name="cool" weight="0.685713443266" />
+ <shade name="hard" weight="0.171428360817" />
+ <shade name="fresh" weight="0.142856967347" />
+</color>
+
+</colors>

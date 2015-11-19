@@ -1,0 +1,33 @@
+<colors query="goa trance">
+
+<color name="white" weight="0.948528463236">
+ <shade name="hard" weight="0.468438038642" />
+ <shade name="dark" weight="0.430785808586" />
+ <shade name="cool" weight="0.100775086327" />
+</color>
+
+<color name="black" weight="0.0220588014706">
+ <shade name="hard" weight="0.468438038642" />
+ <shade name="dark" weight="0.430785808586" />
+ <shade name="cool" weight="0.100775086327" />
+</color>
+
+<color name="green" weight="0.0147058676471">
+ <shade name="hard" weight="0.468438038642" />
+ <shade name="dark" weight="0.430785808586" />
+ <shade name="cool" weight="0.100775086327" />
+</color>
+
+<color name="red" weight="0.00735293382354">
+ <shade name="hard" weight="0.468438038642" />
+ <shade name="dark" weight="0.430785808586" />
+ <shade name="cool" weight="0.100775086327" />
+</color>
+
+<color name="blue" weight="0.00735293382354">
+ <shade name="hard" weight="0.468438038642" />
+ <shade name="dark" weight="0.430785808586" />
+ <shade name="cool" weight="0.100775086327" />
+</color>
+
+</colors>

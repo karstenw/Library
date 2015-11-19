@@ -1,0 +1,33 @@
+<colors query="early music">
+
+<color name="white" weight="0.3571425">
+ <shade name="warm" weight="0.374999484376" />
+ <shade name="hard" weight="0.333332875001" />
+ <shade name="cool" weight="0.291666265626" />
+</color>
+
+<color name="black" weight="0.3571425">
+ <shade name="warm" weight="0.374999484376" />
+ <shade name="hard" weight="0.333332875001" />
+ <shade name="cool" weight="0.291666265626" />
+</color>
+
+<color name="blue" weight="0.2142855">
+ <shade name="hard" weight="0.421051900278" />
+ <shade name="cool" weight="0.368420412743" />
+ <shade name="light" weight="0.210525950139" />
+</color>
+
+<color name="green" weight="0.0714285000001">
+ <shade name="hard" weight="0.421051900278" />
+ <shade name="cool" weight="0.368420412743" />
+ <shade name="light" weight="0.210525950139" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="warm" weight="0.374999484376" />
+ <shade name="hard" weight="0.333332875001" />
+ <shade name="cool" weight="0.291666265626" />
+</color>
+
+</colors>

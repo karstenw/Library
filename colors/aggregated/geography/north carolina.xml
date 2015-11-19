@@ -1,0 +1,33 @@
+<colors query="north carolina">
+
+<color name="black" weight="0.401874990178">
+ <shade name="light" weight="0.515769175281" />
+ <shade name="warm" weight="0.280148005278" />
+ <shade name="cool" weight="0.204081328348" />
+</color>
+
+<color name="white" weight="0.344942699903">
+ <shade name="light" weight="0.515769175281" />
+ <shade name="warm" weight="0.280148005278" />
+ <shade name="cool" weight="0.204081328348" />
+</color>
+
+<color name="green" weight="0.144005204814">
+ <shade name="light" weight="0.601080036566" />
+ <shade name="cool" weight="0.237837424541" />
+ <shade name="fresh" weight="0.161080801166" />
+</color>
+
+<color name="red" weight="0.0679838525051">
+ <shade name="light" weight="0.515769175281" />
+ <shade name="warm" weight="0.280148005278" />
+ <shade name="cool" weight="0.204081328348" />
+</color>
+
+<color name="pink" weight="0.0411921864932">
+ <shade name="light" weight="0.515769175281" />
+ <shade name="warm" weight="0.280148005278" />
+ <shade name="cool" weight="0.204081328348" />
+</color>
+
+</colors>

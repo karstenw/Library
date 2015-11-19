@@ -1,0 +1,33 @@
+<colors query="south africa">
+
+<color name="white" weight="0.672190742654">
+ <shade name="warm" weight="0.429486544067" />
+ <shade name="light" weight="0.391025062509" />
+ <shade name="cool" weight="0.179486913939" />
+</color>
+
+<color name="black" weight="0.246577146428">
+ <shade name="warm" weight="0.429486544067" />
+ <shade name="light" weight="0.391025062509" />
+ <shade name="cool" weight="0.179486913939" />
+</color>
+
+<color name="green" weight="0.0544613871242">
+ <shade name="light" weight="0.544034554621" />
+ <shade name="cool" weight="0.24972077917" />
+ <shade name="fresh" weight="0.206242607797" />
+</color>
+
+<color name="blue" weight="0.0173676077049">
+ <shade name="light" weight="0.544034554621" />
+ <shade name="cool" weight="0.24972077917" />
+ <shade name="fresh" weight="0.206242607797" />
+</color>
+
+<color name="pink" weight="0.00940209380076">
+ <shade name="warm" weight="0.429486544067" />
+ <shade name="light" weight="0.391025062509" />
+ <shade name="cool" weight="0.179486913939" />
+</color>
+
+</colors>

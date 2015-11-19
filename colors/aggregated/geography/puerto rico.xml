@@ -1,0 +1,33 @@
+<colors query="puerto rico">
+
+<color name="black" weight="0.534610733384">
+ <shade name="light" weight="0.502282441429" />
+ <shade name="dark" weight="0.264839832753" />
+ <shade name="cool" weight="0.232876404663" />
+</color>
+
+<color name="white" weight="0.236421479704">
+ <shade name="light" weight="0.502282441429" />
+ <shade name="dark" weight="0.264839832753" />
+ <shade name="cool" weight="0.232876404663" />
+</color>
+
+<color name="red" weight="0.133120202536">
+ <shade name="light" weight="0.502282441429" />
+ <shade name="dark" weight="0.264839832753" />
+ <shade name="cool" weight="0.232876404663" />
+</color>
+
+<color name="blue" weight="0.0605963161943">
+ <shade name="light" weight="0.502282441429" />
+ <shade name="dark" weight="0.264839832753" />
+ <shade name="cool" weight="0.232876404663" />
+</color>
+
+<color name="green" weight="0.0352502296315">
+ <shade name="light" weight="0.502282441429" />
+ <shade name="dark" weight="0.264839832753" />
+ <shade name="cool" weight="0.232876404663" />
+</color>
+
+</colors>

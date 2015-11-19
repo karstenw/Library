@@ -1,0 +1,33 @@
+<colors query="joseph heller">
+
+<color name="white" weight="0.333332981482">
+ <shade name="light" weight="0.499999312501" />
+ <shade name="hard" weight="0.499999312501" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="green" weight="0.333332981482">
+ <shade name="light" weight="0.363636" />
+ <shade name="hard" weight="0.363636" />
+ <shade name="intense" weight="0.272727" />
+</color>
+
+<color name="red" weight="0.111110993827">
+ <shade name="light" weight="0.363636" />
+ <shade name="hard" weight="0.363636" />
+ <shade name="intense" weight="0.272727" />
+</color>
+
+<color name="orange" weight="0.111110993827">
+ <shade name="light" weight="0.363636" />
+ <shade name="hard" weight="0.363636" />
+ <shade name="intense" weight="0.272727" />
+</color>
+
+<color name="blue" weight="0.111110993827">
+ <shade name="light" weight="0.363636" />
+ <shade name="hard" weight="0.363636" />
+ <shade name="intense" weight="0.272727" />
+</color>
+
+</colors>

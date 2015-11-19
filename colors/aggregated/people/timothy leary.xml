@@ -1,0 +1,33 @@
+<colors query="timothy leary">
+
+<color name="black" weight="0.942028036653">
+ <shade name="light" weight="0.828570576327" />
+ <shade name="cool" weight="0.142856995919" />
+ <shade name="hard" weight="0.0285713991837" />
+</color>
+
+<color name="blue" weight="0.0217391085381">
+ <shade name="light" weight="0.828570576327" />
+ <shade name="cool" weight="0.142856995919" />
+ <shade name="hard" weight="0.0285713991837" />
+</color>
+
+<color name="green" weight="0.0169081955297">
+ <shade name="light" weight="0.828570576327" />
+ <shade name="cool" weight="0.142856995919" />
+ <shade name="hard" weight="0.0285713991837" />
+</color>
+
+<color name="white" weight="0.0120772825212">
+ <shade name="light" weight="0.828570576327" />
+ <shade name="cool" weight="0.142856995919" />
+ <shade name="hard" weight="0.0285713991837" />
+</color>
+
+<color name="orange" weight="0.00724636951271">
+ <shade name="light" weight="0.828570576327" />
+ <shade name="cool" weight="0.142856995919" />
+ <shade name="hard" weight="0.0285713991837" />
+</color>
+
+</colors>

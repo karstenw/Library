@@ -1,0 +1,33 @@
+<colors query="eurodance">
+
+<color name="white" weight="0.949073111819">
+ <shade name="cool" weight="0.663754733892" />
+ <shade name="hard" weight="0.253274832669" />
+ <shade name="light" weight="0.0829693417365" />
+</color>
+
+<color name="blue" weight="0.0231481246785">
+ <shade name="cool" weight="0.663754733892" />
+ <shade name="hard" weight="0.253274832669" />
+ <shade name="light" weight="0.0829693417365" />
+</color>
+
+<color name="red" weight="0.00925924987141">
+ <shade name="cool" weight="0.663754733892" />
+ <shade name="hard" weight="0.253274832669" />
+ <shade name="light" weight="0.0829693417365" />
+</color>
+
+<color name="orange" weight="0.00925924987141">
+ <shade name="cool" weight="0.663754733892" />
+ <shade name="hard" weight="0.253274832669" />
+ <shade name="light" weight="0.0829693417365" />
+</color>
+
+<color name="black" weight="0.00925924987141">
+ <shade name="cool" weight="0.663754733892" />
+ <shade name="hard" weight="0.253274832669" />
+ <shade name="light" weight="0.0829693417365" />
+</color>
+
+</colors>

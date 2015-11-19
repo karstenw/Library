@@ -1,0 +1,33 @@
+<colors query="macau">
+
+<color name="red" weight="0.347142455449">
+ <shade name="fresh" weight="0.509803223505" />
+ <shade name="light" weight="0.29411724433" />
+ <shade name="neutral" weight="0.196078162886" />
+</color>
+
+<color name="blue" weight="0.189999780143">
+ <shade name="fresh" weight="0.509803223505" />
+ <shade name="light" weight="0.29411724433" />
+ <shade name="neutral" weight="0.196078162886" />
+</color>
+
+<color name="black" weight="0.179999791715">
+ <shade name="fresh" weight="0.509803223505" />
+ <shade name="light" weight="0.29411724433" />
+ <shade name="neutral" weight="0.196078162886" />
+</color>
+
+<color name="white" weight="0.177142652164">
+ <shade name="fresh" weight="0.509803223505" />
+ <shade name="light" weight="0.29411724433" />
+ <shade name="neutral" weight="0.196078162886" />
+</color>
+
+<color name="green" weight="0.105714163388">
+ <shade name="fresh" weight="0.509803223505" />
+ <shade name="light" weight="0.29411724433" />
+ <shade name="neutral" weight="0.196078162886" />
+</color>
+
+</colors>

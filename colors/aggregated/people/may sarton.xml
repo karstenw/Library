@@ -1,0 +1,33 @@
+<colors query="may sarton">
+
+<color name="white" weight="0.888888000001">
+ <shade name="light" weight="0.565216826088" />
+ <shade name="hard" weight="0.391303956522" />
+ <shade name="weak" weight="0.0434782173913" />
+</color>
+
+<color name="red" weight="0.111111">
+ <shade name="light" weight="0.565216826088" />
+ <shade name="hard" weight="0.391303956522" />
+ <shade name="weak" weight="0.0434782173913" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="light" weight="0.565216826088" />
+ <shade name="hard" weight="0.391303956522" />
+ <shade name="weak" weight="0.0434782173913" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="light" weight="0.565216826088" />
+ <shade name="hard" weight="0.391303956522" />
+ <shade name="weak" weight="0.0434782173913" />
+</color>
+
+<color name="pink" weight="0.0">
+ <shade name="light" weight="0.565216826088" />
+ <shade name="hard" weight="0.391303956522" />
+ <shade name="weak" weight="0.0434782173913" />
+</color>
+
+</colors>

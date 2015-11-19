@@ -1,0 +1,33 @@
+<colors query="comedy rock">
+
+<color name="black" weight="0.995688659484">
+ <shade name="cool" weight="0.636362710745" />
+ <shade name="light" weight="0.181817917356" />
+ <shade name="hard" weight="0.181817917356" />
+</color>
+
+<color name="white" weight="0.00143678017242">
+ <shade name="cool" weight="0.636362710745" />
+ <shade name="light" weight="0.181817917356" />
+ <shade name="hard" weight="0.181817917356" />
+</color>
+
+<color name="purple" weight="0.00143678017242">
+ <shade name="cool" weight="0.636362710745" />
+ <shade name="light" weight="0.181817917356" />
+ <shade name="hard" weight="0.181817917356" />
+</color>
+
+<color name="orange" weight="0.00143678017242">
+ <shade name="cool" weight="0.636362710745" />
+ <shade name="light" weight="0.181817917356" />
+ <shade name="hard" weight="0.181817917356" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="cool" weight="0.636362710745" />
+ <shade name="light" weight="0.181817917356" />
+ <shade name="hard" weight="0.181817917356" />
+</color>
+
+</colors>

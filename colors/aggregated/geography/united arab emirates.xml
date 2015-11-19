@@ -1,0 +1,33 @@
+<colors query="united arab emirates">
+
+<color name="green" weight="0.587351185733">
+ <shade name="light" weight="0.905981837389" />
+ <shade name="neutral" weight="0.0512819907956" />
+ <shade name="hard" weight="0.0427349923297" />
+</color>
+
+<color name="black" weight="0.396837544062">
+ <shade name="light" weight="0.905981837389" />
+ <shade name="neutral" weight="0.0512819907956" />
+ <shade name="hard" weight="0.0427349923297" />
+</color>
+
+<color name="white" weight="0.00632410428784">
+ <shade name="light" weight="0.905981837389" />
+ <shade name="neutral" weight="0.0512819907956" />
+ <shade name="hard" weight="0.0427349923297" />
+</color>
+
+<color name="yellow" weight="0.00474307821588">
+ <shade name="light" weight="0.905981837389" />
+ <shade name="neutral" weight="0.0512819907956" />
+ <shade name="hard" weight="0.0427349923297" />
+</color>
+
+<color name="red" weight="0.00474307821588">
+ <shade name="light" weight="0.905981837389" />
+ <shade name="neutral" weight="0.0512819907956" />
+ <shade name="hard" weight="0.0427349923297" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="cymbal">
+
+<color name="black" weight="0.508290259412">
+ <shade name="light" weight="0.465115564" />
+ <shade name="soft" weight="0.3255808948" />
+ <shade name="dark" weight="0.2093020038" />
+</color>
+
+<color name="red" weight="0.294004779911">
+ <shade name="light" weight="0.465115564" />
+ <shade name="soft" weight="0.3255808948" />
+ <shade name="dark" weight="0.2093020038" />
+</color>
+
+<color name="white" weight="0.0854590900391">
+ <shade name="light" weight="0.465115564" />
+ <shade name="soft" weight="0.3255808948" />
+ <shade name="dark" weight="0.2093020038" />
+</color>
+
+<color name="purple" weight="0.0567601418916">
+ <shade name="light" weight="0.465115564" />
+ <shade name="soft" weight="0.3255808948" />
+ <shade name="dark" weight="0.2093020038" />
+</color>
+
+<color name="blue" weight="0.0554846330851">
+ <shade name="light" weight="0.465115564" />
+ <shade name="soft" weight="0.3255808948" />
+ <shade name="dark" weight="0.2093020038" />
+</color>
+
+</colors>

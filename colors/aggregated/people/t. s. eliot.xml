@@ -1,0 +1,33 @@
+<colors query="t. s. eliot">
+
+<color name="white" weight="0.542073812371">
+ <shade name="light" weight="0.874999062501" />
+ <shade name="dark" weight="0.0833332440477" />
+ <shade name="cool" weight="0.0416666220239" />
+</color>
+
+<color name="green" weight="0.334637624244">
+ <shade name="light" weight="0.874999062501" />
+ <shade name="dark" weight="0.0833332440477" />
+ <shade name="cool" weight="0.0416666220239" />
+</color>
+
+<color name="black" weight="0.0978472585507">
+ <shade name="light" weight="0.874999062501" />
+ <shade name="dark" weight="0.0833332440477" />
+ <shade name="cool" weight="0.0416666220239" />
+</color>
+
+<color name="orange" weight="0.0156555613681">
+ <shade name="light" weight="0.874999062501" />
+ <shade name="dark" weight="0.0833332440477" />
+ <shade name="cool" weight="0.0416666220239" />
+</color>
+
+<color name="purple" weight="0.00978472585507">
+ <shade name="light" weight="0.874999062501" />
+ <shade name="dark" weight="0.0833332440477" />
+ <shade name="cool" weight="0.0416666220239" />
+</color>
+
+</colors>

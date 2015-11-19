@@ -1,0 +1,33 @@
+<colors query="henry james">
+
+<color name="green" weight="0.517963552342">
+ <shade name="light" weight="0.391303803403" />
+ <shade name="bright" weight="0.347825603025" />
+ <shade name="dark" weight="0.260869202269" />
+</color>
+
+<color name="white" weight="0.349301046859">
+ <shade name="light" weight="0.391303803403" />
+ <shade name="bright" weight="0.347825603025" />
+ <shade name="dark" weight="0.260869202269" />
+</color>
+
+<color name="black" weight="0.125748376869">
+ <shade name="light" weight="0.391303803403" />
+ <shade name="bright" weight="0.347825603025" />
+ <shade name="dark" weight="0.260869202269" />
+</color>
+
+<color name="yellow" weight="0.0039920119641">
+ <shade name="light" weight="0.391303803403" />
+ <shade name="bright" weight="0.347825603025" />
+ <shade name="dark" weight="0.260869202269" />
+</color>
+
+<color name="blue" weight="0.00299400897307">
+ <shade name="light" weight="0.391303803403" />
+ <shade name="bright" weight="0.347825603025" />
+ <shade name="dark" weight="0.260869202269" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="folk metal">
+
+<color name="black" weight="0.99943856716">
+ <shade name="dark" weight="0.980586375697" />
+ <shade name="cool" weight="0.0187904242044" />
+ <shade name="light" weight="0.000622199476965" />
+</color>
+
+<color name="white" weight="0.000280216420699">
+ <shade name="dark" weight="0.980586375697" />
+ <shade name="cool" weight="0.0187904242044" />
+ <shade name="light" weight="0.000622199476965" />
+</color>
+
+<color name="green" weight="0.000186810947133">
+ <shade name="dark" weight="0.980586375697" />
+ <shade name="cool" weight="0.0187904242044" />
+ <shade name="light" weight="0.000622199476965" />
+</color>
+
+<color name="red" weight="9.34054735663e-05">
+ <shade name="dark" weight="0.980586375697" />
+ <shade name="cool" weight="0.0187904242044" />
+ <shade name="light" weight="0.000622199476965" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="dark" weight="0.980586375697" />
+ <shade name="cool" weight="0.0187904242044" />
+ <shade name="light" weight="0.000622199476965" />
+</color>
+
+</colors>

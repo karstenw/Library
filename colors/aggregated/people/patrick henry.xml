@@ -1,0 +1,33 @@
+<colors query="patrick henry">
+
+<color name="black" weight="0.371428192041">
+ <shade name="light" weight="0.946665669512" />
+ <shade name="hard" weight="0.0399999578667" />
+ <shade name="weak" weight="0.0133333192889" />
+</color>
+
+<color name="white" weight="0.335713942806">
+ <shade name="light" weight="0.946665669512" />
+ <shade name="hard" weight="0.0399999578667" />
+ <shade name="weak" weight="0.0133333192889" />
+</color>
+
+<color name="green" weight="0.249999744643">
+ <shade name="light" weight="0.946665669512" />
+ <shade name="hard" weight="0.0399999578667" />
+ <shade name="weak" weight="0.0133333192889" />
+</color>
+
+<color name="orange" weight="0.0285713993878">
+ <shade name="light" weight="0.946665669512" />
+ <shade name="hard" weight="0.0399999578667" />
+ <shade name="weak" weight="0.0133333192889" />
+</color>
+
+<color name="purple" weight="0.0142856996939">
+ <shade name="light" weight="0.946665669512" />
+ <shade name="hard" weight="0.0399999578667" />
+ <shade name="weak" weight="0.0133333192889" />
+</color>
+
+</colors>

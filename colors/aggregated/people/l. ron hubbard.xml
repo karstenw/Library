@@ -1,0 +1,33 @@
+<colors query="l. ron hubbard">
+
+<color name="white" weight="0.533332800001">
+ <shade name="light" weight="0.793102614151" />
+ <shade name="cool" weight="0.137930889418" />
+ <shade name="hard" weight="0.0689654447088" />
+</color>
+
+<color name="black" weight="0.333333">
+ <shade name="light" weight="0.793102614151" />
+ <shade name="cool" weight="0.137930889418" />
+ <shade name="hard" weight="0.0689654447088" />
+</color>
+
+<color name="orange" weight="0.0666666000001">
+ <shade name="light" weight="0.793102614151" />
+ <shade name="cool" weight="0.137930889418" />
+ <shade name="hard" weight="0.0689654447088" />
+</color>
+
+<color name="blue" weight="0.0666666000001">
+ <shade name="light" weight="0.793102614151" />
+ <shade name="cool" weight="0.137930889418" />
+ <shade name="hard" weight="0.0689654447088" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="light" weight="0.793102614151" />
+ <shade name="cool" weight="0.137930889418" />
+ <shade name="hard" weight="0.0689654447088" />
+</color>
+
+</colors>

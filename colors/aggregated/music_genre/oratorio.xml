@@ -1,0 +1,33 @@
+<colors query="oratorio">
+
+<color name="orange" weight="0.34482724138">
+ <shade name="dark" weight="0.610062254243" />
+ <shade name="light" weight="0.358490190638" />
+ <shade name="intense" weight="0.0314465079507" />
+</color>
+
+<color name="white" weight="0.275861793104">
+ <shade name="dark" weight="0.617833739686" />
+ <shade name="light" weight="0.363056939815" />
+ <shade name="hard" weight="0.0191082599903" />
+</color>
+
+<color name="red" weight="0.17241362069">
+ <shade name="dark" weight="0.610062254243" />
+ <shade name="light" weight="0.358490190638" />
+ <shade name="intense" weight="0.0314465079507" />
+</color>
+
+<color name="blue" weight="0.137930896552">
+ <shade name="dark" weight="0.610062254243" />
+ <shade name="light" weight="0.358490190638" />
+ <shade name="intense" weight="0.0314465079507" />
+</color>
+
+<color name="black" weight="0.0689654482759">
+ <shade name="dark" weight="0.610062254243" />
+ <shade name="light" weight="0.358490190638" />
+ <shade name="intense" weight="0.0314465079507" />
+</color>
+
+</colors>

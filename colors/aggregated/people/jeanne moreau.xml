@@ -1,0 +1,33 @@
+<colors query="jeanne moreau">
+
+<color name="black" weight="0.976841126366">
+ <shade name="cool" weight="0.571428000001" />
+ <shade name="light" weight="0.285714" />
+ <shade name="soft" weight="0.142857" />
+</color>
+
+<color name="white" weight="0.010526305241">
+ <shade name="cool" weight="0.571428000001" />
+ <shade name="light" weight="0.285714" />
+ <shade name="soft" weight="0.142857" />
+</color>
+
+<color name="blue" weight="0.0063157831446">
+ <shade name="cool" weight="0.571428000001" />
+ <shade name="light" weight="0.285714" />
+ <shade name="soft" weight="0.142857" />
+</color>
+
+<color name="green" weight="0.0042105220964">
+ <shade name="cool" weight="0.571428000001" />
+ <shade name="light" weight="0.285714" />
+ <shade name="soft" weight="0.142857" />
+</color>
+
+<color name="yellow" weight="0.0021052610482">
+ <shade name="cool" weight="0.571428000001" />
+ <shade name="light" weight="0.285714" />
+ <shade name="soft" weight="0.142857" />
+</color>
+
+</colors>

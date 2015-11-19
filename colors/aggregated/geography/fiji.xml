@@ -1,0 +1,33 @@
+<colors query="fiji">
+
+<color name="black" weight="0.737659124003">
+ <shade name="light" weight="0.478942372302" />
+ <shade name="dark" weight="0.266308474254" />
+ <shade name="fresh" weight="0.254747796302" />
+</color>
+
+<color name="yellow" weight="0.10711752173">
+ <shade name="light" weight="0.478942372302" />
+ <shade name="dark" weight="0.266308474254" />
+ <shade name="fresh" weight="0.254747796302" />
+</color>
+
+<color name="white" weight="0.0792591186428">
+ <shade name="light" weight="0.478942372302" />
+ <shade name="dark" weight="0.266308474254" />
+ <shade name="fresh" weight="0.254747796302" />
+</color>
+
+<color name="blue" weight="0.0565015499236">
+ <shade name="light" weight="0.478942372302" />
+ <shade name="dark" weight="0.266308474254" />
+ <shade name="fresh" weight="0.254747796302" />
+</color>
+
+<color name="pink" weight="0.0194616449737">
+ <shade name="light" weight="0.478942372302" />
+ <shade name="dark" weight="0.266308474254" />
+ <shade name="fresh" weight="0.254747796302" />
+</color>
+
+</colors>

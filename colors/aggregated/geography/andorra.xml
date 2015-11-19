@@ -1,0 +1,33 @@
+<colors query="andorra">
+
+<color name="black" weight="0.621391535001">
+ <shade name="light" weight="0.488635575156" />
+ <shade name="cool" weight="0.32954492278" />
+ <shade name="neutral" weight="0.18181788843" />
+</color>
+
+<color name="red" weight="0.129032122022">
+ <shade name="light" weight="0.488635575156" />
+ <shade name="cool" weight="0.32954492278" />
+ <shade name="neutral" weight="0.18181788843" />
+</color>
+
+<color name="blue" weight="0.11205421123">
+ <shade name="light" weight="0.488635575156" />
+ <shade name="cool" weight="0.32954492278" />
+ <shade name="neutral" weight="0.18181788843" />
+</color>
+
+<color name="green" weight="0.0730050164073">
+ <shade name="light" weight="0.488635575156" />
+ <shade name="cool" weight="0.32954492278" />
+ <shade name="neutral" weight="0.18181788843" />
+</color>
+
+<color name="white" weight="0.0645160610111">
+ <shade name="light" weight="0.488635575156" />
+ <shade name="cool" weight="0.32954492278" />
+ <shade name="neutral" weight="0.18181788843" />
+</color>
+
+</colors>

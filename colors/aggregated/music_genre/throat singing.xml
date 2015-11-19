@@ -1,0 +1,33 @@
+<colors query="throat singing">
+
+<color name="yellow" weight="0.638888250001">
+ <shade name="cool" weight="0.90624902295" />
+ <shade name="soft" weight="0.0468749494629" />
+ <shade name="intense" weight="0.0468749494629" />
+</color>
+
+<color name="white" weight="0.1666665">
+ <shade name="cool" weight="0.920633912322" />
+ <shade name="soft" weight="0.0476189954649" />
+ <shade name="warm" weight="0.0317459969766" />
+</color>
+
+<color name="red" weight="0.1666665">
+ <shade name="cool" weight="0.90624902295" />
+ <shade name="soft" weight="0.0468749494629" />
+ <shade name="intense" weight="0.0468749494629" />
+</color>
+
+<color name="blue" weight="0.02777775">
+ <shade name="cool" weight="0.90624902295" />
+ <shade name="soft" weight="0.0468749494629" />
+ <shade name="intense" weight="0.0468749494629" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="cool" weight="0.935482829866" />
+ <shade name="soft" weight="0.0483870429241" />
+ <shade name="weak" weight="0.016129014308" />
+</color>
+
+</colors>

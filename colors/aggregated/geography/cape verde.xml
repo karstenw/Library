@@ -1,0 +1,33 @@
+<colors query="cape verde">
+
+<color name="black" weight="0.965772823631">
+ <shade name="intense" weight="0.913384812699" />
+ <shade name="cool" weight="0.0551180490422" />
+ <shade name="weak" weight="0.0314960280241" />
+</color>
+
+<color name="yellow" weight="0.010416656033">
+ <shade name="intense" weight="0.913384812699" />
+ <shade name="cool" weight="0.0551180490422" />
+ <shade name="weak" weight="0.0314960280241" />
+</color>
+
+<color name="red" weight="0.008928562314">
+ <shade name="intense" weight="0.913384812699" />
+ <shade name="cool" weight="0.0551180490422" />
+ <shade name="weak" weight="0.0314960280241" />
+</color>
+
+<color name="white" weight="0.007440468595">
+ <shade name="cool" weight="0.466662280041" />
+ <shade name="weak" weight="0.266664160024" />
+ <shade name="warm" weight="0.266664160024" />
+</color>
+
+<color name="purple" weight="0.007440468595">
+ <shade name="cool" weight="0.466662280041" />
+ <shade name="weak" weight="0.266664160024" />
+ <shade name="fresh" weight="0.266664160024" />
+</color>
+
+</colors>

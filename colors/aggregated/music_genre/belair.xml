@@ -1,0 +1,33 @@
+<colors query="belair">
+
+<color name="red" weight="0.449895117601">
+ <shade name="cool" weight="0.388059284474" />
+ <shade name="light" weight="0.343283213188" />
+ <shade name="fresh" weight="0.268656427712" />
+</color>
+
+<color name="blue" weight="0.201461154749">
+ <shade name="cool" weight="0.388059284474" />
+ <shade name="light" weight="0.343283213188" />
+ <shade name="fresh" weight="0.268656427712" />
+</color>
+
+<color name="white" weight="0.149269145747">
+ <shade name="cool" weight="0.388059284474" />
+ <shade name="light" weight="0.343283213188" />
+ <shade name="fresh" weight="0.268656427712" />
+</color>
+
+<color name="green" weight="0.111690899265">
+ <shade name="cool" weight="0.388059284474" />
+ <shade name="light" weight="0.343283213188" />
+ <shade name="fresh" weight="0.268656427712" />
+</color>
+
+<color name="black" weight="0.087682575124">
+ <shade name="cool" weight="0.388059284474" />
+ <shade name="light" weight="0.343283213188" />
+ <shade name="fresh" weight="0.268656427712" />
+</color>
+
+</colors>

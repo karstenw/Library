@@ -1,0 +1,33 @@
+<colors query="arnold palmer">
+
+<color name="green" weight="0.505207772868">
+ <shade name="cool" weight="0.584904965113" />
+ <shade name="light" weight="0.301886433607" />
+ <shade name="hard" weight="0.113207412603" />
+</color>
+
+<color name="blue" weight="0.173610918511">
+ <shade name="cool" weight="0.584904965113" />
+ <shade name="light" weight="0.301886433607" />
+ <shade name="hard" weight="0.113207412603" />
+</color>
+
+<color name="white" weight="0.168402590956">
+ <shade name="cool" weight="0.584904965113" />
+ <shade name="light" weight="0.301886433607" />
+ <shade name="hard" weight="0.113207412603" />
+</color>
+
+<color name="red" weight="0.0798610225153">
+ <shade name="cool" weight="0.584904965113" />
+ <shade name="light" weight="0.301886433607" />
+ <shade name="hard" weight="0.113207412603" />
+</color>
+
+<color name="pink" weight="0.0729165857748">
+ <shade name="cool" weight="0.584904965113" />
+ <shade name="light" weight="0.301886433607" />
+ <shade name="hard" weight="0.113207412603" />
+</color>
+
+</colors>

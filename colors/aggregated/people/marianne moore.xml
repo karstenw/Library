@@ -1,0 +1,33 @@
+<colors query="marianne moore">
+
+<color name="white" weight="0.869564347827">
+ <shade name="weak" weight="0.0" />
+ <shade name="warm" weight="0.0" />
+ <shade name="soft" weight="0.0" />
+</color>
+
+<color name="red" weight="0.0869564347827">
+ <shade name="weak" weight="0.0" />
+ <shade name="warm" weight="0.0" />
+ <shade name="soft" weight="0.0" />
+</color>
+
+<color name="yellow" weight="0.0434782173913">
+ <shade name="weak" weight="0.0" />
+ <shade name="warm" weight="0.0" />
+ <shade name="soft" weight="0.0" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="weak" weight="0.0" />
+ <shade name="soft" weight="0.0" />
+ <shade name="neutral" weight="0.0" />
+</color>
+
+<color name="pink" weight="0.0">
+ <shade name="weak" weight="0.0" />
+ <shade name="warm" weight="0.0" />
+ <shade name="soft" weight="0.0" />
+</color>
+
+</colors>

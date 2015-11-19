@@ -1,0 +1,33 @@
+<colors query="george washington">
+
+<color name="green" weight="0.531731037973">
+ <shade name="cool" weight="0.364081896032" />
+ <shade name="bright" weight="0.347398898101" />
+ <shade name="hard" weight="0.288517728931" />
+</color>
+
+<color name="white" weight="0.193491016596">
+ <shade name="cool" weight="0.364081896032" />
+ <shade name="bright" weight="0.347398898101" />
+ <shade name="hard" weight="0.288517728931" />
+</color>
+
+<color name="black" weight="0.174781961556">
+ <shade name="cool" weight="0.364081896032" />
+ <shade name="bright" weight="0.347398898101" />
+ <shade name="hard" weight="0.288517728931" />
+</color>
+
+<color name="blue" weight="0.0580965393341">
+ <shade name="cool" weight="0.364081896032" />
+ <shade name="bright" weight="0.347398898101" />
+ <shade name="hard" weight="0.288517728931" />
+</color>
+
+<color name="red" weight="0.0418984364181">
+ <shade name="cool" weight="0.364081896032" />
+ <shade name="bright" weight="0.347398898101" />
+ <shade name="hard" weight="0.288517728931" />
+</color>
+
+</colors>

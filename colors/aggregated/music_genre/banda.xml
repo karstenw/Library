@@ -1,0 +1,33 @@
+<colors query="banda">
+
+<color name="red" weight="0.369455625145">
+ <shade name="hard" weight="0.51503456793" />
+ <shade name="cool" weight="0.351886971878" />
+ <shade name="dark" weight="0.133077254819" />
+</color>
+
+<color name="black" weight="0.252719363066">
+ <shade name="hard" weight="0.51503456793" />
+ <shade name="cool" weight="0.351886971878" />
+ <shade name="dark" weight="0.133077254819" />
+</color>
+
+<color name="blue" weight="0.200418170379">
+ <shade name="hard" weight="0.51503456793" />
+ <shade name="cool" weight="0.351886971878" />
+ <shade name="dark" weight="0.133077254819" />
+</color>
+
+<color name="green" weight="0.0983262422526">
+ <shade name="hard" weight="0.51503456793" />
+ <shade name="cool" weight="0.351886971878" />
+ <shade name="dark" weight="0.133077254819" />
+</color>
+
+<color name="orange" weight="0.0790794033435">
+ <shade name="hard" weight="0.51503456793" />
+ <shade name="cool" weight="0.351886971878" />
+ <shade name="dark" weight="0.133077254819" />
+</color>
+
+</colors>

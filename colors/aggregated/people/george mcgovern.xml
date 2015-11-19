@@ -1,0 +1,33 @@
+<colors query="george mcgovern">
+
+<color name="black" weight="0.902254736843">
+ <shade name="weak" weight="0.799999200001" />
+ <shade name="cool" weight="0.1999998" />
+ <shade name="warm" weight="0.0" />
+</color>
+
+<color name="blue" weight="0.0526315263158">
+ <shade name="weak" weight="0.799999200001" />
+ <shade name="cool" weight="0.1999998" />
+ <shade name="soft" weight="0.0" />
+</color>
+
+<color name="white" weight="0.0225563684211">
+ <shade name="weak" weight="0.799999200001" />
+ <shade name="cool" weight="0.1999998" />
+ <shade name="warm" weight="0.0" />
+</color>
+
+<color name="green" weight="0.0150375789474">
+ <shade name="weak" weight="0.799999200001" />
+ <shade name="cool" weight="0.1999998" />
+ <shade name="soft" weight="0.0" />
+</color>
+
+<color name="red" weight="0.00751878947369">
+ <shade name="weak" weight="0.799999200001" />
+ <shade name="cool" weight="0.1999998" />
+ <shade name="warm" weight="0.0" />
+</color>
+
+</colors>

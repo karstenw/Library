@@ -1,0 +1,33 @@
+<colors query="cameroon">
+
+<color name="red" weight="0.369003309557">
+ <shade name="dark" weight="0.702538537516" />
+ <shade name="hard" weight="0.210398804695" />
+ <shade name="cool" weight="0.0870615743565" />
+</color>
+
+<color name="yellow" weight="0.271481006317">
+ <shade name="dark" weight="0.702538537516" />
+ <shade name="hard" weight="0.210398804695" />
+ <shade name="cool" weight="0.0870615743565" />
+</color>
+
+<color name="orange" weight="0.157617127939">
+ <shade name="dark" weight="0.702538537516" />
+ <shade name="hard" weight="0.210398804695" />
+ <shade name="cool" weight="0.0870615743565" />
+</color>
+
+<color name="black" weight="0.134949781781">
+ <shade name="dark" weight="0.702538537516" />
+ <shade name="hard" weight="0.210398804695" />
+ <shade name="cool" weight="0.0870615743565" />
+</color>
+
+<color name="green" weight="0.0669477433053">
+ <shade name="dark" weight="0.702538537516" />
+ <shade name="hard" weight="0.210398804695" />
+ <shade name="cool" weight="0.0870615743565" />
+</color>
+
+</colors>

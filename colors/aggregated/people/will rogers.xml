@@ -1,0 +1,33 @@
+<colors query="will rogers">
+
+<color name="green" weight="0.582620496681">
+ <shade name="light" weight="0.466666013334" />
+ <shade name="cool" weight="0.333332866667" />
+ <shade name="hard" weight="0.19999972" />
+</color>
+
+<color name="white" weight="0.403133497703">
+ <shade name="light" weight="0.466666013334" />
+ <shade name="cool" weight="0.333332866667" />
+ <shade name="hard" weight="0.19999972" />
+</color>
+
+<color name="red" weight="0.00569799996754">
+ <shade name="light" weight="0.466666013334" />
+ <shade name="cool" weight="0.333332866667" />
+ <shade name="hard" weight="0.19999972" />
+</color>
+
+<color name="blue" weight="0.00427349997565">
+ <shade name="light" weight="0.466666013334" />
+ <shade name="cool" weight="0.333332866667" />
+ <shade name="hard" weight="0.19999972" />
+</color>
+
+<color name="black" weight="0.00427349997565">
+ <shade name="light" weight="0.466666013334" />
+ <shade name="cool" weight="0.333332866667" />
+ <shade name="hard" weight="0.19999972" />
+</color>
+
+</colors>

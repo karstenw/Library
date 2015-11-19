@@ -1,0 +1,33 @@
+<colors query="black sea">
+
+<color name="black" weight="0.270697759542">
+ <shade name="warm" weight="0.387825650501" />
+ <shade name="light" weight="0.326956153786" />
+ <shade name="dark" weight="0.285217070324" />
+</color>
+
+<color name="red" weight="0.255275698278">
+ <shade name="warm" weight="0.387825650501" />
+ <shade name="light" weight="0.326956153786" />
+ <shade name="dark" weight="0.285217070324" />
+</color>
+
+<color name="white" weight="0.220373138577">
+ <shade name="warm" weight="0.387825650501" />
+ <shade name="light" weight="0.326956153786" />
+ <shade name="dark" weight="0.285217070324" />
+</color>
+
+<color name="blue" weight="0.188717328616">
+ <shade name="light" weight="0.446873569832" />
+ <shade name="dark" weight="0.389825880066" />
+ <shade name="fresh" weight="0.163299011954" />
+</color>
+
+<color name="green" weight="0.0649349947926">
+ <shade name="light" weight="0.446873569832" />
+ <shade name="dark" weight="0.389825880066" />
+ <shade name="fresh" weight="0.163299011954" />
+</color>
+
+</colors>

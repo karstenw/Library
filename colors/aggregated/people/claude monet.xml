@@ -1,0 +1,33 @@
+<colors query="claude monet">
+
+<color name="blue" weight="0.546467833689">
+ <shade name="light" weight="0.957927829161" />
+ <shade name="soft" weight="0.0258899413287" />
+ <shade name="cool" weight="0.0161812133304" />
+</color>
+
+<color name="green" weight="0.301114928767">
+ <shade name="light" weight="0.957927829161" />
+ <shade name="soft" weight="0.0258899413287" />
+ <shade name="cool" weight="0.0161812133304" />
+</color>
+
+<color name="red" weight="0.0669144286149">
+ <shade name="light" weight="0.957927829161" />
+ <shade name="soft" weight="0.0258899413287" />
+ <shade name="cool" weight="0.0161812133304" />
+</color>
+
+<color name="pink" weight="0.0594794921022">
+ <shade name="light" weight="0.957927829161" />
+ <shade name="soft" weight="0.0258899413287" />
+ <shade name="cool" weight="0.0161812133304" />
+</color>
+
+<color name="white" weight="0.0260222777947">
+ <shade name="light" weight="0.957927829161" />
+ <shade name="soft" weight="0.0258899413287" />
+ <shade name="cool" weight="0.0161812133304" />
+</color>
+
+</colors>

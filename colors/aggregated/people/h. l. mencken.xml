@@ -1,0 +1,33 @@
+<colors query="h. l. mencken">
+
+<color name="white" weight="0.499999461539">
+ <shade name="hard" weight="0.983999012065" />
+ <shade name="dark" weight="0.00933332396268" />
+ <shade name="soft" weight="0.00666665997334" />
+</color>
+
+<color name="black" weight="0.346153473373">
+ <shade name="hard" weight="0.983999012065" />
+ <shade name="dark" weight="0.00933332396268" />
+ <shade name="soft" weight="0.00666665997334" />
+</color>
+
+<color name="red" weight="0.0769229940829">
+ <shade name="hard" weight="0.983999012065" />
+ <shade name="dark" weight="0.00933332396268" />
+ <shade name="soft" weight="0.00666665997334" />
+</color>
+
+<color name="yellow" weight="0.0384614970415">
+ <shade name="hard" weight="0.983999012065" />
+ <shade name="dark" weight="0.00933332396268" />
+ <shade name="soft" weight="0.00666665997334" />
+</color>
+
+<color name="orange" weight="0.0384614970415">
+ <shade name="hard" weight="0.983999012065" />
+ <shade name="dark" weight="0.00933332396268" />
+ <shade name="soft" weight="0.00666665997334" />
+</color>
+
+</colors>

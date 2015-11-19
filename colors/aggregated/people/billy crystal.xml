@@ -1,0 +1,33 @@
+<colors query="billy crystal">
+
+<color name="black" weight="0.889422174673">
+ <shade name="cool" weight="0.476189705217" />
+ <shade name="hard" weight="0.380951764173" />
+ <shade name="soft" weight="0.142856911565" />
+</color>
+
+<color name="green" weight="0.0480768743066">
+ <shade name="cool" weight="0.476189705217" />
+ <shade name="hard" weight="0.380951764173" />
+ <shade name="soft" weight="0.142856911565" />
+</color>
+
+<color name="white" weight="0.0336538120146">
+ <shade name="cool" weight="0.476189705217" />
+ <shade name="hard" weight="0.380951764173" />
+ <shade name="soft" weight="0.142856911565" />
+</color>
+
+<color name="red" weight="0.0192307497227">
+ <shade name="cool" weight="0.476189705217" />
+ <shade name="hard" weight="0.380951764173" />
+ <shade name="soft" weight="0.142856911565" />
+</color>
+
+<color name="pink" weight="0.00961537486133">
+ <shade name="cool" weight="0.476189705217" />
+ <shade name="hard" weight="0.380951764173" />
+ <shade name="soft" weight="0.142856911565" />
+</color>
+
+</colors>

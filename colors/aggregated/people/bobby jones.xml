@@ -1,0 +1,33 @@
+<colors query="bobby jones">
+
+<color name="black" weight="0.30797068839">
+ <shade name="soft" weight="0.428570959184" />
+ <shade name="light" weight="0.380951963719" />
+ <shade name="cool" weight="0.19047598186" />
+</color>
+
+<color name="green" weight="0.245470754569">
+ <shade name="soft" weight="0.428570959184" />
+ <shade name="light" weight="0.380951963719" />
+ <shade name="cool" weight="0.19047598186" />
+</color>
+
+<color name="blue" weight="0.227354831723">
+ <shade name="soft" weight="0.428570959184" />
+ <shade name="light" weight="0.380951963719" />
+ <shade name="cool" weight="0.19047598186" />
+</color>
+
+<color name="white" weight="0.132246236779">
+ <shade name="soft" weight="0.428570959184" />
+ <shade name="light" weight="0.380951963719" />
+ <shade name="cool" weight="0.19047598186" />
+</color>
+
+<color name="red" weight="0.086956429663">
+ <shade name="soft" weight="0.428570959184" />
+ <shade name="light" weight="0.380951963719" />
+ <shade name="cool" weight="0.19047598186" />
+</color>
+
+</colors>

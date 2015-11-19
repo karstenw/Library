@@ -1,0 +1,33 @@
+<colors query="st. louis blues">
+
+<color name="blue" weight="0.627357851371">
+ <shade name="hard" weight="0.682925946462" />
+ <shade name="light" weight="0.219511911363" />
+ <shade name="cool" weight="0.0975608494945" />
+</color>
+
+<color name="white" weight="0.134433825294">
+ <shade name="hard" weight="0.682925946462" />
+ <shade name="light" weight="0.219511911363" />
+ <shade name="warm" weight="0.0975608494945" />
+</color>
+
+<color name="pink" weight="0.134433825294">
+ <shade name="hard" weight="0.682925946462" />
+ <shade name="light" weight="0.219511911363" />
+ <shade name="warm" weight="0.0975608494945" />
+</color>
+
+<color name="black" weight="0.0872640620328">
+ <shade name="hard" weight="0.682925946462" />
+ <shade name="light" weight="0.219511911363" />
+ <shade name="warm" weight="0.0975608494945" />
+</color>
+
+<color name="red" weight="0.0165094171413">
+ <shade name="hard" weight="0.682925946462" />
+ <shade name="light" weight="0.219511911363" />
+ <shade name="warm" weight="0.0975608494945" />
+</color>
+
+</colors>

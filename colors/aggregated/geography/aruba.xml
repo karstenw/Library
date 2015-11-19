@@ -1,0 +1,33 @@
+<colors query="aruba">
+
+<color name="blue" weight="0.360808891722">
+ <shade name="cool" weight="0.695930613936" />
+ <shade name="bright" weight="0.246252371085" />
+ <shade name="light" weight="0.0578157740809" />
+</color>
+
+<color name="black" weight="0.277631764035">
+ <shade name="cool" weight="0.646122516048" />
+ <shade name="bright" weight="0.228627967217" />
+ <shade name="warm" weight="0.125248364649" />
+</color>
+
+<color name="green" weight="0.218058956368">
+ <shade name="cool" weight="0.695930613936" />
+ <shade name="bright" weight="0.246252371085" />
+ <shade name="light" weight="0.0578157740809" />
+</color>
+
+<color name="white" weight="0.0843011429257">
+ <shade name="cool" weight="0.646122516048" />
+ <shade name="bright" weight="0.228627967217" />
+ <shade name="warm" weight="0.125248364649" />
+</color>
+
+<color name="red" weight="0.0591981359211">
+ <shade name="cool" weight="0.646122516048" />
+ <shade name="bright" weight="0.228627967217" />
+ <shade name="warm" weight="0.125248364649" />
+</color>
+
+</colors>

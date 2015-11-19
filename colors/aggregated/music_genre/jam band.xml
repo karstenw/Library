@@ -1,0 +1,33 @@
+<colors query="jam band">
+
+<color name="blue" weight="0.53500843781">
+ <shade name="cool" weight="0.987867279241" />
+ <shade name="hard" weight="0.00606585171464" />
+ <shade name="fresh" weight="0.00606585171464" />
+</color>
+
+<color name="orange" weight="0.188509684463">
+ <shade name="cool" weight="0.987867279241" />
+ <shade name="hard" weight="0.00606585171464" />
+ <shade name="fresh" weight="0.00606585171464" />
+</color>
+
+<color name="green" weight="0.145421756586">
+ <shade name="cool" weight="0.987867279241" />
+ <shade name="hard" weight="0.00606585171464" />
+ <shade name="fresh" weight="0.00606585171464" />
+</color>
+
+<color name="white" weight="0.116696471334">
+ <shade name="cool" weight="0.987867279241" />
+ <shade name="hard" weight="0.00606585171464" />
+ <shade name="fresh" weight="0.00606585171464" />
+</color>
+
+<color name="purple" weight="0.0143626426258">
+ <shade name="cool" weight="0.987867279241" />
+ <shade name="hard" weight="0.00606585171464" />
+ <shade name="fresh" weight="0.00606585171464" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="washington dc">
+
+<color name="white" weight="0.727005137673">
+ <shade name="light" weight="0.655736823914" />
+ <shade name="hard" weight="0.201821222471" />
+ <shade name="cool" weight="0.142440610083" />
+</color>
+
+<color name="yellow" weight="0.104048441722">
+ <shade name="light" weight="0.655736823914" />
+ <shade name="hard" weight="0.201821222471" />
+ <shade name="cool" weight="0.142440610083" />
+</color>
+
+<color name="black" weight="0.0666310213335">
+ <shade name="light" weight="0.655736823914" />
+ <shade name="hard" weight="0.201821222471" />
+ <shade name="cool" weight="0.142440610083" />
+</color>
+
+<color name="green" weight="0.0586939927663">
+ <shade name="light" weight="0.655736823914" />
+ <shade name="hard" weight="0.201821222471" />
+ <shade name="cool" weight="0.142440610083" />
+</color>
+
+<color name="orange" weight="0.0436203082604">
+ <shade name="light" weight="0.655736823914" />
+ <shade name="hard" weight="0.201821222471" />
+ <shade name="cool" weight="0.142440610083" />
+</color>
+
+</colors>

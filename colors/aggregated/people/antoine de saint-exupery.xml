@@ -1,0 +1,33 @@
+<colors query="antoine de saint-exupery">
+
+<color name="green" weight="0.285714">
+ <shade name="light" weight="0.988928893072" />
+ <shade name="hard" weight="0.00738006636621" />
+ <shade name="neutral" weight="0.0036900331831" />
+</color>
+
+<color name="blue" weight="0.285714">
+ <shade name="light" weight="0.988928893072" />
+ <shade name="hard" weight="0.00738006636621" />
+ <shade name="neutral" weight="0.0036900331831" />
+</color>
+
+<color name="red" weight="0.142857">
+ <shade name="light" weight="0.988928893072" />
+ <shade name="hard" weight="0.00738006636621" />
+ <shade name="neutral" weight="0.0036900331831" />
+</color>
+
+<color name="purple" weight="0.142857">
+ <shade name="light" weight="0.988928893072" />
+ <shade name="hard" weight="0.00738006636621" />
+ <shade name="neutral" weight="0.0036900331831" />
+</color>
+
+<color name="orange" weight="0.142857">
+ <shade name="light" weight="0.988928893072" />
+ <shade name="hard" weight="0.00738006636621" />
+ <shade name="neutral" weight="0.0036900331831" />
+</color>
+
+</colors>

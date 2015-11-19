@@ -1,0 +1,33 @@
+<colors query="winston churchill">
+
+<color name="white" weight="0.59999937897">
+ <shade name="light" weight="0.798506595651" />
+ <shade name="hard" weight="0.130596873121" />
+ <shade name="cool" weight="0.0708954454083" />
+</color>
+
+<color name="green" weight="0.146391601054">
+ <shade name="light" weight="0.798506595651" />
+ <shade name="hard" weight="0.130596873121" />
+ <shade name="cool" weight="0.0708954454083" />
+</color>
+
+<color name="black" weight="0.131958626303">
+ <shade name="light" weight="0.798506595651" />
+ <shade name="hard" weight="0.130596873121" />
+ <shade name="cool" weight="0.0708954454083" />
+</color>
+
+<color name="blue" weight="0.103092676799">
+ <shade name="light" weight="0.798506595651" />
+ <shade name="hard" weight="0.130596873121" />
+ <shade name="cool" weight="0.0708954454083" />
+</color>
+
+<color name="pink" weight="0.0185566818238">
+ <shade name="light" weight="0.798506595651" />
+ <shade name="hard" weight="0.130596873121" />
+ <shade name="cool" weight="0.0708954454083" />
+</color>
+
+</colors>

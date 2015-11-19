@@ -1,0 +1,33 @@
+<colors query="joan didion">
+
+<color name="white" weight="0.962962000001">
+ <shade name="cool" weight="0.4999995" />
+ <shade name="hard" weight="0.333333" />
+ <shade name="weak" weight="0.1666665" />
+</color>
+
+<color name="green" weight="0.0222222">
+ <shade name="cool" weight="0.4999995" />
+ <shade name="hard" weight="0.333333" />
+ <shade name="weak" weight="0.1666665" />
+</color>
+
+<color name="blue" weight="0.0148148">
+ <shade name="cool" weight="0.4999995" />
+ <shade name="hard" weight="0.333333" />
+ <shade name="weak" weight="0.1666665" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="cool" weight="0.4999995" />
+ <shade name="hard" weight="0.333333" />
+ <shade name="weak" weight="0.1666665" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="cool" weight="0.4999995" />
+ <shade name="hard" weight="0.333333" />
+ <shade name="weak" weight="0.1666665" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="robert schuller">
+
+<color name="white" weight="0.4999995">
+ <shade name="bright" weight="0.692307000001" />
+ <shade name="hard" weight="0.307692" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="green" weight="0.24999975">
+ <shade name="bright" weight="0.692307000001" />
+ <shade name="hard" weight="0.307692" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="black" weight="0.24999975">
+ <shade name="bright" weight="0.692307000001" />
+ <shade name="hard" weight="0.307692" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="bright" weight="0.692307000001" />
+ <shade name="hard" weight="0.307692" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="bright" weight="0.692307000001" />
+ <shade name="hard" weight="0.307692" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+</colors>

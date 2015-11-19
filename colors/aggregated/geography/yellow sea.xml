@@ -1,0 +1,33 @@
+<colors query="yellow sea">
+
+<color name="green" weight="0.477295701626">
+ <shade name="bright" weight="0.775431081313" />
+ <shade name="light" weight="0.223032405071" />
+ <shade name="soft" weight="0.00153550709171" />
+</color>
+
+<color name="blue" weight="0.18498433409">
+ <shade name="bright" weight="0.775431081313" />
+ <shade name="light" weight="0.223032405071" />
+ <shade name="soft" weight="0.00153550709171" />
+</color>
+
+<color name="red" weight="0.171052459556">
+ <shade name="bright" weight="0.774539098604" />
+ <shade name="light" weight="0.222775849648" />
+ <shade name="warm" weight="0.0026840463813" />
+</color>
+
+<color name="yellow" weight="0.164344519965">
+ <shade name="bright" weight="0.774539098604" />
+ <shade name="light" weight="0.222775849648" />
+ <shade name="warm" weight="0.0026840463813" />
+</color>
+
+<color name="pink" weight="0.00232197908899">
+ <shade name="bright" weight="0.774539098604" />
+ <shade name="light" weight="0.222775849648" />
+ <shade name="warm" weight="0.0026840463813" />
+</color>
+
+</colors>

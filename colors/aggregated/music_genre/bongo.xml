@@ -1,0 +1,33 @@
+<colors query="bongo">
+
+<color name="green" weight="0.343730828045">
+ <shade name="cool" weight="0.537892141216" />
+ <shade name="light" weight="0.258779724296" />
+ <shade name="soft" weight="0.203326926233" />
+</color>
+
+<color name="red" weight="0.263813410525">
+ <shade name="cool" weight="0.537892141216" />
+ <shade name="light" weight="0.258779724296" />
+ <shade name="soft" weight="0.203326926233" />
+</color>
+
+<color name="black" weight="0.205379169757">
+ <shade name="cool" weight="0.537892141216" />
+ <shade name="light" weight="0.258779724296" />
+ <shade name="soft" weight="0.203326926233" />
+</color>
+
+<color name="white" weight="0.111712519115">
+ <shade name="cool" weight="0.537892141216" />
+ <shade name="light" weight="0.258779724296" />
+ <shade name="soft" weight="0.203326926233" />
+</color>
+
+<color name="blue" weight="0.0753629840489">
+ <shade name="cool" weight="0.537892141216" />
+ <shade name="light" weight="0.258779724296" />
+ <shade name="soft" weight="0.203326926233" />
+</color>
+
+</colors>

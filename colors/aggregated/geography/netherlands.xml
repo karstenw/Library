@@ -1,0 +1,33 @@
+<colors query="netherlands">
+
+<color name="orange" weight="0.969026050462">
+ <shade name="neutral" weight="0.643140897617" />
+ <shade name="light" weight="0.200910386601" />
+ <shade name="soft" weight="0.155947438891" />
+</color>
+
+<color name="green" weight="0.0153429124656">
+ <shade name="neutral" weight="0.643140897617" />
+ <shade name="light" weight="0.200910386601" />
+ <shade name="soft" weight="0.155947438891" />
+</color>
+
+<color name="blue" weight="0.00681009974352">
+ <shade name="neutral" weight="0.643140897617" />
+ <shade name="light" weight="0.200910386601" />
+ <shade name="soft" weight="0.155947438891" />
+</color>
+
+<color name="white" weight="0.00452212156882">
+ <shade name="neutral" weight="0.643140897617" />
+ <shade name="light" weight="0.200910386601" />
+ <shade name="soft" weight="0.155947438891" />
+</color>
+
+<color name="red" weight="0.00429780998307">
+ <shade name="neutral" weight="0.643140897617" />
+ <shade name="light" weight="0.200910386601" />
+ <shade name="soft" weight="0.155947438891" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="grime">
+
+<color name="green" weight="0.379855038528">
+ <shade name="fresh" weight="0.366476836183" />
+ <shade name="light" weight="0.343749590528" />
+ <shade name="dark" weight="0.289772382098" />
+</color>
+
+<color name="black" weight="0.368111600951">
+ <shade name="fresh" weight="0.366476836183" />
+ <shade name="light" weight="0.343749590528" />
+ <shade name="dark" weight="0.289772382098" />
+</color>
+
+<color name="yellow" weight="0.0934958299349">
+ <shade name="fresh" weight="0.366476836183" />
+ <shade name="light" weight="0.343749590528" />
+ <shade name="dark" weight="0.289772382098" />
+</color>
+
+<color name="white" weight="0.0840107457386">
+ <shade name="fresh" weight="0.366476836183" />
+ <shade name="light" weight="0.343749590528" />
+ <shade name="dark" weight="0.289772382098" />
+</color>
+
+<color name="red" weight="0.0745256615423">
+ <shade name="fresh" weight="0.366476836183" />
+ <shade name="light" weight="0.343749590528" />
+ <shade name="dark" weight="0.289772382098" />
+</color>
+
+</colors>

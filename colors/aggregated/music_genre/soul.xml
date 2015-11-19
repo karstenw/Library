@@ -1,0 +1,33 @@
+<colors query="soul">
+
+<color name="black" weight="0.50288814277">
+ <shade name="dark" weight="0.804170459241" />
+ <shade name="soft" weight="0.101506242406" />
+ <shade name="hard" weight="0.0943220106373" />
+</color>
+
+<color name="red" weight="0.168067055547">
+ <shade name="dark" weight="0.804170459241" />
+ <shade name="soft" weight="0.101506242406" />
+ <shade name="hard" weight="0.0943220106373" />
+</color>
+
+<color name="white" weight="0.156249840704">
+ <shade name="dark" weight="0.804170459241" />
+ <shade name="soft" weight="0.101506242406" />
+ <shade name="hard" weight="0.0943220106373" />
+</color>
+
+<color name="blue" weight="0.135241458761">
+ <shade name="dark" weight="0.804170459241" />
+ <shade name="soft" weight="0.101506242406" />
+ <shade name="hard" weight="0.0943220106373" />
+</color>
+
+<color name="green" weight="0.0375524827239">
+ <shade name="dark" weight="0.804170459241" />
+ <shade name="soft" weight="0.101506242406" />
+ <shade name="hard" weight="0.0943220106373" />
+</color>
+
+</colors>

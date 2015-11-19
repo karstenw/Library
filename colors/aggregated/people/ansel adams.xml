@@ -1,0 +1,33 @@
+<colors query="ansel adams">
+
+<color name="white" weight="0.926314861534">
+ <shade name="light" weight="0.976542818709" />
+ <shade name="cool" weight="0.0205839907865" />
+ <shade name="soft" weight="0.00287218476091" />
+</color>
+
+<color name="black" weight="0.0663157230416">
+ <shade name="light" weight="0.976542818709" />
+ <shade name="cool" weight="0.0205839907865" />
+ <shade name="soft" weight="0.00287218476091" />
+</color>
+
+<color name="green" weight="0.00561402946384">
+ <shade name="light" weight="0.976542818709" />
+ <shade name="cool" weight="0.0205839907865" />
+ <shade name="soft" weight="0.00287218476091" />
+</color>
+
+<color name="red" weight="0.00105263052447">
+ <shade name="light" weight="0.976542818709" />
+ <shade name="cool" weight="0.0205839907865" />
+ <shade name="soft" weight="0.00287218476091" />
+</color>
+
+<color name="pink" weight="0.00070175368298">
+ <shade name="light" weight="0.976542818709" />
+ <shade name="cool" weight="0.0205839907865" />
+ <shade name="soft" weight="0.00287218476091" />
+</color>
+
+</colors>

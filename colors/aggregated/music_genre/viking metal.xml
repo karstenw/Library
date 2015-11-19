@@ -1,0 +1,33 @@
+<colors query="viking metal">
+
+<color name="black" weight="0.999098173779">
+ <shade name="cool" weight="0.607972793756" />
+ <shade name="dark" weight="0.362125871691" />
+ <shade name="intense" weight="0.0299003013322" />
+</color>
+
+<color name="red" weight="0.000491359757596">
+ <shade name="cool" weight="0.607972793756" />
+ <shade name="dark" weight="0.362125871691" />
+ <shade name="intense" weight="0.0299003013322" />
+</color>
+
+<color name="white" weight="0.000409466464663">
+ <shade name="cool" weight="0.618242593671" />
+ <shade name="dark" weight="0.368242856339" />
+ <shade name="soft" weight="0.0135134993152" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="cool" weight="0.607972793756" />
+ <shade name="dark" weight="0.362125871691" />
+ <shade name="intense" weight="0.0299003013322" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="cool" weight="0.618242593671" />
+ <shade name="dark" weight="0.368242856339" />
+ <shade name="soft" weight="0.0135134993152" />
+</color>
+
+</colors>

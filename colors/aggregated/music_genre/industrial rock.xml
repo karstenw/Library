@@ -1,0 +1,33 @@
+<colors query="industrial rock">
+
+<color name="black" weight="0.454545">
+ <shade name="dark" weight="0.657672139933" />
+ <shade name="hard" weight="0.237773773668" />
+ <shade name="intense" weight="0.104553006861" />
+</color>
+
+<color name="white" weight="0.272727">
+ <shade name="dark" weight="0.676886722614" />
+ <shade name="hard" weight="0.24472058433" />
+ <shade name="cool" weight="0.078391581978" />
+</color>
+
+<color name="orange" weight="0.0909090000001">
+ <shade name="dark" weight="0.657672139933" />
+ <shade name="hard" weight="0.237773773668" />
+ <shade name="intense" weight="0.104553006861" />
+</color>
+
+<color name="green" weight="0.0909090000001">
+ <shade name="dark" weight="0.657672139933" />
+ <shade name="hard" weight="0.237773773668" />
+ <shade name="intense" weight="0.104553006861" />
+</color>
+
+<color name="blue" weight="0.0909090000001">
+ <shade name="dark" weight="0.657672139933" />
+ <shade name="hard" weight="0.237773773668" />
+ <shade name="intense" weight="0.104553006861" />
+</color>
+
+</colors>

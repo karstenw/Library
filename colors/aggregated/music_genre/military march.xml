@@ -1,0 +1,33 @@
+<colors query="military march">
+
+<color name="white" weight="0.599999400001">
+ <shade name="light" weight="0.333332777779" />
+ <shade name="cool" weight="0.333332777779" />
+ <shade name="bright" weight="0.333332777779" />
+</color>
+
+<color name="orange" weight="0.1999998">
+ <shade name="light" weight="0.333332777779" />
+ <shade name="intense" weight="0.333332777779" />
+ <shade name="cool" weight="0.333332777779" />
+</color>
+
+<color name="green" weight="0.1999998">
+ <shade name="light" weight="0.333332777779" />
+ <shade name="intense" weight="0.333332777779" />
+ <shade name="cool" weight="0.333332777779" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="light" weight="0.333332777779" />
+ <shade name="intense" weight="0.333332777779" />
+ <shade name="cool" weight="0.333332777779" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="light" weight="0.333332777779" />
+ <shade name="intense" weight="0.333332777779" />
+ <shade name="cool" weight="0.333332777779" />
+</color>
+
+</colors>

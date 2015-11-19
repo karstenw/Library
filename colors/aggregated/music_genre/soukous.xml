@@ -1,0 +1,33 @@
+<colors query="soukous">
+
+<color name="white" weight="0.428571">
+ <shade name="soft" weight="0.931033530322" />
+ <shade name="cool" weight="0.0459769644603" />
+ <shade name="light" weight="0.0229884822302" />
+</color>
+
+<color name="black" weight="0.285714">
+ <shade name="soft" weight="0.931033530322" />
+ <shade name="cool" weight="0.0459769644603" />
+ <shade name="light" weight="0.0229884822302" />
+</color>
+
+<color name="red" weight="0.142857">
+ <shade name="soft" weight="0.931033530322" />
+ <shade name="cool" weight="0.0459769644603" />
+ <shade name="light" weight="0.0229884822302" />
+</color>
+
+<color name="blue" weight="0.142857">
+ <shade name="soft" weight="0.931033530322" />
+ <shade name="cool" weight="0.0459769644603" />
+ <shade name="light" weight="0.0229884822302" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="soft" weight="0.931033530322" />
+ <shade name="cool" weight="0.0459769644603" />
+ <shade name="light" weight="0.0229884822302" />
+</color>
+
+</colors>

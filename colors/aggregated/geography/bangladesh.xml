@@ -1,0 +1,33 @@
+<colors query="bangladesh">
+
+<color name="black" weight="0.549712605828">
+ <shade name="weak" weight="0.462286451685" />
+ <shade name="hard" weight="0.380778050994" />
+ <shade name="light" weight="0.156934084914" />
+</color>
+
+<color name="green" weight="0.304014971571">
+ <shade name="weak" weight="0.462286451685" />
+ <shade name="hard" weight="0.380778050994" />
+ <shade name="light" weight="0.156934084914" />
+</color>
+
+<color name="red" weight="0.0583173373139">
+ <shade name="weak" weight="0.462286451685" />
+ <shade name="hard" weight="0.380778050994" />
+ <shade name="light" weight="0.156934084914" />
+</color>
+
+<color name="white" weight="0.0497131400053">
+ <shade name="weak" weight="0.462286451685" />
+ <shade name="hard" weight="0.380778050994" />
+ <shade name="light" weight="0.156934084914" />
+</color>
+
+<color name="blue" weight="0.0382408769272">
+ <shade name="weak" weight="0.462286451685" />
+ <shade name="hard" weight="0.380778050994" />
+ <shade name="light" weight="0.156934084914" />
+</color>
+
+</colors>

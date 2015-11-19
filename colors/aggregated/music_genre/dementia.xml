@@ -1,0 +1,33 @@
+<colors query="dementia">
+
+<color name="black" weight="0.895159605396">
+ <shade name="dark" weight="0.743029477142" />
+ <shade name="light" weight="0.203636137292" />
+ <shade name="intense" weight="0.0533332740526" />
+</color>
+
+<color name="white" weight="0.0626514740071">
+ <shade name="dark" weight="0.75030515541" />
+ <shade name="light" weight="0.205630124158" />
+ <shade name="hard" weight="0.0440635980339" />
+</color>
+
+<color name="red" weight="0.0285132095326">
+ <shade name="dark" weight="0.743029477142" />
+ <shade name="light" weight="0.203636137292" />
+ <shade name="intense" weight="0.0533332740526" />
+</color>
+
+<color name="green" weight="0.00698282682432">
+ <shade name="dark" weight="0.743029477142" />
+ <shade name="light" weight="0.203636137292" />
+ <shade name="intense" weight="0.0533332740526" />
+</color>
+
+<color name="blue" weight="0.00669187570664">
+ <shade name="dark" weight="0.743029477142" />
+ <shade name="light" weight="0.203636137292" />
+ <shade name="intense" weight="0.0533332740526" />
+</color>
+
+</colors>

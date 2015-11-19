@@ -1,0 +1,33 @@
+<colors query="raymond chandler">
+
+<color name="yellow" weight="0.272726975207">
+ <shade name="dark" weight="0.368420626039" />
+ <shade name="light" weight="0.315789108034" />
+ <shade name="cool" weight="0.315789108034" />
+</color>
+
+<color name="white" weight="0.242423977962">
+ <shade name="dark" weight="0.368420626039" />
+ <shade name="light" weight="0.315789108034" />
+ <shade name="cool" weight="0.315789108034" />
+</color>
+
+<color name="green" weight="0.181817983471">
+ <shade name="dark" weight="0.368420626039" />
+ <shade name="light" weight="0.315789108034" />
+ <shade name="cool" weight="0.315789108034" />
+</color>
+
+<color name="orange" weight="0.151514986226">
+ <shade name="dark" weight="0.368420626039" />
+ <shade name="light" weight="0.315789108034" />
+ <shade name="cool" weight="0.315789108034" />
+</color>
+
+<color name="black" weight="0.151514986226">
+ <shade name="dark" weight="0.368420626039" />
+ <shade name="light" weight="0.315789108034" />
+ <shade name="cool" weight="0.315789108034" />
+</color>
+
+</colors>

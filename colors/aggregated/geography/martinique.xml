@@ -1,0 +1,33 @@
+<colors query="martinique">
+
+<color name="black" weight="0.348992913365">
+ <shade name="light" weight="0.551019694087" />
+ <shade name="cool" weight="0.244897641816" />
+ <shade name="dark" weight="0.20408136818" />
+</color>
+
+<color name="orange" weight="0.271588074888">
+ <shade name="light" weight="0.551019694087" />
+ <shade name="cool" weight="0.244897641816" />
+ <shade name="dark" weight="0.20408136818" />
+</color>
+
+<color name="green" weight="0.199552358155">
+ <shade name="light" weight="0.551019694087" />
+ <shade name="cool" weight="0.244897641816" />
+ <shade name="dark" weight="0.20408136818" />
+</color>
+
+<color name="white" weight="0.131096055918">
+ <shade name="light" weight="0.551019694087" />
+ <shade name="cool" weight="0.244897641816" />
+ <shade name="dark" weight="0.20408136818" />
+</color>
+
+<color name="blue" weight="0.0487695225087">
+ <shade name="light" weight="0.551019694087" />
+ <shade name="cool" weight="0.244897641816" />
+ <shade name="dark" weight="0.20408136818" />
+</color>
+
+</colors>

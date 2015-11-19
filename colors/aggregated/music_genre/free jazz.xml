@@ -1,0 +1,33 @@
+<colors query="free jazz">
+
+<color name="black" weight="0.994574049195">
+ <shade name="cool" weight="0.544912134266" />
+ <shade name="hard" weight="0.227756243619" />
+ <shade name="intense" weight="0.227330531014" />
+</color>
+
+<color name="white" weight="0.00180831645308">
+ <shade name="cool" weight="0.668755635308" />
+ <shade name="hard" weight="0.279518956945" />
+ <shade name="dark" weight="0.0517240686683" />
+</color>
+
+<color name="blue" weight="0.00180831645308">
+ <shade name="cool" weight="0.544912134266" />
+ <shade name="hard" weight="0.227756243619" />
+ <shade name="intense" weight="0.227330531014" />
+</color>
+
+<color name="purple" weight="0.00144665316247">
+ <shade name="cool" weight="0.668755635308" />
+ <shade name="hard" weight="0.279518956945" />
+ <shade name="dark" weight="0.0517240686683" />
+</color>
+
+<color name="yellow" weight="0.000361663290616">
+ <shade name="cool" weight="0.544912134266" />
+ <shade name="hard" weight="0.227756243619" />
+ <shade name="intense" weight="0.227330531014" />
+</color>
+
+</colors>

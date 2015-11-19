@@ -1,0 +1,33 @@
+<colors query="john wayne">
+
+<color name="green" weight="0.408476970545">
+ <shade name="hard" weight="0.41440823582" />
+ <shade name="light" weight="0.363404145258" />
+ <shade name="cool" weight="0.222186569513" />
+</color>
+
+<color name="white" weight="0.335661510578">
+ <shade name="hard" weight="0.41440823582" />
+ <shade name="light" weight="0.363404145258" />
+ <shade name="cool" weight="0.222186569513" />
+</color>
+
+<color name="black" weight="0.145630919934">
+ <shade name="hard" weight="0.41440823582" />
+ <shade name="light" weight="0.363404145258" />
+ <shade name="cool" weight="0.222186569513" />
+</color>
+
+<color name="orange" weight="0.0558251859745">
+ <shade name="hard" weight="0.41440823582" />
+ <shade name="light" weight="0.363404145258" />
+ <shade name="cool" weight="0.222186569513" />
+</color>
+
+<color name="blue" weight="0.0544043965118">
+ <shade name="hard" weight="0.41440823582" />
+ <shade name="light" weight="0.363404145258" />
+ <shade name="cool" weight="0.222186569513" />
+</color>
+
+</colors>

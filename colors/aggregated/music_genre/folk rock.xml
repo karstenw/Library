@@ -1,0 +1,33 @@
+<colors query="folk rock">
+
+<color name="black" weight="0.55985096933">
+ <shade name="dark" weight="0.641974368516" />
+ <shade name="hard" weight="0.185956517803" />
+ <shade name="light" weight="0.172067649254" />
+</color>
+
+<color name="white" weight="0.18187423755">
+ <shade name="dark" weight="0.641974368516" />
+ <shade name="hard" weight="0.185956517803" />
+ <shade name="light" weight="0.172067649254" />
+</color>
+
+<color name="blue" weight="0.155892203615">
+ <shade name="dark" weight="0.641974368516" />
+ <shade name="hard" weight="0.185956517803" />
+ <shade name="light" weight="0.172067649254" />
+</color>
+
+<color name="green" weight="0.100216416609">
+ <shade name="dark" weight="0.641974368516" />
+ <shade name="hard" weight="0.185956517803" />
+ <shade name="light" weight="0.172067649254" />
+</color>
+
+<color name="red" weight="0.00216516949465">
+ <shade name="dark" weight="0.641974368516" />
+ <shade name="hard" weight="0.185956517803" />
+ <shade name="light" weight="0.172067649254" />
+</color>
+
+</colors>

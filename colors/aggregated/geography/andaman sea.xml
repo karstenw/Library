@@ -1,0 +1,33 @@
+<colors query="andaman sea">
+
+<color name="blue" weight="0.865341298014">
+ <shade name="cool" weight="0.499939590633" />
+ <shade name="fresh" weight="0.333293060422" />
+ <shade name="soft" weight="0.166646530211" />
+</color>
+
+<color name="green" weight="0.13134644702">
+ <shade name="cool" weight="0.499939590633" />
+ <shade name="fresh" weight="0.333293060422" />
+ <shade name="soft" weight="0.166646530211" />
+</color>
+
+<color name="white" weight="0.00331125496689">
+ <shade name="warm" weight="0.993083374847" />
+ <shade name="cool" weight="0.00414937343251" />
+ <shade name="fresh" weight="0.00276624895501" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="warm" weight="0.993083374847" />
+ <shade name="cool" weight="0.00414937343251" />
+ <shade name="fresh" weight="0.00276624895501" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="warm" weight="0.993083374847" />
+ <shade name="cool" weight="0.00414937343251" />
+ <shade name="fresh" weight="0.00276624895501" />
+</color>
+
+</colors>

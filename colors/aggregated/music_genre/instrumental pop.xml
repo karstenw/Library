@@ -1,0 +1,33 @@
+<colors query="instrumental pop">
+
+<color name="yellow" weight="0.333333">
+ <shade name="light" weight="0.945204498641" />
+ <shade name="cool" weight="0.0308218858252" />
+ <shade name="hard" weight="0.0239725778641" />
+</color>
+
+<color name="green" weight="0.333333">
+ <shade name="light" weight="0.945204498641" />
+ <shade name="cool" weight="0.0308218858252" />
+ <shade name="hard" weight="0.0239725778641" />
+</color>
+
+<color name="blue" weight="0.333333">
+ <shade name="light" weight="0.945204498641" />
+ <shade name="cool" weight="0.0308218858252" />
+ <shade name="hard" weight="0.0239725778641" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="light" weight="0.945204498641" />
+ <shade name="cool" weight="0.0308218858252" />
+ <shade name="hard" weight="0.0239725778641" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="light" weight="0.945204498641" />
+ <shade name="cool" weight="0.0308218858252" />
+ <shade name="hard" weight="0.0239725778641" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="robert burns">
+
+<color name="white" weight="0.899999089413">
+ <shade name="light" weight="0.454544793389" />
+ <shade name="cool" weight="0.363635834712" />
+ <shade name="warm" weight="0.181817917356" />
+</color>
+
+<color name="green" weight="0.0411764289274">
+ <shade name="light" weight="0.454544793389" />
+ <shade name="cool" weight="0.363635834712" />
+ <shade name="bright" weight="0.181817917356" />
+</color>
+
+<color name="black" weight="0.0411764289274">
+ <shade name="light" weight="0.454544793389" />
+ <shade name="cool" weight="0.363635834712" />
+ <shade name="warm" weight="0.181817917356" />
+</color>
+
+<color name="red" weight="0.0117646939793">
+ <shade name="light" weight="0.454544793389" />
+ <shade name="cool" weight="0.363635834712" />
+ <shade name="warm" weight="0.181817917356" />
+</color>
+
+<color name="purple" weight="0.00588234698963">
+ <shade name="light" weight="0.454544793389" />
+ <shade name="cool" weight="0.363635834712" />
+ <shade name="bright" weight="0.181817917356" />
+</color>
+
+</colors>

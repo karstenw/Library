@@ -1,0 +1,33 @@
+<colors query="country blues">
+
+<color name="black" weight="0.560869003922">
+ <shade name="dark" weight="0.427118200299" />
+ <shade name="cool" weight="0.294914947826" />
+ <shade name="hard" weight="0.277965812893" />
+</color>
+
+<color name="blue" weight="0.369564847545">
+ <shade name="dark" weight="0.427118200299" />
+ <shade name="cool" weight="0.294914947826" />
+ <shade name="hard" weight="0.277965812893" />
+</color>
+
+<color name="white" weight="0.0688042789695">
+ <shade name="dark" weight="0.427118200299" />
+ <shade name="cool" weight="0.294914947826" />
+ <shade name="hard" weight="0.277965812893" />
+</color>
+
+<color name="orange" weight="0.000434782173583">
+ <shade name="dark" weight="0.427118200299" />
+ <shade name="cool" weight="0.294914947826" />
+ <shade name="hard" weight="0.277965812893" />
+</color>
+
+<color name="red" weight="0.000326086630187">
+ <shade name="dark" weight="0.427118200299" />
+ <shade name="cool" weight="0.294914947826" />
+ <shade name="hard" weight="0.277965812893" />
+</color>
+
+</colors>

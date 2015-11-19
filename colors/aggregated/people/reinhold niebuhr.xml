@@ -1,0 +1,33 @@
+<colors query="reinhold niebuhr">
+
+<color name="white" weight="0.4999995">
+ <shade name="dark" weight="0.874999015626" />
+ <shade name="weak" weight="0.124999859375" />
+ <shade name="warm" weight="0.0" />
+</color>
+
+<color name="black" weight="0.4999995">
+ <shade name="dark" weight="0.777777000001" />
+ <shade name="weak" weight="0.111111" />
+ <shade name="intense" weight="0.111111" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="dark" weight="0.777777000001" />
+ <shade name="weak" weight="0.111111" />
+ <shade name="intense" weight="0.111111" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="dark" weight="0.777777000001" />
+ <shade name="weak" weight="0.111111" />
+ <shade name="intense" weight="0.111111" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="dark" weight="0.874999015626" />
+ <shade name="weak" weight="0.124999859375" />
+ <shade name="soft" weight="0.0" />
+</color>
+
+</colors>

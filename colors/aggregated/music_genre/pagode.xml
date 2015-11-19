@@ -1,0 +1,33 @@
+<colors query="pagode">
+
+<color name="black" weight="0.401928840428">
+ <shade name="light" weight="0.724999057501" />
+ <shade name="soft" weight="0.1749997725" />
+ <shade name="dark" weight="0.0999998700002" />
+</color>
+
+<color name="white" weight="0.311896780172">
+ <shade name="light" weight="0.724999057501" />
+ <shade name="soft" weight="0.1749997725" />
+ <shade name="dark" weight="0.0999998700002" />
+</color>
+
+<color name="pink" weight="0.196141274129">
+ <shade name="light" weight="0.724999057501" />
+ <shade name="soft" weight="0.1749997725" />
+ <shade name="dark" weight="0.0999998700002" />
+</color>
+
+<color name="orange" weight="0.0610931837451">
+ <shade name="light" weight="0.724999057501" />
+ <shade name="soft" weight="0.1749997725" />
+ <shade name="dark" weight="0.0999998700002" />
+</color>
+
+<color name="red" weight="0.0289388765108">
+ <shade name="light" weight="0.724999057501" />
+ <shade name="soft" weight="0.1749997725" />
+ <shade name="dark" weight="0.0999998700002" />
+</color>
+
+</colors>

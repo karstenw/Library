@@ -1,0 +1,33 @@
+<colors query="vietnam">
+
+<color name="orange" weight="0.342344118252">
+ <shade name="cool" weight="0.423375866359" />
+ <shade name="dark" weight="0.307012438059" />
+ <shade name="light" weight="0.269609907534" />
+</color>
+
+<color name="black" weight="0.336441633455">
+ <shade name="cool" weight="0.423375866359" />
+ <shade name="dark" weight="0.307012438059" />
+ <shade name="light" weight="0.269609907534" />
+</color>
+
+<color name="blue" weight="0.243969371628">
+ <shade name="cool" weight="0.423375866359" />
+ <shade name="dark" weight="0.307012438059" />
+ <shade name="light" weight="0.269609907534" />
+</color>
+
+<color name="green" weight="0.0596150964543">
+ <shade name="cool" weight="0.423375866359" />
+ <shade name="dark" weight="0.307012438059" />
+ <shade name="light" weight="0.269609907534" />
+</color>
+
+<color name="red" weight="0.0176287545951">
+ <shade name="cool" weight="0.423375866359" />
+ <shade name="dark" weight="0.307012438059" />
+ <shade name="light" weight="0.269609907534" />
+</color>
+
+</colors>

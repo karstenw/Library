@@ -1,0 +1,33 @@
+<colors query="united kingdom">
+
+<color name="green" weight="0.800599624225">
+ <shade name="light" weight="0.421175176437" />
+ <shade name="cool" weight="0.342204830855" />
+ <shade name="fresh" weight="0.236618553985" />
+</color>
+
+<color name="blue" weight="0.0950712053767">
+ <shade name="light" weight="0.421175176437" />
+ <shade name="cool" weight="0.342204830855" />
+ <shade name="fresh" weight="0.236618553985" />
+</color>
+
+<color name="red" weight="0.0487865396012">
+ <shade name="light" weight="0.421175176437" />
+ <shade name="cool" weight="0.342204830855" />
+ <shade name="fresh" weight="0.236618553985" />
+</color>
+
+<color name="white" weight="0.029397017452">
+ <shade name="light" weight="0.421175176437" />
+ <shade name="cool" weight="0.342204830855" />
+ <shade name="fresh" weight="0.236618553985" />
+</color>
+
+<color name="black" weight="0.0261445814786">
+ <shade name="light" weight="0.421175176437" />
+ <shade name="cool" weight="0.342204830855" />
+ <shade name="fresh" weight="0.236618553985" />
+</color>
+
+</colors>

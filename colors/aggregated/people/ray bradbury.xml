@@ -1,0 +1,33 @@
+<colors query="ray bradbury">
+
+<color name="green" weight="0.580478863624">
+ <shade name="bright" weight="0.92409904958" />
+ <shade name="light" weight="0.0635174780977" />
+ <shade name="cool" weight="0.0123824686544" />
+</color>
+
+<color name="black" weight="0.311643519704">
+ <shade name="bright" weight="0.92409904958" />
+ <shade name="light" weight="0.0635174780977" />
+ <shade name="cool" weight="0.0123824686544" />
+</color>
+
+<color name="white" weight="0.0684930812536">
+ <shade name="bright" weight="0.92409904958" />
+ <shade name="light" weight="0.0635174780977" />
+ <shade name="cool" weight="0.0123824686544" />
+</color>
+
+<color name="purple" weight="0.0222602514074">
+ <shade name="bright" weight="0.92409904958" />
+ <shade name="light" weight="0.0635174780977" />
+ <shade name="cool" weight="0.0123824686544" />
+</color>
+
+<color name="orange" weight="0.0171232703134">
+ <shade name="bright" weight="0.92409904958" />
+ <shade name="light" weight="0.0635174780977" />
+ <shade name="cool" weight="0.0123824686544" />
+</color>
+
+</colors>

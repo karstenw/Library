@@ -1,0 +1,33 @@
+<colors query="ghana">
+
+<color name="black" weight="0.351389492127">
+ <shade name="dark" weight="0.562727516399" />
+ <shade name="weak" weight="0.299634132108" />
+ <shade name="bright" weight="0.137636816781" />
+</color>
+
+<color name="green" weight="0.282252005847">
+ <shade name="dark" weight="0.562727516399" />
+ <shade name="weak" weight="0.299634132108" />
+ <shade name="bright" weight="0.137636816781" />
+</color>
+
+<color name="blue" weight="0.17747664004">
+ <shade name="dark" weight="0.562727516399" />
+ <shade name="weak" weight="0.299634132108" />
+ <shade name="bright" weight="0.137636816781" />
+</color>
+
+<color name="red" weight="0.101211577854">
+ <shade name="dark" weight="0.562727516399" />
+ <shade name="weak" weight="0.299634132108" />
+ <shade name="bright" weight="0.137636816781" />
+</color>
+
+<color name="white" weight="0.0876691836342">
+ <shade name="dark" weight="0.562727516399" />
+ <shade name="weak" weight="0.299634132108" />
+ <shade name="bright" weight="0.137636816781" />
+</color>
+
+</colors>

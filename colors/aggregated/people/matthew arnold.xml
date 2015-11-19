@@ -1,0 +1,33 @@
+<colors query="matthew arnold">
+
+<color name="white" weight="0.333333">
+ <shade name="light" weight="0.935999056513" />
+ <shade name="bright" weight="0.0559999435521" />
+ <shade name="fresh" weight="0.00799999193601" />
+</color>
+
+<color name="red" weight="0.238095">
+ <shade name="light" weight="0.935999056513" />
+ <shade name="bright" weight="0.0559999435521" />
+ <shade name="fresh" weight="0.00799999193601" />
+</color>
+
+<color name="green" weight="0.190476">
+ <shade name="light" weight="0.935999056513" />
+ <shade name="bright" weight="0.0559999435521" />
+ <shade name="fresh" weight="0.00799999193601" />
+</color>
+
+<color name="black" weight="0.190476">
+ <shade name="light" weight="0.935999056513" />
+ <shade name="bright" weight="0.0559999435521" />
+ <shade name="fresh" weight="0.00799999193601" />
+</color>
+
+<color name="purple" weight="0.047619">
+ <shade name="light" weight="0.935999056513" />
+ <shade name="bright" weight="0.0559999435521" />
+ <shade name="fresh" weight="0.00799999193601" />
+</color>
+
+</colors>

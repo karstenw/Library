@@ -1,0 +1,33 @@
+<colors query="samuel adams">
+
+<color name="blue" weight="0.617727912417">
+ <shade name="light" weight="0.883414528515" />
+ <shade name="cool" weight="0.0591132398263" />
+ <shade name="dark" weight="0.0574712053867" />
+</color>
+
+<color name="red" weight="0.227146586629">
+ <shade name="light" weight="0.883414528515" />
+ <shade name="cool" weight="0.0591132398263" />
+ <shade name="dark" weight="0.0574712053867" />
+</color>
+
+<color name="white" weight="0.132963855587">
+ <shade name="light" weight="0.883414528515" />
+ <shade name="cool" weight="0.0591132398263" />
+ <shade name="dark" weight="0.0574712053867" />
+</color>
+
+<color name="green" weight="0.011080321299">
+ <shade name="light" weight="0.883414528515" />
+ <shade name="cool" weight="0.0591132398263" />
+ <shade name="dark" weight="0.0574712053867" />
+</color>
+
+<color name="black" weight="0.011080321299">
+ <shade name="light" weight="0.883414528515" />
+ <shade name="cool" weight="0.0591132398263" />
+ <shade name="dark" weight="0.0574712053867" />
+</color>
+
+</colors>

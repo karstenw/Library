@@ -1,0 +1,33 @@
+<colors query="french polynesia">
+
+<color name="red" weight="0.347825603025">
+ <shade name="cool" weight="0.41666607639" />
+ <shade name="fresh" weight="0.333332861112" />
+ <shade name="light" weight="0.249999645834" />
+</color>
+
+<color name="yellow" weight="0.173912801513">
+ <shade name="cool" weight="0.41666607639" />
+ <shade name="fresh" weight="0.333332861112" />
+ <shade name="light" weight="0.249999645834" />
+</color>
+
+<color name="blue" weight="0.173912801513">
+ <shade name="cool" weight="0.41666607639" />
+ <shade name="fresh" weight="0.333332861112" />
+ <shade name="light" weight="0.249999645834" />
+</color>
+
+<color name="black" weight="0.173912801513">
+ <shade name="cool" weight="0.41666607639" />
+ <shade name="fresh" weight="0.333332861112" />
+ <shade name="light" weight="0.249999645834" />
+</color>
+
+<color name="white" weight="0.130434601134">
+ <shade name="cool" weight="0.41666607639" />
+ <shade name="fresh" weight="0.333332861112" />
+ <shade name="light" weight="0.249999645834" />
+</color>
+
+</colors>

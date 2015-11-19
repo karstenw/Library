@@ -1,0 +1,33 @@
+<colors query="chicken scratch">
+
+<color name="black" weight="0.638765858546">
+ <shade name="cool" weight="0.749999156251" />
+ <shade name="light" weight="0.124999859375" />
+ <shade name="hard" weight="0.124999859375" />
+</color>
+
+<color name="yellow" weight="0.273127470551">
+ <shade name="cool" weight="0.749999156251" />
+ <shade name="light" weight="0.124999859375" />
+ <shade name="hard" weight="0.124999859375" />
+</color>
+
+<color name="red" weight="0.0396475360477">
+ <shade name="cool" weight="0.749999156251" />
+ <shade name="light" weight="0.124999859375" />
+ <shade name="hard" weight="0.124999859375" />
+</color>
+
+<color name="purple" weight="0.0264316906985">
+ <shade name="cool" weight="0.749999156251" />
+ <shade name="light" weight="0.124999859375" />
+ <shade name="hard" weight="0.124999859375" />
+</color>
+
+<color name="white" weight="0.0220264089154">
+ <shade name="cool" weight="0.749999156251" />
+ <shade name="light" weight="0.124999859375" />
+ <shade name="hard" weight="0.124999859375" />
+</color>
+
+</colors>

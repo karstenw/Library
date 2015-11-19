@@ -1,0 +1,33 @@
+<colors query="lewis carroll">
+
+<color name="white" weight="0.68684447476">
+ <shade name="light" weight="0.555554814816" />
+ <shade name="hard" weight="0.222221925926" />
+ <shade name="dark" weight="0.222221925926" />
+</color>
+
+<color name="green" weight="0.153666899438">
+ <shade name="light" weight="0.555554814816" />
+ <shade name="hard" weight="0.222221925926" />
+ <shade name="dark" weight="0.222221925926" />
+</color>
+
+<color name="black" weight="0.14784618355">
+ <shade name="light" weight="0.555554814816" />
+ <shade name="hard" weight="0.222221925926" />
+ <shade name="dark" weight="0.222221925926" />
+</color>
+
+<color name="purple" weight="0.0058207158878">
+ <shade name="light" weight="0.555554814816" />
+ <shade name="hard" weight="0.222221925926" />
+ <shade name="dark" weight="0.222221925926" />
+</color>
+
+<color name="orange" weight="0.0058207158878">
+ <shade name="light" weight="0.555554814816" />
+ <shade name="hard" weight="0.222221925926" />
+ <shade name="dark" weight="0.222221925926" />
+</color>
+
+</colors>

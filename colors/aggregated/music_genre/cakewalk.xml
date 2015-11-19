@@ -1,0 +1,33 @@
+<colors query="cakewalk">
+
+<color name="pink" weight="0.460459890762">
+ <shade name="hard" weight="0.433711653822" />
+ <shade name="soft" weight="0.369317783822" />
+ <shade name="cool" weight="0.196969484705" />
+</color>
+
+<color name="blue" weight="0.160159962004">
+ <shade name="hard" weight="0.433711653822" />
+ <shade name="soft" weight="0.369317783822" />
+ <shade name="cool" weight="0.196969484705" />
+</color>
+
+<color name="green" weight="0.155154963192">
+ <shade name="hard" weight="0.433711653822" />
+ <shade name="soft" weight="0.369317783822" />
+ <shade name="cool" weight="0.196969484705" />
+</color>
+
+<color name="orange" weight="0.123122970791">
+ <shade name="hard" weight="0.433711653822" />
+ <shade name="soft" weight="0.369317783822" />
+ <shade name="cool" weight="0.196969484705" />
+</color>
+
+<color name="black" weight="0.101100976015">
+ <shade name="hard" weight="0.433711653822" />
+ <shade name="soft" weight="0.369317783822" />
+ <shade name="cool" weight="0.196969484705" />
+</color>
+
+</colors>

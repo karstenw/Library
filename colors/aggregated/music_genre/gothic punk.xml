@@ -1,0 +1,33 @@
+<colors query="gothic punk">
+
+<color name="black" weight="0.692979500191">
+ <shade name="dark" weight="0.889801735923" />
+ <shade name="hard" weight="0.0937499056333" />
+ <shade name="cool" weight="0.0164473518655" />
+</color>
+
+<color name="white" weight="0.151709797816">
+ <shade name="dark" weight="0.889801735923" />
+ <shade name="hard" weight="0.0937499056333" />
+ <shade name="cool" weight="0.0164473518655" />
+</color>
+
+<color name="red" weight="0.0933400959441">
+ <shade name="dark" weight="0.889801735923" />
+ <shade name="hard" weight="0.0937499056333" />
+ <shade name="cool" weight="0.0164473518655" />
+</color>
+
+<color name="pink" weight="0.0528412939849">
+ <shade name="dark" weight="0.889801735923" />
+ <shade name="hard" weight="0.0937499056333" />
+ <shade name="cool" weight="0.0164473518655" />
+</color>
+
+<color name="orange" weight="0.00912830139399">
+ <shade name="dark" weight="0.889801735923" />
+ <shade name="hard" weight="0.0937499056333" />
+ <shade name="cool" weight="0.0164473518655" />
+</color>
+
+</colors>

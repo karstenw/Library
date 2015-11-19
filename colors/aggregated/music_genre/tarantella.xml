@@ -1,0 +1,33 @@
+<colors query="tarantella">
+
+<color name="blue" weight="0.650792984506">
+ <shade name="dark" weight="0.928570452625" />
+ <shade name="hard" weight="0.0408162836319" />
+ <shade name="bright" weight="0.0306122127239" />
+</color>
+
+<color name="black" weight="0.249999744048">
+ <shade name="dark" weight="0.928570452625" />
+ <shade name="hard" weight="0.0408162836319" />
+ <shade name="bright" weight="0.0306122127239" />
+</color>
+
+<color name="white" weight="0.0357142491497">
+ <shade name="dark" weight="0.928570452625" />
+ <shade name="hard" weight="0.0408162836319" />
+ <shade name="bright" weight="0.0306122127239" />
+</color>
+
+<color name="red" weight="0.0317459992442">
+ <shade name="dark" weight="0.928570452625" />
+ <shade name="hard" weight="0.0408162836319" />
+ <shade name="bright" weight="0.0306122127239" />
+</color>
+
+<color name="green" weight="0.0317459992442">
+ <shade name="dark" weight="0.928570452625" />
+ <shade name="hard" weight="0.0408162836319" />
+ <shade name="bright" weight="0.0306122127239" />
+</color>
+
+</colors>

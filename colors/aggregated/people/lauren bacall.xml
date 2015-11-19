@@ -1,0 +1,33 @@
+<colors query="lauren bacall">
+
+<color name="blue" weight="0.555555000001">
+ <shade name="bright" weight="0.897186291878" />
+ <shade name="dark" weight="0.0950532503828" />
+ <shade name="cool" weight="0.00775944901084" />
+</color>
+
+<color name="white" weight="0.253968">
+ <shade name="bright" weight="0.897186291878" />
+ <shade name="dark" weight="0.0950532503828" />
+ <shade name="cool" weight="0.00775944901084" />
+</color>
+
+<color name="black" weight="0.1650792">
+ <shade name="bright" weight="0.897186291878" />
+ <shade name="dark" weight="0.0950532503828" />
+ <shade name="cool" weight="0.00775944901084" />
+</color>
+
+<color name="green" weight="0.0222222">
+ <shade name="bright" weight="0.897186291878" />
+ <shade name="dark" weight="0.0950532503828" />
+ <shade name="cool" weight="0.00775944901084" />
+</color>
+
+<color name="red" weight="0.0031746">
+ <shade name="bright" weight="0.897186291878" />
+ <shade name="dark" weight="0.0950532503828" />
+ <shade name="cool" weight="0.00775944901084" />
+</color>
+
+</colors>

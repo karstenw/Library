@@ -1,0 +1,33 @@
+<colors query="electroclash">
+
+<color name="black" weight="0.290322252862">
+ <shade name="hard" weight="0.660515933926" />
+ <shade name="dark" weight="0.17785959785" />
+ <shade name="cool" weight="0.161623451989" />
+</color>
+
+<color name="red" weight="0.258064224766">
+ <shade name="hard" weight="0.660515933926" />
+ <shade name="dark" weight="0.17785959785" />
+ <shade name="cool" weight="0.161623451989" />
+</color>
+
+<color name="pink" weight="0.258064224766">
+ <shade name="hard" weight="0.660515933926" />
+ <shade name="dark" weight="0.17785959785" />
+ <shade name="cool" weight="0.161623451989" />
+</color>
+
+<color name="blue" weight="0.161290140479">
+ <shade name="hard" weight="0.660515933926" />
+ <shade name="dark" weight="0.17785959785" />
+ <shade name="cool" weight="0.161623451989" />
+</color>
+
+<color name="yellow" weight="0.0322580280958">
+ <shade name="hard" weight="0.660515933926" />
+ <shade name="dark" weight="0.17785959785" />
+ <shade name="cool" weight="0.161623451989" />
+</color>
+
+</colors>

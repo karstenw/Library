@@ -1,0 +1,33 @@
+<colors query="minuet">
+
+<color name="orange" weight="0.503539986023">
+ <shade name="light" weight="0.763999104593" />
+ <shade name="dark" weight="0.13999983592" />
+ <shade name="cool" weight="0.0959998874881" />
+</color>
+
+<color name="black" weight="0.173485260809">
+ <shade name="light" weight="0.763999104593" />
+ <shade name="dark" weight="0.13999983592" />
+ <shade name="cool" weight="0.0959998874881" />
+</color>
+
+<color name="red" weight="0.171911698353">
+ <shade name="light" weight="0.763999104593" />
+ <shade name="dark" weight="0.13999983592" />
+ <shade name="cool" weight="0.0959998874881" />
+</color>
+
+<color name="white" weight="0.112903106241">
+ <shade name="light" weight="0.763999104593" />
+ <shade name="dark" weight="0.13999983592" />
+ <shade name="cool" weight="0.0959998874881" />
+</color>
+
+<color name="blue" weight="0.0381588895658">
+ <shade name="light" weight="0.763999104593" />
+ <shade name="dark" weight="0.13999983592" />
+ <shade name="cool" weight="0.0959998874881" />
+</color>
+
+</colors>

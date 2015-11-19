@@ -1,0 +1,33 @@
+<colors query="hip hop">
+
+<color name="black" weight="0.671885398859">
+ <shade name="cool" weight="0.628930120658" />
+ <shade name="fresh" weight="0.207022831383" />
+ <shade name="hard" weight="0.164045939805" />
+</color>
+
+<color name="white" weight="0.222767973396">
+ <shade name="cool" weight="0.628930120658" />
+ <shade name="fresh" weight="0.207022831383" />
+ <shade name="hard" weight="0.164045939805" />
+</color>
+
+<color name="orange" weight="0.0759273478455">
+ <shade name="cool" weight="0.628930120658" />
+ <shade name="fresh" weight="0.207022831383" />
+ <shade name="hard" weight="0.164045939805" />
+</color>
+
+<color name="pink" weight="0.0224200564864">
+ <shade name="cool" weight="0.628930120658" />
+ <shade name="fresh" weight="0.207022831383" />
+ <shade name="hard" weight="0.164045939805" />
+</color>
+
+<color name="yellow" weight="0.006998209325">
+ <shade name="cool" weight="0.628930120658" />
+ <shade name="fresh" weight="0.207022831383" />
+ <shade name="hard" weight="0.164045939805" />
+</color>
+
+</colors>

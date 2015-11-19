@@ -1,0 +1,33 @@
+<colors query="beguine">
+
+<color name="blue" weight="0.894735937951">
+ <shade name="soft" weight="0.437499425782" />
+ <shade name="bright" weight="0.312499589844" />
+ <shade name="light" weight="0.249999671875" />
+</color>
+
+<color name="white" weight="0.0368420680333">
+ <shade name="soft" weight="0.437499425782" />
+ <shade name="bright" weight="0.312499589844" />
+ <shade name="light" weight="0.249999671875" />
+</color>
+
+<color name="black" weight="0.0263157628809">
+ <shade name="soft" weight="0.437499425782" />
+ <shade name="bright" weight="0.312499589844" />
+ <shade name="light" weight="0.249999671875" />
+</color>
+
+<color name="red" weight="0.0210526103047">
+ <shade name="soft" weight="0.437499425782" />
+ <shade name="bright" weight="0.312499589844" />
+ <shade name="light" weight="0.249999671875" />
+</color>
+
+<color name="green" weight="0.0210526103047">
+ <shade name="soft" weight="0.437499425782" />
+ <shade name="bright" weight="0.312499589844" />
+ <shade name="light" weight="0.249999671875" />
+</color>
+
+</colors>

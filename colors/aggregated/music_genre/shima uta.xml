@@ -1,0 +1,33 @@
+<colors query="shima uta">
+
+<color name="blue" weight="0.749999250001">
+ <shade name="soft" weight="0.4999995" />
+ <shade name="fresh" weight="0.4999995" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="green" weight="0.24999975">
+ <shade name="soft" weight="0.4999995" />
+ <shade name="fresh" weight="0.4999995" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="soft" weight="0.4999995" />
+ <shade name="fresh" weight="0.4999995" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="soft" weight="0.4999995" />
+ <shade name="fresh" weight="0.4999995" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="soft" weight="0.4999995" />
+ <shade name="fresh" weight="0.4999995" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+</colors>

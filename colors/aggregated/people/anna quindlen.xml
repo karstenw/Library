@@ -1,0 +1,33 @@
+<colors query="anna quindlen">
+
+<color name="blue" weight="0.998649473685">
+ <shade name="bright" weight="0.666665111115" />
+ <shade name="cool" weight="0.333332555557" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="white" weight="0.000613421052632">
+ <shade name="warm" weight="0.571428000001" />
+ <shade name="bright" weight="0.285714" />
+ <shade name="cool" weight="0.142857" />
+</color>
+
+<color name="green" weight="0.000368052631579">
+ <shade name="bright" weight="0.666665111115" />
+ <shade name="cool" weight="0.333332555557" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="black" weight="0.000245368421053">
+ <shade name="warm" weight="0.571428000001" />
+ <shade name="bright" weight="0.285714" />
+ <shade name="cool" weight="0.142857" />
+</color>
+
+<color name="red" weight="0.000122684210526">
+ <shade name="warm" weight="0.571428000001" />
+ <shade name="bright" weight="0.285714" />
+ <shade name="cool" weight="0.142857" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="kazakhstan">
+
+<color name="blue" weight="0.370655925583">
+ <shade name="cool" weight="0.56281331522" />
+ <shade name="light" weight="0.241205706523" />
+ <shade name="weak" weight="0.19597963655" />
+</color>
+
+<color name="black" weight="0.196910960466">
+ <shade name="cool" weight="0.56281331522" />
+ <shade name="light" weight="0.241205706523" />
+ <shade name="weak" weight="0.19597963655" />
+</color>
+
+<color name="red" weight="0.177605964342">
+ <shade name="cool" weight="0.56281331522" />
+ <shade name="light" weight="0.241205706523" />
+ <shade name="weak" weight="0.19597963655" />
+</color>
+
+<color name="pink" weight="0.138995972094">
+ <shade name="cool" weight="0.56281331522" />
+ <shade name="light" weight="0.241205706523" />
+ <shade name="weak" weight="0.19597963655" />
+</color>
+
+<color name="white" weight="0.115829976745">
+ <shade name="cool" weight="0.56281331522" />
+ <shade name="light" weight="0.241205706523" />
+ <shade name="weak" weight="0.19597963655" />
+</color>
+
+</colors>

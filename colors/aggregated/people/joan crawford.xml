@@ -1,0 +1,33 @@
+<colors query="joan crawford">
+
+<color name="red" weight="0.333332990544">
+ <shade name="hard" weight="0.647302230403" />
+ <shade name="dark" weight="0.336099235017" />
+ <shade name="intense" weight="0.0165974930873" />
+</color>
+
+<color name="black" weight="0.267139205188">
+ <shade name="hard" weight="0.647302230403" />
+ <shade name="dark" weight="0.336099235017" />
+ <shade name="intense" weight="0.0165974930873" />
+</color>
+
+<color name="blue" weight="0.198581356069">
+ <shade name="hard" weight="0.647302230403" />
+ <shade name="dark" weight="0.336099235017" />
+ <shade name="intense" weight="0.0165974930873" />
+</color>
+
+<color name="white" weight="0.18203290973">
+ <shade name="hard" weight="0.647302230403" />
+ <shade name="dark" weight="0.336099235017" />
+ <shade name="cool" weight="0.0165974930873" />
+</color>
+
+<color name="green" weight="0.0189125101018">
+ <shade name="hard" weight="0.647302230403" />
+ <shade name="dark" weight="0.336099235017" />
+ <shade name="intense" weight="0.0165974930873" />
+</color>
+
+</colors>

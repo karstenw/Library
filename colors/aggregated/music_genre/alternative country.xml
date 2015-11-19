@@ -1,0 +1,33 @@
+<colors query="alternative country">
+
+<color name="red" weight="0.266666364445">
+ <shade name="dark" weight="0.859344018125" />
+ <shade name="cool" weight="0.131021061059" />
+ <shade name="light" weight="0.00963390154849" />
+</color>
+
+<color name="pink" weight="0.199999773334">
+ <shade name="dark" weight="0.859344018125" />
+ <shade name="cool" weight="0.131021061059" />
+ <shade name="light" weight="0.00963390154849" />
+</color>
+
+<color name="blue" weight="0.199999773334">
+ <shade name="dark" weight="0.859344018125" />
+ <shade name="cool" weight="0.131021061059" />
+ <shade name="light" weight="0.00963390154849" />
+</color>
+
+<color name="black" weight="0.199999773334">
+ <shade name="dark" weight="0.859344018125" />
+ <shade name="cool" weight="0.131021061059" />
+ <shade name="light" weight="0.00963390154849" />
+</color>
+
+<color name="orange" weight="0.133333182222">
+ <shade name="dark" weight="0.859344018125" />
+ <shade name="cool" weight="0.131021061059" />
+ <shade name="light" weight="0.00963390154849" />
+</color>
+
+</colors>

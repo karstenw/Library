@@ -1,0 +1,33 @@
+<colors query="psychedelic rock">
+
+<color name="pink" weight="0.552844972614">
+ <shade name="hard" weight="0.56573636502" />
+ <shade name="dark" weight="0.321115148033" />
+ <shade name="cool" weight="0.113147273004" />
+</color>
+
+<color name="black" weight="0.284552559434">
+ <shade name="hard" weight="0.56573636502" />
+ <shade name="dark" weight="0.321115148033" />
+ <shade name="cool" weight="0.113147273004" />
+</color>
+
+<color name="white" weight="0.124661121276">
+ <shade name="hard" weight="0.56573636502" />
+ <shade name="dark" weight="0.321115148033" />
+ <shade name="cool" weight="0.113147273004" />
+</color>
+
+<color name="blue" weight="0.0271002437556">
+ <shade name="hard" weight="0.56573636502" />
+ <shade name="dark" weight="0.321115148033" />
+ <shade name="cool" weight="0.113147273004" />
+</color>
+
+<color name="red" weight="0.0108400975022">
+ <shade name="hard" weight="0.56573636502" />
+ <shade name="dark" weight="0.321115148033" />
+ <shade name="cool" weight="0.113147273004" />
+</color>
+
+</colors>

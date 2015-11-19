@@ -1,0 +1,33 @@
+<colors query="malaysia">
+
+<color name="green" weight="0.798138609593">
+ <shade name="light" weight="0.478610115749" />
+ <shade name="cool" weight="0.30241382535" />
+ <shade name="fresh" weight="0.218974716675" />
+</color>
+
+<color name="black" weight="0.0850995471155">
+ <shade name="light" weight="0.478610115749" />
+ <shade name="cool" weight="0.30241382535" />
+ <shade name="fresh" weight="0.218974716675" />
+</color>
+
+<color name="blue" weight="0.0476768891293">
+ <shade name="light" weight="0.478610115749" />
+ <shade name="cool" weight="0.30241382535" />
+ <shade name="fresh" weight="0.218974716675" />
+</color>
+
+<color name="red" weight="0.0437654813737">
+ <shade name="light" weight="0.478610115749" />
+ <shade name="cool" weight="0.30241382535" />
+ <shade name="fresh" weight="0.218974716675" />
+</color>
+
+<color name="white" weight="0.0253184366884">
+ <shade name="light" weight="0.478610115749" />
+ <shade name="cool" weight="0.30241382535" />
+ <shade name="fresh" weight="0.218974716675" />
+</color>
+
+</colors>

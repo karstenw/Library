@@ -1,0 +1,33 @@
+<colors query="madonna">
+
+<color name="black" weight="0.725299092366">
+ <shade name="light" weight="0.83873078906" />
+ <shade name="hard" weight="0.125468670884" />
+ <shade name="dark" weight="0.0357994848989" />
+</color>
+
+<color name="blue" weight="0.162478418723">
+ <shade name="light" weight="0.83873078906" />
+ <shade name="hard" weight="0.125468670884" />
+ <shade name="dark" weight="0.0357994848989" />
+</color>
+
+<color name="pink" weight="0.0462592334501">
+ <shade name="light" weight="0.83873078906" />
+ <shade name="hard" weight="0.125468670884" />
+ <shade name="dark" weight="0.0357994848989" />
+</color>
+
+<color name="white" weight="0.0359794037946">
+ <shade name="light" weight="0.83873078906" />
+ <shade name="hard" weight="0.125468670884" />
+ <shade name="dark" weight="0.0357994848989" />
+</color>
+
+<color name="red" weight="0.0299828364955">
+ <shade name="light" weight="0.83873078906" />
+ <shade name="hard" weight="0.125468670884" />
+ <shade name="dark" weight="0.0357994848989" />
+</color>
+
+</colors>

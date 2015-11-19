@@ -1,0 +1,33 @@
+<colors query="catherine the great">
+
+<color name="white" weight="0.428571">
+ <shade name="light" weight="0.428570877552" />
+ <shade name="dark" weight="0.428570877552" />
+ <shade name="warm" weight="0.142856959184" />
+</color>
+
+<color name="red" weight="0.142857">
+ <shade name="light" weight="0.428570877552" />
+ <shade name="dark" weight="0.428570877552" />
+ <shade name="warm" weight="0.142856959184" />
+</color>
+
+<color name="orange" weight="0.142857">
+ <shade name="light" weight="0.428570877552" />
+ <shade name="dark" weight="0.428570877552" />
+ <shade name="warm" weight="0.142856959184" />
+</color>
+
+<color name="green" weight="0.142857">
+ <shade name="light" weight="0.428570877552" />
+ <shade name="dark" weight="0.428570877552" />
+ <shade name="intense" weight="0.142856959184" />
+</color>
+
+<color name="black" weight="0.142857">
+ <shade name="light" weight="0.428570877552" />
+ <shade name="dark" weight="0.428570877552" />
+ <shade name="warm" weight="0.142856959184" />
+</color>
+
+</colors>

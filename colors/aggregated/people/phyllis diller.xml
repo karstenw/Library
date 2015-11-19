@@ -1,0 +1,33 @@
+<colors query="phyllis diller">
+
+<color name="white" weight="0.873683332245">
+ <shade name="dark" weight="0.636363000001" />
+ <shade name="hard" weight="0.272727" />
+ <shade name="light" weight="0.0909090000001" />
+</color>
+
+<color name="black" weight="0.0684209838505">
+ <shade name="dark" weight="0.636363000001" />
+ <shade name="hard" weight="0.272727" />
+ <shade name="light" weight="0.0909090000001" />
+</color>
+
+<color name="red" weight="0.0210526104155">
+ <shade name="dark" weight="0.636363000001" />
+ <shade name="hard" weight="0.272727" />
+ <shade name="light" weight="0.0909090000001" />
+</color>
+
+<color name="green" weight="0.0210526104155">
+ <shade name="dark" weight="0.636363000001" />
+ <shade name="hard" weight="0.272727" />
+ <shade name="light" weight="0.0909090000001" />
+</color>
+
+<color name="pink" weight="0.0157894578117">
+ <shade name="dark" weight="0.636363000001" />
+ <shade name="hard" weight="0.272727" />
+ <shade name="light" weight="0.0909090000001" />
+</color>
+
+</colors>

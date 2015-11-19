@@ -1,0 +1,33 @@
+<colors query="experimental noise">
+
+<color name="blue" weight="0.4999995">
+ <shade name="dark" weight="0.864340209764" />
+ <shade name="cool" weight="0.126614858829" />
+ <shade name="intense" weight="0.00904391848781" />
+</color>
+
+<color name="white" weight="0.333333">
+ <shade name="dark" weight="0.864340209764" />
+ <shade name="cool" weight="0.126614858829" />
+ <shade name="hard" weight="0.00904391848781" />
+</color>
+
+<color name="green" weight="0.1666665">
+ <shade name="dark" weight="0.864340209764" />
+ <shade name="cool" weight="0.126614858829" />
+ <shade name="intense" weight="0.00904391848781" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="dark" weight="0.864340209764" />
+ <shade name="cool" weight="0.126614858829" />
+ <shade name="intense" weight="0.00904391848781" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="dark" weight="0.864340209764" />
+ <shade name="cool" weight="0.126614858829" />
+ <shade name="intense" weight="0.00904391848781" />
+</color>
+
+</colors>

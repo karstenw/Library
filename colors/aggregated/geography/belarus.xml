@@ -1,0 +1,33 @@
+<colors query="belarus">
+
+<color name="green" weight="0.615383962131">
+ <shade name="dark" weight="0.947652431916" />
+ <shade name="fresh" weight="0.0297833621459" />
+ <shade name="weak" weight="0.0225631531409" />
+</color>
+
+<color name="red" weight="0.130503840245">
+ <shade name="dark" weight="0.947652431916" />
+ <shade name="fresh" weight="0.0297833621459" />
+ <shade name="weak" weight="0.0225631531409" />
+</color>
+
+<color name="blue" weight="0.0970821250603">
+ <shade name="dark" weight="0.947652431916" />
+ <shade name="fresh" weight="0.0297833621459" />
+ <shade name="weak" weight="0.0225631531409" />
+</color>
+
+<color name="black" weight="0.0811670225914">
+ <shade name="dark" weight="0.947652431916" />
+ <shade name="fresh" weight="0.0297833621459" />
+ <shade name="weak" weight="0.0225631531409" />
+</color>
+
+<color name="white" weight="0.0758619884351">
+ <shade name="dark" weight="0.947652431916" />
+ <shade name="fresh" weight="0.0297833621459" />
+ <shade name="weak" weight="0.0225631531409" />
+</color>
+
+</colors>

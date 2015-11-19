@@ -1,0 +1,33 @@
+<colors query="william wordsworth">
+
+<color name="white" weight="0.93749905413">
+ <shade name="light" weight="0.777776913581" />
+ <shade name="soft" weight="0.111110987654" />
+ <shade name="hard" weight="0.111110987654" />
+</color>
+
+<color name="yellow" weight="0.0267856872609">
+ <shade name="light" weight="0.777776913581" />
+ <shade name="soft" weight="0.111110987654" />
+ <shade name="hard" weight="0.111110987654" />
+</color>
+
+<color name="orange" weight="0.0178571248406">
+ <shade name="light" weight="0.777776913581" />
+ <shade name="soft" weight="0.111110987654" />
+ <shade name="hard" weight="0.111110987654" />
+</color>
+
+<color name="red" weight="0.00892856242029">
+ <shade name="light" weight="0.777776913581" />
+ <shade name="soft" weight="0.111110987654" />
+ <shade name="hard" weight="0.111110987654" />
+</color>
+
+<color name="purple" weight="0.00892856242029">
+ <shade name="light" weight="0.777776913581" />
+ <shade name="soft" weight="0.111110987654" />
+ <shade name="hard" weight="0.111110987654" />
+</color>
+
+</colors>

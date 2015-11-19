@@ -1,0 +1,33 @@
+<colors query="polonaise">
+
+<color name="blue" weight="0.3727267831">
+ <shade name="light" weight="0.674999173126" />
+ <shade name="hard" weight="0.174999785625" />
+ <shade name="soft" weight="0.14999981625" />
+</color>
+
+<color name="green" weight="0.181817942976">
+ <shade name="light" weight="0.674999173126" />
+ <shade name="hard" weight="0.174999785625" />
+ <shade name="soft" weight="0.14999981625" />
+</color>
+
+<color name="orange" weight="0.168181597252">
+ <shade name="light" weight="0.674999173126" />
+ <shade name="hard" weight="0.174999785625" />
+ <shade name="soft" weight="0.14999981625" />
+</color>
+
+<color name="pink" weight="0.140908905806">
+ <shade name="light" weight="0.674999173126" />
+ <shade name="hard" weight="0.174999785625" />
+ <shade name="soft" weight="0.14999981625" />
+</color>
+
+<color name="white" weight="0.136363457232">
+ <shade name="light" weight="0.674999173126" />
+ <shade name="hard" weight="0.174999785625" />
+ <shade name="soft" weight="0.14999981625" />
+</color>
+
+</colors>

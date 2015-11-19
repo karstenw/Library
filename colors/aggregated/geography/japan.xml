@@ -1,0 +1,33 @@
+<colors query="japan">
+
+<color name="black" weight="0.327054399664">
+ <shade name="cool" weight="0.868335021683" />
+ <shade name="light" weight="0.0755249530487" />
+ <shade name="hard" weight="0.0561388688437" />
+</color>
+
+<color name="green" weight="0.234588757874">
+ <shade name="cool" weight="0.868335021683" />
+ <shade name="light" weight="0.0755249530487" />
+ <shade name="hard" weight="0.0561388688437" />
+</color>
+
+<color name="blue" weight="0.190496345354">
+ <shade name="cool" weight="0.868335021683" />
+ <shade name="light" weight="0.0755249530487" />
+ <shade name="hard" weight="0.0561388688437" />
+</color>
+
+<color name="white" weight="0.129708747511">
+ <shade name="cool" weight="0.868335021683" />
+ <shade name="light" weight="0.0755249530487" />
+ <shade name="hard" weight="0.0561388688437" />
+</color>
+
+<color name="pink" weight="0.118150542287">
+ <shade name="cool" weight="0.868335021683" />
+ <shade name="light" weight="0.0755249530487" />
+ <shade name="hard" weight="0.0561388688437" />
+</color>
+
+</colors>

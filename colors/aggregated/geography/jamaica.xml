@@ -1,0 +1,33 @@
+<colors query="jamaica">
+
+<color name="green" weight="0.78969429025">
+ <shade name="cool" weight="0.604280973376" />
+ <shade name="light" weight="0.206836744601" />
+ <shade name="dark" weight="0.188880967107" />
+</color>
+
+<color name="blue" weight="0.06667091139">
+ <shade name="cool" weight="0.604280973376" />
+ <shade name="light" weight="0.206836744601" />
+ <shade name="dark" weight="0.188880967107" />
+</color>
+
+<color name="red" weight="0.0559906197596">
+ <shade name="cool" weight="0.604280973376" />
+ <shade name="light" weight="0.206836744601" />
+ <shade name="dark" weight="0.188880967107" />
+</color>
+
+<color name="black" weight="0.0515243159868">
+ <shade name="cool" weight="0.604280973376" />
+ <shade name="light" weight="0.206836744601" />
+ <shade name="dark" weight="0.188880967107" />
+</color>
+
+<color name="white" weight="0.0361188044229">
+ <shade name="cool" weight="0.604280973376" />
+ <shade name="light" weight="0.206836744601" />
+ <shade name="dark" weight="0.188880967107" />
+</color>
+
+</colors>

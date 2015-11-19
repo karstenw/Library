@@ -1,0 +1,33 @@
+<colors query="south korea">
+
+<color name="black" weight="0.47711261632">
+ <shade name="light" weight="0.560125911723" />
+ <shade name="hard" weight="0.325948976878" />
+ <shade name="weak" weight="0.113923914249" />
+</color>
+
+<color name="white" weight="0.415758032834">
+ <shade name="light" weight="0.560125911723" />
+ <shade name="hard" weight="0.325948976878" />
+ <shade name="weak" weight="0.113923914249" />
+</color>
+
+<color name="green" weight="0.0540081794109">
+ <shade name="light" weight="0.560125911723" />
+ <shade name="hard" weight="0.325948976878" />
+ <shade name="weak" weight="0.113923914249" />
+</color>
+
+<color name="blue" weight="0.0303543728827">
+ <shade name="light" weight="0.560125911723" />
+ <shade name="hard" weight="0.325948976878" />
+ <shade name="weak" weight="0.113923914249" />
+</color>
+
+<color name="red" weight="0.022765779662">
+ <shade name="light" weight="0.560125911723" />
+ <shade name="hard" weight="0.325948976878" />
+ <shade name="weak" weight="0.113923914249" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="malcolm x">
+
+<color name="purple" weight="0.587609071295">
+ <shade name="cool" weight="0.511520060801" />
+ <shade name="light" weight="0.290322196671" />
+ <shade name="dark" weight="0.19815641995" />
+</color>
+
+<color name="white" weight="0.193033568217">
+ <shade name="cool" weight="0.511520060801" />
+ <shade name="light" weight="0.290322196671" />
+ <shade name="dark" weight="0.19815641995" />
+</color>
+
+<color name="red" weight="0.100239194515">
+ <shade name="cool" weight="0.511520060801" />
+ <shade name="light" weight="0.290322196671" />
+ <shade name="dark" weight="0.19815641995" />
+</color>
+
+<color name="black" weight="0.0930602601598">
+ <shade name="cool" weight="0.511520060801" />
+ <shade name="light" weight="0.290322196671" />
+ <shade name="dark" weight="0.19815641995" />
+</color>
+
+<color name="orange" weight="0.0260568728447">
+ <shade name="cool" weight="0.511520060801" />
+ <shade name="light" weight="0.290322196671" />
+ <shade name="dark" weight="0.19815641995" />
+</color>
+
+</colors>

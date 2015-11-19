@@ -1,0 +1,33 @@
+<colors query="barbara walters">
+
+<color name="black" weight="0.805824397776">
+ <shade name="light" weight="0.621620915998" />
+ <shade name="soft" weight="0.333332954955" />
+ <shade name="cool" weight="0.0450449939129" />
+</color>
+
+<color name="white" weight="0.0970872768405">
+ <shade name="light" weight="0.621620915998" />
+ <shade name="soft" weight="0.333332954955" />
+ <shade name="cool" weight="0.0450449939129" />
+</color>
+
+<color name="green" weight="0.0485436384203">
+ <shade name="light" weight="0.621620915998" />
+ <shade name="soft" weight="0.333332954955" />
+ <shade name="cool" weight="0.0450449939129" />
+</color>
+
+<color name="blue" weight="0.0291261830522">
+ <shade name="light" weight="0.621620915998" />
+ <shade name="soft" weight="0.333332954955" />
+ <shade name="cool" weight="0.0450449939129" />
+</color>
+
+<color name="red" weight="0.0194174553681">
+ <shade name="light" weight="0.621620915998" />
+ <shade name="soft" weight="0.333332954955" />
+ <shade name="cool" weight="0.0450449939129" />
+</color>
+
+</colors>

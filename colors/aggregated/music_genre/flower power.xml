@@ -1,0 +1,33 @@
+<colors query="flower power">
+
+<color name="blue" weight="0.256448835957">
+ <shade name="bright" weight="0.435648723917" />
+ <shade name="cool" weight="0.384395932868" />
+ <shade name="light" weight="0.179954244128" />
+</color>
+
+<color name="white" weight="0.216995168887">
+ <shade name="bright" weight="0.435648723917" />
+ <shade name="cool" weight="0.384395932868" />
+ <shade name="light" weight="0.179954244128" />
+</color>
+
+<color name="yellow" weight="0.188163642951">
+ <shade name="bright" weight="0.435648723917" />
+ <shade name="cool" weight="0.384395932868" />
+ <shade name="light" weight="0.179954244128" />
+</color>
+
+<color name="purple" weight="0.169954258149">
+ <shade name="bright" weight="0.435648723917" />
+ <shade name="cool" weight="0.384395932868" />
+ <shade name="light" weight="0.179954244128" />
+</color>
+
+<color name="red" weight="0.168436809415">
+ <shade name="bright" weight="0.435648723917" />
+ <shade name="cool" weight="0.384395932868" />
+ <shade name="light" weight="0.179954244128" />
+</color>
+
+</colors>

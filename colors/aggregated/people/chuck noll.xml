@@ -1,0 +1,33 @@
+<colors query="chuck noll">
+
+<color name="green" weight="0.636363000001">
+ <shade name="intense" weight="0.4999995" />
+ <shade name="hard" weight="0.4999995" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="white" weight="0.272727">
+ <shade name="hard" weight="0.999998000004" />
+ <shade name="weak" weight="0.0" />
+ <shade name="warm" weight="0.0" />
+</color>
+
+<color name="blue" weight="0.0909090000001">
+ <shade name="intense" weight="0.4999995" />
+ <shade name="hard" weight="0.4999995" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="intense" weight="0.4999995" />
+ <shade name="hard" weight="0.4999995" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="intense" weight="0.4999995" />
+ <shade name="hard" weight="0.4999995" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+</colors>

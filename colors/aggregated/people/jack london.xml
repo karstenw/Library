@@ -1,0 +1,33 @@
+<colors query="jack london">
+
+<color name="white" weight="0.783644857547">
+ <shade name="light" weight="0.466666013334" />
+ <shade name="cool" weight="0.333332866667" />
+ <shade name="weak" weight="0.19999972" />
+</color>
+
+<color name="green" weight="0.163543274619">
+ <shade name="light" weight="0.466666013334" />
+ <shade name="cool" weight="0.333332866667" />
+ <shade name="weak" weight="0.19999972" />
+</color>
+
+<color name="black" weight="0.0323679397683">
+ <shade name="light" weight="0.466666013334" />
+ <shade name="cool" weight="0.333332866667" />
+ <shade name="weak" weight="0.19999972" />
+</color>
+
+<color name="yellow" weight="0.0102214546637">
+ <shade name="light" weight="0.466666013334" />
+ <shade name="cool" weight="0.333332866667" />
+ <shade name="weak" weight="0.19999972" />
+</color>
+
+<color name="red" weight="0.0102214546637">
+ <shade name="light" weight="0.466666013334" />
+ <shade name="cool" weight="0.333332866667" />
+ <shade name="weak" weight="0.19999972" />
+</color>
+
+</colors>

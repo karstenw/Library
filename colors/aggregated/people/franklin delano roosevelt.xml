@@ -1,0 +1,33 @@
+<colors query="franklin delano roosevelt">
+
+<color name="black" weight="0.988804981344">
+ <shade name="hard" weight="0.499999300001" />
+ <shade name="neutral" weight="0.399999440001" />
+ <shade name="soft" weight="0.0999998600002" />
+</color>
+
+<color name="white" weight="0.00559700932836">
+ <shade name="hard" weight="0.499999300001" />
+ <shade name="neutral" weight="0.399999440001" />
+ <shade name="soft" weight="0.0999998600002" />
+</color>
+
+<color name="green" weight="0.00559700932836">
+ <shade name="hard" weight="0.499999300001" />
+ <shade name="neutral" weight="0.399999440001" />
+ <shade name="soft" weight="0.0999998600002" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="hard" weight="0.499999300001" />
+ <shade name="neutral" weight="0.399999440001" />
+ <shade name="soft" weight="0.0999998600002" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="hard" weight="0.499999300001" />
+ <shade name="neutral" weight="0.399999440001" />
+ <shade name="soft" weight="0.0999998600002" />
+</color>
+
+</colors>

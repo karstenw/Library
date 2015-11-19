@@ -1,0 +1,33 @@
+<colors query="uzbekistan">
+
+<color name="red" weight="0.463414133056">
+ <shade name="soft" weight="0.89719532361" />
+ <shade name="weak" weight="0.0829438385108" />
+ <shade name="cool" weight="0.0198597923195" />
+</color>
+
+<color name="black" weight="0.178861595215">
+ <shade name="soft" weight="0.89719532361" />
+ <shade name="weak" weight="0.0829438385108" />
+ <shade name="cool" weight="0.0198597923195" />
+</color>
+
+<color name="white" weight="0.162601450195">
+ <shade name="soft" weight="0.89719532361" />
+ <shade name="weak" weight="0.0829438385108" />
+ <shade name="cool" weight="0.0198597923195" />
+</color>
+
+<color name="yellow" weight="0.130081160156">
+ <shade name="soft" weight="0.89719532361" />
+ <shade name="weak" weight="0.0829438385108" />
+ <shade name="cool" weight="0.0198597923195" />
+</color>
+
+<color name="blue" weight="0.0650405800781">
+ <shade name="soft" weight="0.89719532361" />
+ <shade name="weak" weight="0.0829438385108" />
+ <shade name="cool" weight="0.0198597923195" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="gothic metal">
+
+<color name="black" weight="0.998886702516">
+ <shade name="dark" weight="0.954978562446" />
+ <shade name="light" weight="0.0229649606683" />
+ <shade name="hard" weight="0.0220554572755" />
+</color>
+
+<color name="white" weight="0.000948724269857">
+ <shade name="dark" weight="0.954978562446" />
+ <shade name="light" weight="0.0229649606683" />
+ <shade name="hard" weight="0.0220554572755" />
+</color>
+
+<color name="blue" weight="0.00010904876665">
+ <shade name="dark" weight="0.954978562446" />
+ <shade name="light" weight="0.0229649606683" />
+ <shade name="hard" weight="0.0220554572755" />
+</color>
+
+<color name="pink" weight="3.27146299951e-05">
+ <shade name="dark" weight="0.954978562446" />
+ <shade name="light" weight="0.0229649606683" />
+ <shade name="hard" weight="0.0220554572755" />
+</color>
+
+<color name="red" weight="2.180975333e-05">
+ <shade name="dark" weight="0.954978562446" />
+ <shade name="light" weight="0.0229649606683" />
+ <shade name="hard" weight="0.0220554572755" />
+</color>
+
+</colors>

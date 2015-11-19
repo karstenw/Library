@@ -1,0 +1,33 @@
+<colors query="george lucas">
+
+<color name="green" weight="0.518517996561">
+ <shade name="light" weight="0.838708834903" />
+ <shade name="cool" weight="0.127598438131" />
+ <shade name="hard" weight="0.0336917224277" />
+</color>
+
+<color name="black" weight="0.325593923214">
+ <shade name="light" weight="0.838708834903" />
+ <shade name="cool" weight="0.127598438131" />
+ <shade name="hard" weight="0.0336917224277" />
+</color>
+
+<color name="red" weight="0.0928688949064">
+ <shade name="light" weight="0.838708834903" />
+ <shade name="cool" weight="0.127598438131" />
+ <shade name="hard" weight="0.0336917224277" />
+</color>
+
+<color name="white" weight="0.0591486413987">
+ <shade name="light" weight="0.838708834903" />
+ <shade name="cool" weight="0.127598438131" />
+ <shade name="hard" weight="0.0336917224277" />
+</color>
+
+<color name="orange" weight="0.00386953728777">
+ <shade name="light" weight="0.838708834903" />
+ <shade name="cool" weight="0.127598438131" />
+ <shade name="hard" weight="0.0336917224277" />
+</color>
+
+</colors>

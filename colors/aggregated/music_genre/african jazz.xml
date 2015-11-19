@@ -1,0 +1,33 @@
+<colors query="african jazz">
+
+<color name="black" weight="0.666666000001">
+ <shade name="cool" weight="0.66666588889" />
+ <shade name="soft" weight="0.249999708334" />
+ <shade name="warm" weight="0.0833332361112" />
+</color>
+
+<color name="white" weight="0.333333">
+ <shade name="cool" weight="0.66666588889" />
+ <shade name="soft" weight="0.249999708334" />
+ <shade name="warm" weight="0.0833332361112" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="cool" weight="0.66666588889" />
+ <shade name="soft" weight="0.249999708334" />
+ <shade name="warm" weight="0.0833332361112" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="cool" weight="0.66666588889" />
+ <shade name="soft" weight="0.249999708334" />
+ <shade name="warm" weight="0.0833332361112" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="cool" weight="0.66666588889" />
+ <shade name="soft" weight="0.249999708334" />
+ <shade name="light" weight="0.0833332361112" />
+</color>
+
+</colors>

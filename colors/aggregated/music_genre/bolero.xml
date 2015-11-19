@@ -1,0 +1,33 @@
+<colors query="bolero">
+
+<color name="blue" weight="0.393986092275">
+ <shade name="soft" weight="0.45635099236" />
+ <shade name="dark" weight="0.355207236797" />
+ <shade name="hard" weight="0.188440449352" />
+</color>
+
+<color name="black" weight="0.362881927096">
+ <shade name="soft" weight="0.45635099236" />
+ <shade name="dark" weight="0.355207236797" />
+ <shade name="hard" weight="0.188440449352" />
+</color>
+
+<color name="pink" weight="0.110938189141">
+ <shade name="soft" weight="0.45635099236" />
+ <shade name="dark" weight="0.355207236797" />
+ <shade name="hard" weight="0.188440449352" />
+</color>
+
+<color name="red" weight="0.0756868019371">
+ <shade name="soft" weight="0.45635099236" />
+ <shade name="dark" weight="0.355207236797" />
+ <shade name="hard" weight="0.188440449352" />
+</color>
+
+<color name="green" weight="0.0565059000763">
+ <shade name="soft" weight="0.45635099236" />
+ <shade name="dark" weight="0.355207236797" />
+ <shade name="hard" weight="0.188440449352" />
+</color>
+
+</colors>

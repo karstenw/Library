@@ -1,0 +1,33 @@
+<colors query="new age">
+
+<color name="pink" weight="0.291826799035">
+ <shade name="fresh" weight="0.57869056025" />
+ <shade name="cool" weight="0.313682733594" />
+ <shade name="bright" weight="0.107625627561" />
+</color>
+
+<color name="white" weight="0.248181148739">
+ <shade name="fresh" weight="0.57869056025" />
+ <shade name="cool" weight="0.313682733594" />
+ <shade name="bright" weight="0.107625627561" />
+</color>
+
+<color name="blue" weight="0.195121730733">
+ <shade name="fresh" weight="0.57869056025" />
+ <shade name="cool" weight="0.313682733594" />
+ <shade name="bright" weight="0.107625627561" />
+</color>
+
+<color name="red" weight="0.133076443548">
+ <shade name="fresh" weight="0.57869056025" />
+ <shade name="cool" weight="0.313682733594" />
+ <shade name="bright" weight="0.107625627561" />
+</color>
+
+<color name="green" weight="0.131792747951">
+ <shade name="fresh" weight="0.57869056025" />
+ <shade name="cool" weight="0.313682733594" />
+ <shade name="bright" weight="0.107625627561" />
+</color>
+
+</colors>

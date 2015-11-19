@@ -1,0 +1,33 @@
+<colors query="papua new guinea">
+
+<color name="black" weight="0.364485591275">
+ <shade name="dark" weight="0.410713735651" />
+ <shade name="light" weight="0.303571022003" />
+ <shade name="cool" weight="0.285713903062" />
+</color>
+
+<color name="white" weight="0.303737992729">
+ <shade name="dark" weight="0.410713735651" />
+ <shade name="light" weight="0.303571022003" />
+ <shade name="cool" weight="0.285713903062" />
+</color>
+
+<color name="green" weight="0.261681962966">
+ <shade name="dark" weight="0.410713735651" />
+ <shade name="light" weight="0.303571022003" />
+ <shade name="cool" weight="0.285713903062" />
+</color>
+
+<color name="blue" weight="0.0420560297625">
+ <shade name="dark" weight="0.410713735651" />
+ <shade name="light" weight="0.303571022003" />
+ <shade name="cool" weight="0.285713903062" />
+</color>
+
+<color name="red" weight="0.028037353175">
+ <shade name="dark" weight="0.410713735651" />
+ <shade name="light" weight="0.303571022003" />
+ <shade name="cool" weight="0.285713903062" />
+</color>
+
+</colors>

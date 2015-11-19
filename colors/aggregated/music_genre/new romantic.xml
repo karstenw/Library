@@ -1,0 +1,33 @@
+<colors query="new romantic">
+
+<color name="white" weight="0.936254040096">
+ <shade name="fresh" weight="0.550648795352" />
+ <shade name="dark" weight="0.444155396251" />
+ <shade name="cool" weight="0.00519479995615" />
+</color>
+
+<color name="black" weight="0.0278884182156">
+ <shade name="fresh" weight="0.550648795352" />
+ <shade name="dark" weight="0.444155396251" />
+ <shade name="cool" weight="0.00519479995615" />
+</color>
+
+<color name="red" weight="0.0239043584705">
+ <shade name="fresh" weight="0.550648795352" />
+ <shade name="dark" weight="0.444155396251" />
+ <shade name="cool" weight="0.00519479995615" />
+</color>
+
+<color name="purple" weight="0.00796811949017">
+ <shade name="fresh" weight="0.550648795352" />
+ <shade name="dark" weight="0.444155396251" />
+ <shade name="cool" weight="0.00519479995615" />
+</color>
+
+<color name="orange" weight="0.00398405974509">
+ <shade name="fresh" weight="0.550648795352" />
+ <shade name="dark" weight="0.444155396251" />
+ <shade name="cool" weight="0.00519479995615" />
+</color>
+
+</colors>

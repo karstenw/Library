@@ -1,0 +1,33 @@
+<colors query="jan mayen">
+
+<color name="black" weight="0.333332925926">
+ <shade name="light" weight="0.428570816327" />
+ <shade name="fresh" weight="0.285713877552" />
+ <shade name="cool" weight="0.285713877552" />
+</color>
+
+<color name="red" weight="0.222221950618">
+ <shade name="light" weight="0.428570816327" />
+ <shade name="fresh" weight="0.285713877552" />
+ <shade name="cool" weight="0.285713877552" />
+</color>
+
+<color name="blue" weight="0.222221950618">
+ <shade name="light" weight="0.428570816327" />
+ <shade name="fresh" weight="0.285713877552" />
+ <shade name="cool" weight="0.285713877552" />
+</color>
+
+<color name="yellow" weight="0.111110975309">
+ <shade name="light" weight="0.428570816327" />
+ <shade name="fresh" weight="0.285713877552" />
+ <shade name="cool" weight="0.285713877552" />
+</color>
+
+<color name="white" weight="0.111110975309">
+ <shade name="light" weight="0.428570816327" />
+ <shade name="fresh" weight="0.285713877552" />
+ <shade name="cool" weight="0.285713877552" />
+</color>
+
+</colors>

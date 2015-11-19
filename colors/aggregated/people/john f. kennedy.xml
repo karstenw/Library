@@ -1,0 +1,33 @@
+<colors query="john f. kennedy">
+
+<color name="green" weight="0.518099778911">
+ <shade name="hard" weight="0.885166567654" />
+ <shade name="light" weight="0.110047735438" />
+ <shade name="fresh" weight="0.00478468414948" />
+</color>
+
+<color name="black" weight="0.244768934011">
+ <shade name="hard" weight="0.885166567654" />
+ <shade name="light" weight="0.110047735438" />
+ <shade name="fresh" weight="0.00478468414948" />
+</color>
+
+<color name="white" weight="0.221188751766">
+ <shade name="hard" weight="0.885166567654" />
+ <shade name="light" weight="0.110047735438" />
+ <shade name="fresh" weight="0.00478468414948" />
+</color>
+
+<color name="red" weight="0.0126203792299">
+ <shade name="hard" weight="0.885166567654" />
+ <shade name="light" weight="0.110047735438" />
+ <shade name="fresh" weight="0.00478468414948" />
+</color>
+
+<color name="blue" weight="0.00332115242892">
+ <shade name="hard" weight="0.885166567654" />
+ <shade name="light" weight="0.110047735438" />
+ <shade name="fresh" weight="0.00478468414948" />
+</color>
+
+</colors>

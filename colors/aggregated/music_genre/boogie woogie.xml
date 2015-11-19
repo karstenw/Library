@@ -1,0 +1,33 @@
+<colors query="boogie woogie">
+
+<color name="blue" weight="0.706655000045">
+ <shade name="bright" weight="0.585541554914" />
+ <shade name="cool" weight="0.397589944695" />
+ <shade name="intense" weight="0.0168674521992" />
+</color>
+
+<color name="black" weight="0.149547918614">
+ <shade name="bright" weight="0.585541554914" />
+ <shade name="cool" weight="0.397589944695" />
+ <shade name="intense" weight="0.0168674521992" />
+</color>
+
+<color name="red" weight="0.100246406983">
+ <shade name="bright" weight="0.585541554914" />
+ <shade name="cool" weight="0.397589944695" />
+ <shade name="intense" weight="0.0168674521992" />
+</color>
+
+<color name="white" weight="0.0398520552351">
+ <shade name="bright" weight="0.58695590501" />
+ <shade name="cool" weight="0.398550305871" />
+ <shade name="light" weight="0.0144927383953" />
+</color>
+
+<color name="green" weight="0.00369761337233">
+ <shade name="bright" weight="0.585541554914" />
+ <shade name="cool" weight="0.397589944695" />
+ <shade name="intense" weight="0.0168674521992" />
+</color>
+
+</colors>

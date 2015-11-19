@@ -1,0 +1,33 @@
+<colors query="experimental rock">
+
+<color name="red" weight="0.2666664">
+ <shade name="dark" weight="0.838282966584" />
+ <shade name="hard" weight="0.150164862124" />
+ <shade name="intense" weight="0.0115511432403" />
+</color>
+
+<color name="blue" weight="0.2666664">
+ <shade name="dark" weight="0.838282966584" />
+ <shade name="hard" weight="0.150164862124" />
+ <shade name="intense" weight="0.0115511432403" />
+</color>
+
+<color name="black" weight="0.2666664">
+ <shade name="dark" weight="0.838282966584" />
+ <shade name="hard" weight="0.150164862124" />
+ <shade name="intense" weight="0.0115511432403" />
+</color>
+
+<color name="orange" weight="0.1333332">
+ <shade name="dark" weight="0.838282966584" />
+ <shade name="hard" weight="0.150164862124" />
+ <shade name="intense" weight="0.0115511432403" />
+</color>
+
+<color name="white" weight="0.0666666000001">
+ <shade name="dark" weight="0.841058735133" />
+ <shade name="hard" weight="0.150662096254" />
+ <shade name="fresh" weight="0.00827813715682" />
+</color>
+
+</colors>

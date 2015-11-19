@@ -1,0 +1,33 @@
+<colors query="nortec">
+
+<color name="orange" weight="0.39999956">
+ <shade name="cool" weight="0.571427755103" />
+ <shade name="soft" weight="0.285713877552" />
+ <shade name="neutral" weight="0.142856938776" />
+</color>
+
+<color name="red" weight="0.19999978">
+ <shade name="cool" weight="0.571427755103" />
+ <shade name="soft" weight="0.285713877552" />
+ <shade name="neutral" weight="0.142856938776" />
+</color>
+
+<color name="black" weight="0.19999978">
+ <shade name="cool" weight="0.571427755103" />
+ <shade name="soft" weight="0.285713877552" />
+ <shade name="neutral" weight="0.142856938776" />
+</color>
+
+<color name="yellow" weight="0.0999998900001">
+ <shade name="cool" weight="0.571427755103" />
+ <shade name="soft" weight="0.285713877552" />
+ <shade name="neutral" weight="0.142856938776" />
+</color>
+
+<color name="pink" weight="0.0999998900001">
+ <shade name="cool" weight="0.571427755103" />
+ <shade name="soft" weight="0.285713877552" />
+ <shade name="neutral" weight="0.142856938776" />
+</color>
+
+</colors>

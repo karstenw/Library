@@ -1,0 +1,33 @@
+<colors query="robert orben">
+
+<color name="orange" weight="0.666666000001">
+ <shade name="neutral" weight="0.994896964287" />
+ <shade name="dark" weight="0.00510203571429" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="red" weight="0.333333">
+ <shade name="neutral" weight="0.994896964287" />
+ <shade name="dark" weight="0.00510203571429" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="neutral" weight="0.994896964287" />
+ <shade name="dark" weight="0.00510203571429" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="neutral" weight="0.994896964287" />
+ <shade name="dark" weight="0.00510203571429" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="neutral" weight="0.994896964287" />
+ <shade name="dark" weight="0.00510203571429" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+</colors>

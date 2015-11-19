@@ -1,0 +1,33 @@
+<colors query="musette">
+
+<color name="black" weight="0.579690927332">
+ <shade name="hard" weight="0.376067955001" />
+ <shade name="light" weight="0.324785961137" />
+ <shade name="dark" weight="0.299144964205" />
+</color>
+
+<color name="yellow" weight="0.299485556693">
+ <shade name="hard" weight="0.376067955001" />
+ <shade name="light" weight="0.324785961137" />
+ <shade name="dark" weight="0.299144964205" />
+</color>
+
+<color name="blue" weight="0.0835474728971">
+ <shade name="hard" weight="0.376067955001" />
+ <shade name="light" weight="0.324785961137" />
+ <shade name="dark" weight="0.299144964205" />
+</color>
+
+<color name="green" weight="0.0244215690007">
+ <shade name="hard" weight="0.376067955001" />
+ <shade name="light" weight="0.324785961137" />
+ <shade name="dark" weight="0.299144964205" />
+</color>
+
+<color name="white" weight="0.0128534573688">
+ <shade name="hard" weight="0.376067955001" />
+ <shade name="light" weight="0.324785961137" />
+ <shade name="dark" weight="0.299144964205" />
+</color>
+
+</colors>

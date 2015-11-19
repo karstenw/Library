@@ -1,0 +1,33 @@
+<colors query="edgar degas">
+
+<color name="pink" weight="0.447475673763">
+ <shade name="soft" weight="0.399999520001" />
+ <shade name="light" weight="0.399999520001" />
+ <shade name="cool" weight="0.19999976" />
+</color>
+
+<color name="blue" weight="0.296043357337">
+ <shade name="soft" weight="0.399999520001" />
+ <shade name="light" weight="0.399999520001" />
+ <shade name="cool" weight="0.19999976" />
+</color>
+
+<color name="green" weight="0.17189614297">
+ <shade name="soft" weight="0.399999520001" />
+ <shade name="light" weight="0.399999520001" />
+ <shade name="cool" weight="0.19999976" />
+</color>
+
+<color name="red" weight="0.0777625408673">
+ <shade name="soft" weight="0.399999520001" />
+ <shade name="light" weight="0.399999520001" />
+ <shade name="cool" weight="0.19999976" />
+</color>
+
+<color name="black" weight="0.00682127551467">
+ <shade name="soft" weight="0.399999520001" />
+ <shade name="light" weight="0.399999520001" />
+ <shade name="cool" weight="0.19999976" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="bill cosby">
+
+<color name="white" weight="0.614089158409">
+ <shade name="cool" weight="0.913906286129" />
+ <shade name="light" weight="0.0463575652384" />
+ <shade name="hard" weight="0.0397350559186" />
+</color>
+
+<color name="black" weight="0.361595646576">
+ <shade name="cool" weight="0.913906286129" />
+ <shade name="light" weight="0.0463575652384" />
+ <shade name="hard" weight="0.0397350559186" />
+</color>
+
+<color name="blue" weight="0.0134039765541">
+ <shade name="cool" weight="0.913906286129" />
+ <shade name="light" weight="0.0463575652384" />
+ <shade name="hard" weight="0.0397350559186" />
+</color>
+
+<color name="purple" weight="0.00779300962448">
+ <shade name="cool" weight="0.913906286129" />
+ <shade name="light" weight="0.0463575652384" />
+ <shade name="hard" weight="0.0397350559186" />
+</color>
+
+<color name="green" weight="0.00311720384979">
+ <shade name="cool" weight="0.913906286129" />
+ <shade name="light" weight="0.0463575652384" />
+ <shade name="hard" weight="0.0397350559186" />
+</color>
+
+</colors>

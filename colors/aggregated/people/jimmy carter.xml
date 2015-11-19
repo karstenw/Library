@@ -1,0 +1,33 @@
+<colors query="jimmy carter">
+
+<color name="black" weight="0.853164839827">
+ <shade name="weak" weight="0.440475571713" />
+ <shade name="cool" weight="0.374999473215" />
+ <shade name="light" weight="0.184523550312" />
+</color>
+
+<color name="green" weight="0.0687022213124">
+ <shade name="weak" weight="0.440475571713" />
+ <shade name="cool" weight="0.374999473215" />
+ <shade name="light" weight="0.184523550312" />
+</color>
+
+<color name="white" weight="0.0574763681568">
+ <shade name="weak" weight="0.440475571713" />
+ <shade name="cool" weight="0.374999473215" />
+ <shade name="light" weight="0.184523550312" />
+</color>
+
+<color name="red" weight="0.0170632967965">
+ <shade name="weak" weight="0.440475571713" />
+ <shade name="cool" weight="0.374999473215" />
+ <shade name="light" weight="0.184523550312" />
+</color>
+
+<color name="blue" weight="0.0035922730098">
+ <shade name="weak" weight="0.440475571713" />
+ <shade name="cool" weight="0.374999473215" />
+ <shade name="light" weight="0.184523550312" />
+</color>
+
+</colors>

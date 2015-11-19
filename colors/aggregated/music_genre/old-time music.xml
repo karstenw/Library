@@ -1,0 +1,33 @@
+<colors query="old-time music">
+
+<color name="white" weight="0.961438624779">
+ <shade name="fresh" weight="0.919707069211" />
+ <shade name="dark" weight="0.0437955747243" />
+ <shade name="cool" weight="0.0364963122703" />
+</color>
+
+<color name="black" weight="0.0154241490606">
+ <shade name="fresh" weight="0.919707069211" />
+ <shade name="dark" weight="0.0437955747243" />
+ <shade name="cool" weight="0.0364963122703" />
+</color>
+
+<color name="red" weight="0.0128534575505">
+ <shade name="fresh" weight="0.919707069211" />
+ <shade name="dark" weight="0.0437955747243" />
+ <shade name="cool" weight="0.0364963122703" />
+</color>
+
+<color name="green" weight="0.00514138302021">
+ <shade name="fresh" weight="0.919707069211" />
+ <shade name="dark" weight="0.0437955747243" />
+ <shade name="cool" weight="0.0364963122703" />
+</color>
+
+<color name="blue" weight="0.00514138302021">
+ <shade name="fresh" weight="0.919707069211" />
+ <shade name="dark" weight="0.0437955747243" />
+ <shade name="cool" weight="0.0364963122703" />
+</color>
+
+</colors>

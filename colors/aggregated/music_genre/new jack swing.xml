@@ -1,0 +1,33 @@
+<colors query="new jack swing">
+
+<color name="black" weight="0.636363000001">
+ <shade name="cool" weight="0.545453900827" />
+ <shade name="weak" weight="0.272726950414" />
+ <shade name="light" weight="0.181817966942" />
+</color>
+
+<color name="white" weight="0.363636">
+ <shade name="cool" weight="0.545453900827" />
+ <shade name="weak" weight="0.272726950414" />
+ <shade name="light" weight="0.181817966942" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="cool" weight="0.545453900827" />
+ <shade name="weak" weight="0.272726950414" />
+ <shade name="light" weight="0.181817966942" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="cool" weight="0.545453900827" />
+ <shade name="weak" weight="0.272726950414" />
+ <shade name="light" weight="0.181817966942" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="cool" weight="0.545453900827" />
+ <shade name="weak" weight="0.272726950414" />
+ <shade name="light" weight="0.181817966942" />
+</color>
+
+</colors>

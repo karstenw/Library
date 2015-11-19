@@ -1,0 +1,33 @@
+<colors query="jordan">
+
+<color name="green" weight="0.471771453849">
+ <shade name="cool" weight="0.704505143286" />
+ <shade name="hard" weight="0.163777948439" />
+ <shade name="fresh" weight="0.131715598745" />
+</color>
+
+<color name="black" weight="0.169368187815">
+ <shade name="cool" weight="0.704505143286" />
+ <shade name="hard" weight="0.163777948439" />
+ <shade name="fresh" weight="0.131715598745" />
+</color>
+
+<color name="white" weight="0.151481118475">
+ <shade name="cool" weight="0.704505143286" />
+ <shade name="hard" weight="0.163777948439" />
+ <shade name="fresh" weight="0.131715598745" />
+</color>
+
+<color name="red" weight="0.107322416041">
+ <shade name="cool" weight="0.704505143286" />
+ <shade name="hard" weight="0.163777948439" />
+ <shade name="fresh" weight="0.131715598745" />
+</color>
+
+<color name="blue" weight="0.100055794122">
+ <shade name="cool" weight="0.704505143286" />
+ <shade name="hard" weight="0.163777948439" />
+ <shade name="fresh" weight="0.131715598745" />
+</color>
+
+</colors>

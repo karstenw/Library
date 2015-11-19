@@ -1,0 +1,33 @@
+<colors query="carnatic music">
+
+<color name="green" weight="0.999999000001">
+ <shade name="light" weight="0.883494262137" />
+ <shade name="soft" weight="0.0582523689321" />
+ <shade name="hard" weight="0.0582523689321" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="light" weight="0.883494262137" />
+ <shade name="soft" weight="0.0582523689321" />
+ <shade name="hard" weight="0.0582523689321" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="light" weight="0.883494262137" />
+ <shade name="soft" weight="0.0582523689321" />
+ <shade name="hard" weight="0.0582523689321" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="light" weight="0.883494262137" />
+ <shade name="soft" weight="0.0582523689321" />
+ <shade name="hard" weight="0.0582523689321" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="light" weight="0.883494262137" />
+ <shade name="soft" weight="0.0582523689321" />
+ <shade name="hard" weight="0.0582523689321" />
+</color>
+
+</colors>

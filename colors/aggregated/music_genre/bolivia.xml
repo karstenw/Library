@@ -1,0 +1,33 @@
+<colors query="bolivia">
+
+<color name="red" weight="0.902856591166">
+ <shade name="light" weight="0.412843441104" />
+ <shade name="cool" weight="0.307339006155" />
+ <shade name="dark" weight="0.279816110082" />
+</color>
+
+<color name="black" weight="0.0378517196297">
+ <shade name="light" weight="0.412843441104" />
+ <shade name="cool" weight="0.307339006155" />
+ <shade name="dark" weight="0.279816110082" />
+</color>
+
+<color name="green" weight="0.0297849597086">
+ <shade name="light" weight="0.412843441104" />
+ <shade name="cool" weight="0.307339006155" />
+ <shade name="dark" weight="0.279816110082" />
+</color>
+
+<color name="blue" weight="0.0215010177896">
+ <shade name="light" weight="0.412843441104" />
+ <shade name="cool" weight="0.307339006155" />
+ <shade name="dark" weight="0.279816110082" />
+</color>
+
+<color name="white" weight="0.00800470792168">
+ <shade name="light" weight="0.412843441104" />
+ <shade name="cool" weight="0.307339006155" />
+ <shade name="dark" weight="0.279816110082" />
+</color>
+
+</colors>

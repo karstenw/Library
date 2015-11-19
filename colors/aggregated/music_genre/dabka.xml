@@ -1,0 +1,33 @@
+<colors query="dabka">
+
+<color name="red" weight="0.347825678639">
+ <shade name="cool" weight="0.983650242508" />
+ <shade name="light" weight="0.0136239645777" />
+ <shade name="warm" weight="0.00272479291553" />
+</color>
+
+<color name="blue" weight="0.347825678639">
+ <shade name="cool" weight="0.986337808781" />
+ <shade name="light" weight="0.0136611884873" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="white" weight="0.13043462949">
+ <shade name="cool" weight="0.983650242508" />
+ <shade name="light" weight="0.0136239645777" />
+ <shade name="warm" weight="0.00272479291553" />
+</color>
+
+<color name="orange" weight="0.13043462949">
+ <shade name="cool" weight="0.983650242508" />
+ <shade name="light" weight="0.0136239645777" />
+ <shade name="warm" weight="0.00272479291553" />
+</color>
+
+<color name="yellow" weight="0.0434782098299">
+ <shade name="cool" weight="0.983650242508" />
+ <shade name="light" weight="0.0136239645777" />
+ <shade name="warm" weight="0.00272479291553" />
+</color>
+
+</colors>

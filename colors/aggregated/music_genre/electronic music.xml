@@ -1,0 +1,33 @@
+<colors query="electronic music">
+
+<color name="black" weight="0.559573903352">
+ <shade name="dark" weight="0.724477719852" />
+ <shade name="fresh" weight="0.176179809146" />
+ <shade name="warm" weight="0.0993412631008" />
+</color>
+
+<color name="white" weight="0.218439495859">
+ <shade name="dark" weight="0.724477719852" />
+ <shade name="fresh" weight="0.176179809146" />
+ <shade name="warm" weight="0.0993412631008" />
+</color>
+
+<color name="red" weight="0.109219747929">
+ <shade name="dark" weight="0.724477719852" />
+ <shade name="fresh" weight="0.176179809146" />
+ <shade name="warm" weight="0.0993412631008" />
+</color>
+
+<color name="blue" weight="0.107092090502">
+ <shade name="dark" weight="0.74999906216" />
+ <shade name="fresh" weight="0.182386135571" />
+ <shade name="soft" weight="0.067613551816" />
+</color>
+
+<color name="yellow" weight="0.00567375313918">
+ <shade name="dark" weight="0.724477719852" />
+ <shade name="fresh" weight="0.176179809146" />
+ <shade name="warm" weight="0.0993412631008" />
+</color>
+
+</colors>

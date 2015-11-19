@@ -1,0 +1,33 @@
+<colors query="e. m. forster">
+
+<color name="green" weight="0.895160387943">
+ <shade name="light" weight="0.599999160001" />
+ <shade name="neutral" weight="0.19999972" />
+ <shade name="hard" weight="0.19999972" />
+</color>
+
+<color name="white" weight="0.0564515559964">
+ <shade name="light" weight="0.599999160001" />
+ <shade name="neutral" weight="0.19999972" />
+ <shade name="hard" weight="0.19999972" />
+</color>
+
+<color name="purple" weight="0.0241935239985">
+ <shade name="light" weight="0.599999160001" />
+ <shade name="neutral" weight="0.19999972" />
+ <shade name="hard" weight="0.19999972" />
+</color>
+
+<color name="red" weight="0.016129015999">
+ <shade name="light" weight="0.599999160001" />
+ <shade name="neutral" weight="0.19999972" />
+ <shade name="hard" weight="0.19999972" />
+</color>
+
+<color name="orange" weight="0.00806450799949">
+ <shade name="light" weight="0.599999160001" />
+ <shade name="neutral" weight="0.19999972" />
+ <shade name="hard" weight="0.19999972" />
+</color>
+
+</colors>

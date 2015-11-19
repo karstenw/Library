@@ -1,0 +1,33 @@
+<colors query="noise pop">
+
+<color name="white" weight="0.875139732284">
+ <shade name="cool" weight="0.888887934157" />
+ <shade name="light" weight="0.0555554958848" />
+ <shade name="dark" weight="0.0555554958848" />
+</color>
+
+<color name="pink" weight="0.123059494488">
+ <shade name="cool" weight="0.888887934157" />
+ <shade name="light" weight="0.0555554958848" />
+ <shade name="dark" weight="0.0555554958848" />
+</color>
+
+<color name="black" weight="0.0015748015748">
+ <shade name="cool" weight="0.888887934157" />
+ <shade name="light" weight="0.0555554958848" />
+ <shade name="dark" weight="0.0555554958848" />
+</color>
+
+<color name="red" weight="0.000224971653544">
+ <shade name="cool" weight="0.888887934157" />
+ <shade name="light" weight="0.0555554958848" />
+ <shade name="dark" weight="0.0555554958848" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="cool" weight="0.888887934157" />
+ <shade name="light" weight="0.0555554958848" />
+ <shade name="dark" weight="0.0555554958848" />
+</color>
+
+</colors>

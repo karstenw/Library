@@ -1,0 +1,33 @@
+<colors query="doris lessing">
+
+<color name="white" weight="0.814284841838">
+ <shade name="dark" weight="0.99020575087" />
+ <shade name="light" weight="0.00544069093885" />
+ <shade name="soft" weight="0.00435255275108" />
+</color>
+
+<color name="green" weight="0.0571427959184">
+ <shade name="dark" weight="0.99020575087" />
+ <shade name="light" weight="0.00544069093885" />
+ <shade name="soft" weight="0.00435255275108" />
+</color>
+
+<color name="red" weight="0.0428570969388">
+ <shade name="dark" weight="0.99020575087" />
+ <shade name="light" weight="0.00544069093885" />
+ <shade name="soft" weight="0.00435255275108" />
+</color>
+
+<color name="purple" weight="0.0428570969388">
+ <shade name="dark" weight="0.99020575087" />
+ <shade name="light" weight="0.00544069093885" />
+ <shade name="soft" weight="0.00435255275108" />
+</color>
+
+<color name="orange" weight="0.0428570969388">
+ <shade name="dark" weight="0.99020575087" />
+ <shade name="light" weight="0.00544069093885" />
+ <shade name="soft" weight="0.00435255275108" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="dominica">
+
+<color name="blue" weight="0.514095637114">
+ <shade name="dark" weight="0.591462577931" />
+ <shade name="bright" weight="0.237804541642" />
+ <shade name="cool" weight="0.170731465795" />
+</color>
+
+<color name="red" weight="0.177860506711">
+ <shade name="dark" weight="0.591462577931" />
+ <shade name="bright" weight="0.237804541642" />
+ <shade name="cool" weight="0.170731465795" />
+</color>
+
+<color name="orange" weight="0.142205486718">
+ <shade name="dark" weight="0.591462577931" />
+ <shade name="bright" weight="0.237804541642" />
+ <shade name="cool" weight="0.170731465795" />
+</color>
+
+<color name="pink" weight="0.0829186511473">
+ <shade name="dark" weight="0.591462577931" />
+ <shade name="bright" weight="0.237804541642" />
+ <shade name="cool" weight="0.170731465795" />
+</color>
+
+<color name="black" weight="0.0829186511473">
+ <shade name="dark" weight="0.591462577931" />
+ <shade name="bright" weight="0.237804541642" />
+ <shade name="cool" weight="0.170731465795" />
+</color>
+
+</colors>

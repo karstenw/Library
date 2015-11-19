@@ -1,0 +1,33 @@
+<colors query="zimbabwe">
+
+<color name="black" weight="0.815960172821">
+ <shade name="weak" weight="0.849132527942" />
+ <shade name="light" weight="0.0866461763207" />
+ <shade name="hard" weight="0.0642201071553" />
+</color>
+
+<color name="white" weight="0.109458071964">
+ <shade name="weak" weight="0.849132527942" />
+ <shade name="light" weight="0.0866461763207" />
+ <shade name="hard" weight="0.0642201071553" />
+</color>
+
+<color name="yellow" weight="0.0542314992911">
+ <shade name="weak" weight="0.849132527942" />
+ <shade name="light" weight="0.0866461763207" />
+ <shade name="hard" weight="0.0642201071553" />
+</color>
+
+<color name="green" weight="0.0119906342469">
+ <shade name="weak" weight="0.849132527942" />
+ <shade name="light" weight="0.0866461763207" />
+ <shade name="hard" weight="0.0642201071553" />
+</color>
+
+<color name="red" weight="0.00835861640451">
+ <shade name="weak" weight="0.849132527942" />
+ <shade name="light" weight="0.0866461763207" />
+ <shade name="hard" weight="0.0642201071553" />
+</color>
+
+</colors>

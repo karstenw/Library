@@ -1,0 +1,33 @@
+<colors query="frevo">
+
+<color name="red" weight="0.545454000001">
+ <shade name="hard" weight="0.799999200001" />
+ <shade name="light" weight="0.0999999000001" />
+ <shade name="fresh" weight="0.0999999000001" />
+</color>
+
+<color name="black" weight="0.363636">
+ <shade name="hard" weight="0.799999200001" />
+ <shade name="light" weight="0.0999999000001" />
+ <shade name="fresh" weight="0.0999999000001" />
+</color>
+
+<color name="orange" weight="0.0909090000001">
+ <shade name="hard" weight="0.799999200001" />
+ <shade name="light" weight="0.0999999000001" />
+ <shade name="fresh" weight="0.0999999000001" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="hard" weight="0.799999200001" />
+ <shade name="light" weight="0.0999999000001" />
+ <shade name="fresh" weight="0.0999999000001" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="hard" weight="0.799999200001" />
+ <shade name="light" weight="0.0999999000001" />
+ <shade name="fresh" weight="0.0999999000001" />
+</color>
+
+</colors>

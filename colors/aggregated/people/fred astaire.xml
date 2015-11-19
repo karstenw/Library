@@ -1,0 +1,33 @@
+<colors query="fred astaire">
+
+<color name="black" weight="0.49152492665">
+ <shade name="dark" weight="0.809945892577" />
+ <shade name="cool" weight="0.18117210755" />
+ <shade name="hard" weight="0.00888098566422" />
+</color>
+
+<color name="green" weight="0.282485590029">
+ <shade name="dark" weight="0.809945892577" />
+ <shade name="cool" weight="0.18117210755" />
+ <shade name="hard" weight="0.00888098566422" />
+</color>
+
+<color name="white" weight="0.204802052771">
+ <shade name="dark" weight="0.809945892577" />
+ <shade name="cool" weight="0.18117210755" />
+ <shade name="hard" weight="0.00888098566422" />
+</color>
+
+<color name="pink" weight="0.0112994236011">
+ <shade name="dark" weight="0.809945892577" />
+ <shade name="cool" weight="0.18117210755" />
+ <shade name="hard" weight="0.00888098566422" />
+</color>
+
+<color name="blue" weight="0.009886995651">
+ <shade name="dark" weight="0.809945892577" />
+ <shade name="cool" weight="0.18117210755" />
+ <shade name="hard" weight="0.00888098566422" />
+</color>
+
+</colors>

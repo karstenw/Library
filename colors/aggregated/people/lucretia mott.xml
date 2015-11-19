@@ -1,0 +1,33 @@
+<colors query="lucretia mott">
+
+<color name="black" weight="0.940475250001">
+ <shade name="light" weight="0.888888000001" />
+ <shade name="bright" weight="0.111111" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="white" weight="0.047619">
+ <shade name="light" weight="0.888888000001" />
+ <shade name="bright" weight="0.111111" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="green" weight="0.01190475">
+ <shade name="light" weight="0.888888000001" />
+ <shade name="bright" weight="0.111111" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="light" weight="0.888888000001" />
+ <shade name="bright" weight="0.111111" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="light" weight="0.888888000001" />
+ <shade name="bright" weight="0.111111" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+</colors>

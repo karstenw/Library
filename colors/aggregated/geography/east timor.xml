@@ -1,0 +1,33 @@
+<colors query="east timor">
+
+<color name="white" weight="0.853447385628">
+ <shade name="fresh" weight="0.87233942327" />
+ <shade name="weak" weight="0.0638297138978" />
+ <shade name="neutral" weight="0.0638297138978" />
+</color>
+
+<color name="red" weight="0.0517240839775">
+ <shade name="fresh" weight="0.87233942327" />
+ <shade name="weak" weight="0.0638297138978" />
+ <shade name="neutral" weight="0.0638297138978" />
+</color>
+
+<color name="black" weight="0.0431034033146">
+ <shade name="fresh" weight="0.87233942327" />
+ <shade name="weak" weight="0.0638297138978" />
+ <shade name="neutral" weight="0.0638297138978" />
+</color>
+
+<color name="orange" weight="0.0258620419887">
+ <shade name="fresh" weight="0.87233942327" />
+ <shade name="weak" weight="0.0638297138978" />
+ <shade name="neutral" weight="0.0638297138978" />
+</color>
+
+<color name="green" weight="0.0258620419887">
+ <shade name="fresh" weight="0.87233942327" />
+ <shade name="weak" weight="0.0638297138978" />
+ <shade name="neutral" weight="0.0638297138978" />
+</color>
+
+</colors>

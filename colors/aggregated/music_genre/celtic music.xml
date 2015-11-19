@@ -1,0 +1,33 @@
+<colors query="celtic music">
+
+<color name="green" weight="0.388888370371">
+ <shade name="cool" weight="0.911772470285" />
+ <shade name="soft" weight="0.0870462390726" />
+ <shade name="fresh" weight="0.00118028798742" />
+</color>
+
+<color name="white" weight="0.166666444445">
+ <shade name="cool" weight="0.911772470285" />
+ <shade name="soft" weight="0.0870462390726" />
+ <shade name="fresh" weight="0.00118028798742" />
+</color>
+
+<color name="blue" weight="0.166666444445">
+ <shade name="cool" weight="0.911772470285" />
+ <shade name="soft" weight="0.0870462390726" />
+ <shade name="fresh" weight="0.00118028798742" />
+</color>
+
+<color name="black" weight="0.166666444445">
+ <shade name="cool" weight="0.911772470285" />
+ <shade name="soft" weight="0.0870462390726" />
+ <shade name="fresh" weight="0.00118028798742" />
+</color>
+
+<color name="yellow" weight="0.111110962963">
+ <shade name="cool" weight="0.911772470285" />
+ <shade name="soft" weight="0.0870462390726" />
+ <shade name="fresh" weight="0.00118028798742" />
+</color>
+
+</colors>

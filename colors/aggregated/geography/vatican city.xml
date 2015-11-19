@@ -1,0 +1,33 @@
+<colors query="vatican city">
+
+<color name="black" weight="0.599999353847">
+ <shade name="neutral" weight="0.499999277779" />
+ <shade name="light" weight="0.333332851853" />
+ <shade name="cool" weight="0.166666425926" />
+</color>
+
+<color name="blue" weight="0.123076790533">
+ <shade name="neutral" weight="0.499999277779" />
+ <shade name="light" weight="0.333332851853" />
+ <shade name="cool" weight="0.166666425926" />
+</color>
+
+<color name="white" weight="0.107692191716">
+ <shade name="neutral" weight="0.499999277779" />
+ <shade name="light" weight="0.333332851853" />
+ <shade name="cool" weight="0.166666425926" />
+</color>
+
+<color name="green" weight="0.107692191716">
+ <shade name="neutral" weight="0.499999277779" />
+ <shade name="light" weight="0.333332851853" />
+ <shade name="cool" weight="0.166666425926" />
+</color>
+
+<color name="red" weight="0.0615383952663">
+ <shade name="neutral" weight="0.499999277779" />
+ <shade name="light" weight="0.333332851853" />
+ <shade name="cool" weight="0.166666425926" />
+</color>
+
+</colors>

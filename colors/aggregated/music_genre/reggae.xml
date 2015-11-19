@@ -1,0 +1,33 @@
+<colors query="reggae">
+
+<color name="black" weight="0.294318651156">
+ <shade name="cool" weight="0.815507105553" />
+ <shade name="soft" weight="0.114973132914" />
+ <shade name="fresh" weight="0.0695186385062" />
+</color>
+
+<color name="white" weight="0.288842955321">
+ <shade name="cool" weight="0.815507105553" />
+ <shade name="soft" weight="0.114973132914" />
+ <shade name="fresh" weight="0.0695186385062" />
+</color>
+
+<color name="red" weight="0.187542582365">
+ <shade name="cool" weight="0.815507105553" />
+ <shade name="soft" weight="0.114973132914" />
+ <shade name="fresh" weight="0.0695186385062" />
+</color>
+
+<color name="blue" weight="0.177960114653">
+ <shade name="cool" weight="0.815507105553" />
+ <shade name="soft" weight="0.114973132914" />
+ <shade name="fresh" weight="0.0695186385062" />
+</color>
+
+<color name="pink" weight="0.0513346484575">
+ <shade name="cool" weight="0.815507105553" />
+ <shade name="soft" weight="0.114973132914" />
+ <shade name="fresh" weight="0.0695186385062" />
+</color>
+
+</colors>

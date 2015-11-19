@@ -1,0 +1,33 @@
+<colors query="egypt">
+
+<color name="black" weight="0.643549956412">
+ <shade name="light" weight="0.417245535883" />
+ <shade name="cool" weight="0.358135751633" />
+ <shade name="hard" weight="0.22461718015" />
+</color>
+
+<color name="blue" weight="0.193342379146">
+ <shade name="light" weight="0.417245535883" />
+ <shade name="cool" weight="0.358135751633" />
+ <shade name="hard" weight="0.22461718015" />
+</color>
+
+<color name="white" weight="0.083495059">
+ <shade name="light" weight="0.417245535883" />
+ <shade name="cool" weight="0.358135751633" />
+ <shade name="hard" weight="0.22461718015" />
+</color>
+
+<color name="green" weight="0.0604715045249">
+ <shade name="light" weight="0.417245535883" />
+ <shade name="cool" weight="0.358135751633" />
+ <shade name="hard" weight="0.22461718015" />
+</color>
+
+<color name="yellow" weight="0.0191400633588">
+ <shade name="light" weight="0.417245535883" />
+ <shade name="cool" weight="0.358135751633" />
+ <shade name="hard" weight="0.22461718015" />
+</color>
+
+</colors>

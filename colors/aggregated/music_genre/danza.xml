@@ -1,0 +1,33 @@
+<colors query="danza">
+
+<color name="red" weight="0.480860751655">
+ <shade name="soft" weight="0.426828733889" />
+ <shade name="hard" weight="0.422763698328" />
+ <shade name="cool" weight="0.150406315751" />
+</color>
+
+<color name="blue" weight="0.318181492388">
+ <shade name="soft" weight="0.426828733889" />
+ <shade name="hard" weight="0.422763698328" />
+ <shade name="cool" weight="0.150406315751" />
+</color>
+
+<color name="black" weight="0.160286917218">
+ <shade name="soft" weight="0.426828733889" />
+ <shade name="hard" weight="0.422763698328" />
+ <shade name="cool" weight="0.150406315751" />
+</color>
+
+<color name="white" weight="0.0215310784323">
+ <shade name="soft" weight="0.426828733889" />
+ <shade name="hard" weight="0.422763698328" />
+ <shade name="cool" weight="0.150406315751" />
+</color>
+
+<color name="purple" weight="0.0191387363843">
+ <shade name="soft" weight="0.426828733889" />
+ <shade name="hard" weight="0.422763698328" />
+ <shade name="cool" weight="0.150406315751" />
+</color>
+
+</colors>

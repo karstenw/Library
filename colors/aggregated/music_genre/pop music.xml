@@ -1,0 +1,33 @@
+<colors query="pop music">
+
+<color name="black" weight="0.722542617976">
+ <shade name="soft" weight="0.382756795298" />
+ <shade name="light" weight="0.337792162064" />
+ <shade name="weak" weight="0.279449621421" />
+</color>
+
+<color name="white" weight="0.129231908244">
+ <shade name="soft" weight="0.382756795298" />
+ <shade name="light" weight="0.337792162064" />
+ <shade name="weak" weight="0.279449621421" />
+</color>
+
+<color name="pink" weight="0.0829891806933">
+ <shade name="soft" weight="0.382756795298" />
+ <shade name="light" weight="0.337792162064" />
+ <shade name="weak" weight="0.279449621421" />
+</color>
+
+<color name="blue" weight="0.0405449629059">
+ <shade name="soft" weight="0.382756795298" />
+ <shade name="light" weight="0.337792162064" />
+ <shade name="weak" weight="0.279449621421" />
+</color>
+
+<color name="orange" weight="0.02469031346">
+ <shade name="soft" weight="0.382756795298" />
+ <shade name="light" weight="0.337792162064" />
+ <shade name="weak" weight="0.279449621421" />
+</color>
+
+</colors>

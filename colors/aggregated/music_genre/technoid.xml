@@ -1,0 +1,33 @@
+<colors query="technoid">
+
+<color name="black" weight="0.599999400001">
+ <shade name="dark" weight="0.631817467673" />
+ <shade name="hard" weight="0.239393668807" />
+ <shade name="cool" weight="0.128787733219" />
+</color>
+
+<color name="green" weight="0.1999998">
+ <shade name="dark" weight="0.631817467673" />
+ <shade name="hard" weight="0.239393668807" />
+ <shade name="cool" weight="0.128787733219" />
+</color>
+
+<color name="white" weight="0.0999999000001">
+ <shade name="dark" weight="0.631817467673" />
+ <shade name="hard" weight="0.239393668807" />
+ <shade name="cool" weight="0.128787733219" />
+</color>
+
+<color name="red" weight="0.0999999000001">
+ <shade name="dark" weight="0.631817467673" />
+ <shade name="hard" weight="0.239393668807" />
+ <shade name="cool" weight="0.128787733219" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="dark" weight="0.631817467673" />
+ <shade name="hard" weight="0.239393668807" />
+ <shade name="cool" weight="0.128787733219" />
+</color>
+
+</colors>

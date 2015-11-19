@@ -1,0 +1,33 @@
+<colors query="dolly parton">
+
+<color name="blue" weight="0.606616987235">
+ <shade name="dark" weight="0.730645719544" />
+ <shade name="cool" weight="0.164368775804" />
+ <shade name="hard" weight="0.104983927772" />
+</color>
+
+<color name="black" weight="0.154674201507">
+ <shade name="dark" weight="0.526355399014" />
+ <shade name="warm" weight="0.355232598754" />
+ <shade name="cool" weight="0.118410866251" />
+</color>
+
+<color name="white" weight="0.137867497099">
+ <shade name="dark" weight="0.526355399014" />
+ <shade name="warm" weight="0.355232598754" />
+ <shade name="cool" weight="0.118410866251" />
+</color>
+
+<color name="green" weight="0.0509453227375">
+ <shade name="dark" weight="0.730645719544" />
+ <shade name="cool" weight="0.164368775804" />
+ <shade name="hard" weight="0.104983927772" />
+</color>
+
+<color name="purple" weight="0.049894903712">
+ <shade name="dark" weight="0.730645719544" />
+ <shade name="cool" weight="0.164368775804" />
+ <shade name="hard" weight="0.104983927772" />
+</color>
+
+</colors>

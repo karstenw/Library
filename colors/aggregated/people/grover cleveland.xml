@@ -1,0 +1,33 @@
+<colors query="grover cleveland">
+
+<color name="white" weight="0.491891397342">
+ <shade name="light" weight="0.624999257813" />
+ <shade name="hard" weight="0.187499777344" />
+ <shade name="dark" weight="0.187499777344" />
+</color>
+
+<color name="green" weight="0.302702398364">
+ <shade name="light" weight="0.624999257813" />
+ <shade name="hard" weight="0.187499777344" />
+ <shade name="dark" weight="0.187499777344" />
+</color>
+
+<color name="black" weight="0.167567399094">
+ <shade name="light" weight="0.624999257813" />
+ <shade name="hard" weight="0.187499777344" />
+ <shade name="dark" weight="0.187499777344" />
+</color>
+
+<color name="red" weight="0.0216215998831">
+ <shade name="light" weight="0.624999257813" />
+ <shade name="hard" weight="0.187499777344" />
+ <shade name="dark" weight="0.187499777344" />
+</color>
+
+<color name="orange" weight="0.0162161999124">
+ <shade name="light" weight="0.624999257813" />
+ <shade name="hard" weight="0.187499777344" />
+ <shade name="dark" weight="0.187499777344" />
+</color>
+
+</colors>

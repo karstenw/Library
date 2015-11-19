@@ -1,0 +1,33 @@
+<colors query="americana">
+
+<color name="black" weight="0.917632410634">
+ <shade name="soft" weight="0.785713385445" />
+ <shade name="dark" weight="0.16806703432" />
+ <shade name="cool" weight="0.046218434438" />
+</color>
+
+<color name="red" weight="0.0765097207811">
+ <shade name="soft" weight="0.785713385445" />
+ <shade name="dark" weight="0.16806703432" />
+ <shade name="cool" weight="0.046218434438" />
+</color>
+
+<color name="white" weight="0.00343809504776">
+ <shade name="soft" weight="0.785713385445" />
+ <shade name="dark" weight="0.16806703432" />
+ <shade name="cool" weight="0.046218434438" />
+</color>
+
+<color name="blue" weight="0.00163188455084">
+ <shade name="soft" weight="0.785713385445" />
+ <shade name="dark" weight="0.16806703432" />
+ <shade name="cool" weight="0.046218434438" />
+</color>
+
+<color name="green" weight="0.000786887951071">
+ <shade name="soft" weight="0.785713385445" />
+ <shade name="dark" weight="0.16806703432" />
+ <shade name="cool" weight="0.046218434438" />
+</color>
+
+</colors>

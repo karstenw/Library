@@ -1,0 +1,33 @@
+<colors query="bossanova">
+
+<color name="black" weight="0.508941368094">
+ <shade name="cool" weight="0.538135018602" />
+ <shade name="soft" weight="0.313558987217" />
+ <shade name="light" weight="0.148304926386" />
+</color>
+
+<color name="blue" weight="0.482860917314">
+ <shade name="cool" weight="0.538135018602" />
+ <shade name="soft" weight="0.313558987217" />
+ <shade name="light" weight="0.148304926386" />
+</color>
+
+<color name="red" weight="0.00447093441957">
+ <shade name="cool" weight="0.538135018602" />
+ <shade name="soft" weight="0.313558987217" />
+ <shade name="light" weight="0.148304926386" />
+</color>
+
+<color name="pink" weight="0.00223546720979">
+ <shade name="cool" weight="0.538135018602" />
+ <shade name="soft" weight="0.313558987217" />
+ <shade name="light" weight="0.148304926386" />
+</color>
+
+<color name="yellow" weight="0.00149031147319">
+ <shade name="cool" weight="0.538135018602" />
+ <shade name="soft" weight="0.313558987217" />
+ <shade name="light" weight="0.148304926386" />
+</color>
+
+</colors>

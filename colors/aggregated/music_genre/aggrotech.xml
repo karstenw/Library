@@ -1,0 +1,33 @@
+<colors query="aggrotech">
+
+<color name="black" weight="0.999999000001">
+ <shade name="dark" weight="0.94339528302" />
+ <shade name="hard" weight="0.0377358113208" />
+ <shade name="weak" weight="0.0188679056604" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="dark" weight="0.94339528302" />
+ <shade name="hard" weight="0.0377358113208" />
+ <shade name="weak" weight="0.0188679056604" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="dark" weight="0.94339528302" />
+ <shade name="hard" weight="0.0377358113208" />
+ <shade name="weak" weight="0.0188679056604" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="dark" weight="0.94339528302" />
+ <shade name="hard" weight="0.0377358113208" />
+ <shade name="weak" weight="0.0188679056604" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="dark" weight="0.94339528302" />
+ <shade name="hard" weight="0.0377358113208" />
+ <shade name="weak" weight="0.0188679056604" />
+</color>
+
+</colors>

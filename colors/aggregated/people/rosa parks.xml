@@ -1,0 +1,33 @@
+<colors query="rosa parks">
+
+<color name="red" weight="0.401772121703">
+ <shade name="cool" weight="0.899999028001" />
+ <shade name="light" weight="0.0666665946667" />
+ <shade name="hard" weight="0.0333332973334" />
+</color>
+
+<color name="white" weight="0.319054331941">
+ <shade name="cool" weight="0.899999028001" />
+ <shade name="light" weight="0.0666665946667" />
+ <shade name="hard" weight="0.0333332973334" />
+</color>
+
+<color name="black" weight="0.205317371018">
+ <shade name="cool" weight="0.899999028001" />
+ <shade name="light" weight="0.0666665946667" />
+ <shade name="hard" weight="0.0333332973334" />
+</color>
+
+<color name="green" weight="0.0709009626535">
+ <shade name="cool" weight="0.899999028001" />
+ <shade name="light" weight="0.0666665946667" />
+ <shade name="hard" weight="0.0333332973334" />
+</color>
+
+<color name="purple" weight="0.00295420677723">
+ <shade name="cool" weight="0.899999028001" />
+ <shade name="light" weight="0.0666665946667" />
+ <shade name="hard" weight="0.0333332973334" />
+</color>
+
+</colors>

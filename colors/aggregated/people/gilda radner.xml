@@ -1,0 +1,33 @@
+<colors query="gilda radner">
+
+<color name="red" weight="0.707509173914">
+ <shade name="hard" weight="0.71428489796" />
+ <shade name="light" weight="0.142856979592" />
+ <shade name="dark" weight="0.142856979592" />
+</color>
+
+<color name="white" weight="0.249011608696">
+ <shade name="hard" weight="0.71428489796" />
+ <shade name="light" weight="0.142856979592" />
+ <shade name="dark" weight="0.142856979592" />
+</color>
+
+<color name="pink" weight="0.0237153913044">
+ <shade name="hard" weight="0.71428489796" />
+ <shade name="light" weight="0.142856979592" />
+ <shade name="dark" weight="0.142856979592" />
+</color>
+
+<color name="black" weight="0.0158102608696">
+ <shade name="hard" weight="0.71428489796" />
+ <shade name="light" weight="0.142856979592" />
+ <shade name="dark" weight="0.142856979592" />
+</color>
+
+<color name="green" weight="0.0039525652174">
+ <shade name="hard" weight="0.71428489796" />
+ <shade name="light" weight="0.142856979592" />
+ <shade name="dark" weight="0.142856979592" />
+</color>
+
+</colors>

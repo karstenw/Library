@@ -1,0 +1,33 @@
+<colors query="austria">
+
+<color name="white" weight="0.263325891522">
+ <shade name="hard" weight="0.932880026066" />
+ <shade name="neutral" weight="0.0364671282917" />
+ <shade name="dark" weight="0.030651772285" />
+</color>
+
+<color name="green" weight="0.238805666805">
+ <shade name="hard" weight="0.932880026066" />
+ <shade name="neutral" weight="0.0364671282917" />
+ <shade name="dark" weight="0.030651772285" />
+</color>
+
+<color name="blue" weight="0.211087151908">
+ <shade name="hard" weight="0.932880026066" />
+ <shade name="neutral" weight="0.0364671282917" />
+ <shade name="dark" weight="0.030651772285" />
+</color>
+
+<color name="red" weight="0.164178895928">
+ <shade name="hard" weight="0.932880026066" />
+ <shade name="neutral" weight="0.0364671282917" />
+ <shade name="dark" weight="0.030651772285" />
+</color>
+
+<color name="pink" weight="0.122601123583">
+ <shade name="hard" weight="0.932880026066" />
+ <shade name="neutral" weight="0.0364671282917" />
+ <shade name="dark" weight="0.030651772285" />
+</color>
+
+</colors>

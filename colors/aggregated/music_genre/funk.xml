@@ -1,0 +1,33 @@
+<colors query="funk">
+
+<color name="blue" weight="0.607511499733">
+ <shade name="hard" weight="0.508101121574" />
+ <shade name="fresh" weight="0.261573698122" />
+ <shade name="cool" weight="0.230323743037" />
+</color>
+
+<color name="black" weight="0.254103367677">
+ <shade name="hard" weight="0.508101121574" />
+ <shade name="fresh" weight="0.261573698122" />
+ <shade name="cool" weight="0.230323743037" />
+</color>
+
+<color name="white" weight="0.111571823509">
+ <shade name="hard" weight="0.508101121574" />
+ <shade name="fresh" weight="0.261573698122" />
+ <shade name="cool" weight="0.230323743037" />
+</color>
+
+<color name="pink" weight="0.0183421741266">
+ <shade name="hard" weight="0.508101121574" />
+ <shade name="fresh" weight="0.261573698122" />
+ <shade name="cool" weight="0.230323743037" />
+</color>
+
+<color name="orange" weight="0.00847011225589">
+ <shade name="hard" weight="0.508101121574" />
+ <shade name="fresh" weight="0.261573698122" />
+ <shade name="cool" weight="0.230323743037" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="kenya">
+
+<color name="green" weight="0.553555714641">
+ <shade name="dark" weight="0.516561446547" />
+ <shade name="fresh" weight="0.335720177565" />
+ <shade name="light" weight="0.147716878129" />
+</color>
+
+<color name="black" weight="0.259313862499">
+ <shade name="dark" weight="0.516561446547" />
+ <shade name="fresh" weight="0.335720177565" />
+ <shade name="light" weight="0.147716878129" />
+</color>
+
+<color name="white" weight="0.0926120937497">
+ <shade name="dark" weight="0.516561446547" />
+ <shade name="fresh" weight="0.335720177565" />
+ <shade name="light" weight="0.147716878129" />
+</color>
+
+<color name="red" weight="0.0562023106069">
+ <shade name="dark" weight="0.516561446547" />
+ <shade name="fresh" weight="0.335720177565" />
+ <shade name="light" weight="0.147716878129" />
+</color>
+
+<color name="blue" weight="0.0383149462141">
+ <shade name="dark" weight="0.516561446547" />
+ <shade name="fresh" weight="0.335720177565" />
+ <shade name="light" weight="0.147716878129" />
+</color>
+
+</colors>

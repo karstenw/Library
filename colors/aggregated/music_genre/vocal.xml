@@ -1,0 +1,33 @@
+<colors query="vocal">
+
+<color name="black" weight="0.569703563784">
+ <shade name="soft" weight="0.42999926429" />
+ <shade name="cool" weight="0.317142314526" />
+ <shade name="intense" weight="0.25285671023" />
+</color>
+
+<color name="blue" weight="0.296133040581">
+ <shade name="soft" weight="0.42999926429" />
+ <shade name="cool" weight="0.317142314526" />
+ <shade name="intense" weight="0.25285671023" />
+</color>
+
+<color name="red" weight="0.0547141046406">
+ <shade name="soft" weight="0.42999926429" />
+ <shade name="cool" weight="0.317142314526" />
+ <shade name="intense" weight="0.25285671023" />
+</color>
+
+<color name="orange" weight="0.053868010239">
+ <shade name="soft" weight="0.42999926429" />
+ <shade name="cool" weight="0.317142314526" />
+ <shade name="intense" weight="0.25285671023" />
+</color>
+
+<color name="white" weight="0.0255802540768">
+ <shade name="soft" weight="0.43941529011" />
+ <shade name="cool" weight="0.3240870246" />
+ <shade name="warm" weight="0.23649593687" />
+</color>
+
+</colors>

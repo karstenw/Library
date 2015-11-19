@@ -1,0 +1,33 @@
+<colors query="turntablism">
+
+<color name="black" weight="0.609755484831">
+ <shade name="cool" weight="0.638654769862" />
+ <shade name="fresh" weight="0.285713975991" />
+ <shade name="dark" weight="0.0756301701152" />
+</color>
+
+<color name="red" weight="0.336585027627">
+ <shade name="cool" weight="0.638654769862" />
+ <shade name="fresh" weight="0.285713975991" />
+ <shade name="dark" weight="0.0756301701152" />
+</color>
+
+<color name="white" weight="0.0243902193932">
+ <shade name="cool" weight="0.638654769862" />
+ <shade name="fresh" weight="0.285713975991" />
+ <shade name="dark" weight="0.0756301701152" />
+</color>
+
+<color name="green" weight="0.0243902193932">
+ <shade name="cool" weight="0.638654769862" />
+ <shade name="fresh" weight="0.285713975991" />
+ <shade name="dark" weight="0.0756301701152" />
+</color>
+
+<color name="yellow" weight="0.00487804387865">
+ <shade name="cool" weight="0.638654769862" />
+ <shade name="fresh" weight="0.285713975991" />
+ <shade name="dark" weight="0.0756301701152" />
+</color>
+
+</colors>

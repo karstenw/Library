@@ -1,0 +1,33 @@
+<colors query="arena rock">
+
+<color name="purple" weight="0.411764269897">
+ <shade name="hard" weight="0.745725663956" />
+ <shade name="soft" weight="0.141025483728" />
+ <shade name="cool" weight="0.113247736933" />
+</color>
+
+<color name="white" weight="0.29411733564">
+ <shade name="hard" weight="0.745725663956" />
+ <shade name="soft" weight="0.141025483728" />
+ <shade name="cool" weight="0.113247736933" />
+</color>
+
+<color name="black" weight="0.176470401384">
+ <shade name="hard" weight="0.745725663956" />
+ <shade name="soft" weight="0.141025483728" />
+ <shade name="cool" weight="0.113247736933" />
+</color>
+
+<color name="orange" weight="0.0588234671281">
+ <shade name="hard" weight="0.745725663956" />
+ <shade name="soft" weight="0.141025483728" />
+ <shade name="cool" weight="0.113247736933" />
+</color>
+
+<color name="green" weight="0.0588234671281">
+ <shade name="hard" weight="0.745725663956" />
+ <shade name="soft" weight="0.141025483728" />
+ <shade name="cool" weight="0.113247736933" />
+</color>
+
+</colors>

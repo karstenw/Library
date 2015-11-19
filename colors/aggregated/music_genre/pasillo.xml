@@ -1,0 +1,33 @@
+<colors query="pasillo">
+
+<color name="red" weight="0.307692">
+ <shade name="neutral" weight="0.4999995" />
+ <shade name="bright" weight="0.4999995" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="green" weight="0.307692">
+ <shade name="neutral" weight="0.4999995" />
+ <shade name="bright" weight="0.4999995" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="black" weight="0.230769">
+ <shade name="neutral" weight="0.4999995" />
+ <shade name="bright" weight="0.4999995" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="white" weight="0.0769230000001">
+ <shade name="neutral" weight="0.4999995" />
+ <shade name="bright" weight="0.4999995" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="orange" weight="0.0769230000001">
+ <shade name="neutral" weight="0.4999995" />
+ <shade name="bright" weight="0.4999995" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+</colors>

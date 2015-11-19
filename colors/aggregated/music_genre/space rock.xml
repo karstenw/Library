@@ -1,0 +1,33 @@
+<colors query="space rock">
+
+<color name="green" weight="0.956220228717">
+ <shade name="dark" weight="0.412807429109" />
+ <shade name="cool" weight="0.354679414031" />
+ <shade name="hard" weight="0.232512060309" />
+</color>
+
+<color name="black" weight="0.0161290159061">
+ <shade name="dark" weight="0.412807429109" />
+ <shade name="cool" weight="0.354679414031" />
+ <shade name="hard" weight="0.232512060309" />
+</color>
+
+<color name="red" weight="0.0138248707766">
+ <shade name="dark" weight="0.412807429109" />
+ <shade name="cool" weight="0.354679414031" />
+ <shade name="hard" weight="0.232512060309" />
+</color>
+
+<color name="yellow" weight="0.00691243538831">
+ <shade name="dark" weight="0.412807429109" />
+ <shade name="cool" weight="0.354679414031" />
+ <shade name="hard" weight="0.232512060309" />
+</color>
+
+<color name="white" weight="0.00691243538831">
+ <shade name="dark" weight="0.412807429109" />
+ <shade name="cool" weight="0.354679414031" />
+ <shade name="hard" weight="0.232512060309" />
+</color>
+
+</colors>

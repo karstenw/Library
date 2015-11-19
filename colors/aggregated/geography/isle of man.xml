@@ -1,0 +1,33 @@
+<colors query="isle of man">
+
+<color name="black" weight="0.773941318666">
+ <shade name="light" weight="0.71428479592" />
+ <shade name="cool" weight="0.183673233236" />
+ <shade name="fresh" weight="0.102040685131" />
+</color>
+
+<color name="green" weight="0.163325745906">
+ <shade name="light" weight="0.71428479592" />
+ <shade name="cool" weight="0.183673233236" />
+ <shade name="fresh" weight="0.102040685131" />
+</color>
+
+<color name="white" weight="0.0469561519479">
+ <shade name="light" weight="0.71428479592" />
+ <shade name="cool" weight="0.183673233236" />
+ <shade name="fresh" weight="0.102040685131" />
+</color>
+
+<color name="blue" weight="0.00927987192645">
+ <shade name="light" weight="0.71428479592" />
+ <shade name="cool" weight="0.183673233236" />
+ <shade name="fresh" weight="0.102040685131" />
+</color>
+
+<color name="red" weight="0.00649591034852">
+ <shade name="light" weight="0.71428479592" />
+ <shade name="cool" weight="0.183673233236" />
+ <shade name="fresh" weight="0.102040685131" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="harp">
+
+<color name="black" weight="0.326883524518">
+ <shade name="cool" weight="0.3869340568" />
+ <shade name="soft" weight="0.336682880592" />
+ <shade name="light" weight="0.276381469143" />
+</color>
+
+<color name="white" weight="0.29735199115">
+ <shade name="cool" weight="0.3869340568" />
+ <shade name="soft" weight="0.336682880592" />
+ <shade name="light" weight="0.276381469143" />
+</color>
+
+<color name="green" weight="0.167005912838">
+ <shade name="cool" weight="0.3869340568" />
+ <shade name="soft" weight="0.336682880592" />
+ <shade name="light" weight="0.276381469143" />
+</color>
+
+<color name="yellow" weight="0.133401064523">
+ <shade name="cool" weight="0.3869340568" />
+ <shade name="soft" weight="0.336682880592" />
+ <shade name="light" weight="0.276381469143" />
+</color>
+
+<color name="red" weight="0.0753563265244">
+ <shade name="cool" weight="0.3869340568" />
+ <shade name="soft" weight="0.336682880592" />
+ <shade name="light" weight="0.276381469143" />
+</color>
+
+</colors>

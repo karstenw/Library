@@ -1,0 +1,33 @@
+<colors query="chanting">
+
+<color name="green" weight="0.384035747963">
+ <shade name="dark" weight="0.938955504198" />
+ <shade name="soft" weight="0.0509264002277" />
+ <shade name="light" weight="0.0101170750452" />
+</color>
+
+<color name="black" weight="0.275978630644">
+ <shade name="dark" weight="0.938955504198" />
+ <shade name="soft" weight="0.0509264002277" />
+ <shade name="light" weight="0.0101170750452" />
+</color>
+
+<color name="blue" weight="0.238704572754">
+ <shade name="dark" weight="0.938955504198" />
+ <shade name="soft" weight="0.0509264002277" />
+ <shade name="light" weight="0.0101170750452" />
+</color>
+
+<color name="red" weight="0.0564758452887">
+ <shade name="dark" weight="0.938955504198" />
+ <shade name="soft" weight="0.0509264002277" />
+ <shade name="light" weight="0.0101170750452" />
+</color>
+
+<color name="white" weight="0.0448041705957">
+ <shade name="dark" weight="0.938955504198" />
+ <shade name="soft" weight="0.0509264002277" />
+ <shade name="light" weight="0.0101170750452" />
+</color>
+
+</colors>

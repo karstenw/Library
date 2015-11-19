@@ -1,0 +1,33 @@
+<colors query="dutch trance">
+
+<color name="yellow" weight="0.0">
+ <shade name="hard" weight="0.914284800001" />
+ <shade name="light" weight="0.0571428000001" />
+ <shade name="cool" weight="0.0285714" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="hard" weight="0.914284800001" />
+ <shade name="light" weight="0.0571428000001" />
+ <shade name="cool" weight="0.0285714" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="hard" weight="0.914284800001" />
+ <shade name="light" weight="0.0571428000001" />
+ <shade name="cool" weight="0.0285714" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="hard" weight="0.914284800001" />
+ <shade name="light" weight="0.0571428000001" />
+ <shade name="cool" weight="0.0285714" />
+</color>
+
+<color name="pink" weight="0.0">
+ <shade name="hard" weight="0.914284800001" />
+ <shade name="light" weight="0.0571428000001" />
+ <shade name="cool" weight="0.0285714" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="glamrock">
+
+<color name="black" weight="0.996524195337">
+ <shade name="hard" weight="0.556700451271" />
+ <shade name="cool" weight="0.391752169413" />
+ <shade name="dark" weight="0.0515463380806" />
+</color>
+
+<color name="white" weight="0.000868701042012">
+ <shade name="hard" weight="0.556700451271" />
+ <shade name="cool" weight="0.391752169413" />
+ <shade name="dark" weight="0.0515463380806" />
+</color>
+
+<color name="red" weight="0.000868701042012">
+ <shade name="hard" weight="0.556700451271" />
+ <shade name="cool" weight="0.391752169413" />
+ <shade name="dark" weight="0.0515463380806" />
+</color>
+
+<color name="pink" weight="0.000868701042012">
+ <shade name="hard" weight="0.556700451271" />
+ <shade name="cool" weight="0.391752169413" />
+ <shade name="dark" weight="0.0515463380806" />
+</color>
+
+<color name="blue" weight="0.000868701042012">
+ <shade name="hard" weight="0.556700451271" />
+ <shade name="cool" weight="0.391752169413" />
+ <shade name="dark" weight="0.0515463380806" />
+</color>
+
+</colors>

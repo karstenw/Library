@@ -1,0 +1,33 @@
+<colors query="maryland">
+
+<color name="red" weight="0.501608802786">
+ <shade name="light" weight="0.554387231496" />
+ <shade name="fresh" weight="0.415133566713" />
+ <shade name="cool" weight="0.0304781605941" />
+</color>
+
+<color name="green" weight="0.391672873509">
+ <shade name="light" weight="0.554387231496" />
+ <shade name="fresh" weight="0.415133566713" />
+ <shade name="cool" weight="0.0304781605941" />
+</color>
+
+<color name="blue" weight="0.0526689242925">
+ <shade name="light" weight="0.554387231496" />
+ <shade name="fresh" weight="0.415133566713" />
+ <shade name="cool" weight="0.0304781605941" />
+</color>
+
+<color name="black" weight="0.0288843068938">
+ <shade name="light" weight="0.554387231496" />
+ <shade name="fresh" weight="0.415133566713" />
+ <shade name="cool" weight="0.0304781605941" />
+</color>
+
+<color name="white" weight="0.0251640416064">
+ <shade name="light" weight="0.554387231496" />
+ <shade name="fresh" weight="0.415133566713" />
+ <shade name="cool" weight="0.0304781605941" />
+</color>
+
+</colors>

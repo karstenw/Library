@@ -1,0 +1,33 @@
+<colors query="new instrumental">
+
+<color name="blue" weight="0.999999000001">
+ <shade name="fresh" weight="0.990944676121" />
+ <shade name="cool" weight="0.00503017602092" />
+ <shade name="bright" weight="0.00402414081674" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="fresh" weight="0.990944676121" />
+ <shade name="cool" weight="0.00503017602092" />
+ <shade name="bright" weight="0.00402414081674" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="fresh" weight="0.990944676121" />
+ <shade name="cool" weight="0.00503017602092" />
+ <shade name="bright" weight="0.00402414081674" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="fresh" weight="0.990944676121" />
+ <shade name="cool" weight="0.00503017602092" />
+ <shade name="bright" weight="0.00402414081674" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="fresh" weight="0.990944676121" />
+ <shade name="cool" weight="0.00503017602092" />
+ <shade name="bright" weight="0.00402414081674" />
+</color>
+
+</colors>

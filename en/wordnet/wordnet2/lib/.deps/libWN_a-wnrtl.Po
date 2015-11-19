@@ -1,0 +1,30 @@
+libWN_a-wnrtl.o libWN_a-wnrtl.o: wnrtl.c \
+  /Developer/SDKs/MacOSX10.6.sdk/usr/include/stdio.h \
+  /Developer/SDKs/MacOSX10.6.sdk/usr/include/_types.h \
+  /Developer/SDKs/MacOSX10.6.sdk/usr/include/sys/_types.h \
+  /Developer/SDKs/MacOSX10.6.sdk/usr/include/sys/cdefs.h \
+  /Developer/SDKs/MacOSX10.6.sdk/usr/include/machine/_types.h \
+  /Developer/SDKs/MacOSX10.6.sdk/usr/include/i386/_types.h \
+  /Developer/SDKs/MacOSX10.6.sdk/usr/include/secure/_stdio.h \
+  /Developer/SDKs/MacOSX10.6.sdk/usr/include/secure/_common.h \
+  ../include/wn.h ../config.h
+
+/Developer/SDKs/MacOSX10.6.sdk/usr/include/stdio.h:
+
+/Developer/SDKs/MacOSX10.6.sdk/usr/include/_types.h:
+
+/Developer/SDKs/MacOSX10.6.sdk/usr/include/sys/_types.h:
+
+/Developer/SDKs/MacOSX10.6.sdk/usr/include/sys/cdefs.h:
+
+/Developer/SDKs/MacOSX10.6.sdk/usr/include/machine/_types.h:
+
+/Developer/SDKs/MacOSX10.6.sdk/usr/include/i386/_types.h:
+
+/Developer/SDKs/MacOSX10.6.sdk/usr/include/secure/_stdio.h:
+
+/Developer/SDKs/MacOSX10.6.sdk/usr/include/secure/_common.h:
+
+../include/wn.h:
+
+../config.h:

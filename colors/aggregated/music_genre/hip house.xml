@@ -1,0 +1,33 @@
+<colors query="hip house">
+
+<color name="green" weight="0.833332500001">
+ <shade name="hard" weight="0.762024551537" />
+ <shade name="cool" weight="0.181012476528" />
+ <shade name="fresh" weight="0.0569619681382" />
+</color>
+
+<color name="white" weight="0.1666665">
+ <shade name="hard" weight="0.762024551537" />
+ <shade name="cool" weight="0.181012476528" />
+ <shade name="fresh" weight="0.0569619681382" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="hard" weight="0.762024551537" />
+ <shade name="cool" weight="0.181012476528" />
+ <shade name="fresh" weight="0.0569619681382" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="hard" weight="0.762024551537" />
+ <shade name="cool" weight="0.181012476528" />
+ <shade name="fresh" weight="0.0569619681382" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="hard" weight="0.762024551537" />
+ <shade name="cool" weight="0.181012476528" />
+ <shade name="fresh" weight="0.0569619681382" />
+</color>
+
+</colors>

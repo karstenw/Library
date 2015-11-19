@@ -1,0 +1,33 @@
+<colors query="freak-folk">
+
+<color name="white" weight="0.999999000001">
+ <shade name="warm" weight="0.499999250001" />
+ <shade name="dark" weight="0.249999625001" />
+ <shade name="cool" weight="0.249999625001" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="warm" weight="0.499999250001" />
+ <shade name="dark" weight="0.249999625001" />
+ <shade name="cool" weight="0.249999625001" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="warm" weight="0.499999250001" />
+ <shade name="dark" weight="0.249999625001" />
+ <shade name="cool" weight="0.249999625001" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="dark" weight="0.399999040002" />
+ <shade name="cool" weight="0.399999040002" />
+ <shade name="soft" weight="0.199999520001" />
+</color>
+
+<color name="pink" weight="0.0">
+ <shade name="warm" weight="0.499999250001" />
+ <shade name="dark" weight="0.249999625001" />
+ <shade name="cool" weight="0.249999625001" />
+</color>
+
+</colors>

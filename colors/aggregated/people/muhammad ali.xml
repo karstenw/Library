@@ -1,0 +1,33 @@
+<colors query="muhammad ali">
+
+<color name="white" weight="0.726249267396">
+ <shade name="dark" weight="0.879865624786" />
+ <shade name="cool" weight="0.0678531012793" />
+ <shade name="light" weight="0.0522802583628" />
+</color>
+
+<color name="black" weight="0.177499820947">
+ <shade name="dark" weight="0.879865624786" />
+ <shade name="cool" weight="0.0678531012793" />
+ <shade name="light" weight="0.0522802583628" />
+</color>
+
+<color name="green" weight="0.0749999243438">
+ <shade name="dark" weight="0.879865624786" />
+ <shade name="cool" weight="0.0678531012793" />
+ <shade name="light" weight="0.0522802583628" />
+</color>
+
+<color name="blue" weight="0.0112499886516">
+ <shade name="dark" weight="0.879865624786" />
+ <shade name="cool" weight="0.0678531012793" />
+ <shade name="light" weight="0.0522802583628" />
+</color>
+
+<color name="red" weight="0.00999998991251">
+ <shade name="dark" weight="0.879865624786" />
+ <shade name="cool" weight="0.0678531012793" />
+ <shade name="light" weight="0.0522802583628" />
+</color>
+
+</colors>

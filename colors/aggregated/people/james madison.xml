@@ -1,0 +1,33 @@
+<colors query="james madison">
+
+<color name="black" weight="0.502570403877">
+ <shade name="cool" weight="0.555554537039" />
+ <shade name="warm" weight="0.222221814816" />
+ <shade name="light" weight="0.222221814816" />
+</color>
+
+<color name="white" weight="0.343340176906">
+ <shade name="cool" weight="0.555554537039" />
+ <shade name="warm" weight="0.222221814816" />
+ <shade name="light" weight="0.222221814816" />
+</color>
+
+<color name="green" weight="0.148283148867">
+ <shade name="cool" weight="0.588234152251" />
+ <shade name="light" weight="0.235293660901" />
+ <shade name="weak" weight="0.176470245675" />
+</color>
+
+<color name="purple" weight="0.00315143157547">
+ <shade name="cool" weight="0.588234152251" />
+ <shade name="light" weight="0.235293660901" />
+ <shade name="weak" weight="0.176470245675" />
+</color>
+
+<color name="orange" weight="0.00265383711618">
+ <shade name="cool" weight="0.555554537039" />
+ <shade name="warm" weight="0.222221814816" />
+ <shade name="light" weight="0.222221814816" />
+</color>
+
+</colors>

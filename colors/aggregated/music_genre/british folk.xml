@@ -1,0 +1,33 @@
+<colors query="british folk">
+
+<color name="white" weight="0.927999064577">
+ <shade name="dark" weight="0.437499535157" />
+ <shade name="cool" weight="0.312499667969" />
+ <shade name="light" weight="0.249999734375" />
+</color>
+
+<color name="green" weight="0.027999971776">
+ <shade name="dark" weight="0.437499535157" />
+ <shade name="cool" weight="0.312499667969" />
+ <shade name="light" weight="0.249999734375" />
+</color>
+
+<color name="black" weight="0.023999975808">
+ <shade name="dark" weight="0.437499535157" />
+ <shade name="cool" weight="0.312499667969" />
+ <shade name="light" weight="0.249999734375" />
+</color>
+
+<color name="blue" weight="0.011999987904">
+ <shade name="dark" weight="0.437499535157" />
+ <shade name="cool" weight="0.312499667969" />
+ <shade name="light" weight="0.249999734375" />
+</color>
+
+<color name="yellow" weight="0.00799999193601">
+ <shade name="dark" weight="0.437499535157" />
+ <shade name="cool" weight="0.312499667969" />
+ <shade name="light" weight="0.249999734375" />
+</color>
+
+</colors>

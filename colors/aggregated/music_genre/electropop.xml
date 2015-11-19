@@ -1,0 +1,33 @@
+<colors query="electropop">
+
+<color name="black" weight="0.934209579814">
+ <shade name="dark" weight="0.611385402379" />
+ <shade name="cool" weight="0.271039277573" />
+ <shade name="soft" weight="0.117574115842" />
+</color>
+
+<color name="yellow" weight="0.0197368221087">
+ <shade name="dark" weight="0.611385402379" />
+ <shade name="cool" weight="0.271039277573" />
+ <shade name="soft" weight="0.117574115842" />
+</color>
+
+<color name="blue" weight="0.0197368221087">
+ <shade name="dark" weight="0.611385402379" />
+ <shade name="cool" weight="0.271039277573" />
+ <shade name="soft" weight="0.117574115842" />
+</color>
+
+<color name="pink" weight="0.0131578814058">
+ <shade name="dark" weight="0.611385402379" />
+ <shade name="cool" weight="0.271039277573" />
+ <shade name="soft" weight="0.117574115842" />
+</color>
+
+<color name="green" weight="0.0131578814058">
+ <shade name="dark" weight="0.611385402379" />
+ <shade name="cool" weight="0.271039277573" />
+ <shade name="soft" weight="0.117574115842" />
+</color>
+
+</colors>

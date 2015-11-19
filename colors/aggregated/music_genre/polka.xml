@@ -1,0 +1,33 @@
+<colors query="polka">
+
+<color name="white" weight="0.293842193906">
+ <shade name="bright" weight="0.589386495407" />
+ <shade name="cool" weight="0.256474723618" />
+ <shade name="soft" weight="0.154137518627" />
+</color>
+
+<color name="pink" weight="0.286827393521">
+ <shade name="bright" weight="0.589386495407" />
+ <shade name="cool" weight="0.256474723618" />
+ <shade name="soft" weight="0.154137518627" />
+</color>
+
+<color name="yellow" weight="0.168355209241">
+ <shade name="bright" weight="0.589386495407" />
+ <shade name="cool" weight="0.256474723618" />
+ <shade name="soft" weight="0.154137518627" />
+</color>
+
+<color name="black" weight="0.13561947411">
+ <shade name="bright" weight="0.589386495407" />
+ <shade name="cool" weight="0.256474723618" />
+ <shade name="soft" weight="0.154137518627" />
+</color>
+
+<color name="red" weight="0.11535449522">
+ <shade name="bright" weight="0.589386495407" />
+ <shade name="cool" weight="0.256474723618" />
+ <shade name="soft" weight="0.154137518627" />
+</color>
+
+</colors>

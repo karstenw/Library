@@ -1,0 +1,33 @@
+<colors query="hank aaron">
+
+<color name="black" weight="0.38823489218">
+ <shade name="cool" weight="0.775509412745" />
+ <shade name="hard" weight="0.204081424407" />
+ <shade name="weak" weight="0.0204081424407" />
+</color>
+
+<color name="blue" weight="0.264705608305">
+ <shade name="cool" weight="0.775509412745" />
+ <shade name="hard" weight="0.204081424407" />
+ <shade name="weak" weight="0.0204081424407" />
+</color>
+
+<color name="white" weight="0.247058567751">
+ <shade name="cool" weight="0.775509412745" />
+ <shade name="hard" weight="0.204081424407" />
+ <shade name="weak" weight="0.0204081424407" />
+</color>
+
+<color name="red" weight="0.0588234685122">
+ <shade name="cool" weight="0.775509412745" />
+ <shade name="hard" weight="0.204081424407" />
+ <shade name="weak" weight="0.0204081424407" />
+</color>
+
+<color name="green" weight="0.0411764279585">
+ <shade name="cool" weight="0.775509412745" />
+ <shade name="hard" weight="0.204081424407" />
+ <shade name="weak" weight="0.0204081424407" />
+</color>
+
+</colors>

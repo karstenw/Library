@@ -1,0 +1,33 @@
+<colors query="new york">
+
+<color name="white" weight="0.333256346282">
+ <shade name="light" weight="0.473124713872" />
+ <shade name="soft" weight="0.284007542128" />
+ <shade name="cool" weight="0.242866262661" />
+</color>
+
+<color name="green" weight="0.280394994803">
+ <shade name="light" weight="0.473124713872" />
+ <shade name="soft" weight="0.284007542128" />
+ <shade name="cool" weight="0.242866262661" />
+</color>
+
+<color name="black" weight="0.192829016918">
+ <shade name="light" weight="0.473124713872" />
+ <shade name="soft" weight="0.284007542128" />
+ <shade name="cool" weight="0.242866262661" />
+</color>
+
+<color name="blue" weight="0.115835309329">
+ <shade name="light" weight="0.473124713872" />
+ <shade name="soft" weight="0.284007542128" />
+ <shade name="cool" weight="0.242866262661" />
+</color>
+
+<color name="red" weight="0.0776832034783">
+ <shade name="light" weight="0.473124713872" />
+ <shade name="soft" weight="0.284007542128" />
+ <shade name="cool" weight="0.242866262661" />
+</color>
+
+</colors>

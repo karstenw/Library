@@ -1,0 +1,33 @@
+<colors query="afro-punk">
+
+<color name="red" weight="0.333333">
+ <shade name="dark" weight="0.499999375001" />
+ <shade name="light" weight="0.2499996875" />
+ <shade name="fresh" weight="0.2499996875" />
+</color>
+
+<color name="black" weight="0.333333">
+ <shade name="dark" weight="0.499999375001" />
+ <shade name="light" weight="0.2499996875" />
+ <shade name="fresh" weight="0.2499996875" />
+</color>
+
+<color name="white" weight="0.1666665">
+ <shade name="dark" weight="0.499999375001" />
+ <shade name="light" weight="0.2499996875" />
+ <shade name="fresh" weight="0.2499996875" />
+</color>
+
+<color name="orange" weight="0.1666665">
+ <shade name="dark" weight="0.499999375001" />
+ <shade name="light" weight="0.2499996875" />
+ <shade name="fresh" weight="0.2499996875" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="dark" weight="0.499999375001" />
+ <shade name="light" weight="0.2499996875" />
+ <shade name="fresh" weight="0.2499996875" />
+</color>
+
+</colors>

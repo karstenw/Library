@@ -1,0 +1,33 @@
+<colors query="dark cabaret">
+
+<color name="blue" weight="0.666666000001">
+ <shade name="dark" weight="0.997651582166" />
+ <shade name="cool" weight="0.00234741548745" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="white" weight="0.333333">
+ <shade name="dark" weight="0.995315163935" />
+ <shade name="warm" weight="0.00234191803279" />
+ <shade name="cool" weight="0.00234191803279" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="dark" weight="0.995315163935" />
+ <shade name="warm" weight="0.00234191803279" />
+ <shade name="cool" weight="0.00234191803279" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="dark" weight="0.995315163935" />
+ <shade name="warm" weight="0.00234191803279" />
+ <shade name="cool" weight="0.00234191803279" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="dark" weight="0.997651582166" />
+ <shade name="cool" weight="0.00234741548745" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+</colors>

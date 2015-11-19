@@ -1,0 +1,33 @@
+<colors query="gambia">
+
+<color name="green" weight="0.483870390219">
+ <shade name="cool" weight="0.562499003908" />
+ <shade name="light" weight="0.354166039498" />
+ <shade name="weak" weight="0.0833331857642" />
+</color>
+
+<color name="red" weight="0.204300831426">
+ <shade name="warm" weight="0.380281234875" />
+ <shade name="cool" weight="0.380281234875" />
+ <shade name="light" weight="0.239436333069" />
+</color>
+
+<color name="white" weight="0.139784779397">
+ <shade name="warm" weight="0.380281234875" />
+ <shade name="cool" weight="0.380281234875" />
+ <shade name="light" weight="0.239436333069" />
+</color>
+
+<color name="orange" weight="0.0860214027056">
+ <shade name="warm" weight="0.380281234875" />
+ <shade name="cool" weight="0.380281234875" />
+ <shade name="light" weight="0.239436333069" />
+</color>
+
+<color name="black" weight="0.0860214027056">
+ <shade name="warm" weight="0.380281234875" />
+ <shade name="cool" weight="0.380281234875" />
+ <shade name="light" weight="0.239436333069" />
+</color>
+
+</colors>

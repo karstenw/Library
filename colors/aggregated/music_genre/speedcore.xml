@@ -1,0 +1,33 @@
+<colors query="speedcore">
+
+<color name="black" weight="0.677418611863">
+ <shade name="hard" weight="0.809094889487" />
+ <shade name="dark" weight="0.168693640357" />
+ <shade name="intense" weight="0.0222104479467" />
+</color>
+
+<color name="orange" weight="0.129032116545">
+ <shade name="hard" weight="0.809094889487" />
+ <shade name="dark" weight="0.168693640357" />
+ <shade name="intense" weight="0.0222104479467" />
+</color>
+
+<color name="green" weight="0.0967740874091">
+ <shade name="hard" weight="0.809094889487" />
+ <shade name="dark" weight="0.168693640357" />
+ <shade name="intense" weight="0.0222104479467" />
+</color>
+
+<color name="white" weight="0.0645160582727">
+ <shade name="hard" weight="0.812101077605" />
+ <shade name="dark" weight="0.169320420756" />
+ <shade name="cool" weight="0.0185774756315" />
+</color>
+
+<color name="yellow" weight="0.0322580291364">
+ <shade name="hard" weight="0.809094889487" />
+ <shade name="dark" weight="0.168693640357" />
+ <shade name="intense" weight="0.0222104479467" />
+</color>
+
+</colors>

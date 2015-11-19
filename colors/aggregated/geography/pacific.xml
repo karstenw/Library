@@ -1,0 +1,33 @@
+<colors query="pacific">
+
+<color name="blue" weight="0.79618967169">
+ <shade name="fresh" weight="0.43317890021" />
+ <shade name="cool" weight="0.390168229267" />
+ <shade name="dark" weight="0.176650969944" />
+</color>
+
+<color name="white" weight="0.110666554845">
+ <shade name="warm" weight="0.441666097433" />
+ <shade name="fresh" weight="0.293749621406" />
+ <shade name="cool" weight="0.26458299233" />
+</color>
+
+<color name="green" weight="0.0392380555905">
+ <shade name="fresh" weight="0.43317890021" />
+ <shade name="cool" weight="0.390168229267" />
+ <shade name="dark" weight="0.176650969944" />
+</color>
+
+<color name="black" weight="0.0346666316382">
+ <shade name="warm" weight="0.441666097433" />
+ <shade name="fresh" weight="0.293749621406" />
+ <shade name="cool" weight="0.26458299233" />
+</color>
+
+<color name="red" weight="0.0192380757992">
+ <shade name="warm" weight="0.441666097433" />
+ <shade name="fresh" weight="0.293749621406" />
+ <shade name="cool" weight="0.26458299233" />
+</color>
+
+</colors>

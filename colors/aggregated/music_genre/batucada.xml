@@ -1,0 +1,33 @@
+<colors query="batucada">
+
+<color name="black" weight="0.562499402344">
+ <shade name="intense" weight="0.516128349637" />
+ <shade name="hard" weight="0.258064174818" />
+ <shade name="cool" weight="0.225806152966" />
+</color>
+
+<color name="blue" weight="0.187499800781">
+ <shade name="intense" weight="0.516128349637" />
+ <shade name="hard" weight="0.258064174818" />
+ <shade name="cool" weight="0.225806152966" />
+</color>
+
+<color name="white" weight="0.124999867188">
+ <shade name="hard" weight="0.421051722994" />
+ <shade name="cool" weight="0.368420257619" />
+ <shade name="light" weight="0.210525861497" />
+</color>
+
+<color name="red" weight="0.0624999335938">
+ <shade name="intense" weight="0.516128349637" />
+ <shade name="hard" weight="0.258064174818" />
+ <shade name="cool" weight="0.225806152966" />
+</color>
+
+<color name="pink" weight="0.0624999335938">
+ <shade name="hard" weight="0.421051722994" />
+ <shade name="cool" weight="0.368420257619" />
+ <shade name="light" weight="0.210525861497" />
+</color>
+
+</colors>

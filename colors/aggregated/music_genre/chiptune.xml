@@ -1,0 +1,33 @@
+<colors query="chiptune">
+
+<color name="black" weight="0.885713400001">
+ <shade name="cool" weight="0.974423565545" />
+ <shade name="dark" weight="0.0153452530007" />
+ <shade name="fresh" weight="0.0102301686671" />
+</color>
+
+<color name="red" weight="0.0571428000001">
+ <shade name="cool" weight="0.974423565545" />
+ <shade name="dark" weight="0.0153452530007" />
+ <shade name="fresh" weight="0.0102301686671" />
+</color>
+
+<color name="blue" weight="0.0571428000001">
+ <shade name="cool" weight="0.974423565545" />
+ <shade name="dark" weight="0.0153452530007" />
+ <shade name="fresh" weight="0.0102301686671" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="cool" weight="0.974423565545" />
+ <shade name="dark" weight="0.0153452530007" />
+ <shade name="fresh" weight="0.0102301686671" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="cool" weight="0.974423565545" />
+ <shade name="dark" weight="0.0153452530007" />
+ <shade name="fresh" weight="0.0102301686671" />
+</color>
+
+</colors>

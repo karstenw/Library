@@ -1,0 +1,33 @@
+<colors query="carribean">
+
+<color name="black" weight="0.682948707591">
+ <shade name="cool" weight="0.539905345645" />
+ <shade name="warm" weight="0.279342331007" />
+ <shade name="soft" weight="0.180750920064" />
+</color>
+
+<color name="blue" weight="0.208357232824">
+ <shade name="cool" weight="0.616620995667" />
+ <shade name="soft" weight="0.206433985506" />
+ <shade name="hard" weight="0.176943416148" />
+</color>
+
+<color name="white" weight="0.0550989126802">
+ <shade name="cool" weight="0.539905345645" />
+ <shade name="warm" weight="0.279342331007" />
+ <shade name="soft" weight="0.180750920064" />
+</color>
+
+<color name="purple" weight="0.0272021942854">
+ <shade name="cool" weight="0.616620995667" />
+ <shade name="soft" weight="0.206433985506" />
+ <shade name="hard" weight="0.176943416148" />
+</color>
+
+<color name="green" weight="0.0263919161577">
+ <shade name="cool" weight="0.616620995667" />
+ <shade name="soft" weight="0.206433985506" />
+ <shade name="hard" weight="0.176943416148" />
+</color>
+
+</colors>

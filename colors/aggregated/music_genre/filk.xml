@@ -1,0 +1,33 @@
+<colors query="filk">
+
+<color name="red" weight="0.483659624931">
+ <shade name="cool" weight="0.918180833224" />
+ <shade name="dark" weight="0.0454544966943" />
+ <shade name="fresh" weight="0.0363635973554" />
+</color>
+
+<color name="black" weight="0.398692393524">
+ <shade name="cool" weight="0.918180833224" />
+ <shade name="dark" weight="0.0454544966943" />
+ <shade name="fresh" weight="0.0363635973554" />
+</color>
+
+<color name="blue" weight="0.0653594087745">
+ <shade name="cool" weight="0.918180833224" />
+ <shade name="dark" weight="0.0454544966943" />
+ <shade name="fresh" weight="0.0363635973554" />
+</color>
+
+<color name="white" weight="0.0326797043872">
+ <shade name="cool" weight="0.918180833224" />
+ <shade name="dark" weight="0.0454544966943" />
+ <shade name="fresh" weight="0.0363635973554" />
+</color>
+
+<color name="yellow" weight="0.0196078226323">
+ <shade name="cool" weight="0.918180833224" />
+ <shade name="dark" weight="0.0454544966943" />
+ <shade name="fresh" weight="0.0363635973554" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="jack lemmon">
+
+<color name="black" weight="0.996598532306">
+ <shade name="cool" weight="0.642856224491" />
+ <shade name="light" weight="0.285713877552" />
+ <shade name="weak" weight="0.0714284693879" />
+</color>
+
+<color name="blue" weight="0.00130787208964">
+ <shade name="cool" weight="0.642856224491" />
+ <shade name="light" weight="0.285713877552" />
+ <shade name="weak" weight="0.0714284693879" />
+</color>
+
+<color name="white" weight="0.00104629767171">
+ <shade name="cool" weight="0.642856224491" />
+ <shade name="light" weight="0.285713877552" />
+ <shade name="weak" weight="0.0714284693879" />
+</color>
+
+<color name="red" weight="0.000523148835856">
+ <shade name="cool" weight="0.642856224491" />
+ <shade name="light" weight="0.285713877552" />
+ <shade name="weak" weight="0.0714284693879" />
+</color>
+
+<color name="green" weight="0.000523148835856">
+ <shade name="cool" weight="0.642856224491" />
+ <shade name="light" weight="0.285713877552" />
+ <shade name="weak" weight="0.0714284693879" />
+</color>
+
+</colors>

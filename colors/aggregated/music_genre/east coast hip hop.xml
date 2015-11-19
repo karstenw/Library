@@ -1,0 +1,33 @@
+<colors query="east coast hip hop">
+
+<color name="blue" weight="0.999999000001">
+ <shade name="hard" weight="0.444443925927" />
+ <shade name="weak" weight="0.333332944445" />
+ <shade name="light" weight="0.222221962963" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="hard" weight="0.444443925927" />
+ <shade name="weak" weight="0.333332944445" />
+ <shade name="light" weight="0.222221962963" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="hard" weight="0.444443925927" />
+ <shade name="weak" weight="0.333332944445" />
+ <shade name="light" weight="0.222221962963" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="hard" weight="0.444443925927" />
+ <shade name="weak" weight="0.333332944445" />
+ <shade name="light" weight="0.222221962963" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="hard" weight="0.444443925927" />
+ <shade name="weak" weight="0.333332944445" />
+ <shade name="light" weight="0.222221962963" />
+</color>
+
+</colors>

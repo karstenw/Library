@@ -1,0 +1,33 @@
+<colors query="julia child">
+
+<color name="yellow" weight="0.523076367811">
+ <shade name="cool" weight="0.562499296876" />
+ <shade name="light" weight="0.312499609375" />
+ <shade name="hard" weight="0.12499984375" />
+</color>
+
+<color name="white" weight="0.153845990533">
+ <shade name="cool" weight="0.562499296876" />
+ <shade name="light" weight="0.312499609375" />
+ <shade name="hard" weight="0.12499984375" />
+</color>
+
+<color name="pink" weight="0.123076792426">
+ <shade name="cool" weight="0.562499296876" />
+ <shade name="light" weight="0.312499609375" />
+ <shade name="hard" weight="0.12499984375" />
+</color>
+
+<color name="green" weight="0.107692193373">
+ <shade name="cool" weight="0.562499296876" />
+ <shade name="light" weight="0.312499609375" />
+ <shade name="hard" weight="0.12499984375" />
+</color>
+
+<color name="black" weight="0.0923075943196">
+ <shade name="cool" weight="0.562499296876" />
+ <shade name="light" weight="0.312499609375" />
+ <shade name="hard" weight="0.12499984375" />
+</color>
+
+</colors>

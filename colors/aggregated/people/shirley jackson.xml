@@ -1,0 +1,33 @@
+<colors query="shirley jackson">
+
+<color name="white" weight="0.529411235295">
+ <shade name="dark" weight="0.714285000001" />
+ <shade name="cool" weight="0.285714" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="green" weight="0.235293882353">
+ <shade name="dark" weight="0.714285000001" />
+ <shade name="cool" weight="0.285714" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="black" weight="0.176470411765">
+ <shade name="dark" weight="0.714285000001" />
+ <shade name="cool" weight="0.285714" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="orange" weight="0.0588234705883">
+ <shade name="dark" weight="0.714285000001" />
+ <shade name="cool" weight="0.285714" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="dark" weight="0.714285000001" />
+ <shade name="cool" weight="0.285714" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+</colors>

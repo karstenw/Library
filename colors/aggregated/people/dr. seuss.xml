@@ -1,0 +1,33 @@
+<colors query="dr. seuss">
+
+<color name="green" weight="0.287311463782">
+ <shade name="cool" weight="0.407795592357" />
+ <shade name="hard" weight="0.384557240587" />
+ <shade name="dark" weight="0.207645917432" />
+</color>
+
+<color name="blue" weight="0.263225472806">
+ <shade name="cool" weight="0.407795592357" />
+ <shade name="hard" weight="0.384557240587" />
+ <shade name="dark" weight="0.207645917432" />
+</color>
+
+<color name="white" weight="0.227096486343">
+ <shade name="cool" weight="0.407795592357" />
+ <shade name="hard" weight="0.384557240587" />
+ <shade name="dark" weight="0.207645917432" />
+</color>
+
+<color name="black" weight="0.111397708263">
+ <shade name="cool" weight="0.407795592357" />
+ <shade name="hard" weight="0.384557240587" />
+ <shade name="dark" weight="0.207645917432" />
+</color>
+
+<color name="orange" weight="0.110967601281">
+ <shade name="cool" weight="0.407795592357" />
+ <shade name="hard" weight="0.384557240587" />
+ <shade name="dark" weight="0.207645917432" />
+</color>
+
+</colors>

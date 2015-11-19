@@ -1,0 +1,33 @@
+<colors query="rock and roll">
+
+<color name="red" weight="0.398040972336">
+ <shade name="soft" weight="0.562594427356" />
+ <shade name="dark" weight="0.342118232852" />
+ <shade name="light" weight="0.095286263372" />
+</color>
+
+<color name="white" weight="0.328541754944">
+ <shade name="soft" weight="0.562594427356" />
+ <shade name="dark" weight="0.342118232852" />
+ <shade name="light" weight="0.095286263372" />
+</color>
+
+<color name="blue" weight="0.130942843677">
+ <shade name="soft" weight="0.562594427356" />
+ <shade name="dark" weight="0.342118232852" />
+ <shade name="light" weight="0.095286263372" />
+</color>
+
+<color name="purple" weight="0.117832764033">
+ <shade name="soft" weight="0.562594427356" />
+ <shade name="dark" weight="0.342118232852" />
+ <shade name="light" weight="0.095286263372" />
+</color>
+
+<color name="green" weight="0.0246406316208">
+ <shade name="soft" weight="0.562594427356" />
+ <shade name="dark" weight="0.342118232852" />
+ <shade name="light" weight="0.095286263372" />
+</color>
+
+</colors>

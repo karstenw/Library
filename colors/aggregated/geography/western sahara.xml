@@ -1,0 +1,33 @@
+<colors query="western sahara">
+
+<color name="green" weight="0.285713918368">
+ <shade name="light" weight="0.499999166668" />
+ <shade name="dark" weight="0.249999583334" />
+ <shade name="cool" weight="0.249999583334" />
+</color>
+
+<color name="black" weight="0.285713918368">
+ <shade name="light" weight="0.499999166668" />
+ <shade name="dark" weight="0.249999583334" />
+ <shade name="cool" weight="0.249999583334" />
+</color>
+
+<color name="white" weight="0.142856959184">
+ <shade name="light" weight="0.499999166668" />
+ <shade name="dark" weight="0.249999583334" />
+ <shade name="cool" weight="0.249999583334" />
+</color>
+
+<color name="red" weight="0.142856959184">
+ <shade name="light" weight="0.499999166668" />
+ <shade name="dark" weight="0.249999583334" />
+ <shade name="cool" weight="0.249999583334" />
+</color>
+
+<color name="orange" weight="0.142856959184">
+ <shade name="light" weight="0.499999166668" />
+ <shade name="dark" weight="0.249999583334" />
+ <shade name="cool" weight="0.249999583334" />
+</color>
+
+</colors>

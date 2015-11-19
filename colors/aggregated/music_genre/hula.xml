@@ -1,0 +1,33 @@
+<colors query="hula">
+
+<color name="white" weight="0.310093427883">
+ <shade name="cool" weight="0.625985428958" />
+ <shade name="light" weight="0.219883957399" />
+ <shade name="soft" weight="0.154129185449" />
+</color>
+
+<color name="pink" weight="0.284193976796">
+ <shade name="cool" weight="0.625985428958" />
+ <shade name="light" weight="0.219883957399" />
+ <shade name="soft" weight="0.154129185449" />
+</color>
+
+<color name="green" weight="0.251994659228">
+ <shade name="cool" weight="0.625985428958" />
+ <shade name="light" weight="0.219883957399" />
+ <shade name="soft" weight="0.154129185449" />
+</color>
+
+<color name="purple" weight="0.0860981752361">
+ <shade name="cool" weight="0.625985428958" />
+ <shade name="light" weight="0.219883957399" />
+ <shade name="soft" weight="0.154129185449" />
+</color>
+
+<color name="yellow" weight="0.0676185668928">
+ <shade name="cool" weight="0.625985428958" />
+ <shade name="light" weight="0.219883957399" />
+ <shade name="soft" weight="0.154129185449" />
+</color>
+
+</colors>

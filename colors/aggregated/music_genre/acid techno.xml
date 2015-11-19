@@ -1,0 +1,33 @@
+<colors query="acid techno">
+
+<color name="orange" weight="0.3571425">
+ <shade name="hard" weight="0.552046226414" />
+ <shade name="dark" weight="0.37543821754" />
+ <shade name="intense" weight="0.07251454669" />
+</color>
+
+<color name="red" weight="0.285714">
+ <shade name="hard" weight="0.552046226414" />
+ <shade name="dark" weight="0.37543821754" />
+ <shade name="intense" weight="0.07251454669" />
+</color>
+
+<color name="green" weight="0.2142855">
+ <shade name="hard" weight="0.552046226414" />
+ <shade name="dark" weight="0.37543821754" />
+ <shade name="intense" weight="0.07251454669" />
+</color>
+
+<color name="blue" weight="0.0714285000001">
+ <shade name="hard" weight="0.552046226414" />
+ <shade name="dark" weight="0.37543821754" />
+ <shade name="intense" weight="0.07251454669" />
+</color>
+
+<color name="black" weight="0.0714285000001">
+ <shade name="hard" weight="0.552046226414" />
+ <shade name="dark" weight="0.37543821754" />
+ <shade name="intense" weight="0.07251454669" />
+</color>
+
+</colors>

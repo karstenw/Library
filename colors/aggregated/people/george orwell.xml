@@ -1,0 +1,33 @@
+<colors query="george orwell">
+
+<color name="white" weight="0.472911482431">
+ <shade name="cool" weight="0.823528384776" />
+ <shade name="dark" weight="0.0941175296887" />
+ <shade name="weak" weight="0.0823528384776" />
+</color>
+
+<color name="green" weight="0.384875454675">
+ <shade name="cool" weight="0.823528384776" />
+ <shade name="dark" weight="0.0941175296887" />
+ <shade name="weak" weight="0.0823528384776" />
+</color>
+
+<color name="orange" weight="0.115124036296">
+ <shade name="cool" weight="0.823528384776" />
+ <shade name="dark" weight="0.0941175296887" />
+ <shade name="weak" weight="0.0823528384776" />
+</color>
+
+<color name="red" weight="0.0158013383151">
+ <shade name="cool" weight="0.823528384776" />
+ <shade name="dark" weight="0.0941175296887" />
+ <shade name="weak" weight="0.0823528384776" />
+</color>
+
+<color name="blue" weight="0.0112866702251">
+ <shade name="cool" weight="0.823528384776" />
+ <shade name="dark" weight="0.0941175296887" />
+ <shade name="weak" weight="0.0823528384776" />
+</color>
+
+</colors>

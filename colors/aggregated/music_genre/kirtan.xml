@@ -1,0 +1,33 @@
+<colors query="kirtan">
+
+<color name="blue" weight="0.4999995">
+ <shade name="cool" weight="0.427965575805" />
+ <shade name="soft" weight="0.351694483087" />
+ <shade name="light" weight="0.220338712296" />
+</color>
+
+<color name="yellow" weight="0.1874998125">
+ <shade name="cool" weight="0.427965575805" />
+ <shade name="soft" weight="0.351694483087" />
+ <shade name="light" weight="0.220338712296" />
+</color>
+
+<color name="green" weight="0.1874998125">
+ <shade name="cool" weight="0.427965575805" />
+ <shade name="soft" weight="0.351694483087" />
+ <shade name="light" weight="0.220338712296" />
+</color>
+
+<color name="white" weight="0.124999875">
+ <shade name="cool" weight="0.427965575805" />
+ <shade name="soft" weight="0.351694483087" />
+ <shade name="light" weight="0.220338712296" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="cool" weight="0.427965575805" />
+ <shade name="soft" weight="0.351694483087" />
+ <shade name="light" weight="0.220338712296" />
+</color>
+
+</colors>

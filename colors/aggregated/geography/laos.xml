@@ -1,0 +1,33 @@
+<colors query="laos">
+
+<color name="white" weight="0.756922291121">
+ <shade name="neutral" weight="0.780921492141" />
+ <shade name="fresh" weight="0.133123529533" />
+ <shade name="cool" weight="0.0859537749739" />
+</color>
+
+<color name="red" weight="0.0966152843139">
+ <shade name="neutral" weight="0.780921492141" />
+ <shade name="fresh" weight="0.133123529533" />
+ <shade name="cool" weight="0.0859537749739" />
+</color>
+
+<color name="black" weight="0.071999925253">
+ <shade name="neutral" weight="0.780921492141" />
+ <shade name="fresh" weight="0.133123529533" />
+ <shade name="cool" weight="0.0859537749739" />
+</color>
+
+<color name="green" weight="0.0449230302861">
+ <shade name="neutral" weight="0.780921492141" />
+ <shade name="fresh" weight="0.133123529533" />
+ <shade name="cool" weight="0.0859537749739" />
+</color>
+
+<color name="orange" weight="0.029538430873">
+ <shade name="neutral" weight="0.780921492141" />
+ <shade name="fresh" weight="0.133123529533" />
+ <shade name="cool" weight="0.0859537749739" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="alexander graham bell">
+
+<color name="black" weight="0.449999460001">
+ <shade name="light" weight="0.843136329105" />
+ <shade name="hard" weight="0.0784312864284" />
+ <shade name="cool" weight="0.0784312864284" />
+</color>
+
+<color name="blue" weight="0.2499997">
+ <shade name="light" weight="0.843136329105" />
+ <shade name="hard" weight="0.0784312864284" />
+ <shade name="cool" weight="0.0784312864284" />
+</color>
+
+<color name="white" weight="0.0999998800001">
+ <shade name="light" weight="0.843136329105" />
+ <shade name="hard" weight="0.0784312864284" />
+ <shade name="cool" weight="0.0784312864284" />
+</color>
+
+<color name="red" weight="0.0999998800001">
+ <shade name="light" weight="0.843136329105" />
+ <shade name="hard" weight="0.0784312864284" />
+ <shade name="cool" weight="0.0784312864284" />
+</color>
+
+<color name="green" weight="0.0999998800001">
+ <shade name="light" weight="0.843136329105" />
+ <shade name="hard" weight="0.0784312864284" />
+ <shade name="cool" weight="0.0784312864284" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="central african republic">
+
+<color name="blue" weight="0.263157548477">
+ <shade name="dark" weight="0.555554567903" />
+ <shade name="hard" weight="0.222221827161" />
+ <shade name="fresh" weight="0.222221827161" />
+</color>
+
+<color name="yellow" weight="0.210526038782">
+ <shade name="dark" weight="0.555554567903" />
+ <shade name="hard" weight="0.222221827161" />
+ <shade name="fresh" weight="0.222221827161" />
+</color>
+
+<color name="black" weight="0.210526038782">
+ <shade name="dark" weight="0.555554567903" />
+ <shade name="hard" weight="0.222221827161" />
+ <shade name="fresh" weight="0.222221827161" />
+</color>
+
+<color name="white" weight="0.157894529086">
+ <shade name="dark" weight="0.555554567903" />
+ <shade name="hard" weight="0.222221827161" />
+ <shade name="fresh" weight="0.222221827161" />
+</color>
+
+<color name="red" weight="0.157894529086">
+ <shade name="dark" weight="0.555554567903" />
+ <shade name="hard" weight="0.222221827161" />
+ <shade name="fresh" weight="0.222221827161" />
+</color>
+
+</colors>

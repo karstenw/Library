@@ -1,0 +1,33 @@
+<colors query="benga">
+
+<color name="white" weight="0.499999475309">
+ <shade name="cool" weight="0.571427918368" />
+ <shade name="hard" weight="0.214285469388" />
+ <shade name="dark" weight="0.214285469388" />
+</color>
+
+<color name="yellow" weight="0.382715647768">
+ <shade name="cool" weight="0.571427918368" />
+ <shade name="hard" weight="0.214285469388" />
+ <shade name="dark" weight="0.214285469388" />
+</color>
+
+<color name="black" weight="0.0555554972566">
+ <shade name="cool" weight="0.571427918368" />
+ <shade name="hard" weight="0.214285469388" />
+ <shade name="dark" weight="0.214285469388" />
+</color>
+
+<color name="red" weight="0.0370369981711">
+ <shade name="cool" weight="0.571427918368" />
+ <shade name="hard" weight="0.214285469388" />
+ <shade name="dark" weight="0.214285469388" />
+</color>
+
+<color name="orange" weight="0.024691332114">
+ <shade name="cool" weight="0.571427918368" />
+ <shade name="hard" weight="0.214285469388" />
+ <shade name="dark" weight="0.214285469388" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="red sea">
+
+<color name="orange" weight="0.353441696504">
+ <shade name="bright" weight="0.520340029157" />
+ <shade name="dark" weight="0.337274946172" />
+ <shade name="light" weight="0.142383953433" />
+</color>
+
+<color name="red" weight="0.248757659889">
+ <shade name="bright" weight="0.520340029157" />
+ <shade name="dark" weight="0.337274946172" />
+ <shade name="light" weight="0.142383953433" />
+</color>
+
+<color name="blue" weight="0.158977791199">
+ <shade name="bright" weight="0.520340029157" />
+ <shade name="dark" weight="0.337274946172" />
+ <shade name="light" weight="0.142383953433" />
+</color>
+
+<color name="black" weight="0.129169455349">
+ <shade name="bright" weight="0.520340029157" />
+ <shade name="dark" weight="0.337274946172" />
+ <shade name="light" weight="0.142383953433" />
+</color>
+
+<color name="white" weight="0.10965209259">
+ <shade name="bright" weight="0.520340029157" />
+ <shade name="dark" weight="0.337274946172" />
+ <shade name="light" weight="0.142383953433" />
+</color>
+
+</colors>

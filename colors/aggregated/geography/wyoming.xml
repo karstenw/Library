@@ -1,0 +1,33 @@
+<colors query="wyoming">
+
+<color name="green" weight="0.27363985991">
+ <shade name="cool" weight="0.566080438599" />
+ <shade name="fresh" weight="0.229239185879" />
+ <shade name="dark" weight="0.204677844535" />
+</color>
+
+<color name="blue" weight="0.269455764193">
+ <shade name="cool" weight="0.566080438599" />
+ <shade name="fresh" weight="0.229239185879" />
+ <shade name="dark" weight="0.204677844535" />
+</color>
+
+<color name="white" weight="0.250766803323">
+ <shade name="warm" weight="0.519093972193" />
+ <shade name="cool" weight="0.342290848149" />
+ <shade name="fresh" weight="0.13861364925" />
+</color>
+
+<color name="black" weight="0.109902247507">
+ <shade name="warm" weight="0.519093972193" />
+ <shade name="cool" weight="0.342290848149" />
+ <shade name="fresh" weight="0.13861364925" />
+</color>
+
+<color name="red" weight="0.0962342014975">
+ <shade name="warm" weight="0.519093972193" />
+ <shade name="cool" weight="0.342290848149" />
+ <shade name="fresh" weight="0.13861364925" />
+</color>
+
+</colors>

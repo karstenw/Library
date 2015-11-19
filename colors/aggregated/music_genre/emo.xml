@@ -1,0 +1,33 @@
+<colors query="emo">
+
+<color name="black" weight="0.656898661856">
+ <shade name="dark" weight="0.695661212957" />
+ <shade name="cool" weight="0.271970942707" />
+ <shade name="soft" weight="0.0323667898759" />
+</color>
+
+<color name="pink" weight="0.222158148033">
+ <shade name="dark" weight="0.695661212957" />
+ <shade name="cool" weight="0.271970942707" />
+ <shade name="soft" weight="0.0323667898759" />
+</color>
+
+<color name="green" weight="0.0664559287651">
+ <shade name="dark" weight="0.695661212957" />
+ <shade name="cool" weight="0.271970942707" />
+ <shade name="soft" weight="0.0323667898759" />
+</color>
+
+<color name="purple" weight="0.0373455507469">
+ <shade name="dark" weight="0.695661212957" />
+ <shade name="cool" weight="0.271970942707" />
+ <shade name="soft" weight="0.0323667898759" />
+</color>
+
+<color name="yellow" weight="0.0171406502146">
+ <shade name="dark" weight="0.695661212957" />
+ <shade name="cool" weight="0.271970942707" />
+ <shade name="soft" weight="0.0323667898759" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="oscar wilde">
+
+<color name="white" weight="0.360543836295">
+ <shade name="cool" weight="0.717904662035" />
+ <shade name="hard" weight="0.20777005513" />
+ <shade name="light" weight="0.0743242473636" />
+</color>
+
+<color name="black" weight="0.262754824093">
+ <shade name="cool" weight="0.717904662035" />
+ <shade name="hard" weight="0.20777005513" />
+ <shade name="light" weight="0.0743242473636" />
+</color>
+
+<color name="orange" weight="0.181122257384">
+ <shade name="cool" weight="0.717904662035" />
+ <shade name="hard" weight="0.20777005513" />
+ <shade name="light" weight="0.0743242473636" />
+</color>
+
+<color name="green" weight="0.113095118461">
+ <shade name="cool" weight="0.717904662035" />
+ <shade name="hard" weight="0.20777005513" />
+ <shade name="light" weight="0.0743242473636" />
+</color>
+
+<color name="yellow" weight="0.082482905945">
+ <shade name="cool" weight="0.717904662035" />
+ <shade name="hard" weight="0.20777005513" />
+ <shade name="light" weight="0.0743242473636" />
+</color>
+
+</colors>

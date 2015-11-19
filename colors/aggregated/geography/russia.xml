@@ -1,0 +1,33 @@
+<colors query="russia">
+
+<color name="white" weight="0.864049987275">
+ <shade name="cool" weight="0.416791804253" />
+ <shade name="dark" weight="0.329205120751" />
+ <shade name="weak" weight="0.254001382157" />
+</color>
+
+<color name="red" weight="0.115720980439">
+ <shade name="cool" weight="0.416791804253" />
+ <shade name="dark" weight="0.329205120751" />
+ <shade name="weak" weight="0.254001382157" />
+</color>
+
+<color name="green" weight="0.0116235295907">
+ <shade name="cool" weight="0.416791804253" />
+ <shade name="dark" weight="0.329205120751" />
+ <shade name="weak" weight="0.254001382157" />
+</color>
+
+<color name="black" weight="0.00465455499098">
+ <shade name="cool" weight="0.416791804253" />
+ <shade name="dark" weight="0.329205120751" />
+ <shade name="weak" weight="0.254001382157" />
+</color>
+
+<color name="blue" weight="0.00394994279897">
+ <shade name="cool" weight="0.416791804253" />
+ <shade name="dark" weight="0.329205120751" />
+ <shade name="weak" weight="0.254001382157" />
+</color>
+
+</colors>

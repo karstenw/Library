@@ -1,0 +1,33 @@
+<colors query="post punk">
+
+<color name="black" weight="0.587472408343">
+ <shade name="cool" weight="0.435638485459" />
+ <shade name="intense" weight="0.304626280578" />
+ <shade name="dark" weight="0.259733986598" />
+</color>
+
+<color name="white" weight="0.276457603926">
+ <shade name="cool" weight="0.52281395073" />
+ <shade name="dark" weight="0.311709264" />
+ <shade name="hard" weight="0.165475288296" />
+</color>
+
+<color name="red" weight="0.112310901595">
+ <shade name="cool" weight="0.435638485459" />
+ <shade name="intense" weight="0.304626280578" />
+ <shade name="dark" weight="0.259733986598" />
+</color>
+
+<color name="pink" weight="0.0151187752147">
+ <shade name="cool" weight="0.52281395073" />
+ <shade name="dark" weight="0.311709264" />
+ <shade name="hard" weight="0.165475288296" />
+</color>
+
+<color name="blue" weight="0.00863930012269">
+ <shade name="cool" weight="0.435638485459" />
+ <shade name="intense" weight="0.304626280578" />
+ <shade name="dark" weight="0.259733986598" />
+</color>
+
+</colors>

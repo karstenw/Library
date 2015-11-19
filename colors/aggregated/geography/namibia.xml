@@ -1,0 +1,33 @@
+<colors query="namibia">
+
+<color name="black" weight="0.301859462443">
+ <shade name="soft" weight="0.649999258153" />
+ <shade name="light" weight="0.245651893549" />
+ <shade name="cool" weight="0.104347706994" />
+</color>
+
+<color name="white" weight="0.231759397705">
+ <shade name="soft" weight="0.649999258153" />
+ <shade name="light" weight="0.245651893549" />
+ <shade name="cool" weight="0.104347706994" />
+</color>
+
+<color name="green" weight="0.191702217855">
+ <shade name="soft" weight="0.649999258153" />
+ <shade name="light" weight="0.245651893549" />
+ <shade name="cool" weight="0.104347706994" />
+</color>
+
+<color name="blue" weight="0.17882669576">
+ <shade name="soft" weight="0.649999258153" />
+ <shade name="light" weight="0.245651893549" />
+ <shade name="cool" weight="0.104347706994" />
+</color>
+
+<color name="orange" weight="0.0958511089274">
+ <shade name="soft" weight="0.649999258153" />
+ <shade name="light" weight="0.245651893549" />
+ <shade name="cool" weight="0.104347706994" />
+</color>
+
+</colors>

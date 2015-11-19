@@ -1,0 +1,33 @@
+<colors query="pennsylvania">
+
+<color name="white" weight="0.50274496795">
+ <shade name="cool" weight="0.486321485427" />
+ <shade name="fresh" weight="0.261701749345" />
+ <shade name="light" weight="0.251975319637" />
+</color>
+
+<color name="green" weight="0.356556714858">
+ <shade name="cool" weight="0.486321485427" />
+ <shade name="fresh" weight="0.261701749345" />
+ <shade name="light" weight="0.251975319637" />
+</color>
+
+<color name="black" weight="0.0809383742728">
+ <shade name="cool" weight="0.486321485427" />
+ <shade name="fresh" weight="0.261701749345" />
+ <shade name="light" weight="0.251975319637" />
+</color>
+
+<color name="red" weight="0.0395777953493">
+ <shade name="cool" weight="0.486321485427" />
+ <shade name="fresh" weight="0.261701749345" />
+ <shade name="light" weight="0.251975319637" />
+</color>
+
+<color name="blue" weight="0.020181110061">
+ <shade name="cool" weight="0.486321485427" />
+ <shade name="fresh" weight="0.261701749345" />
+ <shade name="light" weight="0.251975319637" />
+</color>
+
+</colors>

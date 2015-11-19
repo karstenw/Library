@@ -1,0 +1,33 @@
+<colors query="john adams">
+
+<color name="white" weight="0.666891681901">
+ <shade name="cool" weight="0.939067097341" />
+ <shade name="hard" weight="0.0322580300613" />
+ <shade name="weak" weight="0.0286738044989" />
+</color>
+
+<color name="green" weight="0.174339703644">
+ <shade name="cool" weight="0.939067097341" />
+ <shade name="hard" weight="0.0322580300613" />
+ <shade name="weak" weight="0.0286738044989" />
+</color>
+
+<color name="black" weight="0.155720900342">
+ <shade name="cool" weight="0.939067097341" />
+ <shade name="hard" weight="0.0322580300613" />
+ <shade name="weak" weight="0.0286738044989" />
+</color>
+
+<color name="red" weight="0.00152335663378">
+ <shade name="cool" weight="0.939067097341" />
+ <shade name="hard" weight="0.0322580300613" />
+ <shade name="weak" weight="0.0286738044989" />
+</color>
+
+<color name="blue" weight="0.00152335663378">
+ <shade name="cool" weight="0.939067097341" />
+ <shade name="hard" weight="0.0322580300613" />
+ <shade name="weak" weight="0.0286738044989" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="texas">
+
+<color name="orange" weight="0.422049452538">
+ <shade name="warm" weight="0.367892407438" />
+ <shade name="hard" weight="0.357858978144" />
+ <shade name="light" weight="0.274247067363" />
+</color>
+
+<color name="pink" weight="0.239017802203">
+ <shade name="warm" weight="0.367892407438" />
+ <shade name="hard" weight="0.357858978144" />
+ <shade name="light" weight="0.274247067363" />
+</color>
+
+<color name="red" weight="0.117570918921">
+ <shade name="warm" weight="0.367892407438" />
+ <shade name="hard" weight="0.357858978144" />
+ <shade name="light" weight="0.274247067363" />
+</color>
+
+<color name="blue" weight="0.116278930801">
+ <shade name="hard" weight="0.415533234123" />
+ <shade name="light" weight="0.318446029889" />
+ <shade name="soft" weight="0.266018939602" />
+</color>
+
+<color name="white" weight="0.105081700428">
+ <shade name="warm" weight="0.367892407438" />
+ <shade name="hard" weight="0.357858978144" />
+ <shade name="light" weight="0.274247067363" />
+</color>
+
+</colors>

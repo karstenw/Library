@@ -1,0 +1,33 @@
+<colors query="tappa">
+
+<color name="white" weight="0.808138707951">
+ <shade name="light" weight="0.333332777779" />
+ <shade name="hard" weight="0.333332777779" />
+ <shade name="dark" weight="0.333332777779" />
+</color>
+
+<color name="yellow" weight="0.110465003245">
+ <shade name="light" weight="0.333332777779" />
+ <shade name="hard" weight="0.333332777779" />
+ <shade name="dark" weight="0.333332777779" />
+</color>
+
+<color name="black" weight="0.0581394753922">
+ <shade name="light" weight="0.333332777779" />
+ <shade name="hard" weight="0.333332777779" />
+ <shade name="dark" weight="0.333332777779" />
+</color>
+
+<color name="red" weight="0.0116278950784">
+ <shade name="light" weight="0.333332777779" />
+ <shade name="hard" weight="0.333332777779" />
+ <shade name="dark" weight="0.333332777779" />
+</color>
+
+<color name="orange" weight="0.0116278950784">
+ <shade name="light" weight="0.333332777779" />
+ <shade name="hard" weight="0.333332777779" />
+ <shade name="dark" weight="0.333332777779" />
+</color>
+
+</colors>

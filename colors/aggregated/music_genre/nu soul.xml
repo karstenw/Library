@@ -1,0 +1,33 @@
+<colors query="nu soul">
+
+<color name="red" weight="0.428571">
+ <shade name="fresh" weight="0.738094394559" />
+ <shade name="cool" weight="0.142856979592" />
+ <shade name="warm" weight="0.119047482993" />
+</color>
+
+<color name="black" weight="0.428571">
+ <shade name="fresh" weight="0.738094394559" />
+ <shade name="cool" weight="0.142856979592" />
+ <shade name="warm" weight="0.119047482993" />
+</color>
+
+<color name="purple" weight="0.142857">
+ <shade name="fresh" weight="0.756096675789" />
+ <shade name="cool" weight="0.146341292088" />
+ <shade name="soft" weight="0.0975608613922" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="fresh" weight="0.738094394559" />
+ <shade name="cool" weight="0.142856979592" />
+ <shade name="warm" weight="0.119047482993" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="fresh" weight="0.738094394559" />
+ <shade name="cool" weight="0.142856979592" />
+ <shade name="warm" weight="0.119047482993" />
+</color>
+
+</colors>

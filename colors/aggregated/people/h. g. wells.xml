@@ -1,0 +1,33 @@
+<colors query="h. g. wells">
+
+<color name="white" weight="0.557251325623">
+ <shade name="cool" weight="0.767441021634" />
+ <shade name="light" weight="0.116278942672" />
+ <shade name="hard" weight="0.116278942672" />
+</color>
+
+<color name="green" weight="0.259541713304">
+ <shade name="cool" weight="0.767441021634" />
+ <shade name="light" weight="0.116278942672" />
+ <shade name="hard" weight="0.116278942672" />
+</color>
+
+<color name="red" weight="0.0992365374397">
+ <shade name="cool" weight="0.767441021634" />
+ <shade name="light" weight="0.116278942672" />
+ <shade name="hard" weight="0.116278942672" />
+</color>
+
+<color name="orange" weight="0.0610686384244">
+ <shade name="cool" weight="0.767441021634" />
+ <shade name="light" weight="0.116278942672" />
+ <shade name="hard" weight="0.116278942672" />
+</color>
+
+<color name="black" weight="0.0229007394092">
+ <shade name="cool" weight="0.767441021634" />
+ <shade name="light" weight="0.116278942672" />
+ <shade name="hard" weight="0.116278942672" />
+</color>
+
+</colors>

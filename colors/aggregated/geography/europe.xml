@@ -1,0 +1,33 @@
+<colors query="europe">
+
+<color name="green" weight="0.313932650453">
+ <shade name="light" weight="0.570049705608" />
+ <shade name="dark" weight="0.22144238564" />
+ <shade name="soft" weight="0.208506642321" />
+</color>
+
+<color name="white" weight="0.273368319214">
+ <shade name="light" weight="0.570049705608" />
+ <shade name="dark" weight="0.22144238564" />
+ <shade name="soft" weight="0.208506642321" />
+</color>
+
+<color name="red" weight="0.173721157694">
+ <shade name="light" weight="0.570049705608" />
+ <shade name="dark" weight="0.22144238564" />
+ <shade name="soft" weight="0.208506642321" />
+</color>
+
+<color name="blue" weight="0.12345666029">
+ <shade name="light" weight="0.570049705608" />
+ <shade name="dark" weight="0.22144238564" />
+ <shade name="soft" weight="0.208506642321" />
+</color>
+
+<color name="black" weight="0.1155201607">
+ <shade name="light" weight="0.570049705608" />
+ <shade name="dark" weight="0.22144238564" />
+ <shade name="soft" weight="0.208506642321" />
+</color>
+
+</colors>

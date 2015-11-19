@@ -1,0 +1,33 @@
+<colors query="katharine hepburn">
+
+<color name="green" weight="0.648647996494">
+ <shade name="light" weight="0.333332844445" />
+ <shade name="hard" weight="0.333332844445" />
+ <shade name="cool" weight="0.333332844445" />
+</color>
+
+<color name="white" weight="0.286486198452">
+ <shade name="light" weight="0.333332844445" />
+ <shade name="hard" weight="0.333332844445" />
+ <shade name="cool" weight="0.333332844445" />
+</color>
+
+<color name="black" weight="0.0378377997955">
+ <shade name="light" weight="0.333332844445" />
+ <shade name="hard" weight="0.333332844445" />
+ <shade name="cool" weight="0.333332844445" />
+</color>
+
+<color name="red" weight="0.0162161999124">
+ <shade name="light" weight="0.333332844445" />
+ <shade name="hard" weight="0.333332844445" />
+ <shade name="cool" weight="0.333332844445" />
+</color>
+
+<color name="purple" weight="0.0108107999416">
+ <shade name="light" weight="0.333332844445" />
+ <shade name="hard" weight="0.333332844445" />
+ <shade name="cool" weight="0.333332844445" />
+</color>
+
+</colors>

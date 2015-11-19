@@ -1,0 +1,33 @@
+<colors query="agatha christie">
+
+<color name="black" weight="0.375420485464">
+ <shade name="soft" weight="0.57768853185" />
+ <shade name="light" weight="0.23107541274" />
+ <shade name="cool" weight="0.191234824336" />
+</color>
+
+<color name="blue" weight="0.331649487159">
+ <shade name="soft" weight="0.57768853185" />
+ <shade name="light" weight="0.23107541274" />
+ <shade name="cool" weight="0.191234824336" />
+</color>
+
+<color name="white" weight="0.161615993742">
+ <shade name="soft" weight="0.57768853185" />
+ <shade name="light" weight="0.23107541274" />
+ <shade name="cool" weight="0.191234824336" />
+</color>
+
+<color name="green" weight="0.0740739971319">
+ <shade name="soft" weight="0.57768853185" />
+ <shade name="light" weight="0.23107541274" />
+ <shade name="cool" weight="0.191234824336" />
+</color>
+
+<color name="orange" weight="0.0572389977837">
+ <shade name="soft" weight="0.57768853185" />
+ <shade name="light" weight="0.23107541274" />
+ <shade name="cool" weight="0.191234824336" />
+</color>
+
+</colors>

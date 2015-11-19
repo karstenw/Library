@@ -1,0 +1,33 @@
+<colors query="burundi">
+
+<color name="black" weight="0.807798619347">
+ <shade name="fresh" weight="0.709301517308" />
+ <shade name="dark" weight="0.244185768253" />
+ <shade name="light" weight="0.0465115749054" />
+</color>
+
+<color name="red" weight="0.0835653744152">
+ <shade name="fresh" weight="0.709301517308" />
+ <shade name="dark" weight="0.244185768253" />
+ <shade name="light" weight="0.0465115749054" />
+</color>
+
+<color name="green" weight="0.0431754434479">
+ <shade name="fresh" weight="0.709301517308" />
+ <shade name="dark" weight="0.244185768253" />
+ <shade name="light" weight="0.0465115749054" />
+</color>
+
+<color name="blue" weight="0.0417826872076">
+ <shade name="fresh" weight="0.709301517308" />
+ <shade name="dark" weight="0.244185768253" />
+ <shade name="light" weight="0.0465115749054" />
+</color>
+
+<color name="white" weight="0.0236768560843">
+ <shade name="fresh" weight="0.709301517308" />
+ <shade name="dark" weight="0.244185768253" />
+ <shade name="light" weight="0.0465115749054" />
+</color>
+
+</colors>

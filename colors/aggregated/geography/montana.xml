@@ -1,0 +1,33 @@
+<colors query="montana">
+
+<color name="blue" weight="0.646583238989">
+ <shade name="light" weight="0.466247317152" />
+ <shade name="cool" weight="0.37205593995" />
+ <shade name="dark" weight="0.161695197531" />
+</color>
+
+<color name="red" weight="0.156226470461">
+ <shade name="light" weight="0.42008428072" />
+ <shade name="cool" weight="0.335218769463" />
+ <shade name="warm" weight="0.244695557456" />
+</color>
+
+<color name="green" weight="0.135670355927">
+ <shade name="light" weight="0.466247317152" />
+ <shade name="cool" weight="0.37205593995" />
+ <shade name="dark" weight="0.161695197531" />
+</color>
+
+<color name="black" weight="0.0324039114569">
+ <shade name="light" weight="0.42008428072" />
+ <shade name="cool" weight="0.335218769463" />
+ <shade name="warm" weight="0.244695557456" />
+</color>
+
+<color name="white" weight="0.0291149331314">
+ <shade name="light" weight="0.42008428072" />
+ <shade name="cool" weight="0.335218769463" />
+ <shade name="warm" weight="0.244695557456" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="jit">
+
+<color name="black" weight="0.449999521364">
+ <shade name="cool" weight="0.621051886317" />
+ <shade name="hard" weight="0.194736608421" />
+ <shade name="soft" weight="0.184210305263" />
+</color>
+
+<color name="green" weight="0.309090580331">
+ <shade name="cool" weight="0.621051886317" />
+ <shade name="hard" weight="0.194736608421" />
+ <shade name="soft" weight="0.184210305263" />
+</color>
+
+<color name="white" weight="0.12272714219">
+ <shade name="cool" weight="0.621051886317" />
+ <shade name="hard" weight="0.194736608421" />
+ <shade name="soft" weight="0.184210305263" />
+</color>
+
+<color name="pink" weight="0.0772726450827">
+ <shade name="cool" weight="0.621051886317" />
+ <shade name="hard" weight="0.194736608421" />
+ <shade name="soft" weight="0.184210305263" />
+</color>
+
+<color name="blue" weight="0.0409090473967">
+ <shade name="cool" weight="0.621051886317" />
+ <shade name="hard" weight="0.194736608421" />
+ <shade name="soft" weight="0.184210305263" />
+</color>
+
+</colors>

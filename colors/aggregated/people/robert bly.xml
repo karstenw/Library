@@ -1,0 +1,33 @@
+<colors query="robert bly">
+
+<color name="black" weight="0.744680106384">
+ <shade name="light" weight="0.499999375001" />
+ <shade name="weak" weight="0.2499996875" />
+ <shade name="soft" weight="0.2499996875" />
+</color>
+
+<color name="white" weight="0.170212595745">
+ <shade name="light" weight="0.499999375001" />
+ <shade name="weak" weight="0.2499996875" />
+ <shade name="soft" weight="0.2499996875" />
+</color>
+
+<color name="green" weight="0.0425531489362">
+ <shade name="light" weight="0.499999375001" />
+ <shade name="weak" weight="0.2499996875" />
+ <shade name="soft" weight="0.2499996875" />
+</color>
+
+<color name="blue" weight="0.0425531489362">
+ <shade name="light" weight="0.499999375001" />
+ <shade name="weak" weight="0.2499996875" />
+ <shade name="soft" weight="0.2499996875" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="light" weight="0.499999375001" />
+ <shade name="weak" weight="0.2499996875" />
+ <shade name="soft" weight="0.2499996875" />
+</color>
+
+</colors>

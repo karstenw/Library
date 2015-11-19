@@ -1,0 +1,33 @@
+<colors query="irving berlin">
+
+<color name="white" weight="0.345323393199">
+ <shade name="warm" weight="0.946665698363" />
+ <shade name="light" weight="0.0399999590858" />
+ <shade name="weak" weight="0.0133333196953" />
+</color>
+
+<color name="green" weight="0.320143562445">
+ <shade name="light" weight="0.656238987489" />
+ <shade name="weak" weight="0.218746329163" />
+ <shade name="cool" weight="0.124997902379" />
+</color>
+
+<color name="blue" weight="0.287769494333">
+ <shade name="light" weight="0.656238987489" />
+ <shade name="weak" weight="0.218746329163" />
+ <shade name="cool" weight="0.124997902379" />
+</color>
+
+<color name="black" weight="0.0287769494333">
+ <shade name="warm" weight="0.946665698363" />
+ <shade name="light" weight="0.0399999590858" />
+ <shade name="weak" weight="0.0133333196953" />
+</color>
+
+<color name="red" weight="0.0179855933958">
+ <shade name="warm" weight="0.946665698363" />
+ <shade name="light" weight="0.0399999590858" />
+ <shade name="weak" weight="0.0133333196953" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="albert schweitzer">
+
+<color name="red" weight="0.454544958678">
+ <shade name="light" weight="0.996077433342" />
+ <shade name="warm" weight="0.0019607823491" />
+ <shade name="soft" weight="0.0019607823491" />
+</color>
+
+<color name="green" weight="0.272726975207">
+ <shade name="light" weight="0.996077433342" />
+ <shade name="soft" weight="0.0019607823491" />
+ <shade name="bright" weight="0.0019607823491" />
+</color>
+
+<color name="white" weight="0.0909089917356">
+ <shade name="light" weight="0.996077433342" />
+ <shade name="warm" weight="0.0019607823491" />
+ <shade name="soft" weight="0.0019607823491" />
+</color>
+
+<color name="blue" weight="0.0909089917356">
+ <shade name="light" weight="0.996077433342" />
+ <shade name="soft" weight="0.0019607823491" />
+ <shade name="bright" weight="0.0019607823491" />
+</color>
+
+<color name="black" weight="0.0909089917356">
+ <shade name="light" weight="0.996077433342" />
+ <shade name="warm" weight="0.0019607823491" />
+ <shade name="soft" weight="0.0019607823491" />
+</color>
+
+</colors>

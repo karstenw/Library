@@ -1,0 +1,26 @@
+9, AdBusters, culture jamming
+8, culture jamming, advertising
+10, consumerism, advertising
+4, flyer, advertising
+4, billboard, advertising
+6, Minority Report, advertising
+4, Google, advertising
+4, newspaper, advertising
+4, magazine, advertising
+3, guerilla promotion, advertising
+1, product placement, guerilla promotion
+4, social network, guerilla promotion
+4, attention, advertising
+6, advertising, marketing
+4, bus stop, advertising
+10, profit, advertising
+4, social network, viral marketing
+3, viral marketing, marketing
+4, blog, viral marketing
+2, attention, marketing
+4, Macromedia Flash, viral marketing
+6, advergame, viral marketing
+4, viral marketing, profit
+4, viral marketing, profit
+10, attention, logo
+10, profit, graphic design

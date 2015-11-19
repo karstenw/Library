@@ -1,0 +1,33 @@
+<colors query="bulerias">
+
+<color name="blue" weight="0.909090000001">
+ <shade name="light" weight="0.3499996325" />
+ <shade name="cool" weight="0.3499996325" />
+ <shade name="intense" weight="0.299999685" />
+</color>
+
+<color name="white" weight="0.0363636">
+ <shade name="light" weight="0.466666013334" />
+ <shade name="cool" weight="0.466666013334" />
+ <shade name="soft" weight="0.0666665733335" />
+</color>
+
+<color name="black" weight="0.0363636">
+ <shade name="light" weight="0.3499996325" />
+ <shade name="cool" weight="0.3499996325" />
+ <shade name="intense" weight="0.299999685" />
+</color>
+
+<color name="red" weight="0.0181818">
+ <shade name="light" weight="0.3499996325" />
+ <shade name="cool" weight="0.3499996325" />
+ <shade name="intense" weight="0.299999685" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="light" weight="0.3499996325" />
+ <shade name="cool" weight="0.3499996325" />
+ <shade name="intense" weight="0.299999685" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="theodore roosevelt">
+
+<color name="green" weight="0.410155838242">
+ <shade name="hard" weight="0.527777209684" />
+ <shade name="soft" weight="0.402777344233" />
+ <shade name="cool" weight="0.0694443696953" />
+</color>
+
+<color name="white" weight="0.343749654908">
+ <shade name="hard" weight="0.527777209684" />
+ <shade name="soft" weight="0.402777344233" />
+ <shade name="cool" weight="0.0694443696953" />
+</color>
+
+<color name="blue" weight="0.20703104216">
+ <shade name="hard" weight="0.527777209684" />
+ <shade name="soft" weight="0.402777344233" />
+ <shade name="cool" weight="0.0694443696953" />
+</color>
+
+<color name="red" weight="0.0195312303925">
+ <shade name="hard" weight="0.527777209684" />
+ <shade name="soft" weight="0.402777344233" />
+ <shade name="cool" weight="0.0694443696953" />
+</color>
+
+<color name="black" weight="0.0195312303925">
+ <shade name="hard" weight="0.527777209684" />
+ <shade name="soft" weight="0.402777344233" />
+ <shade name="cool" weight="0.0694443696953" />
+</color>
+
+</colors>

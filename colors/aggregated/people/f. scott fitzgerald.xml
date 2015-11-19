@@ -1,0 +1,33 @@
+<colors query="f. scott fitzgerald">
+
+<color name="white" weight="0.816175636409">
+ <shade name="cool" weight="0.545453851241" />
+ <shade name="light" weight="0.363635900827" />
+ <shade name="weak" weight="0.0909089752068" />
+</color>
+
+<color name="green" weight="0.124999872243">
+ <shade name="cool" weight="0.545453851241" />
+ <shade name="light" weight="0.363635900827" />
+ <shade name="weak" weight="0.0909089752068" />
+</color>
+
+<color name="pink" weight="0.022058800984">
+ <shade name="cool" weight="0.545453851241" />
+ <shade name="light" weight="0.363635900827" />
+ <shade name="weak" weight="0.0909089752068" />
+</color>
+
+<color name="orange" weight="0.022058800984">
+ <shade name="cool" weight="0.545453851241" />
+ <shade name="light" weight="0.363635900827" />
+ <shade name="weak" weight="0.0909089752068" />
+</color>
+
+<color name="black" weight="0.0147058673227">
+ <shade name="cool" weight="0.545453851241" />
+ <shade name="light" weight="0.363635900827" />
+ <shade name="weak" weight="0.0909089752068" />
+</color>
+
+</colors>

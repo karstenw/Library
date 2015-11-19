@@ -1,0 +1,33 @@
+<colors query="rabindranath tagore">
+
+<color name="red" weight="0.374999601563">
+ <shade name="dark" weight="0.599999400001" />
+ <shade name="light" weight="0.380952" />
+ <shade name="hard" weight="0.0190476" />
+</color>
+
+<color name="green" weight="0.249999734375">
+ <shade name="dark" weight="0.599999400001" />
+ <shade name="light" weight="0.380952" />
+ <shade name="hard" weight="0.0190476" />
+</color>
+
+<color name="white" weight="0.187499800781">
+ <shade name="dark" weight="0.599999400001" />
+ <shade name="light" weight="0.380952" />
+ <shade name="hard" weight="0.0190476" />
+</color>
+
+<color name="black" weight="0.124999867188">
+ <shade name="dark" weight="0.599999400001" />
+ <shade name="light" weight="0.380952" />
+ <shade name="hard" weight="0.0190476" />
+</color>
+
+<color name="purple" weight="0.0624999335938">
+ <shade name="dark" weight="0.599999400001" />
+ <shade name="light" weight="0.380952" />
+ <shade name="hard" weight="0.0190476" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="dub techno">
+
+<color name="black" weight="0.999999000001">
+ <shade name="cool" weight="0.529411110727" />
+ <shade name="warm" weight="0.294117283737" />
+ <shade name="fresh" weight="0.176470370242" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="cool" weight="0.529411110727" />
+ <shade name="warm" weight="0.294117283737" />
+ <shade name="fresh" weight="0.176470370242" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="cool" weight="0.529411110727" />
+ <shade name="warm" weight="0.294117283737" />
+ <shade name="fresh" weight="0.176470370242" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="cool" weight="0.529411110727" />
+ <shade name="warm" weight="0.294117283737" />
+ <shade name="fresh" weight="0.176470370242" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="cool" weight="0.642856178573" />
+ <shade name="fresh" weight="0.214285392858" />
+ <shade name="hard" weight="0.142856928572" />
+</color>
+
+</colors>

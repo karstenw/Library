@@ -1,0 +1,33 @@
+<colors query="sandra day o'connor">
+
+<color name="white" weight="0.97447698376">
+ <shade name="light" weight="0.444443950618" />
+ <shade name="cool" weight="0.444443950618" />
+ <shade name="hard" weight="0.111110987654" />
+</color>
+
+<color name="black" weight="0.0239752273782">
+ <shade name="light" weight="0.444443950618" />
+ <shade name="cool" weight="0.444443950618" />
+ <shade name="intense" weight="0.111110987654" />
+</color>
+
+<color name="pink" weight="0.000773394431555">
+ <shade name="light" weight="0.444443950618" />
+ <shade name="cool" weight="0.444443950618" />
+ <shade name="hard" weight="0.111110987654" />
+</color>
+
+<color name="green" weight="0.000773394431555">
+ <shade name="light" weight="0.444443950618" />
+ <shade name="cool" weight="0.444443950618" />
+ <shade name="intense" weight="0.111110987654" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="light" weight="0.444443950618" />
+ <shade name="cool" weight="0.444443950618" />
+ <shade name="intense" weight="0.111110987654" />
+</color>
+
+</colors>

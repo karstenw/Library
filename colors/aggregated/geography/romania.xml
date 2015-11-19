@@ -1,0 +1,33 @@
+<colors query="romania">
+
+<color name="orange" weight="0.991434010546">
+ <shade name="soft" weight="0.841290609891" />
+ <shade name="cool" weight="0.0936788462906" />
+ <shade name="dark" weight="0.0650294903862" />
+</color>
+
+<color name="red" weight="0.00436660466739">
+ <shade name="soft" weight="0.841290609891" />
+ <shade name="cool" weight="0.0936788462906" />
+ <shade name="dark" weight="0.0650294903862" />
+</color>
+
+<color name="white" weight="0.00181106718172">
+ <shade name="soft" weight="0.841290609891" />
+ <shade name="cool" weight="0.0936788462906" />
+ <shade name="dark" weight="0.0650294903862" />
+</color>
+
+<color name="black" weight="0.00128492711114">
+ <shade name="soft" weight="0.841290609891" />
+ <shade name="cool" weight="0.0936788462906" />
+ <shade name="dark" weight="0.0650294903862" />
+</color>
+
+<color name="blue" weight="0.00110238871931">
+ <shade name="soft" weight="0.841290609891" />
+ <shade name="cool" weight="0.0936788462906" />
+ <shade name="dark" weight="0.0650294903862" />
+</color>
+
+</colors>

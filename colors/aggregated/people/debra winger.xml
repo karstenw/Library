@@ -1,0 +1,33 @@
+<colors query="debra winger">
+
+<color name="black" weight="0.444444">
+ <shade name="fresh" weight="0.499999250001" />
+ <shade name="hard" weight="0.249999625001" />
+ <shade name="dark" weight="0.249999625001" />
+</color>
+
+<color name="white" weight="0.222222">
+ <shade name="fresh" weight="0.499999250001" />
+ <shade name="hard" weight="0.249999625001" />
+ <shade name="dark" weight="0.249999625001" />
+</color>
+
+<color name="yellow" weight="0.111111">
+ <shade name="fresh" weight="0.499999250001" />
+ <shade name="hard" weight="0.249999625001" />
+ <shade name="dark" weight="0.249999625001" />
+</color>
+
+<color name="red" weight="0.111111">
+ <shade name="fresh" weight="0.499999250001" />
+ <shade name="hard" weight="0.249999625001" />
+ <shade name="dark" weight="0.249999625001" />
+</color>
+
+<color name="blue" weight="0.111111">
+ <shade name="fresh" weight="0.499999250001" />
+ <shade name="hard" weight="0.249999625001" />
+ <shade name="dark" weight="0.249999625001" />
+</color>
+
+</colors>

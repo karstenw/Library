@@ -1,0 +1,33 @@
+<colors query="minstrel show">
+
+<color name="white" weight="0.921769262889">
+ <shade name="hard" weight="0.799999200001" />
+ <shade name="dark" weight="0.1999998" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="black" weight="0.0762510699144">
+ <shade name="hard" weight="0.799999200001" />
+ <shade name="dark" weight="0.1999998" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="yellow" weight="0.00125476444163">
+ <shade name="hard" weight="0.799999200001" />
+ <shade name="dark" weight="0.1999998" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="green" weight="0.000434341537487">
+ <shade name="hard" weight="0.799999200001" />
+ <shade name="dark" weight="0.1999998" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="red" weight="0.000289561024991">
+ <shade name="hard" weight="0.799999200001" />
+ <shade name="dark" weight="0.1999998" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+</colors>

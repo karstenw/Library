@@ -1,0 +1,33 @@
+<colors query="george allen">
+
+<color name="green" weight="0.369071795877">
+ <shade name="hard" weight="0.499999300001" />
+ <shade name="light" weight="0.299999580001" />
+ <shade name="weak" weight="0.19999972" />
+</color>
+
+<color name="black" weight="0.311339894846">
+ <shade name="hard" weight="0.499999300001" />
+ <shade name="light" weight="0.299999580001" />
+ <shade name="weak" weight="0.19999972" />
+</color>
+
+<color name="white" weight="0.280412090722">
+ <shade name="hard" weight="0.499999300001" />
+ <shade name="light" weight="0.299999580001" />
+ <shade name="weak" weight="0.19999972" />
+</color>
+
+<color name="red" weight="0.0206185360825">
+ <shade name="hard" weight="0.499999300001" />
+ <shade name="light" weight="0.299999580001" />
+ <shade name="weak" weight="0.19999972" />
+</color>
+
+<color name="blue" weight="0.0185566824742">
+ <shade name="hard" weight="0.499999300001" />
+ <shade name="light" weight="0.299999580001" />
+ <shade name="weak" weight="0.19999972" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="delaware">
+
+<color name="green" weight="0.82928811671">
+ <shade name="light" weight="0.478522143245" />
+ <shade name="cool" weight="0.314995678546" />
+ <shade name="weak" weight="0.206480420865" />
+</color>
+
+<color name="black" weight="0.0532440665842">
+ <shade name="light" weight="0.478522143245" />
+ <shade name="cool" weight="0.314995678546" />
+ <shade name="weak" weight="0.206480420865" />
+</color>
+
+<color name="blue" weight="0.0504169480045">
+ <shade name="light" weight="0.478522143245" />
+ <shade name="cool" weight="0.314995678546" />
+ <shade name="weak" weight="0.206480420865" />
+</color>
+
+<color name="white" weight="0.0399566092596">
+ <shade name="light" weight="0.478522143245" />
+ <shade name="cool" weight="0.314995678546" />
+ <shade name="weak" weight="0.206480420865" />
+</color>
+
+<color name="yellow" weight="0.027093219722">
+ <shade name="light" weight="0.478522143245" />
+ <shade name="cool" weight="0.314995678546" />
+ <shade name="weak" weight="0.206480420865" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="falak">
+
+<color name="pink" weight="0.999999000001">
+ <shade name="fresh" weight="0.699999300001" />
+ <shade name="light" weight="0.1999998" />
+ <shade name="bright" weight="0.0999999000001" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="fresh" weight="0.699999300001" />
+ <shade name="light" weight="0.1999998" />
+ <shade name="bright" weight="0.0999999000001" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="fresh" weight="0.699999300001" />
+ <shade name="light" weight="0.1999998" />
+ <shade name="bright" weight="0.0999999000001" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="fresh" weight="0.699999300001" />
+ <shade name="light" weight="0.1999998" />
+ <shade name="bright" weight="0.0999999000001" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="fresh" weight="0.699999300001" />
+ <shade name="light" weight="0.1999998" />
+ <shade name="bright" weight="0.0999999000001" />
+</color>
+
+</colors>

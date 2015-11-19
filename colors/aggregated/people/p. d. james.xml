@@ -1,0 +1,33 @@
+<colors query="p. d. james">
+
+<color name="white" weight="0.945651228262">
+ <shade name="dark" weight="0.962962000001" />
+ <shade name="bright" weight="0.037037" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="green" weight="0.0434782173913">
+ <shade name="dark" weight="0.962962000001" />
+ <shade name="bright" weight="0.037037" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="black" weight="0.0108695543478">
+ <shade name="dark" weight="0.962962000001" />
+ <shade name="bright" weight="0.037037" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="dark" weight="0.962962000001" />
+ <shade name="bright" weight="0.037037" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="dark" weight="0.962962000001" />
+ <shade name="bright" weight="0.037037" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+</colors>

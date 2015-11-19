@@ -1,0 +1,33 @@
+<colors query="rare groove">
+
+<color name="black" weight="0.499999500001">
+ <shade name="cool" weight="0.90322487409" />
+ <shade name="fresh" weight="0.0806450780438" />
+ <shade name="intense" weight="0.0161290156088" />
+</color>
+
+<color name="green" weight="0.285714">
+ <shade name="cool" weight="0.90322487409" />
+ <shade name="fresh" weight="0.0806450780438" />
+ <shade name="intense" weight="0.0161290156088" />
+</color>
+
+<color name="white" weight="0.142857">
+ <shade name="cool" weight="0.90322487409" />
+ <shade name="fresh" weight="0.0806450780438" />
+ <shade name="hard" weight="0.0161290156088" />
+</color>
+
+<color name="blue" weight="0.0714285000001">
+ <shade name="cool" weight="0.90322487409" />
+ <shade name="fresh" weight="0.0806450780438" />
+ <shade name="intense" weight="0.0161290156088" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="cool" weight="0.90322487409" />
+ <shade name="fresh" weight="0.0806450780438" />
+ <shade name="intense" weight="0.0161290156088" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="dirge">
+
+<color name="blue" weight="0.732967631512">
+ <shade name="dark" weight="0.569125704411" />
+ <shade name="cool" weight="0.325699359901" />
+ <shade name="intense" weight="0.105173751635" />
+</color>
+
+<color name="black" weight="0.226581280281">
+ <shade name="dark" weight="0.569125704411" />
+ <shade name="cool" weight="0.325699359901" />
+ <shade name="intense" weight="0.105173751635" />
+</color>
+
+<color name="red" weight="0.0246350116815">
+ <shade name="dark" weight="0.569125704411" />
+ <shade name="cool" weight="0.325699359901" />
+ <shade name="intense" weight="0.105173751635" />
+</color>
+
+<color name="green" weight="0.0118613019207">
+ <shade name="dark" weight="0.569125704411" />
+ <shade name="cool" weight="0.325699359901" />
+ <shade name="intense" weight="0.105173751635" />
+</color>
+
+<color name="white" weight="0.00395376730691">
+ <shade name="dark" weight="0.570577553974" />
+ <shade name="cool" weight="0.326530224629" />
+ <shade name="soft" weight="0.102891034323" />
+</color>
+
+</colors>

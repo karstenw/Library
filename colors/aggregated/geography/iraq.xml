@@ -1,0 +1,33 @@
+<colors query="iraq">
+
+<color name="green" weight="0.349681702654">
+ <shade name="cool" weight="0.714468865547" />
+ <shade name="fresh" weight="0.26647757688" />
+ <shade name="hard" weight="0.0190525030813" />
+</color>
+
+<color name="white" weight="0.213442078243">
+ <shade name="cool" weight="0.714468865547" />
+ <shade name="fresh" weight="0.26647757688" />
+ <shade name="hard" weight="0.0190525030813" />
+</color>
+
+<color name="blue" weight="0.180139058943">
+ <shade name="cool" weight="0.714468865547" />
+ <shade name="fresh" weight="0.26647757688" />
+ <shade name="hard" weight="0.0190525030813" />
+</color>
+
+<color name="red" weight="0.136391001771">
+ <shade name="cool" weight="0.714468865547" />
+ <shade name="fresh" weight="0.26647757688" />
+ <shade name="hard" weight="0.0190525030813" />
+</color>
+
+<color name="black" weight="0.120345001563">
+ <shade name="cool" weight="0.714468865547" />
+ <shade name="fresh" weight="0.26647757688" />
+ <shade name="hard" weight="0.0190525030813" />
+</color>
+
+</colors>

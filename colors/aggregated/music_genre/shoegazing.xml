@@ -1,0 +1,33 @@
+<colors query="shoegazing">
+
+<color name="white" weight="0.24999975">
+ <shade name="cool" weight="0.780486872101" />
+ <shade name="soft" weight="0.109755966389" />
+ <shade name="dark" weight="0.109755966389" />
+</color>
+
+<color name="green" weight="0.24999975">
+ <shade name="cool" weight="0.780486872101" />
+ <shade name="soft" weight="0.109755966389" />
+ <shade name="dark" weight="0.109755966389" />
+</color>
+
+<color name="blue" weight="0.24999975">
+ <shade name="cool" weight="0.780486872101" />
+ <shade name="soft" weight="0.109755966389" />
+ <shade name="dark" weight="0.109755966389" />
+</color>
+
+<color name="black" weight="0.24999975">
+ <shade name="cool" weight="0.780486872101" />
+ <shade name="soft" weight="0.109755966389" />
+ <shade name="dark" weight="0.109755966389" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="cool" weight="0.780486872101" />
+ <shade name="soft" weight="0.109755966389" />
+ <shade name="dark" weight="0.109755966389" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="norwegian sea">
+
+<color name="blue" weight="0.666666000001">
+ <shade name="fresh" weight="0.624998906252" />
+ <shade name="cool" weight="0.249999562501" />
+ <shade name="weak" weight="0.12499978125" />
+</color>
+
+<color name="red" weight="0.333333">
+ <shade name="warm" weight="0.416666180556" />
+ <shade name="fresh" weight="0.416666180556" />
+ <shade name="cool" weight="0.166666472222" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="warm" weight="0.416666180556" />
+ <shade name="fresh" weight="0.416666180556" />
+ <shade name="cool" weight="0.166666472222" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="warm" weight="0.416666180556" />
+ <shade name="fresh" weight="0.416666180556" />
+ <shade name="cool" weight="0.166666472222" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="fresh" weight="0.624998906252" />
+ <shade name="cool" weight="0.249999562501" />
+ <shade name="weak" weight="0.12499978125" />
+</color>
+
+</colors>

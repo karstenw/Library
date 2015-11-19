@@ -1,0 +1,33 @@
+<colors query="dark ambient">
+
+<color name="black" weight="0.997595156251">
+ <shade name="dark" weight="0.490530889749" />
+ <shade name="light" weight="0.332925697277" />
+ <shade name="cool" weight="0.176542250483" />
+</color>
+
+<color name="red" weight="0.000801281250001">
+ <shade name="dark" weight="0.490530889749" />
+ <shade name="light" weight="0.332925697277" />
+ <shade name="cool" weight="0.176542250483" />
+</color>
+
+<color name="green" weight="0.000801281250001">
+ <shade name="dark" weight="0.490530889749" />
+ <shade name="light" weight="0.332925697277" />
+ <shade name="cool" weight="0.176542250483" />
+</color>
+
+<color name="white" weight="0.000400640625">
+ <shade name="dark" weight="0.490530889749" />
+ <shade name="light" weight="0.332925697277" />
+ <shade name="cool" weight="0.176542250483" />
+</color>
+
+<color name="blue" weight="0.000400640625">
+ <shade name="dark" weight="0.490530889749" />
+ <shade name="light" weight="0.332925697277" />
+ <shade name="cool" weight="0.176542250483" />
+</color>
+
+</colors>

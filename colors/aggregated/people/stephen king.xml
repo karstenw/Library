@@ -1,0 +1,33 @@
+<colors query="stephen king">
+
+<color name="red" weight="0.522145673093">
+ <shade name="light" weight="0.572726660691" />
+ <shade name="hard" weight="0.254545182529" />
+ <shade name="cool" weight="0.172727088145" />
+</color>
+
+<color name="white" weight="0.208858269237">
+ <shade name="light" weight="0.572726660691" />
+ <shade name="hard" weight="0.254545182529" />
+ <shade name="cool" weight="0.172727088145" />
+</color>
+
+<color name="green" weight="0.129636167113">
+ <shade name="light" weight="0.572726660691" />
+ <shade name="hard" weight="0.254545182529" />
+ <shade name="cool" weight="0.172727088145" />
+</color>
+
+<color name="black" weight="0.090745316979">
+ <shade name="light" weight="0.572726660691" />
+ <shade name="hard" weight="0.254545182529" />
+ <shade name="cool" weight="0.172727088145" />
+</color>
+
+<color name="orange" weight="0.0486135626673">
+ <shade name="light" weight="0.572726660691" />
+ <shade name="hard" weight="0.254545182529" />
+ <shade name="cool" weight="0.172727088145" />
+</color>
+
+</colors>

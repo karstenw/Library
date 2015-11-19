@@ -1,0 +1,33 @@
+<colors query="medieval music">
+
+<color name="black" weight="0.545453950414">
+ <shade name="dark" weight="0.473683562328" />
+ <shade name="soft" weight="0.368420548477" />
+ <shade name="light" weight="0.157894520776" />
+</color>
+
+<color name="pink" weight="0.181817983471">
+ <shade name="dark" weight="0.473683562328" />
+ <shade name="soft" weight="0.368420548477" />
+ <shade name="light" weight="0.157894520776" />
+</color>
+
+<color name="yellow" weight="0.0909089917356">
+ <shade name="dark" weight="0.473683562328" />
+ <shade name="soft" weight="0.368420548477" />
+ <shade name="light" weight="0.157894520776" />
+</color>
+
+<color name="red" weight="0.0909089917356">
+ <shade name="dark" weight="0.473683562328" />
+ <shade name="soft" weight="0.368420548477" />
+ <shade name="light" weight="0.157894520776" />
+</color>
+
+<color name="purple" weight="0.0909089917356">
+ <shade name="dark" weight="0.473683562328" />
+ <shade name="soft" weight="0.368420548477" />
+ <shade name="light" weight="0.157894520776" />
+</color>
+
+</colors>

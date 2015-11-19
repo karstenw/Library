@@ -1,0 +1,33 @@
+<colors query="punta">
+
+<color name="blue" weight="0.437026361282">
+ <shade name="cool" weight="0.402499435495" />
+ <shade name="fresh" weight="0.369999481076" />
+ <shade name="light" weight="0.227499680932" />
+</color>
+
+<color name="white" weight="0.256021742357">
+ <shade name="cool" weight="0.402499435495" />
+ <shade name="fresh" weight="0.369999481076" />
+ <shade name="light" weight="0.227499680932" />
+</color>
+
+<color name="orange" weight="0.116999183335">
+ <shade name="cool" weight="0.402499435495" />
+ <shade name="fresh" weight="0.369999481076" />
+ <shade name="light" weight="0.227499680932" />
+</color>
+
+<color name="black" weight="0.105299265002">
+ <shade name="cool" weight="0.402499435495" />
+ <shade name="fresh" weight="0.369999481076" />
+ <shade name="light" weight="0.227499680932" />
+</color>
+
+<color name="green" weight="0.0846523502956">
+ <shade name="cool" weight="0.402499435495" />
+ <shade name="fresh" weight="0.369999481076" />
+ <shade name="light" weight="0.227499680932" />
+</color>
+
+</colors>

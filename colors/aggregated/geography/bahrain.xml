@@ -1,0 +1,33 @@
+<colors query="bahrain">
+
+<color name="green" weight="0.68738158428">
+ <shade name="cool" weight="0.743361943771" />
+ <shade name="light" weight="0.159291845094" />
+ <shade name="hard" weight="0.0973450164462" />
+</color>
+
+<color name="black" weight="0.11487747025">
+ <shade name="cool" weight="0.743361943771" />
+ <shade name="light" weight="0.159291845094" />
+ <shade name="hard" weight="0.0973450164462" />
+</color>
+
+<color name="red" weight="0.112994233032">
+ <shade name="cool" weight="0.743361943771" />
+ <shade name="light" weight="0.159291845094" />
+ <shade name="hard" weight="0.0973450164462" />
+</color>
+
+<color name="white" weight="0.0461393118215">
+ <shade name="cool" weight="0.743361943771" />
+ <shade name="light" weight="0.159291845094" />
+ <shade name="hard" weight="0.0973450164462" />
+</color>
+
+<color name="blue" weight="0.0386063629527">
+ <shade name="cool" weight="0.743361943771" />
+ <shade name="light" weight="0.159291845094" />
+ <shade name="hard" weight="0.0973450164462" />
+</color>
+
+</colors>

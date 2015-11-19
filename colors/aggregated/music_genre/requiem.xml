@@ -1,0 +1,33 @@
+<colors query="requiem">
+
+<color name="black" weight="0.589599698913">
+ <shade name="dark" weight="0.963065875656" />
+ <shade name="light" weight="0.0253389176993" />
+ <shade name="soft" weight="0.0115941911244" />
+</color>
+
+<color name="orange" weight="0.322030357639">
+ <shade name="dark" weight="0.963065875656" />
+ <shade name="light" weight="0.0253389176993" />
+ <shade name="soft" weight="0.0115941911244" />
+</color>
+
+<color name="red" weight="0.0546978033931">
+ <shade name="dark" weight="0.963065875656" />
+ <shade name="light" weight="0.0253389176993" />
+ <shade name="soft" weight="0.0115941911244" />
+</color>
+
+<color name="green" weight="0.0202926482718">
+ <shade name="dark" weight="0.963065875656" />
+ <shade name="light" weight="0.0253389176993" />
+ <shade name="soft" weight="0.0115941911244" />
+</color>
+
+<color name="white" weight="0.0133784670637">
+ <shade name="dark" weight="0.963065875656" />
+ <shade name="light" weight="0.0253389176993" />
+ <shade name="soft" weight="0.0115941911244" />
+</color>
+
+</colors>

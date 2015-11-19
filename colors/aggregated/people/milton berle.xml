@@ -1,0 +1,33 @@
+<colors query="milton berle">
+
+<color name="white" weight="0.890108990219">
+ <shade name="weak" weight="0.666666000001" />
+ <shade name="dark" weight="0.333333" />
+ <shade name="warm" weight="0.0" />
+</color>
+
+<color name="black" weight="0.0659339992755">
+ <shade name="weak" weight="0.666666000001" />
+ <shade name="dark" weight="0.333333" />
+ <shade name="warm" weight="0.0" />
+</color>
+
+<color name="red" weight="0.0219779997585">
+ <shade name="weak" weight="0.666666000001" />
+ <shade name="dark" weight="0.333333" />
+ <shade name="warm" weight="0.0" />
+</color>
+
+<color name="pink" weight="0.0109889998793">
+ <shade name="weak" weight="0.666666000001" />
+ <shade name="dark" weight="0.333333" />
+ <shade name="warm" weight="0.0" />
+</color>
+
+<color name="green" weight="0.0109889998793">
+ <shade name="weak" weight="0.666666000001" />
+ <shade name="dark" weight="0.333333" />
+ <shade name="soft" weight="0.0" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="p. t. barnum">
+
+<color name="black" weight="0.842104421053">
+ <shade name="cool" weight="0.499999450001" />
+ <shade name="hard" weight="0.29999967" />
+ <shade name="light" weight="0.19999978" />
+</color>
+
+<color name="white" weight="0.13157881579">
+ <shade name="cool" weight="0.499999450001" />
+ <shade name="hard" weight="0.29999967" />
+ <shade name="light" weight="0.19999978" />
+</color>
+
+<color name="green" weight="0.0263157631579">
+ <shade name="cool" weight="0.499999450001" />
+ <shade name="hard" weight="0.29999967" />
+ <shade name="light" weight="0.19999978" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="cool" weight="0.499999450001" />
+ <shade name="hard" weight="0.29999967" />
+ <shade name="light" weight="0.19999978" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="cool" weight="0.499999450001" />
+ <shade name="hard" weight="0.29999967" />
+ <shade name="light" weight="0.19999978" />
+</color>
+
+</colors>

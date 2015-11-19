@@ -1,0 +1,33 @@
+<colors query="guinea bissau">
+
+<color name="green" weight="0.63414566865">
+ <shade name="dark" weight="0.384614733729" />
+ <shade name="weak" weight="0.307691786983" />
+ <shade name="cool" weight="0.307691786983" />
+</color>
+
+<color name="black" weight="0.109755981113">
+ <shade name="dark" weight="0.384614733729" />
+ <shade name="weak" weight="0.307691786983" />
+ <shade name="cool" weight="0.307691786983" />
+</color>
+
+<color name="white" weight="0.0975608721001">
+ <shade name="dark" weight="0.384614733729" />
+ <shade name="weak" weight="0.307691786983" />
+ <shade name="cool" weight="0.307691786983" />
+</color>
+
+<color name="red" weight="0.0853657630875">
+ <shade name="dark" weight="0.384614733729" />
+ <shade name="weak" weight="0.307691786983" />
+ <shade name="cool" weight="0.307691786983" />
+</color>
+
+<color name="blue" weight="0.073170654075">
+ <shade name="dark" weight="0.384614733729" />
+ <shade name="weak" weight="0.307691786983" />
+ <shade name="cool" weight="0.307691786983" />
+</color>
+
+</colors>

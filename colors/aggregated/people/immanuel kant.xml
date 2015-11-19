@@ -1,0 +1,33 @@
+<colors query="immanuel kant">
+
+<color name="red" weight="0.592592000001">
+ <shade name="cool" weight="0.666665629631" />
+ <shade name="light" weight="0.222221876544" />
+ <shade name="soft" weight="0.111110938272" />
+</color>
+
+<color name="white" weight="0.185185">
+ <shade name="cool" weight="0.666665629631" />
+ <shade name="light" weight="0.222221876544" />
+ <shade name="soft" weight="0.111110938272" />
+</color>
+
+<color name="green" weight="0.111111">
+ <shade name="cool" weight="0.666665629631" />
+ <shade name="light" weight="0.222221876544" />
+ <shade name="soft" weight="0.111110938272" />
+</color>
+
+<color name="black" weight="0.0740740000001">
+ <shade name="cool" weight="0.666665629631" />
+ <shade name="light" weight="0.222221876544" />
+ <shade name="soft" weight="0.111110938272" />
+</color>
+
+<color name="blue" weight="0.037037">
+ <shade name="cool" weight="0.666665629631" />
+ <shade name="light" weight="0.222221876544" />
+ <shade name="soft" weight="0.111110938272" />
+</color>
+
+</colors>

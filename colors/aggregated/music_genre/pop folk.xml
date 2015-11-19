@@ -1,0 +1,33 @@
+<colors query="pop folk">
+
+<color name="blue" weight="0.29999967">
+ <shade name="soft" weight="0.536628945418" />
+ <shade name="dark" weight="0.319565551766" />
+ <shade name="light" weight="0.143804498295" />
+</color>
+
+<color name="black" weight="0.29999967">
+ <shade name="soft" weight="0.536628945418" />
+ <shade name="dark" weight="0.319565551766" />
+ <shade name="light" weight="0.143804498295" />
+</color>
+
+<color name="red" weight="0.19999978">
+ <shade name="soft" weight="0.536628945418" />
+ <shade name="dark" weight="0.319565551766" />
+ <shade name="light" weight="0.143804498295" />
+</color>
+
+<color name="white" weight="0.0999998900001">
+ <shade name="soft" weight="0.536628945418" />
+ <shade name="dark" weight="0.319565551766" />
+ <shade name="light" weight="0.143804498295" />
+</color>
+
+<color name="pink" weight="0.0999998900001">
+ <shade name="soft" weight="0.536628945418" />
+ <shade name="dark" weight="0.319565551766" />
+ <shade name="light" weight="0.143804498295" />
+</color>
+
+</colors>

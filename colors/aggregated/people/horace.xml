@@ -1,0 +1,33 @@
+<colors query="horace">
+
+<color name="green" weight="0.342050361674">
+ <shade name="light" weight="0.4857588246" />
+ <shade name="cool" weight="0.271360385729" />
+ <shade name="bright" weight="0.2428794123" />
+</color>
+
+<color name="white" weight="0.338861080913">
+ <shade name="light" weight="0.4857588246" />
+ <shade name="cool" weight="0.271360385729" />
+ <shade name="bright" weight="0.2428794123" />
+</color>
+
+<color name="blue" weight="0.149896195792">
+ <shade name="light" weight="0.4857588246" />
+ <shade name="cool" weight="0.271360385729" />
+ <shade name="bright" weight="0.2428794123" />
+</color>
+
+<color name="black" weight="0.139531033317">
+ <shade name="light" weight="0.4857588246" />
+ <shade name="cool" weight="0.271360385729" />
+ <shade name="bright" weight="0.2428794123" />
+</color>
+
+<color name="orange" weight="0.0296603110823">
+ <shade name="light" weight="0.4857588246" />
+ <shade name="cool" weight="0.271360385729" />
+ <shade name="bright" weight="0.2428794123" />
+</color>
+
+</colors>

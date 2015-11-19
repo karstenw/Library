@@ -1,0 +1,33 @@
+<colors query="john gay">
+
+<color name="green" weight="0.666666000001">
+ <shade name="light" weight="0.936169256678" />
+ <shade name="bright" weight="0.0425531480308" />
+ <shade name="fresh" weight="0.0212765740154" />
+</color>
+
+<color name="white" weight="0.1666665">
+ <shade name="light" weight="0.936169256678" />
+ <shade name="bright" weight="0.0425531480308" />
+ <shade name="fresh" weight="0.0212765740154" />
+</color>
+
+<color name="black" weight="0.1666665">
+ <shade name="light" weight="0.936169256678" />
+ <shade name="bright" weight="0.0425531480308" />
+ <shade name="fresh" weight="0.0212765740154" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="light" weight="0.936169256678" />
+ <shade name="bright" weight="0.0425531480308" />
+ <shade name="fresh" weight="0.0212765740154" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="light" weight="0.936169256678" />
+ <shade name="bright" weight="0.0425531480308" />
+ <shade name="fresh" weight="0.0212765740154" />
+</color>
+
+</colors>

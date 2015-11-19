@@ -1,0 +1,33 @@
+<colors query="helen keller">
+
+<color name="green" weight="0.970327810985">
+ <shade name="light" weight="0.75971144427" />
+ <shade name="dark" weight="0.217265962282" />
+ <shade name="cool" weight="0.0230215589173" />
+</color>
+
+<color name="blue" weight="0.00801923810731">
+ <shade name="light" weight="0.75971144427" />
+ <shade name="dark" weight="0.217265962282" />
+ <shade name="cool" weight="0.0230215589173" />
+</color>
+
+<color name="white" weight="0.00721731429658">
+ <shade name="light" weight="0.75971144427" />
+ <shade name="dark" weight="0.217265962282" />
+ <shade name="cool" weight="0.0230215589173" />
+</color>
+
+<color name="red" weight="0.00721731429658">
+ <shade name="light" weight="0.75971144427" />
+ <shade name="dark" weight="0.217265962282" />
+ <shade name="cool" weight="0.0230215589173" />
+</color>
+
+<color name="pink" weight="0.00721731429658">
+ <shade name="light" weight="0.75971144427" />
+ <shade name="dark" weight="0.217265962282" />
+ <shade name="cool" weight="0.0230215589173" />
+</color>
+
+</colors>

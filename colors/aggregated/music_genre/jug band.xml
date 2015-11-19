@@ -1,0 +1,33 @@
+<colors query="jug band">
+
+<color name="blue" weight="0.904108680804">
+ <shade name="cool" weight="0.692306893492" />
+ <shade name="neutral" weight="0.153845976332" />
+ <shade name="light" weight="0.153845976332" />
+</color>
+
+<color name="red" weight="0.0273972327516">
+ <shade name="cool" weight="0.692306893492" />
+ <shade name="neutral" weight="0.153845976332" />
+ <shade name="light" weight="0.153845976332" />
+</color>
+
+<color name="black" weight="0.0273972327516">
+ <shade name="cool" weight="0.692306893492" />
+ <shade name="neutral" weight="0.153845976332" />
+ <shade name="light" weight="0.153845976332" />
+</color>
+
+<color name="white" weight="0.022831027293">
+ <shade name="cool" weight="0.692306893492" />
+ <shade name="neutral" weight="0.153845976332" />
+ <shade name="light" weight="0.153845976332" />
+</color>
+
+<color name="green" weight="0.0182648218344">
+ <shade name="cool" weight="0.692306893492" />
+ <shade name="neutral" weight="0.153845976332" />
+ <shade name="light" weight="0.153845976332" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="mediterranean sea">
+
+<color name="blue" weight="0.932134074042">
+ <shade name="cool" weight="0.472115396805" />
+ <shade name="fresh" weight="0.41476054545" />
+ <shade name="dark" weight="0.113116512395" />
+</color>
+
+<color name="green" weight="0.0573192893291">
+ <shade name="cool" weight="0.472115396805" />
+ <shade name="fresh" weight="0.41476054545" />
+ <shade name="dark" weight="0.113116512395" />
+</color>
+
+<color name="white" weight="0.00815269503565">
+ <shade name="warm" weight="0.880457229095" />
+ <shade name="cool" weight="0.0636362989159" />
+ <shade name="fresh" weight="0.0559054549531" />
+</color>
+
+<color name="black" weight="0.00219816692087">
+ <shade name="warm" weight="0.880457229095" />
+ <shade name="cool" weight="0.0636362989159" />
+ <shade name="fresh" weight="0.0559054549531" />
+</color>
+
+<color name="red" weight="0.000194774284128">
+ <shade name="warm" weight="0.880457229095" />
+ <shade name="cool" weight="0.0636362989159" />
+ <shade name="fresh" weight="0.0559054549531" />
+</color>
+
+</colors>

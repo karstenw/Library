@@ -1,0 +1,5 @@
+Copyright (c) 2007 by Tom De Smedt
+
+If it is your intent to use this software for non-commercial purposes, such as in academic research, this software is free.
+
+If you use this software in your research, please acknowledge NodeBox and its authors.

@@ -1,0 +1,33 @@
+<colors query="hawaii">
+
+<color name="blue" weight="0.935268904845">
+ <shade name="cool" weight="0.699089228589" />
+ <shade name="dark" weight="0.155353161909" />
+ <shade name="hard" weight="0.145556115662" />
+</color>
+
+<color name="pink" weight="0.0239741060556">
+ <shade name="cool" weight="0.694713850483" />
+ <shade name="dark" weight="0.154380855663" />
+ <shade name="warm" weight="0.150903809364" />
+</color>
+
+<color name="green" weight="0.0228590313554">
+ <shade name="cool" weight="0.699089228589" />
+ <shade name="dark" weight="0.155353161909" />
+ <shade name="hard" weight="0.145556115662" />
+</color>
+
+<color name="white" weight="0.012879112788">
+ <shade name="cool" weight="0.694713850483" />
+ <shade name="dark" weight="0.154380855663" />
+ <shade name="warm" weight="0.150903809364" />
+</color>
+
+<color name="orange" weight="0.00501783615118">
+ <shade name="cool" weight="0.694713850483" />
+ <shade name="dark" weight="0.154380855663" />
+ <shade name="warm" weight="0.150903809364" />
+</color>
+
+</colors>

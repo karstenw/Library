@@ -1,0 +1,33 @@
+<colors query="gabon">
+
+<color name="black" weight="0.559183085186">
+ <shade name="dark" weight="0.512819750165" />
+ <shade name="soft" weight="0.307691850099" />
+ <shade name="cool" weight="0.179486912558" />
+</color>
+
+<color name="orange" weight="0.145918213835">
+ <shade name="dark" weight="0.512819750165" />
+ <shade name="soft" weight="0.307691850099" />
+ <shade name="cool" weight="0.179486912558" />
+</color>
+
+<color name="green" weight="0.135714142937">
+ <shade name="dark" weight="0.512819750165" />
+ <shade name="soft" weight="0.307691850099" />
+ <shade name="cool" weight="0.179486912558" />
+</color>
+
+<color name="yellow" weight="0.114285594053">
+ <shade name="dark" weight="0.512819750165" />
+ <shade name="soft" weight="0.307691850099" />
+ <shade name="cool" weight="0.179486912558" />
+</color>
+
+<color name="white" weight="0.0448979119492">
+ <shade name="dark" weight="0.512819750165" />
+ <shade name="soft" weight="0.307691850099" />
+ <shade name="cool" weight="0.179486912558" />
+</color>
+
+</colors>

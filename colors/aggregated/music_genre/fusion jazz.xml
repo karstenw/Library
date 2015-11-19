@@ -1,0 +1,33 @@
+<colors query="fusion jazz">
+
+<color name="blue" weight="0.980951400001">
+ <shade name="hard" weight="0.578435221924" />
+ <shade name="cool" weight="0.26700569844" />
+ <shade name="light" weight="0.154557891298" />
+</color>
+
+<color name="black" weight="0.00761904000001">
+ <shade name="hard" weight="0.578435221924" />
+ <shade name="cool" weight="0.26700569844" />
+ <shade name="light" weight="0.154557891298" />
+</color>
+
+<color name="purple" weight="0.00571428000001">
+ <shade name="hard" weight="0.578435221924" />
+ <shade name="cool" weight="0.26700569844" />
+ <shade name="light" weight="0.154557891298" />
+</color>
+
+<color name="orange" weight="0.00380952">
+ <shade name="hard" weight="0.578435221924" />
+ <shade name="cool" weight="0.26700569844" />
+ <shade name="light" weight="0.154557891298" />
+</color>
+
+<color name="green" weight="0.00190476">
+ <shade name="hard" weight="0.578435221924" />
+ <shade name="cool" weight="0.26700569844" />
+ <shade name="light" weight="0.154557891298" />
+</color>
+
+</colors>

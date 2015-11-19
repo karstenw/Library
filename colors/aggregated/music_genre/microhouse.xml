@@ -1,0 +1,33 @@
+<colors query="microhouse">
+
+<color name="white" weight="0.714285000001">
+ <shade name="cool" weight="0.47618784582" />
+ <shade name="warm" weight="0.285712707492" />
+ <shade name="dark" weight="0.23809392291" />
+</color>
+
+<color name="yellow" weight="0.142857">
+ <shade name="intense" weight="0.843136296041" />
+ <shade name="cool" weight="0.0980391041908" />
+ <shade name="warm" weight="0.0588234625145" />
+</color>
+
+<color name="black" weight="0.142857">
+ <shade name="intense" weight="0.843136296041" />
+ <shade name="cool" weight="0.0980391041908" />
+ <shade name="warm" weight="0.0588234625145" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="intense" weight="0.843136296041" />
+ <shade name="cool" weight="0.0980391041908" />
+ <shade name="warm" weight="0.0588234625145" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="cool" weight="0.555551975332" />
+ <shade name="dark" weight="0.277775987666" />
+ <shade name="hard" weight="0.1666655926" />
+</color>
+
+</colors>

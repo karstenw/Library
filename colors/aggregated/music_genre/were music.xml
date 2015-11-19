@@ -1,0 +1,33 @@
+<colors query="were music">
+
+<color name="black" weight="0.444444">
+ <shade name="light" weight="0.666665722224" />
+ <shade name="soft" weight="0.166666430556" />
+ <shade name="hard" weight="0.166666430556" />
+</color>
+
+<color name="blue" weight="0.222222">
+ <shade name="light" weight="0.666665722224" />
+ <shade name="soft" weight="0.166666430556" />
+ <shade name="hard" weight="0.166666430556" />
+</color>
+
+<color name="white" weight="0.111111">
+ <shade name="light" weight="0.666665722224" />
+ <shade name="soft" weight="0.166666430556" />
+ <shade name="hard" weight="0.166666430556" />
+</color>
+
+<color name="pink" weight="0.111111">
+ <shade name="light" weight="0.666665722224" />
+ <shade name="soft" weight="0.166666430556" />
+ <shade name="hard" weight="0.166666430556" />
+</color>
+
+<color name="green" weight="0.111111">
+ <shade name="light" weight="0.666665722224" />
+ <shade name="soft" weight="0.166666430556" />
+ <shade name="hard" weight="0.166666430556" />
+</color>
+
+</colors>

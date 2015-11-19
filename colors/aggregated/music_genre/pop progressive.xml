@@ -1,0 +1,33 @@
+<colors query="pop progressive">
+
+<color name="pink" weight="0.857142000001">
+ <shade name="hard" weight="0.599999340001" />
+ <shade name="soft" weight="0.29999967" />
+ <shade name="dark" weight="0.0999998900001" />
+</color>
+
+<color name="red" weight="0.142857">
+ <shade name="hard" weight="0.599999340001" />
+ <shade name="soft" weight="0.29999967" />
+ <shade name="dark" weight="0.0999998900001" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="hard" weight="0.599999340001" />
+ <shade name="soft" weight="0.29999967" />
+ <shade name="dark" weight="0.0999998900001" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="hard" weight="0.599999340001" />
+ <shade name="soft" weight="0.29999967" />
+ <shade name="dark" weight="0.0999998900001" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="hard" weight="0.599999340001" />
+ <shade name="soft" weight="0.29999967" />
+ <shade name="dark" weight="0.0999998900001" />
+</color>
+
+</colors>

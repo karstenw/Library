@@ -1,0 +1,33 @@
+<colors query="garage rock">
+
+<color name="blue" weight="0.615383960553">
+ <shade name="cool" weight="0.478339887643" />
+ <shade name="hard" weight="0.352653641655" />
+ <shade name="dark" weight="0.169005291935" />
+</color>
+
+<color name="white" weight="0.128204991782">
+ <shade name="cool" weight="0.478339887643" />
+ <shade name="hard" weight="0.352653641655" />
+ <shade name="dark" weight="0.169005291935" />
+</color>
+
+<color name="green" weight="0.128204991782">
+ <shade name="cool" weight="0.478339887643" />
+ <shade name="hard" weight="0.352653641655" />
+ <shade name="dark" weight="0.169005291935" />
+</color>
+
+<color name="red" weight="0.0641024958909">
+ <shade name="cool" weight="0.478339887643" />
+ <shade name="hard" weight="0.352653641655" />
+ <shade name="dark" weight="0.169005291935" />
+</color>
+
+<color name="black" weight="0.0641024958909">
+ <shade name="cool" weight="0.478339887643" />
+ <shade name="hard" weight="0.352653641655" />
+ <shade name="dark" weight="0.169005291935" />
+</color>
+
+</colors>

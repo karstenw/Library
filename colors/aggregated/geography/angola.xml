@@ -1,0 +1,33 @@
+<colors query="angola">
+
+<color name="black" weight="0.505586061172">
+ <shade name="warm" weight="0.386934029773" />
+ <shade name="cool" weight="0.346733091615" />
+ <shade name="weak" weight="0.266331215298" />
+</color>
+
+<color name="green" weight="0.223463452452">
+ <shade name="cool" weight="0.408283224013" />
+ <shade name="weak" weight="0.313608853228" />
+ <shade name="light" weight="0.278105964183" />
+</color>
+
+<color name="white" weight="0.122904898848">
+ <shade name="warm" weight="0.386934029773" />
+ <shade name="cool" weight="0.346733091615" />
+ <shade name="weak" weight="0.266331215298" />
+</color>
+
+<color name="blue" weight="0.0865920878251">
+ <shade name="cool" weight="0.408283224013" />
+ <shade name="weak" weight="0.313608853228" />
+ <shade name="light" weight="0.278105964183" />
+</color>
+
+<color name="red" weight="0.0614524494242">
+ <shade name="warm" weight="0.386934029773" />
+ <shade name="cool" weight="0.346733091615" />
+ <shade name="weak" weight="0.266331215298" />
+</color>
+
+</colors>

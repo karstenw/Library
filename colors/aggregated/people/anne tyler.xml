@@ -1,0 +1,33 @@
+<colors query="anne tyler">
+
+<color name="white" weight="0.777777000001">
+ <shade name="hard" weight="0.499999312501" />
+ <shade name="light" weight="0.374999484376" />
+ <shade name="dark" weight="0.124999828125" />
+</color>
+
+<color name="black" weight="0.222222">
+ <shade name="hard" weight="0.39999956" />
+ <shade name="light" weight="0.29999967" />
+ <shade name="intense" weight="0.29999967" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="hard" weight="0.39999956" />
+ <shade name="light" weight="0.29999967" />
+ <shade name="intense" weight="0.29999967" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="hard" weight="0.39999956" />
+ <shade name="light" weight="0.29999967" />
+ <shade name="intense" weight="0.29999967" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="hard" weight="0.499999312501" />
+ <shade name="light" weight="0.374999484376" />
+ <shade name="dark" weight="0.124999828125" />
+</color>
+
+</colors>

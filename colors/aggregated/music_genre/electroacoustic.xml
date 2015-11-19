@@ -1,0 +1,33 @@
+<colors query="electroacoustic">
+
+<color name="black" weight="0.979856840048">
+ <shade name="intense" weight="0.406976218903" />
+ <shade name="dark" weight="0.34883675906" />
+ <shade name="weak" weight="0.244185731342" />
+</color>
+
+<color name="red" weight="0.00829383056873">
+ <shade name="intense" weight="0.406976218903" />
+ <shade name="dark" weight="0.34883675906" />
+ <shade name="weak" weight="0.244185731342" />
+</color>
+
+<color name="pink" weight="0.00710899763034">
+ <shade name="dark" weight="0.499999075002" />
+ <shade name="weak" weight="0.349999352501" />
+ <shade name="cool" weight="0.149999722501" />
+</color>
+
+<color name="white" weight="0.00236966587678">
+ <shade name="dark" weight="0.499999075002" />
+ <shade name="weak" weight="0.349999352501" />
+ <shade name="cool" weight="0.149999722501" />
+</color>
+
+<color name="blue" weight="0.00236966587678">
+ <shade name="intense" weight="0.406976218903" />
+ <shade name="dark" weight="0.34883675906" />
+ <shade name="weak" weight="0.244185731342" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="ambient dub">
+
+<color name="black" weight="0.749999250001">
+ <shade name="dark" weight="0.997520498028" />
+ <shade name="cool" weight="0.00229490912123" />
+ <shade name="warm" weight="0.000183592729698" />
+</color>
+
+<color name="orange" weight="0.24999975">
+ <shade name="dark" weight="0.997520498028" />
+ <shade name="cool" weight="0.00229490912123" />
+ <shade name="warm" weight="0.000183592729698" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="dark" weight="0.997520498028" />
+ <shade name="cool" weight="0.00229490912123" />
+ <shade name="warm" weight="0.000183592729698" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="dark" weight="0.997520498028" />
+ <shade name="cool" weight="0.00229490912123" />
+ <shade name="warm" weight="0.000183592729698" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="dark" weight="0.997520498028" />
+ <shade name="cool" weight="0.00229490912123" />
+ <shade name="warm" weight="0.000183592729698" />
+</color>
+
+</colors>

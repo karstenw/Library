@@ -1,0 +1,33 @@
+<colors query="electrofunk">
+
+<color name="white" weight="0.799999200001">
+ <shade name="dark" weight="0.74999916797" />
+ <shade name="hard" weight="0.124999861328" />
+ <shade name="cool" weight="0.124999861328" />
+</color>
+
+<color name="black" weight="0.1999998">
+ <shade name="dark" weight="0.74999916797" />
+ <shade name="hard" weight="0.124999861328" />
+ <shade name="cool" weight="0.124999861328" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="dark" weight="0.74999916797" />
+ <shade name="hard" weight="0.124999861328" />
+ <shade name="cool" weight="0.124999861328" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="dark" weight="0.74999916797" />
+ <shade name="hard" weight="0.124999861328" />
+ <shade name="cool" weight="0.124999861328" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="dark" weight="0.74999916797" />
+ <shade name="hard" weight="0.124999861328" />
+ <shade name="cool" weight="0.124999861328" />
+</color>
+
+</colors>

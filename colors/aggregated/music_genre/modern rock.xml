@@ -1,0 +1,33 @@
+<colors query="modern rock">
+
+<color name="blue" weight="0.258064166494">
+ <shade name="intense" weight="0.644372909365" />
+ <shade name="hard" weight="0.211252403565" />
+ <shade name="fresh" weight="0.144373501934" />
+</color>
+
+<color name="red" weight="0.19354812487">
+ <shade name="intense" weight="0.644372909365" />
+ <shade name="hard" weight="0.211252403565" />
+ <shade name="fresh" weight="0.144373501934" />
+</color>
+
+<color name="orange" weight="0.19354812487">
+ <shade name="intense" weight="0.644372909365" />
+ <shade name="hard" weight="0.211252403565" />
+ <shade name="fresh" weight="0.144373501934" />
+</color>
+
+<color name="black" weight="0.19354812487">
+ <shade name="intense" weight="0.644372909365" />
+ <shade name="hard" weight="0.211252403565" />
+ <shade name="fresh" weight="0.144373501934" />
+</color>
+
+<color name="white" weight="0.161290104059">
+ <shade name="hard" weight="0.480442934895" />
+ <shade name="fresh" weight="0.32834291028" />
+ <shade name="cool" weight="0.191211459516" />
+</color>
+
+</colors>

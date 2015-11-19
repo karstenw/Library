@@ -1,0 +1,33 @@
+<colors query="baroque">
+
+<color name="blue" weight="0.540349494776">
+ <shade name="light" weight="0.519252380155" />
+ <shade name="dark" weight="0.252041604749" />
+ <shade name="soft" weight="0.228704419124" />
+</color>
+
+<color name="white" weight="0.217314470725">
+ <shade name="light" weight="0.519252380155" />
+ <shade name="dark" weight="0.252041604749" />
+ <shade name="soft" weight="0.228704419124" />
+</color>
+
+<color name="black" weight="0.169152885321">
+ <shade name="light" weight="0.519252380155" />
+ <shade name="dark" weight="0.252041604749" />
+ <shade name="soft" weight="0.228704419124" />
+</color>
+
+<color name="red" weight="0.045694772493">
+ <shade name="light" weight="0.519252380155" />
+ <shade name="dark" weight="0.252041604749" />
+ <shade name="soft" weight="0.228704419124" />
+</color>
+
+<color name="purple" weight="0.0274873438647">
+ <shade name="light" weight="0.519252380155" />
+ <shade name="dark" weight="0.252041604749" />
+ <shade name="soft" weight="0.228704419124" />
+</color>
+
+</colors>

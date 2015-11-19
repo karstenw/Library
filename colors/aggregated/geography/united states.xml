@@ -1,0 +1,33 @@
+<colors query="united states">
+
+<color name="white" weight="0.399563346047">
+ <shade name="cool" weight="0.630985756048" />
+ <shade name="dark" weight="0.185755542705" />
+ <shade name="hard" weight="0.183256589215" />
+</color>
+
+<color name="black" weight="0.22407274493">
+ <shade name="cool" weight="0.630985756048" />
+ <shade name="dark" weight="0.185755542705" />
+ <shade name="hard" weight="0.183256589215" />
+</color>
+
+<color name="green" weight="0.160618516277">
+ <shade name="cool" weight="0.630985756048" />
+ <shade name="dark" weight="0.185755542705" />
+ <shade name="hard" weight="0.183256589215" />
+</color>
+
+<color name="orange" weight="0.122942568015">
+ <shade name="cool" weight="0.630985756048" />
+ <shade name="dark" weight="0.185755542705" />
+ <shade name="hard" weight="0.183256589215" />
+</color>
+
+<color name="blue" weight="0.0928018094045">
+ <shade name="cool" weight="0.630985756048" />
+ <shade name="dark" weight="0.185755542705" />
+ <shade name="hard" weight="0.183256589215" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="baltic sea">
+
+<color name="blue" weight="0.42620646917">
+ <shade name="fresh" weight="0.613332226609" />
+ <shade name="cool" weight="0.271110621907" />
+ <shade name="light" weight="0.115555347042" />
+</color>
+
+<color name="black" weight="0.301379008134">
+ <shade name="warm" weight="0.459238623775" />
+ <shade name="fresh" weight="0.374999586278" />
+ <shade name="cool" weight="0.165760686688" />
+</color>
+
+<color name="white" weight="0.261379048245">
+ <shade name="warm" weight="0.459238623775" />
+ <shade name="fresh" weight="0.374999586278" />
+ <shade name="cool" weight="0.165760686688" />
+</color>
+
+<color name="red" weight="0.00551723584685">
+ <shade name="warm" weight="0.459238623775" />
+ <shade name="fresh" weight="0.374999586278" />
+ <shade name="cool" weight="0.165760686688" />
+</color>
+
+<color name="green" weight="0.00551723584685">
+ <shade name="fresh" weight="0.613332226609" />
+ <shade name="cool" weight="0.271110621907" />
+ <shade name="light" weight="0.115555347042" />
+</color>
+
+</colors>

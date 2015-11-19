@@ -1,0 +1,33 @@
+<colors query="bulgaria">
+
+<color name="blue" weight="0.35214410053">
+ <shade name="cool" weight="0.979700143269" />
+ <shade name="hard" weight="0.0121933902723" />
+ <shade name="light" weight="0.00810543283999" />
+</color>
+
+<color name="black" weight="0.322798758819">
+ <shade name="cool" weight="0.979700143269" />
+ <shade name="hard" weight="0.0121933902723" />
+ <shade name="light" weight="0.00810543283999" />
+</color>
+
+<color name="white" weight="0.198193923247">
+ <shade name="cool" weight="0.979700143269" />
+ <shade name="hard" weight="0.0121933902723" />
+ <shade name="light" weight="0.00810543283999" />
+</color>
+
+<color name="green" weight="0.0805868230059">
+ <shade name="cool" weight="0.979700143269" />
+ <shade name="hard" weight="0.0121933902723" />
+ <shade name="light" weight="0.00810543283999" />
+</color>
+
+<color name="red" weight="0.046275346544">
+ <shade name="cool" weight="0.979700143269" />
+ <shade name="hard" weight="0.0121933902723" />
+ <shade name="light" weight="0.00810543283999" />
+</color>
+
+</colors>

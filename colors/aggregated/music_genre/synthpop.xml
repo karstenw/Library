@@ -1,0 +1,33 @@
+<colors query="synthpop">
+
+<color name="green" weight="0.337837458912">
+ <shade name="dark" weight="0.445954875713" />
+ <shade name="light" weight="0.297064644335" />
+ <shade name="bright" weight="0.256978812811" />
+</color>
+
+<color name="black" weight="0.297296963843">
+ <shade name="dark" weight="0.445954875713" />
+ <shade name="light" weight="0.297064644335" />
+ <shade name="bright" weight="0.256978812811" />
+</color>
+
+<color name="yellow" weight="0.121621485208">
+ <shade name="dark" weight="0.445954875713" />
+ <shade name="light" weight="0.297064644335" />
+ <shade name="bright" weight="0.256978812811" />
+</color>
+
+<color name="white" weight="0.121621485208">
+ <shade name="dark" weight="0.445954875713" />
+ <shade name="light" weight="0.297064644335" />
+ <shade name="bright" weight="0.256978812811" />
+</color>
+
+<color name="red" weight="0.121621485208">
+ <shade name="dark" weight="0.445954875713" />
+ <shade name="light" weight="0.297064644335" />
+ <shade name="bright" weight="0.256978812811" />
+</color>
+
+</colors>

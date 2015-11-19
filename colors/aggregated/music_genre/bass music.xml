@@ -1,0 +1,33 @@
+<colors query="bass music">
+
+<color name="black" weight="0.583332750001">
+ <shade name="hard" weight="0.473683612189" />
+ <shade name="cool" weight="0.315789074793" />
+ <shade name="light" weight="0.210526049862" />
+</color>
+
+<color name="white" weight="0.1666665">
+ <shade name="hard" weight="0.473683612189" />
+ <shade name="cool" weight="0.315789074793" />
+ <shade name="light" weight="0.210526049862" />
+</color>
+
+<color name="yellow" weight="0.0833332500001">
+ <shade name="hard" weight="0.473683612189" />
+ <shade name="cool" weight="0.315789074793" />
+ <shade name="light" weight="0.210526049862" />
+</color>
+
+<color name="red" weight="0.0833332500001">
+ <shade name="hard" weight="0.473683612189" />
+ <shade name="cool" weight="0.315789074793" />
+ <shade name="light" weight="0.210526049862" />
+</color>
+
+<color name="cyan" weight="0.0833332500001">
+ <shade name="hard" weight="0.473683612189" />
+ <shade name="cool" weight="0.315789074793" />
+ <shade name="light" weight="0.210526049862" />
+</color>
+
+</colors>

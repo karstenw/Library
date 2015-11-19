@@ -1,0 +1,33 @@
+<colors query="carl sandburg">
+
+<color name="white" weight="0.835820047227">
+ <shade name="light" weight="0.891088164887" />
+ <shade name="cool" weight="0.069306857269" />
+ <shade name="hard" weight="0.0396039184394" />
+</color>
+
+<color name="yellow" weight="0.0895521479172">
+ <shade name="light" weight="0.891088164887" />
+ <shade name="cool" weight="0.069306857269" />
+ <shade name="hard" weight="0.0396039184394" />
+</color>
+
+<color name="black" weight="0.0447760739586">
+ <shade name="light" weight="0.891088164887" />
+ <shade name="cool" weight="0.069306857269" />
+ <shade name="hard" weight="0.0396039184394" />
+</color>
+
+<color name="red" weight="0.0149253579862">
+ <shade name="light" weight="0.891088164887" />
+ <shade name="cool" weight="0.069306857269" />
+ <shade name="hard" weight="0.0396039184394" />
+</color>
+
+<color name="green" weight="0.0149253579862">
+ <shade name="light" weight="0.891088164887" />
+ <shade name="cool" weight="0.069306857269" />
+ <shade name="hard" weight="0.0396039184394" />
+</color>
+
+</colors>

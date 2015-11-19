@@ -1,0 +1,33 @@
+<colors query="guyana">
+
+<color name="green" weight="0.630159400606">
+ <shade name="light" weight="0.418918366966" />
+ <shade name="cool" weight="0.344594140569" />
+ <shade name="dark" weight="0.2364861749" />
+</color>
+
+<color name="black" weight="0.153327554693">
+ <shade name="light" weight="0.418918366966" />
+ <shade name="cool" weight="0.344594140569" />
+ <shade name="dark" weight="0.2364861749" />
+</color>
+
+<color name="red" weight="0.10278000919">
+ <shade name="light" weight="0.418918366966" />
+ <shade name="cool" weight="0.344594140569" />
+ <shade name="dark" weight="0.2364861749" />
+</color>
+
+<color name="blue" weight="0.0581296773287">
+ <shade name="light" weight="0.418918366966" />
+ <shade name="cool" weight="0.344594140569" />
+ <shade name="dark" weight="0.2364861749" />
+</color>
+
+<color name="white" weight="0.0556023000535">
+ <shade name="light" weight="0.418918366966" />
+ <shade name="cool" weight="0.344594140569" />
+ <shade name="dark" weight="0.2364861749" />
+</color>
+
+</colors>

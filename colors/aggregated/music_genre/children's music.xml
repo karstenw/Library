@@ -1,0 +1,33 @@
+<colors query="children's music">
+
+<color name="white" weight="0.363635933885">
+ <shade name="cool" weight="0.913384884619" />
+ <shade name="soft" weight="0.0708660686342" />
+ <shade name="light" weight="0.015748015252" />
+</color>
+
+<color name="red" weight="0.181817966942">
+ <shade name="cool" weight="0.913384884619" />
+ <shade name="soft" weight="0.0708660686342" />
+ <shade name="light" weight="0.015748015252" />
+</color>
+
+<color name="blue" weight="0.181817966942">
+ <shade name="cool" weight="0.913384884619" />
+ <shade name="soft" weight="0.0708660686342" />
+ <shade name="light" weight="0.015748015252" />
+</color>
+
+<color name="black" weight="0.181817966942">
+ <shade name="cool" weight="0.913384884619" />
+ <shade name="soft" weight="0.0708660686342" />
+ <shade name="light" weight="0.015748015252" />
+</color>
+
+<color name="yellow" weight="0.0909089834712">
+ <shade name="cool" weight="0.913384884619" />
+ <shade name="soft" weight="0.0708660686342" />
+ <shade name="light" weight="0.015748015252" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="blues ballad">
+
+<color name="white" weight="0.4999995">
+ <shade name="cool" weight="0.454544710745" />
+ <shade name="soft" weight="0.272726826447" />
+ <shade name="hard" weight="0.272726826447" />
+</color>
+
+<color name="blue" weight="0.4999995">
+ <shade name="cool" weight="0.454544710745" />
+ <shade name="soft" weight="0.272726826447" />
+ <shade name="hard" weight="0.272726826447" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="cool" weight="0.454544710745" />
+ <shade name="soft" weight="0.272726826447" />
+ <shade name="hard" weight="0.272726826447" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="cool" weight="0.454544710745" />
+ <shade name="soft" weight="0.272726826447" />
+ <shade name="hard" weight="0.272726826447" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="cool" weight="0.454544710745" />
+ <shade name="soft" weight="0.272726826447" />
+ <shade name="hard" weight="0.272726826447" />
+</color>
+
+</colors>

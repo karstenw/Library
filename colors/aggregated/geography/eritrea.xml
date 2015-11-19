@@ -1,0 +1,33 @@
+<colors query="eritrea">
+
+<color name="green" weight="0.393749581641">
+ <shade name="weak" weight="0.563635441324" />
+ <shade name="hard" weight="0.254545038017" />
+ <shade name="cool" weight="0.181817884298" />
+</color>
+
+<color name="red" weight="0.293749687891">
+ <shade name="weak" weight="0.563635441324" />
+ <shade name="hard" weight="0.254545038017" />
+ <shade name="cool" weight="0.181817884298" />
+</color>
+
+<color name="black" weight="0.1999997875">
+ <shade name="weak" weight="0.563635441324" />
+ <shade name="hard" weight="0.254545038017" />
+ <shade name="cool" weight="0.181817884298" />
+</color>
+
+<color name="white" weight="0.0749999203126">
+ <shade name="weak" weight="0.563635441324" />
+ <shade name="hard" weight="0.254545038017" />
+ <shade name="cool" weight="0.181817884298" />
+</color>
+
+<color name="blue" weight="0.0374999601563">
+ <shade name="weak" weight="0.563635441324" />
+ <shade name="hard" weight="0.254545038017" />
+ <shade name="cool" weight="0.181817884298" />
+</color>
+
+</colors>

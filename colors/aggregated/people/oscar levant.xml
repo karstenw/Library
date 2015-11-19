@@ -1,0 +1,33 @@
+<colors query="oscar levant">
+
+<color name="blue" weight="0.895832437501">
+ <shade name="fresh" weight="0.666666000001" />
+ <shade name="cool" weight="0.333333" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="green" weight="0.0520832812501">
+ <shade name="fresh" weight="0.666666000001" />
+ <shade name="cool" weight="0.333333" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="black" weight="0.046874953125">
+ <shade name="fresh" weight="0.666666000001" />
+ <shade name="cool" weight="0.333333" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="yellow" weight="0.00520832812501">
+ <shade name="fresh" weight="0.666666000001" />
+ <shade name="cool" weight="0.333333" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="fresh" weight="0.666666000001" />
+ <shade name="cool" weight="0.333333" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+</colors>

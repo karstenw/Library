@@ -1,0 +1,33 @@
+<colors query="ian fleming">
+
+<color name="green" weight="0.846644520768">
+ <shade name="cool" weight="0.499999343751" />
+ <shade name="dark" weight="0.312499589844" />
+ <shade name="light" weight="0.187499753907" />
+</color>
+
+<color name="white" weight="0.134185169329">
+ <shade name="cool" weight="0.499999343751" />
+ <shade name="dark" weight="0.312499589844" />
+ <shade name="light" weight="0.187499753907" />
+</color>
+
+<color name="blue" weight="0.0127795399361">
+ <shade name="cool" weight="0.499999343751" />
+ <shade name="dark" weight="0.312499589844" />
+ <shade name="light" weight="0.187499753907" />
+</color>
+
+<color name="red" weight="0.00319488498403">
+ <shade name="cool" weight="0.499999343751" />
+ <shade name="dark" weight="0.312499589844" />
+ <shade name="light" weight="0.187499753907" />
+</color>
+
+<color name="black" weight="0.00319488498403">
+ <shade name="cool" weight="0.499999343751" />
+ <shade name="dark" weight="0.312499589844" />
+ <shade name="light" weight="0.187499753907" />
+</color>
+
+</colors>

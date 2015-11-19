@@ -1,0 +1,33 @@
+<colors query="douglas adams">
+
+<color name="green" weight="0.902776846789">
+ <shade name="cool" weight="0.654544752397" />
+ <shade name="hard" weight="0.309090577521" />
+ <shade name="dark" weight="0.0363635973554" />
+</color>
+
+<color name="white" weight="0.0312499677735">
+ <shade name="cool" weight="0.654544752397" />
+ <shade name="hard" weight="0.309090577521" />
+ <shade name="dark" weight="0.0363635973554" />
+</color>
+
+<color name="orange" weight="0.0243055304905">
+ <shade name="cool" weight="0.654544752397" />
+ <shade name="hard" weight="0.309090577521" />
+ <shade name="dark" weight="0.0363635973554" />
+</color>
+
+<color name="purple" weight="0.020833311849">
+ <shade name="cool" weight="0.654544752397" />
+ <shade name="hard" weight="0.309090577521" />
+ <shade name="dark" weight="0.0363635973554" />
+</color>
+
+<color name="black" weight="0.020833311849">
+ <shade name="cool" weight="0.654544752397" />
+ <shade name="hard" weight="0.309090577521" />
+ <shade name="dark" weight="0.0363635973554" />
+</color>
+
+</colors>

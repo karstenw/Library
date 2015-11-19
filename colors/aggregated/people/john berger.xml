@@ -1,0 +1,33 @@
+<colors query="john berger">
+
+<color name="red" weight="0.983049864408">
+ <shade name="light" weight="0.666666000001" />
+ <shade name="hard" weight="0.333333" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="green" weight="0.00847456779662">
+ <shade name="light" weight="0.666666000001" />
+ <shade name="hard" weight="0.333333" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="black" weight="0.00847456779662">
+ <shade name="light" weight="0.666666000001" />
+ <shade name="hard" weight="0.333333" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="light" weight="0.666666000001" />
+ <shade name="hard" weight="0.333333" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="light" weight="0.666666000001" />
+ <shade name="hard" weight="0.333333" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+</colors>

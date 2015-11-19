@@ -1,0 +1,33 @@
+<colors query="mongolia">
+
+<color name="blue" weight="0.573881011197">
+ <shade name="dark" weight="0.617833251716" />
+ <shade name="cool" weight="0.222929523815" />
+ <shade name="light" weight="0.159235374154" />
+</color>
+
+<color name="black" weight="0.21599616012">
+ <shade name="warm" weight="0.449999455313" />
+ <shade name="dark" weight="0.404166177457" />
+ <shade name="cool" weight="0.145833156814" />
+</color>
+
+<color name="red" weight="0.0976049593846">
+ <shade name="warm" weight="0.449999455313" />
+ <shade name="dark" weight="0.404166177457" />
+ <shade name="cool" weight="0.145833156814" />
+</color>
+
+<color name="white" weight="0.0840487150256">
+ <shade name="warm" weight="0.449999455313" />
+ <shade name="dark" weight="0.404166177457" />
+ <shade name="cool" weight="0.145833156814" />
+</color>
+
+<color name="green" weight="0.0284681131538">
+ <shade name="dark" weight="0.617833251716" />
+ <shade name="cool" weight="0.222929523815" />
+ <shade name="light" weight="0.159235374154" />
+</color>
+
+</colors>

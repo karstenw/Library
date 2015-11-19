@@ -1,0 +1,33 @@
+<colors query="bette midler">
+
+<color name="blue" weight="0.565487979779">
+ <shade name="cool" weight="0.489582405167" />
+ <shade name="dark" weight="0.406249229819" />
+ <shade name="light" weight="0.104166469184" />
+</color>
+
+<color name="red" weight="0.181704593503">
+ <shade name="warm" weight="0.418918403763" />
+ <shade name="cool" weight="0.317567177046" />
+ <shade name="dark" weight="0.263513189464" />
+</color>
+
+<color name="green" weight="0.116839795822">
+ <shade name="cool" weight="0.489582405167" />
+ <shade name="dark" weight="0.406249229819" />
+ <shade name="light" weight="0.104166469184" />
+</color>
+
+<color name="black" weight="0.0681911975616">
+ <shade name="warm" weight="0.418918403763" />
+ <shade name="cool" weight="0.317567177046" />
+ <shade name="dark" weight="0.263513189464" />
+</color>
+
+<color name="white" weight="0.0677753975765">
+ <shade name="warm" weight="0.418918403763" />
+ <shade name="cool" weight="0.317567177046" />
+ <shade name="dark" weight="0.263513189464" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="line dance">
+
+<color name="blue" weight="0.366559118365">
+ <shade name="cool" weight="0.920528807641" />
+ <shade name="hard" weight="0.0463575658524" />
+ <shade name="bright" weight="0.0331125470374" />
+</color>
+
+<color name="red" weight="0.358290867575">
+ <shade name="cool" weight="0.920528807641" />
+ <shade name="hard" weight="0.0463575658524" />
+ <shade name="bright" weight="0.0331125470374" />
+</color>
+
+<color name="white" weight="0.223242771335">
+ <shade name="cool" weight="0.920528807641" />
+ <shade name="hard" weight="0.0463575658524" />
+ <shade name="bright" weight="0.0331125470374" />
+</color>
+
+<color name="black" weight="0.0345429144124">
+ <shade name="cool" weight="0.920528807641" />
+ <shade name="hard" weight="0.0463575658524" />
+ <shade name="bright" weight="0.0331125470374" />
+</color>
+
+<color name="pink" weight="0.0173633266594">
+ <shade name="cool" weight="0.920528807641" />
+ <shade name="hard" weight="0.0463575658524" />
+ <shade name="bright" weight="0.0331125470374" />
+</color>
+
+</colors>

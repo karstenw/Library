@@ -1,0 +1,33 @@
+<colors query="new mexico">
+
+<color name="pink" weight="0.366588160761">
+ <shade name="cool" weight="0.404738838096" />
+ <shade name="fresh" weight="0.357345531528" />
+ <shade name="light" weight="0.237914398975" />
+</color>
+
+<color name="black" weight="0.200870225074">
+ <shade name="cool" weight="0.404738838096" />
+ <shade name="fresh" weight="0.357345531528" />
+ <shade name="light" weight="0.237914398975" />
+</color>
+
+<color name="orange" weight="0.185804958194">
+ <shade name="cool" weight="0.404738838096" />
+ <shade name="fresh" weight="0.357345531528" />
+ <shade name="light" weight="0.237914398975" />
+</color>
+
+<color name="white" weight="0.135922185634">
+ <shade name="cool" weight="0.404738838096" />
+ <shade name="fresh" weight="0.357345531528" />
+ <shade name="light" weight="0.237914398975" />
+</color>
+
+<color name="red" weight="0.110813407499">
+ <shade name="cool" weight="0.404738838096" />
+ <shade name="fresh" weight="0.357345531528" />
+ <shade name="light" weight="0.237914398975" />
+</color>
+
+</colors>

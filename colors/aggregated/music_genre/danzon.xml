@@ -1,0 +1,33 @@
+<colors query="danzon">
+
+<color name="blue" weight="0.666666000001">
+ <shade name="light" weight="0.714285000001" />
+ <shade name="soft" weight="0.142857" />
+ <shade name="fresh" weight="0.142857" />
+</color>
+
+<color name="white" weight="0.111111">
+ <shade name="light" weight="0.714285000001" />
+ <shade name="soft" weight="0.142857" />
+ <shade name="fresh" weight="0.142857" />
+</color>
+
+<color name="pink" weight="0.111111">
+ <shade name="light" weight="0.714285000001" />
+ <shade name="soft" weight="0.142857" />
+ <shade name="fresh" weight="0.142857" />
+</color>
+
+<color name="black" weight="0.111111">
+ <shade name="light" weight="0.714285000001" />
+ <shade name="soft" weight="0.142857" />
+ <shade name="fresh" weight="0.142857" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="light" weight="0.714285000001" />
+ <shade name="soft" weight="0.142857" />
+ <shade name="fresh" weight="0.142857" />
+</color>
+
+</colors>

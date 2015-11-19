@@ -1,0 +1,33 @@
+<colors query="cabaret">
+
+<color name="red" weight="0.659004386253">
+ <shade name="dark" weight="0.910253135482" />
+ <shade name="fresh" weight="0.0544689627256" />
+ <shade name="light" weight="0.0352768785438" />
+</color>
+
+<color name="black" weight="0.253957787873">
+ <shade name="dark" weight="0.910253135482" />
+ <shade name="fresh" weight="0.0544689627256" />
+ <shade name="light" weight="0.0352768785438" />
+</color>
+
+<color name="blue" weight="0.0337538831983">
+ <shade name="dark" weight="0.910253135482" />
+ <shade name="fresh" weight="0.0544689627256" />
+ <shade name="light" weight="0.0352768785438" />
+</color>
+
+<color name="pink" weight="0.0286640119224">
+ <shade name="dark" weight="0.910253135482" />
+ <shade name="fresh" weight="0.0544689627256" />
+ <shade name="light" weight="0.0352768785438" />
+</color>
+
+<color name="purple" weight="0.0246189036978">
+ <shade name="dark" weight="0.910253135482" />
+ <shade name="fresh" weight="0.0544689627256" />
+ <shade name="light" weight="0.0352768785438" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="magnificat">
+
+<color name="red" weight="0.922856209454">
+ <shade name="light" weight="0.80952273016" />
+ <shade name="soft" weight="0.0952379682541" />
+ <shade name="intense" weight="0.0952379682541" />
+</color>
+
+<color name="white" weight="0.0485713794449">
+ <shade name="light" weight="0.80952273016" />
+ <shade name="soft" weight="0.0952379682541" />
+ <shade name="fresh" weight="0.0952379682541" />
+</color>
+
+<color name="black" weight="0.0114285598694">
+ <shade name="light" weight="0.80952273016" />
+ <shade name="soft" weight="0.0952379682541" />
+ <shade name="intense" weight="0.0952379682541" />
+</color>
+
+<color name="green" weight="0.00857141990205">
+ <shade name="light" weight="0.80952273016" />
+ <shade name="soft" weight="0.0952379682541" />
+ <shade name="intense" weight="0.0952379682541" />
+</color>
+
+<color name="blue" weight="0.00857141990205">
+ <shade name="light" weight="0.80952273016" />
+ <shade name="soft" weight="0.0952379682541" />
+ <shade name="intense" weight="0.0952379682541" />
+</color>
+
+</colors>

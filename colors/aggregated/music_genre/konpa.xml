@@ -1,0 +1,33 @@
+<colors query="konpa">
+
+<color name="blue" weight="0.999999000001">
+ <shade name="hard" weight="0.529411110727" />
+ <shade name="soft" weight="0.23529382699" />
+ <shade name="cool" weight="0.23529382699" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="hard" weight="0.529411110727" />
+ <shade name="soft" weight="0.23529382699" />
+ <shade name="cool" weight="0.23529382699" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="hard" weight="0.529411110727" />
+ <shade name="soft" weight="0.23529382699" />
+ <shade name="cool" weight="0.23529382699" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="hard" weight="0.529411110727" />
+ <shade name="soft" weight="0.23529382699" />
+ <shade name="cool" weight="0.23529382699" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="hard" weight="0.529411110727" />
+ <shade name="soft" weight="0.23529382699" />
+ <shade name="cool" weight="0.23529382699" />
+</color>
+
+</colors>

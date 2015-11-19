@@ -1,0 +1,33 @@
+<colors query="john stuart mill">
+
+<color name="green" weight="0.533332800001">
+ <shade name="bright" weight="0.928570500001" />
+ <shade name="light" weight="0.047619" />
+ <shade name="weak" weight="0.0238095" />
+</color>
+
+<color name="white" weight="0.1999998">
+ <shade name="bright" weight="0.928570500001" />
+ <shade name="light" weight="0.047619" />
+ <shade name="weak" weight="0.0238095" />
+</color>
+
+<color name="red" weight="0.1333332">
+ <shade name="bright" weight="0.928570500001" />
+ <shade name="light" weight="0.047619" />
+ <shade name="weak" weight="0.0238095" />
+</color>
+
+<color name="orange" weight="0.0666666000001">
+ <shade name="bright" weight="0.928570500001" />
+ <shade name="light" weight="0.047619" />
+ <shade name="weak" weight="0.0238095" />
+</color>
+
+<color name="blue" weight="0.0666666000001">
+ <shade name="bright" weight="0.928570500001" />
+ <shade name="light" weight="0.047619" />
+ <shade name="weak" weight="0.0238095" />
+</color>
+
+</colors>

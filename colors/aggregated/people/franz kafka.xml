@@ -1,0 +1,33 @@
+<colors query="franz kafka">
+
+<color name="black" weight="0.277777445988">
+ <shade name="light" weight="0.938887939569" />
+ <shade name="cool" weight="0.0388888495679" />
+ <shade name="dark" weight="0.0222221997531" />
+</color>
+
+<color name="green" weight="0.22222195679">
+ <shade name="light" weight="0.938887939569" />
+ <shade name="cool" weight="0.0388888495679" />
+ <shade name="dark" weight="0.0222221997531" />
+</color>
+
+<color name="red" weight="0.194444212192">
+ <shade name="light" weight="0.938887939569" />
+ <shade name="cool" weight="0.0388888495679" />
+ <shade name="dark" weight="0.0222221997531" />
+</color>
+
+<color name="white" weight="0.166666467593">
+ <shade name="light" weight="0.938887939569" />
+ <shade name="cool" weight="0.0388888495679" />
+ <shade name="dark" weight="0.0222221997531" />
+</color>
+
+<color name="orange" weight="0.138888722994">
+ <shade name="light" weight="0.938887939569" />
+ <shade name="cool" weight="0.0388888495679" />
+ <shade name="dark" weight="0.0222221997531" />
+</color>
+
+</colors>

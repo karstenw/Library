@@ -1,0 +1,33 @@
+<colors query="truman capote">
+
+<color name="green" weight="0.467212645627">
+ <shade name="cool" weight="0.983999008129" />
+ <shade name="light" weight="0.00799999193601" />
+ <shade name="bright" weight="0.00799999193601" />
+</color>
+
+<color name="white" weight="0.397540584437">
+ <shade name="cool" weight="0.983999008129" />
+ <shade name="light" weight="0.00799999193601" />
+ <shade name="bright" weight="0.00799999193601" />
+</color>
+
+<color name="black" weight="0.122950696218">
+ <shade name="cool" weight="0.983999008129" />
+ <shade name="light" weight="0.00799999193601" />
+ <shade name="bright" weight="0.00799999193601" />
+</color>
+
+<color name="blue" weight="0.00819671308117">
+ <shade name="cool" weight="0.983999008129" />
+ <shade name="light" weight="0.00799999193601" />
+ <shade name="bright" weight="0.00799999193601" />
+</color>
+
+<color name="purple" weight="0.00409835654058">
+ <shade name="cool" weight="0.983999008129" />
+ <shade name="light" weight="0.00799999193601" />
+ <shade name="bright" weight="0.00799999193601" />
+</color>
+
+</colors>

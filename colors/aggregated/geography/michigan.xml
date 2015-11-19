@@ -1,0 +1,33 @@
+<colors query="michigan">
+
+<color name="blue" weight="0.304006658978">
+ <shade name="cool" weight="0.59684788764" />
+ <shade name="weak" weight="0.220574219345" />
+ <shade name="light" weight="0.182576139542" />
+</color>
+
+<color name="red" weight="0.269163488895">
+ <shade name="cool" weight="0.596737278515" />
+ <shade name="weak" weight="0.22053334206" />
+ <shade name="warm" weight="0.182727626278" />
+</color>
+
+<color name="green" weight="0.199477148728">
+ <shade name="cool" weight="0.59684788764" />
+ <shade name="weak" weight="0.220574219345" />
+ <shade name="light" weight="0.182576139542" />
+</color>
+
+<color name="white" weight="0.120208936788">
+ <shade name="cool" weight="0.596737278515" />
+ <shade name="weak" weight="0.22053334206" />
+ <shade name="warm" weight="0.182727626278" />
+</color>
+
+<color name="black" weight="0.107142748007">
+ <shade name="cool" weight="0.596737278515" />
+ <shade name="weak" weight="0.22053334206" />
+ <shade name="warm" weight="0.182727626278" />
+</color>
+
+</colors>

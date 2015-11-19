@@ -1,0 +1,33 @@
+<colors query="ecuador">
+
+<color name="red" weight="0.558942452384">
+ <shade name="dark" weight="0.524222893318" />
+ <shade name="light" weight="0.318011992155" />
+ <shade name="hard" weight="0.157763761733" />
+</color>
+
+<color name="yellow" weight="0.146341296624">
+ <shade name="dark" weight="0.524222893318" />
+ <shade name="light" weight="0.318011992155" />
+ <shade name="hard" weight="0.157763761733" />
+</color>
+
+<color name="green" weight="0.132621800066">
+ <shade name="dark" weight="0.524222893318" />
+ <shade name="light" weight="0.318011992155" />
+ <shade name="hard" weight="0.157763761733" />
+</color>
+
+<color name="white" weight="0.090955180888">
+ <shade name="dark" weight="0.524222893318" />
+ <shade name="light" weight="0.318011992155" />
+ <shade name="hard" weight="0.157763761733" />
+</color>
+
+<color name="black" weight="0.0711381303034">
+ <shade name="dark" weight="0.524222893318" />
+ <shade name="light" weight="0.318011992155" />
+ <shade name="hard" weight="0.157763761733" />
+</color>
+
+</colors>

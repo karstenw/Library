@@ -1,0 +1,33 @@
+<colors query="orson welles">
+
+<color name="white" weight="0.716031887799">
+ <shade name="dark" weight="0.539215051904" />
+ <shade name="cool" weight="0.411764221454" />
+ <shade name="light" weight="0.0490195501731" />
+</color>
+
+<color name="black" weight="0.149456371267">
+ <shade name="dark" weight="0.539215051904" />
+ <shade name="cool" weight="0.411764221454" />
+ <shade name="light" weight="0.0490195501731" />
+</color>
+
+<color name="green" weight="0.115489014161">
+ <shade name="dark" weight="0.539215051904" />
+ <shade name="cool" weight="0.411764221454" />
+ <shade name="light" weight="0.0490195501731" />
+</color>
+
+<color name="orange" weight="0.010869554274">
+ <shade name="dark" weight="0.539215051904" />
+ <shade name="cool" weight="0.411764221454" />
+ <shade name="light" weight="0.0490195501731" />
+</color>
+
+<color name="red" weight="0.0081521657055">
+ <shade name="dark" weight="0.539215051904" />
+ <shade name="cool" weight="0.411764221454" />
+ <shade name="light" weight="0.0490195501731" />
+</color>
+
+</colors>

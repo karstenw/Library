@@ -1,0 +1,33 @@
+<colors query="rumba">
+
+<color name="black" weight="0.35601849944">
+ <shade name="dark" weight="0.50860853522" />
+ <shade name="hard" weight="0.262251275973" />
+ <shade name="soft" weight="0.229138741128" />
+</color>
+
+<color name="red" weight="0.23603436427">
+ <shade name="dark" weight="0.50860853522" />
+ <shade name="hard" weight="0.262251275973" />
+ <shade name="soft" weight="0.229138741128" />
+</color>
+
+<color name="blue" weight="0.166010836203">
+ <shade name="dark" weight="0.50860853522" />
+ <shade name="hard" weight="0.262251275973" />
+ <shade name="soft" weight="0.229138741128" />
+</color>
+
+<color name="pink" weight="0.147914868276">
+ <shade name="dark" weight="0.50860853522" />
+ <shade name="hard" weight="0.262251275973" />
+ <shade name="soft" weight="0.229138741128" />
+</color>
+
+<color name="white" weight="0.0940203551008">
+ <shade name="dark" weight="0.50860853522" />
+ <shade name="hard" weight="0.262251275973" />
+ <shade name="soft" weight="0.229138741128" />
+</color>
+
+</colors>

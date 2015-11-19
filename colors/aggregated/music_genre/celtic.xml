@@ -1,0 +1,33 @@
+<colors query="celtic">
+
+<color name="black" weight="0.359129618646">
+ <shade name="cool" weight="0.817169167477" />
+ <shade name="light" weight="0.110969665155" />
+ <shade name="soft" weight="0.0718600123929" />
+</color>
+
+<color name="blue" weight="0.22635282302">
+ <shade name="cool" weight="0.817169167477" />
+ <shade name="light" weight="0.110969665155" />
+ <shade name="soft" weight="0.0718600123929" />
+</color>
+
+<color name="green" weight="0.204855627537">
+ <shade name="cool" weight="0.817169167477" />
+ <shade name="light" weight="0.110969665155" />
+ <shade name="soft" weight="0.0718600123929" />
+</color>
+
+<color name="white" weight="0.188416595698">
+ <shade name="cool" weight="0.817169167477" />
+ <shade name="light" weight="0.110969665155" />
+ <shade name="soft" weight="0.0718600123929" />
+</color>
+
+<color name="pink" weight="0.0212442873002">
+ <shade name="cool" weight="0.817169167477" />
+ <shade name="light" weight="0.110969665155" />
+ <shade name="soft" weight="0.0718600123929" />
+</color>
+
+</colors>

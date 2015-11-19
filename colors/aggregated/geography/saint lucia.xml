@@ -1,0 +1,33 @@
+<colors query="saint lucia">
+
+<color name="orange" weight="0.752940370381">
+ <shade name="light" weight="0.925232650451" />
+ <shade name="fresh" weight="0.0467289217399" />
+ <shade name="dark" weight="0.028037353044" />
+</color>
+
+<color name="green" weight="0.0705881597233">
+ <shade name="light" weight="0.925232650451" />
+ <shade name="fresh" weight="0.0467289217399" />
+ <shade name="dark" weight="0.028037353044" />
+</color>
+
+<color name="black" weight="0.0705881597233">
+ <shade name="light" weight="0.925232650451" />
+ <shade name="fresh" weight="0.0467289217399" />
+ <shade name="dark" weight="0.028037353044" />
+</color>
+
+<color name="white" weight="0.0588234664361">
+ <shade name="light" weight="0.925232650451" />
+ <shade name="fresh" weight="0.0467289217399" />
+ <shade name="dark" weight="0.028037353044" />
+</color>
+
+<color name="red" weight="0.0470587731488">
+ <shade name="light" weight="0.925232650451" />
+ <shade name="fresh" weight="0.0467289217399" />
+ <shade name="dark" weight="0.028037353044" />
+</color>
+
+</colors>

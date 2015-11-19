@@ -1,0 +1,33 @@
+<colors query="sea of japan">
+
+<color name="blue" weight="0.985051330367">
+ <shade name="intense" weight="0.333293782471" />
+ <shade name="fresh" weight="0.333293782471" />
+ <shade name="cool" weight="0.333293782471" />
+</color>
+
+<color name="red" weight="0.00597906725564">
+ <shade name="warm" weight="0.994365200017" />
+ <shade name="intense" weight="0.00281689858362" />
+ <shade name="fresh" weight="0.00281689858362" />
+</color>
+
+<color name="green" weight="0.00448430044173">
+ <shade name="intense" weight="0.333293782471" />
+ <shade name="fresh" weight="0.333293782471" />
+ <shade name="cool" weight="0.333293782471" />
+</color>
+
+<color name="black" weight="0.00298953362782">
+ <shade name="warm" weight="0.994365200017" />
+ <shade name="intense" weight="0.00281689858362" />
+ <shade name="fresh" weight="0.00281689858362" />
+</color>
+
+<color name="white" weight="0.00149476681391">
+ <shade name="warm" weight="0.994365200017" />
+ <shade name="fresh" weight="0.00281689858362" />
+ <shade name="cool" weight="0.00281689858362" />
+</color>
+
+</colors>

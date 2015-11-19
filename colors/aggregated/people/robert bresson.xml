@@ -1,0 +1,33 @@
+<colors query="robert bresson">
+
+<color name="green" weight="0.642856500001">
+ <shade name="intense" weight="0.333332944445" />
+ <shade name="dark" weight="0.333332944445" />
+ <shade name="cool" weight="0.333332944445" />
+</color>
+
+<color name="red" weight="0.2142855">
+ <shade name="intense" weight="0.333332944445" />
+ <shade name="dark" weight="0.333332944445" />
+ <shade name="cool" weight="0.333332944445" />
+</color>
+
+<color name="white" weight="0.0714285000001">
+ <shade name="dark" weight="0.399999440001" />
+ <shade name="cool" weight="0.399999440001" />
+ <shade name="weak" weight="0.19999972" />
+</color>
+
+<color name="pink" weight="0.0714285000001">
+ <shade name="dark" weight="0.399999440001" />
+ <shade name="cool" weight="0.399999440001" />
+ <shade name="weak" weight="0.19999972" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="intense" weight="0.333332944445" />
+ <shade name="dark" weight="0.333332944445" />
+ <shade name="cool" weight="0.333332944445" />
+</color>
+
+</colors>

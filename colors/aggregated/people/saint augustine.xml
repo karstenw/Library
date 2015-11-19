@@ -1,0 +1,33 @@
+<colors query="saint augustine">
+
+<color name="green" weight="0.83783698955">
+ <shade name="light" weight="0.927151335469" />
+ <shade name="cool" weight="0.0397350572344" />
+ <shade name="bright" weight="0.0331125476953" />
+</color>
+
+<color name="white" weight="0.13305599834">
+ <shade name="light" weight="0.927151335469" />
+ <shade name="cool" weight="0.0397350572344" />
+ <shade name="bright" weight="0.0331125476953" />
+</color>
+
+<color name="blue" weight="0.0103949998703">
+ <shade name="light" weight="0.927151335469" />
+ <shade name="cool" weight="0.0397350572344" />
+ <shade name="bright" weight="0.0331125476953" />
+</color>
+
+<color name="black" weight="0.0103949998703">
+ <shade name="light" weight="0.927151335469" />
+ <shade name="cool" weight="0.0397350572344" />
+ <shade name="bright" weight="0.0331125476953" />
+</color>
+
+<color name="orange" weight="0.00831599989627">
+ <shade name="light" weight="0.927151335469" />
+ <shade name="cool" weight="0.0397350572344" />
+ <shade name="bright" weight="0.0331125476953" />
+</color>
+
+</colors>

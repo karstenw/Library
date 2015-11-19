@@ -1,0 +1,33 @@
+<colors query="soul blues">
+
+<color name="white" weight="0.569774636076">
+ <shade name="hard" weight="0.411763955019" />
+ <shade name="dark" weight="0.294117110728" />
+ <shade name="cool" weight="0.294117110728" />
+</color>
+
+<color name="black" weight="0.412641474721">
+ <shade name="hard" weight="0.411763955019" />
+ <shade name="intense" weight="0.294117110728" />
+ <shade name="dark" weight="0.294117110728" />
+</color>
+
+<color name="blue" weight="0.0174493482298">
+ <shade name="hard" weight="0.411763955019" />
+ <shade name="intense" weight="0.294117110728" />
+ <shade name="dark" weight="0.294117110728" />
+</color>
+
+<color name="green" weight="8.90272868868e-05">
+ <shade name="hard" weight="0.411763955019" />
+ <shade name="intense" weight="0.294117110728" />
+ <shade name="dark" weight="0.294117110728" />
+</color>
+
+<color name="yellow" weight="4.45136434434e-05">
+ <shade name="hard" weight="0.411763955019" />
+ <shade name="intense" weight="0.294117110728" />
+ <shade name="dark" weight="0.294117110728" />
+</color>
+
+</colors>

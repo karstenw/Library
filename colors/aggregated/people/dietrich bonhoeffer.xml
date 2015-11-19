@@ -1,0 +1,33 @@
+<colors query="dietrich bonhoeffer">
+
+<color name="green" weight="0.822579822581">
+ <shade name="light" weight="0.599999320001" />
+ <shade name="dark" weight="0.266666364445" />
+ <shade name="hard" weight="0.133333182222" />
+</color>
+
+<color name="white" weight="0.0806450806452">
+ <shade name="light" weight="0.599999320001" />
+ <shade name="dark" weight="0.266666364445" />
+ <shade name="hard" weight="0.133333182222" />
+</color>
+
+<color name="red" weight="0.0806450806452">
+ <shade name="light" weight="0.599999320001" />
+ <shade name="dark" weight="0.266666364445" />
+ <shade name="hard" weight="0.133333182222" />
+</color>
+
+<color name="black" weight="0.016129016129">
+ <shade name="light" weight="0.599999320001" />
+ <shade name="dark" weight="0.266666364445" />
+ <shade name="hard" weight="0.133333182222" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="light" weight="0.599999320001" />
+ <shade name="dark" weight="0.266666364445" />
+ <shade name="hard" weight="0.133333182222" />
+</color>
+
+</colors>

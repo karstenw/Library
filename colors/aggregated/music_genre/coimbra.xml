@@ -1,0 +1,33 @@
+<colors query="coimbra">
+
+<color name="blue" weight="0.87469789519">
+ <shade name="light" weight="0.444443827161" />
+ <shade name="cool" weight="0.333332870371" />
+ <shade name="hard" weight="0.222221913581" />
+</color>
+
+<color name="black" weight="0.0626505379475">
+ <shade name="light" weight="0.444443827161" />
+ <shade name="cool" weight="0.333332870371" />
+ <shade name="hard" weight="0.222221913581" />
+</color>
+
+<color name="red" weight="0.0289156328989">
+ <shade name="light" weight="0.444443827161" />
+ <shade name="cool" weight="0.333332870371" />
+ <shade name="hard" weight="0.222221913581" />
+</color>
+
+<color name="white" weight="0.0216867246741">
+ <shade name="light" weight="0.444443827161" />
+ <shade name="cool" weight="0.333332870371" />
+ <shade name="hard" weight="0.222221913581" />
+</color>
+
+<color name="orange" weight="0.0120481803745">
+ <shade name="light" weight="0.444443827161" />
+ <shade name="cool" weight="0.333332870371" />
+ <shade name="hard" weight="0.222221913581" />
+</color>
+
+</colors>

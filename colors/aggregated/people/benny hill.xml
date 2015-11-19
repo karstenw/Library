@@ -1,0 +1,33 @@
+<colors query="benny hill">
+
+<color name="green" weight="0.363387601847">
+ <shade name="cool" weight="0.948786074848" />
+ <shade name="hard" weight="0.0269541498536" />
+ <shade name="dark" weight="0.0242587348683" />
+</color>
+
+<color name="blue" weight="0.243169147101">
+ <shade name="cool" weight="0.948786074848" />
+ <shade name="hard" weight="0.0269541498536" />
+ <shade name="dark" weight="0.0242587348683" />
+</color>
+
+<color name="black" weight="0.240436909493">
+ <shade name="cool" weight="0.948786074848" />
+ <shade name="hard" weight="0.0269541498536" />
+ <shade name="dark" weight="0.0242587348683" />
+</color>
+
+<color name="white" weight="0.12841516757">
+ <shade name="cool" weight="0.948786074848" />
+ <shade name="hard" weight="0.0269541498536" />
+ <shade name="dark" weight="0.0242587348683" />
+</color>
+
+<color name="orange" weight="0.0245901384709">
+ <shade name="cool" weight="0.948786074848" />
+ <shade name="hard" weight="0.0269541498536" />
+ <shade name="dark" weight="0.0242587348683" />
+</color>
+
+</colors>

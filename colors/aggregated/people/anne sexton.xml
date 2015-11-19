@@ -1,0 +1,33 @@
+<colors query="anne sexton">
+
+<color name="white" weight="0.733332551112">
+ <shade name="hard" weight="0.896225476594" />
+ <shade name="cool" weight="0.0754716190816" />
+ <shade name="light" weight="0.0283018571556" />
+</color>
+
+<color name="black" weight="0.0888887940742">
+ <shade name="hard" weight="0.896225476594" />
+ <shade name="cool" weight="0.0754716190816" />
+ <shade name="light" weight="0.0283018571556" />
+</color>
+
+<color name="green" weight="0.0666665955556">
+ <shade name="hard" weight="0.896225476594" />
+ <shade name="cool" weight="0.0754716190816" />
+ <shade name="light" weight="0.0283018571556" />
+</color>
+
+<color name="blue" weight="0.0666665955556">
+ <shade name="hard" weight="0.896225476594" />
+ <shade name="cool" weight="0.0754716190816" />
+ <shade name="light" weight="0.0283018571556" />
+</color>
+
+<color name="orange" weight="0.0444443970371">
+ <shade name="hard" weight="0.896225476594" />
+ <shade name="cool" weight="0.0754716190816" />
+ <shade name="light" weight="0.0283018571556" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="mississippi">
+
+<color name="white" weight="0.510252451727">
+ <shade name="bright" weight="0.742137426093" />
+ <shade name="hard" weight="0.161635015683" />
+ <shade name="cool" weight="0.0962262933832" />
+</color>
+
+<color name="black" weight="0.43119925498">
+ <shade name="bright" weight="0.742137426093" />
+ <shade name="hard" weight="0.161635015683" />
+ <shade name="cool" weight="0.0962262933832" />
+</color>
+
+<color name="green" weight="0.0232128932264">
+ <shade name="bright" weight="0.742137426093" />
+ <shade name="hard" weight="0.161635015683" />
+ <shade name="cool" weight="0.0962262933832" />
+</color>
+
+<color name="red" weight="0.0202424094699">
+ <shade name="bright" weight="0.742137426093" />
+ <shade name="hard" weight="0.161635015683" />
+ <shade name="cool" weight="0.0962262933832" />
+</color>
+
+<color name="blue" weight="0.0150919739243">
+ <shade name="bright" weight="0.742137426093" />
+ <shade name="hard" weight="0.161635015683" />
+ <shade name="cool" weight="0.0962262933832" />
+</color>
+
+</colors>

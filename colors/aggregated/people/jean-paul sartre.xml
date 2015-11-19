@@ -1,0 +1,33 @@
+<colors query="jean-paul sartre">
+
+<color name="black" weight="0.905881436402">
+ <shade name="light" weight="0.411764245675" />
+ <shade name="cool" weight="0.411764245675" />
+ <shade name="hard" weight="0.176470391004" />
+</color>
+
+<color name="purple" weight="0.0294117349481">
+ <shade name="light" weight="0.411764245675" />
+ <shade name="cool" weight="0.411764245675" />
+ <shade name="hard" weight="0.176470391004" />
+</color>
+
+<color name="green" weight="0.0294117349481">
+ <shade name="light" weight="0.411764245675" />
+ <shade name="cool" weight="0.411764245675" />
+ <shade name="hard" weight="0.176470391004" />
+</color>
+
+<color name="white" weight="0.0235293879585">
+ <shade name="light" weight="0.411764245675" />
+ <shade name="cool" weight="0.411764245675" />
+ <shade name="hard" weight="0.176470391004" />
+</color>
+
+<color name="orange" weight="0.0117646939793">
+ <shade name="light" weight="0.411764245675" />
+ <shade name="cool" weight="0.411764245675" />
+ <shade name="hard" weight="0.176470391004" />
+</color>
+
+</colors>

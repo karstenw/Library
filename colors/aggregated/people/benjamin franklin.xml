@@ -1,0 +1,33 @@
+<colors query="benjamin franklin">
+
+<color name="white" weight="0.531700652006">
+ <shade name="light" weight="0.751878814519" />
+ <shade name="bright" weight="0.135338186613" />
+ <shade name="cool" weight="0.112781822178" />
+</color>
+
+<color name="green" weight="0.236032402779">
+ <shade name="light" weight="0.751878814519" />
+ <shade name="bright" weight="0.135338186613" />
+ <shade name="cool" weight="0.112781822178" />
+</color>
+
+<color name="blue" weight="0.143126031473">
+ <shade name="light" weight="0.751878814519" />
+ <shade name="bright" weight="0.135338186613" />
+ <shade name="cool" weight="0.112781822178" />
+</color>
+
+<color name="black" weight="0.0527306431741">
+ <shade name="light" weight="0.751878814519" />
+ <shade name="bright" weight="0.135338186613" />
+ <shade name="cool" weight="0.112781822178" />
+</color>
+
+<color name="red" weight="0.0364092536202">
+ <shade name="light" weight="0.751878814519" />
+ <shade name="bright" weight="0.135338186613" />
+ <shade name="cool" weight="0.112781822178" />
+</color>
+
+</colors>

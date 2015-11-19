@@ -1,0 +1,33 @@
+<colors query="abraham lincoln">
+
+<color name="black" weight="0.309772245826">
+ <shade name="light" weight="0.503596482843" />
+ <shade name="cool" weight="0.377697362132" />
+ <shade name="weak" weight="0.118704885242" />
+</color>
+
+<color name="white" weight="0.299938206276">
+ <shade name="light" weight="0.503596482843" />
+ <shade name="cool" weight="0.377697362132" />
+ <shade name="weak" weight="0.118704885242" />
+</color>
+
+<color name="red" weight="0.131530278982">
+ <shade name="light" weight="0.503596482843" />
+ <shade name="cool" weight="0.377697362132" />
+ <shade name="weak" weight="0.118704885242" />
+</color>
+
+<color name="blue" weight="0.13091565151">
+ <shade name="light" weight="0.503596482843" />
+ <shade name="cool" weight="0.377697362132" />
+ <shade name="weak" weight="0.118704885242" />
+</color>
+
+<color name="green" weight="0.12784251415">
+ <shade name="light" weight="0.503596482843" />
+ <shade name="cool" weight="0.377697362132" />
+ <shade name="weak" weight="0.118704885242" />
+</color>
+
+</colors>

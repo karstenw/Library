@@ -1,0 +1,33 @@
+<colors query="tasman sea">
+
+<color name="blue" weight="0.681274219124">
+ <shade name="cool" weight="0.624996914078" />
+ <shade name="light" weight="0.187499074223" />
+ <shade name="fresh" weight="0.187499074223" />
+</color>
+
+<color name="green" weight="0.306772601594">
+ <shade name="cool" weight="0.624996914078" />
+ <shade name="light" weight="0.187499074223" />
+ <shade name="fresh" weight="0.187499074223" />
+</color>
+
+<color name="black" weight="0.00796811952192">
+ <shade name="warm" weight="0.824323444303" />
+ <shade name="cool" weight="0.135134990869" />
+ <shade name="light" weight="0.0405404972608" />
+</color>
+
+<color name="red" weight="0.00398405976096">
+ <shade name="warm" weight="0.824323444303" />
+ <shade name="cool" weight="0.135134990869" />
+ <shade name="light" weight="0.0405404972608" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="warm" weight="0.824323444303" />
+ <shade name="cool" weight="0.135134990869" />
+ <shade name="light" weight="0.0405404972608" />
+</color>
+
+</colors>

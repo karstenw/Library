@@ -1,0 +1,33 @@
+<colors query="charlie chaplin">
+
+<color name="white" weight="0.507237470952">
+ <shade name="cool" weight="0.912558687023" />
+ <shade name="light" weight="0.0683624103519" />
+ <shade name="dark" weight="0.0190778819587" />
+</color>
+
+<color name="blue" weight="0.314417747405">
+ <shade name="cool" weight="0.912558687023" />
+ <shade name="light" weight="0.0683624103519" />
+ <shade name="dark" weight="0.0190778819587" />
+</color>
+
+<color name="black" weight="0.14591762863">
+ <shade name="cool" weight="0.912558687023" />
+ <shade name="light" weight="0.0683624103519" />
+ <shade name="dark" weight="0.0190778819587" />
+</color>
+
+<color name="red" weight="0.0277938340248">
+ <shade name="cool" weight="0.912558687023" />
+ <shade name="light" weight="0.0683624103519" />
+ <shade name="dark" weight="0.0190778819587" />
+</color>
+
+<color name="orange" weight="0.0046323056708">
+ <shade name="cool" weight="0.912558687023" />
+ <shade name="light" weight="0.0683624103519" />
+ <shade name="dark" weight="0.0190778819587" />
+</color>
+
+</colors>

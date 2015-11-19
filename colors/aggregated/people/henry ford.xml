@@ -1,0 +1,33 @@
+<colors query="henry ford">
+
+<color name="black" weight="0.638524923242">
+ <shade name="light" weight="0.566878352632" />
+ <shade name="cool" weight="0.375795761857" />
+ <shade name="hard" weight="0.0573247772324" />
+</color>
+
+<color name="green" weight="0.158144906501">
+ <shade name="light" weight="0.566878352632" />
+ <shade name="cool" weight="0.375795761857" />
+ <shade name="hard" weight="0.0573247772324" />
+</color>
+
+<color name="white" weight="0.139119955343">
+ <shade name="light" weight="0.566878352632" />
+ <shade name="cool" weight="0.375795761857" />
+ <shade name="hard" weight="0.0573247772324" />
+</color>
+
+<color name="blue" weight="0.0356717834213">
+ <shade name="light" weight="0.566878352632" />
+ <shade name="cool" weight="0.375795761857" />
+ <shade name="hard" weight="0.0573247772324" />
+</color>
+
+<color name="red" weight="0.0285374267371">
+ <shade name="light" weight="0.566878352632" />
+ <shade name="cool" weight="0.375795761857" />
+ <shade name="hard" weight="0.0573247772324" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="alexander the great">
+
+<color name="green" weight="0.917646116887">
+ <shade name="cool" weight="0.714284778913" />
+ <shade name="dark" weight="0.166666448413" />
+ <shade name="hard" weight="0.119047463152" />
+</color>
+
+<color name="blue" weight="0.0235293876125">
+ <shade name="cool" weight="0.714284778913" />
+ <shade name="dark" weight="0.166666448413" />
+ <shade name="hard" weight="0.119047463152" />
+</color>
+
+<color name="black" weight="0.0235293876125">
+ <shade name="cool" weight="0.714284778913" />
+ <shade name="dark" weight="0.166666448413" />
+ <shade name="hard" weight="0.119047463152" />
+</color>
+
+<color name="red" weight="0.0176470407094">
+ <shade name="cool" weight="0.714284778913" />
+ <shade name="dark" weight="0.166666448413" />
+ <shade name="hard" weight="0.119047463152" />
+</color>
+
+<color name="orange" weight="0.0176470407094">
+ <shade name="cool" weight="0.714284778913" />
+ <shade name="dark" weight="0.166666448413" />
+ <shade name="hard" weight="0.119047463152" />
+</color>
+
+</colors>

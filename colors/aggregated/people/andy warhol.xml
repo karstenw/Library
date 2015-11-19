@@ -1,0 +1,33 @@
+<colors query="andy warhol">
+
+<color name="black" weight="0.293531946202">
+ <shade name="cool" weight="0.733259370514" />
+ <shade name="dark" weight="0.205268715997" />
+ <shade name="light" weight="0.0614708454323" />
+</color>
+
+<color name="white" weight="0.195687964135">
+ <shade name="cool" weight="0.733259370514" />
+ <shade name="dark" weight="0.205268715997" />
+ <shade name="light" weight="0.0614708454323" />
+</color>
+
+<color name="red" weight="0.19237121898">
+ <shade name="cool" weight="0.733259370514" />
+ <shade name="dark" weight="0.205268715997" />
+ <shade name="light" weight="0.0614708454323" />
+</color>
+
+<color name="green" weight="0.168739409752">
+ <shade name="cool" weight="0.733259370514" />
+ <shade name="dark" weight="0.205268715997" />
+ <shade name="light" weight="0.0614708454323" />
+</color>
+
+<color name="orange" weight="0.149668125112">
+ <shade name="cool" weight="0.733259370514" />
+ <shade name="dark" weight="0.205268715997" />
+ <shade name="light" weight="0.0614708454323" />
+</color>
+
+</colors>

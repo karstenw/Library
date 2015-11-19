@@ -1,0 +1,33 @@
+<colors query="marcel duchamp">
+
+<color name="red" weight="0.458332855903">
+ <shade name="light" weight="0.666666000001" />
+ <shade name="neutral" weight="0.1666665" />
+ <shade name="intense" weight="0.1666665" />
+</color>
+
+<color name="black" weight="0.20833311632">
+ <shade name="light" weight="0.666666000001" />
+ <shade name="neutral" weight="0.1666665" />
+ <shade name="intense" weight="0.1666665" />
+</color>
+
+<color name="green" weight="0.166666493056">
+ <shade name="light" weight="0.666666000001" />
+ <shade name="neutral" weight="0.1666665" />
+ <shade name="intense" weight="0.1666665" />
+</color>
+
+<color name="white" weight="0.124999869792">
+ <shade name="light" weight="0.799999040001" />
+ <shade name="neutral" weight="0.19999976" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="yellow" weight="0.0416666232639">
+ <shade name="light" weight="0.666666000001" />
+ <shade name="neutral" weight="0.1666665" />
+ <shade name="intense" weight="0.1666665" />
+</color>
+
+</colors>

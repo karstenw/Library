@@ -1,0 +1,33 @@
+<colors query="mambo">
+
+<color name="black" weight="0.584593621126">
+ <shade name="light" weight="0.437475248652" />
+ <shade name="cool" weight="0.404567818444" />
+ <shade name="dark" weight="0.157955665" />
+</color>
+
+<color name="blue" weight="0.261347736503">
+ <shade name="light" weight="0.437475248652" />
+ <shade name="cool" weight="0.404567818444" />
+ <shade name="dark" weight="0.157955665" />
+</color>
+
+<color name="green" weight="0.0687757201324">
+ <shade name="light" weight="0.437475248652" />
+ <shade name="cool" weight="0.404567818444" />
+ <shade name="dark" weight="0.157955665" />
+</color>
+
+<color name="white" weight="0.0570838477099">
+ <shade name="light" weight="0.437475248652" />
+ <shade name="cool" weight="0.404567818444" />
+ <shade name="dark" weight="0.157955665" />
+</color>
+
+<color name="pink" weight="0.0281980452543">
+ <shade name="light" weight="0.437475248652" />
+ <shade name="cool" weight="0.404567818444" />
+ <shade name="dark" weight="0.157955665" />
+</color>
+
+</colors>

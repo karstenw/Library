@@ -1,0 +1,33 @@
+<colors query="new wave music">
+
+<color name="blue" weight="0.4999995">
+ <shade name="cool" weight="0.470587626298" />
+ <shade name="dark" weight="0.352940719724" />
+ <shade name="hard" weight="0.176470359862" />
+</color>
+
+<color name="black" weight="0.4999995">
+ <shade name="cool" weight="0.470587626298" />
+ <shade name="dark" weight="0.352940719724" />
+ <shade name="hard" weight="0.176470359862" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="cool" weight="0.470587626298" />
+ <shade name="dark" weight="0.352940719724" />
+ <shade name="hard" weight="0.176470359862" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="cool" weight="0.470587626298" />
+ <shade name="dark" weight="0.352940719724" />
+ <shade name="hard" weight="0.176470359862" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="cool" weight="0.470587626298" />
+ <shade name="dark" weight="0.352940719724" />
+ <shade name="hard" weight="0.176470359862" />
+</color>
+
+</colors>

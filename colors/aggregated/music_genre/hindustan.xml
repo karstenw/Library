@@ -1,0 +1,33 @@
+<colors query="hindustan">
+
+<color name="blue" weight="0.422856669258">
+ <shade name="cool" weight="0.767856290445" />
+ <shade name="hard" weight="0.163690294475" />
+ <shade name="dark" weight="0.0684523049622" />
+</color>
+
+<color name="white" weight="0.211428334629">
+ <shade name="cool" weight="0.767856290445" />
+ <shade name="hard" weight="0.163690294475" />
+ <shade name="dark" weight="0.0684523049622" />
+</color>
+
+<color name="green" weight="0.199999776">
+ <shade name="cool" weight="0.767856290445" />
+ <shade name="hard" weight="0.163690294475" />
+ <shade name="dark" weight="0.0684523049622" />
+</color>
+
+<color name="black" weight="0.108571306972">
+ <shade name="cool" weight="0.767856290445" />
+ <shade name="hard" weight="0.163690294475" />
+ <shade name="dark" weight="0.0684523049622" />
+</color>
+
+<color name="pink" weight="0.0571427931429">
+ <shade name="cool" weight="0.767856290445" />
+ <shade name="hard" weight="0.163690294475" />
+ <shade name="dark" weight="0.0684523049622" />
+</color>
+
+</colors>

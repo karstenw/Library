@@ -1,0 +1,33 @@
+<colors query="barents sea">
+
+<color name="white" weight="0.822221400001">
+ <shade name="warm" weight="0.777776855968" />
+ <shade name="light" weight="0.111110979424" />
+ <shade name="cool" weight="0.111110979424" />
+</color>
+
+<color name="blue" weight="0.0888888000001">
+ <shade name="light" weight="0.374998500006" />
+ <shade name="cool" weight="0.374998500006" />
+ <shade name="intense" weight="0.249999000004" />
+</color>
+
+<color name="green" weight="0.0444444">
+ <shade name="light" weight="0.374998500006" />
+ <shade name="cool" weight="0.374998500006" />
+ <shade name="intense" weight="0.249999000004" />
+</color>
+
+<color name="red" weight="0.0222222">
+ <shade name="warm" weight="0.777776855968" />
+ <shade name="light" weight="0.111110979424" />
+ <shade name="cool" weight="0.111110979424" />
+</color>
+
+<color name="black" weight="0.0222222">
+ <shade name="warm" weight="0.777776855968" />
+ <shade name="light" weight="0.111110979424" />
+ <shade name="cool" weight="0.111110979424" />
+</color>
+
+</colors>

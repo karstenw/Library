@@ -1,0 +1,33 @@
+<colors query="ezra pound">
+
+<color name="white" weight="0.775509412745">
+ <shade name="light" weight="0.749999156251" />
+ <shade name="neutral" weight="0.124999859375" />
+ <shade name="fresh" weight="0.124999859375" />
+</color>
+
+<color name="orange" weight="0.0816325697627">
+ <shade name="light" weight="0.749999156251" />
+ <shade name="neutral" weight="0.124999859375" />
+ <shade name="fresh" weight="0.124999859375" />
+</color>
+
+<color name="red" weight="0.061224427322">
+ <shade name="light" weight="0.749999156251" />
+ <shade name="neutral" weight="0.124999859375" />
+ <shade name="fresh" weight="0.124999859375" />
+</color>
+
+<color name="black" weight="0.061224427322">
+ <shade name="light" weight="0.749999156251" />
+ <shade name="neutral" weight="0.124999859375" />
+ <shade name="fresh" weight="0.124999859375" />
+</color>
+
+<color name="pink" weight="0.0204081424407">
+ <shade name="light" weight="0.749999156251" />
+ <shade name="neutral" weight="0.124999859375" />
+ <shade name="fresh" weight="0.124999859375" />
+</color>
+
+</colors>

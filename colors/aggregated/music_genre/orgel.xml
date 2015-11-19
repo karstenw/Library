@@ -1,0 +1,33 @@
+<colors query="orgel">
+
+<color name="purple" weight="0.579709540013">
+ <shade name="hard" weight="0.569891811308" />
+ <shade name="cool" weight="0.279569567812" />
+ <shade name="light" weight="0.150537459591" />
+</color>
+
+<color name="orange" weight="0.181159231254">
+ <shade name="hard" weight="0.569891811308" />
+ <shade name="cool" weight="0.279569567812" />
+ <shade name="light" weight="0.150537459591" />
+</color>
+
+<color name="green" weight="0.137681015753">
+ <shade name="hard" weight="0.569891811308" />
+ <shade name="cool" weight="0.279569567812" />
+ <shade name="light" weight="0.150537459591" />
+</color>
+
+<color name="white" weight="0.0507245847512">
+ <shade name="hard" weight="0.569891811308" />
+ <shade name="cool" weight="0.279569567812" />
+ <shade name="light" weight="0.150537459591" />
+</color>
+
+<color name="red" weight="0.0507245847512">
+ <shade name="hard" weight="0.569891811308" />
+ <shade name="cool" weight="0.279569567812" />
+ <shade name="light" weight="0.150537459591" />
+</color>
+
+</colors>

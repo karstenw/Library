@@ -1,0 +1,33 @@
+<colors query="mary pickford">
+
+<color name="white" weight="0.853657672517">
+ <shade name="light" weight="0.66666588889" />
+ <shade name="dark" weight="0.166666472222" />
+ <shade name="cool" weight="0.166666472222" />
+</color>
+
+<color name="green" weight="0.0609755480369">
+ <shade name="light" weight="0.66666588889" />
+ <shade name="dark" weight="0.166666472222" />
+ <shade name="cool" weight="0.166666472222" />
+</color>
+
+<color name="red" weight="0.0365853288222">
+ <shade name="light" weight="0.66666588889" />
+ <shade name="dark" weight="0.166666472222" />
+ <shade name="cool" weight="0.166666472222" />
+</color>
+
+<color name="blue" weight="0.0243902192148">
+ <shade name="light" weight="0.66666588889" />
+ <shade name="dark" weight="0.166666472222" />
+ <shade name="cool" weight="0.166666472222" />
+</color>
+
+<color name="black" weight="0.0243902192148">
+ <shade name="light" weight="0.66666588889" />
+ <shade name="dark" weight="0.166666472222" />
+ <shade name="cool" weight="0.166666472222" />
+</color>
+
+</colors>

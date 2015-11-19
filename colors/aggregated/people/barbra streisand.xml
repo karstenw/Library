@@ -1,0 +1,33 @@
+<colors query="barbra streisand">
+
+<color name="purple" weight="0.397598973716">
+ <shade name="dark" weight="0.553632642467" />
+ <shade name="light" weight="0.397923461773" />
+ <shade name="hard" weight="0.0484428562159" />
+</color>
+
+<color name="blue" weight="0.315078432001">
+ <shade name="dark" weight="0.553632642467" />
+ <shade name="light" weight="0.397923461773" />
+ <shade name="hard" weight="0.0484428562159" />
+</color>
+
+<color name="white" weight="0.142285418896">
+ <shade name="dark" weight="0.553632642467" />
+ <shade name="light" weight="0.397923461773" />
+ <shade name="hard" weight="0.0484428562159" />
+</color>
+
+<color name="red" weight="0.0730181763051">
+ <shade name="dark" weight="0.553632642467" />
+ <shade name="light" weight="0.397923461773" />
+ <shade name="hard" weight="0.0484428562159" />
+</color>
+
+<color name="black" weight="0.0720179273146">
+ <shade name="dark" weight="0.553632642467" />
+ <shade name="light" weight="0.397923461773" />
+ <shade name="hard" weight="0.0484428562159" />
+</color>
+
+</colors>

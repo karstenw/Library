@@ -1,0 +1,33 @@
+<colors query="christmas carol">
+
+<color name="white" weight="0.736546355639">
+ <shade name="light" weight="0.999531928259" />
+ <shade name="soft" weight="0.000233535497257" />
+ <shade name="bright" weight="0.000233535497257" />
+</color>
+
+<color name="blue" weight="0.137946393726">
+ <shade name="light" weight="0.999531928259" />
+ <shade name="soft" weight="0.000233535497257" />
+ <shade name="bright" weight="0.000233535497257" />
+</color>
+
+<color name="black" weight="0.125462557189">
+ <shade name="light" weight="0.999531928259" />
+ <shade name="soft" weight="0.000233535497257" />
+ <shade name="bright" weight="0.000233535497257" />
+</color>
+
+<color name="green" weight="2.49676730725e-05">
+ <shade name="light" weight="0.999531928259" />
+ <shade name="soft" weight="0.000233535497257" />
+ <shade name="bright" weight="0.000233535497257" />
+</color>
+
+<color name="red" weight="1.87257548044e-05">
+ <shade name="light" weight="0.999531928259" />
+ <shade name="soft" weight="0.000233535497257" />
+ <shade name="bright" weight="0.000233535497257" />
+</color>
+
+</colors>

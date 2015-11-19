@@ -1,0 +1,33 @@
+<colors query="death metal">
+
+<color name="black" weight="0.934693157407">
+ <shade name="dark" weight="0.6567320707" />
+ <shade name="hard" weight="0.177152096382" />
+ <shade name="intense" weight="0.166114582589" />
+</color>
+
+<color name="red" weight="0.059294597173">
+ <shade name="dark" weight="0.6567320707" />
+ <shade name="hard" weight="0.177152096382" />
+ <shade name="intense" weight="0.166114582589" />
+</color>
+
+<color name="white" weight="0.00432295585301">
+ <shade name="dark" weight="0.661845662137" />
+ <shade name="hard" weight="0.178531476929" />
+ <shade name="cool" weight="0.159621600868" />
+</color>
+
+<color name="blue" weight="0.00166784310275">
+ <shade name="dark" weight="0.6567320707" />
+ <shade name="hard" weight="0.177152096382" />
+ <shade name="intense" weight="0.166114582589" />
+</color>
+
+<color name="pink" weight="2.04464128183e-05">
+ <shade name="dark" weight="0.661845662137" />
+ <shade name="hard" weight="0.178531476929" />
+ <shade name="cool" weight="0.159621600868" />
+</color>
+
+</colors>

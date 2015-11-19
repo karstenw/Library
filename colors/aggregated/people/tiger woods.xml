@@ -1,0 +1,33 @@
+<colors query="tiger woods">
+
+<color name="white" weight="0.301186641942">
+ <shade name="cool" weight="0.886401765252" />
+ <shade name="hard" weight="0.0705679075249" />
+ <shade name="bright" weight="0.0430292119055" />
+</color>
+
+<color name="black" weight="0.249999749592">
+ <shade name="cool" weight="0.886401765252" />
+ <shade name="hard" weight="0.0705679075249" />
+ <shade name="bright" weight="0.0430292119055" />
+</color>
+
+<color name="green" weight="0.183976076851">
+ <shade name="cool" weight="0.886401765252" />
+ <shade name="hard" weight="0.0705679075249" />
+ <shade name="bright" weight="0.0430292119055" />
+</color>
+
+<color name="blue" weight="0.141691252736">
+ <shade name="cool" weight="0.886401765252" />
+ <shade name="hard" weight="0.0705679075249" />
+ <shade name="bright" weight="0.0430292119055" />
+</color>
+
+<color name="red" weight="0.123145277247">
+ <shade name="cool" weight="0.886401765252" />
+ <shade name="hard" weight="0.0705679075249" />
+ <shade name="bright" weight="0.0430292119055" />
+</color>
+
+</colors>

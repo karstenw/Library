@@ -1,0 +1,33 @@
+<colors query="florida">
+
+<color name="orange" weight="0.573574011859">
+ <shade name="warm" weight="0.458493637262" />
+ <shade name="fresh" weight="0.427605644857" />
+ <shade name="light" weight="0.113899471994" />
+</color>
+
+<color name="white" weight="0.136906654021">
+ <shade name="warm" weight="0.458493637262" />
+ <shade name="fresh" weight="0.427605644857" />
+ <shade name="light" weight="0.113899471994" />
+</color>
+
+<color name="green" weight="0.123250129929">
+ <shade name="fresh" weight="0.658245394318" />
+ <shade name="light" weight="0.175333987651" />
+ <shade name="bright" weight="0.166418700144" />
+</color>
+
+<color name="black" weight="0.0918401245179">
+ <shade name="warm" weight="0.458493637262" />
+ <shade name="fresh" weight="0.427605644857" />
+ <shade name="light" weight="0.113899471994" />
+</color>
+
+<color name="blue" weight="0.0744280563007">
+ <shade name="fresh" weight="0.658245394318" />
+ <shade name="light" weight="0.175333987651" />
+ <shade name="bright" weight="0.166418700144" />
+</color>
+
+</colors>

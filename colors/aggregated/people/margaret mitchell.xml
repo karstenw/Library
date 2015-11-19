@@ -1,0 +1,33 @@
+<colors query="margaret mitchell">
+
+<color name="green" weight="0.909090000001">
+ <shade name="hard" weight="0.333332944445" />
+ <shade name="dark" weight="0.333332944445" />
+ <shade name="cool" weight="0.333332944445" />
+</color>
+
+<color name="black" weight="0.041958">
+ <shade name="hard" weight="0.333332944445" />
+ <shade name="dark" weight="0.333332944445" />
+ <shade name="cool" weight="0.333332944445" />
+</color>
+
+<color name="white" weight="0.034965">
+ <shade name="hard" weight="0.333332944445" />
+ <shade name="dark" weight="0.333332944445" />
+ <shade name="cool" weight="0.333332944445" />
+</color>
+
+<color name="purple" weight="0.00699300000001">
+ <shade name="hard" weight="0.333332944445" />
+ <shade name="dark" weight="0.333332944445" />
+ <shade name="cool" weight="0.333332944445" />
+</color>
+
+<color name="orange" weight="0.00699300000001">
+ <shade name="hard" weight="0.333332944445" />
+ <shade name="dark" weight="0.333332944445" />
+ <shade name="cool" weight="0.333332944445" />
+</color>
+
+</colors>

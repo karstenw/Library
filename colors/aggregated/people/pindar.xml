@@ -1,0 +1,33 @@
+<colors query="pindar">
+
+<color name="white" weight="0.801186141245">
+ <shade name="light" weight="0.714284829933" />
+ <shade name="dark" weight="0.190475954649" />
+ <shade name="cool" weight="0.0952379773244" />
+</color>
+
+<color name="green" weight="0.0905043603999">
+ <shade name="light" weight="0.714284829933" />
+ <shade name="dark" weight="0.190475954649" />
+ <shade name="cool" weight="0.0952379773244" />
+</color>
+
+<color name="black" weight="0.0830859702032">
+ <shade name="light" weight="0.714284829933" />
+ <shade name="dark" weight="0.190475954649" />
+ <shade name="cool" weight="0.0952379773244" />
+</color>
+
+<color name="red" weight="0.0222551705901">
+ <shade name="light" weight="0.714284829933" />
+ <shade name="dark" weight="0.190475954649" />
+ <shade name="cool" weight="0.0952379773244" />
+</color>
+
+<color name="orange" weight="0.00296735607869">
+ <shade name="light" weight="0.714284829933" />
+ <shade name="dark" weight="0.190475954649" />
+ <shade name="cool" weight="0.0952379773244" />
+</color>
+
+</colors>

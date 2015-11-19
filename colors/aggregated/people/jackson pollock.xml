@@ -1,0 +1,33 @@
+<colors query="jackson pollock">
+
+<color name="white" weight="0.430332464924">
+ <shade name="cool" weight="0.861701210956" />
+ <shade name="light" weight="0.0957445789951" />
+ <shade name="fresh" weight="0.0425531462201" />
+</color>
+
+<color name="black" weight="0.342786318765">
+ <shade name="cool" weight="0.861701210956" />
+ <shade name="light" weight="0.0957445789951" />
+ <shade name="fresh" weight="0.0425531462201" />
+</color>
+
+<color name="green" weight="0.107274855153">
+ <shade name="cool" weight="0.861701210956" />
+ <shade name="light" weight="0.0957445789951" />
+ <shade name="fresh" weight="0.0425531462201" />
+</color>
+
+<color name="red" weight="0.0727496144141">
+ <shade name="cool" weight="0.861701210956" />
+ <shade name="light" weight="0.0957445789951" />
+ <shade name="fresh" weight="0.0425531462201" />
+</color>
+
+<color name="blue" weight="0.0468556838599">
+ <shade name="cool" weight="0.861701210956" />
+ <shade name="light" weight="0.0957445789951" />
+ <shade name="fresh" weight="0.0425531462201" />
+</color>
+
+</colors>

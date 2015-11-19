@@ -1,0 +1,33 @@
+<colors query="israel">
+
+<color name="green" weight="0.887967138852">
+ <shade name="fresh" weight="0.550859867464" />
+ <shade name="cool" weight="0.278559819343" />
+ <shade name="weak" weight="0.170578765777" />
+</color>
+
+<color name="orange" weight="0.0967249919107">
+ <shade name="fresh" weight="0.550859867464" />
+ <shade name="cool" weight="0.278559819343" />
+ <shade name="weak" weight="0.170578765777" />
+</color>
+
+<color name="red" weight="0.00734687097027">
+ <shade name="fresh" weight="0.550859867464" />
+ <shade name="cool" weight="0.278559819343" />
+ <shade name="weak" weight="0.170578765777" />
+</color>
+
+<color name="blue" weight="0.00437640947006">
+ <shade name="fresh" weight="0.550859867464" />
+ <shade name="cool" weight="0.278559819343" />
+ <shade name="weak" weight="0.170578765777" />
+</color>
+
+<color name="black" weight="0.00358358166751">
+ <shade name="fresh" weight="0.550859867464" />
+ <shade name="cool" weight="0.278559819343" />
+ <shade name="weak" weight="0.170578765777" />
+</color>
+
+</colors>

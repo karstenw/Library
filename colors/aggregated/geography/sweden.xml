@@ -1,0 +1,33 @@
+<colors query="sweden">
+
+<color name="blue" weight="0.419113219452">
+ <shade name="neutral" weight="0.876388833856" />
+ <shade name="light" weight="0.0627860657091" />
+ <shade name="cool" weight="0.0608240011557" />
+</color>
+
+<color name="white" weight="0.216230387106">
+ <shade name="neutral" weight="0.876388833856" />
+ <shade name="light" weight="0.0627860657091" />
+ <shade name="cool" weight="0.0608240011557" />
+</color>
+
+<color name="red" weight="0.14548834688">
+ <shade name="neutral" weight="0.876388833856" />
+ <shade name="light" weight="0.0627860657091" />
+ <shade name="cool" weight="0.0608240011557" />
+</color>
+
+<color name="black" weight="0.119060188456">
+ <shade name="neutral" weight="0.876388833856" />
+ <shade name="light" weight="0.0627860657091" />
+ <shade name="cool" weight="0.0608240011557" />
+</color>
+
+<color name="orange" weight="0.100106660697">
+ <shade name="neutral" weight="0.876388833856" />
+ <shade name="light" weight="0.0627860657091" />
+ <shade name="cool" weight="0.0608240011557" />
+</color>
+
+</colors>

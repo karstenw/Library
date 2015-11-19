@@ -1,0 +1,33 @@
+<colors query="afghanistan">
+
+<color name="pink" weight="0.348273380055">
+ <shade name="weak" weight="0.454116910321" />
+ <shade name="neutral" weight="0.292940701217" />
+ <shade name="light" weight="0.252940766111" />
+</color>
+
+<color name="green" weight="0.240762901864">
+ <shade name="weak" weight="0.454116910321" />
+ <shade name="neutral" weight="0.292940701217" />
+ <shade name="light" weight="0.252940766111" />
+</color>
+
+<color name="blue" weight="0.228649045166">
+ <shade name="weak" weight="0.454116910321" />
+ <shade name="neutral" weight="0.292940701217" />
+ <shade name="light" weight="0.252940766111" />
+</color>
+
+<color name="black" weight="0.102967781929">
+ <shade name="weak" weight="0.454116910321" />
+ <shade name="neutral" weight="0.292940701217" />
+ <shade name="light" weight="0.252940766111" />
+</color>
+
+<color name="white" weight="0.079345761369">
+ <shade name="weak" weight="0.454116910321" />
+ <shade name="neutral" weight="0.292940701217" />
+ <shade name="light" weight="0.252940766111" />
+</color>
+
+</colors>

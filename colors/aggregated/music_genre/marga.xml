@@ -1,0 +1,33 @@
+<colors query="marga">
+
+<color name="blue" weight="0.436313920918">
+ <shade name="cool" weight="0.428570877552" />
+ <shade name="soft" weight="0.301586913833" />
+ <shade name="hard" weight="0.269840922903" />
+</color>
+
+<color name="red" weight="0.365853287726">
+ <shade name="cool" weight="0.428570877552" />
+ <shade name="soft" weight="0.301586913833" />
+ <shade name="hard" weight="0.269840922903" />
+</color>
+
+<color name="white" weight="0.130081168969">
+ <shade name="cool" weight="0.428570877552" />
+ <shade name="soft" weight="0.301586913833" />
+ <shade name="hard" weight="0.269840922903" />
+</color>
+
+<color name="green" weight="0.0596205357776">
+ <shade name="cool" weight="0.428570877552" />
+ <shade name="soft" weight="0.301586913833" />
+ <shade name="hard" weight="0.269840922903" />
+</color>
+
+<color name="yellow" weight="0.00813007306058">
+ <shade name="cool" weight="0.428570877552" />
+ <shade name="soft" weight="0.301586913833" />
+ <shade name="hard" weight="0.269840922903" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="che guevara">
+
+<color name="red" weight="0.416893304263">
+ <shade name="cool" weight="0.922618048116" />
+ <shade name="dark" weight="0.0416666215278" />
+ <shade name="light" weight="0.0357142470239" />
+</color>
+
+<color name="white" weight="0.225067888445">
+ <shade name="cool" weight="0.922618048116" />
+ <shade name="dark" weight="0.0416666215278" />
+ <shade name="light" weight="0.0357142470239" />
+</color>
+
+<color name="black" weight="0.15858294319">
+ <shade name="cool" weight="0.922618048116" />
+ <shade name="dark" weight="0.0416666215278" />
+ <shade name="light" weight="0.0357142470239" />
+</color>
+
+<color name="green" weight="0.139509393322">
+ <shade name="cool" weight="0.922618048116" />
+ <shade name="dark" weight="0.0416666215278" />
+ <shade name="light" weight="0.0357142470239" />
+</color>
+
+<color name="orange" weight="0.059945442443">
+ <shade name="cool" weight="0.922618048116" />
+ <shade name="dark" weight="0.0416666215278" />
+ <shade name="light" weight="0.0357142470239" />
+</color>
+
+</colors>

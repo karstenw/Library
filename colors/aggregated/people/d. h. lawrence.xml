@@ -1,0 +1,33 @@
+<colors query="d. h. lawrence">
+
+<color name="green" weight="0.486546591019">
+ <shade name="light" weight="0.53846083432" />
+ <shade name="dark" weight="0.230768928994" />
+ <shade name="cool" weight="0.230768928994" />
+</color>
+
+<color name="black" weight="0.27578447325">
+ <shade name="light" weight="0.53846083432" />
+ <shade name="dark" weight="0.230768928994" />
+ <shade name="cool" weight="0.230768928994" />
+</color>
+
+<color name="white" weight="0.199551366823">
+ <shade name="light" weight="0.53846083432" />
+ <shade name="dark" weight="0.230768928994" />
+ <shade name="cool" weight="0.230768928994" />
+</color>
+
+<color name="blue" weight="0.0224215018903">
+ <shade name="light" weight="0.53846083432" />
+ <shade name="dark" weight="0.230768928994" />
+ <shade name="cool" weight="0.230768928994" />
+</color>
+
+<color name="red" weight="0.0156950513232">
+ <shade name="light" weight="0.53846083432" />
+ <shade name="dark" weight="0.230768928994" />
+ <shade name="cool" weight="0.230768928994" />
+</color>
+
+</colors>

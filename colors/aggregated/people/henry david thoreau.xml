@@ -1,0 +1,33 @@
+<colors query="henry david thoreau">
+
+<color name="white" weight="0.946707517242">
+ <shade name="light" weight="0.892306751954" />
+ <shade name="dark" weight="0.0615383966865" />
+ <shade name="warm" weight="0.0461537975148" />
+</color>
+
+<color name="green" weight="0.0188087586207">
+ <shade name="light" weight="0.913384841467" />
+ <shade name="dark" weight="0.0629920580322" />
+ <shade name="soft" weight="0.0236220217621" />
+</color>
+
+<color name="blue" weight="0.0125391724138">
+ <shade name="light" weight="0.913384841467" />
+ <shade name="dark" weight="0.0629920580322" />
+ <shade name="soft" weight="0.0236220217621" />
+</color>
+
+<color name="black" weight="0.0125391724138">
+ <shade name="light" weight="0.892306751954" />
+ <shade name="dark" weight="0.0615383966865" />
+ <shade name="warm" weight="0.0461537975148" />
+</color>
+
+<color name="red" weight="0.00940437931035">
+ <shade name="light" weight="0.892306751954" />
+ <shade name="dark" weight="0.0615383966865" />
+ <shade name="warm" weight="0.0461537975148" />
+</color>
+
+</colors>

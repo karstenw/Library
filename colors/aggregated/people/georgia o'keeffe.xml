@@ -1,0 +1,33 @@
+<colors query="georgia o'keeffe">
+
+<color name="blue" weight="0.720182742931">
+ <shade name="cool" weight="0.571427877552" />
+ <shade name="dark" weight="0.285713938776" />
+ <shade name="soft" weight="0.142856969388" />
+</color>
+
+<color name="yellow" weight="0.16055029301">
+ <shade name="cool" weight="0.571427877552" />
+ <shade name="dark" weight="0.285713938776" />
+ <shade name="soft" weight="0.142856969388" />
+</color>
+
+<color name="white" weight="0.0848622977339">
+ <shade name="cool" weight="0.571427877552" />
+ <shade name="dark" weight="0.285713938776" />
+ <shade name="soft" weight="0.142856969388" />
+</color>
+
+<color name="pink" weight="0.0206421805299">
+ <shade name="cool" weight="0.571427877552" />
+ <shade name="dark" weight="0.285713938776" />
+ <shade name="soft" weight="0.142856969388" />
+</color>
+
+<color name="green" weight="0.0137614536866">
+ <shade name="cool" weight="0.571427877552" />
+ <shade name="dark" weight="0.285713938776" />
+ <shade name="soft" weight="0.142856969388" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="oman">
+
+<color name="white" weight="0.57811978025">
+ <shade name="bright" weight="0.701895119121" />
+ <shade name="dark" weight="0.170633123786" />
+ <shade name="cool" weight="0.12747060784" />
+</color>
+
+<color name="black" weight="0.217906686402">
+ <shade name="bright" weight="0.701895119121" />
+ <shade name="dark" weight="0.170633123786" />
+ <shade name="cool" weight="0.12747060784" />
+</color>
+
+<color name="green" weight="0.147346426043">
+ <shade name="bright" weight="0.701895119121" />
+ <shade name="dark" weight="0.170633123786" />
+ <shade name="cool" weight="0.12747060784" />
+</color>
+
+<color name="red" weight="0.0423954505517">
+ <shade name="bright" weight="0.701895119121" />
+ <shade name="dark" weight="0.170633123786" />
+ <shade name="cool" weight="0.12747060784" />
+</color>
+
+<color name="blue" weight="0.0142306407446">
+ <shade name="bright" weight="0.701895119121" />
+ <shade name="dark" weight="0.170633123786" />
+ <shade name="cool" weight="0.12747060784" />
+</color>
+
+</colors>

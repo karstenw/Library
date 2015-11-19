@@ -1,0 +1,33 @@
+<colors query="suriname">
+
+<color name="white" weight="0.938913077615">
+ <shade name="warm" weight="0.83567982918" />
+ <shade name="cool" weight="0.126760423527" />
+ <shade name="dark" weight="0.0375586440081" />
+</color>
+
+<color name="red" weight="0.0217759960772">
+ <shade name="warm" weight="0.83567982918" />
+ <shade name="cool" weight="0.126760423527" />
+ <shade name="dark" weight="0.0375586440081" />
+</color>
+
+<color name="black" weight="0.0195135549263">
+ <shade name="warm" weight="0.83567982918" />
+ <shade name="cool" weight="0.126760423527" />
+ <shade name="dark" weight="0.0375586440081" />
+</color>
+
+<color name="pink" weight="0.0155542829123">
+ <shade name="warm" weight="0.83567982918" />
+ <shade name="cool" weight="0.126760423527" />
+ <shade name="dark" weight="0.0375586440081" />
+</color>
+
+<color name="green" weight="0.0042420771579">
+ <shade name="cool" weight="0.642853545938" />
+ <shade name="dark" weight="0.190475124723" />
+ <shade name="light" weight="0.166665734132" />
+</color>
+
+</colors>

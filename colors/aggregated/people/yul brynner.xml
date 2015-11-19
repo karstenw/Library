@@ -1,0 +1,33 @@
+<colors query="yul brynner">
+
+<color name="black" weight="0.896984025385">
+ <shade name="cool" weight="0.583332652779" />
+ <shade name="intense" weight="0.249999708334" />
+ <shade name="hard" weight="0.166666472222" />
+</color>
+
+<color name="white" weight="0.0854270500367">
+ <shade name="cool" weight="0.699999020001" />
+ <shade name="hard" weight="0.19999972" />
+ <shade name="light" weight="0.0999998600002" />
+</color>
+
+<color name="yellow" weight="0.00753768088559">
+ <shade name="cool" weight="0.583332652779" />
+ <shade name="intense" weight="0.249999708334" />
+ <shade name="hard" weight="0.166666472222" />
+</color>
+
+<color name="green" weight="0.00753768088559">
+ <shade name="cool" weight="0.583332652779" />
+ <shade name="intense" weight="0.249999708334" />
+ <shade name="hard" weight="0.166666472222" />
+</color>
+
+<color name="red" weight="0.0025125602952">
+ <shade name="cool" weight="0.583332652779" />
+ <shade name="intense" weight="0.249999708334" />
+ <shade name="hard" weight="0.166666472222" />
+</color>
+
+</colors>

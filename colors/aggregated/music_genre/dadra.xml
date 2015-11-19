@@ -1,0 +1,33 @@
+<colors query="dadra">
+
+<color name="yellow" weight="0.0">
+ <shade name="light" weight="0.555555000001" />
+ <shade name="cool" weight="0.333333" />
+ <shade name="soft" weight="0.111111" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="light" weight="0.555555000001" />
+ <shade name="cool" weight="0.333333" />
+ <shade name="soft" weight="0.111111" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="light" weight="0.555555000001" />
+ <shade name="cool" weight="0.333333" />
+ <shade name="soft" weight="0.111111" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="light" weight="0.555555000001" />
+ <shade name="cool" weight="0.333333" />
+ <shade name="soft" weight="0.111111" />
+</color>
+
+<color name="pink" weight="0.0">
+ <shade name="light" weight="0.555555000001" />
+ <shade name="cool" weight="0.333333" />
+ <shade name="soft" weight="0.111111" />
+</color>
+
+</colors>

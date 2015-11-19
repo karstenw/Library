@@ -1,0 +1,33 @@
+<colors query="tajikistan">
+
+<color name="orange" weight="0.439393470042">
+ <shade name="dark" weight="0.437499152345" />
+ <shade name="light" weight="0.312499394532" />
+ <shade name="hard" weight="0.249999515626" />
+</color>
+
+<color name="red" weight="0.310605728823">
+ <shade name="dark" weight="0.437499152345" />
+ <shade name="light" weight="0.312499394532" />
+ <shade name="hard" weight="0.249999515626" />
+</color>
+
+<color name="white" weight="0.128787741219">
+ <shade name="dark" weight="0.437499152345" />
+ <shade name="light" weight="0.312499394532" />
+ <shade name="hard" weight="0.249999515626" />
+</color>
+
+<color name="yellow" weight="0.0984847432852">
+ <shade name="dark" weight="0.437499152345" />
+ <shade name="light" weight="0.312499394532" />
+ <shade name="hard" weight="0.249999515626" />
+</color>
+
+<color name="pink" weight="0.0227272484504">
+ <shade name="dark" weight="0.437499152345" />
+ <shade name="light" weight="0.312499394532" />
+ <shade name="hard" weight="0.249999515626" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="jungle music">
+
+<color name="white" weight="0.46511581125">
+ <shade name="cool" weight="0.526315041552" />
+ <shade name="soft" weight="0.263157520776" />
+ <shade name="dark" weight="0.210526016621" />
+</color>
+
+<color name="blue" weight="0.261627643828">
+ <shade name="cool" weight="0.526315041552" />
+ <shade name="soft" weight="0.263157520776" />
+ <shade name="dark" weight="0.210526016621" />
+</color>
+
+<color name="black" weight="0.238371853266">
+ <shade name="cool" weight="0.526315041552" />
+ <shade name="soft" weight="0.263157520776" />
+ <shade name="dark" weight="0.210526016621" />
+</color>
+
+<color name="red" weight="0.0232557905625">
+ <shade name="cool" weight="0.526315041552" />
+ <shade name="soft" weight="0.263157520776" />
+ <shade name="dark" weight="0.210526016621" />
+</color>
+
+<color name="pink" weight="0.0116278952812">
+ <shade name="cool" weight="0.526315041552" />
+ <shade name="soft" weight="0.263157520776" />
+ <shade name="dark" weight="0.210526016621" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="india">
+
+<color name="black" weight="0.357348327117">
+ <shade name="soft" weight="0.77218345923" />
+ <shade name="light" weight="0.19482345104" />
+ <shade name="bright" weight="0.032992000468" />
+</color>
+
+<color name="green" weight="0.295388738141">
+ <shade name="soft" weight="0.77218345923" />
+ <shade name="light" weight="0.19482345104" />
+ <shade name="bright" weight="0.032992000468" />
+</color>
+
+<color name="blue" weight="0.285302293424">
+ <shade name="soft" weight="0.77218345923" />
+ <shade name="light" weight="0.19482345104" />
+ <shade name="bright" weight="0.032992000468" />
+</color>
+
+<color name="orange" weight="0.0315561627575">
+ <shade name="soft" weight="0.77218345923" />
+ <shade name="light" weight="0.19482345104" />
+ <shade name="bright" weight="0.032992000468" />
+</color>
+
+<color name="red" weight="0.0304034262184">
+ <shade name="soft" weight="0.77218345923" />
+ <shade name="light" weight="0.19482345104" />
+ <shade name="bright" weight="0.032992000468" />
+</color>
+
+</colors>

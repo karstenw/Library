@@ -1,0 +1,33 @@
+<colors query="turks and caicos islands">
+
+<color name="white" weight="0.391303922496">
+ <shade name="cool" weight="0.461537644972" />
+ <shade name="dark" weight="0.307691763315" />
+ <shade name="hard" weight="0.230768822486" />
+</color>
+
+<color name="black" weight="0.217391068053">
+ <shade name="cool" weight="0.461537644972" />
+ <shade name="dark" weight="0.307691763315" />
+ <shade name="hard" weight="0.230768822486" />
+</color>
+
+<color name="blue" weight="0.173912854443">
+ <shade name="cool" weight="0.461537644972" />
+ <shade name="dark" weight="0.307691763315" />
+ <shade name="hard" weight="0.230768822486" />
+</color>
+
+<color name="red" weight="0.130434640832">
+ <shade name="cool" weight="0.461537644972" />
+ <shade name="dark" weight="0.307691763315" />
+ <shade name="hard" weight="0.230768822486" />
+</color>
+
+<color name="green" weight="0.0869564272213">
+ <shade name="cool" weight="0.461537644972" />
+ <shade name="dark" weight="0.307691763315" />
+ <shade name="hard" weight="0.230768822486" />
+</color>
+
+</colors>

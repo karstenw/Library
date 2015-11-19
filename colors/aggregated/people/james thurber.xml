@@ -1,0 +1,33 @@
+<colors query="james thurber">
+
+<color name="white" weight="0.989649721864">
+ <shade name="light" weight="0.666665925927" />
+ <shade name="neutral" weight="0.222221975309" />
+ <shade name="hard" weight="0.111110987654" />
+</color>
+
+<color name="black" weight="0.00517463906857">
+ <shade name="light" weight="0.666665925927" />
+ <shade name="neutral" weight="0.222221975309" />
+ <shade name="hard" weight="0.111110987654" />
+</color>
+
+<color name="green" weight="0.00258731953428">
+ <shade name="light" weight="0.666665925927" />
+ <shade name="neutral" weight="0.222221975309" />
+ <shade name="hard" weight="0.111110987654" />
+</color>
+
+<color name="orange" weight="0.00129365976714">
+ <shade name="light" weight="0.666665925927" />
+ <shade name="neutral" weight="0.222221975309" />
+ <shade name="hard" weight="0.111110987654" />
+</color>
+
+<color name="blue" weight="0.00129365976714">
+ <shade name="light" weight="0.666665925927" />
+ <shade name="neutral" weight="0.222221975309" />
+ <shade name="hard" weight="0.111110987654" />
+</color>
+
+</colors>

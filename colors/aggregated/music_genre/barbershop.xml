@@ -1,0 +1,33 @@
+<colors query="barbershop">
+
+<color name="black" weight="0.532894154087">
+ <shade name="cool" weight="0.8143450518" />
+ <shade name="dark" weight="0.111814216957" />
+ <shade name="fresh" weight="0.0738395772358" />
+</color>
+
+<color name="white" weight="0.251461713314">
+ <shade name="cool" weight="0.8143450518" />
+ <shade name="dark" weight="0.111814216957" />
+ <shade name="fresh" weight="0.0738395772358" />
+</color>
+
+<color name="red" weight="0.0972221159033">
+ <shade name="cool" weight="0.8143450518" />
+ <shade name="dark" weight="0.111814216957" />
+ <shade name="fresh" weight="0.0738395772358" />
+</color>
+
+<color name="blue" weight="0.0665203950917">
+ <shade name="cool" weight="0.8143450518" />
+ <shade name="dark" weight="0.111814216957" />
+ <shade name="fresh" weight="0.0738395772358" />
+</color>
+
+<color name="orange" weight="0.0519005280386">
+ <shade name="cool" weight="0.8143450518" />
+ <shade name="dark" weight="0.111814216957" />
+ <shade name="fresh" weight="0.0738395772358" />
+</color>
+
+</colors>

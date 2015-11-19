@@ -1,0 +1,33 @@
+<colors query="southern rock">
+
+<color name="white" weight="0.944513552614">
+ <shade name="hard" weight="0.695186361953" />
+ <shade name="cool" weight="0.214497672363" />
+ <shade name="dark" weight="0.0903148094162" />
+</color>
+
+<color name="green" weight="0.026481688391">
+ <shade name="hard" weight="0.695186361953" />
+ <shade name="cool" weight="0.214497672363" />
+ <shade name="dark" weight="0.0903148094162" />
+</color>
+
+<color name="blue" weight="0.0126103278053">
+ <shade name="hard" weight="0.695186361953" />
+ <shade name="cool" weight="0.214497672363" />
+ <shade name="dark" weight="0.0903148094162" />
+</color>
+
+<color name="red" weight="0.00882722946368">
+ <shade name="hard" weight="0.695186361953" />
+ <shade name="cool" weight="0.214497672363" />
+ <shade name="dark" weight="0.0903148094162" />
+</color>
+
+<color name="pink" weight="0.00756619668315">
+ <shade name="hard" weight="0.695186361953" />
+ <shade name="cool" weight="0.214497672363" />
+ <shade name="dark" weight="0.0903148094162" />
+</color>
+
+</colors>

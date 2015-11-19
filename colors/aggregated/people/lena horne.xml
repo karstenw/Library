@@ -1,0 +1,33 @@
+<colors query="lena horne">
+
+<color name="white" weight="0.612902609938">
+ <shade name="cool" weight="0.499999437501" />
+ <shade name="light" weight="0.24999971875" />
+ <shade name="dark" weight="0.24999971875" />
+</color>
+
+<color name="blue" weight="0.254838453606">
+ <shade name="cool" weight="0.499999437501" />
+ <shade name="light" weight="0.24999971875" />
+ <shade name="dark" weight="0.24999971875" />
+</color>
+
+<color name="green" weight="0.0725805722295">
+ <shade name="cool" weight="0.499999437501" />
+ <shade name="light" weight="0.24999971875" />
+ <shade name="dark" weight="0.24999971875" />
+</color>
+
+<color name="black" weight="0.0548386545734">
+ <shade name="cool" weight="0.499999437501" />
+ <shade name="light" weight="0.24999971875" />
+ <shade name="dark" weight="0.24999971875" />
+</color>
+
+<color name="pink" weight="0.0048387048153">
+ <shade name="cool" weight="0.499999437501" />
+ <shade name="light" weight="0.24999971875" />
+ <shade name="dark" weight="0.24999971875" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="liza minnelli">
+
+<color name="black" weight="0.526143250951">
+ <shade name="dark" weight="0.499999333334" />
+ <shade name="cool" weight="0.277777407408" />
+ <shade name="light" weight="0.222221925926" />
+</color>
+
+<color name="pink" weight="0.222221994191">
+ <shade name="dark" weight="0.499999333334" />
+ <shade name="cool" weight="0.277777407408" />
+ <shade name="light" weight="0.222221925926" />
+</color>
+
+<color name="white" weight="0.120914908604">
+ <shade name="dark" weight="0.499999333334" />
+ <shade name="cool" weight="0.277777407408" />
+ <shade name="light" weight="0.222221925926" />
+</color>
+
+<color name="red" weight="0.10457505609">
+ <shade name="dark" weight="0.499999333334" />
+ <shade name="cool" weight="0.277777407408" />
+ <shade name="light" weight="0.222221925926" />
+</color>
+
+<color name="green" weight="0.0261437640224">
+ <shade name="dark" weight="0.499999333334" />
+ <shade name="cool" weight="0.277777407408" />
+ <shade name="light" weight="0.222221925926" />
+</color>
+
+</colors>

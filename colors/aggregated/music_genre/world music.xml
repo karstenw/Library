@@ -1,0 +1,33 @@
+<colors query="world music">
+
+<color name="orange" weight="0.645752965006">
+ <shade name="light" weight="0.548067698401" />
+ <shade name="dark" weight="0.279424679021" />
+ <shade name="cool" weight="0.172506554251" />
+</color>
+
+<color name="green" weight="0.183626435547">
+ <shade name="light" weight="0.548067698401" />
+ <shade name="dark" weight="0.279424679021" />
+ <shade name="cool" weight="0.172506554251" />
+</color>
+
+<color name="blue" weight="0.0771231029296">
+ <shade name="light" weight="0.548067698401" />
+ <shade name="dark" weight="0.279424679021" />
+ <shade name="cool" weight="0.172506554251" />
+</color>
+
+<color name="white" weight="0.0567711729899">
+ <shade name="light" weight="0.548067698401" />
+ <shade name="dark" weight="0.279424679021" />
+ <shade name="cool" weight="0.172506554251" />
+</color>
+
+<color name="pink" weight="0.0367252871094">
+ <shade name="light" weight="0.548067698401" />
+ <shade name="dark" weight="0.279424679021" />
+ <shade name="cool" weight="0.172506554251" />
+</color>
+
+</colors>

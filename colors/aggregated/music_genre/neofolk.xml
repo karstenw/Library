@@ -1,0 +1,33 @@
+<colors query="neofolk">
+
+<color name="black" weight="0.923076000001">
+ <shade name="dark" weight="0.99576171118" />
+ <shade name="cool" weight="0.00282485591824" />
+ <shade name="soft" weight="0.00141242795912" />
+</color>
+
+<color name="white" weight="0.0384615">
+ <shade name="dark" weight="0.99576171118" />
+ <shade name="cool" weight="0.00282485591824" />
+ <shade name="soft" weight="0.00141242795912" />
+</color>
+
+<color name="green" weight="0.0384615">
+ <shade name="dark" weight="0.99576171118" />
+ <shade name="cool" weight="0.00282485591824" />
+ <shade name="soft" weight="0.00141242795912" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="dark" weight="0.99576171118" />
+ <shade name="cool" weight="0.00282485591824" />
+ <shade name="soft" weight="0.00141242795912" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="dark" weight="0.99576171118" />
+ <shade name="cool" weight="0.00282485591824" />
+ <shade name="soft" weight="0.00141242795912" />
+</color>
+
+</colors>

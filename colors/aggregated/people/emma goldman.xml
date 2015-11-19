@@ -1,0 +1,33 @@
+<colors query="emma goldman">
+
+<color name="red" weight="0.98976010239">
+ <shade name="cool" weight="0.666665666668" />
+ <shade name="neutral" weight="0.166666416667" />
+ <shade name="light" weight="0.166666416667" />
+</color>
+
+<color name="white" weight="0.00341296587031">
+ <shade name="cool" weight="0.666665666668" />
+ <shade name="neutral" weight="0.166666416667" />
+ <shade name="light" weight="0.166666416667" />
+</color>
+
+<color name="green" weight="0.00341296587031">
+ <shade name="cool" weight="0.666665666668" />
+ <shade name="neutral" weight="0.166666416667" />
+ <shade name="light" weight="0.166666416667" />
+</color>
+
+<color name="black" weight="0.00341296587031">
+ <shade name="cool" weight="0.666665666668" />
+ <shade name="neutral" weight="0.166666416667" />
+ <shade name="light" weight="0.166666416667" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="cool" weight="0.666665666668" />
+ <shade name="neutral" weight="0.166666416667" />
+ <shade name="light" weight="0.166666416667" />
+</color>
+
+</colors>

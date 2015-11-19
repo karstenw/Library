@@ -1,0 +1,33 @@
+<colors query="alexander pope">
+
+<color name="green" weight="0.388888478395">
+ <shade name="light" weight="0.989383297263" />
+ <shade name="weak" weight="0.00849256049153" />
+ <shade name="soft" weight="0.00212314012288" />
+</color>
+
+<color name="white" weight="0.166666490741">
+ <shade name="light" weight="0.989383297263" />
+ <shade name="weak" weight="0.00849256049153" />
+ <shade name="soft" weight="0.00212314012288" />
+</color>
+
+<color name="red" weight="0.166666490741">
+ <shade name="light" weight="0.989383297263" />
+ <shade name="weak" weight="0.00849256049153" />
+ <shade name="soft" weight="0.00212314012288" />
+</color>
+
+<color name="orange" weight="0.166666490741">
+ <shade name="light" weight="0.989383297263" />
+ <shade name="weak" weight="0.00849256049153" />
+ <shade name="soft" weight="0.00212314012288" />
+</color>
+
+<color name="yellow" weight="0.111110993827">
+ <shade name="light" weight="0.989383297263" />
+ <shade name="weak" weight="0.00849256049153" />
+ <shade name="soft" weight="0.00212314012288" />
+</color>
+
+</colors>

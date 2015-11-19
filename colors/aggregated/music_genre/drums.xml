@@ -1,0 +1,33 @@
+<colors query="drums">
+
+<color name="white" weight="0.458031339686">
+ <shade name="cool" weight="0.528273136738" />
+ <shade name="hard" weight="0.297618668585" />
+ <shade name="dark" weight="0.174106921122" />
+</color>
+
+<color name="black" weight="0.238060522522">
+ <shade name="cool" weight="0.528273136738" />
+ <shade name="hard" weight="0.297618668585" />
+ <shade name="dark" weight="0.174106921122" />
+</color>
+
+<color name="green" weight="0.138928937156">
+ <shade name="cool" weight="0.528273136738" />
+ <shade name="hard" weight="0.297618668585" />
+ <shade name="dark" weight="0.174106921122" />
+</color>
+
+<color name="red" weight="0.0839362328651">
+ <shade name="cool" weight="0.528273136738" />
+ <shade name="hard" weight="0.297618668585" />
+ <shade name="dark" weight="0.174106921122" />
+</color>
+
+<color name="blue" weight="0.0810418800076">
+ <shade name="cool" weight="0.528273136738" />
+ <shade name="hard" weight="0.297618668585" />
+ <shade name="dark" weight="0.174106921122" />
+</color>
+
+</colors>

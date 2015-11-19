@@ -1,0 +1,33 @@
+<colors query="george washington carver">
+
+<color name="white" weight="0.688405106202">
+ <shade name="light" weight="0.71428479592" />
+ <shade name="soft" weight="0.142856959184" />
+ <shade name="fresh" weight="0.142856959184" />
+</color>
+
+<color name="black" weight="0.289854781559">
+ <shade name="light" weight="0.71428479592" />
+ <shade name="soft" weight="0.142856959184" />
+ <shade name="fresh" weight="0.142856959184" />
+</color>
+
+<color name="orange" weight="0.0108695543085">
+ <shade name="light" weight="0.71428479592" />
+ <shade name="soft" weight="0.142856959184" />
+ <shade name="fresh" weight="0.142856959184" />
+</color>
+
+<color name="green" weight="0.00724636953897">
+ <shade name="light" weight="0.71428479592" />
+ <shade name="soft" weight="0.142856959184" />
+ <shade name="fresh" weight="0.142856959184" />
+</color>
+
+<color name="red" weight="0.00362318476948">
+ <shade name="light" weight="0.71428479592" />
+ <shade name="soft" weight="0.142856959184" />
+ <shade name="fresh" weight="0.142856959184" />
+</color>
+
+</colors>

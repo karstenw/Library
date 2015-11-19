@@ -1,0 +1,33 @@
+<colors query="irish sea">
+
+<color name="blue" weight="0.916665750001">
+ <shade name="fresh" weight="0.864196506631" />
+ <shade name="dark" weight="0.0864196506631" />
+ <shade name="cool" weight="0.0493826575218" />
+</color>
+
+<color name="green" weight="0.0444444">
+ <shade name="fresh" weight="0.864196506631" />
+ <shade name="dark" weight="0.0864196506631" />
+ <shade name="cool" weight="0.0493826575218" />
+</color>
+
+<color name="red" weight="0.01666665">
+ <shade name="fresh" weight="0.813952579774" />
+ <shade name="warm" weight="0.104651045971" />
+ <shade name="dark" weight="0.0813952579774" />
+</color>
+
+<color name="black" weight="0.01666665">
+ <shade name="fresh" weight="0.813952579774" />
+ <shade name="warm" weight="0.104651045971" />
+ <shade name="dark" weight="0.0813952579774" />
+</color>
+
+<color name="white" weight="0.00555555000001">
+ <shade name="fresh" weight="0.813952579774" />
+ <shade name="warm" weight="0.104651045971" />
+ <shade name="dark" weight="0.0813952579774" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="c. s. lewis">
+
+<color name="white" weight="0.648315175996">
+ <shade name="light" weight="0.610271186116" />
+ <shade name="cool" weight="0.223564691944" />
+ <shade name="hard" weight="0.166162946715" />
+</color>
+
+<color name="black" weight="0.170590194354">
+ <shade name="light" weight="0.610271186116" />
+ <shade name="cool" weight="0.223564691944" />
+ <shade name="hard" weight="0.166162946715" />
+</color>
+
+<color name="green" weight="0.142701776169">
+ <shade name="light" weight="0.610271186116" />
+ <shade name="cool" weight="0.223564691944" />
+ <shade name="hard" weight="0.166162946715" />
+</color>
+
+<color name="pink" weight="0.0231799839462">
+ <shade name="light" weight="0.610271186116" />
+ <shade name="cool" weight="0.223564691944" />
+ <shade name="hard" weight="0.166162946715" />
+</color>
+
+<color name="red" weight="0.0152118644647">
+ <shade name="light" weight="0.610271186116" />
+ <shade name="cool" weight="0.223564691944" />
+ <shade name="hard" weight="0.166162946715" />
+</color>
+
+</colors>

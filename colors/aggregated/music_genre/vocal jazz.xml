@@ -1,0 +1,33 @@
+<colors query="vocal jazz">
+
+<color name="blue" weight="0.923076000001">
+ <shade name="cool" weight="0.677082649198" />
+ <shade name="soft" weight="0.161458170193" />
+ <shade name="light" weight="0.161458170193" />
+</color>
+
+<color name="pink" weight="0.025641">
+ <shade name="cool" weight="0.677082649198" />
+ <shade name="soft" weight="0.161458170193" />
+ <shade name="light" weight="0.161458170193" />
+</color>
+
+<color name="black" weight="0.025641">
+ <shade name="cool" weight="0.677082649198" />
+ <shade name="soft" weight="0.161458170193" />
+ <shade name="light" weight="0.161458170193" />
+</color>
+
+<color name="red" weight="0.0128205">
+ <shade name="cool" weight="0.677082649198" />
+ <shade name="soft" weight="0.161458170193" />
+ <shade name="light" weight="0.161458170193" />
+</color>
+
+<color name="green" weight="0.0128205">
+ <shade name="cool" weight="0.677082649198" />
+ <shade name="soft" weight="0.161458170193" />
+ <shade name="light" weight="0.161458170193" />
+</color>
+
+</colors>

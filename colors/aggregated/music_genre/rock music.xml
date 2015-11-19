@@ -1,0 +1,33 @@
+<colors query="rock music">
+
+<color name="black" weight="0.656156102934">
+ <shade name="hard" weight="0.814110399549" />
+ <shade name="soft" weight="0.114427739492" />
+ <shade name="cool" weight="0.0714608017382" />
+</color>
+
+<color name="purple" weight="0.12356186354">
+ <shade name="hard" weight="0.814110399549" />
+ <shade name="soft" weight="0.114427739492" />
+ <shade name="cool" weight="0.0714608017382" />
+</color>
+
+<color name="blue" weight="0.121431486582">
+ <shade name="hard" weight="0.814110399549" />
+ <shade name="soft" weight="0.114427739492" />
+ <shade name="cool" weight="0.0714608017382" />
+</color>
+
+<color name="pink" weight="0.0528333485479">
+ <shade name="hard" weight="0.814110399549" />
+ <shade name="soft" weight="0.114427739492" />
+ <shade name="cool" weight="0.0714608017382" />
+</color>
+
+<color name="green" weight="0.0460161422837">
+ <shade name="hard" weight="0.814110399549" />
+ <shade name="soft" weight="0.114427739492" />
+ <shade name="cool" weight="0.0714608017382" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="alabama">
+
+<color name="green" weight="0.3837842756">
+ <shade name="hard" weight="0.883539185322" />
+ <shade name="cool" weight="0.0667986090972" />
+ <shade name="light" weight="0.0496609955888" />
+</color>
+
+<color name="black" weight="0.267486010266">
+ <shade name="hard" weight="0.875404580282" />
+ <shade name="cool" weight="0.0661836049058" />
+ <shade name="warm" weight="0.0584106159602" />
+</color>
+
+<color name="white" weight="0.215982492762">
+ <shade name="hard" weight="0.875404580282" />
+ <shade name="cool" weight="0.0661836049058" />
+ <shade name="warm" weight="0.0584106159602" />
+</color>
+
+<color name="yellow" weight="0.0960291390894">
+ <shade name="hard" weight="0.875404580282" />
+ <shade name="cool" weight="0.0661836049058" />
+ <shade name="warm" weight="0.0584106159602" />
+</color>
+
+<color name="red" weight="0.0367170237695">
+ <shade name="hard" weight="0.875404580282" />
+ <shade name="cool" weight="0.0661836049058" />
+ <shade name="warm" weight="0.0584106159602" />
+</color>
+
+</colors>

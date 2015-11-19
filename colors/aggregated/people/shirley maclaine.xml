@@ -1,0 +1,33 @@
+<colors query="shirley maclaine">
+
+<color name="white" weight="0.3499996325">
+ <shade name="light" weight="0.994757911967" />
+ <shade name="cool" weight="0.00314465093351" />
+ <shade name="hard" weight="0.00209643395567" />
+</color>
+
+<color name="green" weight="0.19999979">
+ <shade name="light" weight="0.994757911967" />
+ <shade name="cool" weight="0.00314465093351" />
+ <shade name="hard" weight="0.00209643395567" />
+</color>
+
+<color name="black" weight="0.19999979">
+ <shade name="light" weight="0.994757911967" />
+ <shade name="cool" weight="0.00314465093351" />
+ <shade name="hard" weight="0.00209643395567" />
+</color>
+
+<color name="red" weight="0.1499998425">
+ <shade name="light" weight="0.994757911967" />
+ <shade name="cool" weight="0.00314465093351" />
+ <shade name="hard" weight="0.00209643395567" />
+</color>
+
+<color name="blue" weight="0.0999998950001">
+ <shade name="light" weight="0.994757911967" />
+ <shade name="cool" weight="0.00314465093351" />
+ <shade name="hard" weight="0.00209643395567" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="yoko ono">
+
+<color name="green" weight="0.729794184934">
+ <shade name="light" weight="0.399999523637" />
+ <shade name="hard" weight="0.372726828844" />
+ <shade name="cool" weight="0.227272456612" />
+</color>
+
+<color name="white" weight="0.135705530256">
+ <shade name="light" weight="0.399999523637" />
+ <shade name="hard" weight="0.372726828844" />
+ <shade name="cool" weight="0.227272456612" />
+</color>
+
+<color name="blue" weight="0.0621229760729">
+ <shade name="light" weight="0.399999523637" />
+ <shade name="hard" weight="0.372726828844" />
+ <shade name="cool" weight="0.227272456612" />
+</color>
+
+<color name="black" weight="0.0452351767521">
+ <shade name="light" weight="0.399999523637" />
+ <shade name="hard" weight="0.372726828844" />
+ <shade name="cool" weight="0.227272456612" />
+</color>
+
+<color name="yellow" weight="0.0271411060513">
+ <shade name="light" weight="0.399999523637" />
+ <shade name="hard" weight="0.372726828844" />
+ <shade name="cool" weight="0.227272456612" />
+</color>
+
+</colors>

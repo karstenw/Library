@@ -1,0 +1,33 @@
+<colors query="friedrich nietzsche">
+
+<color name="red" weight="0.3199996032">
+ <shade name="light" weight="0.499999178573" />
+ <shade name="dark" weight="0.285713816327" />
+ <shade name="weak" weight="0.214285362245" />
+</color>
+
+<color name="white" weight="0.199999752">
+ <shade name="light" weight="0.499999178573" />
+ <shade name="dark" weight="0.285713816327" />
+ <shade name="weak" weight="0.214285362245" />
+</color>
+
+<color name="orange" weight="0.1599998016">
+ <shade name="light" weight="0.499999178573" />
+ <shade name="dark" weight="0.285713816327" />
+ <shade name="weak" weight="0.214285362245" />
+</color>
+
+<color name="blue" weight="0.1599998016">
+ <shade name="light" weight="0.499999178573" />
+ <shade name="dark" weight="0.285713816327" />
+ <shade name="weak" weight="0.214285362245" />
+</color>
+
+<color name="black" weight="0.1599998016">
+ <shade name="light" weight="0.499999178573" />
+ <shade name="dark" weight="0.285713816327" />
+ <shade name="weak" weight="0.214285362245" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="jack benny">
+
+<color name="white" weight="0.333333">
+ <shade name="dark" weight="0.555554876544" />
+ <shade name="light" weight="0.277777438272" />
+ <shade name="weak" weight="0.166666462963" />
+</color>
+
+<color name="green" weight="0.285714">
+ <shade name="dark" weight="0.555554876544" />
+ <shade name="light" weight="0.277777438272" />
+ <shade name="weak" weight="0.166666462963" />
+</color>
+
+<color name="blue" weight="0.190476">
+ <shade name="dark" weight="0.555554876544" />
+ <shade name="light" weight="0.277777438272" />
+ <shade name="weak" weight="0.166666462963" />
+</color>
+
+<color name="black" weight="0.190476">
+ <shade name="dark" weight="0.555554876544" />
+ <shade name="light" weight="0.277777438272" />
+ <shade name="weak" weight="0.166666462963" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="dark" weight="0.555554876544" />
+ <shade name="light" weight="0.277777438272" />
+ <shade name="weak" weight="0.166666462963" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="albania">
+
+<color name="black" weight="0.308332987101">
+ <shade name="cool" weight="0.867481775605" />
+ <shade name="neutral" weight="0.0734432423518" />
+ <shade name="weak" weight="0.0590739123265" />
+</color>
+
+<color name="white" weight="0.227083078338">
+ <shade name="cool" weight="0.867481775605" />
+ <shade name="neutral" weight="0.0734432423518" />
+ <shade name="weak" weight="0.0590739123265" />
+</color>
+
+<color name="red" weight="0.199999775417">
+ <shade name="cool" weight="0.867481775605" />
+ <shade name="neutral" weight="0.0734432423518" />
+ <shade name="weak" weight="0.0590739123265" />
+</color>
+
+<color name="green" weight="0.141666507587">
+ <shade name="cool" weight="0.867481775605" />
+ <shade name="neutral" weight="0.0734432423518" />
+ <shade name="weak" weight="0.0590739123265" />
+</color>
+
+<color name="blue" weight="0.122916528642">
+ <shade name="cool" weight="0.867481775605" />
+ <shade name="neutral" weight="0.0734432423518" />
+ <shade name="weak" weight="0.0590739123265" />
+</color>
+
+</colors>

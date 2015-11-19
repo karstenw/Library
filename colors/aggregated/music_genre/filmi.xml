@@ -1,0 +1,33 @@
+<colors query="filmi">
+
+<color name="white" weight="0.391770614591">
+ <shade name="hard" weight="0.538820728534" />
+ <shade name="cool" weight="0.265668553652" />
+ <shade name="dark" weight="0.195509604624" />
+</color>
+
+<color name="black" weight="0.254919235522">
+ <shade name="hard" weight="0.538820728534" />
+ <shade name="cool" weight="0.265668553652" />
+ <shade name="dark" weight="0.195509604624" />
+</color>
+
+<color name="orange" weight="0.179785145052">
+ <shade name="hard" weight="0.538820728534" />
+ <shade name="cool" weight="0.265668553652" />
+ <shade name="dark" weight="0.195509604624" />
+</color>
+
+<color name="blue" weight="0.152057087855">
+ <shade name="hard" weight="0.538820728534" />
+ <shade name="cool" weight="0.265668553652" />
+ <shade name="dark" weight="0.195509604624" />
+</color>
+
+<color name="red" weight="0.0214668829913">
+ <shade name="hard" weight="0.538820728534" />
+ <shade name="cool" weight="0.265668553652" />
+ <shade name="dark" weight="0.195509604624" />
+</color>
+
+</colors>

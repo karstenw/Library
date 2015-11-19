@@ -1,0 +1,33 @@
+<colors query="joan baez">
+
+<color name="blue" weight="0.433194563466">
+ <shade name="light" weight="0.453487808924" />
+ <shade name="hard" weight="0.374418139676" />
+ <shade name="dark" weight="0.172092809541" />
+</color>
+
+<color name="white" weight="0.297924996713">
+ <shade name="light" weight="0.453487808924" />
+ <shade name="hard" weight="0.374418139676" />
+ <shade name="dark" weight="0.172092809541" />
+</color>
+
+<color name="purple" weight="0.117842199257">
+ <shade name="light" weight="0.453487808924" />
+ <shade name="hard" weight="0.374418139676" />
+ <shade name="dark" weight="0.172092809541" />
+</color>
+
+<color name="black" weight="0.0979252078333">
+ <shade name="light" weight="0.453487808924" />
+ <shade name="hard" weight="0.374418139676" />
+ <shade name="dark" weight="0.172092809541" />
+</color>
+
+<color name="green" weight="0.0531119771299">
+ <shade name="light" weight="0.453487808924" />
+ <shade name="hard" weight="0.374418139676" />
+ <shade name="dark" weight="0.172092809541" />
+</color>
+
+</colors>

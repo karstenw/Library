@@ -1,0 +1,33 @@
+<colors query="electronic body">
+
+<color name="blue" weight="0.285713938776">
+ <shade name="dark" weight="0.994909942769" />
+ <shade name="intense" weight="0.00254452670785" />
+ <shade name="hard" weight="0.00254452670785" />
+</color>
+
+<color name="black" weight="0.285713938776">
+ <shade name="dark" weight="0.994909942769" />
+ <shade name="intense" weight="0.00254452670785" />
+ <shade name="hard" weight="0.00254452670785" />
+</color>
+
+<color name="red" weight="0.142856969388">
+ <shade name="dark" weight="0.994909942769" />
+ <shade name="intense" weight="0.00254452670785" />
+ <shade name="hard" weight="0.00254452670785" />
+</color>
+
+<color name="pink" weight="0.142856969388">
+ <shade name="dark" weight="0.996177342696" />
+ <shade name="hard" weight="0.00254776813989" />
+ <shade name="warm" weight="0.00127388406994" />
+</color>
+
+<color name="orange" weight="0.142856969388">
+ <shade name="dark" weight="0.994909942769" />
+ <shade name="intense" weight="0.00254452670785" />
+ <shade name="hard" weight="0.00254452670785" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="simone weil">
+
+<color name="green" weight="0.588234705883">
+ <shade name="light" weight="0.974025000001" />
+ <shade name="weak" weight="0.012987" />
+ <shade name="fresh" weight="0.012987" />
+</color>
+
+<color name="red" weight="0.35294082353">
+ <shade name="light" weight="0.974025000001" />
+ <shade name="weak" weight="0.012987" />
+ <shade name="fresh" weight="0.012987" />
+</color>
+
+<color name="white" weight="0.0588234705883">
+ <shade name="light" weight="0.974025000001" />
+ <shade name="weak" weight="0.012987" />
+ <shade name="fresh" weight="0.012987" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="light" weight="0.974025000001" />
+ <shade name="weak" weight="0.012987" />
+ <shade name="fresh" weight="0.012987" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="light" weight="0.974025000001" />
+ <shade name="weak" weight="0.012987" />
+ <shade name="fresh" weight="0.012987" />
+</color>
+
+</colors>

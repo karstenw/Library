@@ -1,0 +1,33 @@
+<colors query="mozambique">
+
+<color name="green" weight="0.367787996057">
+ <shade name="light" weight="0.513037647476" />
+ <shade name="cool" weight="0.313039920494" />
+ <shade name="dark" weight="0.173911066941" />
+</color>
+
+<color name="red" weight="0.211057425188">
+ <shade name="warm" weight="0.923693809423" />
+ <shade name="light" weight="0.0473895084835" />
+ <shade name="cool" weight="0.028915632295" />
+</color>
+
+<color name="pink" weight="0.181249770606">
+ <shade name="warm" weight="0.923693809423" />
+ <shade name="light" weight="0.0473895084835" />
+ <shade name="cool" weight="0.028915632295" />
+</color>
+
+<color name="blue" weight="0.145192123934">
+ <shade name="light" weight="0.513037647476" />
+ <shade name="cool" weight="0.313039920494" />
+ <shade name="dark" weight="0.173911066941" />
+</color>
+
+<color name="purple" weight="0.0947114185924">
+ <shade name="light" weight="0.513037647476" />
+ <shade name="cool" weight="0.313039920494" />
+ <shade name="dark" weight="0.173911066941" />
+</color>
+
+</colors>

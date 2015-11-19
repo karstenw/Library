@@ -1,0 +1,33 @@
+<colors query="west virginia">
+
+<color name="white" weight="0.524225023537">
+ <shade name="light" weight="0.564716785497" />
+ <shade name="cool" weight="0.252373430687" />
+ <shade name="fresh" weight="0.182908268577" />
+</color>
+
+<color name="red" weight="0.219486133592">
+ <shade name="light" weight="0.564716785497" />
+ <shade name="cool" weight="0.252373430687" />
+ <shade name="fresh" weight="0.182908268577" />
+</color>
+
+<color name="green" weight="0.142440940739">
+ <shade name="light" weight="0.564716785497" />
+ <shade name="cool" weight="0.252373430687" />
+ <shade name="fresh" weight="0.182908268577" />
+</color>
+
+<color name="blue" weight="0.0622186265309">
+ <shade name="light" weight="0.564716785497" />
+ <shade name="cool" weight="0.252373430687" />
+ <shade name="fresh" weight="0.182908268577" />
+</color>
+
+<color name="orange" weight="0.051628222015">
+ <shade name="light" weight="0.564716785497" />
+ <shade name="cool" weight="0.252373430687" />
+ <shade name="fresh" weight="0.182908268577" />
+</color>
+
+</colors>

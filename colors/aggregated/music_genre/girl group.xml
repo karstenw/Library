@@ -1,0 +1,33 @@
+<colors query="girl group">
+
+<color name="black" weight="0.583952861922">
+ <shade name="cool" weight="0.475730798092" />
+ <shade name="dark" weight="0.292510152881" />
+ <shade name="fresh" weight="0.231758044206" />
+</color>
+
+<color name="white" weight="0.354832468181">
+ <shade name="cool" weight="0.475730798092" />
+ <shade name="dark" weight="0.292510152881" />
+ <shade name="fresh" weight="0.231758044206" />
+</color>
+
+<color name="blue" weight="0.0478516928519">
+ <shade name="cool" weight="0.475730798092" />
+ <shade name="dark" weight="0.292510152881" />
+ <shade name="fresh" weight="0.231758044206" />
+</color>
+
+<color name="red" weight="0.0132403200984">
+ <shade name="cool" weight="0.475730798092" />
+ <shade name="dark" weight="0.292510152881" />
+ <shade name="fresh" weight="0.231758044206" />
+</color>
+
+<color name="pink" weight="0.000121656846234">
+ <shade name="cool" weight="0.475730798092" />
+ <shade name="dark" weight="0.292510152881" />
+ <shade name="fresh" weight="0.231758044206" />
+</color>
+
+</colors>

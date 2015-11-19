@@ -1,0 +1,33 @@
+<colors query="variet">
+
+<color name="red" weight="0.576469923599">
+ <shade name="soft" weight="0.333332666668" />
+ <shade name="hard" weight="0.333332666668" />
+ <shade name="dark" weight="0.333332666668" />
+</color>
+
+<color name="white" weight="0.188235077094">
+ <shade name="soft" weight="0.333332666668" />
+ <shade name="hard" weight="0.333332666668" />
+ <shade name="dark" weight="0.333332666668" />
+</color>
+
+<color name="purple" weight="0.0941175385468">
+ <shade name="soft" weight="0.333332666668" />
+ <shade name="hard" weight="0.333332666668" />
+ <shade name="dark" weight="0.333332666668" />
+</color>
+
+<color name="pink" weight="0.0705881539101">
+ <shade name="soft" weight="0.333332666668" />
+ <shade name="hard" weight="0.333332666668" />
+ <shade name="dark" weight="0.333332666668" />
+</color>
+
+<color name="green" weight="0.0705881539101">
+ <shade name="soft" weight="0.333332666668" />
+ <shade name="hard" weight="0.333332666668" />
+ <shade name="dark" weight="0.333332666668" />
+</color>
+
+</colors>

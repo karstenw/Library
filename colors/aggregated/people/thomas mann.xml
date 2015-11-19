@@ -1,0 +1,33 @@
+<colors query="thomas mann">
+
+<color name="white" weight="0.735293371541">
+ <shade name="light" weight="0.883720005409" />
+ <shade name="soft" weight="0.0581394740401" />
+ <shade name="cool" weight="0.0581394740401" />
+</color>
+
+<color name="red" weight="0.102941072016">
+ <shade name="light" weight="0.883720005409" />
+ <shade name="soft" weight="0.0581394740401" />
+ <shade name="cool" weight="0.0581394740401" />
+</color>
+
+<color name="green" weight="0.102941072016">
+ <shade name="light" weight="0.883720005409" />
+ <shade name="soft" weight="0.0581394740401" />
+ <shade name="cool" weight="0.0581394740401" />
+</color>
+
+<color name="black" weight="0.0441176022924">
+ <shade name="light" weight="0.883720005409" />
+ <shade name="soft" weight="0.0581394740401" />
+ <shade name="cool" weight="0.0581394740401" />
+</color>
+
+<color name="orange" weight="0.0147058674308">
+ <shade name="light" weight="0.883720005409" />
+ <shade name="soft" weight="0.0581394740401" />
+ <shade name="cool" weight="0.0581394740401" />
+</color>
+
+</colors>

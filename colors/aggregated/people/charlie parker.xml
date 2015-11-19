@@ -1,0 +1,33 @@
+<colors query="charlie parker">
+
+<color name="green" weight="0.42566148013">
+ <shade name="dark" weight="0.539830752768" />
+ <shade name="cool" weight="0.427366012608" />
+ <shade name="light" weight="0.03280221588" />
+</color>
+
+<color name="blue" weight="0.336048536944">
+ <shade name="dark" weight="0.539830752768" />
+ <shade name="cool" weight="0.427366012608" />
+ <shade name="light" weight="0.03280221588" />
+</color>
+
+<color name="white" weight="0.114052836781">
+ <shade name="dark" weight="0.539830752768" />
+ <shade name="cool" weight="0.427366012608" />
+ <shade name="light" weight="0.03280221588" />
+</color>
+
+<color name="black" weight="0.105906205582">
+ <shade name="dark" weight="0.539830752768" />
+ <shade name="cool" weight="0.427366012608" />
+ <shade name="light" weight="0.03280221588" />
+</color>
+
+<color name="purple" weight="0.018329920197">
+ <shade name="dark" weight="0.539830752768" />
+ <shade name="cool" weight="0.427366012608" />
+ <shade name="light" weight="0.03280221588" />
+</color>
+
+</colors>

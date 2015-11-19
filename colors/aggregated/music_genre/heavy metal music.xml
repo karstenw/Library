@@ -1,0 +1,33 @@
+<colors query="heavy metal music">
+
+<color name="black" weight="0.98723305532">
+ <shade name="hard" weight="0.598993451587" />
+ <shade name="dark" weight="0.307269923257" />
+ <shade name="cool" weight="0.0937356164697" />
+</color>
+
+<color name="white" weight="0.00595744085107">
+ <shade name="hard" weight="0.598993451587" />
+ <shade name="dark" weight="0.307269923257" />
+ <shade name="cool" weight="0.0937356164697" />
+</color>
+
+<color name="red" weight="0.00255318893617">
+ <shade name="hard" weight="0.598993451587" />
+ <shade name="dark" weight="0.307269923257" />
+ <shade name="cool" weight="0.0937356164697" />
+</color>
+
+<color name="blue" weight="0.00255318893617">
+ <shade name="hard" weight="0.598993451587" />
+ <shade name="dark" weight="0.307269923257" />
+ <shade name="cool" weight="0.0937356164697" />
+</color>
+
+<color name="pink" weight="0.00170212595745">
+ <shade name="hard" weight="0.598993451587" />
+ <shade name="dark" weight="0.307269923257" />
+ <shade name="cool" weight="0.0937356164697" />
+</color>
+
+</colors>

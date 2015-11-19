@@ -1,0 +1,33 @@
+<colors query="eva peron">
+
+<color name="red" weight="0.384615">
+ <shade name="dark" weight="0.624999375001" />
+ <shade name="light" weight="0.374999625" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="white" weight="0.230769">
+ <shade name="dark" weight="0.624999375001" />
+ <shade name="light" weight="0.374999625" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="pink" weight="0.230769">
+ <shade name="dark" weight="0.624999375001" />
+ <shade name="light" weight="0.374999625" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="purple" weight="0.0769230000001">
+ <shade name="dark" weight="0.624999375001" />
+ <shade name="light" weight="0.374999625" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="green" weight="0.0769230000001">
+ <shade name="dark" weight="0.624999375001" />
+ <shade name="light" weight="0.374999625" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+</colors>

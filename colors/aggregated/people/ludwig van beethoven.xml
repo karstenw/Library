@@ -1,0 +1,33 @@
+<colors query="ludwig van beethoven">
+
+<color name="orange" weight="0.595325348415">
+ <shade name="cool" weight="0.53846089645" />
+ <shade name="light" weight="0.307691940829" />
+ <shade name="fresh" weight="0.153845970414" />
+</color>
+
+<color name="purple" weight="0.156211403406">
+ <shade name="cool" weight="0.53846089645" />
+ <shade name="light" weight="0.307691940829" />
+ <shade name="fresh" weight="0.153845970414" />
+</color>
+
+<color name="white" weight="0.126691138196">
+ <shade name="cool" weight="0.53846089645" />
+ <shade name="light" weight="0.307691940829" />
+ <shade name="fresh" weight="0.153845970414" />
+</color>
+
+<color name="black" weight="0.11070099454">
+ <shade name="cool" weight="0.53846089645" />
+ <shade name="light" weight="0.307691940829" />
+ <shade name="fresh" weight="0.153845970414" />
+</color>
+
+<color name="blue" weight="0.011070099454">
+ <shade name="cool" weight="0.53846089645" />
+ <shade name="light" weight="0.307691940829" />
+ <shade name="fresh" weight="0.153845970414" />
+</color>
+
+</colors>

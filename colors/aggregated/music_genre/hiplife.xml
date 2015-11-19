@@ -1,0 +1,33 @@
+<colors query="hiplife">
+
+<color name="black" weight="0.999999000001">
+ <shade name="fresh" weight="0.718749236329" />
+ <shade name="cool" weight="0.156249833985" />
+ <shade name="bright" weight="0.124999867188" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="fresh" weight="0.718749236329" />
+ <shade name="cool" weight="0.156249833985" />
+ <shade name="bright" weight="0.124999867188" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="fresh" weight="0.718749236329" />
+ <shade name="cool" weight="0.156249833985" />
+ <shade name="bright" weight="0.124999867188" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="fresh" weight="0.718749236329" />
+ <shade name="cool" weight="0.156249833985" />
+ <shade name="bright" weight="0.124999867188" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="fresh" weight="0.718749236329" />
+ <shade name="cool" weight="0.156249833985" />
+ <shade name="bright" weight="0.124999867188" />
+</color>
+
+</colors>

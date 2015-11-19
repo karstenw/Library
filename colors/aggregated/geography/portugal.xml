@@ -1,0 +1,33 @@
+<colors query="portugal">
+
+<color name="blue" weight="0.324021948388">
+ <shade name="neutral" weight="0.417927936585" />
+ <shade name="cool" weight="0.402785620042" />
+ <shade name="light" weight="0.179285027868" />
+</color>
+
+<color name="pink" weight="0.231444248849">
+ <shade name="neutral" weight="0.414413832742" />
+ <shade name="cool" weight="0.399398838802" />
+ <shade name="warm" weight="0.186185924855" />
+</color>
+
+<color name="black" weight="0.19473240248">
+ <shade name="neutral" weight="0.414413832742" />
+ <shade name="cool" weight="0.399398838802" />
+ <shade name="warm" weight="0.186185924855" />
+</color>
+
+<color name="white" weight="0.128012612122">
+ <shade name="neutral" weight="0.414413832742" />
+ <shade name="cool" weight="0.399398838802" />
+ <shade name="warm" weight="0.186185924855" />
+</color>
+
+<color name="green" weight="0.121787559911">
+ <shade name="neutral" weight="0.417927936585" />
+ <shade name="cool" weight="0.402785620042" />
+ <shade name="light" weight="0.179285027868" />
+</color>
+
+</colors>

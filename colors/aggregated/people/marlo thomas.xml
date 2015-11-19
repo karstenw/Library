@@ -1,0 +1,33 @@
+<colors query="marlo thomas">
+
+<color name="green" weight="0.861701256791">
+ <shade name="light" weight="0.666666000001" />
+ <shade name="intense" weight="0.333333" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="white" weight="0.0957445840879">
+ <shade name="light" weight="0.999998500002" />
+ <shade name="weak" weight="0.0" />
+ <shade name="warm" weight="0.0" />
+</color>
+
+<color name="black" weight="0.0212765742418">
+ <shade name="light" weight="0.666666000001" />
+ <shade name="intense" weight="0.333333" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+<color name="pink" weight="0.0106382871209">
+ <shade name="light" weight="0.999998500002" />
+ <shade name="weak" weight="0.0" />
+ <shade name="warm" weight="0.0" />
+</color>
+
+<color name="orange" weight="0.0106382871209">
+ <shade name="light" weight="0.666666000001" />
+ <shade name="intense" weight="0.333333" />
+ <shade name="weak" weight="0.0" />
+</color>
+
+</colors>

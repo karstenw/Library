@@ -1,0 +1,33 @@
+<colors query="hyphy">
+
+<color name="white" weight="0.515769404649">
+ <shade name="fresh" weight="0.56420171335" />
+ <shade name="cool" weight="0.252918009433" />
+ <shade name="hard" weight="0.182879176051" />
+</color>
+
+<color name="green" weight="0.237476560414">
+ <shade name="fresh" weight="0.56420171335" />
+ <shade name="cool" weight="0.252918009433" />
+ <shade name="hard" weight="0.182879176051" />
+</color>
+
+<color name="red" weight="0.0853431388988">
+ <shade name="fresh" weight="0.56420171335" />
+ <shade name="cool" weight="0.252918009433" />
+ <shade name="hard" weight="0.182879176051" />
+</color>
+
+<color name="blue" weight="0.0834878532706">
+ <shade name="fresh" weight="0.56420171335" />
+ <shade name="cool" weight="0.252918009433" />
+ <shade name="hard" weight="0.182879176051" />
+</color>
+
+<color name="black" weight="0.0779219963859">
+ <shade name="fresh" weight="0.56420171335" />
+ <shade name="cool" weight="0.252918009433" />
+ <shade name="hard" weight="0.182879176051" />
+</color>
+
+</colors>

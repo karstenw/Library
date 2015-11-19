@@ -1,0 +1,33 @@
+<colors query="lo-fi">
+
+<color name="blue" weight="0.571871992891">
+ <shade name="cool" weight="0.604570907868" />
+ <shade name="dark" weight="0.269172913044" />
+ <shade name="light" weight="0.126254913975" />
+</color>
+
+<color name="white" weight="0.213674997344">
+ <shade name="cool" weight="0.604570907868" />
+ <shade name="dark" weight="0.269172913044" />
+ <shade name="light" weight="0.126254913975" />
+</color>
+
+<color name="pink" weight="0.201242997498">
+ <shade name="cool" weight="0.604570907868" />
+ <shade name="dark" weight="0.269172913044" />
+ <shade name="light" weight="0.126254913975" />
+</color>
+
+<color name="black" weight="0.00699299991307">
+ <shade name="cool" weight="0.604570907868" />
+ <shade name="dark" weight="0.269172913044" />
+ <shade name="light" weight="0.126254913975" />
+</color>
+
+<color name="orange" weight="0.00621599992273">
+ <shade name="cool" weight="0.604570907868" />
+ <shade name="dark" weight="0.269172913044" />
+ <shade name="light" weight="0.126254913975" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="lute">
+
+<color name="green" weight="0.356588749234">
+ <shade name="soft" weight="0.698299494979" />
+ <shade name="light" weight="0.226628639344" />
+ <shade name="dark" weight="0.0750707367828" />
+</color>
+
+<color name="red" weight="0.327695194454">
+ <shade name="soft" weight="0.698299494979" />
+ <shade name="light" weight="0.226628639344" />
+ <shade name="dark" weight="0.0750707367828" />
+</color>
+
+<color name="white" weight="0.130373356933">
+ <shade name="soft" weight="0.698299494979" />
+ <shade name="light" weight="0.226628639344" />
+ <shade name="dark" weight="0.0750707367828" />
+</color>
+
+<color name="blue" weight="0.130373356933">
+ <shade name="soft" weight="0.698299494979" />
+ <shade name="light" weight="0.226628639344" />
+ <shade name="dark" weight="0.0750707367828" />
+</color>
+
+<color name="black" weight="0.0549682261665">
+ <shade name="soft" weight="0.698299494979" />
+ <shade name="light" weight="0.226628639344" />
+ <shade name="dark" weight="0.0750707367828" />
+</color>
+
+</colors>

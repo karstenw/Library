@@ -1,0 +1,33 @@
+<colors query="erica jong">
+
+<color name="green" weight="0.874999109376">
+ <shade name="light" weight="0.919539289207" />
+ <shade name="bright" weight="0.0689654466905" />
+ <shade name="neutral" weight="0.0114942411151" />
+</color>
+
+<color name="pink" weight="0.0535713740434">
+ <shade name="light" weight="0.919539289207" />
+ <shade name="bright" weight="0.0689654466905" />
+ <shade name="neutral" weight="0.0114942411151" />
+</color>
+
+<color name="blue" weight="0.0357142493623">
+ <shade name="light" weight="0.919539289207" />
+ <shade name="bright" weight="0.0689654466905" />
+ <shade name="neutral" weight="0.0114942411151" />
+</color>
+
+<color name="white" weight="0.0178571246811">
+ <shade name="light" weight="0.919539289207" />
+ <shade name="bright" weight="0.0689654466905" />
+ <shade name="neutral" weight="0.0114942411151" />
+</color>
+
+<color name="red" weight="0.0178571246811">
+ <shade name="light" weight="0.919539289207" />
+ <shade name="bright" weight="0.0689654466905" />
+ <shade name="neutral" weight="0.0114942411151" />
+</color>
+
+</colors>

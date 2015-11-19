@@ -1,0 +1,33 @@
+<colors query="beatrix potter">
+
+<color name="yellow" weight="0.553780057116">
+ <shade name="light" weight="0.813952649181" />
+ <shade name="soft" weight="0.131782809867" />
+ <shade name="cool" weight="0.0542635099454" />
+</color>
+
+<color name="pink" weight="0.173588748673">
+ <shade name="light" weight="0.813952649181" />
+ <shade name="soft" weight="0.131782809867" />
+ <shade name="cool" weight="0.0542635099454" />
+</color>
+
+<color name="blue" weight="0.1411074184">
+ <shade name="light" weight="0.813952649181" />
+ <shade name="soft" weight="0.131782809867" />
+ <shade name="cool" weight="0.0542635099454" />
+</color>
+
+<color name="green" weight="0.0734823537327">
+ <shade name="light" weight="0.813952649181" />
+ <shade name="soft" weight="0.131782809867" />
+ <shade name="cool" weight="0.0542635099454" />
+</color>
+
+<color name="white" weight="0.0580404098324">
+ <shade name="light" weight="0.813952649181" />
+ <shade name="soft" weight="0.131782809867" />
+ <shade name="cool" weight="0.0542635099454" />
+</color>
+
+</colors>

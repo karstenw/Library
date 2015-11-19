@@ -1,0 +1,33 @@
+<colors query="brass band">
+
+<color name="black" weight="0.31595909174">
+ <shade name="light" weight="0.499999469627" />
+ <shade name="cool" weight="0.476635008429" />
+ <shade name="warm" weight="0.0233644611975" />
+</color>
+
+<color name="white" weight="0.273984964225">
+ <shade name="light" weight="0.499999469627" />
+ <shade name="cool" weight="0.476635008429" />
+ <shade name="warm" weight="0.0233644611975" />
+</color>
+
+<color name="green" weight="0.152675123162">
+ <shade name="light" weight="0.503528873877" />
+ <shade name="cool" weight="0.479999487248" />
+ <shade name="hard" weight="0.0164705706408" />
+</color>
+
+<color name="blue" weight="0.139760007003">
+ <shade name="light" weight="0.503528873877" />
+ <shade name="cool" weight="0.479999487248" />
+ <shade name="hard" weight="0.0164705706408" />
+</color>
+
+<color name="orange" weight="0.117619807874">
+ <shade name="light" weight="0.499999469627" />
+ <shade name="cool" weight="0.476635008429" />
+ <shade name="warm" weight="0.0233644611975" />
+</color>
+
+</colors>

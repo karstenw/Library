@@ -1,0 +1,33 @@
+<colors query="guam">
+
+<color name="blue" weight="0.60370528927">
+ <shade name="cool" weight="0.594202129246" />
+ <shade name="light" weight="0.304347432053" />
+ <shade name="dark" weight="0.101449144018" />
+</color>
+
+<color name="green" weight="0.21099798724">
+ <shade name="cool" weight="0.594202129246" />
+ <shade name="light" weight="0.304347432053" />
+ <shade name="dark" weight="0.101449144018" />
+</color>
+
+<color name="black" weight="0.0783023692024">
+ <shade name="cool" weight="0.5801879458" />
+ <shade name="light" weight="0.297169435654" />
+ <shade name="warm" weight="0.122641354397" />
+</color>
+
+<color name="white" weight="0.0555887048536">
+ <shade name="cool" weight="0.5801879458" />
+ <shade name="light" weight="0.297169435654" />
+ <shade name="warm" weight="0.122641354397" />
+</color>
+
+<color name="red" weight="0.0514046087893">
+ <shade name="cool" weight="0.5801879458" />
+ <shade name="light" weight="0.297169435654" />
+ <shade name="warm" weight="0.122641354397" />
+</color>
+
+</colors>

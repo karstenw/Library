@@ -1,0 +1,33 @@
+<colors query="electro hop">
+
+<color name="white" weight="0.999999000001">
+ <shade name="fresh" weight="0.545453950414" />
+ <shade name="cool" weight="0.363635966943" />
+ <shade name="soft" weight="0.0909089917356" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="fresh" weight="0.545453950414" />
+ <shade name="cool" weight="0.363635966943" />
+ <shade name="soft" weight="0.0909089917356" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="fresh" weight="0.545453950414" />
+ <shade name="cool" weight="0.363635966943" />
+ <shade name="soft" weight="0.0909089917356" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="fresh" weight="0.545453950414" />
+ <shade name="cool" weight="0.363635966943" />
+ <shade name="soft" weight="0.0909089917356" />
+</color>
+
+<color name="pink" weight="0.0">
+ <shade name="fresh" weight="0.545453950414" />
+ <shade name="cool" weight="0.363635966943" />
+ <shade name="soft" weight="0.0909089917356" />
+</color>
+
+</colors>

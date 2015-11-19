@@ -1,0 +1,33 @@
+<colors query="james joyce">
+
+<color name="blue" weight="0.801208567796">
+ <shade name="light" weight="0.993855163743" />
+ <shade name="hard" weight="0.00361401877725" />
+ <shade name="cool" weight="0.00252981314407" />
+</color>
+
+<color name="green" weight="0.182161570603">
+ <shade name="light" weight="0.993855163743" />
+ <shade name="hard" weight="0.00361401877725" />
+ <shade name="cool" weight="0.00252981314407" />
+</color>
+
+<color name="orange" weight="0.00604685711544">
+ <shade name="light" weight="0.993855163743" />
+ <shade name="hard" weight="0.00361401877725" />
+ <shade name="cool" weight="0.00252981314407" />
+</color>
+
+<color name="black" weight="0.00604685711544">
+ <shade name="light" weight="0.993855163743" />
+ <shade name="hard" weight="0.00361401877725" />
+ <shade name="cool" weight="0.00252981314407" />
+</color>
+
+<color name="white" weight="0.00453514283658">
+ <shade name="light" weight="0.993855163743" />
+ <shade name="hard" weight="0.00361401877725" />
+ <shade name="cool" weight="0.00252981314407" />
+</color>
+
+</colors>

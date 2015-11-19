@@ -1,0 +1,33 @@
+<colors query="ernest hemingway">
+
+<color name="white" weight="0.558200492617">
+ <shade name="light" weight="0.986237539087" />
+ <shade name="cool" weight="0.00764525224098" />
+ <shade name="hard" weight="0.00611620179278" />
+</color>
+
+<color name="green" weight="0.380951994961">
+ <shade name="light" weight="0.986237539087" />
+ <shade name="cool" weight="0.00764525224098" />
+ <shade name="hard" weight="0.00611620179278" />
+</color>
+
+<color name="black" weight="0.0264549996501">
+ <shade name="light" weight="0.986237539087" />
+ <shade name="cool" weight="0.00764525224098" />
+ <shade name="hard" weight="0.00611620179278" />
+</color>
+
+<color name="red" weight="0.0211639997201">
+ <shade name="light" weight="0.986237539087" />
+ <shade name="cool" weight="0.00764525224098" />
+ <shade name="hard" weight="0.00611620179278" />
+</color>
+
+<color name="orange" weight="0.013227499825">
+ <shade name="light" weight="0.986237539087" />
+ <shade name="cool" weight="0.00764525224098" />
+ <shade name="hard" weight="0.00611620179278" />
+</color>
+
+</colors>

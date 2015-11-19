@@ -1,0 +1,33 @@
+<colors query="elektro">
+
+<color name="red" weight="0.405842149243">
+ <shade name="dark" weight="0.934057915367" />
+ <shade name="hard" weight="0.0548437675078" />
+ <shade name="cool" weight="0.0110972935817" />
+</color>
+
+<color name="purple" weight="0.374472707756">
+ <shade name="dark" weight="0.934057915367" />
+ <shade name="hard" weight="0.0548437675078" />
+ <shade name="cool" weight="0.0110972935817" />
+</color>
+
+<color name="pink" weight="0.164689567809">
+ <shade name="dark" weight="0.934057915367" />
+ <shade name="hard" weight="0.0548437675078" />
+ <shade name="cool" weight="0.0110972935817" />
+</color>
+
+<color name="black" weight="0.0284285563479">
+ <shade name="dark" weight="0.934057915367" />
+ <shade name="hard" weight="0.0548437675078" />
+ <shade name="cool" weight="0.0110972935817" />
+</color>
+
+<color name="white" weight="0.0265659957596">
+ <shade name="dark" weight="0.934057915367" />
+ <shade name="hard" weight="0.0548437675078" />
+ <shade name="cool" weight="0.0110972935817" />
+</color>
+
+</colors>

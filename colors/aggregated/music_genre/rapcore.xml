@@ -1,0 +1,33 @@
+<colors query="rapcore">
+
+<color name="black" weight="0.769229985208">
+ <shade name="hard" weight="0.573667109158" />
+ <shade name="cool" weight="0.357366395869" />
+ <shade name="intense" weight="0.0689654448169" />
+</color>
+
+<color name="red" weight="0.0769229985208">
+ <shade name="hard" weight="0.573667109158" />
+ <shade name="cool" weight="0.357366395869" />
+ <shade name="intense" weight="0.0689654448169" />
+</color>
+
+<color name="orange" weight="0.0576922488906">
+ <shade name="hard" weight="0.573667109158" />
+ <shade name="cool" weight="0.357366395869" />
+ <shade name="intense" weight="0.0689654448169" />
+</color>
+
+<color name="blue" weight="0.0576922488906">
+ <shade name="hard" weight="0.573667109158" />
+ <shade name="cool" weight="0.357366395869" />
+ <shade name="intense" weight="0.0689654448169" />
+</color>
+
+<color name="white" weight="0.0384614992604">
+ <shade name="hard" weight="0.599999340984" />
+ <shade name="cool" weight="0.373770081269" />
+ <shade name="light" weight="0.0262294793873" />
+</color>
+
+</colors>

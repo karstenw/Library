@@ -1,0 +1,33 @@
+<colors query="glam rock">
+
+<color name="black" weight="0.535713733259">
+ <shade name="hard" weight="0.800228375171" />
+ <shade name="dark" weight="0.121657631261" />
+ <shade name="cool" weight="0.078112984593" />
+</color>
+
+<color name="white" weight="0.223214055525">
+ <shade name="hard" weight="0.800228375171" />
+ <shade name="dark" weight="0.121657631261" />
+ <shade name="cool" weight="0.078112984593" />
+</color>
+
+<color name="pink" weight="0.214285493304">
+ <shade name="hard" weight="0.800228375171" />
+ <shade name="dark" weight="0.121657631261" />
+ <shade name="cool" weight="0.078112984593" />
+</color>
+
+<color name="purple" weight="0.014880937035">
+ <shade name="hard" weight="0.800228375171" />
+ <shade name="dark" weight="0.121657631261" />
+ <shade name="cool" weight="0.078112984593" />
+</color>
+
+<color name="red" weight="0.011904749628">
+ <shade name="hard" weight="0.800228375171" />
+ <shade name="dark" weight="0.121657631261" />
+ <shade name="cool" weight="0.078112984593" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="coral sea">
+
+<color name="red" weight="0.400999494135">
+ <shade name="soft" weight="0.641084974232" />
+ <shade name="hard" weight="0.301824677649" />
+ <shade name="warm" weight="0.0570893188732" />
+</color>
+
+<color name="black" weight="0.25830616765">
+ <shade name="soft" weight="0.641084974232" />
+ <shade name="hard" weight="0.301824677649" />
+ <shade name="warm" weight="0.0570893188732" />
+</color>
+
+<color name="blue" weight="0.228101010949">
+ <shade name="soft" weight="0.661196209314" />
+ <shade name="hard" weight="0.311293105845" />
+ <shade name="cool" weight="0.0275096233072" />
+</color>
+
+<color name="white" weight="0.0880115772841">
+ <shade name="soft" weight="0.641084974232" />
+ <shade name="hard" weight="0.301824677649" />
+ <shade name="warm" weight="0.0570893188732" />
+</color>
+
+<color name="green" weight="0.0245807482119">
+ <shade name="soft" weight="0.661196209314" />
+ <shade name="hard" weight="0.311293105845" />
+ <shade name="cool" weight="0.0275096233072" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="liberia">
+
+<color name="black" weight="0.423840590852">
+ <shade name="fresh" weight="0.617646083912" />
+ <shade name="hard" weight="0.196078121877" />
+ <shade name="light" weight="0.186274215783" />
+</color>
+
+<color name="white" weight="0.245032841586">
+ <shade name="fresh" weight="0.617646083912" />
+ <shade name="hard" weight="0.196078121877" />
+ <shade name="light" weight="0.186274215783" />
+</color>
+
+<color name="green" weight="0.139072693873">
+ <shade name="fresh" weight="0.617646083912" />
+ <shade name="hard" weight="0.196078121877" />
+ <shade name="light" weight="0.186274215783" />
+</color>
+
+<color name="red" weight="0.125827675409">
+ <shade name="fresh" weight="0.617646083912" />
+ <shade name="hard" weight="0.196078121877" />
+ <shade name="light" weight="0.186274215783" />
+</color>
+
+<color name="blue" weight="0.0662250923206">
+ <shade name="fresh" weight="0.617646083912" />
+ <shade name="hard" weight="0.196078121877" />
+ <shade name="light" weight="0.186274215783" />
+</color>
+
+</colors>

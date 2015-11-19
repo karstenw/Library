@@ -1,0 +1,33 @@
+<colors query="country music">
+
+<color name="blue" weight="0.511459966006">
+ <shade name="soft" weight="0.427744879387" />
+ <shade name="dark" weight="0.308284597756" />
+ <shade name="light" weight="0.263968686829" />
+</color>
+
+<color name="green" weight="0.205215418459">
+ <shade name="soft" weight="0.427744879387" />
+ <shade name="dark" weight="0.308284597756" />
+ <shade name="light" weight="0.263968686829" />
+</color>
+
+<color name="orange" weight="0.137652188382">
+ <shade name="soft" weight="0.427744879387" />
+ <shade name="dark" weight="0.308284597756" />
+ <shade name="light" weight="0.263968686829" />
+</color>
+
+<color name="red" weight="0.099766264974">
+ <shade name="soft" weight="0.427744879387" />
+ <shade name="dark" weight="0.308284597756" />
+ <shade name="light" weight="0.263968686829" />
+</color>
+
+<color name="black" weight="0.0459051105292">
+ <shade name="soft" weight="0.427744879387" />
+ <shade name="dark" weight="0.308284597756" />
+ <shade name="light" weight="0.263968686829" />
+</color>
+
+</colors>

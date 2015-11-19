@@ -1,0 +1,33 @@
+<colors query="mohammed">
+
+<color name="black" weight="0.313245808744">
+ <shade name="light" weight="0.581445571734" />
+ <shade name="cool" weight="0.277574519169" />
+ <shade name="dark" weight="0.140978637368" />
+</color>
+
+<color name="red" weight="0.229107188609">
+ <shade name="light" weight="0.581445571734" />
+ <shade name="cool" weight="0.277574519169" />
+ <shade name="dark" weight="0.140978637368" />
+</color>
+
+<color name="green" weight="0.191585912063">
+ <shade name="light" weight="0.581445571734" />
+ <shade name="cool" weight="0.277574519169" />
+ <shade name="dark" weight="0.140978637368" />
+</color>
+
+<color name="white" weight="0.167708736079">
+ <shade name="light" weight="0.581445571734" />
+ <shade name="cool" weight="0.277574519169" />
+ <shade name="dark" weight="0.140978637368" />
+</color>
+
+<color name="blue" weight="0.0983512248869">
+ <shade name="light" weight="0.581445571734" />
+ <shade name="cool" weight="0.277574519169" />
+ <shade name="dark" weight="0.140978637368" />
+</color>
+
+</colors>

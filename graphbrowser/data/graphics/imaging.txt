@@ -1,0 +1,126 @@
+4, image, texture mapping
+2, image, layout
+4, Photoshop, image manipulation
+4, Core Image, image manipulation
+4, image, image manipulation
+2, layer, image
+1, opacity, layer
+1, blend mode, layer
+3, overlay blend, blend mode
+3, multiply blend, blend mode
+3, screen blend, blend mode
+3, soft light blend, blend mode
+3, dark light blend, blend mode
+4, screen blend, light
+4, overlay blend, surrealism
+4, overlay blend, dream
+1, brightness, layer
+1, saturation, layer
+4, filter, image manipulation
+7, blur, filter
+7, sharpen, filter
+6, unsharp mask, sharpen
+7, bump distortion, filter
+7, hole distortion, filter
+7, liquify, filter
+7, twirl, filter
+8, twirl, aesthetics
+7, gradient, layer
+1, alpha mask, layer
+4, gradient, alpha mask
+4, compositing, image manipulation
+6, compositing, blend mode
+4, Apple Shake, compositing
+2, transformation, image manipulation
+1, rotation, transformation
+1, scale, transformation
+1, flip, transformation
+7, invert, filter
+3, Dave McKean, illustrator
+3, Dave McKean, photographer
+6, collage, image manipulation
+9, Dave McKean, collage
+9, Dave McKean, dark mood
+6, Dave McKean, jazz
+7, collage, composition
+8, liquify, aesthetics
+2, perspective, depth
+4, rule of thirds, composition
+4, rule of thirds, aesthetics
+3, rule of thirds, golden ratio
+7, radial blur, filter
+4, radial blur, focus
+3, radial blur, blur
+3, motion blur, blur
+6, distortion, asymmetry
+1, distortion, bump distortion
+1, distortion, hole distortion
+1, distortion, perspective tile
+7, perspective tile, filter
+4, perspective tile, depth
+6, shadow, symmetry
+4, gradient, depth
+6, saturation, distance
+3, desaturate, filter
+1, grayscale, desaturate
+8, color, grayscale
+1, shadow, opacity
+6, motion, dynamic
+8, heavy, dynamic
+1, fast, motion
+1, slow, motion
+1, direction, motion
+7, motion blur, filter
+4, motion blur, motion
+1, shutter speed, photography
+4, photography, image
+9, photographer, photography
+1, exposure, shutter speed
+4, exposure, motion blur
+9, camera, photography
+9, camera, panning
+4, panning, motion blur
+4, layer, depth
+4, scale, depth
+2, depth, photography
+1, distance, depth
+1, nearby, distance
+1, far away, distance
+8, flatness, depth
+6, flatness, nearby
+6, depth, focus
+1, blur, far away
+1, small, far away
+6, canvas, image manipulation
+2, layer, canvas
+6, texture, canvas
+1, tactile, texture
+2, texture mapping, 3D computer graphics
+6, Dave McKean, texture
+6, texture, rough
+7, rust, texture
+7, wood, texture
+7, metal, texture
+7, paint, texture
+7, dirt, texture
+7, trash, texture
+7, marble, texture
+7, cloud, texture
+7, mist, texture
+7, skin, texture
+7, fur, texture
+2, fur, animal
+2, animal, nature
+2, skin, man
+2, man, nature
+7, fabric, texture
+6, fabric, pattern
+7, water, texture
+2, photography, graphic design
+7, nature, photography
+7, architecture, photography
+7, people, photography
+7, fashion, photography
+2, overlay blend, vivid effect
+2, gaussian blur, vivid effect
+3, gaussian blur, blur

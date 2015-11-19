@@ -1,0 +1,33 @@
+<colors query="broken beat">
+
+<color name="black" weight="0.666666000001">
+ <shade name="cool" weight="0.616351539681" />
+ <shade name="dark" weight="0.327043674117" />
+ <shade name="hard" weight="0.0566037128279" />
+</color>
+
+<color name="yellow" weight="0.222222">
+ <shade name="cool" weight="0.616351539681" />
+ <shade name="dark" weight="0.327043674117" />
+ <shade name="hard" weight="0.0566037128279" />
+</color>
+
+<color name="pink" weight="0.111111">
+ <shade name="cool" weight="0.616351539681" />
+ <shade name="dark" weight="0.327043674117" />
+ <shade name="hard" weight="0.0566037128279" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="cool" weight="0.616351539681" />
+ <shade name="dark" weight="0.327043674117" />
+ <shade name="hard" weight="0.0566037128279" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="cool" weight="0.616351539681" />
+ <shade name="dark" weight="0.327043674117" />
+ <shade name="hard" weight="0.0566037128279" />
+</color>
+
+</colors>

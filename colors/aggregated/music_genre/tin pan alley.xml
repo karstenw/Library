@@ -1,0 +1,33 @@
+<colors query="tin pan alley">
+
+<color name="white" weight="0.671328000001">
+ <shade name="dark" weight="0.437499234376" />
+ <shade name="light" weight="0.312499453126" />
+ <shade name="weak" weight="0.249999562501" />
+</color>
+
+<color name="black" weight="0.237762">
+ <shade name="dark" weight="0.437499234376" />
+ <shade name="light" weight="0.312499453126" />
+ <shade name="weak" weight="0.249999562501" />
+</color>
+
+<color name="blue" weight="0.041958">
+ <shade name="dark" weight="0.437499234376" />
+ <shade name="light" weight="0.312499453126" />
+ <shade name="weak" weight="0.249999562501" />
+</color>
+
+<color name="pink" weight="0.027972">
+ <shade name="dark" weight="0.437499234376" />
+ <shade name="light" weight="0.312499453126" />
+ <shade name="weak" weight="0.249999562501" />
+</color>
+
+<color name="red" weight="0.020979">
+ <shade name="dark" weight="0.437499234376" />
+ <shade name="light" weight="0.312499453126" />
+ <shade name="weak" weight="0.249999562501" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="tennessee">
+
+<color name="black" weight="0.486580337115">
+ <shade name="warm" weight="0.367625389168" />
+ <shade name="cool" weight="0.350526533857" />
+ <shade name="dark" weight="0.281846131695" />
+</color>
+
+<color name="white" weight="0.36657173379">
+ <shade name="warm" weight="0.367625389168" />
+ <shade name="cool" weight="0.350526533857" />
+ <shade name="dark" weight="0.281846131695" />
+</color>
+
+<color name="blue" weight="0.0872789842358">
+ <shade name="cool" weight="0.402749590973" />
+ <shade name="dark" weight="0.323836866238" />
+ <shade name="hard" weight="0.273411307693" />
+</color>
+
+<color name="pink" weight="0.0333842114702">
+ <shade name="warm" weight="0.367625389168" />
+ <shade name="cool" weight="0.350526533857" />
+ <shade name="dark" weight="0.281846131695" />
+</color>
+
+<color name="red" weight="0.0261836952707">
+ <shade name="warm" weight="0.367625389168" />
+ <shade name="cool" weight="0.350526533857" />
+ <shade name="dark" weight="0.281846131695" />
+</color>
+
+</colors>

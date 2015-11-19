@@ -1,0 +1,33 @@
+<colors query="slovenia">
+
+<color name="white" weight="0.354166254579">
+ <shade name="cool" weight="0.460525676507" />
+ <shade name="light" weight="0.335525850027" />
+ <shade name="hard" weight="0.20394708531" />
+</color>
+
+<color name="yellow" weight="0.285416334573">
+ <shade name="cool" weight="0.460525676507" />
+ <shade name="light" weight="0.335525850027" />
+ <shade name="hard" weight="0.20394708531" />
+</color>
+
+<color name="green" weight="0.136458174559">
+ <shade name="cool" weight="0.460525676507" />
+ <shade name="light" weight="0.335525850027" />
+ <shade name="hard" weight="0.20394708531" />
+</color>
+
+<color name="red" weight="0.121874858194">
+ <shade name="cool" weight="0.460525676507" />
+ <shade name="light" weight="0.335525850027" />
+ <shade name="hard" weight="0.20394708531" />
+</color>
+
+<color name="black" weight="0.102083214555">
+ <shade name="cool" weight="0.460525676507" />
+ <shade name="light" weight="0.335525850027" />
+ <shade name="hard" weight="0.20394708531" />
+</color>
+
+</colors>

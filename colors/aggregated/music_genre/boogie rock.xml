@@ -1,0 +1,33 @@
+<colors query="boogie rock">
+
+<color name="blue" weight="0.799999200001">
+ <shade name="hard" weight="0.975785925527" />
+ <shade name="fresh" weight="0.0121065251306" />
+ <shade name="bright" weight="0.0121065251306" />
+</color>
+
+<color name="green" weight="0.1999998">
+ <shade name="hard" weight="0.975785925527" />
+ <shade name="fresh" weight="0.0121065251306" />
+ <shade name="bright" weight="0.0121065251306" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="hard" weight="0.975785925527" />
+ <shade name="fresh" weight="0.0121065251306" />
+ <shade name="bright" weight="0.0121065251306" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="hard" weight="0.975785925527" />
+ <shade name="fresh" weight="0.0121065251306" />
+ <shade name="bright" weight="0.0121065251306" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="hard" weight="0.975785925527" />
+ <shade name="fresh" weight="0.0121065251306" />
+ <shade name="bright" weight="0.0121065251306" />
+</color>
+
+</colors>

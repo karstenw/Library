@@ -1,0 +1,33 @@
+<colors query="adam smith">
+
+<color name="black" weight="0.980150439984">
+ <shade name="light" weight="0.749999015626" />
+ <shade name="hard" weight="0.14062481543" />
+ <shade name="bright" weight="0.109374856446" />
+</color>
+
+<color name="white" weight="0.0124820828474">
+ <shade name="light" weight="0.749999015626" />
+ <shade name="hard" weight="0.14062481543" />
+ <shade name="bright" weight="0.109374856446" />
+</color>
+
+<color name="blue" weight="0.00429711048845">
+ <shade name="light" weight="0.749999015626" />
+ <shade name="hard" weight="0.14062481543" />
+ <shade name="bright" weight="0.109374856446" />
+</color>
+
+<color name="green" weight="0.00184161878076">
+ <shade name="light" weight="0.749999015626" />
+ <shade name="hard" weight="0.14062481543" />
+ <shade name="bright" weight="0.109374856446" />
+</color>
+
+<color name="red" weight="0.00122774585384">
+ <shade name="light" weight="0.749999015626" />
+ <shade name="hard" weight="0.14062481543" />
+ <shade name="bright" weight="0.109374856446" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="martha graham">
+
+<color name="white" weight="0.4999995">
+ <shade name="light" weight="0.994564218773" />
+ <shade name="dark" weight="0.00407608286382" />
+ <shade name="cool" weight="0.00135869428794" />
+</color>
+
+<color name="black" weight="0.374999625">
+ <shade name="light" weight="0.991868925486" />
+ <shade name="intense" weight="0.00406503657986" />
+ <shade name="dark" weight="0.00406503657986" />
+</color>
+
+<color name="red" weight="0.124999875">
+ <shade name="light" weight="0.991868925486" />
+ <shade name="intense" weight="0.00406503657986" />
+ <shade name="dark" weight="0.00406503657986" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="light" weight="0.991868925486" />
+ <shade name="intense" weight="0.00406503657986" />
+ <shade name="dark" weight="0.00406503657986" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="light" weight="0.994564218773" />
+ <shade name="dark" weight="0.00407608286382" />
+ <shade name="cool" weight="0.00135869428794" />
+</color>
+
+</colors>

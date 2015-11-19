@@ -1,0 +1,33 @@
+<colors query="love metal">
+
+<color name="black" weight="0.597304784763">
+ <shade name="light" weight="0.580620720081" />
+ <shade name="dark" weight="0.417898989612" />
+ <shade name="hard" weight="0.0014792884588" />
+</color>
+
+<color name="pink" weight="0.377245127219">
+ <shade name="light" weight="0.580620720081" />
+ <shade name="dark" weight="0.417898989612" />
+ <shade name="hard" weight="0.0014792884588" />
+</color>
+
+<color name="purple" weight="0.0134730402578">
+ <shade name="light" weight="0.580620720081" />
+ <shade name="dark" weight="0.417898989612" />
+ <shade name="hard" weight="0.0014792884588" />
+</color>
+
+<color name="red" weight="0.00598801789237">
+ <shade name="light" weight="0.580620720081" />
+ <shade name="dark" weight="0.417898989612" />
+ <shade name="hard" weight="0.0014792884588" />
+</color>
+
+<color name="green" weight="0.00598801789237">
+ <shade name="light" weight="0.580620720081" />
+ <shade name="dark" weight="0.417898989612" />
+ <shade name="hard" weight="0.0014792884588" />
+</color>
+
+</colors>

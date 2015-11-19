@@ -1,0 +1,33 @@
+<colors query="stephen hawking">
+
+<color name="white" weight="0.621967989858">
+ <shade name="light" weight="0.650861392855" />
+ <shade name="cool" weight="0.318965185903" />
+ <shade name="hard" weight="0.0301723824502" />
+</color>
+
+<color name="green" weight="0.159771593725">
+ <shade name="light" weight="0.650861392855" />
+ <shade name="cool" weight="0.318965185903" />
+ <shade name="hard" weight="0.0301723824502" />
+</color>
+
+<color name="blue" weight="0.115549099033">
+ <shade name="light" weight="0.650861392855" />
+ <shade name="cool" weight="0.318965185903" />
+ <shade name="hard" weight="0.0301723824502" />
+</color>
+
+<color name="black" weight="0.0955776498177">
+ <shade name="light" weight="0.650861392855" />
+ <shade name="cool" weight="0.318965185903" />
+ <shade name="hard" weight="0.0301723824502" />
+</color>
+
+<color name="red" weight="0.00713266043415">
+ <shade name="light" weight="0.650861392855" />
+ <shade name="cool" weight="0.318965185903" />
+ <shade name="hard" weight="0.0301723824502" />
+</color>
+
+</colors>

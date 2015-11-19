@@ -1,0 +1,33 @@
+<colors query="space music">
+
+<color name="green" weight="0.759930154129">
+ <shade name="dark" weight="0.583108057157" />
+ <shade name="cool" weight="0.297394093866" />
+ <shade name="light" weight="0.119496720496" />
+</color>
+
+<color name="red" weight="0.215889248332">
+ <shade name="dark" weight="0.583108057157" />
+ <shade name="cool" weight="0.297394093866" />
+ <shade name="light" weight="0.119496720496" />
+</color>
+
+<color name="white" weight="0.0155440258799">
+ <shade name="dark" weight="0.583108057157" />
+ <shade name="cool" weight="0.297394093866" />
+ <shade name="light" weight="0.119496720496" />
+</color>
+
+<color name="blue" weight="0.00518134195997">
+ <shade name="dark" weight="0.583108057157" />
+ <shade name="cool" weight="0.297394093866" />
+ <shade name="light" weight="0.119496720496" />
+</color>
+
+<color name="black" weight="0.00345422797331">
+ <shade name="dark" weight="0.583108057157" />
+ <shade name="cool" weight="0.297394093866" />
+ <shade name="light" weight="0.119496720496" />
+</color>
+
+</colors>

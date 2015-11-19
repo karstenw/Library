@@ -1,0 +1,33 @@
+<colors query="incidental music">
+
+<color name="green" weight="0.333333">
+ <shade name="light" weight="0.897589382749" />
+ <shade name="cool" weight="0.054216808354" />
+ <shade name="intense" weight="0.0481927185369" />
+</color>
+
+<color name="white" weight="0.1999998">
+ <shade name="light" weight="0.908535582653" />
+ <shade name="cool" weight="0.0548779882139" />
+ <shade name="dark" weight="0.036585325476" />
+</color>
+
+<color name="red" weight="0.1999998">
+ <shade name="light" weight="0.897589382749" />
+ <shade name="cool" weight="0.054216808354" />
+ <shade name="intense" weight="0.0481927185369" />
+</color>
+
+<color name="blue" weight="0.1333332">
+ <shade name="light" weight="0.897589382749" />
+ <shade name="cool" weight="0.054216808354" />
+ <shade name="intense" weight="0.0481927185369" />
+</color>
+
+<color name="black" weight="0.1333332">
+ <shade name="light" weight="0.897589382749" />
+ <shade name="cool" weight="0.054216808354" />
+ <shade name="intense" weight="0.0481927185369" />
+</color>
+
+</colors>

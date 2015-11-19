@@ -1,0 +1,33 @@
+<colors query="gertrude stein">
+
+<color name="white" weight="0.770491032788">
+ <shade name="cool" weight="0.84699367464" />
+ <shade name="light" weight="0.125682932366" />
+ <shade name="hard" weight="0.0273223766013" />
+</color>
+
+<color name="red" weight="0.114753983607">
+ <shade name="cool" weight="0.84699367464" />
+ <shade name="light" weight="0.125682932366" />
+ <shade name="hard" weight="0.0273223766013" />
+</color>
+
+<color name="black" weight="0.0819671311476">
+ <shade name="cool" weight="0.84699367464" />
+ <shade name="light" weight="0.125682932366" />
+ <shade name="hard" weight="0.0273223766013" />
+</color>
+
+<color name="green" weight="0.032786852459">
+ <shade name="cool" weight="0.84699367464" />
+ <shade name="light" weight="0.125682932366" />
+ <shade name="hard" weight="0.0273223766013" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="cool" weight="0.84699367464" />
+ <shade name="light" weight="0.125682932366" />
+ <shade name="hard" weight="0.0273223766013" />
+</color>
+
+</colors>

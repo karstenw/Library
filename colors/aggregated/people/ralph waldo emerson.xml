@@ -1,0 +1,33 @@
+<colors query="ralph waldo emerson">
+
+<color name="white" weight="0.985115948338">
+ <shade name="light" weight="0.958619704591" />
+ <shade name="dark" weight="0.020689633912" />
+ <shade name="cool" weight="0.020689633912" />
+</color>
+
+<color name="orange" weight="0.00425229905758">
+ <shade name="light" weight="0.958619704591" />
+ <shade name="dark" weight="0.020689633912" />
+ <shade name="cool" weight="0.020689633912" />
+</color>
+
+<color name="green" weight="0.00425229905758">
+ <shade name="light" weight="0.958619704591" />
+ <shade name="dark" weight="0.020689633912" />
+ <shade name="cool" weight="0.020689633912" />
+</color>
+
+<color name="blue" weight="0.00354358254798">
+ <shade name="light" weight="0.958619704591" />
+ <shade name="dark" weight="0.020689633912" />
+ <shade name="cool" weight="0.020689633912" />
+</color>
+
+<color name="red" weight="0.00283486603838">
+ <shade name="light" weight="0.958619704591" />
+ <shade name="dark" weight="0.020689633912" />
+ <shade name="cool" weight="0.020689633912" />
+</color>
+
+</colors>

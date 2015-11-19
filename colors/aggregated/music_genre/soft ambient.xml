@@ -1,0 +1,33 @@
+<colors query="soft ambient">
+
+<color name="white" weight="0.363636">
+ <shade name="bright" weight="0.979682988806" />
+ <shade name="hard" weight="0.0112866703779" />
+ <shade name="warm" weight="0.00902933630236" />
+</color>
+
+<color name="orange" weight="0.272727">
+ <shade name="bright" weight="0.979682988806" />
+ <shade name="hard" weight="0.0112866703779" />
+ <shade name="warm" weight="0.00902933630236" />
+</color>
+
+<color name="green" weight="0.181818">
+ <shade name="bright" weight="0.986362638792" />
+ <shade name="hard" weight="0.0113636248709" />
+ <shade name="soft" weight="0.00227272497418" />
+</color>
+
+<color name="yellow" weight="0.0909090000001">
+ <shade name="bright" weight="0.979682988806" />
+ <shade name="hard" weight="0.0112866703779" />
+ <shade name="warm" weight="0.00902933630236" />
+</color>
+
+<color name="blue" weight="0.0909090000001">
+ <shade name="bright" weight="0.986362638792" />
+ <shade name="hard" weight="0.0113636248709" />
+ <shade name="soft" weight="0.00227272497418" />
+</color>
+
+</colors>

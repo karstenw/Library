@@ -1,0 +1,33 @@
+<colors query="libya">
+
+<color name="black" weight="0.256636872896">
+ <shade name="dark" weight="0.663733396465" />
+ <shade name="fresh" weight="0.30400749087" />
+ <shade name="cool" weight="0.0322580295778" />
+</color>
+
+<color name="green" weight="0.230088230872">
+ <shade name="dark" weight="0.663733396465" />
+ <shade name="fresh" weight="0.30400749087" />
+ <shade name="cool" weight="0.0322580295778" />
+</color>
+
+<color name="blue" weight="0.194690041507">
+ <shade name="dark" weight="0.663733396465" />
+ <shade name="fresh" weight="0.30400749087" />
+ <shade name="cool" weight="0.0322580295778" />
+</color>
+
+<color name="white" weight="0.159291852142">
+ <shade name="dark" weight="0.663733396465" />
+ <shade name="fresh" weight="0.30400749087" />
+ <shade name="cool" weight="0.0322580295778" />
+</color>
+
+<color name="red" weight="0.159291852142">
+ <shade name="dark" weight="0.663733396465" />
+ <shade name="fresh" weight="0.30400749087" />
+ <shade name="cool" weight="0.0322580295778" />
+</color>
+
+</colors>

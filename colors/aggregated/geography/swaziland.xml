@@ -1,0 +1,33 @@
+<colors query="swaziland">
+
+<color name="red" weight="0.430555098091">
+ <shade name="dark" weight="0.347825270323" />
+ <shade name="cool" weight="0.347825270323" />
+ <shade name="warm" weight="0.304347111533" />
+</color>
+
+<color name="blue" weight="0.187499800781">
+ <shade name="dark" weight="0.347825270323" />
+ <shade name="cool" weight="0.347825270323" />
+ <shade name="soft" weight="0.304347111533" />
+</color>
+
+<color name="black" weight="0.166666489584">
+ <shade name="dark" weight="0.347825270323" />
+ <shade name="cool" weight="0.347825270323" />
+ <shade name="warm" weight="0.304347111533" />
+</color>
+
+<color name="white" weight="0.111110993056">
+ <shade name="dark" weight="0.347825270323" />
+ <shade name="cool" weight="0.347825270323" />
+ <shade name="warm" weight="0.304347111533" />
+</color>
+
+<color name="green" weight="0.10416655599">
+ <shade name="dark" weight="0.347825270323" />
+ <shade name="cool" weight="0.347825270323" />
+ <shade name="soft" weight="0.304347111533" />
+</color>
+
+</colors>

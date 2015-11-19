@@ -1,0 +1,33 @@
+<colors query="indie pop">
+
+<color name="blue" weight="0.887217134548">
+ <shade name="cool" weight="0.464337023444" />
+ <shade name="soft" weight="0.296942798691" />
+ <shade name="dark" weight="0.238718720516" />
+</color>
+
+<color name="red" weight="0.0375939463791">
+ <shade name="cool" weight="0.464337023444" />
+ <shade name="soft" weight="0.296942798691" />
+ <shade name="dark" weight="0.238718720516" />
+</color>
+
+<color name="pink" weight="0.0263157624654">
+ <shade name="cool" weight="0.464337023444" />
+ <shade name="soft" weight="0.296942798691" />
+ <shade name="dark" weight="0.238718720516" />
+</color>
+
+<color name="green" weight="0.0263157624654">
+ <shade name="cool" weight="0.464337023444" />
+ <shade name="soft" weight="0.296942798691" />
+ <shade name="dark" weight="0.238718720516" />
+</color>
+
+<color name="black" weight="0.0225563678275">
+ <shade name="cool" weight="0.464337023444" />
+ <shade name="soft" weight="0.296942798691" />
+ <shade name="dark" weight="0.238718720516" />
+</color>
+
+</colors>

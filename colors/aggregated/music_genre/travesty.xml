@@ -1,0 +1,33 @@
+<colors query="travesty">
+
+<color name="black" weight="0.685349529228">
+ <shade name="dark" weight="0.588234550174" />
+ <shade name="light" weight="0.323529002596" />
+ <shade name="cool" weight="0.0882351825261" />
+</color>
+
+<color name="white" weight="0.0980890590159">
+ <shade name="dark" weight="0.588234550174" />
+ <shade name="light" weight="0.323529002596" />
+ <shade name="cool" weight="0.0882351825261" />
+</color>
+
+<color name="yellow" weight="0.0777069168827">
+ <shade name="dark" weight="0.588234550174" />
+ <shade name="light" weight="0.323529002596" />
+ <shade name="cool" weight="0.0882351825261" />
+</color>
+
+<color name="green" weight="0.0764330329994">
+ <shade name="dark" weight="0.588234550174" />
+ <shade name="light" weight="0.323529002596" />
+ <shade name="cool" weight="0.0882351825261" />
+</color>
+
+<color name="orange" weight="0.0624203102829">
+ <shade name="dark" weight="0.588234550174" />
+ <shade name="light" weight="0.323529002596" />
+ <shade name="cool" weight="0.0882351825261" />
+</color>
+
+</colors>

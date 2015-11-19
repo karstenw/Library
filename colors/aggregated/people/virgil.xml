@@ -1,0 +1,33 @@
+<colors query="virgil">
+
+<color name="white" weight="0.690827701933">
+ <shade name="light" weight="0.569332559041" />
+ <shade name="cool" weight="0.270666298561" />
+ <shade name="hard" weight="0.1599997824" />
+</color>
+
+<color name="green" weight="0.176035324475">
+ <shade name="light" weight="0.569332559041" />
+ <shade name="cool" weight="0.270666298561" />
+ <shade name="hard" weight="0.1599997824" />
+</color>
+
+<color name="black" weight="0.0902365948992">
+ <shade name="light" weight="0.569332559041" />
+ <shade name="cool" weight="0.270666298561" />
+ <shade name="hard" weight="0.1599997824" />
+</color>
+
+<color name="red" weight="0.0230768996791">
+ <shade name="light" weight="0.569332559041" />
+ <shade name="cool" weight="0.270666298561" />
+ <shade name="hard" weight="0.1599997824" />
+</color>
+
+<color name="blue" weight="0.019822465109">
+ <shade name="light" weight="0.569332559041" />
+ <shade name="cool" weight="0.270666298561" />
+ <shade name="hard" weight="0.1599997824" />
+</color>
+
+</colors>

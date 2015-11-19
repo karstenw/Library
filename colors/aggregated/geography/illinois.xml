@@ -1,0 +1,33 @@
+<colors query="illinois">
+
+<color name="green" weight="0.73013283684">
+ <shade name="hard" weight="0.738421842598" />
+ <shade name="light" weight="0.152482024559" />
+ <shade name="cool" weight="0.109094526463" />
+</color>
+
+<color name="white" weight="0.242811617833">
+ <shade name="hard" weight="0.62866189996" />
+ <shade name="warm" weight="0.241519825973" />
+ <shade name="light" weight="0.129816906461" />
+</color>
+
+<color name="yellow" weight="0.015168651184">
+ <shade name="hard" weight="0.62866189996" />
+ <shade name="warm" weight="0.241519825973" />
+ <shade name="light" weight="0.129816906461" />
+</color>
+
+<color name="red" weight="0.00679193336595">
+ <shade name="hard" weight="0.62866189996" />
+ <shade name="warm" weight="0.241519825973" />
+ <shade name="light" weight="0.129816906461" />
+</color>
+
+<color name="orange" weight="0.00509395002446">
+ <shade name="hard" weight="0.62866189996" />
+ <shade name="warm" weight="0.241519825973" />
+ <shade name="light" weight="0.129816906461" />
+</color>
+
+</colors>

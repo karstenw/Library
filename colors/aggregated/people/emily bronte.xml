@@ -1,0 +1,33 @@
+<colors query="emily bronte">
+
+<color name="white" weight="0.411764294118">
+ <shade name="light" weight="0.39999956" />
+ <shade name="hard" weight="0.39999956" />
+ <shade name="cool" weight="0.19999978" />
+</color>
+
+<color name="green" weight="0.294117352941">
+ <shade name="light" weight="0.39999956" />
+ <shade name="hard" weight="0.39999956" />
+ <shade name="cool" weight="0.19999978" />
+</color>
+
+<color name="orange" weight="0.235293882353">
+ <shade name="light" weight="0.39999956" />
+ <shade name="hard" weight="0.39999956" />
+ <shade name="cool" weight="0.19999978" />
+</color>
+
+<color name="black" weight="0.0588234705883">
+ <shade name="light" weight="0.39999956" />
+ <shade name="hard" weight="0.39999956" />
+ <shade name="cool" weight="0.19999978" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="light" weight="0.39999956" />
+ <shade name="hard" weight="0.39999956" />
+ <shade name="cool" weight="0.19999978" />
+</color>
+
+</colors>

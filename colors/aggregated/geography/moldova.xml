@@ -1,0 +1,33 @@
+<colors query="moldova">
+
+<color name="orange" weight="0.979969790768">
+ <shade name="weak" weight="0.951719336072" />
+ <shade name="cool" weight="0.0249722274771" />
+ <shade name="neutral" weight="0.023307412312" />
+</color>
+
+<color name="green" weight="0.00932690546476">
+ <shade name="weak" weight="0.951719336072" />
+ <shade name="cool" weight="0.0249722274771" />
+ <shade name="neutral" weight="0.023307412312" />
+</color>
+
+<color name="red" weight="0.00498581121619">
+ <shade name="weak" weight="0.951719336072" />
+ <shade name="cool" weight="0.0249722274771" />
+ <shade name="neutral" weight="0.023307412312" />
+</color>
+
+<color name="white" weight="0.00343849049392">
+ <shade name="weak" weight="0.951719336072" />
+ <shade name="cool" weight="0.0249722274771" />
+ <shade name="neutral" weight="0.023307412312" />
+</color>
+
+<color name="black" weight="0.00227799995222">
+ <shade name="weak" weight="0.951719336072" />
+ <shade name="cool" weight="0.0249722274771" />
+ <shade name="neutral" weight="0.023307412312" />
+</color>
+
+</colors>

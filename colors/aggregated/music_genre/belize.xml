@@ -1,0 +1,33 @@
+<colors query="belize">
+
+<color name="white" weight="0.379008330745">
+ <shade name="cool" weight="0.374999448903" />
+ <shade name="dark" weight="0.337837341354" />
+ <shade name="light" weight="0.287161740151" />
+</color>
+
+<color name="cyan" weight="0.297011336113">
+ <shade name="cool" weight="0.374999448903" />
+ <shade name="dark" weight="0.337837341354" />
+ <shade name="light" weight="0.287161740151" />
+</color>
+
+<color name="blue" weight="0.207725719735">
+ <shade name="cool" weight="0.374999448903" />
+ <shade name="dark" weight="0.337837341354" />
+ <shade name="light" weight="0.287161740151" />
+</color>
+
+<color name="black" weight="0.0663264578804">
+ <shade name="cool" weight="0.374999448903" />
+ <shade name="dark" weight="0.337837341354" />
+ <shade name="light" weight="0.287161740151" />
+</color>
+
+<color name="red" weight="0.0499270589539">
+ <shade name="cool" weight="0.374999448903" />
+ <shade name="dark" weight="0.337837341354" />
+ <shade name="light" weight="0.287161740151" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="john clare">
+
+<color name="green" weight="0.940396410597">
+ <shade name="cool" weight="0.963413658984" />
+ <shade name="light" weight="0.0243902192148" />
+ <shade name="hard" weight="0.0121951096074" />
+</color>
+
+<color name="white" weight="0.0397350596027">
+ <shade name="cool" weight="0.963413658984" />
+ <shade name="light" weight="0.0243902192148" />
+ <shade name="hard" weight="0.0121951096074" />
+</color>
+
+<color name="orange" weight="0.0132450198676">
+ <shade name="cool" weight="0.963413658984" />
+ <shade name="light" weight="0.0243902192148" />
+ <shade name="hard" weight="0.0121951096074" />
+</color>
+
+<color name="pink" weight="0.00662250993378">
+ <shade name="cool" weight="0.963413658984" />
+ <shade name="light" weight="0.0243902192148" />
+ <shade name="hard" weight="0.0121951096074" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="cool" weight="0.963413658984" />
+ <shade name="light" weight="0.0243902192148" />
+ <shade name="hard" weight="0.0121951096074" />
+</color>
+
+</colors>

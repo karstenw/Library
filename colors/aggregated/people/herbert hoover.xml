@@ -1,0 +1,33 @@
+<colors query="herbert hoover">
+
+<color name="white" weight="0.391303956522">
+ <shade name="light" weight="0.499999125002" />
+ <shade name="neutral" weight="0.249999562501" />
+ <shade name="hard" weight="0.249999562501" />
+</color>
+
+<color name="green" weight="0.391303956522">
+ <shade name="light" weight="0.499999125002" />
+ <shade name="neutral" weight="0.249999562501" />
+ <shade name="intense" weight="0.249999562501" />
+</color>
+
+<color name="red" weight="0.130434652174">
+ <shade name="light" weight="0.499999125002" />
+ <shade name="neutral" weight="0.249999562501" />
+ <shade name="intense" weight="0.249999562501" />
+</color>
+
+<color name="blue" weight="0.0434782173913">
+ <shade name="light" weight="0.499999125002" />
+ <shade name="neutral" weight="0.249999562501" />
+ <shade name="intense" weight="0.249999562501" />
+</color>
+
+<color name="black" weight="0.0434782173913">
+ <shade name="light" weight="0.499999125002" />
+ <shade name="neutral" weight="0.249999562501" />
+ <shade name="intense" weight="0.249999562501" />
+</color>
+
+</colors>

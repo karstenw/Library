@@ -1,0 +1,33 @@
+<colors query="louisa may alcott">
+
+<color name="white" weight="0.696427875001">
+ <shade name="dark" weight="0.919999067734" />
+ <shade name="light" weight="0.0533332792889" />
+ <shade name="bright" weight="0.0266666396445" />
+</color>
+
+<color name="red" weight="0.10714275">
+ <shade name="dark" weight="0.919999067734" />
+ <shade name="light" weight="0.0533332792889" />
+ <shade name="bright" weight="0.0266666396445" />
+</color>
+
+<color name="black" weight="0.10714275">
+ <shade name="dark" weight="0.919999067734" />
+ <shade name="light" weight="0.0533332792889" />
+ <shade name="bright" weight="0.0266666396445" />
+</color>
+
+<color name="green" weight="0.0714285000001">
+ <shade name="dark" weight="0.919999067734" />
+ <shade name="light" weight="0.0533332792889" />
+ <shade name="bright" weight="0.0266666396445" />
+</color>
+
+<color name="blue" weight="0.017857125">
+ <shade name="dark" weight="0.919999067734" />
+ <shade name="light" weight="0.0533332792889" />
+ <shade name="bright" weight="0.0266666396445" />
+</color>
+
+</colors>

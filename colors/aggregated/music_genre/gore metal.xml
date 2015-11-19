@@ -1,0 +1,33 @@
+<colors query="gore metal">
+
+<color name="black" weight="0.990653214954">
+ <shade name="cool" weight="0.454544917356" />
+ <shade name="hard" weight="0.272726950414" />
+ <shade name="dark" weight="0.272726950414" />
+</color>
+
+<color name="green" weight="0.00467289252337">
+ <shade name="cool" weight="0.454544917356" />
+ <shade name="hard" weight="0.272726950414" />
+ <shade name="dark" weight="0.272726950414" />
+</color>
+
+<color name="white" weight="0.00233644626168">
+ <shade name="cool" weight="0.454544917356" />
+ <shade name="hard" weight="0.272726950414" />
+ <shade name="dark" weight="0.272726950414" />
+</color>
+
+<color name="red" weight="0.00233644626168">
+ <shade name="cool" weight="0.454544917356" />
+ <shade name="hard" weight="0.272726950414" />
+ <shade name="dark" weight="0.272726950414" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="cool" weight="0.454544917356" />
+ <shade name="hard" weight="0.272726950414" />
+ <shade name="dark" weight="0.272726950414" />
+</color>
+
+</colors>

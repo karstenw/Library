@@ -1,0 +1,33 @@
+<colors query="ebm">
+
+<color name="black" weight="0.634145670584">
+ <shade name="dark" weight="0.734541754236" />
+ <shade name="hard" weight="0.244847251412" />
+ <shade name="fresh" weight="0.0206099579587" />
+</color>
+
+<color name="blue" weight="0.228658294682">
+ <shade name="dark" weight="0.734541754236" />
+ <shade name="hard" weight="0.244847251412" />
+ <shade name="fresh" weight="0.0206099579587" />
+</color>
+
+<color name="purple" weight="0.0853657633478">
+ <shade name="dark" weight="0.734541754236" />
+ <shade name="hard" weight="0.244847251412" />
+ <shade name="fresh" weight="0.0206099579587" />
+</color>
+
+<color name="green" weight="0.0274389953618">
+ <shade name="dark" weight="0.734541754236" />
+ <shade name="hard" weight="0.244847251412" />
+ <shade name="fresh" weight="0.0206099579587" />
+</color>
+
+<color name="white" weight="0.0243902180994">
+ <shade name="dark" weight="0.734541754236" />
+ <shade name="hard" weight="0.244847251412" />
+ <shade name="fresh" weight="0.0206099579587" />
+</color>
+
+</colors>

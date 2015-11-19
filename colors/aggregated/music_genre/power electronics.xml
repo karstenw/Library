@@ -1,0 +1,33 @@
+<colors query="power electronics">
+
+<color name="white" weight="0.984635886872">
+ <shade name="cool" weight="0.630809453356" />
+ <shade name="dark" weight="0.275564129624" />
+ <shade name="hard" weight="0.093625403077" />
+</color>
+
+<color name="green" weight="0.00558658659218">
+ <shade name="cool" weight="0.630809453356" />
+ <shade name="dark" weight="0.275564129624" />
+ <shade name="hard" weight="0.093625403077" />
+</color>
+
+<color name="black" weight="0.00488826326816">
+ <shade name="cool" weight="0.630809453356" />
+ <shade name="dark" weight="0.275564129624" />
+ <shade name="hard" weight="0.093625403077" />
+</color>
+
+<color name="red" weight="0.00349161662012">
+ <shade name="cool" weight="0.630809453356" />
+ <shade name="dark" weight="0.275564129624" />
+ <shade name="hard" weight="0.093625403077" />
+</color>
+
+<color name="blue" weight="0.00139664664805">
+ <shade name="cool" weight="0.630809453356" />
+ <shade name="dark" weight="0.275564129624" />
+ <shade name="hard" weight="0.093625403077" />
+</color>
+
+</colors>

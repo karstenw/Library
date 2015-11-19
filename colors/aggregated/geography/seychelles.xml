@@ -1,0 +1,33 @@
+<colors query="seychelles">
+
+<color name="green" weight="0.317803318614">
+ <shade name="fresh" weight="0.528301089357" />
+ <shade name="light" weight="0.235848700606" />
+ <shade name="dark" weight="0.235848700606" />
+</color>
+
+<color name="blue" weight="0.276760656175">
+ <shade name="fresh" weight="0.528301089357" />
+ <shade name="light" weight="0.235848700606" />
+ <shade name="dark" weight="0.235848700606" />
+</color>
+
+<color name="black" weight="0.259567108397">
+ <shade name="fresh" weight="0.528301089357" />
+ <shade name="warm" weight="0.235848700606" />
+ <shade name="light" weight="0.235848700606" />
+</color>
+
+<color name="white" weight="0.0798668025837">
+ <shade name="fresh" weight="0.528301089357" />
+ <shade name="warm" weight="0.235848700606" />
+ <shade name="light" weight="0.235848700606" />
+</color>
+
+<color name="red" weight="0.0660010382462">
+ <shade name="fresh" weight="0.528301089357" />
+ <shade name="warm" weight="0.235848700606" />
+ <shade name="light" weight="0.235848700606" />
+</color>
+
+</colors>

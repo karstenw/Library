@@ -1,0 +1,33 @@
+<colors query="cardas">
+
+<color name="blue" weight="0.905262247868">
+ <shade name="cool" weight="0.727271404961" />
+ <shade name="fresh" weight="0.18181785124" />
+ <shade name="neutral" weight="0.0909089256201" />
+</color>
+
+<color name="red" weight="0.0526315260388">
+ <shade name="cool" weight="0.470587681662" />
+ <shade name="warm" weight="0.411764221454" />
+ <shade name="fresh" weight="0.117646920415" />
+</color>
+
+<color name="black" weight="0.0210526104155">
+ <shade name="cool" weight="0.470587681662" />
+ <shade name="warm" weight="0.411764221454" />
+ <shade name="fresh" weight="0.117646920415" />
+</color>
+
+<color name="yellow" weight="0.0105263052078">
+ <shade name="cool" weight="0.470587681662" />
+ <shade name="warm" weight="0.411764221454" />
+ <shade name="fresh" weight="0.117646920415" />
+</color>
+
+<color name="green" weight="0.0105263052078">
+ <shade name="cool" weight="0.727271404961" />
+ <shade name="fresh" weight="0.18181785124" />
+ <shade name="neutral" weight="0.0909089256201" />
+</color>
+
+</colors>

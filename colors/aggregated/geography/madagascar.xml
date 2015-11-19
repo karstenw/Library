@@ -1,0 +1,33 @@
+<colors query="madagascar">
+
+<color name="orange" weight="0.740295335161">
+ <shade name="fresh" weight="0.467840772439" />
+ <shade name="cool" weight="0.353303483518" />
+ <shade name="dark" weight="0.178854381931" />
+</color>
+
+<color name="blue" weight="0.105542105215">
+ <shade name="fresh" weight="0.467840772439" />
+ <shade name="cool" weight="0.353303483518" />
+ <shade name="dark" weight="0.178854381931" />
+</color>
+
+<color name="green" weight="0.065025941602">
+ <shade name="fresh" weight="0.467840772439" />
+ <shade name="cool" weight="0.353303483518" />
+ <shade name="dark" weight="0.178854381931" />
+</color>
+
+<color name="pink" weight="0.058023147891">
+ <shade name="fresh" weight="0.467840772439" />
+ <shade name="cool" weight="0.353303483518" />
+ <shade name="dark" weight="0.178854381931" />
+</color>
+
+<color name="red" weight="0.0311124120588">
+ <shade name="fresh" weight="0.467840772439" />
+ <shade name="cool" weight="0.353303483518" />
+ <shade name="dark" weight="0.178854381931" />
+</color>
+
+</colors>

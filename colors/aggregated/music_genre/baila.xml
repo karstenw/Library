@@ -1,0 +1,33 @@
+<colors query="baila">
+
+<color name="black" weight="0.397435479619">
+ <shade name="cool" weight="0.799999040001" />
+ <shade name="light" weight="0.106666538667" />
+ <shade name="intense" weight="0.0933332213335" />
+</color>
+
+<color name="red" weight="0.358973981591">
+ <shade name="cool" weight="0.799999040001" />
+ <shade name="light" weight="0.106666538667" />
+ <shade name="intense" weight="0.0933332213335" />
+</color>
+
+<color name="pink" weight="0.128204993426">
+ <shade name="cool" weight="0.821916794897" />
+ <shade name="light" weight="0.109588905986" />
+ <shade name="soft" weight="0.0684930662414" />
+</color>
+
+<color name="blue" weight="0.0769229960553">
+ <shade name="cool" weight="0.799999040001" />
+ <shade name="light" weight="0.106666538667" />
+ <shade name="intense" weight="0.0933332213335" />
+</color>
+
+<color name="white" weight="0.0384614980277">
+ <shade name="cool" weight="0.821916794897" />
+ <shade name="light" weight="0.109588905986" />
+ <shade name="soft" weight="0.0684930662414" />
+</color>
+
+</colors>

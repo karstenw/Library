@@ -1,0 +1,33 @@
+<colors query="james baldwin">
+
+<color name="white" weight="0.401652488918">
+ <shade name="light" weight="0.533332657779" />
+ <shade name="bright" weight="0.266666328889" />
+ <shade name="dark" weight="0.199999746667" />
+</color>
+
+<color name="red" weight="0.319007943873">
+ <shade name="light" weight="0.533332657779" />
+ <shade name="bright" weight="0.266666328889" />
+ <shade name="dark" weight="0.199999746667" />
+</color>
+
+<color name="black" weight="0.25785098054">
+ <shade name="light" weight="0.533332657779" />
+ <shade name="bright" weight="0.266666328889" />
+ <shade name="dark" weight="0.199999746667" />
+</color>
+
+<color name="blue" weight="0.0115702363063">
+ <shade name="light" weight="0.533332657779" />
+ <shade name="bright" weight="0.266666328889" />
+ <shade name="dark" weight="0.199999746667" />
+</color>
+
+<color name="purple" weight="0.00991734540538">
+ <shade name="light" weight="0.533332657779" />
+ <shade name="bright" weight="0.266666328889" />
+ <shade name="dark" weight="0.199999746667" />
+</color>
+
+</colors>

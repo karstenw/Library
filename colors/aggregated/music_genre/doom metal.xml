@@ -1,0 +1,33 @@
+<colors query="doom metal">
+
+<color name="black" weight="0.998454997376">
+ <shade name="dark" weight="0.963823481273" />
+ <shade name="cool" weight="0.0203045480055" />
+ <shade name="hard" weight="0.0158709599916" />
+</color>
+
+<color name="white" weight="0.00118373530617">
+ <shade name="dark" weight="0.963823481273" />
+ <shade name="cool" weight="0.0203045480055" />
+ <shade name="hard" weight="0.0158709599916" />
+</color>
+
+<color name="purple" weight="0.000154400257326">
+ <shade name="dark" weight="0.963823481273" />
+ <shade name="cool" weight="0.0203045480055" />
+ <shade name="hard" weight="0.0158709599916" />
+</color>
+
+<color name="red" weight="0.000128666881105">
+ <shade name="dark" weight="0.963823481273" />
+ <shade name="cool" weight="0.0203045480055" />
+ <shade name="hard" weight="0.0158709599916" />
+</color>
+
+<color name="green" weight="7.72001286631e-05">
+ <shade name="dark" weight="0.963823481273" />
+ <shade name="cool" weight="0.0203045480055" />
+ <shade name="hard" weight="0.0158709599916" />
+</color>
+
+</colors>

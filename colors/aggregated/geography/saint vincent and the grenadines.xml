@@ -1,0 +1,33 @@
+<colors query="saint vincent and the grenadines">
+
+<color name="red" weight="0.263157590028">
+ <shade name="cool" weight="0.416665972223" />
+ <shade name="fresh" weight="0.333332777779" />
+ <shade name="soft" weight="0.249999583334" />
+</color>
+
+<color name="white" weight="0.210526072022">
+ <shade name="cool" weight="0.416665972223" />
+ <shade name="fresh" weight="0.333332777779" />
+ <shade name="soft" weight="0.249999583334" />
+</color>
+
+<color name="black" weight="0.210526072022">
+ <shade name="cool" weight="0.416665972223" />
+ <shade name="fresh" weight="0.333332777779" />
+ <shade name="soft" weight="0.249999583334" />
+</color>
+
+<color name="yellow" weight="0.157894554017">
+ <shade name="cool" weight="0.416665972223" />
+ <shade name="fresh" weight="0.333332777779" />
+ <shade name="soft" weight="0.249999583334" />
+</color>
+
+<color name="purple" weight="0.157894554017">
+ <shade name="cool" weight="0.416665972223" />
+ <shade name="fresh" weight="0.333332777779" />
+ <shade name="soft" weight="0.249999583334" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="coco chanel">
+
+<color name="black" weight="0.314232559921">
+ <shade name="fresh" weight="0.523808787983" />
+ <shade name="light" weight="0.238094903629" />
+ <shade name="hard" weight="0.238094903629" />
+</color>
+
+<color name="pink" weight="0.268021889344">
+ <shade name="fresh" weight="0.523808787983" />
+ <shade name="light" weight="0.238094903629" />
+ <shade name="hard" weight="0.238094903629" />
+</color>
+
+<color name="white" weight="0.227356499237">
+ <shade name="fresh" weight="0.523808787983" />
+ <shade name="light" weight="0.238094903629" />
+ <shade name="hard" weight="0.238094903629" />
+</color>
+
+<color name="blue" weight="0.105360328915">
+ <shade name="fresh" weight="0.523808787983" />
+ <shade name="light" weight="0.238094903629" />
+ <shade name="hard" weight="0.238094903629" />
+</color>
+
+<color name="green" weight="0.0850276338609">
+ <shade name="fresh" weight="0.523808787983" />
+ <shade name="light" weight="0.238094903629" />
+ <shade name="hard" weight="0.238094903629" />
+</color>
+
+</colors>

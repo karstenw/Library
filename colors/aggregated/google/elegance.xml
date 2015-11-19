@@ -1,0 +1,38 @@
+<colors query="elegance" tags="">
+
+	<color name="white" weight="0.429343629344">
+ 		<rgb r="1.0" g="1.0" b="1.0" a="1.0" />
+ 		<shade name="light" weight="0.373205741627" />
+ 		<shade name="dark" weight="0.366028708134" />
+ 		<shade name="cool" weight="0.260765550239" />
+	</color>
+
+	<color name="black" weight="0.271814671815">
+ 		<rgb r="0.0" g="0.0" b="0.0" a="1.0" />
+ 		<shade name="light" weight="0.373205741627" />
+ 		<shade name="dark" weight="0.366028708134" />
+ 		<shade name="cool" weight="0.260765550239" />
+	</color>
+
+	<color name="blue" weight="0.128494208494">
+ 		<rgb r="0.0" g="0.0" b="1.0" a="1.0" />
+ 		<shade name="light" weight="0.373205741627" />
+ 		<shade name="dark" weight="0.366028708134" />
+ 		<shade name="cool" weight="0.260765550239" />
+	</color>
+
+	<color name="pink" weight="0.0906563706564">
+ 		<rgb r="1.0" g="0.75" b="0.800000011921" a="1.0" />
+ 		<shade name="light" weight="0.373205741627" />
+ 		<shade name="dark" weight="0.366028708134" />
+ 		<shade name="cool" weight="0.260765550239" />
+	</color>
+
+	<color name="purple" weight="0.0796911196911">
+ 		<rgb r="0.5" g="0.0" b="0.5" a="1.0" />
+ 		<shade name="light" weight="0.373205741627" />
+ 		<shade name="dark" weight="0.366028708134" />
+ 		<shade name="cool" weight="0.260765550239" />
+	</color>
+
+</colors>

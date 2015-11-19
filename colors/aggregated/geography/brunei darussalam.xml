@@ -1,0 +1,33 @@
+<colors query="brunei darussalam">
+
+<color name="white" weight="0.886791549307">
+ <shade name="light" weight="0.555554814816" />
+ <shade name="fresh" weight="0.222221925926" />
+ <shade name="cool" weight="0.222221925926" />
+</color>
+
+<color name="yellow" weight="0.0377358106088">
+ <shade name="light" weight="0.555554814816" />
+ <shade name="fresh" weight="0.222221925926" />
+ <shade name="cool" weight="0.222221925926" />
+</color>
+
+<color name="green" weight="0.0377358106088">
+ <shade name="light" weight="0.555554814816" />
+ <shade name="fresh" weight="0.222221925926" />
+ <shade name="cool" weight="0.222221925926" />
+</color>
+
+<color name="red" weight="0.0188679053044">
+ <shade name="light" weight="0.555554814816" />
+ <shade name="fresh" weight="0.222221925926" />
+ <shade name="cool" weight="0.222221925926" />
+</color>
+
+<color name="purple" weight="0.0188679053044">
+ <shade name="light" weight="0.555554814816" />
+ <shade name="fresh" weight="0.222221925926" />
+ <shade name="cool" weight="0.222221925926" />
+</color>
+
+</colors>

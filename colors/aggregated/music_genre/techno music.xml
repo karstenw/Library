@@ -1,0 +1,33 @@
+<colors query="techno music">
+
+<color name="pink" weight="0.321428227041">
+ <shade name="hard" weight="0.76142052078" />
+ <shade name="cool" weight="0.180433590076" />
+ <shade name="dark" weight="0.0581448397686" />
+</color>
+
+<color name="blue" weight="0.249999732143">
+ <shade name="hard" weight="0.76142052078" />
+ <shade name="cool" weight="0.180433590076" />
+ <shade name="dark" weight="0.0581448397686" />
+</color>
+
+<color name="black" weight="0.178571237245">
+ <shade name="hard" weight="0.76142052078" />
+ <shade name="cool" weight="0.180433590076" />
+ <shade name="dark" weight="0.0581448397686" />
+</color>
+
+<color name="green" weight="0.142856989796">
+ <shade name="hard" weight="0.76142052078" />
+ <shade name="cool" weight="0.180433590076" />
+ <shade name="dark" weight="0.0581448397686" />
+</color>
+
+<color name="white" weight="0.107142742347">
+ <shade name="hard" weight="0.76142052078" />
+ <shade name="cool" weight="0.180433590076" />
+ <shade name="dark" weight="0.0581448397686" />
+</color>
+
+</colors>

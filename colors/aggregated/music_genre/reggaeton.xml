@@ -1,0 +1,33 @@
+<colors query="reggaeton">
+
+<color name="red" weight="0.934051724034">
+ <shade name="light" weight="0.426615043333" />
+ <shade name="fresh" weight="0.321467304796" />
+ <shade name="cool" weight="0.25191645691" />
+</color>
+
+<color name="black" weight="0.0597471016581">
+ <shade name="light" weight="0.426615043333" />
+ <shade name="fresh" weight="0.321467304796" />
+ <shade name="cool" weight="0.25191645691" />
+</color>
+
+<color name="pink" weight="0.00257669441113">
+ <shade name="light" weight="0.426615043333" />
+ <shade name="fresh" weight="0.321467304796" />
+ <shade name="cool" weight="0.25191645691" />
+</color>
+
+<color name="purple" weight="0.001851999108">
+ <shade name="light" weight="0.426615043333" />
+ <shade name="fresh" weight="0.321467304796" />
+ <shade name="cool" weight="0.25191645691" />
+</color>
+
+<color name="blue" weight="0.00177147740765">
+ <shade name="light" weight="0.426615043333" />
+ <shade name="fresh" weight="0.321467304796" />
+ <shade name="cool" weight="0.25191645691" />
+</color>
+
+</colors>

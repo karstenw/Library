@@ -1,0 +1,33 @@
+<colors query="tech house">
+
+<color name="red" weight="0.312499609375">
+ <shade name="hard" weight="0.84463189913" />
+ <shade name="dark" weight="0.111581806072" />
+ <shade name="cool" weight="0.043785265674" />
+</color>
+
+<color name="green" weight="0.218749726563">
+ <shade name="hard" weight="0.84463189913" />
+ <shade name="dark" weight="0.111581806072" />
+ <shade name="cool" weight="0.043785265674" />
+</color>
+
+<color name="orange" weight="0.187499765625">
+ <shade name="hard" weight="0.84463189913" />
+ <shade name="dark" weight="0.111581806072" />
+ <shade name="cool" weight="0.043785265674" />
+</color>
+
+<color name="black" weight="0.156249804688">
+ <shade name="hard" weight="0.84463189913" />
+ <shade name="dark" weight="0.111581806072" />
+ <shade name="cool" weight="0.043785265674" />
+</color>
+
+<color name="white" weight="0.12499984375">
+ <shade name="hard" weight="0.84463189913" />
+ <shade name="dark" weight="0.111581806072" />
+ <shade name="cool" weight="0.043785265674" />
+</color>
+
+</colors>

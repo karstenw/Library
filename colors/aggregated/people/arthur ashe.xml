@@ -1,0 +1,33 @@
+<colors query="arthur ashe">
+
+<color name="white" weight="0.914892702129">
+ <shade name="cool" weight="0.555555000001" />
+ <shade name="hard" weight="0.333333" />
+ <shade name="neutral" weight="0.111111" />
+</color>
+
+<color name="orange" weight="0.0212765744681">
+ <shade name="cool" weight="0.555555000001" />
+ <shade name="hard" weight="0.333333" />
+ <shade name="neutral" weight="0.111111" />
+</color>
+
+<color name="green" weight="0.0212765744681">
+ <shade name="cool" weight="0.555555000001" />
+ <shade name="hard" weight="0.333333" />
+ <shade name="neutral" weight="0.111111" />
+</color>
+
+<color name="blue" weight="0.0212765744681">
+ <shade name="cool" weight="0.555555000001" />
+ <shade name="hard" weight="0.333333" />
+ <shade name="neutral" weight="0.111111" />
+</color>
+
+<color name="black" weight="0.0212765744681">
+ <shade name="cool" weight="0.555555000001" />
+ <shade name="hard" weight="0.333333" />
+ <shade name="neutral" weight="0.111111" />
+</color>
+
+</colors>

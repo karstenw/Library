@@ -1,0 +1,33 @@
+<colors query="twee pop">
+
+<color name="green" weight="0.666666000001">
+ <shade name="soft" weight="0.71428484694" />
+ <shade name="cool" weight="0.214285454082" />
+ <shade name="weak" weight="0.071428484694" />
+</color>
+
+<color name="pink" weight="0.333333">
+ <shade name="soft" weight="0.624999335938" />
+ <shade name="warm" weight="0.187499800781" />
+ <shade name="cool" weight="0.187499800781" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="soft" weight="0.624999335938" />
+ <shade name="warm" weight="0.187499800781" />
+ <shade name="cool" weight="0.187499800781" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="soft" weight="0.624999335938" />
+ <shade name="warm" weight="0.187499800781" />
+ <shade name="cool" weight="0.187499800781" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="soft" weight="0.624999335938" />
+ <shade name="warm" weight="0.187499800781" />
+ <shade name="cool" weight="0.187499800781" />
+</color>
+
+</colors>

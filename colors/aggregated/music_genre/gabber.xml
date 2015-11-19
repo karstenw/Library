@@ -1,0 +1,33 @@
+<colors query="gabber">
+
+<color name="red" weight="0.449877287535">
+ <shade name="hard" weight="0.699432142905" />
+ <shade name="dark" weight="0.231568750016" />
+ <shade name="cool" weight="0.068998035719" />
+</color>
+
+<color name="white" weight="0.200488791184">
+ <shade name="hard" weight="0.699432142905" />
+ <shade name="dark" weight="0.231568750016" />
+ <shade name="cool" weight="0.068998035719" />
+</color>
+
+<color name="black" weight="0.176038938601">
+ <shade name="hard" weight="0.699432142905" />
+ <shade name="dark" weight="0.231568750016" />
+ <shade name="cool" weight="0.068998035719" />
+</color>
+
+<color name="green" weight="0.149144100759">
+ <shade name="hard" weight="0.699432142905" />
+ <shade name="dark" weight="0.231568750016" />
+ <shade name="cool" weight="0.068998035719" />
+</color>
+
+<color name="blue" weight="0.0244498525834">
+ <shade name="hard" weight="0.699432142905" />
+ <shade name="dark" weight="0.231568750016" />
+ <shade name="cool" weight="0.068998035719" />
+</color>
+
+</colors>

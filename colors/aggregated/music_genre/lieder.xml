@@ -1,0 +1,33 @@
+<colors query="lieder">
+
+<color name="black" weight="0.543538759402">
+ <shade name="cool" weight="0.818954184765" />
+ <shade name="light" weight="0.0959901789264" />
+ <shade name="soft" weight="0.0850545889222" />
+</color>
+
+<color name="pink" weight="0.24719075363">
+ <shade name="cool" weight="0.818954184765" />
+ <shade name="light" weight="0.0959901789264" />
+ <shade name="soft" weight="0.0850545889222" />
+</color>
+
+<color name="purple" weight="0.0856740680194">
+ <shade name="cool" weight="0.818954184765" />
+ <shade name="light" weight="0.0959901789264" />
+ <shade name="soft" weight="0.0850545889222" />
+</color>
+
+<color name="blue" weight="0.0660111671625">
+ <shade name="cool" weight="0.818954184765" />
+ <shade name="light" weight="0.0959901789264" />
+ <shade name="soft" weight="0.0850545889222" />
+</color>
+
+<color name="green" weight="0.0575842096524">
+ <shade name="cool" weight="0.818954184765" />
+ <shade name="light" weight="0.0959901789264" />
+ <shade name="soft" weight="0.0850545889222" />
+</color>
+
+</colors>

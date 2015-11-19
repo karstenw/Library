@@ -1,0 +1,33 @@
+<colors query="mento">
+
+<color name="black" weight="0.305084347602">
+ <shade name="light" weight="0.914061579987" />
+ <shade name="fresh" weight="0.0755207573209" />
+ <shade name="cool" weight="0.0104166561822" />
+</color>
+
+<color name="white" weight="0.237287825912">
+ <shade name="light" weight="0.914061579987" />
+ <shade name="fresh" weight="0.0755207573209" />
+ <shade name="cool" weight="0.0104166561822" />
+</color>
+
+<color name="pink" weight="0.186440434646">
+ <shade name="light" weight="0.914061579987" />
+ <shade name="fresh" weight="0.0755207573209" />
+ <shade name="cool" weight="0.0104166561822" />
+</color>
+
+<color name="blue" weight="0.169491304223">
+ <shade name="light" weight="0.914061579987" />
+ <shade name="fresh" weight="0.0755207573209" />
+ <shade name="cool" weight="0.0104166561822" />
+</color>
+
+<color name="green" weight="0.101694782534">
+ <shade name="light" weight="0.914061579987" />
+ <shade name="fresh" weight="0.0755207573209" />
+ <shade name="cool" weight="0.0104166561822" />
+</color>
+
+</colors>

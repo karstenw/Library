@@ -1,0 +1,33 @@
+<colors query="syria">
+
+<color name="red" weight="0.323210053882">
+ <shade name="weak" weight="0.423610535707" />
+ <shade name="light" weight="0.380555038635" />
+ <shade name="dark" weight="0.195833067327" />
+</color>
+
+<color name="orange" weight="0.223427084227">
+ <shade name="weak" weight="0.423610535707" />
+ <shade name="light" weight="0.380555038635" />
+ <shade name="dark" weight="0.195833067327" />
+</color>
+
+<color name="black" weight="0.186550769355">
+ <shade name="weak" weight="0.423610535707" />
+ <shade name="light" weight="0.380555038635" />
+ <shade name="dark" weight="0.195833067327" />
+</color>
+
+<color name="white" weight="0.158351234452">
+ <shade name="weak" weight="0.423610535707" />
+ <shade name="light" weight="0.380555038635" />
+ <shade name="dark" weight="0.195833067327" />
+</color>
+
+<color name="green" weight="0.108459749625">
+ <shade name="weak" weight="0.423610535707" />
+ <shade name="light" weight="0.380555038635" />
+ <shade name="dark" weight="0.195833067327" />
+</color>
+
+</colors>

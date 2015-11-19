@@ -1,0 +1,33 @@
+<colors query="sylvester stallone">
+
+<color name="black" weight="0.742956996546">
+ <shade name="cool" weight="0.840627653459" />
+ <shade name="hard" weight="0.117844998148" />
+ <shade name="light" weight="0.0415263326809" />
+</color>
+
+<color name="white" weight="0.123239312223">
+ <shade name="cool" weight="0.840627653459" />
+ <shade name="hard" weight="0.117844998148" />
+ <shade name="light" weight="0.0415263326809" />
+</color>
+
+<color name="red" weight="0.11384965034">
+ <shade name="cool" weight="0.840627653459" />
+ <shade name="hard" weight="0.117844998148" />
+ <shade name="light" weight="0.0415263326809" />
+</color>
+
+<color name="green" weight="0.0105633696191">
+ <shade name="cool" weight="0.840627653459" />
+ <shade name="hard" weight="0.117844998148" />
+ <shade name="light" weight="0.0415263326809" />
+</color>
+
+<color name="blue" weight="0.00938966188367">
+ <shade name="cool" weight="0.840627653459" />
+ <shade name="hard" weight="0.117844998148" />
+ <shade name="light" weight="0.0415263326809" />
+</color>
+
+</colors>

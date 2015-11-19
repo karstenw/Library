@@ -1,0 +1,33 @@
+<colors query="western swing">
+
+<color name="white" weight="0.940366023484">
+ <shade name="cool" weight="0.91666570139" />
+ <shade name="light" weight="0.0454544975896" />
+ <shade name="hard" weight="0.0378787479913" />
+</color>
+
+<color name="blue" weight="0.0275229080044">
+ <shade name="cool" weight="0.91666570139" />
+ <shade name="light" weight="0.0454544975896" />
+ <shade name="hard" weight="0.0378787479913" />
+</color>
+
+<color name="red" weight="0.0137614540022">
+ <shade name="cool" weight="0.91666570139" />
+ <shade name="light" weight="0.0454544975896" />
+ <shade name="hard" weight="0.0378787479913" />
+</color>
+
+<color name="pink" weight="0.00917430266813">
+ <shade name="cool" weight="0.91666570139" />
+ <shade name="light" weight="0.0454544975896" />
+ <shade name="hard" weight="0.0378787479913" />
+</color>
+
+<color name="green" weight="0.00917430266813">
+ <shade name="cool" weight="0.91666570139" />
+ <shade name="light" weight="0.0454544975896" />
+ <shade name="hard" weight="0.0378787479913" />
+</color>
+
+</colors>

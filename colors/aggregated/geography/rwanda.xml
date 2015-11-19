@@ -1,0 +1,33 @@
+<colors query="rwanda">
+
+<color name="blue" weight="0.365903981743">
+ <shade name="bright" weight="0.723756014378" />
+ <shade name="light" weight="0.176795362291" />
+ <shade name="cool" weight="0.0994473912886" />
+</color>
+
+<color name="green" weight="0.286901985685">
+ <shade name="bright" weight="0.723756014378" />
+ <shade name="light" weight="0.176795362291" />
+ <shade name="cool" weight="0.0994473912886" />
+</color>
+
+<color name="red" weight="0.162161991909">
+ <shade name="bright" weight="0.723756014378" />
+ <shade name="light" weight="0.176795362291" />
+ <shade name="cool" weight="0.0994473912886" />
+</color>
+
+<color name="black" weight="0.103949994813">
+ <shade name="bright" weight="0.723756014378" />
+ <shade name="light" weight="0.176795362291" />
+ <shade name="cool" weight="0.0994473912886" />
+</color>
+
+<color name="white" weight="0.0810809959545">
+ <shade name="bright" weight="0.723756014378" />
+ <shade name="light" weight="0.176795362291" />
+ <shade name="cool" weight="0.0994473912886" />
+</color>
+
+</colors>

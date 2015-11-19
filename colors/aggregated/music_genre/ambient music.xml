@@ -1,0 +1,33 @@
+<colors query="ambient music">
+
+<color name="black" weight="0.987883446436">
+ <shade name="dark" weight="0.775923759337" />
+ <shade name="soft" weight="0.168600256118" />
+ <shade name="cool" weight="0.0554749229806" />
+</color>
+
+<color name="blue" weight="0.00465982757753">
+ <shade name="dark" weight="0.775923759337" />
+ <shade name="soft" weight="0.168600256118" />
+ <shade name="cool" weight="0.0554749229806" />
+</color>
+
+<color name="white" weight="0.00279589654652">
+ <shade name="dark" weight="0.775923759337" />
+ <shade name="soft" weight="0.168600256118" />
+ <shade name="cool" weight="0.0554749229806" />
+</color>
+
+<color name="green" weight="0.00279589654652">
+ <shade name="dark" weight="0.775923759337" />
+ <shade name="soft" weight="0.168600256118" />
+ <shade name="cool" weight="0.0554749229806" />
+</color>
+
+<color name="red" weight="0.00186393103101">
+ <shade name="dark" weight="0.775923759337" />
+ <shade name="soft" weight="0.168600256118" />
+ <shade name="cool" weight="0.0554749229806" />
+</color>
+
+</colors>

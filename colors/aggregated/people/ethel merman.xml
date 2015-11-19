@@ -1,0 +1,33 @@
+<colors query="ethel merman">
+
+<color name="blue" weight="0.827868017805">
+ <shade name="cool" weight="0.624999218751" />
+ <shade name="hard" weight="0.2499996875" />
+ <shade name="soft" weight="0.12499984375" />
+</color>
+
+<color name="red" weight="0.0655737043806">
+ <shade name="cool" weight="0.624999218751" />
+ <shade name="hard" weight="0.2499996875" />
+ <shade name="soft" weight="0.12499984375" />
+</color>
+
+<color name="green" weight="0.0491802782855">
+ <shade name="cool" weight="0.624999218751" />
+ <shade name="hard" weight="0.2499996875" />
+ <shade name="soft" weight="0.12499984375" />
+</color>
+
+<color name="pink" weight="0.0327868521903">
+ <shade name="cool" weight="0.624999218751" />
+ <shade name="hard" weight="0.2499996875" />
+ <shade name="soft" weight="0.12499984375" />
+</color>
+
+<color name="black" weight="0.0245901391427">
+ <shade name="cool" weight="0.624999218751" />
+ <shade name="hard" weight="0.2499996875" />
+ <shade name="soft" weight="0.12499984375" />
+</color>
+
+</colors>

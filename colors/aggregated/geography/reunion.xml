@@ -1,0 +1,33 @@
+<colors query="reunion">
+
+<color name="orange" weight="0.692908379804">
+ <shade name="cool" weight="0.59813933129" />
+ <shade name="hard" weight="0.208092170718" />
+ <shade name="dark" weight="0.193766985052" />
+</color>
+
+<color name="green" weight="0.08816382887">
+ <shade name="cool" weight="0.59813933129" />
+ <shade name="hard" weight="0.208092170718" />
+ <shade name="dark" weight="0.193766985052" />
+</color>
+
+<color name="blue" weight="0.0803450183586">
+ <shade name="cool" weight="0.59813933129" />
+ <shade name="hard" weight="0.208092170718" />
+ <shade name="dark" weight="0.193766985052" />
+</color>
+
+<color name="black" weight="0.0741438927806">
+ <shade name="cool" weight="0.59813933129" />
+ <shade name="hard" weight="0.208092170718" />
+ <shade name="dark" weight="0.193766985052" />
+</color>
+
+<color name="white" weight="0.0644377831803">
+ <shade name="cool" weight="0.59813933129" />
+ <shade name="hard" weight="0.208092170718" />
+ <shade name="dark" weight="0.193766985052" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="anne frank">
+
+<color name="white" weight="0.505555026127">
+ <shade name="dark" weight="0.81102275355" />
+ <shade name="cool" weight="0.149606139004" />
+ <shade name="light" weight="0.0393700365801" />
+</color>
+
+<color name="red" weight="0.419444005193">
+ <shade name="dark" weight="0.81102275355" />
+ <shade name="cool" weight="0.149606139004" />
+ <shade name="light" weight="0.0393700365801" />
+</color>
+
+<color name="orange" weight="0.0277777486883">
+ <shade name="dark" weight="0.81102275355" />
+ <shade name="cool" weight="0.149606139004" />
+ <shade name="light" weight="0.0393700365801" />
+</color>
+
+<color name="black" weight="0.0277777486883">
+ <shade name="dark" weight="0.81102275355" />
+ <shade name="cool" weight="0.149606139004" />
+ <shade name="light" weight="0.0393700365801" />
+</color>
+
+<color name="purple" weight="0.0194444240818">
+ <shade name="dark" weight="0.81102275355" />
+ <shade name="cool" weight="0.149606139004" />
+ <shade name="light" weight="0.0393700365801" />
+</color>
+
+</colors>

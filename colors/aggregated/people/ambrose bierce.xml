@@ -1,0 +1,33 @@
+<colors query="ambrose bierce">
+
+<color name="black" weight="0.802394397577">
+ <shade name="cool" weight="0.444443901235" />
+ <shade name="soft" weight="0.333332925926" />
+ <shade name="dark" weight="0.222221950618" />
+</color>
+
+<color name="white" weight="0.167664500986">
+ <shade name="cool" weight="0.444443901235" />
+ <shade name="soft" weight="0.333332925926" />
+ <shade name="dark" weight="0.222221950618" />
+</color>
+
+<color name="yellow" weight="0.0119760357847">
+ <shade name="cool" weight="0.444443901235" />
+ <shade name="soft" weight="0.333332925926" />
+ <shade name="dark" weight="0.222221950618" />
+</color>
+
+<color name="red" weight="0.0119760357847">
+ <shade name="cool" weight="0.444443901235" />
+ <shade name="soft" weight="0.333332925926" />
+ <shade name="dark" weight="0.222221950618" />
+</color>
+
+<color name="orange" weight="0.00598801789237">
+ <shade name="cool" weight="0.444443901235" />
+ <shade name="soft" weight="0.333332925926" />
+ <shade name="dark" weight="0.222221950618" />
+</color>
+
+</colors>

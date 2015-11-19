@@ -1,0 +1,33 @@
+<colors query="kurt vonnegut">
+
+<color name="white" weight="0.334384511002">
+ <shade name="cool" weight="0.76712237343" />
+ <shade name="light" weight="0.123287524301" />
+ <shade name="dark" weight="0.10958891049" />
+</color>
+
+<color name="black" weight="0.290220518982">
+ <shade name="cool" weight="0.76712237343" />
+ <shade name="light" weight="0.123287524301" />
+ <shade name="dark" weight="0.10958891049" />
+</color>
+
+<color name="green" weight="0.208201676661">
+ <shade name="cool" weight="0.76712237343" />
+ <shade name="light" weight="0.123287524301" />
+ <shade name="dark" weight="0.10958891049" />
+</color>
+
+<color name="blue" weight="0.135646546916">
+ <shade name="cool" weight="0.76712237343" />
+ <shade name="light" weight="0.123287524301" />
+ <shade name="dark" weight="0.10958891049" />
+</color>
+
+<color name="orange" weight="0.0315457085851">
+ <shade name="cool" weight="0.76712237343" />
+ <shade name="light" weight="0.123287524301" />
+ <shade name="dark" weight="0.10958891049" />
+</color>
+
+</colors>

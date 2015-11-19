@@ -1,0 +1,33 @@
+<colors query="cumbia">
+
+<color name="blue" weight="0.772830271222">
+ <shade name="cool" weight="0.734014554936" />
+ <shade name="hard" weight="0.145779894186" />
+ <shade name="light" weight="0.120204474153" />
+</color>
+
+<color name="red" weight="0.166666498668">
+ <shade name="cool" weight="0.734014554936" />
+ <shade name="hard" weight="0.145779894186" />
+ <shade name="light" weight="0.120204474153" />
+</color>
+
+<color name="black" weight="0.0410958489867">
+ <shade name="cool" weight="0.734014554936" />
+ <shade name="hard" weight="0.145779894186" />
+ <shade name="light" weight="0.120204474153" />
+</color>
+
+<color name="white" weight="0.0114155136074">
+ <shade name="cool" weight="0.734014554936" />
+ <shade name="hard" weight="0.145779894186" />
+ <shade name="light" weight="0.120204474153" />
+</color>
+
+<color name="green" weight="0.0079908595252">
+ <shade name="cool" weight="0.734014554936" />
+ <shade name="hard" weight="0.145779894186" />
+ <shade name="light" weight="0.120204474153" />
+</color>
+
+</colors>

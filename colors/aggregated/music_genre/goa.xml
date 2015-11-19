@@ -1,0 +1,33 @@
+<colors query="goa">
+
+<color name="blue" weight="0.351819771644">
+ <shade name="hard" weight="0.496824833521" />
+ <shade name="dark" weight="0.322221856884" />
+ <shade name="cool" weight="0.180952175787" />
+</color>
+
+<color name="white" weight="0.249205671581">
+ <shade name="hard" weight="0.496824833521" />
+ <shade name="dark" weight="0.322221856884" />
+ <shade name="cool" weight="0.180952175787" />
+</color>
+
+<color name="green" weight="0.195944067263">
+ <shade name="hard" weight="0.496824833521" />
+ <shade name="dark" weight="0.322221856884" />
+ <shade name="cool" weight="0.180952175787" />
+</color>
+
+<color name="black" weight="0.138529035085">
+ <shade name="hard" weight="0.496824833521" />
+ <shade name="dark" weight="0.322221856884" />
+ <shade name="cool" weight="0.180952175787" />
+</color>
+
+<color name="pink" weight="0.064500291468">
+ <shade name="hard" weight="0.496824833521" />
+ <shade name="dark" weight="0.322221856884" />
+ <shade name="cool" weight="0.180952175787" />
+</color>
+
+</colors>

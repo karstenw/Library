@@ -1,0 +1,33 @@
+<colors query="symphonic black metal">
+
+<color name="black" weight="0.999999000001">
+ <shade name="dark" weight="0.930584724452" />
+ <shade name="cool" weight="0.0585682693711" />
+ <shade name="intense" weight="0.0108459758095" />
+</color>
+
+<color name="yellow" weight="0.0">
+ <shade name="dark" weight="0.930584724452" />
+ <shade name="cool" weight="0.0585682693711" />
+ <shade name="intense" weight="0.0108459758095" />
+</color>
+
+<color name="white" weight="0.0">
+ <shade name="dark" weight="0.932607732633" />
+ <shade name="cool" weight="0.0586955915643" />
+ <shade name="weak" weight="0.00869564319472" />
+</color>
+
+<color name="red" weight="0.0">
+ <shade name="dark" weight="0.930584724452" />
+ <shade name="cool" weight="0.0585682693711" />
+ <shade name="intense" weight="0.0108459758095" />
+</color>
+
+<color name="purple" weight="0.0">
+ <shade name="dark" weight="0.932607732633" />
+ <shade name="cool" weight="0.0586955915643" />
+ <shade name="weak" weight="0.00869564319472" />
+</color>
+
+</colors>

@@ -1,0 +1,33 @@
+<colors query="stendhal">
+
+<color name="black" weight="0.981498805974">
+ <shade name="light" weight="0.422221612347" />
+ <shade name="fresh" weight="0.355555041976" />
+ <shade name="soft" weight="0.222221901235" />
+</color>
+
+<color name="red" weight="0.00699053106413">
+ <shade name="light" weight="0.422221612347" />
+ <shade name="fresh" weight="0.355555041976" />
+ <shade name="soft" weight="0.222221901235" />
+</color>
+
+<color name="green" weight="0.00536646829165">
+ <shade name="light" weight="0.422221612347" />
+ <shade name="fresh" weight="0.355555041976" />
+ <shade name="soft" weight="0.222221901235" />
+</color>
+
+<color name="white" weight="0.00409546264363">
+ <shade name="light" weight="0.422221612347" />
+ <shade name="fresh" weight="0.355555041976" />
+ <shade name="soft" weight="0.222221901235" />
+</color>
+
+<color name="pink" weight="0.00204773132182">
+ <shade name="light" weight="0.422221612347" />
+ <shade name="fresh" weight="0.355555041976" />
+ <shade name="soft" weight="0.222221901235" />
+</color>
+
+</colors>

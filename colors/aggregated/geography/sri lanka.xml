@@ -1,0 +1,33 @@
+<colors query="sri lanka">
+
+<color name="blue" weight="0.27702185707">
+ <shade name="fresh" weight="0.954495839235" />
+ <shade name="cool" weight="0.0300337052863" />
+ <shade name="light" weight="0.0154694153255" />
+</color>
+
+<color name="white" weight="0.25339983825">
+ <shade name="fresh" weight="0.954495839235" />
+ <shade name="cool" weight="0.0300337052863" />
+ <shade name="light" weight="0.0154694153255" />
+</color>
+
+<color name="red" weight="0.169649044252">
+ <shade name="fresh" weight="0.954495839235" />
+ <shade name="cool" weight="0.0300337052863" />
+ <shade name="light" weight="0.0154694153255" />
+</color>
+
+<color name="black" weight="0.152469394201">
+ <shade name="fresh" weight="0.954495839235" />
+ <shade name="cool" weight="0.0300337052863" />
+ <shade name="light" weight="0.0154694153255" />
+</color>
+
+<color name="green" weight="0.147458662936">
+ <shade name="fresh" weight="0.954495839235" />
+ <shade name="cool" weight="0.0300337052863" />
+ <shade name="light" weight="0.0154694153255" />
+</color>
+
+</colors>

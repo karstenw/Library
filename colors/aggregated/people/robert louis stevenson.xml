@@ -1,0 +1,33 @@
+<colors query="robert louis stevenson">
+
+<color name="black" weight="0.312499677735">
+ <shade name="light" weight="0.428570877552" />
+ <shade name="hard" weight="0.428570877552" />
+ <shade name="warm" weight="0.142856959184" />
+</color>
+
+<color name="green" weight="0.281249709961">
+ <shade name="light" weight="0.428570877552" />
+ <shade name="hard" weight="0.428570877552" />
+ <shade name="dark" weight="0.142856959184" />
+</color>
+
+<color name="white" weight="0.187499806641">
+ <shade name="light" weight="0.428570877552" />
+ <shade name="hard" weight="0.428570877552" />
+ <shade name="warm" weight="0.142856959184" />
+</color>
+
+<color name="blue" weight="0.124999871094">
+ <shade name="light" weight="0.428570877552" />
+ <shade name="hard" weight="0.428570877552" />
+ <shade name="dark" weight="0.142856959184" />
+</color>
+
+<color name="red" weight="0.0937499033204">
+ <shade name="light" weight="0.428570877552" />
+ <shade name="hard" weight="0.428570877552" />
+ <shade name="warm" weight="0.142856959184" />
+</color>
+
+</colors>

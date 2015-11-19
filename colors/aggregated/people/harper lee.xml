@@ -1,0 +1,33 @@
+<colors query="harper lee">
+
+<color name="white" weight="0.779569108713">
+ <shade name="light" weight="0.499999437501" />
+ <shade name="cool" weight="0.374999578125" />
+ <shade name="neutral" weight="0.124999859375" />
+</color>
+
+<color name="green" weight="0.123655789658">
+ <shade name="light" weight="0.499999437501" />
+ <shade name="cool" weight="0.374999578125" />
+ <shade name="neutral" weight="0.124999859375" />
+</color>
+
+<color name="black" weight="0.0376343707654">
+ <shade name="light" weight="0.499999437501" />
+ <shade name="cool" weight="0.374999578125" />
+ <shade name="neutral" weight="0.124999859375" />
+</color>
+
+<color name="purple" weight="0.0322580320847">
+ <shade name="light" weight="0.499999437501" />
+ <shade name="cool" weight="0.374999578125" />
+ <shade name="neutral" weight="0.124999859375" />
+</color>
+
+<color name="blue" weight="0.0268816934039">
+ <shade name="light" weight="0.499999437501" />
+ <shade name="cool" weight="0.374999578125" />
+ <shade name="neutral" weight="0.124999859375" />
+</color>
+
+</colors>
