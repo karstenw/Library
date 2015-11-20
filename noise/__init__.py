@@ -24,7 +24,7 @@ try:
 
     def seed(i=None):
         if i == None: 
-            i = int(random.random()*maxint)
+            i = int(random.random()* (2**31-1)) # maxint)
         _noise.seed(int(i))
         
     def shape(a):
@@ -47,7 +47,7 @@ except:
         # Populate the permutation array p (defines the pattern of the noise).
         global p
         if i == None: 
-            i = int(random.random()*maxint)
+            i = int(random.random() * (2**31-1)) #maxint)
         s = random.getstate()
         random.seed(i)
         p = [int(random.random()*256) for i in range(256)] * 2
