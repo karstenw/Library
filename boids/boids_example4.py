@@ -1,4 +1,12 @@
-size(1680, 1050)
+
+# get screen size
+
+import AppKit
+s = AppKit.NSScreen.mainScreen()
+X,Y = s.frame().size
+
+size(X, Y)
+
 speed(20)
 
 try:

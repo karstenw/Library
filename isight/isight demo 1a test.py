@@ -17,7 +17,7 @@ except:
     isight = ximport("__init__")
     reload(isight)
 
-import Foundation, AppKit
+import AppKit
 s = AppKit.NSScreen.mainScreen()
 X,Y = s.frame().size
 

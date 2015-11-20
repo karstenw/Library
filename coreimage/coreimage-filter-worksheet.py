@@ -14,6 +14,10 @@ canvas.append("leaf.jpg")
 
 l = canvas.append("lily.tif")
 
+
+# remove the "# " before the l.filter lines and re-run to check a filter
+
+
 # ok
 # l.filter("zoomblur", dx=8, dy=-14)
 
