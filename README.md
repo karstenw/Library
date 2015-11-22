@@ -1,1 +1,3 @@
-In this directory, you can put Python libraries to make them available to your scripts.
+## Nodebox Library folder ##
+
+The contents of this repo go into the ```~/Library/Application Support/Nodebox/```folder.
