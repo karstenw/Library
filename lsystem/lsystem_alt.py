@@ -42,7 +42,7 @@ def iterate(n, rule):
          pop()
          return
     if n > 0:
-        #scale(.98) # scaling on each iteration is fun to play with
+        # scale(.98) # scaling on each iteration is fun to play with
         for step in rules[rule]:
             iterate(n-1, step)
     else: draw()
