@@ -9,7 +9,7 @@ import os
 import shutil
 
 
-def grab(nativesize=False, destfolder=False):
+def grab(destfolder=False):
 
 
     # a hardcoded hack :-(
@@ -29,21 +29,21 @@ def grab(nativesize=False, destfolder=False):
 
     destpath = os.path.join(path, filename)
 
-    cmd = '''"%s" -v -p "%s" filename''' % (arg0, path)
+    cmd = '''"%s" -p "%s" filename''' % (arg0, path)
 
     os.system(cmd)
 
     return destpath
 
 
-def grabSequence(count=10, intervall=0.1, destfolder=False, emptyFolder=False):
+def grabSequence(count=10, intervall=0.1, destfolder=False): #, emptyFolder=False):
     """Grabs count images from the isight taken with interval deltaT
     
     - destfolder may be the path to a destination folder where the images
       will be stored. if not given, 
     
     - emptyfolder deactivated for now. The idea is to delete the folder
-      right before the grad runs. Currently the default destfolder just grows...
+      right before the grab runs. Currently the default destfolder just grows...
 
     Returns a list of paths which can be iterated and fed to image()
     """
@@ -63,19 +63,21 @@ def grabSequence(count=10, intervall=0.1, destfolder=False, emptyFolder=False):
         folder = userimagefolder
 
     # empty dir from previous run
-    if False: # emptyFolder:
+    """
+    if emptyFolder:
         if os.path.exists(folder):
             for root, dirs, files in os.walk(folder, topdown=False):
                 for name in files:
                     os.remove(os.path.join(root, name))
                 for name in dirs:
                     os.rmdir(os.path.join(root, name))
+    """
 
     # ask for existence, the previous command could have aborted
     if not os.path.exists(folder):
         os.makedirs(folder)
 
-    cmd = '''"%s" -v -n %i -t %f -p "%s"''' % (arg0, count, intervall, folder)
+    cmd = '''"%s" -n %i -t %f -p "%s"''' % (arg0, count, intervall, folder)
 
     os.system(cmd)
 
