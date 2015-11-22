@@ -10,11 +10,19 @@ except:
     reload(isight)
 
 
-imagewidth = 200
-columns = 4
-rows = 12
+# the width of the used images
+imagewidth = 400
+
+# the height will be determined later when we see, what the camera delivers
+
+# the grod size
+columns = 2
+rows = 6
+
+# image time intervall
 intervall = 0.25
 
+# needed to feed the list of paths to the grid
 import itertools
 
 
@@ -22,7 +30,7 @@ import itertools
 # This will take considerably less time than the previous library.
 
 
-# grab columns*rows images, 0.1 sec apart i.e. ca 5 seconds
+# grab columns*rows images, intervall sec apart
 imagepaths = isight.grabSequence( count=columns*rows, intervall=intervall )
 
 
@@ -32,6 +40,7 @@ imsize = imagesize( imagepaths[0] )
 # get image ratio
 ratio = imsize.width / imsize.height
 
+# now we know how high the delivered image will be
 imheight = imagewidth / ratio
 
 # set the canvas size

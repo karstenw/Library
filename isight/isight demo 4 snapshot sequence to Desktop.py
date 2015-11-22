@@ -28,7 +28,7 @@ size(X, Y)
 
 destfolder = os.path.join( os.path.expanduser( "~" ), "Desktop", "iSightSequence" )
 
-imagepaths = isight.grabSequence( count=30, intervall=0.1, destfolder=destfolder )
+imagepaths = isight.grabSequence( count=30, intervall=0.334, destfolder=destfolder )
 
 
 # fill( 0.94, 0.91, 0.13)
@@ -67,4 +67,4 @@ for pict in imagepaths:
     py = random(oy, HEIGHT - oy)
     l.x, l.y = px, py
 
-canv.draw( 0, 0) #, helper=True )
+canv.draw( 0, 0, helper=True )
