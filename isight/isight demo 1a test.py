@@ -47,6 +47,8 @@ imheight = imagewidth / ratio
 # grab columns*rows images
 imagepaths = isight.grabSequence( count=columns*rows, intervall=intervall )
 
+print columns*rows, "images"
+
 # set the canvas size
 size(imagewidth*columns,  imheight*rows)
 

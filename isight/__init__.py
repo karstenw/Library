@@ -29,7 +29,7 @@ def grab(destfolder=False):
 
     destpath = os.path.join(path, filename)
 
-    cmd = '''"%s" -p "%s" filename''' % (arg0, path)
+    cmd = '''"%s" -v -p "%s" filename''' % (arg0, path)
 
     os.system(cmd)
 
@@ -77,9 +77,11 @@ def grabSequence(count=10, intervall=0.1, destfolder=False): #, emptyFolder=Fals
     if not os.path.exists(folder):
         os.makedirs(folder)
 
-    cmd = '''"%s" -n %i -t %f -p "%s"''' % (arg0, count, intervall, folder)
+    cmd = '''"%s" -v -n %i -t %f -p "%s"''' % (arg0, count, intervall, folder)
 
     os.system(cmd)
+    
+    # print cmd
 
     result = []
     for root, dirs, files in os.walk(folder, topdown=False):

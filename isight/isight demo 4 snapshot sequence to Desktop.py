@@ -28,6 +28,7 @@ size(X, Y)
 
 destfolder = os.path.join( os.path.expanduser( "~" ), "Desktop", "iSightSequence" )
 
+# get 30 images in ca. 10s
 imagepaths = isight.grabSequence( count=30, intervall=0.334, destfolder=destfolder )
 
 
@@ -38,12 +39,6 @@ rect( 0, 0, WIDTH, HEIGHT )
 
 
 canv = coreimage.canvas( WIDTH, HEIGHT )
-
-nooffiles = len( imagepaths )
-
-# imagepaths.shuffle()
-
-noofpicts = len( imagepaths )
 
 for pict in imagepaths:
     l = canv.layer( pict )
@@ -67,4 +62,4 @@ for pict in imagepaths:
     py = random(oy, HEIGHT - oy)
     l.x, l.y = px, py
 
-canv.draw( 0, 0, helper=True )
+canv.draw( 0, 0, helper=False )

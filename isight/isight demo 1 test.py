@@ -9,7 +9,6 @@ except:
     isight = ximport("__init__")
     reload(isight)
 
-
 # the width of the used images
 imagewidth = 400
 
@@ -32,7 +31,6 @@ import itertools
 
 # grab columns*rows images, intervall sec apart
 imagepaths = isight.grabSequence( count=columns*rows, intervall=intervall )
-
 
 # get imagesize from first image
 imsize = imagesize( imagepaths[0] )
