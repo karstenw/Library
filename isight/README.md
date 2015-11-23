@@ -6,9 +6,8 @@ This module has been rewritten to use the newer [imagesnap](http://iharder.net/i
 
 ### grab ###
 
-```
-isight.grab(destfolder=False)
-```
+#####isight.grab(destfolder=False)#####
+
 
 Grabs a single image and returns the path to the file.
 
@@ -32,8 +31,7 @@ image(imagepath,0,0,width=w,height=h)
 
 
 
-```Python
-grabSequence(count=10, intervall=0.1, destfolder=False)
+#####grabSequence(count=10, intervall=0.1, destfolder=False)#####
 ```
 
 Grab a sequence of images.
@@ -43,6 +41,6 @@ count: nr of images to read
 intervall: time between shots
 
 destfolder: the destination folder. If False, the folder "~/Pictures/Nodebox-iSight-Sequences" will be used.
-```
+
 
 ####ATTENTION: The destination folder will grow with each run. Images are not deleted.####
