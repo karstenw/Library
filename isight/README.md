@@ -13,9 +13,11 @@ isight.grab(destfolder=False)
 Grabs a single image and returns the path to the file.
 
 Unlike the previous version, you cannot define the size of the image.
-``
+
+```
 ìmagesnap
 ```
+
 always returns an image with the camera native size.
 
 The usage pattern is:
@@ -34,7 +36,9 @@ image(imagepath,0,0,width=w,height=h)
 
 
 
-```grabSequence(count=10, intervall=0.1, destfolder=False)```
+```Python
+grabSequence(count=10, intervall=0.1, destfolder=False)
+```
 
 Grab a sequence of images.
 
