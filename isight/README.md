@@ -31,10 +31,10 @@ image(imagepath,0,0,width=w,height=h)
 
 
 
-#####grabSequence(count=10, intervall=0.1, destfolder=False)#####
-```
+#####isight.grabSequence(count=10, intervall=0.1, destfolder=False)#####
 
-Grab a sequence of images.
+
+Grabs a sequence of images and returns a list of paths.
 
 count: nr of images to read
 
