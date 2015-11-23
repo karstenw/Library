@@ -6,16 +6,21 @@ This module has been rewritten to use the newer [imagesnap](http://iharder.net/i
 
 ### grab ###
 
-```grab(destfolder=False)```
+```
+isight.grab(destfolder=False)
+```
 
 Grabs a single image and returns the path to the file.
 
 Unlike the previous version, you cannot define the size of the image.
-``ìmagesnap``` always returns an image with the camera native size.
+``
+ìmagesnap
+```
+always returns an image with the camera native size.
 
 The usage pattern is:
 
-```python
+```Python
 
 # grab one image to determine the cameras image size
 imagepath = isight.grab()
@@ -37,6 +42,6 @@ count: nr of images to read
 
 intervall: time between shots
 
-destfolder: the destination folder. If False, the folder ```~/Pictures/Nodebox-iSight-Sequences```will be used.
+destfolder: the destination folder. If False, the folder ```~/Pictures/Nodebox-iSight-Sequences``` will be used.
 
 ATTENTION: The destination folder will grow with each run. Images are not deleted.
