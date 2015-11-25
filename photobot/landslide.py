@@ -22,7 +22,7 @@ folder = "./images"
 #folder = "/Library/Desktop Pictures/wallstreet_wallpapers/Objects"
 
 # finally an image folder that should exist on most macs
-folder = "/Library/Desktop Pictures/Nature"
+folder = "/Library/Desktop Pictures"
 
 rawfiles = [f for f in os.listdir(folder)]
 # rawfiles = files( folder + "/*.jpg" )

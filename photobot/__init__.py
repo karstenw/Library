@@ -6,6 +6,16 @@
 
 
 import sys
+import os
+# import md5
+import types
+import time
+import hashlib
+
+def hashFromString( s ):
+    h = hashlib.sha1()
+    h.update( s )
+    return h.hexdigest()
 
 import PIL
 import PIL.ImageFilter as ImageFilter
@@ -292,7 +302,7 @@ class Canvas:
         """
 
         self.flatten()
-        self.layers[1].img.save(filename)
+        self.layers[1].img.save(filename, format="PNG")
         return filename
         
     def draw(self, x, y):
@@ -306,18 +316,14 @@ class Canvas:
         """
         
         try:
-            from time import time
-            import md5
-            from os import unlink
-            m = md5.new()
-            m.update(str(time()))
-            filename = "photobot" + str(m.hexdigest()) + ".png"
+            filename = "photobot_" + hashFromString( str(time.time()) ) + ".png"
+            filename = os.path.abspath(filename)
             self.export(filename)
             _ctx.image(filename, x, y)
-            unlink(filename)
+            os.unlink(filename)
         
-        except:
-            pass
+        except Exception, err:
+            print err
     
     def preferences(interpolation=BILINEAR):
     
