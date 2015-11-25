@@ -6,3 +6,4 @@ cornu/*.svg
 database/book.*
 isight/tras*
 isight/*.jpg
+*/doc/*
