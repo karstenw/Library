@@ -95,13 +95,11 @@ l = canvas.append("lily.tif")
 #
 # ATTENTION
 #
-# filter "perspectivetile" crashes the application
+# filter "perspectivetile" crashes the application on 10.9 and 10.10
 #
 # not ok
 #l.filter("perspectivetile", dx0=0.0, dy0=50.0, dx1=50.0, dy1=50.0, dx2=50.0, dy2=0.0, dx3=0.0, dy3=0.0, helper=1)
 
 
-# canvas.append( img )
-
-canvas.draw()
-# canvas.draw(fast=False,helper=1)
+# canvas.draw()
+canvas.draw(fast=False,helper=1)

@@ -36,6 +36,7 @@ nextImagePath = choice(tiles)
 print "path", repr(nextImagePath)
 canvas.layer( nextImagePath )
 w, h = canvas.layers[1].bounds()
+canvas.layers[1].scale(0.33,0.33)
 print "w,h", w,h
 destWidth = WIDTH / float(repeats)
 print "destWidth", destWidth

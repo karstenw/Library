@@ -34,10 +34,10 @@ for t in rawfiles:
         if not path.startswith('/'):
             path = os.path.abspath(os.path.join(folder, t))
         tiles.append( path )
-pp(tiles)
+# pp(tiles)
 # 
 columns = 4
-rows = 2
+rows = 1
 
 # 
 y_offset = HEIGHT / (rows+1)
