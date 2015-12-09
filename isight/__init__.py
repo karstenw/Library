@@ -20,7 +20,9 @@ def grab(destfolder=False):
     http://iharder.net/imagesnap
     """
     
-    cmdpath = os.path.abspath('.')
+    me = os.path.abspath(__file__)
+    cmdpath = os.path.split( me )[0]
+    print cmdpath
     arg0  = os.path.join(cmdpath, "imagesnap")
 
     path = destfolder
@@ -47,7 +49,9 @@ def grabSequence(count=10, intervall=0.1, destfolder=False): #, emptyFolder=Fals
 
     Returns a list of paths which can be iterated and fed to image()
     """
-    cmdpath = os.path.abspath('.')
+    me = os.path.abspath(__file__)
+    cmdpath = os.path.split( me )[0]
+    print cmdpath
     arg0  = os.path.join(cmdpath, "imagesnap")
     
     userimagefolder = os.path.join( os.path.abspath( os.path.expanduser("~")),
