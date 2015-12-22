@@ -15,6 +15,9 @@ repeats = 5
 canvas = photobot.canvas(WIDTH, HEIGHT)
 
 folder = "/Library/Desktop Pictures/Nature"
+if not os.path.exists( folder ):
+    folder = "/Library/Desktop Pictures"
+
 
 rawfiles = [f for f in os.listdir(folder)]
 
