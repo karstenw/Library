@@ -22,7 +22,7 @@ def grab(destfolder=False):
     
     me = os.path.abspath(__file__)
     cmdpath = os.path.split( me )[0]
-    print cmdpath
+    # print cmdpath
     arg0  = os.path.join(cmdpath, "imagesnap")
 
     path = destfolder
@@ -51,7 +51,7 @@ def grabSequence(count=10, intervall=0.1, destfolder=False): #, emptyFolder=Fals
     """
     me = os.path.abspath(__file__)
     cmdpath = os.path.split( me )[0]
-    print cmdpath
+    # print cmdpath
     arg0  = os.path.join(cmdpath, "imagesnap")
     
     userimagefolder = os.path.join( os.path.abspath( os.path.expanduser("~")),
