@@ -1,6 +1,5 @@
-These Examples in this directory are from the book "The Algorithmic Beauty of Plants" by Przemyslaw Prusinkiewicz and Aristid Lindenmayer.
+This is a Lindenmayer library written from scratch.
 
+Why?
 
-http://algorithmicbotany.org/papers/#abop
-
-
+Because it's fun!
