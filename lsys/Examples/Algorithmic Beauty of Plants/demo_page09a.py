@@ -7,20 +7,19 @@ size(530, 530)
 #
 # page 9
 
+# import library
 try: 
     lsys = ximport("lsys")
 except:
     lsys = ximport("__init__")
 reload(lsys)
 
-
+# color and line attributes
 strokewidth( 1.0 )
 stroke( 0 )
 nofill()
 
-import pprint
-pp = pprint.pprint
-
+# the actual parameters
 axiom = "F-F-F-F"
 rules = {"F":"F+FF-FF-F-F+F+FF-F-F+F+FF+FF-F"}
 
@@ -30,8 +29,8 @@ depth = 2
 
 
 s = lsys.LindenmayerSystem( axiom, rules, ang, -ang, ang, linelength, depth)
-s.generate()
-r = s.walk(120, 120, 0, drawit=True)
 
-b = s.boundingBox
-print b
+s.generate()
+s.walk(120, 120, 0, drawit=True)
+
+print s.boundingBox
