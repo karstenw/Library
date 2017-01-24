@@ -30,6 +30,7 @@ class DrawingState(object):
                 self._x, self._y = self.cocoaOffset(x, y)
 
         self.stack = []
+
         # for finding the bounding box
         self._minX = x + 100
         self._maxX = x - 100
@@ -63,6 +64,7 @@ class DrawingState(object):
         return self._heading
 
     def cocoaOffset(self, x, y):
+        """One pixel lines look better if placed on half coordinates in cocoa."""
         return ( x + 0.5, y + 0.5 )
 
     def move(self, steps):
@@ -74,6 +76,10 @@ class DrawingState(object):
         return self.calcmove( steps )
 
     def calcmove(self, steps):
+        """Move the pen by steps. Draw a line if pen is down.
+        
+        returns a tuple( newx, newy, pendown )
+        """
         oldx, oldy = self._x, self._y
 
         rad = self._heading * 0.0174532925199433
@@ -178,16 +184,19 @@ class LindenmayerSystem(object):
     def mymoveto(self, x2, y2):
         _ctx.moveto(x2,y2)
 
-    def walk(self, x, y, h, drawit=True): # , linetoproc=None, movetoproc=None):
+    def walk(self, x, y, heading, drawit=True): # , linetoproc=None, movetoproc=None):
 
-        ds = DrawingState(x,y,h, False)
+        penup = False
+        pendown = True
+
+        ds = DrawingState(x, y, heading, penup)
 
         result = []
 
         if drawit:
-            _ctx.strokewidth( 1.0 )
-            _ctx.stroke( 0 )
-            _ctx.nofill()
+            #_ctx.strokewidth( 1.0 )
+            #_ctx.stroke( 0 )
+            #_ctx.nofill()
             _ctx.autoclosepath(False)
             p = _ctx.beginpath()
             _ctx.moveto(ds._x, ds._y)
