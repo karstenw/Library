@@ -13,7 +13,7 @@ pp = pprint.pprint
 class DrawingState(object):
     """Represent the drawing state for a Lindenmayer system.
     
-    pen - state of the pen T/F
+    pen - state of the pen True/False for down/up
     halfcoordinates - place coordinates on x.5 and y.5 
     """
 
@@ -212,6 +212,13 @@ class LindenmayerSystem(object):
 
 
     def executeRule(self, ds, rule):
+        """The rules are:
+            F,L,R,G,f: draw
+            +: turn rightangle degrees
+            -: turn leftangle degrees
+            [: push state
+            ]: pop state
+        """
 
         # pdb.set_trace()
 
