@@ -1,5 +1,3 @@
-size(530, 530)
-
 # From the book
 # "Algorithmic Beauty of Plants"
 # 
@@ -15,22 +13,27 @@ except:
 reload(lsys)
 
 # color and line attributes
-strokewidth( 1.0 )
+strokewidth( 0.5 )
 stroke( 0 )
-nofill()
 
-# the actual parameters
+nofill()
+# fill(1,1,0,0.2)
+
+
+# the actual lsystem parameters
 axiom = "F-F-F-F"
 rules = {"F":"F+FF-FF-F-F+F+FF-F-F+F+FF+FF-F"}
 
-ang = 90
+myangle = 90
+initialangle = myangle
+rightangle = -myangle
+leftangle = myangle
+
 linelength = 8
 depth = 2
 
-
-s = lsys.LindenmayerSystem( axiom, rules, ang, -ang, ang, linelength, depth)
-
-s.generate()
-s.walk(120, 120, 0, drawit=True)
-
-print s.boundingBox
+# create and draw the lsystem
+s = lsys.LindenmayerSystem( axiom, rules,
+                            initialangle, rightangle, leftangle,
+                            linelength, depth)
+s.drawlsystem(inset=5)

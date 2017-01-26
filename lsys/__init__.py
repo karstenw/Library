@@ -116,19 +116,23 @@ class DrawingState(object):
 
 
     def boundingBox(self):
-        return ( (self._minX, self._maxX),
-                 (self._minY, self._maxY))
+        # top left bottom right
+        return ( self._minY, self._minX, self._maxY, self._maxX )
+
+        # old return value
+        #       ( (self._minX, self._maxX),
+        #         (self._minY, self._maxY))
 
 
 class LindenmayerSystem(object):
-    def __init__(self, axiom, rules,phi, r, l, m, d):
+    def __init__(self, axiom, rules, phi, rightAngle, leftAngle, movelength, depth):
         self.axiom = axiom
         self.rules = rules
         self.phi = phi
-        self.rightAngle = r
-        self.leftAngle = l
-        self.movelength = m
-        self.depth = d
+        self.rightAngle = rightAngle
+        self.leftAngle = leftAngle
+        self.movelength = movelength
+        self.depth = depth
         self.symbols = list( self.axiom )
 
         self.currentPoint = (0,0)
@@ -161,7 +165,7 @@ class LindenmayerSystem(object):
         return "".join( self.symbols )
 
     def substitute(self):
-        """applies lsys rules to symbols"""
+        """applies one generation of lsys rules to symbols"""
 
         rules = self.rules
         result = []
@@ -175,17 +179,16 @@ class LindenmayerSystem(object):
         self.symbols = result
 
 
-
     #####
-    
-    def mylineto(self, x2, y2):
-        _ctx.lineto(x2,y2)
-    
-    def mymoveto(self, x2, y2):
-        _ctx.moveto(x2,y2)
 
-    def walk(self, x, y, heading, drawit=True): # , linetoproc=None, movetoproc=None):
-
+    def walk(self, x, y, heading, drawit=True):
+        """Walk the symbols list.
+        
+        If drawit == True, lines are drawn in the current style.
+        
+        If drawit == False, the drawing commands are collected and returned.
+            The bounding box is set and could be used for adjustments.
+        """
         penup = False
         pendown = True
 
@@ -218,6 +221,13 @@ class LindenmayerSystem(object):
             # _ctx.drawpath( p )
         self.boundingBox = ds.boundingBox()
         return result
+
+    def adjustToBoundingBox( self, bbox, inset=0):
+        # bbox is top left bottom right
+        t, l, b, r = bbox
+        offset = -l + inset, -t + inset
+        canvassize = int(r - l) + 2 * inset, int(b - t) + 2 * inset
+        return offset, canvassize
 
 
     def executeRule(self, ds, rule):
@@ -254,6 +264,39 @@ class LindenmayerSystem(object):
         elif rule == "]":
              return ds.pop()
         return rule
+
+
+    def drawlsystem(self, inset=1):
+        # apply the rules
+        self.generate()
+
+        # calculate the drawing size
+        self.walk(0, 0, 0, drawit=False)
+
+        # get the bounding box
+        bbox = self.boundingBox
+
+        # calculate offset and canvas size
+        offset, canvassize = self.adjustToBoundingBox( bbox, inset=inset)
+
+        W, H = canvassize
+        x, y = offset
+
+        # now we know that width = W, height = H and the offset
+
+        # set canvas size
+        _ctx.size( W, H )
+        #_ctx.background( None )
+
+        # apply offset
+        _ctx.translate(x-0.5, y-0.5)
+
+        # finally draw it
+        self.walk(0, 0, 0, drawit=True)
+
+
+
+
 if 0:
     s = LindenmayerSystem("F+F+F+F",
                           {"F": "FF+F-F+F+FF"},

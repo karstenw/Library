@@ -1,4 +1,4 @@
-size(760, 760)
+# size(760, 760)
 
 # From the book
 # "Algorithmic Beauty of Plants"
@@ -7,31 +7,37 @@ size(760, 760)
 #
 # page 10 image f
 
+# import library
 try: 
     lsys = ximport("lsys")
 except:
     lsys = ximport("__init__")
 reload(lsys)
 
-
-strokewidth( 1.0 )
+# color and line attributes
+strokewidth( 0.5 )
 stroke( 0 )
+
 nofill()
+# fill(1,1,0,0.2)
 
-import pprint
-pp = pprint.pprint
 
-axiom = "F-F-F-F"
-rules = {"F":"F-F+F-F-F"}
+# the actual lsystem parameters
+axiom = "L"
+rules = {"L":"L+R+",
+         "R": "-L-R"}
 
-ang = 90
+myangle = 90
+initialangle = 0
+rightangle = -myangle
+leftangle = myangle
+
 linelength = 4
-depth = 6
+depth = 10
 
+# create and draw the lsystem
+s = lsys.LindenmayerSystem( axiom, rules,
+                            initialangle, rightangle, leftangle,
+                            linelength, depth)
+s.drawlsystem()
 
-s = lsys.LindenmayerSystem( axiom, rules, ang, ang, -ang, linelength, depth)
-s.generate()
-r = s.walk(130, 630, 0, drawit=True)
-
-b = s.boundingBox
-print b

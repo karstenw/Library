@@ -7,32 +7,37 @@ size(512, 512)
 #
 # page 12 image a
 
+# import library
 try: 
     lsys = ximport("lsys")
 except:
     lsys = ximport("__init__")
 reload(lsys)
 
-
-strokewidth( 1.0 )
+# color and line attributes
+strokewidth( 0.5 )
 stroke( 0 )
+
 nofill()
+# fill(1,1,0,0.2)
 
-import pprint
-pp = pprint.pprint
 
+# the actual lsystem parameters
 axiom = "L"
 rules = {"L": "L+R++R-L--LL-R+",
          "R": "-L+RR++R+L--L-R"}
 
-ang = 60
+
+myangle = 60
+initialangle = myangle
+rightangle = -myangle
+leftangle = myangle
+
 linelength = 8
 depth = 4
 
-
-s = lsys.LindenmayerSystem( axiom, rules, ang, ang, -ang, linelength, depth)
-s.generate()
-r = s.walk(300, 10, 0, drawit=True)
-
-b = s.boundingBox
-print b
+# create and draw the lsystem
+s = lsys.LindenmayerSystem( axiom, rules,
+                            initialangle, rightangle, leftangle,
+                            linelength, depth)
+s.drawlsystem(inset=5)
