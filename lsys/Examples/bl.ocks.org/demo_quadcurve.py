@@ -1,37 +1,39 @@
-size(1200, 1200)
-
 # From the website
 #
 # http://bl.ocks.org/nitaku/8b9e134ca8bae13bb470
 
+# import library
 try: 
     lsys = ximport("lsys")
 except:
     lsys = ximport("__init__")
 reload(lsys)
 
-
-strokewidth( 1.0 )
+# color and line attributes
+strokewidth( 0.5 )
 stroke( 0 )
+
 nofill()
+# fill(1,1,0,0.2)
 
-import pprint
-pp = pprint.pprint
 
+# the actual lsystem parameters
 # since L and R move forward in the lib they are replaced here
-# with P and Q
+# with X and Y
 axiom = "-Y"
 rules = {"X": "XF",
          "Y": "Y+XF+XF"}
 
-ang = 90
+myangle = 90
+initialangle = myangle
+rightangle = -myangle
+leftangle = myangle
+
 linelength = 6
 depth = 72
 
-
-s = lsys.LindenmayerSystem( axiom, rules, ang, ang, -ang, linelength, depth)
-s.generate()
-r = s.walk(600, 600, 0, drawit=True)
-
-b = s.boundingBox
-print b
+# create and draw the lsystem
+s = lsys.LindenmayerSystem( axiom, rules,
+                            initialangle, rightangle, leftangle,
+                            linelength, depth)
+s.drawlsystem(inset=0)

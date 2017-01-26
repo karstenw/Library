@@ -1,5 +1,3 @@
-# size(500, 500)
-
 # From the book
 # "Algorithmic Beauty of Plants"
 # 
@@ -38,4 +36,4 @@ depth = 4
 s = lsys.LindenmayerSystem( axiom, rules,
                             initialangle, rightangle, leftangle,
                             linelength, depth)
-s.drawlsystem(inset=1)
+s.drawlsystem(inset=0)

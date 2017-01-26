@@ -1,5 +1,3 @@
-# size(380, 380)
-
 # From the book
 # "Algorithmic Beauty of Plants"
 # 
@@ -15,7 +13,7 @@ except:
 reload(lsys)
 
 # color and line attributes
-strokewidth( 0.5 )
+strokewidth( 1 )
 stroke( 0 )
 
 nofill()
@@ -31,12 +29,11 @@ initialangle = myangle
 rightangle = -myangle
 leftangle = myangle
 
-linelength = 8
-depth = 3
+linelength = 4
+depth = 4
 
 # create and draw the lsystem
 s = lsys.LindenmayerSystem( axiom, rules,
                             initialangle, rightangle, leftangle,
                             linelength, depth)
-s.drawlsystem()
-
+s.drawlsystem(inset=0)

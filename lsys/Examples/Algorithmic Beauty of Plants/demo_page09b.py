@@ -24,15 +24,15 @@ axiom = "-F"
 rules = {"F":"F+F-F-F+F"}
 
 myangle = 90
-initialangle = 0
+initialangle = -90
 rightangle = -myangle
 leftangle = myangle
 
-linelength = 8
+linelength = 4
 depth = 4
 
 # create and draw the lsystem
 s = lsys.LindenmayerSystem( axiom, rules,
                             initialangle, rightangle, leftangle,
                             linelength, depth)
-s.drawlsystem()
+s.drawlsystem(inset=0)

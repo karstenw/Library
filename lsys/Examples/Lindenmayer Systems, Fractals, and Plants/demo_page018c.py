@@ -2,6 +2,7 @@
 # "Lindenmayer Systems, Fractals, and Plants"
 # 
 # http://algorithmicbotany.org/papers/#lsfp
+# background( None )
 
 # import library
 try: 
@@ -15,20 +16,20 @@ strokewidth( 0.5 )
 stroke( 0 )
 
 nofill()
-# fill(1,1,0,0.2)
+# fill(1, 1, 0, 0.4)
 
 
 # the actual lsystem parameters
-axiom = "F"
-rules = {"F": "F[+F]F[-F]F"}
+axiom = "F+XF+F+XF"
+rules = {"X": "XF-F+F-XF+F+XF-F+F-X"}
 
-myangle = 22.5
-initialangle = -90
+myangle = 90
+initialangle = 0
 rightangle = myangle
 leftangle = -myangle
 
-linelength = 2
-depth = 5
+linelength = 4
+depth = 4
 
 # create and draw the lsystem
 s = lsys.LindenmayerSystem( axiom, rules,

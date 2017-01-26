@@ -36,4 +36,4 @@ depth = 2
 s = lsys.LindenmayerSystem( axiom, rules,
                             initialangle, rightangle, leftangle,
                             linelength, depth)
-s.drawlsystem(inset=5)
+s.drawlsystem(inset=0)

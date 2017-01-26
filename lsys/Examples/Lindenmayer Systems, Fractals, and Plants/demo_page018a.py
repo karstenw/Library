@@ -19,16 +19,17 @@ nofill()
 
 
 # the actual lsystem parameters
-axiom = "F"
-rules = {"F": "F[+F]F[-F]F"}
+axiom = "X"
+rules = {"X": "XFYFX+F+YFXFY-F-XFYFX",
+         "Y": "YFXFY-F-XFYFX+F+YFXFY"}
 
-myangle = 22.5
+myangle = 90
 initialangle = -90
 rightangle = myangle
 leftangle = -myangle
 
-linelength = 2
-depth = 5
+linelength = 8
+depth = 3
 
 # create and draw the lsystem
 s = lsys.LindenmayerSystem( axiom, rules,

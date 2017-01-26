@@ -14,7 +14,6 @@ class DrawingState(object):
     """Represent the drawing state for a Lindenmayer system.
     
     pen - state of the pen True/False for down/up
-    halfcoordinates - place coordinates on x.5 and y.5 
     """
 
     def __init__(self, x, y, heading, pen):
@@ -23,11 +22,6 @@ class DrawingState(object):
         self._y = y
         self._heading = heading
         self.pen = pen
-        self.halfcoordinates = True
-
-        if x == int(x):
-            if self.halfcoordinates:
-                self._x, self._y = self.cocoaOffset(x, y)
 
         self.stack = []
 
@@ -37,13 +31,17 @@ class DrawingState(object):
 
         self._minY = y + 100
         self._maxY = y - 100
+
+        self.adaptBoundingBox()
         
         self._customLine = None
         self._customMove = None
 
+
     def push(self):
         item = (self._x, self._y, self._heading, self.pen)
         self.stack.append( item )
+
 
     def pop(self):
         if len(self.stack) == 0:
@@ -105,23 +103,26 @@ class DrawingState(object):
 
 
     def adaptBoundingBox(self):
-        if self._x > self._maxX:
-            self._maxX = self._x
-        if self._x < self._minX:
-            self._minX = self._x
-        if self._y > self._maxY:
-            self._maxY = self._y
-        if self._y < self._minY:
-            self._minY = self._y
+        xr = round(self._x) + 0.5
+        xl = xr - 1.0
+        yb = round(self._y) + 0.5
+        yt = yb - 1.0
+
+        if xr > self._maxX:
+            self._maxX = xr
+
+        if xl < self._minX:
+            self._minX = xl
+
+        if yb > self._maxY:
+            self._maxY = yb
+        if yt < self._minY:
+            self._minY = yt
 
 
     def boundingBox(self):
         # top left bottom right
         return ( self._minY, self._minX, self._maxY, self._maxX )
-
-        # old return value
-        #       ( (self._minX, self._maxX),
-        #         (self._minY, self._maxY))
 
 
 class LindenmayerSystem(object):
@@ -179,6 +180,10 @@ class LindenmayerSystem(object):
         self.symbols = result
 
 
+    def levelCoordinates(self, x, y):
+        return round(x)+ 0.5, round(y) + 0.5
+
+
     #####
 
     def walk(self, x, y, heading, drawit=True):
@@ -202,17 +207,18 @@ class LindenmayerSystem(object):
             #_ctx.nofill()
             _ctx.autoclosepath(False)
             p = _ctx.beginpath()
-            _ctx.moveto(ds._x, ds._y)
+            _ctx.moveto( round(ds._x) + 0.5, round(ds._y) + 0.5 )
         
         for s in self.symbols:
             x = self.executeRule( ds, s )
             if type(x) in (tuple,):
                 if drawit:
                     x2,y2,pen = x
+                    
                     if pen:
-                        _ctx.lineto(x2,y2)
+                        _ctx.lineto(round(x2) + 0.5, round(y2) + 0.5 )
                     else:
-                        _ctx.moveto(x2,y2)
+                        _ctx.moveto(round(x2) + 0.5, round(y2) + 0.5 )
                 else:
                     result.append( x )
 
@@ -271,7 +277,7 @@ class LindenmayerSystem(object):
         self.generate()
 
         # calculate the drawing size
-        self.walk(0, 0, 0, drawit=False)
+        self.walk(0, 0, self.phi, drawit=False)
 
         # get the bounding box
         bbox = self.boundingBox
@@ -292,7 +298,7 @@ class LindenmayerSystem(object):
         _ctx.translate(x-0.5, y-0.5)
 
         # finally draw it
-        self.walk(0, 0, 0, drawit=True)
+        self.walk(0, 0,  self.phi, drawit=True)
 
 
 

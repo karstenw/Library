@@ -1,5 +1,3 @@
-size(300, 300)
-
 # From the book
 # "Algorithmic Beauty of Plants"
 # 
@@ -31,11 +29,11 @@ initialangle = myangle
 rightangle = -myangle
 leftangle = myangle
 
-linelength = 8
+linelength = 4
 depth = 4
 
 # create and draw the lsystem
 s = lsys.LindenmayerSystem( axiom, rules,
                             initialangle, rightangle, leftangle,
                             linelength, depth)
-s.drawlsystem()
+s.drawlsystem(inset=0)

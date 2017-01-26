@@ -19,15 +19,16 @@ nofill()
 
 
 # the actual lsystem parameters
-axiom = "F"
-rules = {"F": "F[+F]F[-F]F"}
+axiom = "X"
+rules = {"X": "-YF+XFX+FY-",
+         "Y": "+XF-YFY-FX+"}
 
-myangle = 22.5
+myangle = 90
 initialangle = -90
 rightangle = myangle
 leftangle = -myangle
 
-linelength = 2
+linelength = 4
 depth = 5
 
 # create and draw the lsystem
