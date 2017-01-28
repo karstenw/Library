@@ -8,7 +8,7 @@ except:
 
 web.clear_cache()
 
-q = "computer graphics"
+q = "Computer Graphics"
 article = web.wikipedia.search(q, language="en")
 
 # Get the article title.

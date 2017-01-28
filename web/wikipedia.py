@@ -478,13 +478,13 @@ class WikipediaPage:
 
     def __unicode__(self):
         
-        str = u""
+        s = u""
         for paragraph in self.paragraphs:
-            str += paragraph.title+"\n\n"
+            s += paragraph.title+"\n\n"
             for textblock in paragraph:
-                str += unicode(textblock)+"\n\n"
+                s += unicode(textblock)+"\n\n"
         
-        return str
+        return s
         
     def __str__(self):
         s = ""
