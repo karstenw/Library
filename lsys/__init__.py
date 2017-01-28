@@ -46,7 +46,7 @@ class DrawingState(object):
     def pop(self):
         if len(self.stack) == 0:
             print "EMPTY STACK ERROR"
-            pdb.set_trace()
+            # pdb.set_trace()
             print
         
         item = self.stack.pop()
@@ -103,6 +103,7 @@ class DrawingState(object):
 
 
     def adaptBoundingBox(self):
+        # TODO: current strokewidth should be considered here...
         xr = round(self._x) + 0.5
         xl = xr - 1.0
         yb = round(self._y) + 0.5
@@ -245,8 +246,6 @@ class LindenmayerSystem(object):
             ]: pop state
         """
 
-        # pdb.set_trace()
-
         if rule == 'F':
             return ds.draw( self.movelength )
         elif rule == 'L':
@@ -299,6 +298,8 @@ class LindenmayerSystem(object):
 
         # finally draw it
         self.walk(0, 0,  self.phi, drawit=True)
+        
+        print "%i Symbols." % len(self.symbols)
 
 
 
