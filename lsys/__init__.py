@@ -31,6 +31,7 @@ class DrawingState(object):
 
         self._minY = y + 100
         self._maxY = y - 100
+        self.scale = 1.0
 
         self.adaptBoundingBox()
         
@@ -39,7 +40,7 @@ class DrawingState(object):
 
 
     def push(self):
-        item = (self._x, self._y, self._heading, self.pen)
+        item = (self._x, self._y, self._heading, self.pen, self.scale)
         self.stack.append( item )
 
 
@@ -50,7 +51,7 @@ class DrawingState(object):
             print
         
         item = self.stack.pop()
-        self._x, self._y, self._heading, self.pen = item
+        self._x, self._y, self._heading, self.pen, self.scale = item
         return self.move(0)
 
     def heading(self):
@@ -82,8 +83,8 @@ class DrawingState(object):
 
         rad = self._heading * 0.0174532925199433
 
-        x = oldx + (cos( rad ) * steps)
-        y = oldy + (sin( rad ) * steps)
+        x = oldx + (cos( rad ) * (steps * self.scale))
+        y = oldy + (sin( rad ) * (steps * self.scale))
 
         self._x = x
         self._y = y
