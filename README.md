@@ -9,5 +9,5 @@ The module ```ìsight``` has been rewritten to use the newer [imagesnap](http://
 
 The module ```photobot``` has been adapted. It now uses the PIL successor [Pillow](https://github.com/python-pillow/Pillow). You'll need at least Nodebox version 1.9.12.
 
-The module ```lsys```is new.
+The module ```lsys```has been written from scratch. Why? Because lindemayer systems are fun. Included are a lot of demos from "Algorithmic Beauty of Plants" and "Lindenmayer Systems, Fractals, and Plants".
 
