@@ -1,6 +1,6 @@
 # coding: utf-8
 
-### PERCEPTION #######################################################################################
+### PERCEPTION ########################################################################################
 # Analysis tools for working with data from http://nodebox.net/perception in NodeBox.
 # The library is roughly organised in 5 parts that add up to the final solver object:
 # 1) query()   : returns lists of rules form the online database, using a caching mechanism.
@@ -8,9 +8,10 @@
 # 3) range()   : find sibling concepts (e.g. fonts, movies, colors, trees) using a taxonomy graph.
 # 4) index     : object for building and searching cached indices of shortest paths.
 # 5) cost      : object that simplifies the creation of path search heuristics.
-# => solver    : object for inferring knowledge from the database, using clusters, indices and ranges.
+# => solver    : object for inferring knowledge from the database, using clusters,
+#                indices and ranges.
 
-### CREDITS ##########################################################################################
+### CREDITS ########################################################################################
 
 # Copyright (c) 2008 Tom De Smedt.
 # See LICENSE.txt for details.
@@ -20,7 +21,7 @@ __version__   = "beta+"
 __copyright__ = "Copyright (c) 2008 Tom De Smedt"
 __license__   = "GPL"
 
-######################################################################################################
+########################################################################################
 
 import os
 # import md5
@@ -359,7 +360,7 @@ graph.node.synonyms     = graph.node.aliases      = aliases
 graph.node.effects                                = effects
 graph.node.causes                                 = causes
 
-#--- CLUSTER -----------------------------------------------------------------------------------------
+#--- CLUSTER ----------------------------------------------------------------------------------------
 
 def style(graph, relation=True):
     """ Apply styling to match the online Perception module.
@@ -560,7 +561,7 @@ graph.graph.perceptonyms = graph.graph.properties = graph_properties
 graph.graph.hyponyms     = graph.graph.specific   = graph_specific
 graph.graph.objects      = graph_objects
 
-#### TAXONOMY ######################################################################################## 
+#### TAXONOMY ########################################################################################
 # Taxonomies are used to find specific/concrete interpretations of a concept.
 
 def taxonomy(concept, context, author=None, depth=4):
@@ -626,12 +627,13 @@ class _range(dict):
 
 range = _range()
 
-#### INDEX ########################################################################################### 
+#### INDEX #############################################################################
 # A cached index of shortest paths between concepts.
 # You give it a list of concepts and it looks up all the paths between them,
 # based on the rules in the Perception database.
-# This is essential: we can't create a NodeBox visualization script for each and every concept. 
-# We will later need to "solve" how to get from something undefined to something defined.
+# This is essential: we can't create a NodeBox visualization script for each and every
+# concept.  We will later need to "solve" how to get from something undefined to
+# something defined.
 
 INDEX = os.path.join(os.path.dirname(__file__), "index")
 
@@ -657,7 +659,8 @@ class _index(dict):
         Creates a pickled index file.
         By supplying different sets of concepts, different index names
         and a different heuristic we can build custom indices.
-        This proces can take some time (e.g. 30 minutes for 200 concepts on a MacBook Pro).
+        This proces can take some time (e.g. 30 minutes for 200 concepts on a
+        MacBook Pro).
         """
         self._name = name
         g = cluster(None, depth=None, wait=600)
@@ -717,12 +720,14 @@ def _build_properties_index():
               "is-opposite-of" : 10})
     )
 
-#### SOLVER ########################################################################################## 
-# The solver finds the best match between a property and a range of concepts (e.g. creepy <=> flowers).
+#### SOLVER ############################################################################
+# The solver finds the best match between a property and a range of concepts
+# (e.g. creepy <=> flowers).
 # To retrieve the creepiest flower, it analyzes the properties of each specific flower.
 # For each of these properties, we calculate the shortest path to "creepy".
-# Less important properties (further down the list) have less impact on the total score (factor m).
-# XXX - how many paths does the human brain take into account (high m, low m?)    
+# Less important properties (further down the list) have less impact on the total score
+# (factor m).
+# XXX - how many paths does the human brain take into account (high m, low m?)
 def add_method(name, method):
     setattr(graph.graph, name, method)
 graph.add_method = add_method
@@ -781,9 +786,11 @@ class _solver:
         """ Returns the list of concepts sorted by relevance to the root [property].
         
         1) For each of the concepts, a Perception cluster is created.
-        2) The cluster is analyzed for [properties] that best describe the concept (eigenvalue).
+        2) The cluster is analyzed for [properties] that best describe the
+           concept (eigenvalue).
         3) A cached index of distances between all [properties] is used 
-           to decide which [properties] of which concept are closest to the given query (Dijkstra).
+           to decide which [properties] of which concept are closest to the given
+           query (Dijkstra).
         4) A list of winning concepts is returned (closest first).
         
         For example: painful <-> range.emotion = shame, envy, pride, anger, jealousy, sadness, fear, anxiety, ...
@@ -839,7 +846,7 @@ class _solver:
 
 solver = _solver()
 
-#--- ANALOGY -----------------------------------------------------------------------------------------
+#--- ANALOGY ---------------------------------------------------------------------------
 # Uses the solver to analyze multiple properties of a given object.
 # This way we can map objects to a different context: 
 # music styles to colors, people to animals, cars to geometric shapes, ...
@@ -860,7 +867,8 @@ class _analogy:
         - Color concepts: black, blue, green, red, yellow, ...
         - Obviously, "blue" makes an excellent candidate. 
         - However, the "blue" property is too far down the list to score highly.
-        - Therefore, we sort the water properties to available colors, putting blue at the front.
+        - Therefore, we sort the water properties to available colors, putting blue
+          at the front.
         """
         list = [item for item in list]
         candidates = [item for item in list if item in candidates]
@@ -876,7 +884,8 @@ class _analogy:
         An object is a concept that has properties: sea, Darwin, church, sword, cat, ...
         Returns the list of concepts sorted by the relevance score sum.
         
-        For example: sword <=> range.animal = hedgehog, scorpion, bee, cat, cheetah, cougar, ...
+        For example:
+        sword <=> range.animal = hedgehog, scorpion, bee, cat, cheetah, cougar, ...
         
         """
         
@@ -887,7 +896,8 @@ class _analogy:
         for i, property in enumerate(p[:self.depth]):
             
             # The score for each concept is the sum of the length of the paths 
-            # from the given property to each of the concept's properties, dampened by order.
+            # from the given property to each of the concept's properties,
+            # dampened by order.
             A = solver.find(str(property), concepts, threshold)
             A = solver.analysis
             for concept in A:
@@ -917,9 +927,10 @@ class _analogy:
 
 analogy = _analogy()
 
-#### SEARCH-MATCH-PARSE ############################################################################## 
+#### SEARCH-MATCH-PARSE ################################################################
 
-def search_match_parse(query, pattern, parse=lambda x: x, service="google", cached=True, n=10,):
+def search_match_parse(query, pattern, parse=lambda x: x, service="google",
+                       cached=True, n=10,):
     """ Parses words from search engine queries that match a given syntactic pattern.
     query   : a Google/Yahoo query. Google queries can include * wildcards. 
     pattern : an en.sentence.find() pattern, e.g. as big as * NN
@@ -959,7 +970,7 @@ def clean(word):
     if word.endswith(u"’s"): word = word[:-2]
     return word.strip()
 
-#--- SIMILE ------------------------------------------------------------------------------------------
+#--- SIMILE ----------------------------------------------------------------------------
 
 def suggest_properties(noun, cached=True):
     """ Learning to Understand Figurative Language: 
@@ -1007,14 +1018,16 @@ def suggest_objects(adjective, cached=True):
     matches = filter(lambda word: len(word) > 1 and word not in ("****"), matches)
     return count(matches)
 
-#--- COMPARATIVE -------------------------------------------------------------------------------------
+#--- COMPARATIVE -----------------------------------------------------------------------
 
 class compare_concepts(list):
     
     def __init__(self, relation, cached=True, n=10):
-        """ Comparative search heuristic in the form of: concept1 is-more-important-than concept2.
+        """ Comparative search heuristic in the form of:
+            concept1 is-more-important-than concept2.
         Returns a list of (concept1, concept2)-tuples.
-        Suggested patterns: "is-more-important-than", "is-bigger-than", "is-the-new", ...
+        Suggested patterns:
+            "is-more-important-than", "is-bigger-than", "is-the-new", ...
         Requires the Web, Linguistics and Graph libraries.
         T. De Smedt, F. De Bleser
         """
@@ -1086,7 +1099,7 @@ def suggest_comparisons(concept1, concept2, cached=True):
     )
     return count(matches)
 
-###################################################################################################### 
+########################################################################################
 
 #solver.index = "properties"
 #solver.method = "properties"
