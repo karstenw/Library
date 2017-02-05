@@ -37,7 +37,7 @@ for t in rawfiles:
 # pp(tiles)
 # 
 columns = 4
-rows = 1
+rows = 4
 
 # 
 y_offset = HEIGHT / (rows+1)

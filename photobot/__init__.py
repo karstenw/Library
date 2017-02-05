@@ -88,7 +88,6 @@ class Canvas:
     
         """
 
-        from types import StringType
         if isinstance(img, Image.Image):
             img = img.convert("RGBA")
             self.layers.append(Layer(self, img, x, y, name))
@@ -96,8 +95,8 @@ class Canvas:
         if isinstance(img, Layer):
             img.canvas = self
             self.layers.append(img)
-            return len(self.layers)-1                 
-        if type(img) == StringType: 
+            return len(self.layers) - 1
+        if type(img) in (str, unicode): 
             img = Image.open(img)
             img = img.convert("RGBA")
             self.layers.append(Layer(self, img, x, y, name))
