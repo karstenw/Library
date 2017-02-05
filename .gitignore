@@ -8,3 +8,4 @@ isight/tras*
 isight/*.jpg
 */doc/*
 web/cache/*
+noise/texture.jpg
