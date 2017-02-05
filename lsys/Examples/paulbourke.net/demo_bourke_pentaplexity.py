@@ -1,5 +1,3 @@
-size(4800, 4800)
-
 # From  the website:
 #
 # http://paulbourke.net/fractals/pentaplexity/

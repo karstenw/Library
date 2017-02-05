@@ -27,7 +27,7 @@ initialangle = -30
 rightangle = myangle
 leftangle = -myangle
 
-linelength = 8
+linelength = 12
 depth = 5
 
 # create and draw the lsystem

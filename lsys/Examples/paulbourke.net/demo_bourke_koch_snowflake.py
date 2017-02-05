@@ -1,5 +1,3 @@
-size(1000, 1200)
-
 # From  the website:
 #
 # see http://paulbourke.net/fractals/vonkoch_snowflake/
