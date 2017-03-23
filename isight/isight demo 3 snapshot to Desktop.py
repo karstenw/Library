@@ -15,5 +15,8 @@ destfolder = os.path.expanduser( "~/Desktop" )
 
 imagepath = isight.grab( destfolder=destfolder )
 
-print imagesize(imagepath)
+w, h = imagesize(imagepath)
+
+size(w, h)
+
 image(imagepath,0,0)
