@@ -36,6 +36,8 @@ __license__   = "GPL"
 import os
 import re
 import difflib
+import zipfile
+
 from glob import glob
 from math import degrees, radians, sin, cos, atan2, sqrt
 from math import floor, ceil
@@ -3405,6 +3407,9 @@ def colorwheel(x, y, r=250, labels=True, scope=1.0, shift=0.0):
 # 1.9.4.8
 # Fixed small bug in swarm().
 # Color object now has a "hex" property.
+
+#1.9.4.7-sb.2
+#Added ability to load aggregated color xml files from zip
 
 # 1.9.4.7
 # Added ZOOM_SHADOWS
