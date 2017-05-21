@@ -64,12 +64,12 @@ The module ```wordnet``` runs unchanged.
 
 1. ```boostgraph```: Missing source files for shared libs.
 
-1. ````cutout```: No demo files, no docs.
+1. ```cutout```: No demo files, no docs.
 
-1. ````geometry```: Has been integrated into the app.
+1. ```geometry```: Has been integrated into the app.
 
-1. ````google```: Needs a licence key which I do not have and wont apply for.
+1. ```google```: Needs a licence key which I do not have and wont apply for.
 
-1. ````purenode, tuio and wiinode```: Need devices which I do not have.
+1. ```purenode, tuio and wiinode```: Need devices which I do not have.
 
 
