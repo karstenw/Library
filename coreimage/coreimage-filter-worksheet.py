@@ -31,7 +31,7 @@ l = canvas.append("lily.tif")
 # l.filter("bumpdistortion", scale=0.75, dy=-35)
 
 # ok
-# l.filter("stretch", radius=60, scale=0.0, dy=60)
+# l.filter("stretch", radius=90, scale=0.0, dy=-7)
 
 # ok
 # l.filter("triangletile", dx=-30, dy=-30, width=40)
@@ -93,9 +93,9 @@ l = canvas.append("lily.tif")
 # l.filter("edges", intensity=1.0)
 
 # ok
-# 2017-05-21 Finally ok. The lib tried to create an infinite canvas and apply opacity to it.
-# now opacity is ignored if width + height > 20000
-l.filter("perspectivetile", dx0=0.0, dy0=50.0, dx1=50.0, dy1=70.0, dx2=50.0, dy2=0.0, dx3=0.0, dy3=0.0, helper=1)
+# 2017-05-21 Finally ok. The lib tried to create an infinite canvas and apply
+# opacity to it. Opacity is now ignored if width + height > 20000
+# l.filter("perspectivetile", dx0=0.0, dy0=50.0, dx1=50.0, dy1=70.0, dx2=50.0, dy2=0.0, dx3=0.0, dy3=0.0, helper=1)
 
 
 # canvas.draw()

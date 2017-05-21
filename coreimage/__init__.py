@@ -8,8 +8,6 @@ __version__   = "1.9.5"
 __copyright__ = "Copyright (c) 2007 Tom De Smedt"
 __license__   = "GPL"
 
-import pdb
-kwdbg = 0
 
 ### NODEBOX CORE IMAGE #############################################################
 
@@ -2041,7 +2039,6 @@ class CoreImageRenderer(Renderer):
         # This filter distorts the layer by translating its
         # corner points, and then tiling that on a plane.
         (x,y), (w,h) = img.extent()
-        # pdb.set_trace()
         dx0 = options["dx0"]
         dy0 = options["dy0"] + h
         dx1 = options["dx1"] + w
@@ -2463,7 +2460,6 @@ class CoreImageRenderer(Renderer):
         if x == y == w == h == None:
             (x, y), (w, h) = img.extent()
         if w + h > 20000:
-            # pdb.set_trace()
             return img
         p = {
             "inputBackgroundImage" : self.image(LAYER_FILL, Transparent(), w, h, x=x, y=y), 
