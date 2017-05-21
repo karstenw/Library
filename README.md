@@ -12,7 +12,7 @@ The module ```boids``` runs unchanged.
 
 The module ```colors``` has been patched for zipfile support. The [patch](https://github.com/shoebot/shoebot/commit/b2b9c43b28acb9312ca2a0557cc8728fc49a47bb) came from the [shoebot](https://github.com/shoebot/shoebot) project. You'll need at least Nodebox version 1.9.17.
 
-The module ```coreimage``` has been adapted. The filter "perspectivetile" crashes the app.
+The module ```coreimage``` has been adapted. The "perspectivetile" crash has been fixed.
 
 The module ```cornu``` runs unchanged.
 
