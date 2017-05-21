@@ -40,31 +40,31 @@ l = canvas.append("lily.tif")
 # l.filter("parallelogramtile", dx=-50, dy=0, angle=10, width=100, tilt=90)
 
 # ok
-# l.filter("kaleidoscope", dx=0, dy=0, count=6)
+# l.filter("kaleidoscope", dx=0, dy=0, count=3)
 
 # ok
-# l.filter("circularwrap", radius=150, angle=150)
+# l.filter("circularwrap", radius=72, angle=241)
 
 # ok
-# l.filter("twirl", dx=0, dy=0, radius=150, angle=100)
-
-# not ok but no crash
-# l.filter("circlesplash", dx=0, dy=0, radius=-14)
+# l.filter("twirl", dx=0, dy=0, radius=150, angle=171)
 
 # ok
-# l.filter("holedistortion", dx=0, dy=0, radius=20)
+# l.filter("circlesplash", dx=55, dy=80, radius=34)
 
 # ok
-# l.filter("starshine", dx=0, dy=0, radius=25, x_scale=10, x_angle=0, x_width=0.5, epsilon=-5.0)
+# l.filter("holedistortion", dx=0, dy=-10, radius=71)
+
+# ok
+# l.filter("starshine", dx=0, dy=0, radius=25, x_scale=10, x_angle=53, x_width=0.6, epsilon=-5.0)
 
 # ok
 # l.filter("checkerboard", clr1=color(0), clr2=color(1), width=8, sharpness=1.1)
 
 # ok
-# l.filter("bloom", radius=50, intensity=0.5)
+# l.filter("bloom", radius=14, intensity=0.5)
 
 # ok
-# l.filter("pixelate", scale= 10)
+# l.filter("pixelate", scale= 7)
 
 # ok
 # l.filter("crystallize", radius=8)
@@ -92,14 +92,11 @@ l = canvas.append("lily.tif")
 # ok
 # l.filter("edges", intensity=1.0)
 
-#
-# ATTENTION
-#
-# filter "perspectivetile" crashes the application on 10.9 and 10.10
-#
-# not ok
-#l.filter("perspectivetile", dx0=0.0, dy0=50.0, dx1=50.0, dy1=50.0, dx2=50.0, dy2=0.0, dx3=0.0, dy3=0.0, helper=1)
+# ok
+# 2017-05-21 Finally ok. The lib tried to create an infinite canvas and apply opacity to it.
+# now opacity is ignored if width + height > 20000
+l.filter("perspectivetile", dx0=0.0, dy0=50.0, dx1=50.0, dy1=70.0, dx2=50.0, dy2=0.0, dx3=0.0, dy3=0.0, helper=1)
 
 
 # canvas.draw()
-canvas.draw(fast=False,helper=1)
+canvas.draw(fast=False,helper=0)
