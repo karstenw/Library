@@ -10,4 +10,5 @@ isight/*.jpg
 web/cache/*
 noise/texture.jpg
 coreimage/images/*
+beziereditor/path.svg
 
