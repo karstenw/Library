@@ -7,15 +7,29 @@
 
 import sys
 import os
-# import md5
 import types
+FloatType = types.FloatType
+StringType = types.StringType
+
+
+import math
+sqrt = math.sqrt
+pow = math.pow
+sin = math.sin
+cos = math.cos
+degrees = math.degrees
+radians = math.radians
+asin = math.asin
+
+import datetime
 import time
 import hashlib
 
-def hashFromString( s ):
-    h = hashlib.sha1()
-    h.update( s )
-    return h.hexdigest()
+import colorsys
+
+import pdb
+import pprint
+pp = pprint.pprint
 
 import PIL
 import PIL.ImageFilter as ImageFilter
@@ -26,13 +40,16 @@ import PIL.ImageOps as ImageOps
 import PIL.ImageDraw as ImageDraw
 import PIL.ImageStat as ImageStat
 
+# PIL interpolation modes
 NEAREST = Image.NEAREST
 BICUBIC = Image.BICUBIC
 BILINEAR = Image.BILINEAR
-INTERPOLATION = BILINEAR
+LANCZOS = Image.LANCZOS
+INTERPOLATION = Image.BICUBIC
 
 LAYERS = []
 
+# blend modes
 NORMAL = "normal"
 MULTIPLY = "multiply"
 SCREEN = "screen"
@@ -40,12 +57,52 @@ OVERLAY = "overlay"
 HUE = "hue"
 COLOR = "color"
 
-HORIZONTAL = "horizontal"
-VERTICAL = "vertical"
+HORIZONTAL = 1
+VERTICAL = 2
 
+SOLID = "solid"
 LINEAR = "linear"
 RADIAL = "radial"
 DIAMOND = "diamond"
+COSINE = "cosine"
+SINE = "sine"
+ROUNDRECT = "roundrect"
+RADIALCOSINE = "radialcosine"
+LANDSLIDE = "landslide"
+
+
+def hashFromString( s ):
+    h = hashlib.sha1()
+    h.update( s )
+    return h.hexdigest()
+
+def datestring(dt = None, dateonly=False, nospaces=True, nocolons=True):
+    """Make an ISO datestring. The defaults are good for using the result of
+    'datestring()' in a filename.
+    """
+    if not dt:
+        now = str(datetime.datetime.now())
+    else:
+        now = str(dt)
+    if not dateonly:
+        now = now[:19]
+    else:
+        now = now[:10]
+    if nospaces:
+        now = now.replace(" ", "_")
+    if nocolons:
+        now = now.replace(":", "")
+    return now
+
+
+def invertimage( img ):
+    alpha = img.split()[3]
+    img = img.convert("RGB")
+    img = ImageOps.invert(img)
+    img = img.convert("RGBA")
+    img.putalpha(alpha)
+    return img
+
 
 class Canvas:
     
@@ -53,7 +110,6 @@ class Canvas:
     
     A canvas is an empty Photoshop document,
     where layers can be placed and manipulated.
-    
     """
 
     def __init__(self, w, h):
@@ -63,10 +119,9 @@ class Canvas:
         Creates the working area on which to blend layers.
         The canvas background is transparent,
         but a background color could be set using the fill() function.
-    
         """
         
-        self.interpolation = BILINEAR
+        self.interpolation = INTERPOLATION
         self.layers = Layers()
         self.w = w
         self.h = h
@@ -74,7 +129,7 @@ class Canvas:
         img = Image.new("RGBA", (w,h), (255,255,255,0))
         self.layer(img, name="_bg")
 
-        
+
     def layer(self, img, x=0, y=0, name=""):
     
         """Creates a new layer from file, Layer, PIL Image.
@@ -85,23 +140,25 @@ class Canvas:
         
         If img is a Layer,
         uses that layer's x and y position and name.
-    
         """
 
         if isinstance(img, Image.Image):
             img = img.convert("RGBA")
             self.layers.append(Layer(self, img, x, y, name))
             return len(self.layers)-1
+
         if isinstance(img, Layer):
             img.canvas = self
             self.layers.append(img)
             return len(self.layers) - 1
+
         if type(img) in (str, unicode): 
             img = Image.open(img)
             img = img.convert("RGBA")
             self.layers.append(Layer(self, img, x, y, name))
             return len(self.layers)-1
     
+
     def fill(self, rgb, x=0, y=0, w=None, h=None, name=""):
     
         """Creates a new fill layer.
@@ -109,37 +166,37 @@ class Canvas:
         Creates a new layer filled with the given rgb color.
         For example, fill((255,0,0)) creates a red fill.
         The layers fills the entire canvas by default.
-    
         """ 
     
-        if w == None: w = self.w - x
-        if h == None: h = self.h - y
+        if w == None:
+            w = self.w - x
+        if h == None:
+            h = self.h - y
         img = Image.new("RGBA", (w,h), rgb)
-        self.layer(img, x, y, name)
+        return self.layer(img, x, y, name)
+
+
+    def makegradientimage(self, style, w, h):
+        """Creates the actual gradient image.
         
-    def gradient(self, style=LINEAR, w=1.0, h=1.0, name=""):
-    
-        """Creates a gradient layer.
-    
-        Creates a gradient layer, that is usually used
-        together with the mask() function.
-    
-        All the image functions work on gradients,
-        so they can easily be flipped, rotated, scaled, inverted,
-        made brighter or darker, ...
-    
-        Styles for gradients are LINEAR, RADIAL and DIAMOND.
-    
+        This has been factored out of gradient() so complex gradients like ROUNDRECT
+        which consist of multiple images can be composed.
         """
-    
-        from types import FloatType
         w0 = self.w 
         h0 = self.h
-        if type(w) == FloatType: w *= w0
-        if type(h) == FloatType: h *= h0
-    
-        img = Image.new("L", (int(w),int(h)), 255)
+        if type(w) == FloatType:
+            w *= w0
+        if type(h) == FloatType:
+            h *= h0
+        
+        if style not in (RADIALCOSINE,):
+            img = Image.new("L", (int(w),int(h)), 255)
+        else:
+            img = Image.new("L", (int(w),int(h)), 0)
         draw = ImageDraw.Draw(img)
+    
+        if style == SOLID:
+            draw.rectangle((0, 0, w, h), fill=255)
     
         if style == LINEAR:
             for i in range(int(w)):
@@ -153,6 +210,24 @@ class Canvas:
                 draw.ellipse((w/2-r+i, h/2-r+i,
                               w/2+r-i, h/2+r-i), fill=int(k))
             
+        if style == RADIALCOSINE:
+            r = min(w,h) / 2.0
+            rx = w / 2.0
+            ry = h / 2.0
+            
+            deg = 90
+            base = 90 - deg
+            stepx = deg / rx
+            stepy = deg / ry
+            step = min(stepx, stepy)
+            for i in range(int(r)):
+                # k = 255.0 * i/r
+                k = 256 * sin( radians( base + i * step ) )
+                ix = i * stepx
+                iy = i * stepy
+                draw.ellipse((0 + ix, 0 + iy,
+                              w - ix, h - iy), fill=int(k))
+
         if style == DIAMOND:
             r = max(w,h)
             for i in range(int(r)):
@@ -160,10 +235,98 @@ class Canvas:
                 y = int(i*h/r*0.5)
                 k = 255.0 * i/r
                 draw.rectangle((x, y, w-x, h-y), outline=int(k))
-    
-        img = img.convert("RGBA")
-        self.layer(img, 0, 0, name="")
         
+        if style in (SINE, COSINE):
+            # sin/cos 0...180 left to right
+            action = sin
+            deg = 180.0
+            if style == COSINE:
+                action = cos
+                deg = 90.0
+            step = deg / w
+            for i in range( int(w) ):
+                k = 256 * action( radians( i * step ) )
+                draw.rectangle((i, 0, i, h), fill=int(k))
+        img = img.convert("RGBA")
+        return img
+
+
+    def gradient(self, style=LINEAR, w=1.0, h=1.0, name="", radius=0):
+    
+        """Creates a gradient layer.
+    
+        Creates a gradient layer, that is usually used together
+        with the mask() function.
+    
+        All the image functions work on gradients, so they can
+        easily be flipped, rotated, scaled, inverted, made brighter
+        or darker, ...
+    
+        Styles for gradients are LINEAR, RADIAL, DIAMOND, SINE,
+        COSINE and ROUNDRECT
+        """
+
+        img = None
+        if style in (SOLID, LINEAR, RADIAL, DIAMOND, SINE, COSINE, RADIALCOSINE):
+            img = self.makegradientimage(style, w, h)
+            img = img.convert("RGBA")
+            return self.layer(img, 0, 0, name=name)
+
+        if style == ROUNDRECT:
+            result = Image.new("L", (int(w),int(h)), 255)
+            r = radius
+            d = 2 * radius
+
+            # take 1 radial grad for the 4 corners
+            corners = self.makegradientimage(RADIAL, d, d)
+            corners = invertimage( corners )
+
+            # Image.crop(box=(l,u,r,b))
+            b = corners.copy()
+            tl = b.crop( box=(0,0,r,r) )
+
+            b = corners.copy()
+            tr = b.crop( box=(r,0,d,r) )
+
+            b = corners.copy()
+            bl = b.crop( box=(0,r,r,d) )
+
+            b = corners.copy()
+            br = b.crop( box=(r,r,d,d) )
+
+            # create the base rect
+            brw = w - d
+            brh = h - d
+            baserect = self.makegradientimage(SOLID, brw, brh)
+            # baserect = invertimage( baserect )
+            
+            # create the vertical gradients
+            verleft = self.makegradientimage(LINEAR, r, brh)
+            vertright = verleft.rotate( 180 )
+
+            # create the horizontal gradients
+            # since LINEAR goes from left to right, 
+            horup = self.makegradientimage(LINEAR, r, brw)
+            hordown = horup.rotate( -90, expand=1 )
+            horup = hordown.rotate( 180 )
+
+            # assemble
+            result.paste( baserect, box=( r,     r) )
+
+            result.paste( hordown,    box=( r,     0) )
+            result.paste( horup,  box=( r,     brh+r) )
+
+            result.paste( verleft,  box=( 0,     r) )
+            result.paste( vertright,box=( brw+r, r) )
+
+            result.paste( tl,       box=( 0,     0) )
+            result.paste( tr,       box=( brw+r, 0) )
+            result.paste( bl,       box=( 0,     brh+r) )
+            result.paste( br,       box=( brw+r, brh+r) )
+            img = result.convert("RGBA")
+            return self.layer(img, 0, 0, name=name)
+
+
     def merge(self, layers):
         
         """Flattens the given layers on the canvas.
@@ -177,7 +340,8 @@ class Canvas:
         layers.sort()
         if layers[0] == 0: del layers[0]
         self.flatten(layers)
-        
+
+
     def flatten(self, layers=[]):
     
         """Flattens all layers according to their blend modes.
@@ -186,7 +350,6 @@ class Canvas:
         using the blend mode and opacity defined for each layer.
         Once flattened, the stack of layers is emptied except
         for the transparent background (bottom layer).
-    
         """
         
         #When the layers argument is omitted,
@@ -315,21 +478,20 @@ class Canvas:
         """
         
         try:
-            filename = "photobot_" + hashFromString( str(time.time()) ) + ".png"
+            filename = "photobot_" + datestring() + ".png"
             filename = os.path.abspath(filename)
             self.export(filename)
             _ctx.image(filename, x, y)
             os.unlink(filename)
-        
         except Exception, err:
             print err
     
-    def preferences(interpolation=BILINEAR):
+    def preferences(interpolation=INTERPOLATION):
     
         """Settings that influence image manipulation.
     
-        Currently, only defines the image interpolation,
-        which can be set to NEAREST, BICUBIC or BILINEAR.
+        Currently, only defines the image interpolation, which
+        can be set to NEAREST, BICUBIC, BILINEAR or LANCZOS.
     
         """
     
@@ -351,8 +513,6 @@ class Layers(list):
     """
     
     def __getitem__(self, index):
-
-        from types import StringType
 
         if type(index) in (int, long):
             return list.__getitem__(self, index)
@@ -394,6 +554,17 @@ class Layer:
         self.blend = NORMAL
         self.pixels = Pixels(self.img, self)
         
+
+    def prnt(self):
+        # for debugging
+        print "-" * 20
+        print "name:", self.name
+        print "xy:", self.x, self.y
+        print "wh:", self.w, self.h
+        print "alpha:", self.alpha
+        print "blend:", self.blend
+        print "-" * 20
+
     def index(self):
         
         """Returns this layer's index in the canvas.layers[].
@@ -524,9 +695,11 @@ class Layer:
     
         """
 
-        if len(self.canvas.layers) < 2: return
+        if len(self.canvas.layers) < 2:
+            return
         i = self.index()
-        if i == 0: return
+        if i == 0:
+            return
         
         layer = self.canvas.layers[i-1]
     
@@ -589,7 +762,8 @@ class Layer:
         for example 0.8 means brightness at 80%.
     
         """
-     
+        if value > 5:
+            value = value * 0.01
         b = ImageEnhance.Brightness(self.img) 
         self.img = b.enhance(value)
     
@@ -603,6 +777,8 @@ class Layer:
     
         """
 
+        if value > 5:
+            value = value * 0.01
         c = ImageEnhance.Contrast(self.img) 
         self.img = c.enhance(value) 
     
@@ -620,17 +796,25 @@ class Layer:
         self.img = self.img.convert("RGBA")
         self.img.putalpha(alpha)
     
+    def colorize(self, black, white):
+
+        """Use the ImageOps.colorize() on desaturated layer.
+        
+        """
+        # 
+        alpha = self.img.split()[3]
+        img = self.img.convert("L")
+        img = ImageOps.colorize(img, black, white)
+        img = img.convert("RGBA")
+        img.putalpha(alpha)
+        self.img = img
+    
     def invert(self):
     
         """Inverts the layer.
     
         """
-    
-        alpha = self.img.split()[3]
-        self.img = self.img.convert("RGB")
-        self.img = ImageOps.invert(self.img)
-        self.img = self.img.convert("RGBA")
-        self.img.putalpha(alpha)
+        self.img = invertimage( self.img )
     
     def translate(self, x, y):
     
@@ -655,12 +839,11 @@ class Layer:
     
         """
 
-        from types import FloatType
         w0, h0 = self.img.size
         if type(w) == FloatType: w = int(w*w0)
         if type(h) == FloatType: h = int(h*h0)
     
-        self.img = self.img.resize((w,h), BICUBIC)
+        self.img = self.img.resize((w,h), resample=LANCZOS)
         self.w = w
         self.h = h
     
@@ -677,7 +860,7 @@ class Layer:
     
         w, h = self.img.size
         quad = (-x1,-y1, -x4,h-y4, w-x3,w-y3, w-x2,-y2)
-        self.img = self.img.transform(self.img.size, Image.QUAD, quad, INTERPOLATION)
+        self.img = self.img.transform(self.img.size, Image.QUAD, quad, LANCZOS)
 
     def rotate(self, angle):
     
@@ -700,7 +883,6 @@ class Layer:
         #This way we can use the layers's corners 
         #to calculate the bounding box.
     
-        from math import sqrt, pow, sin, cos, degrees, radians, asin
         w0, h0 = self.img.size
         d = sqrt(pow(w0,2) + pow(h0,2))
         d_angle = degrees(asin((w0*0.5) / (d*0.5)))
@@ -730,7 +912,7 @@ class Layer:
 
         box = Image.new("RGBA", (d,d), bg)
         box.paste(self.img, ((d-w0)/2, (d-h0)/2))
-        box = box.rotate(angle, INTERPOLATION)
+        box = box.rotate(angle, Image.BICUBIC)
         box = box.crop(((d-w)/2+2, (d-h)/2, d-(d-w)/2, d-(d-h)/2))
         self.img = box
     
@@ -749,11 +931,13 @@ class Layer:
     
         """
 
-        if axis == HORIZONTAL:
+        if axis & HORIZONTAL:
+            print "FLIP HOR", axis
             self.img = self.img.transpose(Image.FLIP_LEFT_RIGHT)
-        if axis == VERTICAL:
+        if axis & VERTICAL:
+            print "FLIP VERT", axis
             self.img = self.img.transpose(Image.FLIP_TOP_BOTTOM)
-        
+
     def blur(self):
         
         """Blurs the layer.
@@ -862,8 +1046,6 @@ class Blend:
     
         """
 
-        import colorsys
-
         p1 = list(img1.getdata())
         p2 = list(img2.getdata())
         for i in range(len(p1)):
@@ -902,9 +1084,6 @@ class Blend:
         Returns a composite image with the alpha channel retained.
     
         """
-
-        import colorsys
-
         p1 = list(img1.getdata())
         p2 = list(img2.getdata())
         for i in range(len(p1)):
