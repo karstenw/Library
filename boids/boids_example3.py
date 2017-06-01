@@ -7,7 +7,7 @@ import AppKit
 s = AppKit.NSScreen.mainScreen()
 X,Y = s.frame().size
 
-size(X, Y)
+size(500, 500)
 
 speed(100)
 
