@@ -112,6 +112,8 @@ class CanvasInCanvasRecursionError: pass
 from math import sqrt, pow
 from math import sin, cos, atan, pi, radians, degrees
 
+# these should not be needed
+"""
 def distance(x0, y0, x1, y1):
     return sqrt(pow(x1-x0, 2) + pow(y1-y0, 2))
     
@@ -119,6 +121,8 @@ def angle(x0, y0, x1, y1):
     a = degrees( atan((y1-y0) / (x1-x0+0.00001)) ) + 360
     if x1-x0 < 0: a += 180
     return 360 - a
+"""
+
 
 class Point:
     def __init__(self, x, y):
@@ -908,8 +912,8 @@ class Layer(object):
             dx, dy = corners[i]
             dx += self._distort[i].x * w
             dy += self._distort[i].y * h
-            a = self.rotation - angle(ox, oy, dx, dy)
-            d = distance(ox, oy, dx, dy)
+            a = self.rotation - _ctx.angle(ox, oy, dx, dy)
+            d = _ctx.distance(ox, oy, dx, dy)
             dx = x + d * cos(radians(a))
             dy = y + d * sin(radians(a))
             l = min(l, dx)
@@ -1426,7 +1430,7 @@ class CoreImageRenderer(Renderer):
         self.FILTER_LINEOVERLAY            = "CILineOverlay"        # stylize
         self.FILTER_HISTOGRAM              = "CIAreaHistogram"      # reduction
         self.FILTER_AVERAGE                = "CIAreaAverage" 
-        
+
         # A property description list for each filter.
         self.filters = {
             self.FILTER_COLORMATRIX             : {"r": 1.0, "g": 1.0, "b": 1.0, "a": 1.0},
