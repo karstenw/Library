@@ -211,20 +211,24 @@ class Canvas:
                               w/2+r-i, h/2+r-i), fill=int(k))
             
         if style == RADIALCOSINE:
-            r = min(w,h) / 2.0
+            r = max(w,h) / 2.0
             rx = w / 2.0
             ry = h / 2.0
             
             deg = 90
             base = 90 - deg
-            stepx = deg / rx
-            stepy = deg / ry
-            step = min(stepx, stepy)
+            deltaxdeg = deg / rx
+            deltaydeg = deg / ry
+            deltadeg = deg / r
+            #print "RADIALCOSINE w, h, r", w, h, r
+            #print "RADIALCOSINE steps xy:", deltaxdeg, deltaydeg
+            
+            step = min(deltaxdeg, deltaydeg)
             for i in range(int(r)):
                 # k = 255.0 * i/r
-                k = 256 * sin( radians( base + i * step ) )
-                ix = i * stepx
-                iy = i * stepy
+                k = 256 * sin( radians( base + i * deltadeg ) )
+                ix = i * (rx / r)
+                iy = i * (ry / r)
                 draw.ellipse((0 + ix, 0 + iy,
                               w - ix, h - iy), fill=int(k))
 
@@ -240,13 +244,16 @@ class Canvas:
             # sin/cos 0...180 left to right
             action = sin
             deg = 180.0
+            base = 0
             if style == COSINE:
                 action = cos
                 deg = 90.0
-            step = deg / w
+                base = 90.0 - deg
+            deltadeg = deg / w
             for i in range( int(w) ):
-                k = 256 * action( radians( i * step ) )
-                draw.rectangle((i, 0, i, h), fill=int(k))
+                k = 256 * action( radians( base + i * deltadeg ) )
+                # draw.rectangle((i, 0, i, h), fill=int(k))
+                draw.line( (i,0,i, h), fill=int(k), width=1)
         img = img.convert("RGBA")
         return img
 
@@ -278,8 +285,8 @@ class Canvas:
             d = 2 * radius
 
             # take 1 radial grad for the 4 corners
-            corners = self.makegradientimage(RADIAL, d, d)
-            corners = invertimage( corners )
+            corners = self.makegradientimage(RADIALCOSINE, d, d)
+            # corners = invertimage( corners )
 
             # Image.crop(box=(l,u,r,b))
             b = corners.copy()
@@ -298,15 +305,16 @@ class Canvas:
             brw = w - d
             brh = h - d
             baserect = self.makegradientimage(SOLID, brw, brh)
-            # baserect = invertimage( baserect )
             
             # create the vertical gradients
-            verleft = self.makegradientimage(LINEAR, r, brh)
+            verleft = self.makegradientimage(COSINE, r, brh)
+            verleft = verleft.transpose(Image.FLIP_LEFT_RIGHT)
             vertright = verleft.rotate( 180 )
 
             # create the horizontal gradients
             # since LINEAR goes from left to right, 
-            horup = self.makegradientimage(LINEAR, r, brw)
+            horup = self.makegradientimage(COSINE, r, brw)
+            horup = horup.transpose(Image.FLIP_LEFT_RIGHT)
             hordown = horup.rotate( -90, expand=1 )
             horup = hordown.rotate( 180 )
 
@@ -482,7 +490,7 @@ class Canvas:
             filename = os.path.abspath(filename)
             self.export(filename)
             _ctx.image(filename, x, y)
-            os.unlink(filename)
+            # os.unlink(filename)
         except Exception, err:
             print err
     
@@ -932,10 +940,10 @@ class Layer:
         """
 
         if axis & HORIZONTAL:
-            print "FLIP HOR", axis
+            #print "FLIP HOR", axis
             self.img = self.img.transpose(Image.FLIP_LEFT_RIGHT)
         if axis & VERTICAL:
-            print "FLIP VERT", axis
+            #print "FLIP VERT", axis
             self.img = self.img.transpose(Image.FLIP_TOP_BOTTOM)
 
     def blur(self):
