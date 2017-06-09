@@ -8,7 +8,9 @@ except:
     coreimage = ximport("__init__")
     reload(coreimage)
 
-img = "images/France_414.jpg"
+images = list(imagefiles("/Library/Desktop Pictures", True))
+img = choice( images )
+# img = "images/France_414.jpg"
 
 m = None # The image's alpha mask we'll be editing
 r = 50   # Radius of the eraser.

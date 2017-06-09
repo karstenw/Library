@@ -20,11 +20,13 @@ background(0.1)
 # Create a 800x500 canvas to hold layers.
 canvas = coreimage.canvas(WIDTH, HEIGHT)
 
+images = list(imagefiles("/Library/Desktop Pictures", True))
+
 # Create 20 random layers.
 # Remember, it may take a few seconds to load
 # all the images during the first run.
 for i in range(20):
-    img = choice(files("images/*.jpg"))
+    img = choice(images)
     l = canvas.append(img)
     
     # Give each layer a gradient mask.
@@ -38,7 +40,7 @@ for i in range(20):
     # some random rotation and scaling.
     l.flip(horizontal=choice((True,False)))
     l.rotate(random(360))
-    l.scale(random(1.0,2.0))
+    l.scale(random(0.1,0.5))
     
     # Randomly apply kaleidoscopic, twirl and bump effects.
     if random() > 0.75:
