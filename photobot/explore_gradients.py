@@ -1,4 +1,4 @@
-size(800, 1200)
+size(960, 1200)
 
 
 pb = ximport("photobot")
@@ -45,7 +45,7 @@ c.layers[grad6idx].translate(200, 200)
 label("COSINE 0..90", 200, 200)
 
 # ROUNDRECT (with radius arg)
-grad7idx = c.gradient(pb.ROUNDRECT, 180, 180, radius=36)
+grad7idx = c.gradient(pb.ROUNDRECT, 180, 180, radius=72, radius2=18)
 c.layers[grad7idx].translate(390, 200)
 label("ROUNDRECT", 390, 200)
 
@@ -53,6 +53,11 @@ label("ROUNDRECT", 390, 200)
 grad8idx = c.gradient(pb.RADIALCOSINE, 180, 180)
 c.layers[grad8idx].translate(580, 200)
 label("RADIALCOSINE", 580, 200)
+
+# QUAD
+grad8idx = c.gradient(pb.QUAD, 180, 180, radius=36, radius2=9)
+c.layers[grad8idx].translate(770, 200)
+label("QUAD", 770, 200)
 
 
 # the gradients masked with itself
@@ -104,8 +109,8 @@ c.layers[grad6idx].translate(200, 580)
 
 
 # ROUNDRECT 
-grad7idx = c.gradient(pb.ROUNDRECT, gx, xy, radius=36)
-mask = c.gradient(pb.ROUNDRECT, gx, xy, radius=36)
+grad7idx = c.gradient(pb.ROUNDRECT, gx, xy, radius=72, radius2=9)
+mask = c.gradient(pb.ROUNDRECT, gx, xy, radius=72, radius2=9)
 c.layers[mask].mask()
 c.layers[grad7idx].translate(390, 580)
 
@@ -115,6 +120,14 @@ grad8idx = c.gradient(pb.RADIALCOSINE, gx, xy)
 mask = c.gradient(pb.RADIALCOSINE, gx, xy)
 c.layers[mask].mask()
 c.layers[grad8idx].translate(580, 580)
+
+# QUAD
+grad9idx = c.gradient(pb.QUAD, gx, xy, radius=36, radius2=9)
+mask = c.gradient(pb.QUAD, gx, xy, radius=36, radius2=9)
+c.layers[mask].mask()
+c.layers[grad9idx].translate(770, 580)
+
+
 
 
 # COSINE 0..90
@@ -131,6 +144,15 @@ grad8idx = c.gradient(pb.RADIALCOSINE, gx*2, xy)
 mask = c.gradient(pb.RADIALCOSINE, gx*2, xy)
 c.layers[mask].mask()
 c.layers[grad8idx].translate(390, 770)
+
+
+# QUAD
+grad9idx = c.gradient(pb.QUAD, gx*2, xy)
+mask = c.gradient(pb.QUAD, gx*2, xy)
+c.layers[mask].mask()
+c.layers[grad9idx].translate(390, 960)
+
+
 
 c.draw(1, 1)
 
