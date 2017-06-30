@@ -5,7 +5,12 @@ except:
     reload(beziereditor)
 
 speed(100)
-size(400, 400)
+size(800, 800)
+
+fonts = fontnames()
+
+f = choice( fonts )
+print f
 
 def setup():
     
@@ -13,8 +18,8 @@ def setup():
 
     # Initialize the editor with a path
     # constructed from a character.
-    fontsize(300)
-    p = textpath("a", 80, 300)
+    fontsize(600)
+    p = textpath("a", 80, 600, font=f)
     editor = beziereditor.start(p, filename="path")
 
 def draw():
