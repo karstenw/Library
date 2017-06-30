@@ -197,40 +197,6 @@ class BezierPathEditor:
         else:
             return False
     
-    def reflect(self, x0, y0, x, y):
-        
-        """ Reflects the point x, y through origin x0, y0.
-        """
-                
-        rx = x0 - (x-x0)
-        ry = y0 - (y-y0)
-        return rx, ry
-
-    def angle(self, x0, y0, x1, y1):
-        
-        """ Calculates the angle between two points.
-        """
-    
-        a = degrees( atan((y1-y0) / (x1-x0+0.00001)) ) + 360
-        if x1-x0 < 0: a += 180
-        return a
-
-    def distance(self, x0, y0, x1, y1):
-    
-        """ Calculates the distance between two points.
-        """
-    
-        return sqrt(pow(x1-x0, 2) + pow(y1-y0, 2))
-        
-    def coordinates(self, x0, y0, distance, angle):
-        
-        """ Calculates the coordinates of a point from the origin.
-        """
-        
-        x = x0 + cos(radians(angle)) * distance
-        y = y0 + sin(radians(angle)) * distance
-        return Point(x, y)
-    
     def contains_point(self, x, y, d=2):
         
         """ Returns true when x, y is on the path stroke outline.
@@ -455,14 +421,14 @@ class BezierPathEditor:
                     # This makes for smooth, continuous paths.
                     if len(self._points) > 0:
                         prev = self._points[-1]
-                        rx, ry = self.reflect(prev.x, prev.y, prev.ctrl2.x, prev.ctrl2.y)
+                        rx, ry = _ctx.reflect(prev.x, prev.y, prev.ctrl2.x, prev.ctrl2.y)
                         self.new.ctrl1 = Point(rx, ry)
                     self._points.append(self.new)
                 else:
                     # Illustrator-like behavior:
                     # when the handle is dragged downwards,
                     # the path bulges upwards.
-                    rx, ry = self.reflect(self.new.x, self.new.y, x, y)
+                    rx, ry = _ctx.reflect(self.new.x, self.new.y, x, y)
                     self.new.ctrl2 = Point(rx, ry)
             
             # Edit mode
@@ -510,7 +476,7 @@ class BezierPathEditor:
                     pt.ctrl2.x += dx
                     pt.ctrl2.y += dy
                     if self.edit < len(self._points)-1:
-                        rx, ry = self.reflect(pt.x, pt.y, x, y)
+                        rx, ry = _ctx.reflect(pt.x, pt.y, x, y)
                         next = self._points[self.edit+1]
                         next.ctrl1.x += dx
                         next.ctrl1.y += dy
@@ -524,17 +490,17 @@ class BezierPathEditor:
                     if self.edit > 0 \
                     and self.last_key != "x":
                         prev = self._points[self.edit-1]
-                        d = self.distance(prev.x, prev.y, prev.ctrl2.x, prev.ctrl2.y)
-                        a = self.angle(prev.x, prev.y, pt.ctrl1.x, pt.ctrl1.y)
-                        prev.ctrl2 = self.coordinates(prev.x, prev.y, d, a+180)                        
+                        d = _ctx.distance(prev.x, prev.y, prev.ctrl2.x, prev.ctrl2.y)
+                        a = _ctx.angle(prev.x, prev.y, pt.ctrl1.x, pt.ctrl1.y)
+                        prev.ctrl2 = _ctx.coordinates(prev.x, prev.y, d, a+180)                        
                 if self.drag_handle2 == True:   
                     pt.ctrl2 = Point(x, y)
                     if self.edit < len(self._points)-1 \
                     and self.last_key != "x":
                         next = self._points[self.edit+1]
-                        d = self.distance(pt.x, pt.y, next.ctrl1.x, next.ctrl1.y)
-                        a = self.angle(pt.x, pt.y, pt.ctrl2.x, pt.ctrl2.y)
-                        next.ctrl1 = self.coordinates(pt.x, pt.y, d, a+180)
+                        d = _ctx.distance(pt.x, pt.y, next.ctrl1.x, next.ctrl1.y)
+                        a = _ctx.angle(pt.x, pt.y, pt.ctrl2.x, pt.ctrl2.y)
+                        next.ctrl1 = _ctx.coordinates(pt.x, pt.y, d, a+180)
         
         elif not self.freehand:
             
@@ -552,7 +518,7 @@ class BezierPathEditor:
                 del self._points[i]
                 if 0 < i < len(self._points):
                     prev = self._points[i-1]
-                    rx, ry = self.reflect(prev.x, prev.y, prev.ctrl2.x, prev.ctrl2.y)
+                    rx, ry = _ctx.reflect(prev.x, prev.y, prev.ctrl2.x, prev.ctrl2.y)
                     self._points[i].ctrl1 = Point(rx, ry)
                 # Also delete all the freehand points
                 # prior to this point.
@@ -712,7 +678,7 @@ class BezierPathEditor:
                 # Display the new point's handle being dragged.
                 if pt == self.new \
                 and not pt.freehand:
-                    rx, ry = self.reflect(pt.x, pt.y, pt.ctrl2.x, pt.ctrl2.y)
+                    rx, ry = _ctx.reflect(pt.x, pt.y, pt.ctrl2.x, pt.ctrl2.y)
                     _ctx.stroke(self.handle_color)
                     _ctx.line(rx, ry, pt.x, pt.y)
                     _ctx.nostroke()
@@ -791,7 +757,7 @@ class BezierPathEditor:
             and not self.freehand:
                 _ctx.nofill()
                 _ctx.stroke(self.new_color)
-                rx, ry = self.reflect(pt.x, pt.y, pt.ctrl2.x, pt.ctrl2.y)
+                rx, ry = _ctx.reflect(pt.x, pt.y, pt.ctrl2.x, pt.ctrl2.y)
                 _ctx.beginpath(pt.x, pt.y)
                 _ctx.curveto(rx, ry, x, y, x, y)
                 _ctx.endpath()
