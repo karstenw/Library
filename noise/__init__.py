@@ -34,12 +34,12 @@ try:
     def perlin(x, y, z):
         return _noise.perlin(x, y, z)
         
-    print "FAST"
+    # print "FAST"
 except:
     
     """ Pure Python implementation of the C library.
     """
-    print "SLOW"
+    # print "SLOW"
     warn("Couldn't import fast C library, using native Python version.", Warning)
     
     p = []
