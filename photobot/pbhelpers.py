@@ -1,17 +1,15 @@
-def topLayer( c ):
-    # return top layer index
-    return len(c.layers) -1
-
-
-def aspectRatio(size, maxheight):
-    """scale a (w,h) tuple to maxheight."""    
-    w, h = size
-    if h == maxheight:
-        return 1.0
-    elif maxheight == 0:
-        return 1.0
+def aspectRatio(size, maxsize):
+    """scale a (w,h) tuple to maxsize (either w or h."""
+    maxcurrent = max(size)
+    if maxcurrent == maxsize:
+        return size
+    elif maxsize == 0:
+        return size
     else:
-        return float(maxheight) / h
+        ratio = maxcurrent / float(maxsize)
+        neww = int(round(size[0] / ratio))
+        newh = int(round(size[1] / ratio))
+        return neww, newh
 
 
 def label(s,x,y):
@@ -44,6 +42,6 @@ def scaleLayerToHeight( layer, newheight ):
     w, h = layer.bounds()
 
     # calculate scale & apply
-    s = aspectRatio( (w,h), newheight)
-    layer.scale(s, s)
+    w,h = aspectRatio( (w,h), newheight)
+    layer.scale(w, h)
     return layer
