@@ -586,6 +586,11 @@ class Canvas:
 
         self.interpolation = interpolation
         
+    def topLayer( self ):
+        # return top layer index
+        return len(self.layers) -1
+
+
 def canvas(w, h):
     return Canvas(w, h)
     
@@ -1286,14 +1291,14 @@ def aspectRatio(size, maxsize):
         return size
     else:
         ratio = maxcurrent / float(maxsize)
-        newx = int(round(size[0] / ratio))
-        newy = int(round(size[1] / ratio))
-        return newx, newy
+        neww = int(round(size[0] / ratio))
+        newh = int(round(size[1] / ratio))
+        return neww, newh
 
 
 def normalizeOrientationImage( img ):
-    """Rotate an image according to exif info.
-    """
+    """Rotate an image according to exif info."""
+
     rotation = 0
     try:
         info = img._getexif()
@@ -1312,7 +1317,7 @@ def normalizeOrientationImage( img ):
     return img
 
 
-def getSmallImage( filepath, maxsize, orientation=True):
+def resizeImage( filepath, maxsize, orientation=True):
     """Get a downsampled image for use in layers.
     """
     try:
