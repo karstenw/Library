@@ -14,26 +14,8 @@ repeats = 5
 
 canvas = photobot.canvas(WIDTH, HEIGHT)
 
-folder = "/Library/Desktop Pictures/Nature"
-if not os.path.exists( folder ):
-    folder = "/Library/Desktop Pictures"
 
-
-rawfiles = [f for f in os.listdir(folder)]
-
-def layerTop( c ):
-    # return top layer index
-    nlayers = len(c.layers)
-    return nlayers -1
-
-
-tiles = []
-for t in rawfiles:
-    if os.path.splitext(t)[1].lower() in [".jpg", ".png", ".tif", ".tiff", ".jpeg", ".gif"]:
-        path = t
-        if not path.startswith('/'):
-            path = os.path.abspath(os.path.join(folder, t))
-        tiles.append( path )
+tiles = list(imagefiles( "/Library/Desktop Pictures", True ))
 
 nextImagePath = choice(tiles)
 print "path", repr(nextImagePath)
@@ -47,7 +29,7 @@ sc = 1 / (w / destWidth)
 print "scale", sc
 # canvas.layers[1].scale(sc, sc)
 
-print "layersSize", layerTop(canvas)
+print "layersSize", canvas.topLayer()
 for i in range(repeats):
     # canvas.layers[1].duplicate()
     canvas.layer( nextImagePath )

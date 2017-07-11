@@ -571,7 +571,7 @@ class Canvas:
             filename = os.path.abspath(filename)
             self.export(filename)
             _ctx.image(filename, x, y)
-            # os.unlink(filename)
+            os.unlink(filename)
         except Exception, err:
             print err
 
