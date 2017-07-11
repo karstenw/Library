@@ -1,6 +1,7 @@
+W,H = 550, 1050
 kwdbg = False
 
-size(1000, 1000)
+size(W, H)
 
 background( 0.333 )
 
@@ -29,11 +30,8 @@ except NameError:
 # create the canvas
 c = pb.canvas(int(WIDTH), int(HEIGHT))
 
-
 # get all images from system "Desktop Pictures" folder
 filetuples = imagefiles( "/Library/Desktop Pictures", False )
-
-# filetuples = imagefiles( "./+abi87/1_OLD", False )
 
 # filter out all 1 pix one color images by ignoring all files < 100k
 tiles = []
@@ -48,34 +46,33 @@ rnd.shuffle(tiles)
 rnd.shuffle(tiles)
 rnd.shuffle(tiles)
 
-#
-# Image 1
-#
 
 img1path = tiles.pop()
 img2path = tiles.pop()
 
 
-#  create, scale and place the image
-top = c.layer(img1path, name="image1")
-s = aspectRatio( c.layers[ top ].bounds(), 256 )
-c.layers[top].scale(s, s)
-w1, h1, = c.layers[ top ].bounds()
-c.layers[top].translate(10, 10)
+def placeImage(path, x, y, maxsize, name):
+    img1 = pb.resizeImage(path, maxsize)
+    top = c.layer(img1, name=name)
+    c.layers[top].translate(x, y)
+    w, h, = c.layers[ top ].bounds()
+    return top, w, h
 
-label("Image 1", 10,10)
+
+#
+# Image 1
+#
+
+#  create, scale and place the image
+x, y = 10, 10
+top, w1, h1 = placeImage(img1path, x, y, 256, "Image 1")
+label("Image 1", x, y)
 
 #
 # Image 2
 #
-top = c.layer(img2path, name="image2")
-s = aspectRatio( c.layers[ top ].bounds(), 256 )
-c.layers[top].scale(s, s)
-w1, h1, = c.layers[ top ].bounds()
-top = topLayer(c)
-
 x, y = w1+20, 10
-c.layers[top].translate( x, y)
+top, w2, h2 = placeImage(img2path, x, y, 256, "Image 2")
 label("Image 2", x, y)
 
 
@@ -83,21 +80,28 @@ label("Image 2", x, y)
 # Screen Images 1 & 2
 #
 
-x, y = 10 , h1 + 20
+h = max(h1, h2)
+x, y = 10 , h + 20
 
-top = c.layer(img1path, name="image3")
-s = aspectRatio( c.layers[ top ].bounds(), 522 )
-c.layers[top].scale(s, s)
-c.layers[top].translate( x, y )
-
-top = c.layer(img2path, name="image4")
-s = aspectRatio( c.layers[ top ].bounds(), 522 )
-c.layers[top].scale(s, s)
-c.layers[top].translate( x, y )
+top, w3, h3 = placeImage(img1path, x, y, 522, "Image 3")
+top, w4, h4 = placeImage(img2path, x, y, 522, "Image 4")
 
 c.layers[top].screen()
-label("Screen Image1 over Image2", x, y)
+label("Screen Image 1 over Image 2", x, y)
 
+
+#
+# Screen Images 2 & 1
+#
+
+h = max(h3, h4)
+x, y = 10 , h + 20 + y
+
+top, w4, h4 = placeImage(img2path, x, y, 522, "Image 5")
+top, w3, h3 = placeImage(img1path, x, y, 522, "Image 6")
+
+c.layers[top].screen()
+label("Screen Image 2 over Image 1", x, y)
 
 # draw the result
 c.draw(0, 0)

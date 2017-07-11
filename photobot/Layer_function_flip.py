@@ -1,6 +1,7 @@
+W,H = 1084, 798
 kwdbg = False
 
-size(1000, 1000)
+size(W, H)
 
 background( 0.333 )
 
@@ -26,15 +27,11 @@ try:
 except NameError:
     from nodeboxExtensions import *
 
-
 # create the canvas
 c = pb.canvas(int(WIDTH), int(HEIGHT))
 
-
 # get all images from system "Desktop Pictures" folder
 filetuples = imagefiles( "/Library/Desktop Pictures", False )
-
-# filetuples = imagefiles( "./+abi87/1_OLD", False )
 
 # filter out all 1 pix one color images by ignoring all files < 100k
 tiles = []
@@ -49,24 +46,29 @@ rnd.shuffle(tiles)
 rnd.shuffle(tiles)
 rnd.shuffle(tiles)
 
-#
-# original image
-#
 
-#  create, scale and place the image
-top = c.layer(tiles.pop(), name="image1")
-s = aspectRatio( c.layers[ top ].bounds(), 256 )
-c.layers[top].scale(s, s)
-w1, h1, = c.layers[ top ].bounds()
-c.layers[top].translate(10, 10)
+img1path = tiles.pop()
+img2path = tiles.pop()
 
-label("Original", 10,10)
+
+def placeImage(path, x, y, maxsize, name):
+    img1 = pb.resizeImage(path, maxsize)
+    top = c.layer(img1, name=name)
+    c.layers[top].translate(x, y)
+    w, h, = c.layers[ top ].bounds()
+    return top, w, h
+
+
+imsize = int((W-30)/2)
+x, y = 10, 10
+img1, w1, h1 = placeImage(img1path, x, y, imsize, "image1")
+label("Original Image", x, y)
 
 #
 # flip horizontal
 #
 c.layers["image1"].duplicate()
-top = topLayer(c)
+top = c.topLayer()
 c.layers[top].name = "flip1"
 
 x, y = w1+20, 10
@@ -80,7 +82,7 @@ label("Horizontal Flip", x, y)
 #
 
 c.layers["image1"].duplicate()
-top = topLayer(c)
+top = c.topLayer()
 c.layers[top].name = "flip2"
 x, y = 10 , h1 + 20
 c.layers[top].flip( pb.VERTICAL )
@@ -95,7 +97,7 @@ label("Vertical Flip", x, y)
 
 # duplicate does not return top
 c.layers["image1"].duplicate()
-top = topLayer(c)
+top = c.topLayer()
 c.layers[top].name = "flip3"
 
 x, y = w1 + 20, h1 + 20
@@ -111,4 +113,5 @@ c.draw(0, 0)
 # this is just mean
 # if you understand what it does, you're the next NodeBox maintainer...
 canvas._grobs.reverse()
+
 

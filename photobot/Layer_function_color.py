@@ -1,6 +1,7 @@
+W,H = 542, 1050
 kwdbg = False
 
-size(1000, 1000)
+size(W, H)
 
 background( 0.333 )
 
@@ -18,6 +19,7 @@ try:
 except ImportError:
     pb = ximport("__init__")
     reload(pb)
+from pbhelpers import *
 
 # import extensions if nodebox version < 1.9.18
 try:
@@ -25,15 +27,8 @@ try:
 except NameError:
     from nodeboxExtensions import *
 
-# for topLayer, aspectRatio and label
-from pbhelpers import *
-topLayer = pbh.topLayer
-aspectRatio = pbh.aspectRatio
-label = pbh.label
-
 # create the canvas
 c = pb.canvas(int(WIDTH), int(HEIGHT))
-
 
 # get all images from system "Desktop Pictures" folder
 filetuples = imagefiles( "/Library/Desktop Pictures", False )
@@ -51,75 +46,63 @@ rnd.shuffle(tiles)
 rnd.shuffle(tiles)
 rnd.shuffle(tiles)
 
-#
-# Image 1
-#
 
 img1path = tiles.pop()
 img2path = tiles.pop()
 
 
-#  create, scale and place the image
-top = c.layer(img1path, name="image1")
-s = aspectRatio( c.layers[ top ].bounds(), 256 )
-c.layers[top].scale(s, s)
-w1, h1, = c.layers[ top ].bounds()
-c.layers[top].translate(10, 10)
+def placeImage(path, x, y, maxsize, name):
+    img1 = pb.resizeImage(path, maxsize)
+    top = c.layer(img1, name=name)
+    c.layers[top].translate(x, y)
+    w, h, = c.layers[ top ].bounds()
+    return top, w, h
 
-label("Image 1", 10,10)
+
+#
+# Image 1
+#
+
+#  create, scale and place the image
+x, y = 10, 10
+top, w1, h1 = placeImage(img1path, x, y, 256, "Image 1")
+label("Image 1", x, y)
 
 #
 # Image 2
 #
-top = c.layer(img2path, name="image2")
-s = aspectRatio( c.layers[ top ].bounds(), 256 )
-c.layers[top].scale(s, s)
-w1, h1, = c.layers[ top ].bounds()
-top = topLayer(c)
-
 x, y = w1+20, 10
-c.layers[top].translate( x, y)
+top, w2, h2 = placeImage(img2path, x, y, 256, "Image 2")
 label("Image 2", x, y)
 
 
 #
-# Overlay Images 1 & 2
+# Color Images 1 & 2
 #
 
-x, y = 10 , h1 + 20
+h = max(h1, h2)
+x, y = 10 , h + 20
 
-top = c.layer(img1path, name="image3")
-s = aspectRatio( c.layers[ top ].bounds(), 256 )
-c.layers[top].scale(s, s)
-c.layers[top].translate( x, y )
+top, w3, h3 = placeImage(img1path, x, y, 522, "Image 3")
+top, w4, h4 = placeImage(img2path, x, y, 522, "Image 4")
 
-top = c.layer(img2path, name="image4")
-s = aspectRatio( c.layers[ top ].bounds(), 256 )
-c.layers[top].scale(s, s)
-c.layers[top].translate( x, y )
 
 c.layers[top].color()
 label("Color Image1 over Image2", x, y)
 
 #
-# Overlay Images 2 & 1
+# Color Images 2 & 1
 #
 
-x, y = w1+ 20 , h1 + 20
+h = max(h3, h4)
+x, y = 10 , h + 20 + y
 
-top = c.layer(img2path, name="image5")
-s = aspectRatio( c.layers[ top ].bounds(), 256 )
-c.layers[top].scale(s, s)
-c.layers[top].translate( x, y )
+top, w4, h4 = placeImage(img2path, x, y, 522, "Image 5")
+top, w3, h3 = placeImage(img1path, x, y, 522, "Image 6")
 
-top = c.layer(img1path, name="image6")
-s = aspectRatio( c.layers[ top ].bounds(), 256 )
-c.layers[top].scale(s, s)
-c.layers[top].translate( x, y )
 
 c.layers[top].color()
 label("Color Image2 over Image1", x, y)
-
 
 # draw the result
 c.draw(0, 0)
@@ -128,4 +111,5 @@ c.draw(0, 0)
 # this is just mean
 # if you understand what it does, you're the next NodeBox maintainer...
 canvas._grobs.reverse()
+
 
