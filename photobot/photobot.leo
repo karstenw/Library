@@ -89,8 +89,8 @@
 <v t="karstenw.20170709210735.1"><vh>@clean explore_gradients.py</vh>
 <v t="karstenw.20170709210910.1"><vh>Declarations</vh></v>
 </v>
-<v t="karstenw.20170709211002.1"><vh>@clean Layer_colorize.py</vh>
-<v t="karstenw.20170709211010.1"><vh>Declarations</vh>
+<v t="karstenw.20170709211002.1" a="E"><vh>@clean Layer_colorize.py</vh>
+<v t="karstenw.20170709211010.1" a="E"><vh>Declarations</vh>
 <v t="karstenw.20170710094409.1"><vh>&lt;&lt;initialisation&gt;&gt;</vh></v>
 </v>
 </v>
@@ -1802,7 +1802,14 @@ label("Screen Image 2 over Image 1", x, y)
 
 &lt;&lt;outro&gt;&gt;
 </t>
-<t tx="karstenw.20170710094409.1">kwdbg = False
+<t tx="karstenw.20170710094409.1"># 
+# Note:
+#
+# The examples may be easier to understand if you have LEO http://leoeditor.com installed
+# and read them using the photobot.leo file
+#
+#
+kwdbg = False
 
 size(W, H)
 

@@ -1,4 +1,11 @@
 W,H = 1084, 798
+# 
+# Note:
+#
+# The examples may be easier to understand if you have LEO http://leoeditor.com installed
+# and read them using the photobot.leo file
+#
+#
 kwdbg = False
 
 size(W, H)
