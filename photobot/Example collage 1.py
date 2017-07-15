@@ -1,3 +1,4 @@
+# heavily inspired by https://www.nodebox.net/code/index.php/Landslide
 kwdbg = True
 
 if 0: #not kwdbg:

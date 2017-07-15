@@ -1,3 +1,4 @@
+# heavily inspired by https://www.nodebox.net/code/index.php/Landslide
 size(0, 0)
 import sys, os
 

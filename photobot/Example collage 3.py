@@ -1,3 +1,4 @@
+# heavily inspired by https://www.nodebox.net/code/index.php/Landslide
 W,H = 1280, 950
 RATIO = W / H
 import os

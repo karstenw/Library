@@ -118,7 +118,7 @@
 <v t="karstenw.20170710094409.1"></v>
 </v>
 <v t="karstenw.20170710113905.1"><vh>@clean Layer_function_color.py</vh>
-<v t="karstenw.20170710113922.1" a="E"><vh>Declarations</vh>
+<v t="karstenw.20170710113922.1"><vh>Declarations</vh>
 <v t="karstenw.20170710094409.1"></v>
 <v t="karstenw.20170710105816.1"></v>
 <v t="karstenw.20170710105845.1"></v>
@@ -143,6 +143,14 @@
 </v>
 <v t="karstenw.20170710140437.1"><vh>@clean Layer_function_flip.py</vh>
 <v t="karstenw.20170710094409.1"></v>
+<v t="karstenw.20170710110147.1"></v>
+</v>
+<v t="karstenw.20170715181646.1"><vh>@clean Layer_function_hue.py</vh>
+<v t="karstenw.20170710094409.1"></v>
+<v t="karstenw.20170710105816.1"></v>
+<v t="karstenw.20170710105845.1"></v>
+<v t="karstenw.20170710105940.1"></v>
+<v t="karstenw.20170710105956.1"></v>
 <v t="karstenw.20170710110147.1"></v>
 </v>
 <v t="karstenw.20170711131553.1"><vh>@clean Example collage 1.py</vh>
@@ -2473,7 +2481,8 @@ c.draw(0, 0)
 @language python
 @tabwidth -4
 </t>
-<t tx="karstenw.20170711131604.1">kwdbg = True
+<t tx="karstenw.20170711131604.1"># heavily inspired by https://www.nodebox.net/code/index.php/Landslide
+kwdbg = True
 
 if 0: #not kwdbg:
     size(0, 0)
@@ -2684,7 +2693,8 @@ for j in range(rows):
 @language python
 @tabwidth -4
 </t>
-<t tx="karstenw.20170711131614.1">size(0, 0)
+<t tx="karstenw.20170711131614.1"># heavily inspired by https://www.nodebox.net/code/index.php/Landslide
+size(0, 0)
 import sys, os
 
 import pprint
@@ -2823,7 +2833,8 @@ c.draw(0, 0)
 @language python
 @tabwidth -4
 </t>
-<t tx="karstenw.20170711131630.1">W,H = 1280, 950
+<t tx="karstenw.20170711131630.1"># heavily inspired by https://www.nodebox.net/code/index.php/Landslide
+W,H = 1280, 950
 RATIO = W / H
 import os
 kwdbg = False
@@ -3009,5 +3020,34 @@ for position in positions:
             c.layers[ top ].blur()
 
 </t>
+<t tx="karstenw.20170715181646.1">@language python
+@tabwidth -4
+@others
+W,H = 542, 1050
+&lt;&lt;initialisation&gt;&gt;
+
+&lt;&lt;image1&gt;&gt;
+
+&lt;&lt;image2&gt;&gt;
+
+#
+# Hue Images 1 &amp; 2
+#
+
+&lt;&lt;image34&gt;&gt;
+
+c.layers[top].hue()
+label("Hue Image1 over Image2", x, y)
+
+#
+# Hue Images 2 &amp; 1
+#
+
+&lt;&lt;image56&gt;&gt;
+
+c.layers[top].hue()
+label("Hue Image2 over Image1", x, y)
+
+&lt;&lt;outro&gt;&gt;</t>
 </tnodes>
 </leo_file>
