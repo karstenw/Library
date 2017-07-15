@@ -9,7 +9,7 @@
 <preferences/>
 <find_panel_settings/>
 <vnodes>
-<v t="karstenw.20170709210040.1"><vh>@clean __init__.py</vh>
+<v t="karstenw.20170709210040.1"><vh>@clean ../__init__.py</vh>
 <v t="karstenw.20170709210125.1"><vh>Declarations</vh></v>
 <v t="karstenw.20170709210125.2"><vh>hashFromString</vh></v>
 <v t="karstenw.20170709210125.3"><vh>datestring</vh></v>
@@ -86,10 +86,14 @@
 <v t="karstenw.20170709211522.1"><vh>topLayer</vh></v>
 </v>
 <v t="karstenw.20170709210102.1" a="E"><vh>examples</vh>
-<v t="karstenw.20170709210735.1"><vh>@clean explore_gradients.py</vh>
+<v t="karstenw.20170709210735.1"><vh>@clean explore_gradients 1.py</vh>
 <v t="karstenw.20170709210910.1"><vh>Declarations</vh></v>
 </v>
-<v t="karstenw.20170709211002.1" a="E"><vh>@clean Layer_colorize.py</vh>
+<v t="karstenw.20170715185201.1"><vh>@clean explore_gradients 2.py</vh>
+<v t="karstenw.20170715185207.1"><vh>Declarations</vh></v>
+<v t="karstenw.20170715185207.2"><vh>dogradient</vh></v>
+</v>
+<v t="karstenw.20170709211002.1"><vh>@clean Layer_colorize.py</vh>
 <v t="karstenw.20170709211010.1" a="E"><vh>Declarations</vh>
 <v t="karstenw.20170710094409.1"><vh>&lt;&lt;initialisation&gt;&gt;</vh></v>
 </v>
@@ -1941,6 +1945,7 @@ c.draw(0, 0)
 # if you understand what it does, you're the next NodeBox maintainer...
 canvas._grobs.reverse()
 
+
 </t>
 <t tx="karstenw.20170710113238.1">@language python
 @tabwidth -4
@@ -3055,6 +3060,53 @@ label("Hue Image1 over Image2", x, y)
 c.layers[top].hue()
 label("Hue Image2 over Image1", x, y)
 
-&lt;&lt;outro&gt;&gt;</t>
+&lt;&lt;outro&gt;&gt;
+</t>
+<t tx="karstenw.20170715185201.1">@others
+@language python
+@tabwidth -4
+</t>
+<t tx="karstenw.20170715185207.1">size(800,800)
+background(0.334)
+pb = ximport("photobot")
+reload(pb)
+
+pbh = ximport("pbhelpers")
+label = pbh.label
+
+
+</t>
+<t tx="karstenw.20170715185207.2">def dogradient(s):
+    sx, sy = WIDTH, HEIGHT
+    inset = 10
+    c = pb.canvas(sx, sy)
+    #c.fill((210, 210, 10))
+    c.fill((85, 85, 85))
+    r1, r2 = 72, 36
+    x, y = inset, inset
+    w, h = sx-inset-inset, sy-inset-inset
+    grad1idx = c.gradient(s, w, h, radius=r1, radius2=r2)
+    mask = c.gradient(s, w, h, radius=r1, radius2=r2)
+    c.layers[mask].mask()
+    c.layers[grad1idx].translate(x, y)
+    label(s.upper(), x, y)
+    c.draw(1, 1)
+    canvas._grobs.reverse()
+
+gradients = (
+    pb.SOLID,
+    pb.LINEAR,
+    pb.RADIAL,
+    pb.DIAMOND,
+    pb.SINE,
+    pb.COSINE,
+    pb.ROUNDRECT,
+    pb.RADIALCOSINE,
+    pb.QUAD)
+
+
+var("Gradient", MENU, default=dogradient, value=gradients)
+
+</t>
 </tnodes>
 </leo_file>
