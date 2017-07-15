@@ -15,7 +15,9 @@ l = c.append(color(0))
 
 # Create an image layer with a radial mask.
 # Use the first image in the image folder.
-l = c.layer(files("images/*.jpg")[0])
+img = choice(list(imagefiles("/Library/Desktop Pictures", True)))
+print img
+l = c.layer( img )
 l.mask.gradient(type="radial", spread=0.5)
 l.y -= 120
 

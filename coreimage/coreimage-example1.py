@@ -22,6 +22,11 @@ canvas = coreimage.canvas(WIDTH, HEIGHT)
 
 images = list(imagefiles("/Library/Desktop Pictures", True))
 
+# Put a central image on top of the mess.
+img = choice(images)
+l = canvas.layer(img)
+l.mask.layer_radial_gradient()
+
 # Create 20 random layers.
 # Remember, it may take a few seconds to load
 # all the images during the first run.
@@ -43,17 +48,12 @@ for i in range(20):
     l.scale(random(0.1,0.5))
     
     # Randomly apply kaleidoscopic, twirl and bump effects.
-    if random() > 0.75:
+    if random() > 1.05:
         l.filter("kaleidoscope")
     if random() > 0.25:
         l.filter("twirl")
     if random() > 0.25:
         l.filter("bumpdistortion")
-
-# Put a central image on top of the mess.
-#img = choice(files("images/*.jpg"))
-#l = canvas.layer(img)
-#l.mask.layer_radial_gradient()
 
 # Add a orange fill color that hues
 # all the layers below.

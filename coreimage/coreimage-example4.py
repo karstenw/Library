@@ -11,6 +11,8 @@ except:
     coreimage = ximport("__init__")
     reload(coreimage)
 
+img = ""
+
 def setup():
     
     global img, cache

@@ -1,4 +1,4 @@
-size(400,250)
+size(600,360)
 speed(100)
 
 try: 
@@ -6,16 +6,16 @@ try:
 except:
     coreimage = ximport("__init__")
     reload(coreimage)
-
+img = ""
 def setup():
     
     global img
-    img = choice(files("images/*.jpg"))
+    img = choice(list(imagefiles("/Library/Desktop Pictures", True)))
 
 def draw():
 
     global img
-    canvas = coreimage.canvas(400,250)
+    canvas = coreimage.canvas(600,360)
     canvas.append(color(0))
     l = canvas.append(img)
     
