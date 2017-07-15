@@ -14,7 +14,7 @@ repeats = 5
 
 canvas = photobot.canvas(WIDTH, HEIGHT)
 
-folder = "images"
+folder = "../images"
 
 rawfiles = [f for f in os.listdir(folder)]
 
