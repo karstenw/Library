@@ -20,13 +20,9 @@ if kwdbg:
     rnd.seed(0)
 
 # import photobot
-try:
-    pb = ximport("photobot")
-    pbh = ximport("pbhelpers")
-except ImportError:
-    pb = ximport("__init__")
-    reload(pb)
-from pbhelpers import *
+pb = ximport("photobot")
+pbh = ximport("pbhelpers")
+label = pbh.label
 
 # import extensions if nodebox version < 1.9.18
 try:
@@ -121,5 +117,6 @@ c.draw(0, 0)
 # this is just mean
 # if you understand what it does, you're the next NodeBox maintainer...
 canvas._grobs.reverse()
+
 
 

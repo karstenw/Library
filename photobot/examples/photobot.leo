@@ -9,7 +9,7 @@
 <preferences/>
 <find_panel_settings/>
 <vnodes>
-<v t="karstenw.20170709210040.1"><vh>@clean ../__init__.py</vh>
+<v t="karstenw.20170709210040.1" a="E"><vh>@clean ../__init__.py</vh>
 <v t="karstenw.20170709210125.1"><vh>Declarations</vh></v>
 <v t="karstenw.20170709210125.2"><vh>hashFromString</vh></v>
 <v t="karstenw.20170709210125.3"><vh>datestring</vh></v>
@@ -98,8 +98,8 @@
 <v t="karstenw.20170710094409.1"><vh>&lt;&lt;initialisation&gt;&gt;</vh></v>
 </v>
 </v>
-<v t="karstenw.20170710094259.1"><vh>@clean Layer_function_screen.py</vh>
-<v t="karstenw.20170710094319.1"><vh>Declarations</vh>
+<v t="karstenw.20170710094259.1" a="E"><vh>@clean Layer_function_screen.py</vh>
+<v t="karstenw.20170710094319.1" a="E"><vh>Declarations</vh>
 <v t="karstenw.20170710094409.1"></v>
 <v t="karstenw.20170710105816.1"><vh>&lt;&lt;image1&gt;&gt;</vh></v>
 <v t="karstenw.20170710105845.1"><vh>&lt;&lt;image2&gt;&gt;</vh></v>
@@ -1827,13 +1827,9 @@ if kwdbg:
     rnd.seed(0)
 
 # import photobot
-try:
-    pb = ximport("photobot")
-    pbh = ximport("pbhelpers")
-except ImportError:
-    pb = ximport("__init__")
-    reload(pb)
-from pbhelpers import *
+pb = ximport("photobot")
+pbh = ximport("pbhelpers")
+label = pbh.label
 
 # import extensions if nodebox version &lt; 1.9.18
 try:
