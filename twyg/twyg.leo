@@ -23,9 +23,9 @@
 <v t="karstenw.20170725105526.10"><vh>_buildtree</vh></v>
 <v t="karstenw.20170725105526.11"><vh>buildtree</vh></v>
 </v>
-<v t="karstenw.20170725105546.1"><vh>@clean cairowrapper.py</vh>
+<v t="karstenw.20170725105546.1" a="E"><vh>@clean cairowrapper.py</vh>
 <v t="karstenw.20170725110856.1"><vh>Declarations</vh></v>
-<v t="karstenw.20170725110856.2"><vh>class Color</vh>
+<v t="karstenw.20170725110856.2" a="E"><vh>class Color</vh>
 <v t="karstenw.20170725110856.3"><vh>__init__</vh></v>
 <v t="karstenw.20170725110856.4"><vh>__repr__</vh></v>
 <v t="karstenw.20170725110856.5"><vh>copy</vh></v>
@@ -37,14 +37,17 @@
 <v t="karstenw.20170725110856.11"><vh>_update_rgb</vh></v>
 </v>
 <v t="karstenw.20170725110856.12"><vh>color</vh></v>
-<v t="karstenw.20170725110856.13"><vh>class Context</vh>
+<v t="karstenw.20170725110856.13" a="E"><vh>class Context</vh>
 <v t="karstenw.20170725110856.14"><vh>__init__</vh></v>
 <v t="karstenw.20170725110856.15"><vh>init</vh></v>
+<v t="karstenw.20170725115953.1" a="E"><vh>SHAPES</vh>
 <v t="karstenw.20170725110856.16"><vh>rect</vh></v>
 <v t="karstenw.20170725110856.17"><vh>oval</vh></v>
 <v t="karstenw.20170725110856.18"><vh>line</vh></v>
 <v t="karstenw.20170725110856.19"><vh>arrow</vh></v>
 <v t="karstenw.20170725110856.20"><vh>star</vh></v>
+</v>
+<v t="karstenw.20170725120016.1"><vh>PATH</vh>
 <v t="karstenw.20170725110856.21"><vh>beginpath</vh></v>
 <v t="karstenw.20170725110856.22"><vh>moveto</vh></v>
 <v t="karstenw.20170725110856.23"><vh>lineto</vh></v>
@@ -55,6 +58,8 @@
 <v t="karstenw.20170725110856.28"><vh>beginclip</vh></v>
 <v t="karstenw.20170725110856.29"><vh>endclip</vh></v>
 <v t="karstenw.20170725110856.30"><vh>autoclosepath</vh></v>
+</v>
+<v t="karstenw.20170725120058.1"><vh>TRANSFORM</vh>
 <v t="karstenw.20170725110856.31"><vh>transform</vh></v>
 <v t="karstenw.20170725110856.32"><vh>translate</vh></v>
 <v t="karstenw.20170725110856.33"><vh>rotate</vh></v>
@@ -63,6 +68,8 @@
 <v t="karstenw.20170725110856.36"><vh>push</vh></v>
 <v t="karstenw.20170725110856.37"><vh>pop</vh></v>
 <v t="karstenw.20170725110856.38"><vh>reset</vh></v>
+</v>
+<v t="karstenw.20170725120123.1"><vh>COLOR</vh>
 <v t="karstenw.20170725110856.39"><vh>outputmode</vh></v>
 <v t="karstenw.20170725110856.40"><vh>colormode</vh></v>
 <v t="karstenw.20170725110856.41"><vh>color</vh></v>
@@ -72,6 +79,8 @@
 <v t="karstenw.20170725110856.45"><vh>nostroke</vh></v>
 <v t="karstenw.20170725110856.46"><vh>strokewidth</vh></v>
 <v t="karstenw.20170725110856.47"><vh>background</vh></v>
+</v>
+<v t="karstenw.20170725120152.1"><vh>TYPOGRAPHY</vh>
 <v t="karstenw.20170725110856.48"><vh>font</vh></v>
 <v t="karstenw.20170725110856.49"><vh>fontsize</vh></v>
 <v t="karstenw.20170725110856.50"><vh>text</vh></v>
@@ -81,8 +90,12 @@
 <v t="karstenw.20170725110856.54"><vh>textmetrics</vh></v>
 <v t="karstenw.20170725110856.55"><vh>lineheight</vh></v>
 <v t="karstenw.20170725110856.56"><vh>align</vh></v>
+</v>
+<v t="karstenw.20170725120215.1"><vh>IMAGE</vh>
 <v t="karstenw.20170725110856.57"><vh>image</vh></v>
 <v t="karstenw.20170725110856.58"><vh>imagesize</vh></v>
+</v>
+<v t="karstenw.20170725120232.1"><vh>UTILITY</vh>
 <v t="karstenw.20170725110856.59"><vh>size</vh></v>
 <v t="karstenw.20170725110856.60"><vh>var</vh></v>
 <v t="karstenw.20170725110856.61"><vh>random</vh></v>
@@ -90,10 +103,14 @@
 <v t="karstenw.20170725110856.63"><vh>grid</vh></v>
 <v t="karstenw.20170725110856.64"><vh>files</vh></v>
 <v t="karstenw.20170725110856.65"><vh>autotext</vh></v>
+</v>
+<v t="karstenw.20170725120250.1" a="E"><vh>COLORS LIBRARY</vh>
 <v t="karstenw.20170725110856.66"><vh>rgba_color</vh></v>
 <v t="karstenw.20170725110856.67"><vh>gradientfill</vh></v>
 <v t="karstenw.20170725110856.68"><vh>shadow</vh></v>
 <v t="karstenw.20170725110856.69"><vh>noshadow</vh></v>
+</v>
+<v t="karstenw.20170725120312.1" a="E"><vh>HELPER FUNCTIONS</vh>
 <v t="karstenw.20170725110856.70"><vh>initsurface</vh></v>
 <v t="karstenw.20170725110856.71"><vh>writesurface</vh></v>
 <v t="karstenw.20170725110856.72"><vh>_make_color_obj</vh></v>
@@ -101,6 +118,7 @@
 <v t="karstenw.20170725110856.74"><vh>_draw</vh></v>
 <v t="karstenw.20170725110856.75"><vh>_draw_shadow</vh></v>
 <v t="karstenw.20170725110856.76"><vh>_render_bitmap_shadow</vh></v>
+</v>
 </v>
 </v>
 <v t="karstenw.20170725105558.1"><vh>@clean cmdline.py</vh>
@@ -710,15 +728,9 @@ _initialized = False
 
 
 </t>
-<t tx="karstenw.20170725105546.1">##############################################################################
-#                                                                            #
-#   NodeBox 1.9.5 -&gt; Pycairo wrapper                                         #
-#                                                                            #
-##############################################################################
-
-@others
-@language python
+<t tx="karstenw.20170725105546.1">@language python
 @tabwidth -4
+@others
 </t>
 <t tx="karstenw.20170725105558.1">@others
 @language python
@@ -781,7 +793,13 @@ _initialized = False
 @language python
 @tabwidth -4
 </t>
-<t tx="karstenw.20170725110856.1">import cairo, colorsys, math
+<t tx="karstenw.20170725110856.1">##############################################################################
+#                                                                            #
+#   NodeBox 1.9.5 -&gt; Pycairo wrapper                                         #
+#                                                                            #
+##############################################################################
+
+import cairo, colorsys, math
 
 
 </t>
@@ -819,12 +837,12 @@ _initialized = False
     return Color(r, g, b, a)
 
 
-#=============================================================================#
+</t>
+<t tx="karstenw.20170725110856.13">#=============================================================================#
 #=  NODEBOX COMMANDS                                                         =#
 #=============================================================================#
 
-</t>
-<t tx="karstenw.20170725110856.13">class Context(object):
+class Context(object):
 
     @others
 context = Context()
@@ -848,13 +866,11 @@ context = Context()
     self._shadow_blur_passes = 2
     self._bitmap_dpi = 150
 
-# TODO call on init
 </t>
-<t tx="karstenw.20170725110856.15">def init():
+<t tx="karstenw.20170725110856.15"># TODO call on init
+def init():
     self.font(self._fontname, self._fontsize)
     self.strokewidth(self._strokewidth)
-
-### SHAPE #################################################################
 
 </t>
 <t tx="karstenw.20170725110856.16">def rect(self, x, y, width, height, roundness=0.0, draw=True):
@@ -936,8 +952,6 @@ context = Context()
 <t tx="karstenw.20170725110856.20">def star(x, y, points=20, outer=100, inner=50, draw=True):
     raise NotImplementedError
 
-### PATH ##################################################################
-
 </t>
 <t tx="karstenw.20170725110856.21">def beginpath(self, x, y):
     self._ctx.move_to(x, y)
@@ -1013,8 +1027,6 @@ context = Context()
 <t tx="karstenw.20170725110856.30">def autoclosepath(self, close=True):
     self._autoclosepath = close
 
-### TRANSFORM #############################################################
-
 </t>
 <t tx="karstenw.20170725110856.31">def transform(mode):
     raise NotImplementedError
@@ -1050,8 +1062,6 @@ context = Context()
 </t>
 <t tx="karstenw.20170725110856.38">def reset(self):
     self._ctx.identity_matrix()
-
-### COLOR #################################################################
 
 </t>
 <t tx="karstenw.20170725110856.39">def outputmode(self, mode):
@@ -1103,8 +1113,6 @@ context = Context()
     c.set_source_rgba(*col.rgba())
     c.rectangle(0, 0, self._width, self._height)
     c.fill()
-
-### TYPOGRAPHY ############################################################
 
 </t>
 <t tx="karstenw.20170725110856.48">def font(self, fontname, fontsize=None):
@@ -1163,8 +1171,6 @@ context = Context()
 <t tx="karstenw.20170725110856.56">def align(self, align):
     raise NotImplementedError
 
-### IMAGE #################################################################
-
 </t>
 <t tx="karstenw.20170725110856.57">def image(path, x, y, width=None, height=None, alpha=1.0, data=None):
     raise NotImplementedError
@@ -1172,8 +1178,6 @@ context = Context()
 </t>
 <t tx="karstenw.20170725110856.58">def imagesize(path):
     raise NotImplementedError
-
-### UTILITY ###############################################################
 
 </t>
 <t tx="karstenw.20170725110856.59">def size(w, h):
@@ -1207,10 +1211,6 @@ context = Context()
 <t tx="karstenw.20170725110856.65">def autotext(xml):
     raise NotImplementedError
 
-
-#=========================================================================#
-#=  COLORS LIBRARY                                                       =#
-#=========================================================================#
 
 </t>
 <t tx="karstenw.20170725110856.66">def rgba_color(self, c):
@@ -1249,10 +1249,6 @@ context = Context()
 </t>
 <t tx="karstenw.20170725110856.69">def noshadow(self):
     self._shadow = False
-
-#=========================================================================#
-#=  HELPER FUNCTIONS                                                     =#
-#=========================================================================#
 
 </t>
 <t tx="karstenw.20170725110856.7">def darken(self, step=0.1):
@@ -7173,6 +7169,37 @@ from twyg.geom import Vector2, Rectangle
                 raise (ValueError,
                       'Node ancestor argument out of range: ' + n)
             return ancestors[n]
+
+</t>
+<t tx="karstenw.20170725115953.1">### SHAPE #################################################################
+
+</t>
+<t tx="karstenw.20170725120016.1">### PATH ##################################################################
+
+</t>
+<t tx="karstenw.20170725120058.1">### TRANSFORM #############################################################
+
+</t>
+<t tx="karstenw.20170725120123.1">### COLOR #################################################################
+
+</t>
+<t tx="karstenw.20170725120152.1">### TYPOGRAPHY ############################################################
+
+</t>
+<t tx="karstenw.20170725120215.1">### IMAGE #################################################################
+
+</t>
+<t tx="karstenw.20170725120232.1">### UTILITY ###############################################################
+
+</t>
+<t tx="karstenw.20170725120250.1">#=========================================================================#
+#=  COLORS LIBRARY                                                       =#
+#=========================================================================#
+
+</t>
+<t tx="karstenw.20170725120312.1">#=========================================================================#
+#=  HELPER FUNCTIONS                                                     =#
+#=========================================================================#
 
 </t>
 </tnodes>
