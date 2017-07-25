@@ -38,3 +38,4 @@ gradients = (
 
 var("Gradient", MENU, default=dogradient, value=gradients)
 
+dogradient("solid")

@@ -954,7 +954,8 @@ class Layer:
 
         w, h = self.img.size
         quad = (-x1,-y1, -x4,h-y4, w-x3,w-y3, w-x2,-y2)
-        self.img = self.img.transform(self.img.size, Image.QUAD, quad, LANCZOS)
+        # quad = (x1,y1, x2,y2, x3,y3, x4,y4)
+        self.img = self.img.transform(self.img.size, Image.QUAD, quad) #, LANCZOS)
 
     def rotate(self, angle):
 
@@ -1283,7 +1284,8 @@ class Pixels:
 
 
 def aspectRatio(size, maxsize):
-    """scale a (w,h) tuple to maxsize (either w or h."""
+    """scale a (w,h) tuple to maxsize (either w or h)."""
+
     maxcurrent = max(size)
     if maxcurrent == maxsize:
         return size
@@ -1318,8 +1320,8 @@ def normalizeOrientationImage( img ):
 
 
 def resizeImage( filepath, maxsize, orientation=True):
-    """Get a downsampled image for use in layers.
-    """
+    """Get a downsampled image for use in layers."""
+
     try:
         img = Image.open(filepath)
     except Exception, err:

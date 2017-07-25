@@ -83,7 +83,6 @@
 <v t="karstenw.20170709210125.65"><vh>aspectRatio</vh></v>
 <v t="karstenw.20170709210125.66"><vh>normalizeOrientationImage</vh></v>
 <v t="karstenw.20170709210125.67"><vh>resizeImage</vh></v>
-<v t="karstenw.20170709211522.1"><vh>topLayer</vh></v>
 </v>
 <v t="karstenw.20170709210102.1" a="E"><vh>examples</vh>
 <v t="karstenw.20170709210735.1"><vh>@clean explore_gradients 1.py</vh>
@@ -1016,7 +1015,8 @@ QUAD = "quad"
 
     w, h = self.img.size
     quad = (-x1,-y1, -x4,h-y4, w-x3,w-y3, w-x2,-y2)
-    self.img = self.img.transform(self.img.size, Image.QUAD, quad, LANCZOS)
+    # quad = (x1,y1, x2,y2, x3,y3, x4,y4)
+    self.img = self.img.transform(self.img.size, Image.QUAD, quad) #, LANCZOS)
 
 </t>
 <t tx="karstenw.20170709210125.47">def rotate(self, angle):
@@ -1395,7 +1395,8 @@ QUAD = "quad"
 
 </t>
 <t tx="karstenw.20170709210125.65">def aspectRatio(size, maxsize):
-    """scale a (w,h) tuple to maxsize (either w or h."""
+    """scale a (w,h) tuple to maxsize (either w or h)."""
+
     maxcurrent = max(size)
     if maxcurrent == maxsize:
         return size
@@ -1432,8 +1433,8 @@ QUAD = "quad"
 
 </t>
 <t tx="karstenw.20170709210125.67">def resizeImage( filepath, maxsize, orientation=True):
-    """Get a downsampled image for use in layers.
-    """
+    """Get a downsampled image for use in layers."""
+
     try:
         img = Image.open(filepath)
     except Exception, err:
@@ -1776,7 +1777,6 @@ c.layers[top].colorize((240, 120, 0), (255, 255, 127))
 # draw the result
 c.draw(0, 0)
 </t>
-<t tx="karstenw.20170709211522.1"></t>
 <t tx="karstenw.20170710094259.1">@language python
 @tabwidth -4
 @others
@@ -2069,7 +2069,7 @@ canvas._grobs.reverse()
 &lt;&lt;image34&gt;&gt;
 
 c.layers[top].color()
-label("Color Image1 over Image2", x, y)
+label("Color Image2 over Image1", x, y)
 
 #
 # Color Images 2 &amp; 1
@@ -2078,7 +2078,7 @@ label("Color Image1 over Image2", x, y)
 &lt;&lt;image56&gt;&gt;
 
 c.layers[top].color()
-label("Color Image2 over Image1", x, y)
+label("Color Image1 over Image2", x, y)
 
 &lt;&lt;outro&gt;&gt;
 
@@ -3045,7 +3045,7 @@ W,H = 542, 1050
 &lt;&lt;image34&gt;&gt;
 
 c.layers[top].hue()
-label("Hue Image1 over Image2", x, y)
+label("Hue Image2 over Image1", x, y)
 
 #
 # Hue Images 2 &amp; 1
@@ -3054,7 +3054,7 @@ label("Hue Image1 over Image2", x, y)
 &lt;&lt;image56&gt;&gt;
 
 c.layers[top].hue()
-label("Hue Image2 over Image1", x, y)
+label("Hue Image1 over Image2", x, y)
 
 &lt;&lt;outro&gt;&gt;
 </t>
@@ -3103,6 +3103,7 @@ gradients = (
 
 var("Gradient", MENU, default=dogradient, value=gradients)
 
+dogradient("solid")
 </t>
 </tnodes>
 </leo_file>

@@ -91,7 +91,7 @@ top, w4, h4 = placeImage(img2path, x, y, 522, "Image 4")
 
 
 c.layers[top].color()
-label("Color Image1 over Image2", x, y)
+label("Color Image2 over Image1", x, y)
 
 #
 # Color Images 2 & 1
@@ -105,7 +105,7 @@ top, w3, h3 = placeImage(img1path, x, y, 522, "Image 6")
 
 
 c.layers[top].color()
-label("Color Image2 over Image1", x, y)
+label("Color Image1 over Image2", x, y)
 
 # draw the result
 c.draw(0, 0)
