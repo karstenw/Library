@@ -16,9 +16,9 @@ img = ""
 def setup():
     
     global img, cache
-    img = choice(files("images/*.jpg"))
-    #images = list(imagefiles( "/Library/Desktop Pictures", True ))
-    #img = choice(images)
+    # img = choice(files("images/*.*"))
+    images = list(imagefiles( "/Library/Desktop Pictures", True ))
+    img = choice(images)
 
     cache = img
 
