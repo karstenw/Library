@@ -104,6 +104,11 @@ def invertimage( img ):
     return img
 
 
+def cropimage( img, bounds):
+    """Crop a pillow image at bounds(left, top, right, bottom)"""
+    return img.crop( bounds )
+
+
 class Canvas:
     
     """Implements a canvas with layers.
@@ -941,22 +946,6 @@ class Layer:
         self.w = w
         self.h = h
 
-    def distort(self, x1=0,y1=0, x2=0,y2=0, x3=0,y3=0, x4=0,y4=0):
-
-        """Distorts the layer.
-        
-        Distorts the layer by translating 
-        the four corners of its bounding box to the given coordinates:
-        upper left (x1,y1), upper right(x2,y2),
-        lower right (x3,y3) and lower left (x4,y4).
-        
-        """
-
-        w, h = self.img.size
-        quad = (-x1,-y1, -x4,h-y4, w-x3,w-y3, w-x2,-y2)
-        # quad = (x1,y1, x2,y2, x3,y3, x4,y4)
-        self.img = self.img.transform(self.img.size, Image.QUAD, quad) #, LANCZOS)
-
     def rotate(self, angle):
 
         """Rotates the layer.
@@ -1020,6 +1009,22 @@ class Layer:
         self.w = w
         self.h = h   
 
+    def distort(self, x1=0,y1=0, x2=0,y2=0, x3=0,y3=0, x4=0,y4=0):
+
+        """Distorts the layer.
+        
+        Distorts the layer by translating 
+        the four corners of its bounding box to the given coordinates:
+        upper left (x1,y1), upper right(x2,y2),
+        lower right (x3,y3) and lower left (x4,y4).
+        
+        """
+
+        w, h = self.img.size
+        quad = (-x1,-y1, -x4,h-y4, w-x3,w-y3, w-x2,-y2)
+        # quad = (x1,y1, x2,y2, x3,y3, x4,y4)
+        self.img = self.img.transform(self.img.size, Image.QUAD, quad) #, LANCZOS)
+
     def flip(self, axis=HORIZONTAL):
 
         """Flips the layer, either HORIZONTAL or VERTICAL.
@@ -1032,6 +1037,23 @@ class Layer:
         if axis & VERTICAL:
             #print "FLIP VERT", axis
             self.img = self.img.transpose(Image.FLIP_TOP_BOTTOM)
+
+    def crop( self, bounds):
+
+        """
+        
+        Crop a pillow image at bounds(left, top, right, bottom)
+        """
+        w0, h0 = self.img.size
+        x, y = self.x, self.y
+        left, top, right, bottom = bounds
+        left = max(x, left)
+        top = max(y, top)
+        right = min(right, w0)
+        bottom = min(bottom, h0)
+        self.img = self.img.crop( (left, top, right, bottom) )
+        self.w, self.h = self.img.size
+
 
     def blur(self):
         
