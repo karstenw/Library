@@ -1,5 +1,5 @@
 # heavily inspired by https://www.nodebox.net/code/index.php/Landslide
-kwdbg = True
+kwdbg = False
 
 if 0: #not kwdbg:
     size(0, 0)
