@@ -14,6 +14,7 @@
 <v t="karstenw.20170709210125.2"><vh>hashFromString</vh></v>
 <v t="karstenw.20170709210125.3"><vh>datestring</vh></v>
 <v t="karstenw.20170709210125.4"><vh>invertimage</vh></v>
+<v t="karstenw.20170727231657.1"><vh>cropimage</vh></v>
 <v t="karstenw.20170709210125.5"><vh>class Canvas</vh>
 <v t="karstenw.20170709210125.6"><vh>__init__</vh></v>
 <v t="karstenw.20170709210125.7"><vh>layer</vh></v>
@@ -33,7 +34,7 @@
 <v t="karstenw.20170709210125.19"><vh>_get_bg</vh></v>
 <v t="karstenw.20170709210125.20"><vh>_set_bg</vh></v>
 </v>
-<v t="karstenw.20170709210125.21"><vh>class Layer</vh>
+<v t="karstenw.20170709210125.21" a="E"><vh>class Layer</vh>
 <v t="karstenw.20170709210125.22"><vh>__init__</vh></v>
 <v t="karstenw.20170709210125.23"><vh>prnt</vh></v>
 <v t="karstenw.20170709210125.24"><vh>index</vh></v>
@@ -45,22 +46,30 @@
 <v t="karstenw.20170709210125.30"><vh>select</vh></v>
 <v t="karstenw.20170709210125.31"><vh>mask</vh></v>
 <v t="karstenw.20170709210125.32"><vh>duplicate</vh></v>
+<v t="karstenw.20170727231803.1"><vh>BLENDS</vh>
 <v t="karstenw.20170709210125.33"><vh>opacity</vh></v>
 <v t="karstenw.20170709210125.34"><vh>multiply</vh></v>
 <v t="karstenw.20170709210125.35"><vh>screen</vh></v>
 <v t="karstenw.20170709210125.36"><vh>overlay</vh></v>
 <v t="karstenw.20170709210125.37"><vh>hue</vh></v>
 <v t="karstenw.20170709210125.38"><vh>color</vh></v>
+</v>
+<v t="karstenw.20170727231827.1"><vh>INTENSITIES</vh>
 <v t="karstenw.20170709210125.39"><vh>brightness</vh></v>
 <v t="karstenw.20170709210125.40"><vh>contrast</vh></v>
 <v t="karstenw.20170709210125.41"><vh>desaturate</vh></v>
 <v t="karstenw.20170709210125.42"><vh>colorize</vh></v>
+</v>
 <v t="karstenw.20170709210125.43"><vh>invert</vh></v>
+<v t="karstenw.20170727232236.1" a="E"><vh>GEOMETRY</vh>
 <v t="karstenw.20170709210125.44"><vh>translate</vh></v>
 <v t="karstenw.20170709210125.45"><vh>scale</vh></v>
-<v t="karstenw.20170709210125.46"><vh>distort</vh></v>
 <v t="karstenw.20170709210125.47"><vh>rotate</vh></v>
+<v t="karstenw.20170709210125.46"><vh>distort</vh></v>
 <v t="karstenw.20170709210125.48"><vh>flip</vh></v>
+<v t="karstenw.20170727233343.1"><vh>crop</vh></v>
+</v>
+<v t="karstenw.20170727232434.1"><vh>autocontrast</vh></v>
 <v t="karstenw.20170709210125.49"><vh>blur</vh></v>
 <v t="karstenw.20170709210125.50"><vh>sharpen</vh></v>
 <v t="karstenw.20170709210125.51"><vh>statistics</vh></v>
@@ -84,7 +93,7 @@
 <v t="karstenw.20170709210125.66"><vh>normalizeOrientationImage</vh></v>
 <v t="karstenw.20170709210125.67"><vh>resizeImage</vh></v>
 </v>
-<v t="karstenw.20170709210102.1" a="E"><vh>examples</vh>
+<v t="karstenw.20170709210102.1"><vh>examples</vh>
 <v t="karstenw.20170709210735.1"><vh>@clean explore_gradients 1.py</vh>
 <v t="karstenw.20170709210910.1"><vh>Declarations</vh></v>
 </v>
@@ -93,12 +102,12 @@
 <v t="karstenw.20170715185207.2"><vh>dogradient</vh></v>
 </v>
 <v t="karstenw.20170709211002.1"><vh>@clean Layer_colorize.py</vh>
-<v t="karstenw.20170709211010.1" a="E"><vh>Declarations</vh>
+<v t="karstenw.20170709211010.1"><vh>Declarations</vh>
 <v t="karstenw.20170710094409.1"><vh>&lt;&lt;initialisation&gt;&gt;</vh></v>
 </v>
 </v>
-<v t="karstenw.20170710094259.1" a="E"><vh>@clean Layer_function_screen.py</vh>
-<v t="karstenw.20170710094319.1" a="E"><vh>Declarations</vh>
+<v t="karstenw.20170710094259.1"><vh>@clean Layer_function_screen.py</vh>
+<v t="karstenw.20170710094319.1"><vh>Declarations</vh>
 <v t="karstenw.20170710094409.1"></v>
 <v t="karstenw.20170710105816.1"><vh>&lt;&lt;image1&gt;&gt;</vh></v>
 <v t="karstenw.20170710105845.1"><vh>&lt;&lt;image2&gt;&gt;</vh></v>
@@ -2490,7 +2499,7 @@ c.draw(0, 0)
 @tabwidth -4
 </t>
 <t tx="karstenw.20170711131604.1"># heavily inspired by https://www.nodebox.net/code/index.php/Landslide
-kwdbg = True
+kwdbg = False
 
 if 0: #not kwdbg:
     size(0, 0)
@@ -3104,6 +3113,34 @@ gradients = (
 var("Gradient", MENU, default=dogradient, value=gradients)
 
 dogradient("solid")
+</t>
+<t tx="karstenw.20170727231657.1">def cropimage( img, bounds):
+    """Crop a pillow image at bounds(left, top, right, bottom)"""
+    return img.crop( bounds )
+
+
+</t>
+<t tx="karstenw.20170727231803.1"></t>
+<t tx="karstenw.20170727231827.1"></t>
+<t tx="karstenw.20170727232236.1"></t>
+<t tx="karstenw.20170727232434.1"></t>
+<t tx="karstenw.20170727233343.1">def crop( self, bounds):
+
+    """
+    
+    Crop a pillow image at bounds(left, top, right, bottom)
+    """
+    w0, h0 = self.img.size
+    x, y = self.x, self.y
+    left, top, right, bottom = bounds
+    left = max(x, left)
+    top = max(y, top)
+    right = min(right, w0)
+    bottom = min(bottom, h0)
+    self.img = self.img.crop( (left, top, right, bottom) )
+    self.w, self.h = self.img.size
+
+
 </t>
 </tnodes>
 </leo_file>
