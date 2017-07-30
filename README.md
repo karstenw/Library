@@ -1,5 +1,19 @@
 ## Nodebox Library folder ##
 
+## Things that are new ##
+
+`twyg` - The twyg library needs at least NodeBox 1.9.23.
+
+`scipy` - The scipy library needs at least NodeBox 1.9.26.
+
+`matplotlib` - The matplotlib library needs at least NodeBox 1.9.26.
+
+`sklearn` - The scikit-learn library needs at least NodeBox 1.9.26.
+
+`pandas` - The pandas library needs at least NodeBox 1.9.26.
+
+
+
 The contents of this repo go into the ```~/Library/Application Support/Nodebox/``` folder. As of 2017-05-20 and NodeBox v1.9.17+ the library folder can be anywhere.
 
 These are modules that could be made to work with my [Nodebox fork](https://github.com/karstenw/nodebox-pyobjc).
