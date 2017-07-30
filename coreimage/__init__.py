@@ -401,9 +401,12 @@ class Canvas:
                 strokewidth = 0.0
             strokewidth = max(0, strokewidth)
             
-            if w == None: w = w0 + strokewidth + PATH_PADDING*2
-            if h == None: h = h0 + strokewidth + PATH_PADDING*2
-            return _add_layer((path, background, fill, stroke, strokewidth), type, x, y, w, h)
+            if w == None:
+                w = w0 + strokewidth + PATH_PADDING * 2
+            if h == None:
+                h = h0 + strokewidth + PATH_PADDING * 2
+            return _add_layer((path, background, fill, stroke, strokewidth),
+                               type, x, y, w, h)
           
         except:
             pass  
@@ -468,22 +471,29 @@ class Canvas:
                 clr = Color(1.0)
         return self.layer(clr, x=x, y=y, w=w, h=h, name=name)    
     
-    def layer_gradient(self, clr1=None, clr2=None, type="linear", spread=None, x=None, y=None, w=None, h=None, name=""):
+    def layer_gradient(self, clr1=None, clr2=None, type="linear", spread=None,
+                             x=None, y=None, w=None, h=None, name=""):
         if clr1 == None: clr1 = Color(1.0)
         if clr2 == None: clr2 = Color(0.0)
-        return self.layer(clr1, clr2, type=type, spread=spread, x=x, y=y, w=w, h=h, name=name)
+        return self.layer(clr1, clr2, type=type, spread=spread,
+                          x=x, y=y, w=w, h=h, name=name)
         
-    def layer_linear_gradient(self, clr1=None, clr2=None, x=None, y=None, w=None, h=None, name=""):
+    def layer_linear_gradient(self, clr1=None, clr2=None,
+                                    x=None, y=None, w=None, h=None, name=""):
         return self.layer_gradient(clr1, clr2, x=x, y=y, w=w, h=h, name=name)
 
-    def layer_radial_gradient(self, clr1=None, clr2=None, spread=0.0, x=None, y=None, w=None, h=None, name=""):
-        return self.layer_gradient(clr1, clr2, type="radial", spread=spread, x=x, y=y, w=w, h=h, name=name)
+    def layer_radial_gradient(self, clr1=None, clr2=None, spread=0.0,
+                                    x=None, y=None, w=None, h=None, name=""):
+        return self.layer_gradient(clr1, clr2, type="radial", spread=spread,
+                                   x=x, y=y, w=w, h=h, name=name)
     
     def layer_group(self, canvas, x=None, y=None, w=None, h=None, name=""):
         return self.layer(canvas, x=x, y=y, w=w, h=h)
     
-    def layer_path(self, path, fill=None, background=None, stroke=None, strokewidth=None, x=None, y=None, w=None, h=None, name=""):
-        return self.layer(path, fill=fill, background=background, stroke=stroke, strokewidth=strokewidth, x=x, y=y, w=w, h=h, name=name)
+    def layer_path(self, path, fill=None, background=None, stroke=None,
+                         strokewidth=None, x=None, y=None, w=None, h=None, name=""):
+        return self.layer(path, fill=fill, background=background, stroke=stroke,
+                          strokewidth=strokewidth, x=x, y=y, w=w, h=h, name=name)
 
     def layer_pixels(self, colors, w, h, x=None, y=None, name=""):
         return self.layer(colors, w, h, x=x, y=y, name=name)
@@ -519,7 +529,8 @@ class Canvas:
         Each layer in the canvas has a Layer.dropshadow() method.
         If the canvas' renderer has no (faster) support for a layer's dropshadow,
         creates a copy of the layer, and translates/blackens/blurs it using
-        the standard layer properties and methods, and then places the shadow underneath the layer.
+        the standard layer properties and methods, and then places the shadow underneath
+        the layer.
         """
         l = Layers()
         if len(layers) == 0: 
@@ -1618,9 +1629,9 @@ class CoreImageRenderer(Renderer):
             a.setImage_(img)
             img = a.image()
 
-        # The layer's source are two colors
-        # from which we create a radial gradient
-        # spread across either the layer's width or the layer's height, whichever is smaller.
+        # The layer's source are two colors from which we create a radial
+        # gradient spread across either the layer's width or the layer's height,
+        # whichever is smaller.
         # ------------------------------------------------------------------------
         elif type == LAYER_RADIAL_GRADIENT:
             r = NSRect((x,y), (w,h))
@@ -1641,7 +1652,7 @@ class CoreImageRenderer(Renderer):
 
         # The layer's source consists of vector curves
         # which we need to transform to bitmap information.
-        # ------------------------------------------------------------------------        
+        # ------------------------------------------------------------------------
         elif type == LAYER_PATH:
             path, bg, fg, s, sw = data
             sw = float(sw)
@@ -1670,7 +1681,7 @@ class CoreImageRenderer(Renderer):
         # Duane Bailey, http://nodebox.net/code/index.php/shared_2007-12-28-23-34-57
         # If there is more width*height than there are pixels,
         # the bitmap will be completed with transparent pixels.
-        # ------------------------------------------------------------------------      
+        # ------------------------------------------------------------------------
         elif type == LAYER_PIXELS:
             p, w, h = data
             import numpy
@@ -1689,7 +1700,7 @@ class CoreImageRenderer(Renderer):
 
         # The layer is in fact a canvas of layers,
         # flatten it and use the resulting CIImage.
-        # ------------------------------------------------------------------------    
+        # ------------------------------------------------------------------------
         elif type == LAYER_LAYERS:
             img = self.merge(data)
         
