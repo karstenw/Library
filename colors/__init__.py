@@ -1,4 +1,4 @@
-### CREDITS ##########################################################################################
+### CREDITS ########################################################################
 
 # Copyright (c) 2007 Tom De Smedt.
 # See LICENSE.txt for details.
@@ -8,30 +8,33 @@ __version__   = "1.9.4.9"
 __copyright__ = "Copyright (c) 2007 Tom De Smedt"
 __license__   = "GPL"
 
-### NODEBOX COLORS LIBRARY ##########################################################################
+### NODEBOX COLORS LIBRARY ########################################################
 
 # The NodeBox Colors library offers a set of tools to work with color more conveniently.
-# You can use the library to create colors by name (like "red" or "ivory"), from pixels in an image, 
-# group them into lists of which you can then collectively manipulate hue, brightness and saturation,
-# create lists of harmonious colors based on color theory rules (like complementary or analogous),
-# create lists of gradient colors, work with drop shadows and gradient fills for paths,
-# define powerful "indefinite" color ranges (like "bright red" or "purplishgreenish"),
-# aggregate color information from Yahoo!, and more!
+# You can use the library to create colors by name (like "red" or "ivory"), from pixels
+# in an image, group them into lists of which you can then collectively manipulate hue,
+# brightness and saturation, create lists of harmonious colors based on color theory
+# rules (like complementary or analogous), create lists of gradient colors, work with
+# drop shadows and gradient fills for paths, define powerful "indefinite" color ranges
+# (like "bright red" or "purplishgreenish"), aggregate color information from Yahoo!,
+# and more!
 
-# There's a lot of stuff to explain but luckily most principles in the Colors library are easy.
+# There's a lot of stuff to explain but luckily most principles in the Colors library
+# are easy.
 # Some central themes are:
 
 # * Colors: enhanced color objects with many predefined instances.
 # * Color lists: sets of colors which can be manipulated as a whole.
 # * Rules: color theory rules that generate lists of colors.
-# * Color ranges: variable sets of colors whose HSB values are constrained between a minimum and a maximum value.
+# * Color ranges: variable sets of colors whose HSB values are constrained between
+#                 a minimum and a maximum value.
 # * Color themes: groups of ranges.
 # * Depth: lighting, shadows and gradients.
 
 # Gradient fills uses the CIImage object so if you experience issues with Core Image
 # you may also experience issues with gradient fills.
 
-######################################################################################################
+####################################################################################
 
 import os
 import re
@@ -59,13 +62,13 @@ try: import favorites as _favorites
 except:
     pass
 
-######################################################################################################
+####################################################################################
 
 # This exception is raised when trying to get a list of colors from an image
 # without Core Image or Python Imaging Library.
 class NoCoreImageOrPIL(Exception): pass
 
-#### REWIRING ########################################################################################
+#### REWIRING ######################################################################
 
 # "list" is the name of a command in this library.
 
@@ -83,7 +86,7 @@ def _range(start, stop=None, step=1):
         yield cur
         cur += step
 
-#### COLOR SPACES ####################################################################################
+#### COLOR SPACES ##################################################################
 
 # Some generic color conversion algorithms used mainly by BaseColor outside of NodeBox.
 
@@ -148,8 +151,8 @@ lab2rgb = lab_to_rgb
 
 def cmyk_to_rgb(c, m, y, k):
     
-    """ Cyan, magenta, yellow, black to red, green, blue.
-    ReportLab, http://www.koders.com/python/fid5C006F554616848C01AC7CB96C21426B69D2E5A9.aspx
+    """ Cyan, magenta, yellow, black to red, green, blue. ReportLab,
+    http://www.koders.com/python/fid5C006F554616848C01AC7CB96C21426B69D2E5A9.aspx
     Results will differ from the way NSColor converts color spaces.
     """
     
@@ -225,7 +228,7 @@ def rgb_to_hsv(r, g, b):
 
 rgb2hsv = rgb2hsb = rgb_to_hsb = rgb_to_hsv
 
-#### NAMED COLOR HUES ################################################################################
+#### NAMED COLOR HUES ##############################################################
 
 # Names for each distinctive hue on the color wheel.
 
@@ -250,7 +253,7 @@ primary_and_secondary_hues = [
     "cyan", "azure", "blue", "indigo", "purple", "pink"
 ]
 
-### NAMED COLORS #####################################################################################
+### NAMED COLORS ###################################################################
 
 # HTML named colors.
 
@@ -403,7 +406,7 @@ named_colors = {
 
 }
 
-### COLOR CONTEXT ####################################################################################
+### COLOR CONTEXT ##################################################################
 
 # The context is a dictionary of colors mapped to associated words,
 # e.g. "red" is commonly associated with passion, love, heat, etc. 
@@ -418,7 +421,7 @@ for f in glob(path):
     tags.sort()
     context[name] = tags
 
-#### BASE COLOR ######################################################################################
+#### BASE COLOR ####################################################################
 
 class BaseColor:
     
@@ -566,19 +569,21 @@ class BaseColor:
                    "h", "s", "hue", "saturation",
                    "c", "m", "y", "k", "cyan", "magenta", "yellow"]:
             return self.__dict__["__"+a[0]]
-        
-        raise AttributeError, "'"+str(self.__class__)+"' object has no attribute '"+a+"'"
+
+        errmsg = "'"+str(self.__class__)+"' object has no attribute '"+a+"'"
+        raise AttributeError, errmsg
 
 try:
-    # The generic BaseColor is pretty nifty but we want to use Color from NodeBox whenever available.
-    # It's based on NSColor, allows drawing in NodeBox, has better CMYK conversion, etc.
+    # The generic BaseColor is pretty nifty but we want to use Color from NodeBox
+    # whenever available.  It's based on NSColor, allows drawing in NodeBox, has
+    # better CMYK conversion, etc.
     from nodebox.graphics import Color as BaseColor
 except:
     pass
 
 # ...let's get started!
 
-### COLOR ############################################################################################
+### COLOR ##########################################################################
 
 class Color(BaseColor):
     
@@ -629,8 +634,8 @@ class Color(BaseColor):
                 BaseColor.__init__(self, r, g, b, a)
 
         # One color object parameter.
-        elif len(args) == 1 \
-        and isinstance(args[0], BaseColor):
+        elif (    len(args) == 1 
+              and isinstance(args[0], BaseColor)):
             if nodebox: 
                 _ctx.colormode(RGB, 1.0)
                 BaseColor.__init__(self, _ctx, args[0].r, args[0].g, args[0].b, args[0].a)
@@ -969,7 +974,7 @@ def hex(str, name=""):
 def named_color(str):
     return color(str)
 
-### NAMED COLOR OBJECTS ##############################################################################
+### NAMED COLOR OBJECTS ############################################################
 
 code = ""
 for clr in named_colors:
@@ -989,7 +994,7 @@ eval(compile(code, "<string>", "exec"))
 
 #background(green().darken())
 
-### COLOR LIST #######################################################################################
+### COLOR LIST #####################################################################
 
 class ColorList(_list):
     
@@ -1081,7 +1086,7 @@ class ColorList(_list):
         except:
             # Systems that do not have Core Image might have PIL.
             try:
-                import Image
+                from PIL import Image
                 img = Image.open(path)
                 p = img.getdata()
                 f = lambda p: choice(p)
@@ -1513,7 +1518,7 @@ list = colorlist
 #background(clrs.darkest)
 #swatch(clrs.sort(), 50, 0)
 
-#### COLOR HARMONY ###################################################################################
+#### COLOR HARMONY #################################################################
 
 def complement(clr):
     
@@ -1834,7 +1839,7 @@ def rule(name, clr, angle=None, contrast=0.3, flip=False):
 #c.swarm(200,200)
 #c.swatch(50,50)
 
-#### COLOR GRADIENTS #################################################################################
+#### COLOR GRADIENTS ###############################################################
 
 class Gradient(ColorList):
     
@@ -2037,7 +2042,7 @@ def outline(path, colors, precision=0.4, continuous=True):
 #    path = endpath(draw=False)
 #    outline(path, g)
 
-#### FAVORITE COLOR LISTS ############################################################################
+#### FAVORITE COLOR LISTS ##########################################################
 
 class Favorites:
     
@@ -2058,7 +2063,8 @@ class Favorites:
         
         if candidate:
             tags, colors = _favorites.data[candidate]
-            colors = ColorList([color(r, g, b, a) for r, g, b, a in colors], name= candidate)
+            colors = ColorList([color(r, g, b, a) for r, g, b, a in colors],
+                                name=candidate)
             colors.tags = tags.split(" ")            
             return colors
             
@@ -2066,7 +2072,7 @@ class Favorites:
             
 favorites = Favorites()    
 
-### COLOR RANGE ######################################################################################
+### COLOR RANGE ####################################################################
 
 class ColorRange(ColorList):
     
@@ -2214,10 +2220,13 @@ class ColorRange(ColorList):
         for clr in clr:
         
             if clr.is_grey and not self.grayscale:
-                return (self.black.contains(clr) or \
-                        self.white.contains(clr))
+                return (   self.black.contains(clr)
+                        or self.white.contains(clr))
             
-            for r, v in [(self.h, clr.h), (self.s, clr.s), (self.b, clr.brightness), (self.a, clr.a)]:
+            for r, v in [ (self.h, clr.h),
+                          (self.s, clr.s),
+                          (self.b, clr.brightness),
+                          (self.a, clr.a)]:
                 if isinstance(r, _list):
                     pass
                 elif isinstance(r, tuple):
@@ -2317,7 +2326,7 @@ def colorrange(h=(0.0,1.0), s=(0.0,1.0), b=(0.0,1.0), a=(1.0,1.0),
     
 range = colorrange
 
-#### COLOR SHADES ####################################################################################
+#### COLOR SHADES ##################################################################
 
 # Shades are color ranges that define a combination of saturation and brightness.
 # Shades are perceptonyms that map to a range of possible values.
@@ -2486,7 +2495,7 @@ def guess_name(clr):
 
 #print guess_name(color(0.8,0,0))
 
-#### COLOR SHADER ####################################################################################
+#### COLOR SHADER ##################################################################
 
 def shader(x, y, dx, dy, radius=300, angle=0, spread=90):
     
@@ -2563,7 +2572,7 @@ def shader(x, y, dx, dy, radius=300, angle=0, spread=90):
 #    fill(0.84+d*0.1, 1, 0.2+0.8*d, d)
 #    oval(x, y, r, r)
 
-#### COLOR AGGREGATE #################################################################################
+#### COLOR AGGREGATE ###############################################################
 
 DEFAULT_CACHE = os.path.join(os.path.dirname(__file__), "aggregated")
 
@@ -3042,7 +3051,7 @@ aggregate = theme
 #strokewidth(0.2)
 #t.swatch(50,50,n=12, grouped=False)
 
-#### COLORS FROM WEB #################################################################################
+#### COLORS FROM WEB ###############################################################
 
 def search_engine(query, top=5, service="google", license=None, 
                   cache=os.path.join(DEFAULT_CACHE, "google")):
@@ -3153,7 +3162,7 @@ def morguefile(query, n=10, top=10):
 #a.length = 10
 #a.swatch(400,0)
 
-#### GRADIENT FILLS AND SHADOWS ######################################################################
+#### GRADIENT FILLS AND SHADOWS ####################################################
 
 ZOOM_SHADOWS = False
 _shadow = None
@@ -3349,7 +3358,7 @@ def gradientbackground(clr1, clr2, type="radial", dx=0, dy=0, spread=1.0, angle=
 #path = textpath("gradients", 30, 200)
 #gradientfill(path, color(0.9,1.0,0), color(0.1,0.2,0), type="linear")
 
-######################################################################################################
+####################################################################################
 
 def colorwheel(x, y, r=250, labels=True, scope=1.0, shift=0.0):
 
