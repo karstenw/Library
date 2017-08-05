@@ -23,9 +23,9 @@
 <v t="karstenw.20170725105526.10"><vh>_buildtree</vh></v>
 <v t="karstenw.20170725105526.11"><vh>buildtree</vh></v>
 </v>
-<v t="karstenw.20170725105546.1" a="E"><vh>@clean cairowrapper.py</vh>
+<v t="karstenw.20170725105546.1"><vh>@clean cairowrapper.py</vh>
 <v t="karstenw.20170725110856.1"><vh>Declarations</vh></v>
-<v t="karstenw.20170725110856.2" a="E"><vh>class Color</vh>
+<v t="karstenw.20170725110856.2"><vh>class Color</vh>
 <v t="karstenw.20170725110856.3"><vh>__init__</vh></v>
 <v t="karstenw.20170725110856.4"><vh>__repr__</vh></v>
 <v t="karstenw.20170725110856.5"><vh>copy</vh></v>
@@ -37,7 +37,7 @@
 <v t="karstenw.20170725110856.11"><vh>_update_rgb</vh></v>
 </v>
 <v t="karstenw.20170725110856.12"><vh>color</vh></v>
-<v t="karstenw.20170725110856.13" a="E"><vh>class Context</vh>
+<v t="karstenw.20170725110856.13"><vh>class Context</vh>
 <v t="karstenw.20170725110856.14"><vh>__init__</vh></v>
 <v t="karstenw.20170725110856.15"><vh>init</vh></v>
 <v t="karstenw.20170725115953.1" a="E"><vh>SHAPES</vh>
