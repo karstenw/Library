@@ -16,3 +16,4 @@ sklearn/examples/applications/page_links_en.nt.bz2
 sklearn/examples/applications/redirects_en.nt.bz2 
 pattern/examples/02-db/store.db
 pattern/examples/02-db/food.txt
+pattern/web/cache
