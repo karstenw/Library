@@ -1,6 +1,6 @@
 from pattern.web import Wiktionary, DOM
 from pattern.db import csv, pd
-import pdb
+#import pdb
 
 # This example retrieves male and female given names from Wiktionary (http://en.wiktionary.org).
 # It then trains a classifier that can predict the gender of unknown names (about 78% correct).
@@ -55,7 +55,7 @@ print(kfoldcv(GenderByName, data, folds=3))  # (0.81, 0.79, 0.77, 0.78, 0.00)
 # With final=True, discards the original training data (= smaller file).
 
 g = GenderByName(train=data)
-pdb.set_trace()
+# pdb.set_trace()
 g.save(pd("gender-by-name.svm"), final=True)
 
 # Next time, we can simply load the trained classifier.
