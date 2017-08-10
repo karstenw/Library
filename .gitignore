@@ -17,3 +17,7 @@ sklearn/examples/applications/redirects_en.nt.bz2
 pattern/examples/02-db/store.db
 pattern/examples/02-db/food.txt
 pattern/web/cache
+pattern/examples/*/*.slp
+pattern/examples/*/*.csv
+pattern/examples/*/*.svm
+
