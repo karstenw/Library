@@ -35,12 +35,13 @@ c = pb.canvas(int(WIDTH), int(HEIGHT))
 
 # get all images from system "Desktop Pictures" folder
 filetuples = imagefiles( "/Library/Desktop Pictures", False )
+# filetuples = imagefiles( "../images", False )
 
 # filter out all 1 pix one color images by ignoring all files < 100k
 tiles = []
 for t in filetuples:
     path, filesize, lastmodified, mode, islink = t
-    if filesize < 100000:
+    if filesize < 50000:
         continue
     tiles.append( path )
 
