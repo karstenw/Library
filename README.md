@@ -4,14 +4,6 @@
 
 `twyg` - The twyg library needs at least NodeBox 1.9.23.
 
-`scipy` - The scipy library needs at least NodeBox 1.9.26.
-
-`matplotlib` - The matplotlib library needs at least NodeBox 1.9.26.
-
-`sklearn` - The scikit-learn library needs at least NodeBox 1.9.26.
-
-`pandas` - The pandas library needs at least NodeBox 1.9.26.
-
 
 
 The contents of this repo go into the ```~/Library/Application Support/Nodebox/``` folder. As of 2017-05-20 and NodeBox v1.9.17+ the library folder can be anywhere.
@@ -87,3 +79,6 @@ The module ```wordnet``` runs unchanged.
 1. ```purenode, tuio and wiinode```: Need devices which I do not have.
 
 
+## What happened to scipy, matplotlib, sklearn and pandas? ##
+
+I removed them. Why? Because they were compiled packages that don't belong in a source repository and too special interest. They are available as a separate download [here.](http://goo.gl/vkuBeV)
