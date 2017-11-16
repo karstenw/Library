@@ -34,8 +34,8 @@ except NameError:
 c = pb.canvas(int(WIDTH), int(HEIGHT))
 
 # get all images from system "Desktop Pictures" folder
-filetuples = imagefiles( "/Library/Desktop Pictures", False )
-# filetuples = imagefiles( "../images", False )
+# filetuples = imagefiles( "/Library/Desktop Pictures", False )
+filetuples = imagefiles( "../images", False )
 
 # filter out all 1 pix one color images by ignoring all files < 100k
 tiles = []
@@ -176,11 +176,11 @@ for position in positions:
     c.layers[ top ].translate(x, y)
 
     if randomblur:
-        if rnd.random() > 0.5:
+        if rnd.random() > 0.75:
             #print "FLIP"
             c.layers[ top ].flip()
 
-        if rnd.random() > 0.5:
+        if rnd.random() > 0.75:
             #print "BLUR"
             c.layers[ top ].blur()
 
