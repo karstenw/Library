@@ -104,24 +104,34 @@ INFINITY = 1e20
 
 ### EXCEPTIONS #####################################################################
 
-class CanvasToNodeBoxError: pass
-class CanvasInCanvasRecursionError: pass
+class CanvasToNodeBoxError:
+    pass
 
-### GEOMETRY #######################################################################
+class CanvasInCanvasRecursionError:
+    pass
 
-from math import sqrt, pow
-from math import sin, cos, atan, pi, radians, degrees
+### IMPORTS ########################################################################
 
-# these should not be needed
-"""
-def distance(x0, y0, x1, y1):
-    return sqrt(pow(x1-x0, 2) + pow(y1-y0, 2))
-    
-def angle(x0, y0, x1, y1):
-    a = degrees( atan((y1-y0) / (x1-x0+0.00001)) ) + 360
-    if x1-x0 < 0: a += 180
-    return 360 - a
-"""
+import os
+import math
+sqrt = math.sqrt
+pow = math.pow
+sin = math.sin
+cos = math.cos
+atan = math.atan
+pi = math.pi
+radians = math.radians
+degrees = math.degrees
+
+import nodebox.graphics
+Grob = nodebox.graphics.Grob
+CENTER = nodebox.graphics.CENTER
+BOOLEAN = nodebox.graphics.BOOLEAN
+NUMBER = nodebox.graphics.NUMBER
+CORNER = nodebox.graphics.CORNER
+# grid = nodebox.graphics.grid
+
+import numpy
 
 
 class Point:
@@ -226,8 +236,6 @@ class Path:
 
 ### CANVAS #########################################################################
 
-from os.path import splitext
-
 class Canvas:
     
     def __init__(self, w, h, renderer):
@@ -320,10 +328,10 @@ class Canvas:
             r, g, b, a = args[1].r, args[1].g, args[1].b, args[1].a
             if type == "radial":
                 type = LAYER_RADIAL_GRADIENT
-                if not kwargs.has_key("spread") \
-                or kwargs["spread"] == None: 
+                if not kwargs.has_key("spread") or kwargs["spread"] == None: 
                     kwargs["spread"] = 0.0        
-                return _add_layer((args[0], args[1], float(kwargs["spread"])), type, x, y, w, h)
+                return _add_layer( (args[0], args[1], float(kwargs["spread"])),
+                                    type, x, y, w, h)
             else:
                 type = LAYER_LINEAR_GRADIENT
                 return _add_layer((args[0], args[1]), type, x, y, w, h)
@@ -518,12 +526,21 @@ class Canvas:
         """
         return self.layers[index]
     
-    def __getitem__(self, index): return self.find(index)
-    def __getslice__(self, i, j): return self.layers.__getslice__(i, j)
-    def __getattr__(self, index): return self.layers.__getattr__(index, cls="Canvas")
-    def __iter__(self): return self.layers.__iter__()
-    def __len__(self): return len(self.layers)
-    
+    def __getitem__(self, index):
+        return self.find(index)
+
+    def __getslice__(self, i, j):
+        return self.layers.__getslice__(i, j)
+
+    def __getattr__(self, index):
+        return self.layers.__getattr__(index, cls="Canvas")
+
+    def __iter__(self):
+        return self.layers.__iter__()
+
+    def __len__(self):
+        return len(self.layers)
+
     def _render_shadows(self, layers=[]):
         """ A software layer dropshadow renderer.
         Each layer in the canvas has a Layer.dropshadow() method.
@@ -582,13 +599,13 @@ class Canvas:
         self.renderer.export(self, name+type, type, compression, cmyk, layers)
 
     def export_gif(self, name): 
-        self.renderer.export(self, splitext(name)[0]+".gif", FILE_GIF)
+        self.renderer.export(self, os.path.splitext(name)[0]+".gif", FILE_GIF)
     def export_png(self, name): 
-        self.renderer.export(self, splitext(name)[0]+".png", FILE_PNG)
+        self.renderer.export(self, os.path.splitext(name)[0]+".png", FILE_PNG)
     def export_jpg(self, name, quality=1.0): 
-        self.renderer.export(self, splitext(name)[0]+".jpg", FILE_JPEG, quality)
+        self.renderer.export(self, os.path.splitext(name)[0]+".jpg", FILE_JPEG, quality)
     def export_tif(self, name, lzw=False, cmyk=False): 
-        self.renderer.export(self, splitext(name)[0]+".tif", FILE_TIFF, lzw, cmyk)
+        self.renderer.export(self, os.path.splitext(name)[0]+".tif", FILE_TIFF, lzw, cmyk)
 
 def canvas(w=None, h=None, renderer=None, quality=None):
     if not w: w = _ctx.WIDTH
@@ -700,18 +717,37 @@ class Layer(object):
         self.filters   = []
         self._filters_first = True
     
-    def _is_file(self)            : return (self.type == LAYER_FILE)
-    def _is_fill(self)            : return (self.type == LAYER_FILL)    
-    def _is_gradient(self)        : return (self.type == LAYER_LINEAR_GRADIENT or
-                                            self.type == LAYER_RADIAL_GRADIENT)
-    def _is_linear_gradient(self) : return (self.type == LAYER_RADIAL_GRADIENT)
-    def _is_radial_gradient(self) : return (self.type == LAYER_LINEAR_GRADIENT)
-    def _is_path(self)            : return (self.type == LAYER_PATH)
-    def _is_pixels(self)          : return (self.type == LAYER_PIXELS)
-    def _has_layers(self)         : return (self.type == LAYER_LAYERS)
-    def _has_shadow(self)         : return (self._shadow != None)
-    def _is_mask(self)            : return (self.canvas._parent != None and 
-                                            self.canvas._parent.mask == self.canvas)
+    def _is_file(self):
+        return (self.type == LAYER_FILE)
+
+    def _is_fill(self):
+        return (self.type == LAYER_FILL)    
+
+    def _is_gradient(self):
+        return (   self.type == LAYER_LINEAR_GRADIENT
+                or self.type == LAYER_RADIAL_GRADIENT)
+
+    def _is_linear_gradient(self):
+        return (self.type == LAYER_RADIAL_GRADIENT)
+
+    def _is_radial_gradient(self):
+        return (self.type == LAYER_LINEAR_GRADIENT)
+
+    def _is_path(self):
+        return (self.type == LAYER_PATH)
+
+    def _is_pixels(self):
+        return (self.type == LAYER_PIXELS)
+
+    def _has_layers(self):
+        return (self.type == LAYER_LAYERS)
+
+    def _has_shadow(self):
+        return (self._shadow != None)
+
+    def _is_mask(self):
+        return (    self.canvas._parent != None
+                and self.canvas._parent.mask == self.canvas)
     
     is_file            = property(_is_file)
     is_fill            = property(_is_fill)
@@ -727,7 +763,7 @@ class Layer(object):
     has_layers         = property(_has_layers)
     has_shadow         = property(_has_shadow)
     is_mask            = property(_is_mask)
-    
+
     def _index(self):
         """ Returns this layer's index in the canvas.layers[].
         Searches the position of this layer in the canvas' layers,
@@ -736,9 +772,8 @@ class Layer(object):
         if self.canvas == None:
             return None
         return self.canvas.layers.index(self)
-            
     index = property(_index)
-    
+
     def arrange(self, where):
         """ Moves the layer either forwards or backwards.
         """
@@ -754,11 +789,18 @@ class Layer(object):
             self.canvas.layers.insert(j, self)
             return j
            
-    def arrange_up(self)    : return self.arrange(ARRANGE_UP)
-    def arrange_down(self)  : return self.arrange(ARRANGE_DOWN)
-    def arrange_front(self) : return self.arrange(ARRANGE_FRONT)
-    def arrange_back(self)  : return self.arrange(ARRANGE_BACK)
-    
+    def arrange_up(self):
+        return self.arrange(ARRANGE_UP)
+
+    def arrange_down(self):
+        return self.arrange(ARRANGE_DOWN)
+
+    def arrange_front(self):
+        return self.arrange(ARRANGE_FRONT)
+
+    def arrange_back(self):
+        return self.arrange(ARRANGE_BACK)
+
     up, down = arrange_up, arrange_down
     to_front, to_back = arrange_front, arrange_back
 
@@ -854,33 +896,59 @@ class Layer(object):
         and from which the layer scales and flips.
         """
         def f(s):
-            if s == ORIGIN_LEFT   : return 0.0
-            if s == ORIGIN_TOP    : return 0.0
-            if s == ORIGIN_RIGHT  : return 1.0
-            if s == ORIGIN_BOTTOM : return 1.0
-            if s == ORIGIN_CENTER : return 0.5
+            if s == ORIGIN_LEFT:
+                return 0.0
+            if s == ORIGIN_TOP:
+                return 0.0
+            if s == ORIGIN_RIGHT:
+                return 1.0
+            if s == ORIGIN_BOTTOM:
+                return 1.0
+            if s == ORIGIN_CENTER:
+                return 0.5
             return s    
         x = f(x)
         y = f(y)
-        if y == None: y = x
-        if isinstance(x, int): x = float(x) / self._w
-        if isinstance(y, int): y = float(y) / self._h
-        if isinstance(x, float): self._origin.x = x
-        if isinstance(y, float): self._origin.y = y
+        if y == None:
+            y = x
+        if isinstance(x, int):
+            x = float(x) / self._w
+        if isinstance(y, int):
+            y = float(y) / self._h
+        if isinstance(x, float):
+            self._origin.x = x
+        if isinstance(y, float):
+            self._origin.y = y
         return (self._origin.x, self._origin.y)
     
-    def origin_top_left(self)     : return self.origin(ORIGIN_LEFT  , ORIGIN_TOP)
-    def origin_top_right(self)    : return self.origin(ORIGIN_RIGHT , ORIGIN_TOP)
-    def origin_top_center(self)   : return self.origin(ORIGIN_CENTER, ORIGIN_TOP)
-    def origin_bottom_left(self)  : return self.origin(ORIGIN_LEFT  , ORIGIN_BOTTOM)
-    def origin_bottom_right(self) : return self.origin(ORIGIN_RIGHT , ORIGIN_BOTTOM)
-    def origin_bottom_center(self): return self.origin(ORIGIN_CENTER, ORIGIN_BOTTOM)
-    def origin_left_center(self)  : return self.origin(ORIGIN_LEFT  , ORIGIN_CENTER)
-    def origin_right_center(self) : return self.origin(ORIGIN_RIGHT , ORIGIN_CENTER)
-    def origin_center(self)       : return self.origin(ORIGIN_CENTER, ORIGIN_CENTER)
-    
+    def origin_top_left(self):
+        return self.origin(ORIGIN_LEFT  , ORIGIN_TOP)
+
+    def origin_top_right(self):
+        return self.origin(ORIGIN_RIGHT , ORIGIN_TOP)
+
+    def origin_top_center(self):
+        return self.origin(ORIGIN_CENTER, ORIGIN_TOP)
+
+    def origin_bottom_left(self):
+        return self.origin(ORIGIN_LEFT  , ORIGIN_BOTTOM)
+
+    def origin_bottom_right(self):
+        return self.origin(ORIGIN_RIGHT , ORIGIN_BOTTOM)
+
+    def origin_bottom_center(self):
+        return self.origin(ORIGIN_CENTER, ORIGIN_BOTTOM)
+
+    def origin_left_center(self):
+        return self.origin(ORIGIN_LEFT  , ORIGIN_CENTER)
+
+    def origin_right_center(self):
+        return self.origin(ORIGIN_RIGHT , ORIGIN_CENTER)
+
+    def origin_center(self):
+        return self.origin(ORIGIN_CENTER, ORIGIN_CENTER)
+
     def bounds(self):
-    
         """ Returns the left, top, right, bottom in pixels.
         
         Calculates the layer's bounding box based on its original size and position
@@ -899,22 +967,22 @@ class Layer(object):
 
         if isinstance(self.canvas._parent, Layer):
             return self.canvas._parent.bounds()
-            
+
         x, y, w, h = self.x, self.y, self._w, self._h
-        
+
         # Crop.
         if self._crop != None:
             w = min(w, self._crop[2])
             h = min(h, self._crop[3])
-            
+
         # Scale.
         w = w * self._scale.x
         h = h * self._scale.y
-        
+
         # Origin.
         ox = x + self._origin.x * w
         oy = y + self._origin.y * h 
-         
+
         # Rotate and distort.
         l = t = float( INFINITY)
         r = b = float(-INFINITY) 
@@ -931,9 +999,8 @@ class Layer(object):
             r = max(r, dx)
             t = min(t, dy)
             b = max(b, dy)    
-            
         return (l, t, r, b)
-    
+
     def size(self):
         """ Returns the layer's size.
         Returns the width and height of the layer after it has been rotated and
@@ -942,18 +1009,21 @@ class Layer(object):
         """
         l, t, r, b = self.bounds()
         return (r-l, b-t)
-        
-    def _get_w(self): return self.size()[0]
-    def _get_h(self): return self.size()[1]
-    w = width  = property(_get_w)
+
+    def _get_w(self):
+        return self.size()[0]
+    w = width = property(_get_w)
+
+    def _get_h(self):
+        return self.size()[1]
     h = height = property(_get_h)
-    
+
     def center(self):
         """ Puts the origin point of the layer at the center of the canvas.
         """
         self.x = self.canvas.w/2
         self.y = self.canvas.h/2
-    
+
     def translate(self, x, y):
         """ Places the layer at the given position.
         The width and height can be supplied as coordinates relative to the canvas
@@ -963,7 +1033,7 @@ class Layer(object):
         if isinstance(y, float): y = y * self.canvas.h        
         self.x = x
         self.y = y
-    
+
     def scale(self, w=None, h=None):
         """ Scales the layer horizontally and vertically.
         The width and height can be supplied as relative coordinates (between 0.0
@@ -971,11 +1041,15 @@ class Layer(object):
         If only parameter is supplied, scales the layer proportionally.
         """
         if w != None and h == None: 
-            if isinstance(w, float): h = w
-            else: h = int( float(w) / self._w * self._h )
+            if isinstance(w, float):
+                h = w
+            else:
+                h = int( float(w) / self._w * self._h )
         if h != None and w == None: 
-            if isinstance(h, float): w = h
-            else: w = int( float(h) * self._w / self._h )
+            if isinstance(h, float):
+                w = h
+            else:
+                w = int( float(h) * self._w / self._h )
         if isinstance(w, float):
             self._scale.x = w
         if isinstance(h, float):
@@ -985,12 +1059,12 @@ class Layer(object):
         if isinstance(h, int):
             self._scale.y = float(h) / self._h
         return (self._scale.x, self._scale.y)
-    
+
     def rotate(self, degrees):
         """ Sets the layer's angle to the given degrees.
         """
         self.rotation = degrees
-        
+
     def flip(self, horizontal=False, vertical=False):
         """ Flips the layer horizontally or vertically.
         """
@@ -999,15 +1073,15 @@ class Layer(object):
         if vertical == True or horizontal in ("v", "vertical"):
             self.flip_vertical()
         return self._flip
-    
+
     def flip_horizontal(self):
         fx, fy = self._flip
         self._flip = (not fx, fy)
-    
+
     def flip_vertical(self):
         fx, fy = self._flip
         self._flip = (fx, not fy)
-        
+
     def distort(self, dx0=0.0, dy0=0.0, dx1=0.0, dy1=0.0,
                       dx2=0.0, dy2=0.0, dx3=0.0, dy3=0.0):
         """ Distorts the layer by moving its corner points.
@@ -1025,18 +1099,24 @@ class Layer(object):
                 pt.x = float(pt.x) / self._w
             if isinstance(pt.y, int):
                 pt.y = float(pt.y) / self._h
-    
+
     def crop(self, x, y, w, h):
         """ Crops the layer to the given box.
         """
-        if isinstance(x, float): x *= self._w
-        if isinstance(y, float): y *= self._h
-        if isinstance(w, float): w *= self._w
-        if isinstance(h, float): h *= self._h
-        if w < 0: w = self._w + w - x
-        if h < 0: h = self._h + h - y
+        if isinstance(x, float):
+            x *= self._w
+        if isinstance(y, float):
+            y *= self._h
+        if isinstance(w, float):
+            w *= self._w
+        if isinstance(h, float):
+            h *= self._h
+        if w < 0:
+            w = self._w + w - x
+        if h < 0:
+            h = self._h + h - y
         self._crop = (x, y, w, h)
-    
+
     def blend(self, opacity=None, mode=None):
         """ Applies transparency and compositing to the layer.
         Opacity ranges between 0.0 and 1.0, or 0 and 100.
@@ -1054,24 +1134,44 @@ class Layer(object):
             self.blendmode = mode
         return (self._opacity, self.blendmode)
 
-    def blend_normal(self, opacity=None)     : self.blend(opacity, BLEND_NORMAL)
-    def blend_lighten(self, opacity=None)    : self.blend(opacity, BLEND_LIGHTEN)
-    def blend_darken(self, opacity=None)     : self.blend(opacity, BLEND_DARKEN)
-    def blend_screen(self, opacity=None)     : self.blend(opacity, BLEND_SCREEN)
-    def blend_multiply(self, opacity=None)   : self.blend(opacity, BLEND_MULTIPLY)
-    def blend_overlay(self, opacity=None)    : self.blend(opacity, BLEND_OVERLAY)
-    def blend_softlight(self, opacity=None)  : self.blend(opacity, BLEND_SOFTLIGHT)
-    def blend_hardlight(self, opacity=None)  : self.blend(opacity, BLEND_HARDLIGHT)
-    def blend_difference(self, opacity=None) : self.blend(opacity, BLEND_DIFFERENCE)
-    def blend_hue(self, opacity=None)        : self.blend(opacity, BLEND_HUE)
-    def blend_color(self, opacity=None)      : self.blend(opacity, BLEND_COLOR)
+    def blend_normal(self, opacity=None):
+        self.blend(opacity, BLEND_NORMAL)
+
+    def blend_lighten(self, opacity=None):
+        self.blend(opacity, BLEND_LIGHTEN)
+
+    def blend_darken(self, opacity=None):
+        self.blend(opacity, BLEND_DARKEN)
+
+    def blend_screen(self, opacity=None):
+        self.blend(opacity, BLEND_SCREEN)
+
+    def blend_multiply(self, opacity=None):
+        self.blend(opacity, BLEND_MULTIPLY)
+
+    def blend_overlay(self, opacity=None):
+        self.blend(opacity, BLEND_OVERLAY)
+
+    def blend_softlight(self, opacity=None):
+        self.blend(opacity, BLEND_SOFTLIGHT)
+
+    def blend_hardlight(self, opacity=None):
+        self.blend(opacity, BLEND_HARDLIGHT)
+
+    def blend_difference(self, opacity=None):
+        self.blend(opacity, BLEND_DIFFERENCE)
+
+    def blend_hue(self, opacity=None):
+        self.blend(opacity, BLEND_HUE)
+
+    def blend_color(self, opacity=None):
+        self.blend(opacity, BLEND_COLOR)
     
-    def _get_opacity(self): return self._opacity
-    def _set_opacity(self, value): self.blend(value)
-    opacity = property(
-        _get_opacity, 
-        _set_opacity
-    )
+    def _get_opacity(self):
+        return self._opacity
+    def _set_opacity(self, value):
+        self.blend(value)
+    opacity = property( _get_opacity, _set_opacity )
     
     lighten    = blend_lighten
     darken     = blend_darken
@@ -1134,9 +1234,8 @@ class Layer(object):
     
     def dropshadow(self, dx=10, dy=10, alpha=0.75, blur=8):
         self._shadow = (dx, dy, alpha, blur)
-        
     shadow = dropshadow
-    
+
     def filter(self, name, **kwargs):
         
         """ Applies an effect filter to the layer.
@@ -1166,7 +1265,8 @@ class Layer(object):
             
         elif name != "":
             filter = name
-            try: filter = self.canvas.renderer.aliases[filter]
+            try:
+                filter = self.canvas.renderer.aliases[filter]
             except: 
                 pass
             params = {}
@@ -1283,7 +1383,7 @@ class Layer(object):
         if isinstance(b, bool):
             self._filters_first = b
         return self._filters_first
-        
+
     def pixels(self):
         """ Returns pixel-based information about the layer.
         Returns a Pixels object based on a render of this layer.
@@ -1300,7 +1400,6 @@ class Layer(object):
 
 ### RENDERER #######################################################################
 
-from nodebox.graphics import Grob
 class Renderer(Grob):
     
     """ A Canvas renderer interface.
@@ -1412,38 +1511,70 @@ class CoreImageRenderer(Renderer):
         self.helper = CoreImageHelper(self)
         
         # Filters available from Mac OS X 10.4:
-        self.FILTER_COLORMATRIX            = "CIColorMatrix"        # color adjustment
+        
+        # color adjustment
+        self.FILTER_COLORMATRIX            = "CIColorMatrix"
         self.FILTER_EDGES                  = "CIEdges"
-        self.FILTER_MOTIONBLUR             = "CIMotionBlur"         # blur
+
+        # blur
+        self.FILTER_MOTIONBLUR             = "CIMotionBlur"
         self.FILTER_ZOOMBLUR               = "CIZoomBlur"
         self.FILTER_NOISEREDUCTION         = "CINoiseReduction"
-        self.FILTER_BUMPDISTORTION         = "CIBumpDistortion"     # distortion
+
+        # distortion
+        self.FILTER_BUMPDISTORTION         = "CIBumpDistortion"
         self.FILTER_HOLEDISTORTION         = "CIHoleDistortion"
         self.FILTER_CIRCLESPLASHDISTORTION = "CICircleSplashDistortion"
         self.FILTER_TWIRLDISTORTION        = "CITwirlDistortion"
         self.FILTER_CIRCULARWRAP           = "CICircularWrap"
-        self.FILTER_KALEIDOSCOPE           = "CIKaleidoscope"       # tile
+
+        # tile
+        self.FILTER_KALEIDOSCOPE           = "CIKaleidoscope"
         self.FILTER_TRIANGLETILE           = "CITriangleTile"
         self.FILTER_PERSPECTIVETILE        = "CIPerspectiveTile"
-        self.FILTER_STARSHINEGENERATOR     = "CIStarShineGenerator" # generator
+
+        # generator
+        self.FILTER_STARSHINEGENERATOR     = "CIStarShineGenerator"
         self.FILTER_CHECKERBOARDGENERATOR  = "CICheckerboardGenerator"
-        self.FILTER_BLOOM                  = "CIBloom"              # stylize
+
+        # stylize
+        self.FILTER_BLOOM                  = "CIBloom"
         self.FILTER_PIXELATE               = "CIPixellate"
         self.FILTER_CRYSTALLIZE            = "CICrystallize"
         self.FILTER_DOTSCREEN              = "CIDotScreen"
         self.FILTER_SPOTLIGHT              = "CISpotLight"
         self.FILTER_SHADEDMATERIAL         = "CIShadedMaterial"
-        self.FILTER_PAGECURLTRANSITION     = "CIPageCurlTransition" # transition
+
+        # transition
+        self.FILTER_PAGECURLTRANSITION     = "CIPageCurlTransition"
 
         # Filters available from Mac OS X 10.5:
-        self.FILTER_BUMPDISTORTIONLINEAR   = "CIBumpDistortionLinear" # distortion
-        self.FILTER_PARALLELOGRAMTILE      = "CIParallelogramTile"  # tile
-        self.FILTER_LINEOVERLAY            = "CILineOverlay"        # stylize
-        self.FILTER_HISTOGRAM              = "CIAreaHistogram"      # reduction
+        # distortion
+        self.FILTER_BUMPDISTORTIONLINEAR   = "CIBumpDistortionLinear"
+
+        # tile
+        self.FILTER_PARALLELOGRAMTILE      = "CIParallelogramTile"
+
+        # stylize
+        self.FILTER_LINEOVERLAY            = "CILineOverlay"
+
+        # reduction
+        self.FILTER_HISTOGRAM              = "CIAreaHistogram"
         self.FILTER_AVERAGE                = "CIAreaAverage" 
+
+        
+        self.FILTER_BOXBLUR                = "CIBoxBlur"
+        self.FILTER_DISCBLUR               = "CIDiscBlur"
+        self.FILTER_SHARPEN                = "CISharpenLuminance"
+        self.FILTER_UNSHARPMASK            = "CIUnsharpMask"
 
         # A property description list for each filter.
         self.filters = {
+            self.FILTER_BOXBLUR                 : {"radius": 10.0},
+            self.FILTER_DISCBLUR                : {"radius":  8.0},
+            self.FILTER_SHARPEN                 : {"amount": 0.4},
+            self.FILTER_UNSHARPMASK             : {"radius": 2.5, "intensity": 0.5},
+
             self.FILTER_COLORMATRIX             : {"r": 1.0, "g": 1.0, "b": 1.0, "a": 1.0},
             self.FILTER_EDGES                   : {"intensity": 1.0},
             self.FILTER_MOTIONBLUR              : {"radius": 20, "angle": 0},
@@ -1454,7 +1585,7 @@ class CoreImageRenderer(Renderer):
             self.FILTER_HOLEDISTORTION          : {"dx": 0, "dy": 0, "radius": 300},
             self.FILTER_CIRCLESPLASHDISTORTION  : {"dx": 0, "dy": 0, "radius": 150},
             self.FILTER_TWIRLDISTORTION         : {"dx": 0, "dy": 0, "radius": 150, "angle": 100},
-            self.FILTER_CIRCULARWRAP            : {"radius": 150, "angle": 0},
+            self.FILTER_CIRCULARWRAP            : {"dx": 0, "dy": 0, "radius": 150, "angle": 0},
             self.FILTER_KALEIDOSCOPE            : {"dx": 0, "dy": 0, "count": 10},
             self.FILTER_TRIANGLETILE            : {"dx": 0, "dy": 0, "angle": 0, "width": 100},
             self.FILTER_PARALLELOGRAMTILE       : {"dx": 0, "dy": 0, "angle": 0, "width": 100, "tilt": 90},
@@ -1523,7 +1654,12 @@ class CoreImageRenderer(Renderer):
             "outline"           : self.FILTER_LINEOVERLAY,
             "sketch"            : self.FILTER_LINEOVERLAY,
             "curl"              : self.FILTER_PAGECURLTRANSITION,
-            "halftone"          : self.FILTER_DOTSCREEN
+            "halftone"          : self.FILTER_DOTSCREEN,
+
+            "boxblur"           : self.FILTER_BOXBLUR,
+            "discblur"          : self.FILTER_DISCBLUR,
+            "fsharpen"          : self.FILTER_SHARPEN,
+            "unsharpmask"       : self.FILTER_UNSHARPMASK,
         }
         
         # Either uses a 32-bit pixel format or a 128-bit pixel format.
@@ -1584,7 +1720,7 @@ class CoreImageRenderer(Renderer):
         (straight horizontal/vertical holes).
         
         """
-
+        a = r = c = None
         # The layer's source is an image file.
         # ------------------------------------------------------------------------
         if type == LAYER_FILE:
@@ -1684,7 +1820,6 @@ class CoreImageRenderer(Renderer):
         # ------------------------------------------------------------------------
         elif type == LAYER_PIXELS:
             p, w, h = data
-            import numpy
             raw = numpy.array([0] * w*h*4, typecode='c')
             for i in range(len(p)):
                 raw[i*4+0] = p[i].r * 255
@@ -1703,7 +1838,7 @@ class CoreImageRenderer(Renderer):
         # ------------------------------------------------------------------------
         elif type == LAYER_LAYERS:
             img = self.merge(data)
-        
+
         # The layer's source is a CIImage object.
         # ------------------------------------------------------------------------
         elif type == LAYER_CIIMAGEOBJECT:
@@ -1723,7 +1858,7 @@ class CoreImageRenderer(Renderer):
         # ------------------------------------------------------------------------
         elif type == LAYER_NSIMAGEDATA:
             img = CIImage.imageWithData_(data)        
-        
+        del a, r, c
         return img
 
     def pixels(self, layer, crop=False):
@@ -1789,21 +1924,20 @@ class CoreImageRenderer(Renderer):
     # COLOR MATRIX
     # ------------------------------------------------------------------------
     def render_filter_colormatrix(self, layer, img, options):
-        # Apply the Core Image Color Matrix filter.
-        # This powerful filter has functionalities
-        # comparable to PhotoShop levels or curves.
-        # For each RGBA channel you can specify
-        # a multiplication factor, increasing or decreasing
-        # the channel's prominence.
-        # Instead of a single value a four-tuple can
-        # be supplied as well (for instance, to increase
-        # the blue in the R channel.
-        # Setting r=0, g=0, b=0 and a=1
-        # removes all color information while
-        # keeping the alpha information.
-        # This results in the image's alpha mask,
-        # useful as a shadow for example.
-        # I.e. setting a channel to zero removes it.
+        """ Apply the Core Image Color Matrix filter.
+        
+        This powerful filter has functionalities comparable to PhotoShop
+        levels or curves.
+        For each RGBA channel you can specify a multiplication factor, increasing
+        or decreasing the channel's prominence.
+
+        Instead of a single value a four-tuple can be supplied as well (for instance,
+        to increase the blue in the R channel.
+        Setting
+            r=0, g=0, b=0 and a=1
+        removes all color information while keeping the alpha information.
+        This results in the image's alpha mask, useful as a shadow for example.
+        I.e. setting a channel to zero removes it."""
         v = []
         for channel in "rgba":
             v.append(options[channel])
@@ -1987,8 +2121,11 @@ class CoreImageRenderer(Renderer):
     def render_filter_circularwrap(self, layer, img, options):
         # Apply the Core Image Circular Wrap filter effect,
         # wrapping the layer around a transparent circle.          
+        dx = options["dx"]
+        dy = options["dy"]
         p = {
-            "inputCenter": CIVector.vectorWithX_Y_(layer._w*0.5, layer._h*0.5), 
+            "inputCenter" : CIVector.vectorWithX_Y_(layer._w * 0.5 + 0,  #dx,
+                                                    layer._h * 0.5 + 0), # dy),
             "inputRadius": max(0.0, min(options["radius"], 600.0)), 
             "inputAngle": radians(options["angle"])
         }
@@ -2234,7 +2371,8 @@ class CoreImageRenderer(Renderer):
                 "inputScale"        : 1.0
             }
             img = self.filter("CIShadedMaterial", img, p)
-        img = self.filter("CICrop", img, {"inputRectangle" : CIVector.vectorWithX_Y_Z_W_(x, y, w, h)})  
+        img = self.filter("CICrop", img, {"inputRectangle":
+                                          CIVector.vectorWithX_Y_Z_W_(x, y, w, h)})  
         return img
 
     # LINE OVERLAY
@@ -2288,8 +2426,7 @@ class CoreImageRenderer(Renderer):
 
         # A custom Canvas can be supplied as backside.
         # It will be strechted to fit.
-        elif isinstance(options["back"], Canvas) \
-        and options["back"] != layer.canvas:
+        elif isinstance(options["back"], Canvas) and options["back"] != layer.canvas:
             back = options["back"]
             back = back.render()
             (bx, by), (bw, bh) = back.extent()
@@ -2308,7 +2445,8 @@ class CoreImageRenderer(Renderer):
 
         # Gradient shade on background. Works only for top corners apparently.
         transparent = self.image(LAYER_FILL, Transparent(), w, h)
-        shade = self.image(LAYER_RADIAL_GRADIENT, (Transparent(), color(0,0,0,0.5), 0), w, h)
+        shade = self.image(LAYER_RADIAL_GRADIENT, (Transparent(), color(0,0,0,0.5), 0),
+                           w, h)
         p = {
             "inputTargetImage"   : transparent, 
             "inputBacksideImage" : back, 
@@ -2342,7 +2480,49 @@ class CoreImageRenderer(Renderer):
         }
         img = self.filter(self.FILTER_AVERAGE, img, p)
         return img     
-    
+
+    # BOXBLUR
+    # ------------------------------------------------------------------------
+    def render_filter_boxblur(self, layer, img, options):
+        (x,y), (w,h) = img.extent()
+        p = {
+            "inputRadius" : max(0.0, min(options["radius"], 200.0)),
+        }
+        img = self.filter(self.FILTER_BOXBLUR, img, p) 
+        return img 
+
+    # DISCBLUR
+    # ------------------------------------------------------------------------
+    def render_filter_discblur(self, layer, img, options):
+        (x,y), (w,h) = img.extent()
+        p = {
+            "inputRadius" : max(0.0, min(options["radius"], 200.0)),
+        }
+        img = self.filter(self.FILTER_DISCBLUR, img, p) 
+        return img 
+
+    # SHARPEN
+    # ------------------------------------------------------------------------
+    def render_filter_fsharpen(self, layer, img, options):
+        (x,y), (w,h) = img.extent()
+        p = {
+            "inputSharpness" : max(0.0, min(options["amount"], 20.0)),
+        }
+        img = self.filter(self.FILTER_SHARPEN, img, p) 
+        return img 
+
+    # UNSHARPMASK
+    # ------------------------------------------------------------------------
+    def render_filter_unsharpmask(self, layer, img, options):
+        (x,y), (w,h) = img.extent()
+        p = {
+            "inputRadius" : max(0.0, min(options["radius"], 200.0)),
+            "inputIntensity" : max(0.0, min(options["intensity"], 20.0)),
+        }
+        img = self.filter(self.FILTER_UNSHARPMASK, img, p) 
+        return img 
+
+
     def render_transforms(self, layer, img):
         """ Render layer transformations.
         By default a top-left coordinate system is emulated.
@@ -2477,8 +2657,11 @@ class CoreImageRenderer(Renderer):
         if w + h > 20000:
             return img
         p = {
-            "inputBackgroundImage" : self.image(LAYER_FILL, Transparent(), w, h, x=x, y=y), 
-            "inputMaskImage"       : self.image(LAYER_FILL, Color(layer._opacity), w, h, x=x, y=y)
+            "inputBackgroundImage":
+            self.image(LAYER_FILL, Transparent(), w, h, x=x, y=y), 
+
+            "inputMaskImage":
+            self.image(LAYER_FILL, Color(layer._opacity), w, h, x=x, y=y)
         }
 
         img = self.filter("CIBlendWithMask", img, p)
@@ -2506,8 +2689,11 @@ class CoreImageRenderer(Renderer):
             shadow = self.filter("CIAffineTransform", shadow, {"inputTransform": t})
             (x, y), (w, h) = shadow.extent()
             p = {
-                "inputBackgroundImage" : self.image(LAYER_FILL, Transparent(), w, h, x=x, y=y), 
-                "inputMaskImage"       : self.image(LAYER_FILL, Color(alpha), w, h, x=x, y=y)
+                "inputBackgroundImage":
+                self.image(LAYER_FILL, Transparent(), w, h, x=x, y=y), 
+
+                "inputMaskImage":
+                self.image(LAYER_FILL, Color(alpha), w, h, x=x, y=y)
             }
             # Using about half of the actual blur 
             # gives an output identical to Canvas._render_shadows().
@@ -2542,7 +2728,8 @@ class CoreImageRenderer(Renderer):
         # You'll notice that the CoreImageRenderer.merge()
         # method accumulates merged layers as well.
         if fast:
-            a = CIImageAccumulator.imageAccumulatorWithExtent_format_(img.extent(), self.quality)
+            a = CIImageAccumulator.imageAccumulatorWithExtent_format_(img.extent(),
+                                                                      self.quality)
             a.setImage_(img)
             img = a.image()
         # Crop to the canvas size.
@@ -2579,12 +2766,14 @@ class CoreImageRenderer(Renderer):
         # render only layers that are in it.
         layers_to_render = [layer for layer in layers if not layer.hidden]
         for layer in layers_to_render:
-            img = self.render(layer, fast, crop=False) # we'll crop later, after shadow.
+            # we'll crop later, after shadow.
+            img = self.render(layer, fast, crop=False)
 
             # Render a dropshadow.
             if self.can_render_shadows and layer._shadow != None:
                 shadow = self.render_shadow(layer, img)
-                base = self.filter("CIMultiplyBlendMode", shadow, {"inputBackgroundImage": base})
+                base = self.filter("CIMultiplyBlendMode", shadow,
+                                   {"inputBackgroundImage": base})
 
             # Always crop the layer to the bounds of the canvas.
             v = CIVector.vectorWithX_Y_Z_W_(0, 0, w, h)
@@ -2631,7 +2820,8 @@ class CoreImageRenderer(Renderer):
         # that use Core Image (i.e. where you can alter the content
         # of a canvas with the mouse).
         if fast:
-            a = CIImageAccumulator.imageAccumulatorWithExtent_format_(base.extent(), self.quality)
+            a = CIImageAccumulator.imageAccumulatorWithExtent_format_(base.extent(),
+                                                                      self.quality)
             a.setImage_(base)
             base = a.image()
 
@@ -2690,7 +2880,6 @@ class CoreImageRenderer(Renderer):
         NSGraphicsContext.currentContext().saveGraphicsState()
 
         centered = False
-        from nodebox.graphics import CENTER
         if _ctx._transformmode == CENTER: 
             centered = True
         if centered:
@@ -2778,10 +2967,10 @@ class CoreImageRenderer(Renderer):
         f = open(name, "w")
         f.write(data.bytes().tobytes())
         f.close()
+        del img, data
 
 ### COREIMAGEPIXELS ######################################################################
 
-import numpy
 class CoreImagePixels:
     
     def __init__(self, renderer, layer, img):
@@ -2813,8 +3002,8 @@ class CoreImagePixels:
     def get_pixel(self, x, y):
         """ Returns color for the pixel at x, y.
         """
-        if 0 <= x < self.w and \
-           0 <= y < self.h:
+        if (    0 <= x < self.w
+            and 0 <= y < self.h):
             return _ctx.color(self._img.colorAtX_y_(x, y))
             
     def get_range(self, x, y, w, h):
@@ -2831,8 +3020,8 @@ class CoreImagePixels:
     def set_pixel(self, x, y, clr):
         """ Sets the pixel at x, y with the given color.
         """
-        if 0 <= x < self.w and \
-           0 <= y < self.h:        
+        if (    0 <= x < self.w
+            and 0 <= y < self.h):
             self._img.setColor_atX_y_(clr._rgb, x, y)
 
     def update(self):
@@ -2992,9 +3181,6 @@ class CoreImageHelper:
         
         """ Interfaces parameters for the filter to NodeBox sliders.
         """
-        
-        from nodebox.graphics import BOOLEAN, NUMBER
-        
         vars = {}
  
         # Use the short alias as display name
@@ -3024,9 +3210,10 @@ class CoreImageHelper:
                 try: vars[param] = _ctx.findvar(n).value
                 except: vars[param] = False
             
-            if isinstance(value, (int, float)) \
-            and param != "interface" \
-            and param != "helper":
+            if (    isinstance(value, (int, float))
+                and param != "interface"
+                and param != "helper"):
+                #
                 min = -600.0
                 max =  600.0
                 if param == "dx" or param == "dy":
@@ -3145,18 +3332,18 @@ class CoreImageHelper:
                 _ctx.line(x+i*dw, y+dh, x+i*dw, y+dh-channel[i]*dh)
             y += dh+10
             
-    def spotlight(self, layer, w, h, dx0, dy0, dz0, dx1, dy1, dz1, brightness, concentration):
+    def spotlight(self, layer, w, h, dx0, dy0, dz0, dx1, dy1, dz1,
+                        brightness, concentration):
         """ Helper for the Layer.filter(name="lighting") command.
         """
-        self._stack["spotlight"] = (layer, w, h, dx0, dy0, dz0, dx1, dy1, dz1, brightness, concentration) 
+        self._stack["spotlight"] = (layer, w, h, dx0, dy0, dz0, dx1, dy1, dz1,
+                                    brightness, concentration) 
 
     def _spotlight(self, args):
         
         layer, w, h, dx0, dy0, dz0, dx1, dy1, dz1, brightness, concentration = args
         l, t, r, b = layer.bounds()
-        
-        from nodebox.graphics import CORNER, CENTER
-        
+
         # Draw the helper relative to
         # the layer's position.
         # Layer scaling, rotation, etc. are not processed.
@@ -3214,11 +3401,9 @@ class CoreImageHelper:
         if x1-x0 < 0: a += 180
         return 360 - a
     
-#### TESTS ##########################################################################################
+#### TESTS #############################################################################
 
 def test_transformstate():
-
-    from nodebox.graphics import CORNER, CENTER
 
     c = canvas(400, 400)
     c.layer_linear_gradient(color(1.0, 0, 0))
@@ -3259,7 +3444,6 @@ def test_multipledraws():
     l.filter_twirl(angle=400)
     l.filter_holedistortion(radius=25)
 
-    from nodebox.graphics import grid
     for x, y in grid(4, 4, 100, 100):
         l.filter_twirl(angle=x+y*5)
         c.draw(x, y)
