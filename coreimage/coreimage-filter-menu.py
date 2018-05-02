@@ -11,11 +11,16 @@ pp=pprint.pprint
 
 # remove the "# " before the l.filter lines and re-run to check a filter
 filters = [
+    "average", 
     "bloom", "bumpdistortion", "checkerboard", "circlesplash", "circularwrap",
     "crystallize", "dotscreen", "edges", "holedistortion", "kaleidoscope", "levels",
     "lighting", "linearbump", "lineoverlay", "motionblur", "noisereduction", "pagecurl",
     "parallelogramtile", "perspectivetile", "pixelate", "shading", "starshine",
-    "stretch", "triangletile", "twirl", "zoomblur" ]
+    "stretch", "triangletile", "twirl", "zoomblur",
+    "boxblur", "discblur", "sharpen", "unsharpmask"
+     ]
+
+filternames = filters
 
 def handleFiltermenu( m ):
     global filter
@@ -115,19 +120,29 @@ def handleParameter( value, name ):
 
 
 def handleButton(name):
+    global filternames
     canvas = coreimage.canvas(WIDTH, HEIGHT)
     canvas.append(color(0.5))
     canvas.append("leaf.jpg")
-
     clr1=color(0)
     clr2=color((1,1,0))
 
-    layer = canvas.append("lily.tif")
+    # layer = canvas.append("lily.tif")
+    # layer = canvas.append("images/demo/_MG_4714.jpg")
+    # layer = canvas.append("images/demo/Carmie 4.jpg")
+    layer = canvas.append("images/demo/Fotobuch Argenturen 2010 016.jpg")
     label = "NO LABEL!"
-    if filter == "bloom":
+    if filter == "average":
+        pass
+        # layer.filter(filter, dx=dx, dy=dy)
+        # label = "layer.filter('%s', dx=%.2f, dy=%.2f, radius=%.2f, scale=%.2f)" % (filter, dx,dy,radius,scale_)
+    elif filter == "bloom":
         layer.filter(filter, radius=radius, intensity=intensity)
         label = "layer.filter('%s', radius=%.2f, intensity=%.2f)" % (filter, radius, intensity)
     elif filter == "bumpdistortion":
+        layer.filter(filter, scale=scale_, dx=dx, dy=dy, radius=radius)
+        label = "layer.filter('%s', dx=%.2f, dy=%.2f, radius=%.2f, scale=%.2f)" % (filter, dx,dy,radius,scale_)
+    elif filter == "bumpdistortionlinear":
         layer.filter(filter, scale=scale_, dx=dx, dy=dy, radius=radius)
         label = "layer.filter('%s', dx=%.2f, dy=%.2f, radius=%.2f, scale=%.2f)" % (filter, dx,dy,radius,scale_)
     elif filter == "checkerboard":
@@ -203,6 +218,20 @@ def handleButton(name):
         layer.filter(filter, dx=dx, dy=dy, amount=amount)
         label = "layer.filter('%s', dx=%.2f, dy=%.2f, amount=%.2f)" % (filter, dx,dy,amount)
 
+    elif filter == "boxblur":
+        layer.filter(filter, radius=radius)
+        label = "layer.filter('%s', radius=%.2f)" % (filter, radius)
+    elif filter == "discblur":
+        layer.filter(filter, radius=radius)
+        label = "layer.filter('%s', radius=%.2f)" % (filter, radius)
+    elif filter == "sharpen":
+        layer.filter(filter, amount=amount)
+        label = "layer.filter('%s', amount=%.2f)" % (filter, amount)
+        
+    elif filter == "unsharpmask":
+        layer.filter(filter, radius=radius, intensity=intensity)
+        label = "layer.filter('%s', radius=%.2f, intensity=%.2f)" % (filter, radius, intensity)
+
     # canvas.draw()
     canvas.draw(fast=False,helper=helper)
     fill(1)
@@ -212,15 +241,15 @@ var("filter", MENU, handler=handleFiltermenu, menuitems=filters)
 var("apply", BUTTON, handler=handleButton)
 var("helper", BOOLEAN, handler=handleParameter)
 
-var("dx", NUMBER, min=-100, max=100, default=0, handler= handleParameter)
-var("dy", NUMBER, min=-100, max=100, default=0, handler= handleParameter)
+var("dx", NUMBER, min=-100, max=600, default=0, handler= handleParameter)
+var("dy", NUMBER, min=-100, max=600, default=0, handler= handleParameter)
 
 var("amount", NUMBER, min=0, max=100, default=20, handler= handleParameter)
 var("angle_", NUMBER, min=0, max=360, default=0, handler= handleParameter)
 var("radius", NUMBER, min=0, max=400, default=30, handler= handleParameter)
 var("noise", NUMBER, min=0.0, max=2.0, default=0.02, handler= handleParameter)
 var("sharpness", NUMBER, min=0.0, max=2.0, default=1.0, handler= handleParameter)
-var("scale_", NUMBER, min=0.0, max=10.0, default=1.0, handler= handleParameter)
+var("scale_", NUMBER, min=0.0, max=100.0, default=1.0, handler= handleParameter)
 var("width", NUMBER, min=0, max=200, default=100, handler= handleParameter)
 
 var("tilt", NUMBER, min=0, max=150, default=90, handler= handleParameter)
