@@ -47,6 +47,13 @@ __license__   = "MIT"
 from nodebox.graphics import MOVETO, LINETO, CURVETO, CLOSE, CENTER
 from nodebox.graphics import Point, PathElement, BezierPath
 from math import sin, cos, atan, pi, degrees, radians, sqrt, pow
+from nodebox.geo import angle, distance, coordinates
+
+def reflect(x0, y0, x1, y1, d=1.0, a=180):
+    d *= distance(x0, y0, x1, y1)
+    a += angle(x0, y0, x1, y1)
+    x, y = coordinates(x0, y0, d, a)
+    return x, y
 
 KEY_TAB = 48
 KEY_ESC = 53
@@ -421,14 +428,14 @@ class BezierPathEditor:
                     # This makes for smooth, continuous paths.
                     if len(self._points) > 0:
                         prev = self._points[-1]
-                        rx, ry = _ctx.reflect(prev.x, prev.y, prev.ctrl2.x, prev.ctrl2.y)
+                        rx, ry = reflect(prev.x, prev.y, prev.ctrl2.x, prev.ctrl2.y)
                         self.new.ctrl1 = Point(rx, ry)
                     self._points.append(self.new)
                 else:
                     # Illustrator-like behavior:
                     # when the handle is dragged downwards,
                     # the path bulges upwards.
-                    rx, ry = _ctx.reflect(self.new.x, self.new.y, x, y)
+                    rx, ry = reflect(self.new.x, self.new.y, x, y)
                     self.new.ctrl2 = Point(rx, ry)
             
             # Edit mode
@@ -438,23 +445,25 @@ class BezierPathEditor:
             
                 # The user is pressing the mouse on a point,
                 # enter drag-point mode.
-                if self.overlap(pt.x, pt.y, x, y) \
-                and not self.drag_handle1 \
-                and not self.drag_handle2 \
-                and not self.new != None:
+                if (    self.overlap(pt.x, pt.y, x, y)
+                    and not self.drag_handle1
+                    and not self.drag_handle2
+                    and not self.new != None):
                     self.drag_point = True
                     self.drag_handle1 = False
                     self.drag_handle2 = False
 
                 # The user is pressing the mouse on a point's handle,
                 # enter drag-handle mode.
-                if self.overlap(pt.ctrl1.x, pt.ctrl1.y, x, y) \
-                and pt.cmd == CURVETO \
-                and not self.drag_point \
-                and not self.drag_handle2:
+                if (    self.overlap(pt.ctrl1.x, pt.ctrl1.y, x, y)
+                    and pt.cmd == CURVETO
+                    and not self.drag_point
+                    and not self.drag_handle2):
+
                     self.drag_point = False
                     self.drag_handle1 = True
                     self.drag_handle2 = False
+
                 if self.overlap(pt.ctrl2.x, pt.ctrl2.y, x, y) \
                 and pt.cmd == CURVETO \
                 and not self.drag_point \
@@ -476,7 +485,7 @@ class BezierPathEditor:
                     pt.ctrl2.x += dx
                     pt.ctrl2.y += dy
                     if self.edit < len(self._points)-1:
-                        rx, ry = _ctx.reflect(pt.x, pt.y, x, y)
+                        rx, ry = reflect(pt.x, pt.y, x, y)
                         next = self._points[self.edit+1]
                         next.ctrl1.x += dx
                         next.ctrl1.y += dy
@@ -490,17 +499,17 @@ class BezierPathEditor:
                     if self.edit > 0 \
                     and self.last_key != "x":
                         prev = self._points[self.edit-1]
-                        d = _ctx.distance(prev.x, prev.y, prev.ctrl2.x, prev.ctrl2.y)
-                        a = _ctx.angle(prev.x, prev.y, pt.ctrl1.x, pt.ctrl1.y)
-                        prev.ctrl2 = _ctx.coordinates(prev.x, prev.y, d, a+180)                        
+                        d = distance(prev.x, prev.y, prev.ctrl2.x, prev.ctrl2.y)
+                        a = angle(prev.x, prev.y, pt.ctrl1.x, pt.ctrl1.y)
+                        prev.ctrl2 = Point(coordinates(prev.x, prev.y, d, a+180))
                 if self.drag_handle2 == True:   
                     pt.ctrl2 = Point(x, y)
                     if self.edit < len(self._points)-1 \
                     and self.last_key != "x":
                         next = self._points[self.edit+1]
-                        d = _ctx.distance(pt.x, pt.y, next.ctrl1.x, next.ctrl1.y)
-                        a = _ctx.angle(pt.x, pt.y, pt.ctrl2.x, pt.ctrl2.y)
-                        next.ctrl1 = _ctx.coordinates(pt.x, pt.y, d, a+180)
+                        d = distance(pt.x, pt.y, next.ctrl1.x, next.ctrl1.y)
+                        a = angle(pt.x, pt.y, pt.ctrl2.x, pt.ctrl2.y)
+                        next.ctrl1 = Point(coordinates(pt.x, pt.y, d, a+180))
         
         elif not self.freehand:
             
@@ -518,7 +527,7 @@ class BezierPathEditor:
                 del self._points[i]
                 if 0 < i < len(self._points):
                     prev = self._points[i-1]
-                    rx, ry = _ctx.reflect(prev.x, prev.y, prev.ctrl2.x, prev.ctrl2.y)
+                    rx, ry = reflect(prev.x, prev.y, prev.ctrl2.x, prev.ctrl2.y)
                     self._points[i].ctrl1 = Point(rx, ry)
                 # Also delete all the freehand points
                 # prior to this point.
@@ -535,8 +544,7 @@ class BezierPathEditor:
                 # When you delete a MOVETO point,
                 # the last moveto (the one where the dashed line points to)
                 # needs to be updated.
-                if len(self._points) > 0 \
-                and (cmd == MOVETO or i == 0):
+                if (len(self._points) > 0 and (cmd == MOVETO or i == 0)):
                     self.last_moveto = self._points[0]
                     for pt in self._points:
                         if pt.cmd == MOVETO:
@@ -553,15 +561,13 @@ class BezierPathEditor:
             # We are not editing a node and
             # the mouse is hovering over the path outline stroke:
             # it is possible to insert a point here.
-            elif self.edit == None \
-            and self.contains_point(x, y, d=2):
+            elif self.edit == None and self.contains_point(x, y, d=2):
                 self.insert = True
             else:
                 self.insert = False
             
             # Commit insert of new point.
-            if self.inserting \
-            and self.contains_point(x, y, d=2): 
+            if self.inserting and self.contains_point(x, y, d=2): 
                 self.insert_point(x, y)
                 self.insert = False
             self.inserting = False
@@ -593,8 +599,7 @@ class BezierPathEditor:
             if self.last_keycode == KEY_ESC:
                 self.edit = None
             # When BACKSPACE is pressed, delete current point.
-            if self.last_keycode == _ctx.KEY_BACKSPACE \
-            and self.edit != None:
+            if self.last_keycode == _ctx.KEY_BACKSPACE and self.edit != None:
                 self.delete = self.edit
             self.last_key = None
             self.last_code = None
@@ -665,31 +670,35 @@ class BezierPathEditor:
                                      pt.x, pt.y)
                 # In add- or edit-mode,
                 # display the current point's handles.
-                if ((i == self.edit and self.new == None) \
-                or pt == self.new) \
-                and pt.cmd == CURVETO \
-                and not pt.freehand:
+                if (    ((i == self.edit and self.new == None)
+                        or pt == self.new)
+                        and pt.cmd == CURVETO
+                        and not pt.freehand):
                     _ctx.stroke(self.handle_color)
                     _ctx.nofill()
                     _ctx.oval(pt.x-r, pt.y-r, r*2, r*2)
                     _ctx.stroke(self.handle_color)
                     _ctx.line(pt.ctrl2.x, pt.ctrl2.y, pt.x, pt.y)
                     _ctx.fill(self.handle_color)
+
                 # Display the new point's handle being dragged.
-                if pt == self.new \
-                and not pt.freehand:
-                    rx, ry = _ctx.reflect(pt.x, pt.y, pt.ctrl2.x, pt.ctrl2.y)
+                if (    pt == self.new
+                    and not pt.freehand):
+                    rx, ry = reflect(pt.x, pt.y, pt.ctrl2.x, pt.ctrl2.y)
                     _ctx.stroke(self.handle_color)
                     _ctx.line(rx, ry, pt.x, pt.y)
                     _ctx.nostroke()
                     _ctx.fill(self.handle_color)
                     _ctx.oval(rx-r/2, ry-r/2, r, r)
+
                 # Display handles for point being edited.
-                if i == self.edit \
-                and self.new == None \
-                and pt.cmd == CURVETO \
-                and not pt.freehand:
-                    _ctx.oval(pt.ctrl2.x-r/2, pt.ctrl2.y-r/2, r, r)
+                if (    i == self.edit
+                    and self.new == None
+                    and pt.cmd == CURVETO
+                    and not pt.freehand):
+                    _ctx.oval( pt.ctrl2.x - r / 2,
+                               pt.ctrl2.y - r / 2,
+                               r, r)
                     if i > 0:
                         prev = self._points[i-1]
                         _ctx.line(pt.ctrl1.x, pt.ctrl1.y, prev.x, prev.y)
@@ -703,8 +712,8 @@ class BezierPathEditor:
                 
                 # When hovering over a point,
                 # highlight it.
-                elif self.overlap(x, y, pt.x, pt.y) \
-                and not pt.freehand:
+                elif (    self.overlap(x, y, pt.x, pt.y)
+                      and not pt.freehand):
                     self.insert = False # quit insert mode
                     _ctx.nofill()
                     _ctx.stroke(self.handle_color)
@@ -715,12 +724,14 @@ class BezierPathEditor:
                 _ctx.fontsize(9)
                 _ctx.fill(self.handle_color)
                 txt = " ("+str(int(pt.x))+", "+str(int(pt.y))+")"
-                if (i == self.edit and self.new == None) \
-                or pt == self.new \
-                and not pt.freehand:
+
+                if (    (i == self.edit and self.new == None)
+                     or pt == self.new
+                     and not pt.freehand):
                     _ctx.text(txt, pt.x+r, pt.y+2)                                       
-                elif self.overlap(x, y, pt.x, pt.y) \
-                and not pt.freehand:
+
+                elif (    self.overlap(x, y, pt.x, pt.y)
+                      and not pt.freehand):
                     _ctx.text(txt, pt.x+r, pt.y+2)
 
                 # Draw a circle for each point
@@ -751,13 +762,13 @@ class BezierPathEditor:
             # When not editing a node,
             # prospect how the curve will continue
             # when adding a new point.
-            if self.edit == None \
-            and self.new == None \
-            and self.moveto != True \
-            and not self.freehand:
+            if (    self.edit == None
+                and self.new == None
+                and self.moveto != True
+                and not self.freehand):
                 _ctx.nofill()
                 _ctx.stroke(self.new_color)
-                rx, ry = _ctx.reflect(pt.x, pt.y, pt.ctrl2.x, pt.ctrl2.y)
+                rx, ry = reflect(pt.x, pt.y, pt.ctrl2.x, pt.ctrl2.y)
                 _ctx.beginpath(pt.x, pt.y)
                 _ctx.curveto(rx, ry, x, y, x, y)
                 _ctx.endpath()
@@ -776,9 +787,9 @@ class BezierPathEditor:
         
             # When doing a MOVETO,
             # show the new point hovering at the mouse location.
-            elif self.edit == None \
-            and self.new == None \
-            and self.moveto != None:
+            elif (    self.edit == None
+                  and self.new == None
+                  and self.moveto != None):
                 _ctx.stroke(self.new_color)
                 _ctx.nofill()
                 _ctx.oval(x-r*0.8, y-r*0.8, r*1.6, r*1.6)
