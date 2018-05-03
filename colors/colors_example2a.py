@@ -13,10 +13,9 @@ background(None)
 
 def findimage():
     while True:
-        img = choice(list(imagefiles("/Volumes/Tranquility/Library/Desktop Pictures")))
+        img = choice(list(imagefiles("/Library/Desktop Pictures")))
         x = imagesize(img)
         if x.width > 400:
-            print img
             return img
 
 n = 20
@@ -27,7 +26,16 @@ n = 20
 img = findimage()
 
 sea = colors.list(img, n=n)
+
+sea = list(set(sea))
+n = len(sea)
 image(img, 0, 50, width=WIDTH)
+
+print img
+print n
+print 
+
+sea.sort()
 
 w = WIDTH / n
 x = 0

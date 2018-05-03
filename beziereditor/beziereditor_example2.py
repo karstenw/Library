@@ -18,8 +18,8 @@ def setup():
 
     # Initialize the editor with a path
     # constructed from a character.
-    fontsize(600)
-    p = textpath("a", 80, 600, font=f)
+    fontsize(800)
+    p = textpath("&", 100, 700, font=f)
     editor = beziereditor.start(p, filename="path")
 
 def draw():

@@ -20,4 +20,7 @@ pattern/web/cache
 pattern/examples/*/*.slp
 pattern/examples/*/*.csv
 pattern/examples/*/*.svm
+photobot/images/*/
+photobot/examples/photobot_20??-??-??_??????.png
 
+pandas

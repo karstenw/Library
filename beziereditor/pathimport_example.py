@@ -1,4 +1,4 @@
-size(400, 400)
+size(1200, 1000)
 
 svg = ximport("svg")
 reload(svg)
