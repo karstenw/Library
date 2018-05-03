@@ -43,7 +43,7 @@ allFilters = CIFilter.filterNamesInCategories_( cicategories )
 
 # pdb.set_trace()
 
-ctx = NSGraphicsContext.currentContext().CIContext
+# ctx = NSGraphicsContext.currentContext().CIContext
 
 for cat in cicategories:
     catfilters = CIFilter.filterNamesInCategory_( cat )
