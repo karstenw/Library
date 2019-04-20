@@ -1,6 +1,8 @@
 */*.pyc
 *.pdf
 .DS_Store
+*/+private
+
 isight/NdBx-00000.jpg
 
 cornu/*.svg
@@ -12,6 +14,8 @@ web/cache/*
 noise/texture.jpg
 coreimage/images/*
 beziereditor/path.svg
+beziereditor/+latex
+lsys/Examples/Lindenmayer Systems, Fractals, and Plants/*.png
 sklearn/examples/applications/page_links_en.nt.bz2
 sklearn/examples/applications/redirects_en.nt.bz2 
 pattern/examples/02-db/store.db
@@ -24,3 +28,6 @@ photobot/images/*/
 photobot/examples/photobot_20??-??-??_??????.png
 
 pandas
+pattern
++latex
+PVec*
