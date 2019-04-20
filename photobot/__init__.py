@@ -558,7 +558,7 @@ class Canvas:
         """
 
         self.flatten()
-        self.layers[1].img.save(filename, format="PNG")
+        self.layers[1].img.save(filename, format="PNG", optimize=False)
         return filename
         
     def draw(self, x, y):
@@ -1251,24 +1251,31 @@ class Pixels:
     def __getitem__(self, i):
 
         w, h = self.img.size
-        if i >= w*h: i -= w*h
-        if i < 0: i += w*h
+        noofpixels = w * h
+        if i >= noofpixels:
+            i -= noofpixels
+        if i < 0:
+            i += noofpixels
         
-        if self.data == None: self.data = list(self.img.getdata())
+        if self.data == None:
+            self.data = list(self.img.getdata())
         return self.data[i]
         
     def __setitem__(self, i, rgba):
         
         w, h = self.img.size
-        if i >= w*h: i -= w*h
-        if i < 0: i += w*h
+        noofpixels = w * h
+        if i >= noofpixels:
+            i -= noofpixels
+        if i < 0:
+            i += noofpixels
         
         if self.data == None: self.data = list(self.img.getdata())
         self.data[i] = rgba
 
     def __iter__(self):
         
-        for i in range(len(self)):
+        for i in xrange(len(self)):
             yield self[i]
 
     def __len__(self):
