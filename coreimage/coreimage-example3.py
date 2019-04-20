@@ -36,21 +36,21 @@ fill(0.1)
 rect(0,0,WIDTH,HEIGHT)
 
 # Create a 800x500 canvas to hold layers.
-canvas = coreimage.canvas(800, 500)
+c = coreimage.canvas(800, 500)
 
 # Create 20 random layers.
 # Remember, it may take a few seconds to load
 # all the images during the first run.
 for i in range(20):
     img = choice(files("images/"+ query+"/*"))
-    l = canvas.append(img)
+    l = c.append(img)
     
     # Give each layer a gradient mask.
     l.mask.gradient(type="radial")
     
     # Put it at a random location on the canvas.
-    l.x = random(canvas.w)
-    l.y = random(canvas.h)
+    l.x = random(c.w)
+    l.y = random(c.h)
     
     # Maybe flip it,
     # some random rotation and scaling.
@@ -68,19 +68,19 @@ for i in range(20):
 
 # Put a central image on top of the mess.
 #img = choice(files("images/"+ query+"/*"))
-#l = canvas.layer(img)
+#l = c.layer(img)
 #l.mask.layer_radial_gradient()
 
 # Add a fill color that hues
 # all the layers below.
-l = canvas.append(color(random(), random(), random()))
+l = c.append(color(random(), random(), random()))
 l.blend(50)
 l.blend_hue()
 
 # Put all the layers as a group in a second canvas, 
 # then adjust the contrast of the group.
 c2 = coreimage.canvas(800, 500)
-l = c2.append(canvas)
+l = c2.append(c)
 l.contrast = 1.1
 
 # Draw to NodeBox!
