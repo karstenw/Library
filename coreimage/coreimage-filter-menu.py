@@ -11,7 +11,7 @@ pp=pprint.pprint
 
 # remove the "# " before the l.filter lines and re-run to check a filter
 filters = [
-    "average", 
+    # "average", 
     "bloom", "bumpdistortion", "checkerboard", "circlesplash", "circularwrap",
     "crystallize", "dotscreen", "edges", "holedistortion", "kaleidoscope", "levels",
     "lighting", "linearbump", "lineoverlay", "motionblur", "noisereduction", "pagecurl",
