@@ -57,6 +57,13 @@ OVERLAY = "overlay"
 HUE = "hue"
 COLOR = "color"
 
+ADD = "add"
+SUBTRACT = "subtract"
+ADD_MODULO = "add_modulo"
+SUBTRACT_MODULO = "subtract_modulo"
+DIFFERENCE = "difference"
+
+
 HORIZONTAL = 1
 VERTICAL = 2
 
@@ -471,8 +478,8 @@ class Canvas:
         
             base = background.img.crop((x, y, w, h))
 
-            #Determine which piece of the layer
-            #falls within the canvas.
+            # Determine which piece of the layer
+            # falls within the canvas.
 
             x = max(0, -layer.x)
             y = max(0, -layer.y)
@@ -481,10 +488,10 @@ class Canvas:
 
             blend = layer.img.crop((x, y, w, h))
         
-            #Buffer layer blend modes:
-            #the base below is a flattened version
-            #of all the layers below this one,
-            #on which to merge this blended layer.
+            # Buffer layer blend modes:
+            # the base below is a flattened version
+            # of all the layers below this one,
+            # on which to merge this blended layer.
         
             if layer.blend == NORMAL:
                 buffer = blend
@@ -499,12 +506,23 @@ class Canvas:
             if layer.blend == COLOR:
                 buffer = Blend().color(base, blend)
             
-            #Buffer a merge between the base and blend
-            #according to the blend's alpha channel:
-            #the base shines through where the blend is less opaque.
+            if layer.blend == ADD:
+                buffer = ImageChops.add(base, blend)
+            if layer.blend == SUBTRACT:
+                buffer = ImageChops.subtract(base, blend)
+            if layer.blend == ADD_MODULO:
+                buffer = ImageChops.add_modulo(base, blend)
+            if layer.blend == SUBTRACT_MODULO:
+                buffer = ImageChops.subtract_modulo(base, blend)
+            if layer.blend == DIFFERENCE:
+                buffer = ImageChops.difference(base, blend)
+            
+            # Buffer a merge between the base and blend
+            # according to the blend's alpha channel:
+            # the base shines through where the blend is less opaque.
         
-            #Merging the first layer to the transparent canvas
-            #works slightly different than the other layers.
+            # Merging the first layer to the transparent canvas
+            # works slightly different than the other layers.
         
             alpha = buffer.split()[3]
             if i == 1:
@@ -512,22 +530,21 @@ class Canvas:
             else:
                 buffer = Image.composite(buffer, base, alpha)
         
-            #The alpha channel becomes a composite of
-            #this layer and the base:
-            #the base's (optional) tranparent background
-            #is retained in arrays where the blend layer
-            #is transparent as well.
+            # The alpha channel becomes a composite of this layer and the base:
+            # the base's (optional) tranparent background
+            # is retained in arrays where the blend layer
+            # is transparent as well.
         
             alpha = ImageChops.lighter(alpha, base.split()[3])
             buffer.putalpha(alpha)
         
-            #Apply the layer's opacity,
-            #merging the buffer to the base with
-            #the given layer opacity.
+            # Apply the layer's opacity,
+            # merging the buffer to the base with
+            # the given layer opacity.
         
             base = Image.blend(base, buffer, layer.alpha)
 
-            #Merge the base to the flattened canvas.
+            # Merge the base to the flattened canvas.
 
             x = max(0, int(layer.x))
             y = max(0, int(layer.y))
@@ -835,6 +852,26 @@ class Layer:
     def multiply(self):
 
         self.blend = MULTIPLY
+
+    def add(self):
+
+        self.blend = ADD
+
+    def subtract(self):
+
+        self.blend = SUBTRACT
+
+    def add_modulo(self):
+
+        self.blend = ADD_MODULO
+
+    def subtract_modulo(self):
+
+        self.blend = SUBTRACT_MODULO
+
+    def difference(self):
+    
+        self.blend = DIFFERENCE
 
     def screen(self):
 
@@ -1270,7 +1307,8 @@ class Pixels:
         if i < 0:
             i += noofpixels
         
-        if self.data == None: self.data = list(self.img.getdata())
+        if self.data == None:
+            self.data = list(self.img.getdata())
         self.data[i] = rgba
 
     def __iter__(self):
