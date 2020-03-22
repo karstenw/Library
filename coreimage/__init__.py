@@ -1820,7 +1820,7 @@ class CoreImageRenderer(Renderer):
         # ------------------------------------------------------------------------
         elif type == LAYER_PIXELS:
             p, w, h = data
-            raw = numpy.array([0] * w*h*4, typecode='c')
+            raw = numpy.array([0] * w*h*4, dtype=numpy.uint8 )
             for i in range(len(p)):
                 raw[i*4+0] = p[i].r * 255
                 raw[i*4+1] = p[i].g * 255
@@ -1858,7 +1858,7 @@ class CoreImageRenderer(Renderer):
         # ------------------------------------------------------------------------
         elif type == LAYER_NSIMAGEDATA:
             img = CIImage.imageWithData_(data)        
-        del a, r, c
+        # del a, r, c
         return img
 
     def pixels(self, layer, crop=False):
@@ -2967,7 +2967,7 @@ class CoreImageRenderer(Renderer):
         f = open(name, "w")
         f.write(data.bytes().tobytes())
         f.close()
-        del img, data
+        # del img, data
 
 ### COREIMAGEPIXELS ######################################################################
 
