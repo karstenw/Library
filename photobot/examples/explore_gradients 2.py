@@ -1,4 +1,4 @@
-size(800,800)
+size(512,512)
 background(0.334)
 pb = ximport("photobot")
 reload(pb)
