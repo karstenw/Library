@@ -550,7 +550,7 @@ class Canvas:
         else:
             self.layers.insert(layers[-1], background)
 
-    def export(self, filename, format='PNG'):
+    def export(self, name, ext, format):
 
         """Exports the flattened canvas.
 
@@ -1830,6 +1830,7 @@ def imagefiles( folderpathorlist, pathonly=True ):
         else:
             path, filesize, lastmodf, mode, islink = filetuple
             s = (-1,-1)
+            img = None
             try:
                 img = Image.open(path)
                 s = img.size
