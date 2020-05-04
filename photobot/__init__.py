@@ -5,12 +5,21 @@
 # Refer to the "Use" section on http://nodebox.net/code/index.php/Use
 
 
+ALL = ['canvas', 'Layers', 'Layer', 'label', 'invertimage', 'cropimage',
+    'aspectRatio', 'normalizeOrientationImage', 'insetRect',
+    'cropImageToRatioHorizontal', 'scaleLayerToHeight', 'placeImage',
+    'resizeImage', 'hashFromString', 'makeunicode', 'datestring', 'filelist',
+    'imagefiles', 'imagewells', 'loadImageWell' ]
+
+# This source is used in NodeBox and standalone
+standalone = False
+nodeb = True
+
 import sys
 import os
 import types
 FloatType = types.FloatType
 StringType = types.StringType
-
 
 import math
 sqrt = math.sqrt
@@ -21,15 +30,15 @@ degrees = math.degrees
 radians = math.radians
 asin = math.asin
 
+import fractions
+Fraction = fractions.Fraction
+
 import datetime
 import time
 import hashlib
+import unicodedata
 
 import colorsys
-
-import pdb
-import pprint
-pp = pprint.pprint
 
 import PIL
 import PIL.ImageFilter as ImageFilter
@@ -39,6 +48,19 @@ import PIL.ImageEnhance as ImageEnhance
 import PIL.ImageOps as ImageOps
 import PIL.ImageDraw as ImageDraw
 import PIL.ImageStat as ImageStat
+import PIL.ImageFont as ImageFont
+
+# disable large image warning
+old = Image.MAX_IMAGE_PIXELS
+Image.MAX_IMAGE_PIXELS = None # 200000000
+# print "MAX_IMAGE_PIXELS:", old
+
+
+import pdb
+import pprint
+pp = pprint.pprint
+kwdbg = 0
+import traceback
 
 # PIL interpolation modes
 NEAREST = Image.NEAREST
@@ -78,44 +100,6 @@ RADIALCOSINE = "radialcosine"
 QUAD = "quad"
 
 
-def hashFromString( s ):
-    h = hashlib.sha1()
-    h.update( s )
-    return h.hexdigest()
-
-def datestring(dt = None, dateonly=False, nospaces=True, nocolons=True):
-    """Make an ISO datestring. The defaults are good for using the result of
-    'datestring()' in a filename.
-    """
-    if not dt:
-        now = str(datetime.datetime.now())
-    else:
-        now = str(dt)
-    if not dateonly:
-        now = now[:19]
-    else:
-        now = now[:10]
-    if nospaces:
-        now = now.replace(" ", "_")
-    if nocolons:
-        now = now.replace(":", "")
-    return now
-
-
-def invertimage( img ):
-    alpha = img.split()[3]
-    img = img.convert("RGB")
-    img = ImageOps.invert(img)
-    img = img.convert("RGBA")
-    img.putalpha(alpha)
-    return img
-
-
-def cropimage( img, bounds):
-    """Crop a pillow image at bounds(left, top, right, bottom)"""
-    return img.crop( bounds )
-
-
 class Canvas:
     
     """Implements a canvas with layers.
@@ -137,10 +121,8 @@ class Canvas:
         self.layers = Layers()
         self.w = w
         self.h = h
-        
         img = Image.new("RGBA", (w,h), (255,255,255,0))
         self.layer(img, name="_bg")
-
 
     def layer(self, img, x=0, y=0, name=""):
 
@@ -157,19 +139,18 @@ class Canvas:
         if isinstance(img, Image.Image):
             img = img.convert("RGBA")
             self.layers.append(Layer(self, img, x, y, name))
-            return len(self.layers)-1
+            return len(self.layers) - 1
 
         if isinstance(img, Layer):
             img.canvas = self
             self.layers.append(img)
             return len(self.layers) - 1
 
-        if type(img) in (str, unicode): 
+        if type(img) in (str, unicode):
             img = Image.open(img)
             img = img.convert("RGBA")
             self.layers.append(Layer(self, img, x, y, name))
-            return len(self.layers)-1
-
+            return len(self.layers) - 1
 
     def fill(self, rgb, x=0, y=0, w=None, h=None, name=""):
 
@@ -187,12 +168,11 @@ class Canvas:
         img = Image.new("RGBA", (w,h), rgb)
         return self.layer(img, x, y, name)
 
-
     def makegradientimage(self, style, w, h):
         """Creates the actual gradient image.
         
-        This has been factored out of gradient() so complex gradients like ROUNDRECT
-        which consist of multiple images can be composed.
+        This has been factored out of gradient() so complex gradients like
+        ROUNDRECT which consist of multiple images can be composed.
         """
         w0 = self.w 
         h0 = self.h
@@ -205,6 +185,7 @@ class Canvas:
             img = Image.new("L", (int(w),int(h)), 255)
         else:
             img = Image.new("L", (int(w),int(h)), 0)
+
         draw = ImageDraw.Draw(img)
 
         if style == SOLID:
@@ -232,9 +213,7 @@ class Canvas:
             deltaxdeg = deg / rx
             deltaydeg = deg / ry
             deltadeg = deg / r
-            #print "RADIALCOSINE w, h, r", w, h, r
-            #print "RADIALCOSINE steps xy:", deltaxdeg, deltaydeg
-            
+
             step = min(deltaxdeg, deltaydeg)
             for i in range(int(r)):
                 # k = 255.0 * i/r
@@ -264,16 +243,14 @@ class Canvas:
             deltadeg = deg / w
             for i in range( int(w) ):
                 k = 256 * action( radians( base + i * deltadeg ) )
-                # draw.rectangle((i, 0, i, h), fill=int(k))
                 draw.line( (i,0,i, h), fill=int(k), width=1)
-
         result = img.convert("RGBA")
         del img
         del draw
         return result
 
-
-    def gradient(self, style=LINEAR, w=1.0, h=1.0, name="", radius=0, radius2=0):
+    def gradient(self, style=LINEAR, w=1.0, h=1.0, name="",
+                       radius=0, radius2=0):
 
         """Creates a gradient layer.
 
@@ -296,7 +273,8 @@ class Canvas:
             h = int(h*h0)
 
         img = None
-        if style in (SOLID, LINEAR, RADIAL, DIAMOND, SINE, COSINE, RADIALCOSINE):
+        if style in (SOLID, LINEAR, RADIAL, DIAMOND,
+                     SINE, COSINE, RADIALCOSINE):
             img = self.makegradientimage(style, w, h)
             img = img.convert("RGBA")
             return self.layer(img, 0, 0, name=name)
@@ -305,7 +283,6 @@ class Canvas:
             # make a rectangle with softened edges
             result = Image.new("L", (int(w),int(h)), 255)
             
-            # 
             mask = Image.new("L", (w,h), 255)
             draw = ImageDraw.Draw(mask)
 
@@ -339,35 +316,32 @@ class Canvas:
             horup = hordown.rotate( 180 )
 
             # assemble
-            result.paste( baserect, box=( r1,     0) )
-            result.paste( verleft,  box=( 0,      0) )
-            result.paste( vertright,box=( w-r1,   0) )
+            result.paste( baserect, box=( r1,   0) )
+            result.paste( verleft,  box=( 0,    0) )
+            result.paste( vertright,box=( w-r1, 0) )
 
-            mask.paste( hordown,  box=( 0,     0) )
-            mask.paste( horup,    box=( 0,     h-r2) )
+            mask.paste( hordown,    box=( 0,    0) )
+            mask.paste( horup,      box=( 0,    h-r2) )
 
             result = ImageChops.darker(result, mask)
             result = result.convert("RGBA")
-            del mask
-            del horup
-            del hordown
-            del baserect
-            del verleft
-            del vertright
+            del mask, horup, hordown
+            del baserect, verleft, vertright
             return self.layer(result, 0, 0, name=name)
 
         if style == ROUNDRECT:
             result = Image.new("L", (int(w),int(h)), 255)
             r1 = int(round(radius))
             r2 = int(round(radius2))
-            if r1==0: r1=1
-            if r2==0: r2=1
+            if r1 == 0:
+                r1 = 1
+            if r2 == 0:
+                r2 = 1
             d1 = 2 * r1
             d2 = 2 * r2
 
             # take 1 radial grad for the 4 corners
             corners = self.makegradientimage(RADIALCOSINE, d1, d2)
-            # corners = invertimage( corners )
 
             # top left
             b = corners.copy()
@@ -405,8 +379,8 @@ class Canvas:
             # assemble
             result.paste( baserect, box=( r1,     r2) )
 
-            result.paste( hordown,    box=( r1,     0) )
-            result.paste( horup,  box=( r1,     brh+r2) )
+            result.paste( hordown,  box=( r1,     0) )
+            result.paste( horup,    box=( r1,     brh+r2) )
 
             result.paste( verleft,  box=( 0,     r2) )
             result.paste( vertright,box=( brw+r1, r2) )
@@ -417,13 +391,10 @@ class Canvas:
             result.paste( br,       box=( brw+r1, brh+r2) )
             img = result.convert("RGBA")
             del corners, tl, tr, bl, br, b
-            del horup
-            del hordown
+            del horup, hordown
             del baserect
-            del verleft
-            del vertright
+            del verleft, vertright
             return self.layer(img, 0, 0, name=name)
-
 
     def merge(self, layers):
         
@@ -436,9 +407,9 @@ class Canvas:
         """
         
         layers.sort()
-        if layers[0] == 0: del layers[0]
+        if layers[0] == 0:
+            del layers[0]
         self.flatten(layers)
-
 
     def flatten(self, layers=[]):
 
@@ -448,28 +419,28 @@ class Canvas:
         using the blend mode and opacity defined for each layer.
         Once flattened, the stack of layers is emptied except
         for the transparent background (bottom layer).
+
         """
         
-        #When the layers argument is omitted,
-        #flattens all the layers on the canvas.
-        #When given, merges the indexed layers.
+        # When the layers argument is omitted,
+        # flattens all the layers on the canvas.
+        # When given, merges the indexed layers.
         
-        #Layers that fall outside of the canvas are cropped:
-        #this should be fixed by merging to a transparent background
-        #large enough to hold all the given layers' data
-        #(=time consuming).
+        # Layers that fall outside of the canvas are cropped:
+        # this should be fixed by merging to a transparent background
+        # large enough to hold all the given layers' data
+        # (=time consuming).
         
-        if layers == []: 
+        if layers == []:
             layers = range(1, len(self.layers))
         background = self.layers._get_bg()
         background.name = "Background"
         
         for i in layers:
-
             layer = self.layers[i]
         
-            #Determine which portion of the canvas
-            #needs to be updated with the overlaying layer.
+            # Determine which portion of the canvas
+            # needs to be updated with the overlaying layer.
         
             x = max(0, layer.x)
             y = max(0, layer.y)
@@ -487,7 +458,8 @@ class Canvas:
             h -= layer.y
 
             blend = layer.img.crop((x, y, w, h))
-        
+            lblend = blend.convert("L")
+            bwblend = lblend.convert("1")
             # Buffer layer blend modes:
             # the base below is a flattened version
             # of all the layers below this one,
@@ -495,27 +467,41 @@ class Canvas:
         
             if layer.blend == NORMAL:
                 buffer = blend
-            if layer.blend == MULTIPLY:
+            elif layer.blend == MULTIPLY:
                 buffer = ImageChops.multiply(base, blend)
-            if layer.blend == SCREEN:
+            elif layer.blend == SCREEN:
                 buffer = ImageChops.screen(base, blend)
-            if layer.blend == OVERLAY:
+            elif layer.blend == OVERLAY:
                 buffer = Blend().overlay(base, blend)
-            if layer.blend == HUE:
+            elif layer.blend == HUE:
                 buffer = Blend().hue(base, blend)
-            if layer.blend == COLOR:
+            elif layer.blend == COLOR:
                 buffer = Blend().color(base, blend)
-            
-            if layer.blend == ADD:
+            elif layer.blend == ADD:
                 buffer = ImageChops.add(base, blend)
-            if layer.blend == SUBTRACT:
-                buffer = ImageChops.subtract(base, blend)
-            if layer.blend == ADD_MODULO:
+
+            elif layer.blend == SUBTRACT:
+                img1 = base.convert("RGB")
+                img2 = blend.convert("RGB")
+                buffer = ImageChops.subtract_modulo(img1, img2)
+                buffer = buffer.convert("RGBA")
+                del img1, img2
+                # buffer = ImageChops.subtract(base, blend)
+                # buffer = Blend().subtract(base, blend)
+            elif layer.blend == ADD_MODULO:
                 buffer = ImageChops.add_modulo(base, blend)
-            if layer.blend == SUBTRACT_MODULO:
-                buffer = ImageChops.subtract_modulo(base, blend)
-            if layer.blend == DIFFERENCE:
-                buffer = ImageChops.difference(base, blend)
+            elif layer.blend == SUBTRACT_MODULO:
+                buffer = Blend().subtract_modulo(base, blend)
+
+
+
+            elif layer.blend == DIFFERENCE:
+                # buffer = ImageChops.difference(base, blend)
+                img1 = base.convert("RGB")
+                img2 = blend.convert("RGB")
+                buffer = ImageChops.difference(img1, img2)
+                buffer = buffer.convert("RGBA")
+                del img1, img2
             
             # Buffer a merge between the base and blend
             # according to the blend's alpha channel:
@@ -523,7 +509,7 @@ class Canvas:
         
             # Merging the first layer to the transparent canvas
             # works slightly different than the other layers.
-        
+            # pdb.set_trace()
             alpha = buffer.split()[3]
             if i == 1:
                 buffer = Image.composite(base, buffer, base.split()[3])
@@ -563,8 +549,8 @@ class Canvas:
             self.layers.append(background)
         else:
             self.layers.insert(layers[-1], background)
-        
-    def export(self, filename):
+
+    def export(self, filename, format='PNG'):
 
         """Exports the flattened canvas.
 
@@ -574,28 +560,105 @@ class Canvas:
 
         """
 
-        self.flatten()
-        self.layers[1].img.save(filename, format="PNG", optimize=False)
-        return filename
+        if not name:
+            name = "photobot_" + datestring()
+        folder = os.path.abspath( os.curdir )
+        folder = os.path.join( folder, "exports" )
+        if not os.path.exists( folder ):
+            try:
+                os.makedirs( folder )
+            except:
+                pass
+        try:
+            path = os.path.join( folder, name + ext )
+            path = os.path.abspath( path )
+        except:
+            pass
+        # folder, fname = os.path.split( filename )
+
         
-    def draw(self, x, y):
+        if kwdbg:
+            basename = "photobot_" + datestring() + "_layer_%i_%s" + ext
+
+
+            background = self.layers._get_bg()
+            background.name = "Background"
+            layers = range(1, len(self.layers) )
+            for i in layers:
+                layer = self.layers[i]
+
+                # Determine which portion of the canvas
+                # needs to be updated with the overlaying layer.
+
+                x = max(0, layer.x)
+                y = max(0, layer.y)
+                w = min(background.w, layer.x+layer.w)
+                h = min(background.h, layer.y+layer.h)
+
+                base = background.img.crop((0, 0, background.w, background.h))
+
+                # Determine which piece of the layer
+                # falls within the canvas.
+
+                x = max(0, -layer.x)
+                y = max(0, -layer.y)
+                w -= layer.x
+                h -= layer.y
+
+                blend = layer.img.crop((x, y, w, h))
+
+                alpha = blend.split()[3]
+                buffer = Image.composite(blend, base, alpha)
+
+                n = basename % (i, layer.name)
+                path = os.path.join( folder, n )
+                buffer.save( path, format=format, optimize=False)
+                print "SAVE DBG:", path.encode("utf-8")
+
+
+        self.flatten()
+        self.layers[1].img.save(path, format=format, optimize=False)
+        if 0 and kwdbg:
+            print "SAVE:", path.encode("utf-8")
+        return path
+
+    def draw(self, x=0, y=0, name="", ext=".png", format='PNG'):
         
         """Places the flattened canvas in NodeBox.
         
         Exports to a temporary PNG file.
-        Draws the PNG in NodeBox using the image() command.
-        Removes the temporary file.
+        # Draws the PNG in NodeBox using the image() command.
+        # Removes the temporary file.
         
         """
-        
+        #if not name:
+        #    name = "photobot_" + datestring()
+        #if not ext:
+        #    ext = ".png"
+
+        #folder = os.path.abspath( os.curdir )
+        #folder = os.path.join( folder, "exports" )
+        #if not os.path.exists( folder ):
+        #    try:
+        #        os.makedirs( folder )
+        #    except:
+        #        pass
         try:
-            filename = "photobot_" + datestring() + ".png"
-            filename = os.path.abspath(filename)
-            self.export(filename)
-            _ctx.image(filename, x, y)
-            # os.unlink(filename)
+            #filename = os.path.join( folder, name + ext )
+            #filename = os.path.abspath(filename)
+            # path = self.export(filename)
+            path = self.export(name, ext, format)
+            if nodeb:
+                _ctx.image(path, x, y)
+            if 0:
+                os.unlink( path )
+            return path
         except Exception, err:
             print err
+            print
+            exc_type, exc_value, exc_tb = sys.exc_info()
+            traceback.print_exception(exc_type, exc_value, exc_tb)
+            print
 
     def preferences(interpolation=INTERPOLATION):
 
@@ -605,17 +668,41 @@ class Canvas:
         can be set to NEAREST, BICUBIC, BILINEAR or LANCZOS.
 
         """
-
         self.interpolation = interpolation
-        
-    def topLayer( self ):
-        # return top layer index
-        return len(self.layers) -1
 
+    #
+    # Some stack operations
+    # 
+    # some inspiration from a forth wiki page
+    # dup   ( a -- a a )
+    # drop  ( a -- )
+    # swap  ( a b -- b a )
+    # over  ( a b -- a b a )
+    # rot   ( a b c -- b c a )
+    # nip   ( a b -- b ) swap drop ;
+    # tuck  ( a b -- b a b ) swap over ;
+
+    @property
+    def top(self):
+        """Interface to top layer.
+        
+        """
+        return self.layers[-1]
+
+    @property
+    def dup(self):
+        """Interface to top layer.
+        
+        """
+        layer = self.top.copy()
+        layer.canvas = self
+        self.layers.append( layer )
+        return self.top
 
 def canvas(w, h):
     return Canvas(w, h)
-    
+
+
 class Layers(list):
     
     """Extends the canvas.layers[] list so it indexes layers names.
@@ -647,6 +734,7 @@ class Layers(list):
         
         list.__setitem__(self, 0, layer)
 
+
 class Layer:
     
     """Implements a layer on the canvas.
@@ -670,7 +758,6 @@ class Layer:
         self.blend = NORMAL
         self.pixels = Pixels(self.img, self)
         
-
     def prnt(self):
         # for debugging
         print "-" * 20
@@ -691,12 +778,13 @@ class Layer:
         """
         
         for i in range(len(self.canvas.layers)):
-            if self.canvas.layers[i] == self: break
-        if self.canvas.layers[i] == self: 
+            if self.canvas.layers[i] == self:
+                break
+        if self.canvas.layers[i] == self:
             return i
         else:
             return None
-            
+
     def copy(self):
         
         """Returns a copy of the layer.
@@ -723,7 +811,8 @@ class Layer:
         """
         
         i = self.index()
-        if i != None: del self.canvas.layers[i]
+        if i != None:
+            del self.canvas.layers[i]
         
     def up(self):
         
@@ -846,47 +935,36 @@ class Layer:
         clone.blend = self.blend
                     
     def opacity(self, a=100):
-
         self.alpha = a * 0.01
 
     def multiply(self):
-
         self.blend = MULTIPLY
 
     def add(self):
-
         self.blend = ADD
 
     def subtract(self):
-
         self.blend = SUBTRACT
 
     def add_modulo(self):
-
         self.blend = ADD_MODULO
 
     def subtract_modulo(self):
-
         self.blend = SUBTRACT_MODULO
 
     def difference(self):
-    
         self.blend = DIFFERENCE
 
     def screen(self):
-
         self.blend = SCREEN
 
     def overlay(self):
-
         self.blend = OVERLAY
         
     def hue(self):
-
         self.blend = HUE
         
     def color(self):
-
         self.blend = COLOR
         
     def brightness(self, value=1.0):
@@ -932,7 +1010,7 @@ class Layer:
         self.img = self.img.convert("RGBA")
         self.img.putalpha(alpha)
 
-    def colorize(self, black, white):
+    def colorize(self, black, white, mid=None):
 
         """Use the ImageOps.colorize() on desaturated layer.
         
@@ -940,7 +1018,7 @@ class Layer:
         # 
         alpha = self.img.split()[3]
         img = self.img.convert("L")
-        img = ImageOps.colorize(img, black, white)
+        img = ImageOps.colorize(img, black, white, mid)
         img = img.convert("RGBA")
         img.putalpha(alpha)
         self.img = img
@@ -962,8 +1040,8 @@ class Layer:
 
         """
 
-        self.x = int(x)
-        self.y = int(y)
+        self.x = int( round( x ))
+        self.y = int( round( y ))
 
     def scale(self, w=1.0, h=1.0):
 
@@ -974,11 +1052,11 @@ class Layer:
         otherwise scales to the given size in pixels.
 
         """
-
         w0, h0 = self.img.size
-        if type(w) == FloatType: w = int(w*w0)
-        if type(h) == FloatType: h = int(h*h0)
-
+        if type(w) == FloatType:
+            w = int(w*w0)
+        if type(h) == FloatType:
+            h = int(h*h0)
         self.img = self.img.resize((w,h), resample=LANCZOS)
         self.w = w
         self.h = h
@@ -996,20 +1074,22 @@ class Layer:
 
         """
 
-        #When a layer rotates, its corners will fall outside
-        #of its defined width and height.
-        #Thus, its bounding box needs to be expanded.
+        # When a layer rotates, its corners will fall
+        # outside of its defined width and height.
+        # Thus, its bounding box needs to be expanded.
 
-        #Calculate the diagonal width, and angle from the layer center.
-        #This way we can use the layers's corners 
-        #to calculate the bounding box.
+        # Calculate the diagonal width, and angle from
+        # the layer center.  This way we can use the
+        # layers's corners to calculate the bounding box.
 
         w0, h0 = self.img.size
         d = sqrt(pow(w0,2) + pow(h0,2))
         d_angle = degrees(asin((w0*0.5) / (d*0.5)))
 
         angle = angle % 360
-        if angle > 90 and angle <= 270: d_angle += 180
+        if (    angle >   90
+            and angle <= 270):
+            d_angle += 180
 
         w = sin(radians(d_angle + angle)) * d
         w = max(w, sin(radians(d_angle - angle)) * d)
@@ -1023,10 +1103,10 @@ class Layer:
         dy = int((h-h0) / 2)
         d = int(d)
 
-        #The rotation box's background color
-        #is the mean pixel value of the rotating image.
-        #This is the best option to avoid borders around
-        #the rotated image.
+        # The rotation box's background color
+        # is the mean pixel value of the rotating image.
+        # This is the best option to avoid borders around
+        # the rotated image.
 
         bg = ImageStat.Stat(self.img).mean
         bg = (int(bg[0]), int(bg[1]), int(bg[2]), 0)
@@ -1037,9 +1117,9 @@ class Layer:
         box = box.crop(((d-w)/2+2, (d-h)/2, d-(d-w)/2, d-(d-h)/2))
         self.img = box
 
-        #Since rotate changes the bounding box size,
-        #update the layers' width, height, and position,
-        #so it rotates from the center.
+        # Since rotate changes the bounding box size,
+        # update the layers' width, height, and position,
+        # so it rotates from the center.
 
         self.x += (self.w-w)/2
         self.y += (self.h-h)/2
@@ -1059,8 +1139,8 @@ class Layer:
 
         w, h = self.img.size
         quad = (-x1,-y1, -x4,h-y4, w-x3,w-y3, w-x2,-y2)
-        # quad = (x1,y1, x2,y2, x3,y3, x4,y4)
-        self.img = self.img.transform(self.img.size, Image.QUAD, quad) #, LANCZOS)
+        # quad = (x1,y1, x2,y2, x3,y3, x4,y4) #, LANCZOS)
+        self.img = self.img.transform(self.img.size, Image.QUAD, quad)
 
     def flip(self, axis=HORIZONTAL):
 
@@ -1069,17 +1149,14 @@ class Layer:
         """
 
         if axis & HORIZONTAL:
-            #print "FLIP HOR", axis
             self.img = self.img.transpose(Image.FLIP_LEFT_RIGHT)
         if axis & VERTICAL:
-            #print "FLIP VERT", axis
             self.img = self.img.transpose(Image.FLIP_TOP_BOTTOM)
 
     def crop( self, bounds):
 
-        """
-        
-        Crop a pillow image at bounds(left, top, right, bottom)
+        """Crop a pillow image at bounds(left, top, right, bottom)
+
         """
         w0, h0 = self.img.size
         x, y = self.x, self.y
@@ -1091,7 +1168,6 @@ class Layer:
         self.img = self.img.crop( (left, top, right, bottom) )
         self.w, self.h = self.img.size
 
-
     def blur(self):
         
         """Blurs the layer.
@@ -1099,6 +1175,86 @@ class Layer:
         """
 
         self.img = self.img.filter(ImageFilter.BLUR)
+
+    def boxblur(self, radius=2):
+        
+        """Blurs the layer.
+        
+        """
+
+        self.img = self.img.filter( ImageFilter.BoxBlur( radius ) )
+
+    # new
+    def contour(self):
+        
+        """Contours the layer.
+        
+        """
+
+        self.img = self.img.filter(ImageFilter.CONTOUR)
+
+    # new
+    def detail(self):
+        
+        """Details the layer.
+        
+        """
+
+        self.img = self.img.filter(ImageFilter.DETAIL)
+
+    # new
+    def edge_enhance(self):
+        
+        """Edge enhances the layer.
+        
+        """
+
+        self.img = self.img.filter(ImageFilter.EDGE_ENHANCE)
+
+    # new
+    def edge_enhance_more(self):
+        
+        """Edge enhances more the layer.
+        
+        """
+
+        self.img = self.img.filter(ImageFilter.EDGE_ENHANCE_MORE)
+
+    # new
+    def emboss(self):
+        
+        """Embosses the layer.
+        
+        """
+
+        self.img = self.img.filter(ImageFilter.EMBOSS)
+
+    # new
+    def find_edges(self):
+        
+        """Find edges in the layer.
+        
+        """
+
+        self.img = self.img.filter(ImageFilter.FIND_EDGES)
+
+    # new
+    def smooth(self):
+        
+        """Smoothes the layer.
+        
+        """
+
+        self.img = self.img.filter(ImageFilter.SMOOTH)
+
+    # new
+    def smooth_more(self):
+        
+        """Smoothes the layer more.
+        
+        """
+
+        self.img = self.img.filter(ImageFilter.SMOOTH_MORE)
 
     def sharpen(self, value=1.0):
 
@@ -1113,6 +1269,38 @@ class Layer:
         s = ImageEnhance.Sharpness(self.img) 
         self.img = s.enhance(value)
         
+    def convolute(self, kernel, scale=None, offset=0):
+        
+        """A (3,3) or (5,5) convolution kernel.
+        
+        The kernel argument is a list with either 9 or 25 elements,
+        the weight for each surrounding pixels to convolute.
+        
+        """
+        
+        if len(kernel)   ==  9: size = (3,3)
+        elif len(kernel) == 25: size = (5,5)
+        else:                   return
+        
+        if scale == None:
+            scale = 0
+            for x in kernel:
+                scale += x
+            if scale == 0:
+                scale = 1
+        
+        f = ImageFilter.Kernel(size, kernel, scale=scale, offset=offset)
+        
+        alpha = self.img.split()[3]
+        img = self.img.convert("RGB")
+        # f = ImageFilter.BuiltinFilter()
+        # f.filterargs = size, scale, offset, kernel
+        
+        img = img.filter(f)
+        img = img.convert("RGBA")
+        img.putalpha( alpha )
+        self.img = img
+
     def statistics(self):
         
         return ImageStat.Stat(self.img, self.img.split()[3])
@@ -1148,6 +1336,20 @@ class Blend:
     
     """
     
+    def subtract(self, img1, img2, scale=1.0, offset=0):
+        base = img1.convert("RGB")
+        blend = img2.convert("RGB")
+        result = ImageChops.subtract(base, blend, scale=scale, offset=offset)
+        result = result.convert("RGBA")
+        return result
+
+    def subtract_modulo(self, img1, img2):
+        base = img1.convert("RGB")
+        blend = img2.convert("RGB")
+        result = ImageChops.subtract_modulo(base, blend)
+        result = result.convert("RGBA")
+        return result
+
     def overlay(self, img1, img2):
 
         """Applies the overlay blend mode.
@@ -1170,16 +1372,16 @@ class Blend:
                 a = p1[i][j] / 255.0
                 b = p2[i][j] / 255.0
             
-                #When overlaying the alpha channels,
-                #take the alpha of the most transparent layer.
+                # When overlaying the alpha channels,
+                # take the alpha of the most transparent layer.
             
                 if j == 3:
-                    #d = (a+b)*0.5
-                    #d = a
+                    # d = (a+b)*0.5
+                    # d = a
                     d = min(a,b)
-                elif a > 0.5: 
+                elif a > 0.5:
                     d = 2*(a+b-a*b)-1
-                else: 
+                else:
                     d = 2*a*b            
                 p3 += (int(d*255),)
         
@@ -1323,7 +1525,7 @@ class Pixels:
                     
     def update(self):
         
-        if self.data != None: 
+        if self.data != None:
             self.img.putdata(self.data)
             self.data = None
         
@@ -1338,36 +1540,120 @@ class Pixels:
         
         if len(kernel)   ==  9: size = (3,3)
         elif len(kernel) == 25: size = (5,5)
-        else: return
+        else:                   return
         
         if scale == None:
             scale = 0
-            for x in kernel: scale += x
-            if scale == 0: scale = 1
+            for x in kernel:
+                scale += x
+            if scale == 0:
+                scale = 1
      
-        f = ImageFilter.BuiltinFilter()
-        f.filterargs = size, scale, offset, kernel
+        # f = ImageFilter.BuiltinFilter()
+        # f.filterargs = size, scale, offset, kernel
+        f = ImageFilter.Kernel(size, kernel, scale=scale, offset=offset)
         self.layer.img = self.layer.img.filter(f)
 
+#
+# nodebox & standalone pillow tools
+#
+def makeunicode(s, srcencoding="utf-8", normalizer="NFC"):
+    typ = type(s)
+    
+    # convert to str first; for number types etc.
+    if typ not in (str, unicode):
+        s = str(s)
+    if typ not in (unicode, ):
+        try:
+            s = unicode(s, srcencoding)
+        except TypeError, err:
+            print "makeunicode():", err
+            print type(s), repr(s)
+    if typ in (unicode,):
+        s = unicodedata.normalize(normalizer, s)
+    return s
 
-def aspectRatio(size, maxsize):
-    """scale a (w,h) tuple to maxsize (either w or h)."""
 
-    maxcurrent = max(size)
-    if maxcurrent == maxsize:
-        return size
-    elif maxsize == 0:
-        return size
+def hashFromString( s ):
+    h = hashlib.sha1()
+    h.update( s )
+    return h.hexdigest()
+
+
+def datestring(dt = None, dateonly=False, nospaces=True, nocolons=True):
+    """Make an ISO datestring. The defaults are good for using the result of
+    'datestring()' in a filename.
+    """
+    if not dt:
+        now = str(datetime.datetime.now())
     else:
-        ratio = maxcurrent / float(maxsize)
-        neww = int(round(size[0] / ratio))
-        newh = int(round(size[1] / ratio))
-        return neww, newh
+        now = str(dt)
+    if not dateonly:
+        now = now[:19]
+    else:
+        now = now[:10]
+    if nospaces:
+        now = now.replace(" ", "_")
+    if nocolons:
+        now = now.replace(":", "")
+    return now
+
+
+def invertimage( img ):
+    alpha = img.split()[3]
+    img = img.convert("RGB")
+    img = ImageOps.invert(img)
+    img = img.convert("RGBA")
+    img.putalpha(alpha)
+    return img
+
+def cropimage( img, bounds):
+
+    """Crop a pillow image at bounds(left, top, right, bottom)
+    
+    """
+    return img.crop( bounds )
+
+def aspectRatio(size, maxsize, height=False, width=False, assize=False):
+
+    """Resize size=(w,h) to maxsize.
+    use height == maxsize if height==True
+    use width == maxsize if width==True
+    use max(width,height) == maxsize if width==height==False
+    
+    """
+    w, h = size
+    scale = 1.0
+    
+    if width !=False:
+        currmax = w
+    elif height !=False:
+        currmax = h
+    else:
+        currmax = max( (w,h) )
+    if width and height:
+        currmax = min( (w,h) )
+    if currmax == maxsize:
+        # return 1.0
+        pass
+    elif maxsize == 0:
+        #return 1.0
+        pass
+    else:
+        scale = float(maxsize) / currmax
+        w = int( round( w*scale, 0) )
+        h = int( round( h*scale, 0) )
+        size = (w,h)
+    if assize:
+        return size
+    return scale
 
 
 def normalizeOrientationImage( img ):
-    """Rotate an image according to exif info."""
 
+    """Rotate an image according to exif info.
+    
+    """
     rotation = 0
     try:
         info = img._getexif()
@@ -1386,9 +1672,46 @@ def normalizeOrientationImage( img ):
     return img
 
 
-def resizeImage( filepath, maxsize, orientation=True):
-    """Get a downsampled image for use in layers."""
+def insetRect( rectangle, horInset, vertInset):
+    x, y, w, h = rectangle
+    dh = horInset / 2.0
+    dv = vertInset / 2.0
+    return x+dh, y+dv, w-horInset, h-vertInset
 
+
+def cropImageToRatioHorizontal( layer, ratio ):
+    w, h = layer.bounds()
+    neww = int( round( h*ratio) )
+    d = int( neww / 2.0 )
+    x,y,w,h = insetRect( (0,0,w,h), d, 0 )
+    layer.img = layer.img.crop(box=(x,y,x+w,y+h))
+    return layer
+
+
+def scaleLayerToHeight( layer, newheight ):
+    # get current image bounds
+    w, h = layer.bounds()
+    # calculate scale & apply
+    s = aspectRatio( (w,h), newheight, height=True)
+    layer.scale(s, s)
+    return layer
+
+
+def placeImage(canv, path, x, y, maxsize, name, width=True, height=False):
+    """Create an image layer.
+    
+    """
+    img1 = resizeImage(path, maxsize, width=width, height=height)
+    top = canv.layer(img1, name=name)
+    canv.top.translate(x, y)
+    w, h, = canv.top.bounds()
+    return top, w, h
+
+
+def resizeImage( filepath, maxsize, orientation=True, width=True, height=True):
+
+    """Get a downsampled image for use in layers.
+    """
     try:
         img = Image.open(filepath)
     except Exception, err:
@@ -1397,12 +1720,230 @@ def resizeImage( filepath, maxsize, orientation=True):
         return ""
     # downsample the image
     if maxsize:
-        newx, newy = aspectRatio( (img.size), maxsize)
-        img = img.resize( (newx, newy), resample=Image.LANCZOS)
-
+        w,h = aspectRatio( (img.size), maxsize,
+                            height=height, width=height, assize=True)
+        img = img.resize( (w,h), resample=Image.LANCZOS)
     # respect exif orientation
     if orientation:
         img = normalizeOrientationImage( img )
     return img.convert("RGBA")
 
+def label( canvas, string, x, y, fontsize=18, fontpath="" ):
+    """Needs to be written...
+
+    """
+    
+    # search for a usable font
+    systemarials = [
+        "C:\Windows\Fonts\arial.ttf",
+        "/Library/Fonts/Arial.ttf"]
+    
+    systemarials.insert(0, fontpath)
+    font = False
+    for f in systemarials:
+        if os.path.exists( f ):
+            font = f
+            break
+    
+    if not font:
+        return False
+
+    w,h = canvas.w, canvas.h
+    mask = Image.new("L", (w, h), 0)
+    blatt = Image.new("RGBA", (w, h), (0,0,0,0))
+
+    drawtext = ImageDraw.Draw( blatt )
+    drawmask = ImageDraw.Draw( mask )
+
+    # use a bitmap font
+    font =  PIL.ImageFont.truetype(font=font, size=fontsize, index=0, encoding='')
+    drawtext.text((x, y), string, font=font, fill=(192,192,192,255))
+    drawmask.text((x, y), string, font=font, fill=192)
+    drawtext.text((x-1, y-1), string, font=font, fill=(0,0,0,255))
+    drawmask.text((x-1, y-1), string, font=font, fill=255)
+    
+    canvas.layer( blatt )
+    canvas.layer( mask )
+    canvas.top.mask()
+
+
+def filelist( folderpathorlist, pathonly=True ):
+    """Walk a folder or a list of folders and return
+    paths or ((filepath, size, lastmodified, mode) tuples..
+    """
+
+    folders = folderpathorlist
+    if type(folderpathorlist) in (str, unicode):
+        folders = [folderpathorlist]
+    result = []
+    for folder in folders:
+        for root, dirs, files in os.walk( folder ):
+            root = makeunicode( root )
+
+            for thefile in files:
+                thefile = makeunicode( thefile )
+                basename, ext = os.path.splitext(thefile)
+
+                # exclude dotfiles
+                if thefile.startswith('.'):
+                    continue
+
+                # exclude the specials
+                for item in (u'\r', u'\n', u'\t'):
+                    if item in thefile:
+                        continue
+
+                filepath = os.path.join( root, thefile )
+
+                record = filepath
+                if not pathonly:
+                    info = os.stat( filepath )
+                    lastmodf = datetime.datetime.fromtimestamp( info.st_mtime )
+                    islink = os.path.islink( filepath )
+                    record = (filepath, info.st_size, lastmodf, oct(info.st_mode), islink )
+                yield record
+
+
+def imagefiles( folderpathorlist, pathonly=True ):
+    """Get a list of images from a list of folders.
+
+    folderpathorlist: is either a string with a path or a list of paths
+    
+    pathonly: if True return list of fullpath
+              else: return a list of filetuples
+    filetuple = 
+        (path, filesize, lastmodf, mode, islink, width, height)
+    
+    """
+    filetuples = filelist( folderpathorlist, pathonly=pathonly )
+    extensions = tuple(".eps .tif .tiff .gif .jpg .jpeg .png".split())
+    for filetuple in filetuples:
+        path = filetuple
+        if not pathonly:
+            path = filetuple[0]
+
+        _, ext = os.path.splitext( path )
+        if ext.lower() not in extensions:
+            continue
+        if pathonly:
+            yield path
+        else:
+            path, filesize, lastmodf, mode, islink = filetuple
+            s = (-1,-1)
+            try:
+                img = Image.open(path)
+                s = img.size
+            except:
+                pass #continue
+            filetuple = (path, filesize, lastmodf, mode, islink, s[0], s[1])
+            del img
+            yield filetuple
+
+
+#
+# additional tools
+#
+
+def imagewells():
+    """Find a file named "imagewell.txt" and interpret it as image folder paths.
+    If no file is found create one with the desktop image folders for
+    mac & win10.
+    
+    """
+    folders = ["/Library/Desktop Pictures", "C:\Windows\Web" ]
+    images = os.path.abspath( "images" )
+    if os.path.exists( images ):
+        folders.append( images )
+    fullpath = os.path.abspath( "imagewell.txt" )
+    
+    if not os.path.exists( fullpath ):
+        try:
+            f = open(fullpath, 'w')
+            f.write( "\n".join( folders ) )
+            f.close()
+        except:
+            pass
+        return folders
+    try:
+        with open(fullpath, 'Ur') as f:
+            lines = f.readlines()
+        if not lines:
+            return folders
+        folders = []
+        for line in lines:
+            line = line.strip("\n\r")
+            folders.append( makeunicode( line ) )
+    except:
+        pass
+    folders = [x for x in folders if os.path.exists(x)]
+    return folders
+
+def loadImageWell( bgsize=(1024,768), minsize=(256,256),
+                   pathonly=True, additionals=None, ignorelibs=False):
+
+    # get all images from user image wells
+    folders = []
+    if not ignorelibs:
+        folders = imagewells()
+    
+    if additionals:
+        folders.extend( additionals )
+    filetuples = imagefiles( folders, pathonly=False )
+
+    tiles = []
+    backgrounds = []
+    proportions = {}
+    fractions = {}
+
+    result = {
+        'allimages': [],
+        'tiles': [],
+        'backgrounds': [],
+        'landscape': [],
+        'portrait': [],
+        'fractions': {}
+    }
+
+    minw, minh = minsize
+    bgw, bgh = bgsize
+    for t in filetuples:
+        path, filesize, lastmodified, mode, islink, w0, h0 = t
+
+        # filter minimal size
+        if (w0 < minw) and (h0 < minh):
+            continue
+        
+        # filter max filesize ~ 200mb
+        if filesize > 200000000:
+            continue
+        
+        proportion = "landscape"
+        if h0 > w0:
+            proportion = "portrait"
+
+        frac = Fraction(w0, h0)
+
+        if pathonly:
+            record = path
+        else:
+            record = (path, filesize, lastmodified, mode, islink,
+                      w0, h0, proportion, frac)
+
+        # candidate has at least canvas size and can be used as background
+        result['allimages'].append( record )
+        if w0 >= bgw and h0 >= bgh:
+            result['backgrounds'].append( record )
+        else:
+            result['tiles'].append( record )
+        
+        if frac not in result['fractions']:
+            result['fractions'][frac] = []
+
+        result['fractions'][frac].append( record )
+        if proportion == "landscape":
+            result['landscape'].append( record )
+        else:
+            result['portrait'].append( record )
+    # pdb.set_trace()
+    return result
 
