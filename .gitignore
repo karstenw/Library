@@ -24,10 +24,16 @@ pattern/web/cache
 pattern/examples/*/*.slp
 pattern/examples/*/*.csv
 pattern/examples/*/*.svm
-photobot/images/*/
+photobot/images/*
 photobot/examples/photobot_20??-??-??_??????.png
-
+photobot/examples/exports/
 pandas
 pattern
 +latex
 PVec*
+coreimage/Missing Filters.tab
+coreimage/coreimage-example5b.py
+coreimage/coreimage-example5a.py
+fatpath/fatpath-0.6.py
+photobot/__init__-LAST.py
+photobot/examples/exports
