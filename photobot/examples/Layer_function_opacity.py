@@ -54,8 +54,8 @@ img2path = tiles.pop()
 def placeImage(path, x, y, maxsize, name):
     img1 = pb.resizeImage(path, maxsize)
     top = c.layer(img1, name=name)
-    c.layers[top].translate(x, y)
-    w, h, = c.layers[ top ].bounds()
+    c.top.translate(x, y)
+    w, h, = c.top.bounds()
     return top, w, h
 
 
@@ -72,84 +72,77 @@ label("Image 1 Opacity: 100", x, y)
 # Image 2
 #
 c.layers[img1].duplicate()
-top = c.topLayer()
-c.layers[top].name = "Image 2"
-c.layers[top].opacity(80)
+c.top.name = "Image 2"
+c.top.opacity(80)
 
 x, y = w1+20, 10
-c.layers[top].translate( x, y)
+c.top.translate( x, y)
 label("Image 2 Opacity: 80", x, y)
 
 #
 # Image 3
 #
 c.layers[img1].duplicate()
-top = c.topLayer()
-c.layers[top].name = "Image 3"
-c.layers[top].opacity(60)
+c.top.name = "Image 3"
+c.top.opacity(60)
 
 x, y = 10, h1 + 20
-c.layers[top].translate( x, y)
+c.top.translate( x, y)
 label("Image 3 Opacity: 60", x, y)
 
 #
 # Image 4
 #
 c.layers[img1].duplicate()
-top = c.topLayer()
-c.layers[top].name = "Image 4"
-c.layers[top].opacity(40)
+c.top.name = "Image 4"
+c.top.opacity(40)
 
 x, y = w1+20, h1 + 20
-c.layers[top].translate( x, y)
+c.top.translate( x, y)
 label("Image 4 Opacity: 40", x, y)
 
 #
 # Image 5
 #
 c.layers[img1].duplicate()
-top = c.topLayer()
-c.layers[top].name = "Image 5"
-c.layers[top].opacity(20)
+c.top.name = "Image 5"
+c.top.opacity(20)
 
 x, y = 10, 2*h1 + 30
-c.layers[top].translate( x, y)
+c.top.translate( x, y)
 label("Image 3 Opacity: 20", x, y)
 
 #
 # Image 6
 #
 c.layers[img1].duplicate()
-top = c.topLayer()
-c.layers[top].name = "Image 6"
-c.layers[top].opacity(10)
+c.top.name = "Image 6"
+c.top.opacity(10)
 
 x, y = w1+20, 2*h1 + 30
-c.layers[top].translate( x, y)
+c.top.translate( x, y)
 label("Image 6 Opacity: 10", x, y)
 
 #
 # Image 7
 #
 c.layers[img1].duplicate()
-top = c.topLayer()
-c.layers[top].name = "Image 7"
-c.layers[top].opacity(150)
+c.top.name = "Image 7"
+c.top.opacity(150)
 
 x, y = 10, 3*h1 + 40
-c.layers[top].translate( x, y)
+c.top.translate( x, y)
 label("Image 7 Opacity: 150", x, y)
 
 #
 # Image 8
 #
 c.layers[img1].duplicate()
-top = c.topLayer()
-c.layers[top].name = "Image 8"
-c.layers[top].opacity(200)
+c.top.name = "Image 8"
+c.top.opacity(200)
 
 x, y = w1 + 20, 3*h1 + 40
-c.layers[top].translate( x, y)
+c.top.translate( x, y)
 label("Image 8 Opacity: 200", x, y)
 
 

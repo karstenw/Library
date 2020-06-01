@@ -90,8 +90,7 @@ x, y = 10 , h + 20
 top, w3, h3 = placeImage(img1path, 0, 0, 522, "Image 3")
 top, w4, h4 = placeImage(img2path, 0, 0, 522, "Image 4")
 c.layers[top].mask()
-top = c.topLayer()
-c.layers[top].translate(x, y)
+c.top.translate(x, y)
 
 label("Mask Image1 over Image2", x, y)
 
@@ -104,9 +103,8 @@ x, y = 10 , h + 20 + y
 
 top, w4, h4 = placeImage(img2path, 0, 0, 522, "Image 5")
 top, w3, h3 = placeImage(img1path, 0, 0, 522, "Image 6")
-c.layers[top].mask()
-top = c.topLayer()
-c.layers[top].translate(x, y)
+c.top.mask()
+c.top.translate(x, y)
 
 label("Mask Image2 over Image1", x, y)
 

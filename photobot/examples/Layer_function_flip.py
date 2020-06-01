@@ -57,7 +57,7 @@ img2path = tiles.pop()
 def placeImage(path, x, y, maxsize, name):
     img1 = pb.resizeImage(path, maxsize)
     top = c.layer(img1, name=name)
-    c.layers[top].translate(x, y)
+    c.top.translate(x, y)
     w, h, = c.layers[ top ].bounds()
     return top, w, h
 
@@ -71,12 +71,11 @@ label("Original Image", x, y)
 # flip horizontal
 #
 c.layers["image1"].duplicate()
-top = c.topLayer()
-c.layers[top].name = "flip1"
+c.top.name = "flip1"
 
 x, y = w1+20, 10
-c.layers[top].translate( x, y)
-c.layers[top].flip( pb.HORIZONTAL )
+c.top.translate( x, y)
+c.top.flip( pb.HORIZONTAL )
 label("Horizontal Flip", x, y)
 
 
@@ -85,11 +84,10 @@ label("Horizontal Flip", x, y)
 #
 
 c.layers["image1"].duplicate()
-top = c.topLayer()
-c.layers[top].name = "flip2"
+c.top.name = "flip2"
 x, y = 10 , h1 + 20
-c.layers[top].flip( pb.VERTICAL )
-c.layers[top].translate( x, y )
+c.top.flip( pb.VERTICAL )
+c.top.translate( x, y )
 label("Vertical Flip", x, y)
 
 
@@ -100,13 +98,12 @@ label("Vertical Flip", x, y)
 
 # duplicate does not return top
 c.layers["image1"].duplicate()
-top = c.topLayer()
-c.layers[top].name = "flip3"
+c.top.name = "flip3"
 
 x, y = w1 + 20, h1 + 20
-c.layers[top].flip( pb.HORIZONTAL | pb.VERTICAL)
-# c.layers[top].flip( pb.VERTICAL )
-c.layers[top].translate( x, y)
+c.top.flip( pb.HORIZONTAL | pb.VERTICAL)
+# c.top.flip( pb.VERTICAL )
+c.top.translate( x, y)
 label("Horizontal  and Vertical Flip", x, y)
 
 # draw the result
