@@ -29,7 +29,7 @@ sc = 1 / (w / destWidth)
 print "scale", sc
 # canvas.layers[1].scale(sc, sc)
 
-print "layersSize", canvas.topLayer()
+print "layersSize", canvas.top.img.size
 for i in range(repeats):
     # canvas.layers[1].duplicate()
     canvas.layer( nextImagePath )
