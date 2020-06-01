@@ -11,10 +11,6 @@ ALL = ['canvas', 'Layers', 'Layer', 'label', 'invertimage', 'cropimage',
     'resizeImage', 'hashFromString', 'makeunicode', 'datestring', 'filelist',
     'imagefiles', 'imagewells', 'loadImageWell' ]
 
-# This source is used in NodeBox and standalone
-standalone = False
-nodeb = True
-
 import sys
 import os
 import types
@@ -648,8 +644,11 @@ class Canvas:
             #filename = os.path.abspath(filename)
             # path = self.export(filename)
             path = self.export(name, ext, format)
-            if nodeb:
+            try:
+                #if nodeboxlib:
                 _ctx.image(path, x, y)
+            except NameError,err:
+                pass
             if 0:
                 os.unlink( path )
             return path
@@ -1800,7 +1799,11 @@ def filelist( folderpathorlist, pathonly=True ):
                     info = os.stat( filepath )
                     lastmodf = datetime.datetime.fromtimestamp( info.st_mtime )
                     islink = os.path.islink( filepath )
-                    record = (filepath, info.st_size, lastmodf, oct(info.st_mode), islink )
+                    record = (filepath,
+                              info.st_size,
+                              lastmodf,
+                              oct(info.st_mode),
+                              islink )
                 yield record
 
 
@@ -1830,19 +1833,18 @@ def imagefiles( folderpathorlist, pathonly=True ):
         else:
             path, filesize, lastmodf, mode, islink = filetuple
             s = (-1,-1)
-            img = None
             try:
                 img = Image.open(path)
                 s = img.size
+                del img
             except:
                 pass #continue
             filetuple = (path, filesize, lastmodf, mode, islink, s[0], s[1])
-            del img
             yield filetuple
 
 
 #
-# additional tools
+# image well
 #
 
 def imagewells():
