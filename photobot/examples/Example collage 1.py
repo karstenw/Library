@@ -16,8 +16,6 @@ if kwdbg:
 W, H = 1024,768
 
 
-
-
 # import photobot
 try:
     pb = ximport("photobot")
@@ -30,7 +28,7 @@ except ImportError:
     background( 0.333 )
 except NameError:
     import photobot as pb
-    WIDTH. HEIGHT = W, H
+    WIDTH, HEIGHT = W, H
 RATIO = WIDTH / HEIGHT
 
 # load the image library
@@ -67,20 +65,29 @@ c.fill( (85,85,85) )
 columns = 3
 rows = 2
 
-randomblur = 1
-paintoverlay = 1
+randomblur = 0
+randomflip = 0
+paintoverlay = 0
+gilb =0
 
 
 # 
-y_offset = HEIGHT / (rows)
+y_offset = HEIGHT / float(rows)
+y_offset = int(round(y_offset))
 
 
 # 
-if 1:
-    top = c.layer(backgrounds.pop())
+if 0:
+    bgimage = backgrounds.pop()
+    top = c.layer(bgimage)
     w, h = c.top.bounds()
-    w1,h1 = pb.aspectRatio( (w,h), HEIGHT, height=True, assize=True )
+    w1,h1 = pb.aspectRatio( (w,h), WIDTH, height=False, assize=True )
     c.top.scale(w1,h1)
+else:
+    bgimage = backgrounds.pop()
+    pb.placeImage(c, bgimage, 0, 0, WIDTH, "bgimage")
+print "Background:", bgimage.encode("utf-8")
+
 
 for j in range(rows):
     colw = 0
@@ -137,8 +144,9 @@ for j in range(rows):
 
         # mask destroys top layer
         c.top.mask()
-
+        
         c.top.translate(colw+i*w, j*y_offset)
+        c.top.opacity( 66 + rnd.random() * 29 )
 
         if randomblur:
             if rnd.random() > 0.5:

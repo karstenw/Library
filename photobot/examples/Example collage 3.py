@@ -54,16 +54,6 @@ rnd.shuffle(tiles)
 img1path = tiles.pop()
 img2path = tiles.pop()
 
-
-def placeImage(path, x, y, maxsize, name):
-    img1 = pb.resizeImage(path, maxsize)
-    top = c.layer(img1, name=name)
-    c.layers[top].translate(x, y)
-    w, h, = c.layers[ top ].bounds()
-    return top, w, h
-
-
-
 # CONFIGURATION
 
 columns = 3
@@ -94,7 +84,7 @@ paintoverlay = not kwdbg
 
 #  create, scale and place the image
 x, y = 0, 0
-top, w, h = placeImage(img1path, x, y, W, "Image 1")
+top, w, h = pb.placeImage(c, img1path, x, y, W, "Image 1")
 
 
 for position in positions:
@@ -104,23 +94,19 @@ for position in positions:
     # create image in canvas at 0,0
     p = tiles.pop()
     print p
-    top, w, h = placeImage(p, 0, 0, maxsize, "Image %i,%i" % (x,y))
+    top, w, h = pb.placeImage(c, p, 0, 0, maxsize, "Image %i,%i" % (x,y))
 
     # scale the layer to row height
-    layer = c.layers[ top ]
-    layer = scaleLayerToHeight( layer, rowheight )
-    c.layers[ top ] = layer
+    scaleLayerToHeight( c.top, rowheight )
 
     # uniform width
-    #layer = c.layers[ top ]
-    #layer = cropImageToRatioHorizontal( layer, RATIO )
-    #c.layers[ top ] = layer
+    #cropImageToRatioHorizontal( c.top, RATIO )
 
     # get the new image bounds - layer still valid
-    w, h = layer.bounds()
+    w, h = c.top.bounds()
 
     # add contrast - layer still valid
-    layer.contrast(1.1)
+    c.top.contrast(1.1)
 
 
     r = rnd.random()
@@ -129,21 +115,19 @@ for position in positions:
         #print "20% LINEAR"
         # create gradient layer
         # top is now gradient index
-        top = c.gradient(pb.LINEAR, w/2, h)
-        c.layers[ top ].flip( pb.HORIZONTAL )
+        c.gradient(pb.LINEAR, w/2, h)
+        c.top.flip( pb.HORIZONTAL )
 
-        # layer + 4 flip
-        # c.layers[ top ].flip( pb.HORIZONTAL )
-
-        # layer +4 translate half a pict right
-        c.layers[ top ].translate(w/2, 0)
+        # translate half a pict right
+        c.top.translate(w/2, 0)
 
         # create gradient layer
-        # top is now second gradient index
-        top = c.gradient(pb.LINEAR, w/2, h)
+        # top is now second gradient image
+        topidx = c.gradient(pb.LINEAR, w/2, h)
 
         # merge both gradients; destroys top layer
-        c.merge([ top-1 , top ])
+        c.merge([ topidx-1 , topidx ])
+
     elif 0.2 <= r < 0.4:
         #print "20% SINE"
         top = c.gradient(pb.SINE, w, h)
@@ -151,7 +135,7 @@ for position in positions:
     elif 0.4 <= r < 0.6:
         #print "20% RADIALCOSINE"
         top = c.gradient(pb.RADIALCOSINE, w, h)
-        # c.layers[top].invert()
+        # c.top.invert()
     elif 0.6 <= r < 0.8:
         #print "20% ROUNDRECT"
         # 25%
@@ -160,49 +144,44 @@ for position in positions:
         #print "20% QUAD"
         top = c.gradient(pb.QUAD, w, h, "", 0, 0)
             
-    # print "After mask"
-    top = c.topLayer()
-    c.layers[ top ].brightness(1.4)
-    # mask destroys top layer
-    c.layers[ top ].mask()
+    # enhance mask
+    c.top.brightness(1.4)
+    c.top.mask()
 
     # top layer is now image with mask
-    top = c.topLayer()
 
     destx = x - xgutter
     desty = y - ygutter
     # print "Image@", x, y
-    # c.layers[ top ].translate(destx, desty)
-    c.layers[ top ].translate(x, y)
+    # c.top.translate(destx, desty)
+    c.top.translate(x, y)
 
     if randomblur:
         if rnd.random() > 0.75:
             #print "FLIP"
-            c.layers[ top ].flip()
+            c.top.flip()
 
         if rnd.random() > 0.75:
             #print "BLUR"
-            c.layers[ top ].blur()
+            c.top.blur()
 
 if 0:
     # orange hue mask finish
     #print "Mr. Orange"
     top = c.fill((200,100,0))
-    c.layers[top].opacity(30)
-    c.layers[top].hue()
+    c.top.opacity(30)
+    c.top.hue()
 
 if paintoverlay:
     # paint overlay
     #print "VINCENT"
     top = c.layer( os.path.abspath("./paint.jpg") )
-    w, h = c.layers[top].bounds()
+    w, h = c.top.bounds()
     xs = WIDTH / float(w)
     ys = HEIGHT / float(h)
     s = max(xs,ys)
-    c.layers[top].scale(s, s)
-    c.layers[top].opacity(50)
-    c.layers[top].overlay()
-
-
+    c.top.scale(s, s)
+    c.top.opacity(50)
+    c.top.overlay()
 
 c.draw(0, 0)
