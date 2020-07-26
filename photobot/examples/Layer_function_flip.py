@@ -53,18 +53,9 @@ rnd.shuffle(tiles)
 img1path = tiles.pop()
 img2path = tiles.pop()
 
-
-def placeImage(path, x, y, maxsize, name):
-    img1 = pb.resizeImage(path, maxsize)
-    top = c.layer(img1, name=name)
-    c.top.translate(x, y)
-    w, h, = c.layers[ top ].bounds()
-    return top, w, h
-
-
 imsize = int((W-30)/2)
 x, y = 10, 10
-img1, w1, h1 = placeImage(img1path, x, y, imsize, "image1")
+img1, w1, h1 = pb.placeImage(c, img1path, x, y, imsize, "image1")
 label("Original Image", x, y)
 
 #

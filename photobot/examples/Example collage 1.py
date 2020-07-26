@@ -88,13 +88,16 @@ else:
     pb.placeImage(c, bgimage, 0, 0, WIDTH, "bgimage")
 print "Background:", bgimage.encode("utf-8")
 
+idx = 0
 
 for j in range(rows):
     colw = 0
     for i in range(columns):
-
+        idx += 1
         # new layer with a random image
-        top = c.layer( tiles.pop() )
+        path = tiles.pop()
+        print idx,path.encode("utf-8")
+        top = c.layer( path )
 
         # get current image bounds
         w, h = c.top.bounds()

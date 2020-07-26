@@ -54,22 +54,13 @@ img1path = tiles.pop()
 img2path = tiles.pop()
 
 
-def placeImage(path, x, y, maxsize, name):
-    img1 = pb.resizeImage(path, maxsize)
-    top = c.layer(img1, name=name)
-    c.layers[top].translate(x, y)
-    w, h, = c.layers[ top ].bounds()
-    return top, w, h
-
-
-
 #
 # Image 1
 #
 
 #  create, scale and place the image
 x, y = 10, 10
-top, w1, h1 = placeImage(img1path, x, y, 512, "Image 1")
+top, w1, h1 = pb.placeImage(c, img1path, x, y, 512, "Image 1", width=True)
 label("Image 1", x, y)
 
 
