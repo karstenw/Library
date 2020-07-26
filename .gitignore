@@ -37,3 +37,8 @@ coreimage/coreimage-example5a.py
 fatpath/fatpath-0.6.py
 photobot/__init__-LAST.py
 photobot/examples/exports
+imagewell.txt
+photobot/photobot-standalone
+photobot/photobot.leo
+photobot/examples/transform2/*
+*.webloc
