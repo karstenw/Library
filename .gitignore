@@ -42,3 +42,5 @@ photobot/photobot-standalone
 photobot/photobot.leo
 photobot/examples/transform2/*
 *.webloc
+coreimage/explorer.py
+coreimage/citools.py
