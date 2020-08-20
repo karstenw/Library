@@ -2,8 +2,7 @@
 *.pdf
 .DS_Store
 */+private
-
-isight/NdBx-00000.jpg
++latex
 
 cornu/*.svg
 database/book.*
@@ -25,11 +24,9 @@ pattern/examples/*/*.slp
 pattern/examples/*/*.csv
 pattern/examples/*/*.svm
 photobot/images/*
-photobot/examples/photobot_20??-??-??_??????.png
 photobot/examples/exports/
 pandas
 pattern
-+latex
 PVec*
 coreimage/Missing Filters.tab
 coreimage/coreimage-example5b.py
@@ -44,3 +41,5 @@ photobot/examples/transform2/*
 *.webloc
 coreimage/explorer.py
 coreimage/citools.py
+photobot/examples/landslide@coreimage
+photobot/examples/Example collage 1a-1920x1080.py
