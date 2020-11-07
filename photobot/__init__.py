@@ -8,8 +8,8 @@
 ALL = ['canvas', 'Layers', 'Layer', 'label', 'invertimage', 'cropimage',
     'aspectRatio', 'normalizeOrientationImage', 'insetRect',
     'cropImageToRatioHorizontal', 'scaleLayerToHeight', 'placeImage',
-    'resizeImage', 'hashFromString', 'makeunicode', 'datestring']
-
+    'resizeImage', 'hashFromString', 'makeunicode', 'datestring', 'filelist',
+    'imagefiles', 'imagewells', 'loadImageWell' ]
 
 import sys
 import os
@@ -25,6 +25,9 @@ cos = math.cos
 degrees = math.degrees
 radians = math.radians
 asin = math.asin
+
+import fractions
+Fraction = fractions.Fraction
 
 import datetime
 import time
@@ -42,10 +45,6 @@ import PIL.ImageOps as ImageOps
 import PIL.ImageDraw as ImageDraw
 import PIL.ImageStat as ImageStat
 import PIL.ImageFont as ImageFont
-
-
-from imagewells import *
-
 
 # disable large image warning
 old = Image.MAX_IMAGE_PIXELS
@@ -188,6 +187,16 @@ class Canvas:
         if type(h) == FloatType:
             h *= h0
         
+        # prevent some div by 0 errors
+        if w < 0:
+            w = -w
+        if h < 0:
+            h = -h
+        w = max(1,w)
+        h = max(1,h)
+
+        print( (style, w0,h0,w,h) )
+
         if style not in (RADIALCOSINE,):
             img = Image.new("L", (int(w),int(h)), 255)
         else:
@@ -233,8 +242,8 @@ class Canvas:
         if style == DIAMOND:
             r = max(w,h)
             for i in range(int(r)):
-                x = int(i*w/r*0.5)
-                y = int(i*h/r*0.5)
+                x = int( i*w / r*0.5 )
+                y = int( i*h / r*0.5 )
                 k = 255.0 * i/r
                 draw.rectangle((x, y, w-x, h-y), outline=int(k))
         
@@ -275,9 +284,9 @@ class Canvas:
         w0 = self.w
         h0 = self.h
         if type(w) == FloatType:
-            w = int( w * w0 )
+            w = int(w*w0)
         if type(h) == FloatType:
-            h = int( h * h0 )
+            h = int(h*h0)
 
         img = None
         if style in (SOLID, LINEAR, RADIAL, DIAMOND,
@@ -1674,7 +1683,6 @@ def cropimage( img, bounds):
     return img.crop( bounds )
 
 def aspectRatio(size, maxsize, height=False, width=False, assize=False):
-
     """Resize size=(w,h) to maxsize.
     use height == maxsize if height==True
     use width == maxsize if width==True
@@ -1708,8 +1716,13 @@ def aspectRatio(size, maxsize, height=False, width=False, assize=False):
     return scale
 
 
-def normalizeOrientationImage( img ):
+def innerRect( w0, h0, w1, h1):
+    """Create an inner size crop rect (0,0,w1,h1) + translation
+    """
+    pass
 
+
+def normalizeOrientationImage( img ):
     """Rotate an image according to exif info.
     
     """
@@ -1829,5 +1842,365 @@ def label( canvas, string, x, y, fontsize=18, fontpath="" ):
     canvas.layer( blatt )
     canvas.layer( mask )
     canvas.top.mask()
+
+
+def filelist( folderpathorlist, pathonly=True ):
+    """Walk a folder or a list of folders and return
+    paths or ((filepath, size, lastmodified, mode) tuples..
+    """
+
+    folders = folderpathorlist
+    if type(folderpathorlist) in (str, unicode):
+        folders = [folderpathorlist]
+    result = []
+    for folder in folders:
+        for root, dirs, files in os.walk( folder ):
+            root = makeunicode( root )
+
+            for thefile in files:
+                thefile = makeunicode( thefile )
+                basename, ext = os.path.splitext(thefile)
+
+                # exclude dotfiles
+                if thefile.startswith('.'):
+                    continue
+
+                # exclude the specials
+                for item in (u'\r', u'\n', u'\t'):
+                    if item in thefile:
+                        continue
+
+                filepath = os.path.join( root, thefile )
+
+                record = filepath
+                if not pathonly:
+                    info = os.stat( filepath )
+                    lastmodf = datetime.datetime.fromtimestamp( info.st_mtime )
+                    islink = os.path.islink( filepath )
+                    record = (filepath,
+                              info.st_size,
+                              lastmodf,
+                              oct(info.st_mode),
+                              islink )
+                yield record
+
+
+def imagefiles( folderpathorlist, pathonly=True ):
+    """Get a list of images from a list of folders.
+
+    folderpathorlist: is either a string with a path or a list of paths
+    
+    pathonly: if True return list of fullpath
+              else: return a list of filetuples
+    filetuple = 
+        (path, filesize, lastmodf, mode, islink, width, height)
+    
+    """
+    filetuples = filelist( folderpathorlist, pathonly=pathonly )
+    exts = ".tif .tiff .gif .jpg .jpeg .png" # + " .eps"
+    extensions = tuple( exts.split() )
+    for filetuple in filetuples:
+        path = makeunicode( filetuple )
+        if not pathonly:
+            path = filetuple[0]
+
+        _, ext = os.path.splitext( path )
+        if ext.lower() not in extensions:
+            continue
+        if pathonly:
+            yield path
+        else:
+            path, filesize, lastmodf, mode, islink = filetuple
+            s = (-1,-1)
+            try:
+                img = Image.open(path)
+                s = img.size
+                del img
+            except:
+                pass #continue
+            filetuple = (path, filesize, lastmodf, mode, islink, s[0], s[1])
+            yield filetuple
+
+
+class Rectangle(object):
+    
+    def __init__(self, origin, corner):
+        # left, top, right, bottom
+        self.origin = origin
+        self.corner = corner
+
+    @property
+    def top(self):
+        return self.origin[1]
+
+
+    @property
+    def left(self):
+        return self.origin[0]
+
+
+    @property
+    def bottom(self):
+        return self.corner[1]
+
+
+    @property
+    def right(self):
+        return self.corner[0]
+
+
+    @property
+    def width(self):
+        return self.right - self.left
+
+
+    @property
+    def height(self):
+        return self.bottom - self.top
+
+    @property
+    def slope(self):
+        if self.width > 0:
+            return float(self.height) / self.width
+        return float(self.height)
+
+
+    @property
+    def center(self):
+        return (self.left + self.width / 2.0,
+                self.top + self.height / 2.0)
+
+
+    @property
+    def topCenter(self):
+        return (self.center[0], self.top)
+
+    @property
+    def leftCenter(self):
+        return (self.left, self.center[1])
+
+    @property
+    def rightCenter(self):
+        return (self.right, self.center[1])
+
+    @property
+    def bottomCenter(self):
+        return (self.center[0], self.bottom)
+
+    @property
+    def area(self):
+        w = abs( self.height ) * abs( self.width )
+
+
+    def inRect(self, otherRect):
+        pass
+
+
+    def outRect(self, otherRect):
+        pass
+
+
+#
+# image well
+#
+
+def imagewells():
+    """Find a file named "imagewell.txt" and interpret it as image folder paths.
+    If no file is found create one with the desktop image folders for
+    mac & win10.
+    
+    """
+    folders = ["/Library/Desktop Pictures", "C:\Windows\Web" ]
+    images = os.path.abspath( "images" )
+    if os.path.exists( images ):
+        folders.append( images )
+    fullpath = os.path.abspath( "imagewell.txt" )
+    
+    if not os.path.exists( fullpath ):
+        try:
+            f = open(fullpath, 'w')
+            f.write( "\n".join( folders ) )
+            f.close()
+        except:
+            pass
+        return folders
+    try:
+        with open(fullpath, 'Ur') as f:
+            lines = f.readlines()
+        if not lines:
+            return folders
+        folders = []
+        for line in lines:
+            line = line.strip("\n\r")
+            folders.append( makeunicode( line ) )
+    except:
+        pass
+    folders = [x for x in folders if os.path.exists(x)]
+    return folders
+
+def loadImageWell( bgsize=(1024,768), minsize=(256,256),
+                   maxfilesize=100000000, maxpixellength=16000,
+                   pathonly=True, additionals=None, ignorelibs=False):
+    """Find images imagewells or additional folders. 
+       
+        Params:
+            bgsize - tuple with width and height for images to be classified background
+            minsize - tuple with minimal width and height for images not to be ignored
+            maxfilesize - in bytes. Images above this file size will be ignored
+            maxpixellength - in pixels. Images above in either dimension will be ignored
+            pathonly - return path or record
+            additionals - list of folders to me considered for this run
+            ignorelibs - if imagewells file should be ignored
+    
+        Returns:
+            A dict of dicts with several image classifications.
+
+            list of file paths if pathonly is True
+            list of file records else.
+
+    """
+
+
+    # get all images from user image wells
+    folders = []
+    if not ignorelibs:
+        folders = imagewells()
+    
+    if additionals:
+        folders.extend( additionals )
+    filetuples = imagefiles( folders, pathonly=False )
+
+    tiles = []
+    backgrounds = []
+    proportions = {}
+    fractions = {}
+
+    result = {
+        'allimages': [],
+        'tiles': [],
+        'backgrounds': [],
+        'landscape': [],
+        'portrait': [],
+        'fractions': {},
+        'WxH largest': "",
+        'WxH smalles': "",
+        'WxH median': "",
+    }
+
+    minw, minh = minsize
+    bgw, bgh = bgsize
+    smallestw, smallesth = 99999,99999
+    largestw, largesth = 0,0
+    medianw, medianh = 0,0
+    slope = 1.0
+    imagecount = 0
+    for t in filetuples:
+        path, filesize, lastmodified, mode, islink, w0, h0 = t
+        folder, filename = os.path.split( path )
+        basename, ext = os.path.splitext( filename )
+
+        # filter minimal size
+        if ext.lower() != ".eps":
+            if (w0 < minw) and (h0 < minh):
+                continue
+            if (w0 > maxpixellength) or (h0 > maxpixellength):
+                continue
+
+        if (w0 > maxpixellength) or (h0 > maxpixellength):
+            continue
+
+        # filter max filesize
+        if filesize > maxfilesize:
+            continue
+
+        if w0 in (0, 0.0):
+            continue
+        if h0 in (0, 0.0):
+            continue
+
+        imagecount += 1
+
+        # set stats
+        if w0 < smallestw:
+            smallestw = w0
+        if  h0 < smallesth:
+            smallesth = h0
+        if w0 > largestw:
+            largestw = w0
+        if  h0 > largesth:
+            largesth = h0
+
+        proportion = "landscape"
+        if h0 > w0:
+            proportion = "portrait"
+
+        try:
+            frac = Fraction(w0, h0)
+        except TypeError, err:
+            print err
+            print w0
+            print h0
+
+        if pathonly:
+            record = path
+        else:
+            record = (path, filesize, lastmodified, mode, islink,
+                      w0, h0, proportion, frac)
+
+        # candidate has at least canvas size and can be used as background
+        result['allimages'].append( record )
+
+        if (w0 >= bgw) and (h0 >= bgh):
+            result['backgrounds'].append( record )
+        else:
+            result['tiles'].append( record )
+        
+        if frac not in result['fractions']:
+            result['fractions'][frac] = []
+        result['fractions'][frac].append( record )
+
+        if proportion == "landscape":
+            result['landscape'].append( record )
+        else:
+            result['portrait'].append( record )
+
+    return result
+
+
+#
+# Image Sectors
+#
+
+class TiledImage(object):
+    ""
+    def __init__(self, tilesize, wtiles, htiles):
+        self.tilesize = int( self.tilesize )
+        self.wtiles = int( self.wtiles )
+        self.htiles = int( self.htiles )
+        tiles = self.wtiles * self.htiles 
+        self.tilebam = [ 0 ] * tiles
+
+        self.w = tilesize * wtiles
+        self.h = tilesize = htiles
+
+        self.img = None
+        self.layout = []
+        
+
+    def makeimage( self ):
+        pass
+
+
+    def makelayout( self ):
+        pass
+
+
+
+class Layout( object ):
+    ""
+    def __init__(self):
+        pass
+
+
 
 
