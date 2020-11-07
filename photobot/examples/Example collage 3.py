@@ -1,7 +1,11 @@
 # heavily inspired by https://www.nodebox.net/code/index.php/Landslide
-W,H = 1280, 950
-RATIO = W / H
+
+import sys
 import os
+
+W,H = 1920, 1080
+RATIO = W / H
+
 kwdbg = False
 
 size(W, H)
@@ -22,42 +26,41 @@ try:
 except ImportError:
     pb = ximport("__init__")
     reload(pb)
-from pbhelpers import *
 
-# import extensions if nodebox version < 1.9.18
-try:
-    imagefiles
-except NameError:
-    from nodeboxExtensions import *
+# from pbhelpers import *
+
 
 # create the canvas
 c = pb.canvas(int(WIDTH), int(HEIGHT))
 
-# get all images from system "Desktop Pictures" folder
-# filetuples = imagefiles( "/Library/Desktop Pictures", False )
-filetuples = imagefiles( "../images", False )
+# load the image library
+# check for command line folders
+additionals = sys.argv[1:]
 
-# filter out all 1 pix one color images by ignoring all files < 100k
-tiles = []
-for t in filetuples:
-    path, filesize, lastmodified, mode, islink = t
-    if filesize < 50000:
-        continue
-    tiles.append( path )
+# get all images from user image wells
+imagewell = pb.loadImageWell(   bgsize=(W,H),
+                                minsize=(256,256),
+                                pathonly=True,
+                                additionals=additionals)
 
-# shuffle the images
+# tiles are images >256x256 and <=1024x768
+tiles = imagewell['tiles']
+
+# backgrounds are images >1024x768
+backgrounds = imagewell['backgrounds']
 rnd.shuffle(tiles)
-rnd.shuffle(tiles)
-rnd.shuffle(tiles)
+rnd.shuffle(backgrounds)
+
+print "tiles:", len(tiles)
+print "backgrounds:", len(backgrounds)
 
 
-img1path = tiles.pop()
-img2path = tiles.pop()
+bgimage = backgrounds.pop()
+
 
 # CONFIGURATION
-
-columns = 3
-rows = 2
+columns = 5
+rows = 3
 
 colwidth = int(WIDTH / columns)
 rowheight = int(HEIGHT / rows)
@@ -84,7 +87,7 @@ paintoverlay = not kwdbg
 
 #  create, scale and place the image
 x, y = 0, 0
-top, w, h = pb.placeImage(c, img1path, x, y, W, "Image 1")
+top, w, h = pb.placeImage(c, bgimage, x, y, W, "Image 1")
 
 
 for position in positions:
@@ -97,7 +100,7 @@ for position in positions:
     top, w, h = pb.placeImage(c, p, 0, 0, maxsize, "Image %i,%i" % (x,y))
 
     # scale the layer to row height
-    scaleLayerToHeight( c.top, rowheight )
+    pb.scaleLayerToHeight( c.top, rowheight )
 
     # uniform width
     #cropImageToRatioHorizontal( c.top, RATIO )
