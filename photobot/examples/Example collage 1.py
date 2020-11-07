@@ -14,6 +14,7 @@ if kwdbg:
 
 
 W, H = 1024,768
+W, H = 1920, 1080
 
 
 # import photobot
@@ -36,7 +37,7 @@ RATIO = WIDTH / HEIGHT
 additionals = sys.argv[1:]
 
 # get all images from user image wells
-imagewell = pb.loadImageWell(   bgsize=(1024,768),
+imagewell = pb.loadImageWell(   bgsize=(W, H),
                                 minsize=(256,256),
                                 pathonly=True,
                                 additionals=additionals)
@@ -62,8 +63,8 @@ c.fill( (85,85,85) )
 
 # CONFIGURATION
 
-columns = 3
-rows = 2
+columns = 5
+rows = 3
 
 randomblur = 0
 randomflip = 0
@@ -75,12 +76,17 @@ gilb =0
 y_offset = HEIGHT / float(rows)
 y_offset = int(round(y_offset))
 
+x_offset = WIDTH / float(columns)
 
 # 
-if 0:
+if 1:
     bgimage = backgrounds.pop()
     top = c.layer(bgimage)
     w, h = c.top.bounds()
+    hght = True
+    if w > h:
+        h
+    
     w1,h1 = pb.aspectRatio( (w,h), WIDTH, height=False, assize=True )
     c.top.scale(w1,h1)
 else:
@@ -148,7 +154,9 @@ for j in range(rows):
         # mask destroys top layer
         c.top.mask()
         
-        c.top.translate(colw+i*w, j*y_offset)
+        # c.top.translate(colw+i*w, j*y_offset)
+        c.top.translate(x_offset * i, j*y_offset)
+        
         c.top.opacity( 66 + rnd.random() * 29 )
 
         if randomblur:
