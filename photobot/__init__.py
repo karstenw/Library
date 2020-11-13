@@ -195,7 +195,8 @@ class Canvas:
         w = max(1,w)
         h = max(1,h)
 
-        print( (style, w0,h0,w,h) )
+        if kwdbg:
+            print( (style, w0,h0,w,h) )
 
         if style not in (RADIALCOSINE,):
             img = Image.new("L", (int(w),int(h)), 255)
