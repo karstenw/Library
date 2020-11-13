@@ -50,7 +50,7 @@ Return the past tense:
 print
 print "Verb past 'give':",
 print en.verb.past("give")
-print "Verb past 'give' person=1, negate=True:",
+print "Verb past 'be' person=1, negate=True:",
 print en.verb.past("be", person=1, negate=True)
 # >>> gave
 # >>> wasn't
