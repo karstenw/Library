@@ -9,7 +9,7 @@ pp = pprint.pprint
 import pdb
 kwdbg = 0
 
-W, H = 542, 1050
+W, H = 800, 1050
 
 
 # check for Nodebox
@@ -48,89 +48,86 @@ c.fill( (192, 192, 192) )
 # Image 1
 #
 
+_, filename = os.path.split( img1path )
+
 #  create, scale and place the image
 x, y = 10, 10
-img1, w1, h1 = pb.placeImage(c, img1path, x, y, 256, "Image 1")
-pb.label(c, "Image 1 Opacity: 100", x, y)
+img1, w1, h1 = pb.placeImage(c, img1path, x, y, 380, "Image 1 Base")
+
+c.layers[img1].duplicate()
+c.top.solarize(256)
+pb.label(c, "%s solarize: 256" % filename, x, y)
 
 #
 # Image 2
 #
 c.layers[img1].duplicate()
-c.top.name = "Image 2"
-c.top.opacity(80)
+c.top.solarize(224)
 
 x, y = w1+20, 10
 c.top.translate( x, y)
-pb.label(c, "Image 2 Opacity: 80", x, y)
+pb.label(c, "%s solarize: 224" % filename, x, y)
 
 #
 # Image 3
 #
 c.layers[img1].duplicate()
-c.top.name = "Image 3"
-c.top.opacity(60)
+c.top.solarize(192)
 
 x, y = 10, h1 + 20
 c.top.translate( x, y)
-pb.label(c, "Image 3 Opacity: 60", x, y)
+pb.label(c, "%s solarize: 192" % filename, x, y)
 
 #
 # Image 4
 #
 c.layers[img1].duplicate()
-c.top.name = "Image 4"
-c.top.opacity(40)
+c.top.solarize(160)
 
 x, y = w1+20, h1 + 20
 c.top.translate( x, y)
-pb.label(c, "Image 4 Opacity: 40", x, y)
+pb.label(c, "%s solarize: 160" % filename, x, y)
 
 #
 # Image 5
 #
 c.layers[img1].duplicate()
-c.top.name = "Image 5"
-c.top.opacity(20)
+c.top.solarize(128)
 
 x, y = 10, 2*h1 + 30
 c.top.translate( x, y)
-pb.label(c, "Image 3 Opacity: 20", x, y)
+pb.label(c, "%s solarize: 128" % filename, x, y)
 
 #
 # Image 6
 #
 c.layers[img1].duplicate()
-c.top.name = "Image 6"
-c.top.opacity(10)
+c.top.solarize(96)
 
 x, y = w1+20, 2*h1 + 30
 c.top.translate( x, y)
-pb.label(c, "Image 6 Opacity: 10", x, y)
+pb.label(c, "%s solarize: 96" % filename, x, y)
 
 #
 # Image 7
 #
 c.layers[img1].duplicate()
-c.top.name = "Image 7"
-c.top.opacity(150)
+c.top.solarize(64)
 
 x, y = 10, 3*h1 + 40
 c.top.translate( x, y)
-pb.label(c, "Image 7 Opacity: 150", x, y)
+pb.label(c, "%s solarize: 64" % filename, x, y)
 
 #
 # Image 8
 #
 c.layers[img1].duplicate()
-c.top.name = "Image 8"
-c.top.opacity(200)
+c.top.solarize(32)
 
 x, y = w1 + 20, 3*h1 + 40
 c.top.translate( x, y)
-pb.label(c, "Image 8 Opacity: 200", x, y)
-
-
+pb.label(c, "%s solarize: 32" % filename, x, y)
 
 # draw the result
 c.draw()
+

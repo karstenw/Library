@@ -1,71 +1,71 @@
-W,H = 532, 1050
-# 
-# Note:
-#
-# The examples may be easier to understand if you have LEO http://leoeditor.com installed
-# and read them using the photobot.leo file
-#
-#
-kwdbg = False
+import sys, os
 
-size(W, H)
-
-background( 0.333 )
-
-# need a different name; random is taken
+# need a different name
 import random as rnd
+
+import pprint
+pp = pprint.pprint
+
+import pdb
+kwdbg = 0
+
+W, H = 532, 1050
+
+
+# check for Nodebox
+NB = True
+try:
+    _ctx
+except(NameError):
+    NB = False
+
+if NB:
+    size(W, H)
+    pb = ximport("photobot")
+else:
+    WIDTH, HEIGHT = W, H
+    import photobot as pb
+
 
 if kwdbg:
     # make random choices repeatable for debugging
     rnd.seed(0)
 
-# import photobot
-pb = ximport("photobot")
-pbh = ximport("pbhelpers")
-label = pbh.label
-
-# import extensions if nodebox version < 1.9.18
-try:
-    imagefiles
-except NameError:
-    from nodeboxExtensions import *
-
-# create the canvas
-c = pb.canvas(int(WIDTH), int(HEIGHT))
-
-# get all images from system "Desktop Pictures" folder
-filetuples = imagefiles( "/Library/Desktop Pictures", False )
-
-# filter out all 1 pix one color images by ignoring all files < 100k
-tiles = []
-for t in filetuples:
-    path, filesize, lastmodified, mode, islink = t
-    if filesize < 100000:
-        continue
-    tiles.append( path )
-
-# shuffle the images
-rnd.shuffle(tiles)
-rnd.shuffle(tiles)
+imagewell = pb.loadImageWell()
+tiles = imagewell['backgrounds']
 rnd.shuffle(tiles)
 
 
+# pick 2 images
 img1path = tiles.pop()
 img2path = tiles.pop()
 
+# create a white canvas
+c = pb.canvas( WIDTH, HEIGHT)
+c.fill( (192, 192, 192) )
 
 #
 # Image 1
 #
 
+print( img1path.encode("utf-8") )
 #  create, scale and place the image
 x, y = 10, 10
-top, w1, h1 = pb.placeImage(c, img1path, x, y, 512, "Image 1", width=True)
-label("Image 1", x, y)
+top, w1, h1 = pb.placeImage(c, img1path, x, y, 512, "Image 1")
+pb.label(c, "Image 1", x, y, 30)
 
+x, y = 10, h1 + 10 + 10
+top, w1, h1 = pb.placeImage(c, img1path, x, y, 512, "Image 1 colored")
 
 # apply colorize
-c.layers[top].colorize((240, 120, 0), (255, 255, 127))
+
+# c.top.colorize((192, 120, 0), (240, 255, 127))
+
+c.top.colorize( black=( 60,  60, 0),
+                white=(250, 200, 96),
+                  mid=(220, 190, 16))
+
+pb.label(c, "Image 1 colored", x, y, 30)
 
 
 # draw the result

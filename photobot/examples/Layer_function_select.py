@@ -9,7 +9,7 @@ pp = pprint.pprint
 import pdb
 kwdbg = 0
 
-W, H = 800, 1050
+W, H = 600, 1050
 
 
 # check for Nodebox
@@ -48,47 +48,26 @@ c.fill( (192, 192, 192) )
 # Image 1
 #
 
+_, filename = os.path.split( img1path )
+
 #  create, scale and place the image
 x, y = 10, 10
-top, w1, h1 = pb.placeImage(c, img1path, x, y, 256, "Image 1")
-pb.label(c, "Image 1", x, y)
+img1, w1, h1 = pb.placeImage(c, img1path, x, y, WIDTH-20, "Image 1 Base")
 
+c.top.autocontrast(cutoff=0)
+pb.label(c, filename, x, y)
 
 #
 # Image 2
 #
-x, y = w1+20, 10
-top, w2, h2 = pb.placeImage(c, img2path, x, y, 256, "Image 2")
-pb.label(c, "Image 2", x, y)
+c.layers[img1].duplicate()
 
+path=( (w1/2,0), (w1,int(h1*0.667)), (0,h1),(0,h1/2) )
+c.top.select( path )
 
-#
-# Hue Images 1 & 2
-#
+x, y = 10, h1+20+10
+c.top.translate( x, y)
 
-h = max(h1, h2)
-x, y = 10 , h + 20
-
-top, w3, h3 = pb.placeImage(c, img1path, x, y, 522, "Image 3")
-top, w4, h4 = pb.placeImage(c, img2path, x, y, 522, "Image 4")
-
-
-c.top.hue()
-pb.label(c, "Hue Image2 over Image1", x, y)
-
-#
-# Hue Images 2 & 1
-#
-
-h = max(h3, h4)
-x, y = 10 , h + 20 + y
-
-top, w4, h4 = pb.placeImage(c, img2path, x, y, 522, "Image 5")
-top, w3, h3 = pb.placeImage(c, img1path, x, y, 522, "Image 6")
-
-
-c.top.hue()
-pb.label(c, "Hue Image1 over Image2", x, y)
 
 # draw the result
 c.draw()

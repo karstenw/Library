@@ -9,7 +9,7 @@ pp = pprint.pprint
 import pdb
 kwdbg = 0
 
-W, H = 800, 1050
+W, H = 542, 1050
 
 
 # check for Nodebox
@@ -48,46 +48,23 @@ c.fill( (192, 192, 192) )
 # Image 1
 #
 
+_, fname = os.path.split( img1path )
+
 #  create, scale and place the image
 x, y = 10, 10
-top, w1, h1 = pb.placeImage(c, img1path, x, y, 256, "Image 1")
-pb.label(c, "Image 1", x, y)
+top, w1, h1 = pb.placeImage(c, img1path, x, y, 522, fname)
+pb.label(c, fname, x, y)
 
 #
 # Image 2
 #
-x, y = w1+20, 10
-top, w2, h2 = pb.placeImage(c, img2path, x, y, 256, "Image 2")
-pb.label(c, "Image 2", x, y)
+x, y = 10, 10 + h1 + 10
+top, w2, h2 = pb.placeImage(c, img1path, x, y, 522, fname)
+c.layers[top].edge_enhance_more()
 
 
-#
-# Color Images 1 & 2
-#
+pb.label(c, "%s edge_enhance_more()" % fname, x, y)
 
-h = max(h1, h2)
-x, y = 10 , h + 20
-
-top, w3, h3 = pb.placeImage(c, img1path, x, y, 522, "Image 3")
-top, w4, h4 = pb.placeImage(c, img2path, x, y, 522, "Image 4")
-
-
-c.top.color()
-pb.label(c, "Color Image2 over Image1", x, y)
-
-#
-# Color Images 2 & 1
-#
-
-h = max(h3, h4)
-x, y = 10 , h + 20 + y
-
-top, w4, h4 = pb.placeImage(c, img2path, x, y, 522, "Image 5")
-top, w3, h3 = pb.placeImage(c, img1path, x, y, 522, "Image 6")
-
-
-c.top.color()
-pb.label(c, "Color Image1 over Image2", x, y)
 
 # draw the result
 c.draw()
