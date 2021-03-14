@@ -1,21 +1,30 @@
+
+
 # heavily inspired by https://www.nodebox.net/code/index.php/Landslide
+
+from __future__ import print_function
+
 import sys, os
 
 import pprint
 pp = pprint.pprint
-kwdbg = False
+kwdbg = 0
 
-# need a different name
+# need a different name for nodebox
 import random as rnd
+
+import libgradient
 
 if kwdbg:
     # make random choices repeatable for debugging
     rnd.seed(0)
 
-
-W, H = 1024,768
+# width and height of destination image
+W, H =  800,  600
+W, H = 1024,  768
+W, H = 1280,  800
+W, H = 1440,  900
 W, H = 1920, 1080
-
 
 # import photobot
 try:
@@ -37,7 +46,7 @@ RATIO = WIDTH / HEIGHT
 additionals = sys.argv[1:]
 
 # get all images from user image wells
-imagewell = pb.loadImageWell(   bgsize=(W, H),
+imagewell = pb.loadImageWell(   bgsize=(W,H),
                                 minsize=(256,256),
                                 pathonly=True,
                                 additionals=additionals)
@@ -45,16 +54,15 @@ imagewell = pb.loadImageWell(   bgsize=(W, H),
 # tiles are images >256x256 and <=1024x768
 tiles = imagewell['tiles']
 
-# backgrounds are images >1024x768
+# backgrounds are images >W,H
 backgrounds = imagewell['backgrounds']
+
 rnd.shuffle(tiles)
 rnd.shuffle(backgrounds)
 
-print "tiles:", len(tiles)
-print "backgrounds:", len(backgrounds)
+print( "tiles: %i" % len(tiles) )
+print( "backgrounds: %i" % len(backgrounds) )
 
-
-# CONFIGURATION
 
 # create the canvas
 c = pb.canvas( WIDTH, HEIGHT)
@@ -63,124 +71,94 @@ c.fill( (85,85,85) )
 
 # CONFIGURATION
 
-columns = 5
+columns = 3
 rows = 3
 
-randomblur = 0
-randomflip = 0
-paintoverlay = 0
-gilb =0
+enoughTiles = len(tiles) > (columns * 2 * rows)
+
+randomblur = 1
+randomflip = 1
+paintoverlay = 1
+gilb = 1
 
 
 # 
 y_offset = HEIGHT / float(rows)
 y_offset = int(round(y_offset))
 
-x_offset = WIDTH / float(columns)
 
-# 
-if 1:
-    bgimage = backgrounds.pop()
-    top = c.layer(bgimage)
-    w, h = c.top.bounds()
-    hght = True
-    if w > h:
-        h
-    
-    w1,h1 = pb.aspectRatio( (w,h), WIDTH, height=False, assize=True )
-    c.top.scale(w1,h1)
-else:
-    bgimage = backgrounds.pop()
-    pb.placeImage(c, bgimage, 0, 0, WIDTH, "bgimage")
-print "Background:", bgimage.encode("utf-8")
 
-idx = 0
 
+# background image
+bgimage = backgrounds.pop()
+pb.placeImage(c, bgimage, 0, 0, WIDTH, "Image 1")
+# print( "Background: %s" % bgimage.encode("utf-8") )
+
+
+cols = -1
 for j in range(rows):
     colw = 0
-    for i in range(columns):
-        idx += 1
+    cols += 1
+    while colw < WIDTH:
+
+        # create image in canvas at 0,0
+        nextpictpath = tiles.pop()
+
         # new layer with a random image
-        path = tiles.pop()
-        print idx,path.encode("utf-8")
-        top = c.layer( path )
+        # c.layer returns the index of the top layer
+        topidx = c.layer( nextpictpath )
 
         # get current image bounds
         w, h = c.top.bounds()
 
+        
         # calculate scale & apply
         s = pb.aspectRatio( (w,h), y_offset, height=True)
         c.top.scale(s, s)
 
-        # uniform
-        layer = pb.cropImageToRatioHorizontal( c.top, RATIO )
-
-        # add contrast
-        c.top.contrast(1.1)
-
-        # get the new image bounds
+        # get current image bounds
         w, h = c.top.bounds()
 
-        r = 0.4 
-        r = rnd.random()
-        # 10%
-        if r < 0.1:
-            # create a dual ramp gradient
-            _ = c.gradient(pb.LINEAR, w/2, h)
-            c.top.flip( pb.HORIZONTAL )
-
-            # layer translate half a pict right
-            c.top.translate(w/2, j*y_offset)
-
-            # create another gradient layer and merge with first gradient
-            top = c.gradient(pb.LINEAR, w/2, h)
-            # merge both gradients; destroys top layer
-            c.merge([ top-1 , top ])
-        elif 0.1 <= r < 0.5:
-            #print "SINE"
-            top = c.gradient(pb.SINE, w, h)
-            
-        elif 0.6 <= r < 0.75:
-            #print "RADIALCOSINE"
-            top = c.gradient(pb.RADIALCOSINE, w, h)
-            c.top.invert()
-        else:
-            #print "ROUNDRECT"
-            # 25%
-            top = c.gradient(pb.ROUNDRECT, w, h, radius=int(w/5.0))
-
-        c.top.brightness(1.4)
-
-        # mask destroys top layer
+        # create a random mask gradient for this tile
+        libgradient.makerandomgradient( c, w, h, j*y_offset )
         c.top.mask()
-        
-        # c.top.translate(colw+i*w, j*y_offset)
-        c.top.translate(x_offset * i, j*y_offset)
-        
-        c.top.opacity( 66 + rnd.random() * 29 )
 
+
+        # P: 0.5 # flip the tile
         if randomblur:
             if rnd.random() > 0.5:
                 c.top.flip()
 
+        # P: 0.5 # add blur
+        if randomflip:
             if rnd.random() > 0.5:
                 c.top.blur()
 
+        w, h = c.top.bounds()
+        c.top.translate(colw, j*y_offset)
+        colw += w
+
+
 if 1:
     # orange hue mask finish
-    top = c.fill((200,100,0))
+    topidx = c.fill((200,100,0))
     c.top.opacity(30)
     c.top.hue()
 
+paintfile = os.path.abspath("./paint.jpg")
 if paintoverlay:
     # paint overlay
-    top = c.layer( os.path.abspath("./paint.jpg") )
-    w, h = c.top.bounds()
-    xs = WIDTH / float(w)
-    ys = HEIGHT / float(h)
-    s = max(xs,ys)
-    c.top.scale(s, s)
-    c.top.opacity(10)
-    c.top.overlay()
+    if os.path.exists( paintfile ):
+        if kwdbg:
+            print( "paint overlay:  %s" % paintfile )
+        topidx = c.layer( paintfile )
+        w, h = c.top.bounds()
+        xs = WIDTH / float(w)
+        ys = HEIGHT / float(h)
+        s = max(xs,ys)
+        c.top.scale(s, s)
+        # c.top.opacity( 90 )
+        c.top.overlay()
 
-c.draw(0, 0)
+c.draw(0,0)
+

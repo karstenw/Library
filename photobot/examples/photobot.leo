@@ -88,11 +88,11 @@
 <v t="karstenw.20170711131604.4"><vh>aspectRatio</vh></v>
 <v t="karstenw.20170711131604.5"><vh>topLayer</vh></v>
 </v>
-<v t="karstenw.20170711131606.1" a="E"><vh>@clean Example collage 2.py</vh>
+<v t="karstenw.20170711131606.1"><vh>@clean Example collage 2.py</vh>
 <v t="karstenw.20170711131614.1"><vh>Declarations</vh></v>
 <v t="karstenw.20170711131614.2"><vh>topLayer</vh></v>
 </v>
-<v t="karstenw.20170711131616.1" a="E"><vh>@clean Example collage 3.py</vh>
+<v t="karstenw.20170711131616.1"><vh>@clean Example collage 3.py</vh>
 <v t="karstenw.20170711131630.1"><vh>Declarations</vh></v>
 <v t="karstenw.20170711131630.2"><vh>placeImage</vh></v>
 </v>
@@ -966,7 +966,7 @@ if kwdbg:
 
 
 W, H = 1024,768
-#W, H = 1920, 1080
+W, H = 1920, 1080
 
 
 # import photobot
@@ -1034,10 +1034,14 @@ y_offset = int(round(y_offset))
 x_offset = WIDTH / float(columns)
 
 # 
-if 0:
+if 1:
     bgimage = backgrounds.pop()
     top = c.layer(bgimage)
     w, h = c.top.bounds()
+    hght = True
+    if w &gt; h:
+        h
+    
     w1,h1 = pb.aspectRatio( (w,h), WIDTH, height=False, assize=True )
     c.top.scale(w1,h1)
 else:
