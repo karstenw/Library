@@ -32,7 +32,12 @@ import time
 import hashlib
 import unicodedata
 
+import pickle
+import json
+
 import colorsys
+
+import io
 
 import PIL
 import PIL.ImageFilter as ImageFilter
@@ -54,6 +59,7 @@ import pdb
 import pprint
 pp = pprint.pprint
 kwdbg = 0
+kwlog = 0
 import traceback
 
 # py3 stuff
@@ -70,7 +76,6 @@ except NameError:
     py3 = True
     punichr = chr
     long = int
-
 
 
 # PIL interpolation modes
@@ -134,6 +139,8 @@ class Canvas:
         self.h = h
         img = Image.new("RGBA", (w,h), (255,255,255,0))
         self.layer(img, name="_bg")
+        del img
+
 
     def layer(self, img, x=0, y=0, name=""):
 
@@ -162,6 +169,7 @@ class Canvas:
                 img = Image.open(img)
                 img = img.convert("RGBA")
                 self.layers.append( Layer(self, img, x, y, name) )
+                del img
                 return len(self.layers) - 1
             except Exception as err:
                 print( "Canvas.layer( %s ) FAILED." %repr( img ) )
@@ -187,7 +195,9 @@ class Canvas:
         if h == None:
             h = self.h - y
         img = Image.new("RGBA", (w,h), rgb)
-        return self.layer(img, x, y, name)
+        result = self.layer(img, x, y, name)
+        del img
+        return result
 
     def makegradientimage(self, style, w, h):
         """Creates the actual gradient image.
@@ -223,7 +233,7 @@ class Canvas:
 
         if style == LINEAR:
             for i in range(int(w)):
-                k = 255.0 * i/w
+                k = 255.0 * i / w
                 draw.rectangle((i, 0, i, h), fill=int(k))
             
         if style == RADIAL:
@@ -280,6 +290,7 @@ class Canvas:
         del img
         del draw
         return result
+
 
     def gradient(self, style=LINEAR, w=1.0, h=1.0, name="",
                        radius=0, radius2=0):
@@ -431,6 +442,7 @@ class Canvas:
             del verleft, vertright
             return self.layer(img, 0, 0, name=name)
 
+
     def merge(self, layers):
         
         """Flattens the given layers on the canvas.
@@ -446,12 +458,13 @@ class Canvas:
             del layers[0]
         self.flatten(layers)
 
+
     def flatten(self, layers=[]):
 
         """Flattens all layers according to their blend modes.
 
-        Merges all layers to the canvas,
-        using the blend mode and opacity defined for each layer.
+        Merges all layers to the canvas, using the
+        blend mode and opacity defined for each layer.
         Once flattened, the stack of layers is emptied except
         for the transparent background (bottom layer).
 
@@ -465,9 +478,13 @@ class Canvas:
         # this should be fixed by merging to a transparent background
         # large enough to hold all the given layers' data
         # (=time consuming).
-        
+
+        if kwlog:
+            start = time.time()
+
         if layers == []:
             layers = range(1, len(self.layers))
+
         background = self.layers._get_bg()
         background.name = "Background"
         
@@ -482,7 +499,7 @@ class Canvas:
             w = min(background.w, layer.x+layer.w)
             h = min(background.h, layer.y+layer.h)
         
-            base = background.img.crop((x, y, w, h))
+            base = background.img.crop( (x, y, w, h) )
 
             # Determine which piece of the layer
             # falls within the canvas.
@@ -492,9 +509,10 @@ class Canvas:
             w -= layer.x
             h -= layer.y
 
-            blend = layer.img.crop((x, y, w, h))
+            blend = layer.img.crop( (x, y, w, h) )
             lblend = blend.convert("L")
             bwblend = lblend.convert("1")
+
             # Buffer layer blend modes:
             # the base below is a flattened version
             # of all the layers below this one,
@@ -518,17 +536,17 @@ class Canvas:
             elif layer.blend == SUBTRACT:
                 img1 = base.convert("RGB")
                 img2 = blend.convert("RGB")
-                buffer = ImageChops.subtract_modulo(img1, img2)
+                buffer = ImageChops.subtract(img1, img2)
                 buffer = buffer.convert("RGBA")
                 del img1, img2
                 # buffer = ImageChops.subtract(base, blend)
                 # buffer = Blend().subtract(base, blend)
+
             elif layer.blend == ADD_MODULO:
                 buffer = ImageChops.add_modulo(base, blend)
+
             elif layer.blend == SUBTRACT_MODULO:
                 buffer = Blend().subtract_modulo(base, blend)
-
-
 
             elif layer.blend == DIFFERENCE:
                 # buffer = ImageChops.difference(base, blend)
@@ -549,7 +567,7 @@ class Canvas:
             alpha = buffer.getchannel("A")
             basealpha = base.getchannel("A")
             if i == 1:
-                buffer = Image.composite(base, buffer, basealpha) #base.split()[3])
+                buffer = Image.composite(base, buffer, basealpha)
             else:
                 buffer = Image.composite(buffer, base, alpha)
         
@@ -572,7 +590,7 @@ class Canvas:
             x = max(0, int(layer.x))
             y = max(0, int(layer.y))
             background.img.paste(base, (x,y))
-            del base, buffer, alpha, blend
+            del base, buffer, alpha, basealpha, blend
 
         layers = list(layers)
         layers.reverse()
@@ -587,6 +605,11 @@ class Canvas:
             self.layers.append(background)
         else:
             self.layers.insert(layers[-1], background)
+        del img
+        
+        if kwlog:
+            stop = time.time()
+            print("Canvas.flatten( %s ) in %.3fsec." % (repr(layers), stop-start))
 
     def export(self, name, ext=".png", format="PNG"):
 
@@ -598,6 +621,8 @@ class Canvas:
 
         """
 
+        start = time.time()
+
         if not name:
             name = "photobot_" + datestring()
 
@@ -607,8 +632,6 @@ class Canvas:
             folder = os.path.abspath( os.curdir )
             folder = os.path.join( folder, "exports" )
         folder = os.path.abspath( folder )
-        if kwdbg:
-            print("Folder: %s" % folder.encode("utf-8") )
 
         filename = name + ext
         if name.endswith( ext ):
@@ -625,7 +648,7 @@ class Canvas:
         except:
             pass
 
-        if kwdbg:
+        if kwdbg and 0:
             # if debugging is on export each layer separately
             basename = "photobot_" + datestring() + "_layer_%i_%s" + ext
 
@@ -662,12 +685,17 @@ class Canvas:
                 n = basename % (i, layer.name)
                 path = os.path.join( folder, n )
                 buffer.save( path, format=format, optimize=False)
-                print( "exort() DBG: '%s'" % path.encode("utf-8") )
+                print( "export() DBG: '%s'" % path.encode("utf-8") )
 
         self.flatten()
         self.layers[1].img.save(path, format=format, optimize=False)
         if kwdbg:
             print( "export() %s" % path.encode("utf-8") )
+
+        if kwlog:
+            stop = time.time()
+            print("Canvas.export(%s) in %.3f sec." % (name, stop-start))
+
         return path
 
     def draw(self, x=0, y=0, name="", ext=".png", format='PNG'):
@@ -739,6 +767,14 @@ class Canvas:
         
         """
         return self.layers[-1]
+
+    @property
+    def topindex(self):
+        """get index of top layer.
+        
+        """
+        return len(self.layers)-1
+
 
     @property
     def dup(self):
@@ -1669,9 +1705,10 @@ def makeunicode(s, srcencoding="utf-8", normalizer="NFC"):
         try:
             s = punicode( s, srcencoding )
         except TypeError as err:
-            pdb.set_trace()
+            # pdb.set_trace()
             print( "makeunicode(): %s" % repr(err) )
             print( "%s - %s" % (type(s), repr(s)) )
+            return s
     if typ in (punicode,):
         s = unicodedata.normalize(normalizer, s)
     return s
@@ -1791,12 +1828,15 @@ def scaleLayerToHeight( layer, newheight ):
     return layer
 
 
-def placeImage(canv, path, x, y, maxsize, name, width=True, height=False):
+def placeImage(canv, path, x, y, maxsize=None, name="", width=True, height=False):
     """Create an image layer.
     
     """
-    img1 = resizeImage(path, maxsize, width=width, height=height)
-    top = canv.layer(img1, name=name)
+    if maxsize:
+        img1 = resizeImage(path, maxsize, width=width, height=height)
+        top = canv.layer(img1, name=name)
+    else:
+        top = canv.layer(path, name=name)
     canv.top.translate(x, y)
     w, h, = canv.top.bounds()
     return top, w, h
@@ -1900,13 +1940,14 @@ def filelist( folderpathorlist, pathonly=True ):
     for folder in folders:
         for root, dirs, files in os.walk( folder ):
             root = makeunicode( root )
-
+            if kwdbg:
+                print (root.encode("utf-8"))
             for thefile in files:
                 thefile = makeunicode( thefile )
                 basename, ext = os.path.splitext(thefile)
 
                 # exclude dotfiles
-                if thefile.startswith('.'):
+                if thefile.startswith(u'.'):
                     continue
 
                 # exclude the specials
@@ -1915,6 +1956,7 @@ def filelist( folderpathorlist, pathonly=True ):
                         continue
 
                 filepath = os.path.join( root, thefile )
+                filepath = filepath.encode("utf-8")
 
                 record = filepath
                 if not pathonly:
@@ -1953,6 +1995,7 @@ def imagefiles( folderpathorlist, pathonly=True ):
         if ext.lower() not in extensions:
             continue
         if pathonly:
+            # print (path.encode("utf-8"))
             yield path
         else:
             path, filesize, lastmodf, mode, islink = filetuple
@@ -1964,6 +2007,7 @@ def imagefiles( folderpathorlist, pathonly=True ):
             except:
                 pass #continue
             filetuple = (path, filesize, lastmodf, mode, islink, s[0], s[1])
+            # print (path.encode("utf-8"))
             yield filetuple
 
 
@@ -2015,36 +2059,56 @@ def imagewells():
     folders = [x for x in folders if os.path.exists(x)]
     return folders
 
-def loadImageWell( bgsize=(1024,768), minsize=(256,256),
-                   maxfilesize=100000000, maxpixellength=16000,
-                   pathonly=True, additionals=None, ignorelibs=False):
-    """Find images imagewells or additional folders. 
-       
-        Params:
-            bgsize - tuple with width and height for images to be classified background
-            minsize - tuple with minimal width and height for images not to be ignored
-            maxfilesize - in bytes. Images above this file size will be ignored
-            maxpixellength - in pixels. Images above in either dimension will be ignored
-            pathonly - return path or record
-            additionals - list of folders to me considered for this run
-            ignorelibs - if imagewells file should be ignored
-    
-        Returns:
-            A dict of dicts with several image classifications.
+class Imagecollection(object):
+    """
+    ImageCollection should be the return value of loadImageWell() and
+    transparently handle the imagewell.txt pickling.
 
-            list of file paths if pathonly is True
-            list of file records else.
+    The folders in imagewell.txt should be parsed, if one of the folders
+    is newer or imagewell.txt is newer than imagewell-files.pick.
 
     """
 
-    # get all images from user image wells
-    folders = []
-    if not ignorelibs:
-        folders = imagewells()
+    def __init__(self):
+        self.data = {}
     
-    if additionals:
-        folders.extend( additionals )
-    filetuples = imagefiles( folders, pathonly=False )
+    
+
+def loadImageWell( bgsize=(1024,768), minsize=(256,256),
+                   maxfilesize=100000000, maxpixellength=16000,
+                   pathonly=True, additionals=None, ignorelibs=False,
+                   resultfile=False, ignoreFolderNames=None):
+
+    """
+    Find images imagewells or additional folders. 
+       
+    Params:
+        bgsize
+            tuple with width and height for images to be classified background
+
+        minsize
+            tuple with minimal width and height for images not to be ignored
+
+        maxfilesize
+            in bytes. Images above this file size will be ignored
+
+        maxpixellength
+            in pixels. Images above in either dimension will be ignored
+
+        pathonly
+            return path or record
+        additionals
+            list of folders to me considered for this run
+
+        ignorelibs
+            if imagewells file should be ignored
+    
+    Returns:
+        A dict of dicts with several image classifications.
+    
+        list of file paths if pathonly is True
+        list of file records else.
+    """
 
     tiles = []
     backgrounds = []
@@ -2059,7 +2123,7 @@ def loadImageWell( bgsize=(1024,768), minsize=(256,256),
         'portrait': [],
         'fractions': {},
         'WxH largest': "",
-        'WxH smalles': "",
+        'WxH smallest': "",
         'WxH median': "",
     }
 
@@ -2070,18 +2134,90 @@ def loadImageWell( bgsize=(1024,768), minsize=(256,256),
     medianw, medianh = 0,0
     slope = 1.0
     imagecount = 0
+    filetuples = []
+
+
+    fileLoaded = False
+    if resultfile:
+        path = os.path.abspath( resultfile )
+        folder, filename = os.path.split( path )
+        tabfile = os.path.join( folder, filename + ".tab" )
+        if os.path.exists( tabfile ):
+            print("Reading tabfile...")
+            start = time.time()
+            f = io.open(tabfile, "r", encoding="utf-8")
+            lines = f.readlines()
+            f.close()
+            filetuples = []
+            
+            for line in lines:
+                path, filesize, lastmodified, mode, islink, w0, h0 = line.split( u"\t" )
+                filesize = int(filesize)
+                islink = bool(islink)
+                w0 = int(w0)
+                h0 = int(h0)
+                if os.path.exists( path ):
+                    filetuples.append( (path, filesize, lastmodified, mode, islink, w0, h0) )
+
+            fileLoaded = True
+            print("%i records loaded from tabfile." % len(filetuples))
+            print("Reading tabfile... Done.")
+            stop = time.time()
+            print( "READ TIME: %.3f" % (stop-start,) )        
+
+
+
+    # get all images from user image wells
+    folders = []
+    if not ignorelibs:
+        folders = imagewells()
+
+    if additionals:
+        folders.extend( additionals )
+
+    if not filetuples:
+        start = time.time()
+        filetuples = []
+        items = list( imagefiles( folders, pathonly=False ) )
+        for filetuple in items:
+            path, filesize, lastmodified, mode, islink, w0, h0 = filetuple
+            path = makeunicode(path)
+            item = ( path, filesize, lastmodified, mode, islink, w0, h0 )
+            filetuples.append( item )
+        stop = time.time()
+        print("FOLDER SCAN TIME: %.3f" % (stop-start,))
+
+
+    if kwdbg:
+        print("File loop...")
+
+    # pdb.set_trace()
     for t in filetuples:
         path, filesize, lastmodified, mode, islink, w0, h0 = t
+        path = makeunicode( path )
         folder, filename = os.path.split( path )
+        root, parent =  os.path.split( folder )
         basename, ext = os.path.splitext( filename )
 
-        # filter minimal size
+        # parent names
+        cancel = False
+        if ignoreFolderNames:
+            for name in ignoreFolderNames:
+                if parent.startswith( name ):
+                    cancel = True
+                    # print("IGNORE PARENT: %s  %s" % (name,path))
+                    break
+        if cancel:
+            continue
+            
+        # filter minimal pixel lengths
         if ext.lower() != ".eps":
             if (w0 < minw) and (h0 < minh):
                 continue
             if (w0 > maxpixellength) or (h0 > maxpixellength):
                 continue
 
+        # filter maximal pixel lengths
         if (w0 > maxpixellength) or (h0 > maxpixellength):
             continue
 
@@ -2089,14 +2225,19 @@ def loadImageWell( bgsize=(1024,768), minsize=(256,256),
         if filesize > maxfilesize:
             continue
 
+        # filter images with anormal width or height
         if w0 in (0, 0.0):
+            print( "Anormal width: %s %s %s" % (repr(path),
+                                                repr(w0), repr(h0)))
             continue
         if h0 in (0, 0.0):
+            print( "Anormal height: %s %s %s" % (repr(path),
+                                                 repr(w0), repr(h0)))
             continue
 
         imagecount += 1
 
-        # set stats
+        # collect some stats
         if w0 < smallestw:
             smallestw = w0
         if  h0 < smallesth:
@@ -2106,12 +2247,17 @@ def loadImageWell( bgsize=(1024,768), minsize=(256,256),
         if  h0 > largesth:
             largesth = h0
 
+        medianw += w0
+        medianh += h0
+
         proportion = "landscape"
         if h0 > w0:
             proportion = "portrait"
 
+        fracs = "x:y"
         try:
             frac = Fraction(w0, h0)
+            fracs = "%i:%i" % (frac.numerator, frac.denominator )
         except TypeError as err:
             print(err)
             print(w0)
@@ -2123,22 +2269,59 @@ def loadImageWell( bgsize=(1024,768), minsize=(256,256),
             record = (path, filesize, lastmodified, mode, islink,
                       w0, h0, proportion, frac)
 
-        # candidate has at least canvas size and can be used as background
         result['allimages'].append( record )
 
+        # candidate has at least canvas size and can be used as background
+        # otherwise it is a tile
         if (w0 >= bgw) and (h0 >= bgh):
             result['backgrounds'].append( record )
         else:
+            # print( "TILE: %i < %i  and  %i < %i" % (w0,bgw,h0,bgh) )
             result['tiles'].append( record )
-        
-        if frac not in result['fractions']:
-            result['fractions'][frac] = []
-        result['fractions'][frac].append( record )
+
+        if fracs not in result['fractions']:
+            result['fractions'][fracs] = []
+        result['fractions'][fracs].append( record )
 
         if proportion == "landscape":
             result['landscape'].append( record )
         else:
             result['portrait'].append( record )
+
+
+    if kwdbg:
+        print("File loop... Done.")
+
+    result[ 'WxH largest' ] = (largestw,largesth)
+    result[ 'WxH smallest' ] = (smallestw,smallesth)
+    result[ 'WxH median' ] = (medianw / float(imagecount),
+                              medianh / float(imagecount))
+
+    if resultfile and not fileLoaded:
+        print("Writing tabfile...")
+
+        path = os.path.abspath( resultfile )
+        folder, filename = os.path.split( path )
+        
+        if os.path.exists( folder ):
+            start = time.time()
+            tabfile = os.path.join( folder, filename + ".tab" )
+            items = []
+            template = u"%s\t%s\t%s\t%s\t%i\t%i\t%i\n"
+            f = io.open(tabfile, "w", encoding="utf-8")
+            for item in filetuples:
+                path, filesize, lastmodified, mode, islink, w0, h0 = item
+                w0 = int(w0)
+                h0 = int(h0)
+                islink = int(bool(islink))
+                filesize  = str( filesize )
+                item = ( path, filesize, lastmodified, mode, islink, w0, h0 )
+                f.write( template % item )
+            f.close()
+            print("Writing tabfile... Done.")
+            stop = time.time()
+            print("WRITE TIME: %.3f" % (stop-start,) )        
+
 
     return result
 
@@ -2157,7 +2340,7 @@ class TiledImage(object):
         self.tilebam = [ 0 ] * tiles
 
         self.w = tilesize * wtiles
-        self.h = tilesize = htiles
+        self.h = tilesize * htiles
 
         self.img = None
         self.layout = []

@@ -77,122 +77,95 @@ if 1: #not kwdbg:
 
 # CONFIGURATION
 
-columns = 8
-rows = 4
-
-# 
-y_offset = HEIGHT / float(rows)
-y_offset = int(round(y_offset))
+columns = 5
+rows = 3
 
 enoughTiles = len(tiles) > (columns * 2 * rows)
 
 randomblur = 0
 randomflip = 0
 paintoverlay = 0
-gilb = 0
+gilb =0
 
-picts = []
-for t in range(columns*rows*2):
-    s = rnd.choice(tiles)
-    picts.append(s)
-    if 0: #enoughTiles:
-        tiles.remove(s)
-# rnd.shuffle(picts)
+# 
+y_offset = HEIGHT / float(rows)
+y_offset = int(round(y_offset))
 
 # background image
 bgimage = backgrounds.pop()
-pb.placeImage(c, bgimage, 0, 0, WIDTH, "bgimage")
+pb.placeImage(c, bgimage, 0, 0, WIDTH, "Image 1")
 print( "Background: %s" % bgimage.encode("utf-8") )
-
 
 tilecounter = 0
 for j in range(rows):
+    colw = 0
     for i in range(columns):
 
-        # create image in canvas at 0,0
-        nextpictpath = picts.pop()
-        c.layer( nextpictpath )
+        # new layer with a random image
+        p = tiles.pop()
         tilecounter += 1
         if kwdbg or 1:
-            print( "%i  -- %s" % (tilecounter, nextpictpath.encode("utf-8")) )
+            print( "%i  -- %s" % (tilecounter, p.encode("utf-8")) )
+        top = c.layer( p )
+
+        # get current image bounds
+        w, h = c.top.bounds()
+
+        # calculate scale & apply
+        s = pb.aspectRatio( (w,h), y_offset, height=True)
+        c.top.scale(s, s)
+
+        # uniform
+        layer = pb.cropImageToRatioHorizontal( c.top, RATIO )
 
         # add contrast
         c.top.contrast(1.1)
 
-        # get current image bounds
+        # get the new image bounds
         w, h = c.top.bounds()
-        halfwidth = int( w / 2.0 )
 
+        r = 0.4 
+        r = rnd.random()
+        # 10%
+        if r < 0.25:
+            # create a dual ramp gradient
+            _ = c.gradient(pb.LINEAR, int(w/2), h)
+            c.top.flip( pb.HORIZONTAL )
 
-        if kwdbg:
-            print( "Gradient 1" )
+            # layer translate half a pict right
+            c.top.translate(w/2, j*y_offset)
 
-        # create gradient layer
-        c.gradient(pb.LINEAR, int(w/2), h)
-
-        if kwdbg:
-            print( "Gradient 1 flip" )
-
-        # layer + 4 flip
-        c.top.flip()
-
-        if kwdbg:
-            print( "Gradient 1 translate" )
-
-        # layer +4 translate half a pict right
-        c.top.translate(w/2, j*y_offset)
-
-        if kwdbg:
-            print( "Gradient 2" )
-
-        # create gradient layer
-        c.gradient(pb.LINEAR, int(w/2), h)
-
-        if kwdbg:
-            print( "Gradient 2 merge with gradient 1" )
-
-        # merge the 2 gradient ramps
-        top = c.topindex
-        c.merge([top-1, top])
-
-        if kwdbg:
-            print( "Gradient brightness 1.4" )
+            # create another gradient layer and merge with first gradient
+            top = c.gradient(pb.LINEAR, int(w/2), h)
+            # merge both gradients; destroys top layer
+            c.merge([ top-1 , top ])
+        elif 0.25 <= r < 0.5:
+            # SINE
+            top = c.gradient(pb.SINE, w, h)
+            
+        elif 0.6 <= r < 0.75:
+            # RADIALCOSINE
+            top = c.gradient(pb.RADIALCOSINE, w, h)
+            c.top.invert()
+        else:
+            # ROUNDRECT
+            # 25%
+            top = c.gradient(pb.ROUNDRECT, w, h, radius=int(w/5.0))
 
         c.top.brightness(1.4)
 
-        if kwdbg:
-            print( "Gradient mask" )
-
+        # mask destroys top layer
         c.top.mask()
-        c.top.translate(i*w/3, j*y_offset)
+        
+        c.top.translate(colw+i*w, j*y_offset)
+        c.top.opacity( 66 + rnd.random() * 29 )
 
+        if randomblur:
+            if rnd.random() > 0.5:
+                c.top.flip()
 
-        if kwdbg:
-            print( "Layer flip" )
-
-        if rnd.random() > 0.5:
-            if kwdbg:
-                print( "flip" )
-            c.top.flip()
-
-        if kwdbg:
-            print( "Layer blur" )
-
-        if rnd.random() > 0.5:
-            if kwdbg:
-                print( "blur" )
-            c.top.blur()
-
-        if kwdbg:
-            print( "Layer merge with previous" )
-
-
-        # merge with previous layer fro memory reasons
-        top = c.topindex
-        if top > 2:
-            c.merge([top-1, top])
-
-
+            if rnd.random() > 0.5:
+                c.top.blur()
 
 if gilb:
     # orange hue overlay finish
