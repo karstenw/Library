@@ -38,10 +38,12 @@ __license__   = "GPL"
 
 ###############################################################################
 
-import proportion as _proportion
-import content as _content
-import style
-import text
+from importlib import reload
+
+from . import proportion as _proportion
+from . import content as _content
+from . import style
+from . import text
 
 from random import random, shuffle
 from types import MethodType, FunctionType
@@ -87,6 +89,7 @@ format = format()
 
 ### TEXT ######################################################################
 # Rewire the functions in the text module that need a drawing context.
+
 
 reload(text)
 text._keep_together = text.keep_together
@@ -667,7 +670,7 @@ class grid(list, splitter, statistics):
     def __getattr__(self, name):
         x = self.find(name)
         if x != None: return x
-        raise AttributeError, "grid instance has no attribute '%s'" % name
+        raise AttributeError( "grid instance has no attribute '%s'" % name )
 
     def cell(self, i, j):
         """ Returns the cell in row i, column j.
@@ -941,7 +944,7 @@ class grid(list, splitter, statistics):
             # We store "the things" in self._state so we can reuse them in leave().
             try: s = self.styles[self.style]
             except KeyError:
-                raise KeyError, "no style with name '"+self.style+"'"
+                raise KeyError( "no style with name '"+self.style+"'" )
             self._state = style.begin_grob(s, self, 0, 0)
         def leave(self):
             s = self.styles[self.style]
@@ -963,7 +966,7 @@ class grid(list, splitter, statistics):
             if len(self) == 0 and not self.has_content() and self.content != None:
                 try: s = self.styles[self.style]
                 except KeyError:
-                    raise KeyError, "no style with name '"+self.style+"'"
+                    raise( KeyError, "no style with name '"+self.style+"'" )
                 _ctx.font(s.font, s.fontsize)
                 _ctx.lineheight(s.lineheight)
                 _ctx.align(style.alignment(s.horizontal))

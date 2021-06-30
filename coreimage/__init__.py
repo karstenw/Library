@@ -365,7 +365,8 @@ class Canvas:
         # ------------------------------------------------------------------------
         try:
             w0, h0, n = args[0].w, args[0].h, len(args[0].layers)
-            if args[0] == self: raise CanvasInCanvasRecursionError
+            if args[0] == self:
+                raise CanvasInCanvasRecursionError()
             type = LAYER_LAYERS
             if w == None: w = args[0].w
             if h == None: h = args[0].h
@@ -646,11 +647,11 @@ class Layers(list):
                     try: return layer.data.layers[index]
                     except:
                         pass
-            raise KeyError, index
+            raise KeyError(index)
         # Layer by index number.
         if isinstance(index, int):
             return list.__getitem__(self, index)
-        raise IndexError, "list index out of range"
+        raise IndexError("list index out of range")
             
     def __getattr__(self, name, cls="Layers"):
         """ You can also do: canvas.layers.layer_name (without recursion).
@@ -660,7 +661,7 @@ class Layers(list):
                 return layer
         # This method is also called from the Canvas object,
         # In that case, the cls parameter will be "Canvas".
-        raise AttributeError, cls+" instance has no attribute '"+name+"'"
+        raise AttributeError( cls+" instance has no attribute '"+name+"'" )
 
 ### LAYER ##########################################################################
 
@@ -2857,7 +2858,7 @@ class CoreImageRenderer(Renderer):
             self._queue.append( (x, y, w, h, flattened, state) )
             _ctx.canvas.append(self)
         except:
-            raise CanvasToNodeBoxError
+            raise CanvasToNodeBoxError()
 
         if helper == True:
             self.helper.rulers(x, y, w, h)

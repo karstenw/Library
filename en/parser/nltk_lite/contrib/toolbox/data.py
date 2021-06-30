@@ -114,8 +114,8 @@ class ToolboxData(toolbox.ToolboxData):
                                 builder.end(state)
                                 pstack.pop()
                             else:
-                                raise ValueError, \
-                                      'Line %d: syntax error, unexpected marker %s.' % (self.line_num, mkr)
+                                err = 'Line %d: syntax error, unexpected marker %s.'
+                                raise ValueError(err % (self.line_num, mkr) )
                     else:
                         # start of terminal marker
                         add = True
@@ -138,8 +138,8 @@ class ToolboxData(toolbox.ToolboxData):
                     builder.end(state)
                     pstack.pop()
                 else:
-                    raise ValueError, \
-                          'Line %d: syntax error, unexpected marker %s.' % (self.line_num, mkr)
+                    err = 'Line %d: syntax error, unexpected marker %s.'
+                    raise ValueError( err % (self.line_num, mkr) )
         for state, first_elems in reversed(pstack):
             builder.end(state)
         return builder.close()

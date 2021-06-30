@@ -58,9 +58,27 @@ try:
 except:
     class Grob: pass
 
-try: import favorites as _favorites
+try:
+    import favorites as _favorites
 except:
     pass
+
+
+# py3 stuff
+py3 = False
+try:
+    unicode('')
+    punicode = unicode
+    pstr = str
+    punichr = unichr
+except NameError:
+    punicode = str
+    pstr = bytes
+    py3 = True
+    punichr = chr
+    long = int
+    xrange = range
+
 
 ####################################################################################
 
@@ -461,7 +479,7 @@ class BaseColor:
         elif len(a) >= 3:
             alpha, mode = 1, "rgb" 
             if len(a) > 3: alpha = a[-1]
-            if kwargs.has_key("mode"): 
+            if "mode" in kwargs: 
                 mode = kwargs["mode"].lower()
             if mode == "rgb":
                 self.r, self.g, self.b, self.a = a[0], a[1], a[2], alpha
@@ -497,7 +515,7 @@ class BaseColor:
     
     def _hasattrs(self, list):
         for a in list:
-            if not self.__dict__.has_key(a):
+            if not a in self.__dict__:
                 return False
         return True
     
@@ -558,7 +576,7 @@ class BaseColor:
         
         """
         
-        if self.__dict__.has_key(a):
+        if a in self.__dict__:
             return a
         elif a == "black":
             return self.__dict__["__k"]        
@@ -571,7 +589,7 @@ class BaseColor:
             return self.__dict__["__"+a[0]]
 
         errmsg = "'"+str(self.__class__)+"' object has no attribute '"+a+"'"
-        raise AttributeError, errmsg
+        raise AttributeError( errmsg )
 
 try:
     # The generic BaseColor is pretty nifty but we want to use Color from NodeBox
@@ -614,8 +632,8 @@ class Color(BaseColor):
         # One string parameter,
         # either hexadecimal color key
         # or a named color or descriptive word.
-        if len(args) == 1 \
-        and isinstance(args[0], (str, unicode)):
+        if (    len(args) == 1
+            and isinstance(args[0], (pstr, punicode))):
             if args[0].startswith("#"):
                 r, g, b = hex_to_rgb(args[0])
                 a = 1.0
@@ -643,11 +661,11 @@ class Color(BaseColor):
                 BaseColor.__init__(self, args[0].r, args[0].g, args[0].b, args[0].a)
 
         # Lab color values.
-        elif kwargs.has_key("mode") \
-        and kwargs["mode"].lower() == "lab":
-            if kwargs.has_key("l") and \
-               kwargs.has_key("a") and \
-               kwargs.has_key("b"):
+        elif (    "mode" in kwargs
+              and kwargs["mode"].lower() == "lab"):
+            if(     "l" in kwargs
+                and "a" in kwargs
+                and "b" in kwargs):
                 r, g, b = lab_to_rgb(kwargs["l"], kwargs["a"], kwargs["b"])
             else:
                 r, g, b = lab_to_rgb(*args)
@@ -658,19 +676,20 @@ class Color(BaseColor):
                 BaseColor.__init__(self, r, g, b)
         
         # RGB, HSB or CMYK color values.
-        elif (kwargs.has_key("mode") \
-        and kwargs["mode"].lower() in modes) \
-        or mode in modes:
+        elif (("mode" in kwargs and kwargs["mode"].lower() in modes)
+              or mode in modes):
             m, r = mode, range
-            if kwargs.has_key("mode"): m = kwargs["mode"]
-            if kwargs.has_key("range"): r = kwargs["range"]
+            if "mode" in kwargs:
+                m = kwargs["mode"]
+            if "range" in kwargs:
+                r = kwargs["range"]
             if nodebox:
                 _ctx.colormode(m, r)
                 BaseColor.__init__(self, _ctx, *args)
             else:
                 BaseColor.__init__(self, args, mode=m)
         
-        if kwargs.has_key("name") and kwargs["name"] != "":
+        if "name" in kwargs and kwargs["name"] != "":
             self.name = kwargs["name"]
         elif self.name == "":
             self.name = self.nearest_hue()
@@ -679,13 +698,13 @@ class Color(BaseColor):
         if nodebox:
             _ctx.colormode(mode, range)
     
-    def str_to_rgb(self, str):
+    def str_to_rgb(self, string):
         
         """ Returns RGB values based on a descriptive string.
         
-        If the given str is a named color, return its RGB values.  
-        Otherwise, return a random named color that has str
-        in its name, or a random named color which name appears in str.
+        If the given string is a named color, return its RGB values.  
+        Otherwise, return a random named color that has string
+        in its name, or a random named color which name appears in string.
         
         Specific suffixes (-ish, -ed, -y and -like) are recognised
         as well, for example, if you need a random variation of "red"
@@ -693,24 +712,24 @@ class Color(BaseColor):
         
         """
         
-        str = str.lower()
+        string = string.lower()
         for ch in "_- ": 
-            str = str.replace(ch, "")
+            string = string.replace(ch, "")
         
-        #if named_hues.has_key(str):
-        #    clr = color(named_hues[str], 1, 1, mode="hsb")
+        #if named_hues.has_key(string):
+        #    clr = color(named_hues[string], 1, 1, mode="hsb")
         #    return clr.r, clr.g, clr.b
     
-        if named_colors.has_key(str):
-            return named_colors[str]
+        if string in named_colors:
+            return named_colors[string]
         
         for suffix in ["ish", "ed", "y", "like"]:
-            str = re.sub("(.*?)"+suffix+"$", "\\1", str)
-        str = re.sub("(.*?)dd$", "\\1d", str)
+            string = re.sub("(.*?)"+suffix+"$", "\\1", string)
+        string = re.sub("(.*?)dd$", "\\1d", string)
     
         matches = []
         for name in named_colors:
-            if name in str or str in name:
+            if name in string or string in name:
                 matches.append(named_colors[name])
         if len(matches) > 0:
             return choice(matches)
@@ -968,11 +987,11 @@ def cmyk(c, m, y, k, a=None, range=1.0, name=""):
 def lab(l, a, b, range=1.0, name=""):
     return color(l, a, b, mode="lab", name=name, range=range)
 
-def hex(str, name=""):
-    return color("#"+str.lstrip("#"), name=name)
+def hex(string, name=""):
+    return color("#"+string.lstrip("#"), name=name)
 
-def named_color(str):
-    return color(str)
+def named_color(string):
+    return color(string)
 
 ### NAMED COLOR OBJECTS ############################################################
 
@@ -1049,7 +1068,7 @@ class ColorList(_list):
                         self.append(color(clr))
 
             # From a string (image/name/context).
-            if isinstance(arg, (str, unicode)):
+            if isinstance(arg, (pstr, punicode)):
                 if os.path.exists(arg):
                     n = 10
                     if "n" in kwargs.keys(): n = kwargs["n"]
@@ -1091,7 +1110,7 @@ class ColorList(_list):
                 p = img.getdata()
                 f = lambda p: choice(p)
             except:
-                raise NoCoreImageOrPIL
+                raise NoCoreImageOrPIL()
 
         for i in _range(n):
             rgba = f(p)
@@ -1866,13 +1885,11 @@ class Gradient(ColorList):
         self._colors = [color(clr) for clr in self._colors]
         
         self._steps = 100
-        if kwargs.has_key("steps"):
+        if "steps" in kwargs:
             self._steps = kwargs["steps"]
-        if kwargs.has_key("steps"):
-            self._steps = kwargs["steps"]
-        
+
         self._spread = 0.5
-        if kwargs.has_key("spread"):
+        if "spread" in kwargs:
             self._spread = kwargs["spread"]
             
         self._cache()
@@ -1941,8 +1958,9 @@ class Gradient(ColorList):
 
         # Chop into left half and right half.
         # Make sure their ending and beginning match colors.
-        left  = colors[:len(colors)/2]
-        right = colors[len(colors)/2:]
+        ncols = int( len(colors)/2 )
+        left  = colors[:ncols]
+        right = colors[ncols:]
         left.append(right[0])
         right.insert(0, left[-1])
     
@@ -2055,7 +2073,7 @@ class Favorites:
             return self
 
         candidate = None
-        if _favorites.data.has_key(q):
+        if q in _favorites.data:
             candidate = q
         for name, (tags, colors) in _favorites.data.iteritems():
             if q in tags:
@@ -2691,7 +2709,7 @@ class ColorTheme(_list):
                     break
                     
         if self.name != "" and len(self.ranges) == 0:
-            raise ColorThemeNotFound
+            raise ColorThemeNotFound()
 
     def add_range(self, range, clr=None, weight=1.0):
         
@@ -2741,7 +2759,7 @@ class ColorTheme(_list):
         weights = []
         for clr, rng, weight in self.ranges:
             h = clr.nearest_hue(primary=False)
-            if grouped.has_key(h):
+            if h in grouped:
                 ranges, total_weight = grouped[h]
                 ranges.append((clr, rng, weight))
                 total_weight += weight

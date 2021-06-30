@@ -241,8 +241,8 @@ class KimmoGUI:
                            command=self.recognize).pack(side='left')
 
 
-			# setup the vars for kimmo
-			# eventually make this a kimmo object
+            # setup the vars for kimmo
+            # eventually make this a kimmo object
             """
             self.klexicons = []
             self.kalternations = []

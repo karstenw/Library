@@ -1,3 +1,7 @@
+
+from __future__ import print_function
+
+
 ### CREDITS ##############################################################################
 
 # Copyright (c) 2008 Tom De Smedt.
@@ -30,12 +34,12 @@ __license__   = "GPL"
 ######################################################################################################
 
 import os
-import cache
-import url
-import html
-import page
-import simplejson
-import json # wrapper for simplejson, backward compatibility.
+from . import cache
+from . import url
+from . import html
+from . import page
+from . import simplejson
+from . import json # wrapper for simplejson, backward compatibility.
 
 
 packages = [
@@ -51,10 +55,10 @@ packages = [
 for p in packages:
     try:
         exec("import %s" % p)
-    except ImportError, err:
-        print
-        print "ERROR importing", repr(p)
-        print err
+    except ImportError as err:
+        print()
+        print( "ERROR importing", repr(p) )
+        print( err )
 
 def set_proxy(host, type="https"):
     url.set_proxy(host, type)

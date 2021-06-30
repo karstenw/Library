@@ -456,7 +456,7 @@ class BrillTemplateI(object):
     C{Brill} training algorithms to generate candidate rules.
     """
     def __init__(self):
-        raise AssertionError, "BrillTemplateI is an abstract interface"
+        raise AssertionError( "BrillTemplateI is an abstract interface" )
 
     def applicable_rules(self, tokens, i, correctTag):
         """
@@ -478,7 +478,7 @@ class BrillTemplateI(object):
         @type correctTag: (any)
         @rtype: C{list} of L{BrillRuleI}
         """
-        raise AssertionError, "BrillTemplateI is an abstract interface"
+        raise AssertionError( "BrillTemplateI is an abstract interface" )
     
     def get_neighborhood(self, token, index):
         """
@@ -494,7 +494,7 @@ class BrillTemplateI(object):
         @type index: C{int}
         @rtype: C{Set}
         """
-        raise AssertionError, "BrillTemplateI is an abstract interface"
+        raise AssertionError( "BrillTemplateI is an abstract interface" )
     
 class ProximateTokensTemplate(BrillTemplateI):
     """
@@ -526,8 +526,8 @@ class ProximateTokensTemplate(BrillTemplateI):
         """
         self._rule_class = rule_class
         self._boundaries = boundaries
-        for (s,e) in boundaries:
-            if s>e:
+        for (s, e) in boundaries:
+            if s > e:
                 raise ValueError('Boundary %s has an invalid range' %
                                  ((s,e),))
 
@@ -537,9 +537,9 @@ class ProximateTokensTemplate(BrillTemplateI):
 
         # For each of this template's boundaries, Find the conditions
         # that are applicable for the given token.
-        applicable_conditions = \
-             [self._applicable_conditions(tokens, index, start, end)
-              for (start, end) in self._boundaries]
+        applicable_conditions = [
+            self._applicable_conditions(tokens, index, start, end)
+                for (start, end) in self._boundaries]
             
         # Find all combinations of these applicable conditions.  E.g.,
         # if applicable_conditions=[[A,B], [C,D]], then this will

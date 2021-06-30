@@ -185,7 +185,7 @@ class CanvasWidget(object):
         @param attribs: The new canvas widget's attributes.
         """
         if self.__class__ == CanvasWidget:
-            raise TypeError, 'CanvasWidget is an abstract base class'
+            raise TypeError('CanvasWidget is an abstract base class' )
         
         if not isinstance(canvas, Canvas):
             raise TypeError('Expected a canvas!')
@@ -239,7 +239,8 @@ class CanvasWidget(object):
         @rtype: C{4-tuple} of C{int}s    
         """
         if self.__hidden: return (0,0,0,0)
-        if len(self.tags()) == 0: raise ValueError('No tags')
+        if len(self.tags()) == 0:
+            raise ValueError('No tags')
         return self.__canvas.bbox(*self.tags())
 
     def width(self):
@@ -248,7 +249,8 @@ class CanvasWidget(object):
             its C{Canvas}'s coordinate space.
         @rtype: C{int}
         """
-        if len(self.tags()) == 0: raise ValueError('No tags')
+        if len(self.tags()) == 0:
+            raise ValueError('No tags')
         bbox = self.__canvas.bbox(*self.tags())
         return bbox[2]-bbox[0]
 
@@ -258,7 +260,8 @@ class CanvasWidget(object):
             its C{Canvas}'s coordinate space.
         @rtype: C{int}
         """
-        if len(self.tags()) == 0: raise ValueError('No tags')
+        if len(self.tags()) == 0:
+            raise ValueError('No tags')
         bbox = self.__canvas.bbox(*self.tags())
         return bbox[3]-bbox[1]
         
@@ -651,7 +654,7 @@ class CanvasWidget(object):
         """
         if not hasattr(self, '_CanvasWidget__children'): self.__children = []
         if child.__parent is not None:
-            raise ValueError('%s already has a parent', child)
+            raise ValueError('%s already has a parent' % child)
         child.__parent = self
         self.__children.append(child)
         
@@ -2052,7 +2055,7 @@ class ColorizedList(object):
         E.g.:
             >>> textwidget.tag_config('terminal', foreground='black')
         """
-        raise AssertionError, 'Abstract base class'
+        raise AssertionError( 'Abstract base class' )
 
     def _item_repr(self, item):
         """
@@ -2061,7 +2064,7 @@ class ColorizedList(object):
         representations may not span multiple lines.  I.e., the text
         strings returned may not contain newline characters.
         """
-        raise AssertionError, 'Abstract base class'
+        raise AssertionError( 'Abstract base class' )
 
     #////////////////////////////////////////////////////////////
     # Item Access

@@ -76,34 +76,34 @@ class PlotFrameI(object):
     """
     def postscript(self, filename):
         'Print the contents of the plot to the given file'
-        raise AssertionError, 'PlotFrameI is an interface'
+        raise AssertionError( 'PlotFrameI is an interface' )
     def config_axes(self, xlog, ylog):
         'Set the scale for the axes (linear/logarithmic)'
-        raise AssertionError, 'PlotFrameI is an interface'
+        raise AssertionError( 'PlotFrameI is an interface' )
     def invtransform(self, x, y):
         'Transform pixel coordinates to plot coordinates'
-        raise AssertionError, 'PlotFrameI is an interface'
+        raise AssertionError( 'PlotFrameI is an interface' )
     def zoom(self, i1, j1, i2, j2):
         'Zoom to the given range'
-        raise AssertionError, 'PlotFrameI is an interface'
+        raise AssertionError( 'PlotFrameI is an interface' )
     def visible_area(self):
         'Return the visible area rect (in plot coordinates)'
-        raise AssertionError, 'PlotFrameI is an interface'
+        raise AssertionError( 'PlotFrameI is an interface' )
     def create_zoom_marker(self):
         'mark the zoom region, for drag-zooming'
-        raise AssertionError, 'PlotFrameI is an interface'
+        raise AssertionError( 'PlotFrameI is an interface' )
     def adjust_zoom_marker(self, x0, y0, x1, y1):
         'adjust the zoom region marker, for drag-zooming'
-        raise AssertionError, 'PlotFrameI is an interface'
+        raise AssertionError( 'PlotFrameI is an interface' )
     def delete_zoom_marker(self):
         'delete the zoom region marker (for drag-zooming)'
-        raise AssertionError, 'PlotFrameI is an interface'
+        raise AssertionError( 'PlotFrameI is an interface' )
     def bind(self, *args): 
         'bind an event to a function'
-        raise AssertionError, 'PlotFrameI is an interface'
+        raise AssertionError( 'PlotFrameI is an interface' )
     def unbind(self, *args): 
         'unbind an event'
-        raise AssertionError, 'PlotFrameI is an interface'
+        raise AssertionError( 'PlotFrameI is an interface' )
 
 class CanvasPlotFrame(PlotFrameI):
     def __init__(self, root, vals, rng):
@@ -511,11 +511,11 @@ class Plot(object):
             if rng is None: rng = [x*0.1 for x in range(-100, 100)]
             try: vals = [vals(i) for i in rng]
             except TypeError:
-                raise TypeError, 'Bad range type: %s' % type(rng)
+                raise TypeError( 'Bad range type: %s' % type(rng) )
 
         # If vals isn't a function, make sure it's a sequence:
         elif type(vals) not in (ListType, TupleType):
-            raise ValueError, 'Bad values type: %s' % type(vals)
+            raise ValueError( 'Bad values type: %s' % type(vals) )
 
         # If vals is a list of points, unzip it.
         elif len(vals) > 0 and type(vals[0]) in (ListType, TupleType):

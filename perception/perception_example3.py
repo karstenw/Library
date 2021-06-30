@@ -1,4 +1,5 @@
 # SIMILE
+from __future__ import print_function
 
 try:
     perception = ximport("perception")
@@ -7,9 +8,9 @@ except ImportError:
     reload(perception)
 
 # Use Google search engine to look for properties:
-q = "princess"
+q = "queen"
 results = perception.suggest_properties(q)
-
+print("results:", results)
 for property in results:
     count = "(" + str(results[property]) + ")"
-    print property, "is-property-of", q, count
+    print(property, "is-property-of", q, count)

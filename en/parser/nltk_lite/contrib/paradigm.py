@@ -101,7 +101,7 @@ class Paradigm(object):
           result = Sentence(self, parse.getTree())
           # Check that a presentation actually exists
           if result == None:
-            raise Error
+            raise Error()
         except:
             print "Sorry, no result can be returned"
             return

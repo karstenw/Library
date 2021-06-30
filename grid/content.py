@@ -1,9 +1,11 @@
 # Copyright (c) 2008 Tom De Smedt.
 # See LICENSE.txt for details.
 
+from __future__ import print_function
+
 import os
-import text
-from style import draw_text, draw_image
+from . import text
+from .style import draw_text, draw_image
 from types import MethodType, FunctionType
 
 #### CONTENT #########################################################################################
@@ -35,7 +37,7 @@ class content(object):
         self._type = None
         self._data = None
         
-        print "data", repr(type(data))
+        print( "data", repr(type(data)) )
 
         if type(data) in (MethodType, FunctionType):
             self._type = CONTENT_FUNCTION

@@ -46,7 +46,7 @@ def hashFromString( s ):
 # "range" is the name of the class instance.
 def range_(start, stop=None, step=1):
     if stop is None: 
-    	stop, start = start, 0
+        stop, start = start, 0
     cur = start
     while cur < stop:
         yield cur
@@ -56,18 +56,18 @@ def range_(start, stop=None, step=1):
 # Those we think can easily be translated visually.
 
 basic_properties = [
-	"angular",  "round",      "large",    "small",
-	"long",     "short",      "bright",   "dark",
-	"calm",     "wild",       "chaotic",  "structured",
-	"clean",    "dirty",      "cold",     "hot",
-	"cool",     "warm",       "sharp",    "soft",
-	"complex",  "simple",     "deep",     "shallow",
-	"dynamic",  "static",     "fast",     "slow",
-	"fluid",    "solid",      "hard",     "soft",
-	"heavy",    "light",      "loud",     "quiet",
-	"natural",  "artificial", "old",      "new",
-	"elegant",  "raw",        "strong",   "weak",
-	"tangible", "abstract",   "thick",    "thin", "repetitive"
+    "angular",  "round",      "large",    "small",
+    "long",     "short",      "bright",   "dark",
+    "calm",     "wild",       "chaotic",  "structured",
+    "clean",    "dirty",      "cold",     "hot",
+    "cool",     "warm",       "sharp",    "soft",
+    "complex",  "simple",     "deep",     "shallow",
+    "dynamic",  "static",     "fast",     "slow",
+    "fluid",    "solid",      "hard",     "soft",
+    "heavy",    "light",      "loud",     "quiet",
+    "natural",  "artificial", "old",      "new",
+    "elegant",  "raw",        "strong",   "weak",
+    "tangible", "abstract",   "thick",    "thin", "repetitive"
 ]
 
 #### CACHE ###########################################################################################

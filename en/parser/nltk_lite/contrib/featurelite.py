@@ -91,7 +91,7 @@ class _FORWARD(object):
     instantiated.
     """
     def __init__(self):
-        raise TypeError, "The _FORWARD class is not meant to be instantiated"
+        raise TypeError("The _FORWARD class is not meant to be instantiated")
 
 class Variable(object):
     """
@@ -624,8 +624,9 @@ def _do_unify(feature1, feature2, bindings1, bindings2, memo):
     if not isMapping(feature1):
         if feature1 == feature2: return feature1
         else: 
-            raise UnificationFailure
-    if not isMapping(feature2): raise UnificationFailure
+            raise UnificationFailure()
+    if not isMapping(feature2):
+        raise UnificationFailure()
     
     # At this point, we know they're both mappings.
     # Do the destructive part of unification.

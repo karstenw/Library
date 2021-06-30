@@ -226,23 +226,23 @@ def collapse_tabs(str, indent=False):
         return str
         
 def plain(html):
-	
-	try: html = str(html)
-	except:
-		pass
-	
-	if html == "None": html = ""
-	html = strip_javascript(html)
-	html = strip_inline_css(html)
-	html = strip_comments(html)
-	html = strip_forms(html)
-	html = strip_tags(html, columns="")
-	html = replace_entities(html)
-	html = collapse_tabs(html)
-	html = collapse_spaces(html)
-	html = collapse_linebreaks(html)	
-	
-	return html
+
+    try: html = str(html)
+    except:
+        pass
+
+    if html == "None": html = ""
+    html = strip_javascript(html)
+    html = strip_inline_css(html)
+    html = strip_comments(html)
+    html = strip_forms(html)
+    html = strip_tags(html, columns="")
+    html = replace_entities(html)
+    html = collapse_tabs(html)
+    html = collapse_spaces(html)
+    html = collapse_linebreaks(html)	
+
+    return html
 
 #from urllib import urlopen
 #html = urlopen("http://nodebox.net").read()

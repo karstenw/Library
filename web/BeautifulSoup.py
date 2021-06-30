@@ -90,9 +90,9 @@ import types
 import re
 import sgmllib
 try:
-  from htmlentitydefs import name2codepoint
+    from htmlentitydefs import name2codepoint
 except ImportError:
-  name2codepoint = {}
+    name2codepoint = {}
 try:
     set
 except NameError:

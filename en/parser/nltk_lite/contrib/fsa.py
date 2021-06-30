@@ -56,7 +56,8 @@ class FSA:
 
     def check_in_sigma(self, label):
         if label and label not in self._sigma:
-            raise ValueError('Label "%s" not in alphabet: %s' % (label, str(self._sigma)))
+            err = 'Label "%s" not in alphabet: %s' % (label, str(self._sigma))
+            raise ValueError(err)
 
     def new_state(self):
         self._num += 1
@@ -321,7 +322,8 @@ _parser = pchart.InsideParse(grammar('abcde'))
 def re2nfa(fsa, re):
     tokens = tokenize.regexp(re, pattern=r'.')
     tree = _parser.parse(tokens)
-    if tree is None: raise ValueError('Bad Regexp')
+    if tree is None:
+        raise ValueError('Bad Regexp')
     state = re2nfa_build(fsa, fsa.start(), tree)
     fsa.set_final([state])
 #        fsa.minimize()

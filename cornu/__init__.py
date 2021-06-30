@@ -4,6 +4,8 @@
 # The code is from http://casper.ghostscript.com/~raph/
 # You can download Raph's curve editor from http://www.levien.com/spiro/.
 
+from __future__ import print_function
+
 from math import *
 
 ### CORNU ############################################################################################
@@ -267,8 +269,8 @@ def draw_cornu(path, ths, closed, flat=False):
         else:
             cmd = draw_cornu_bezier(x0, y0, t0, t1, s0, c0, flip, cs, ss, cmd, scale, rot)
     if closed:
-        pass # print 'closepath'
-    #print 'stroke'
+        pass # print( 'closepath' )
+    #print( 'stroke' )
 
 def draw_cornu_flat(x0, y0, t0, t1, s0, c0, flip, cs, ss, cmd):
     
@@ -281,7 +283,7 @@ def draw_cornu_flat(x0, y0, t0, t1, s0, c0, flip, cs, ss, cmd):
         s *= flip
         s -= s0
         c -= c0
-        #print '%', c, s
+        #print( '%', c, s )
         x = c * cs - s * ss
         y = s * cs + c * ss
         print_pt(x0 + x, y0 + y, cmd)
@@ -435,7 +437,7 @@ def print_pt(x, y, cmd):
     elif (cmd == 'lineto'):
         _ctx.lineto(x, y)
     else:
-        print cmd, x, y
+        print( cmd, x, y )
 
 def print_crv(x1, y1, x2, y2, x3, y3):
     x1 *= 100

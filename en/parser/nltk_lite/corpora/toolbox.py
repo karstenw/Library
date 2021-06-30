@@ -100,7 +100,7 @@ class StandardFormat(object):
         @rtype: iterator over C{(marker, value)} tuples
         """
         if encoding is None and unicode_fields is not None:
-            raise ValueError, 'unicode_fields is set but not encoding.'
+            raise ValueError( 'unicode_fields is set but not encoding.' )
         unwrap_pat = re.compile(r'\n+')
         for mkr, val in self.raw_fields():
             if encoding:
@@ -254,10 +254,10 @@ def to_sfm_string(tree, encoding=None, errors='strict', unicode_fields=None):
         tree = root
 
     if tree.tag != 'toolbox_data':
-        raise ValueError, "not a toolbox_data element structure"
+        raise ValueError( "not a toolbox_data element structure" )
     if encoding is None and unicode_fields is not None:
-        raise ValueError, \
-            "if encoding is not specified then neither should unicode_fields"
+        raise ValueError( "if encoding is not specified then neither "
+                          "should unicode_fields" )
     l = []
     for rec in tree:
         l.append('\n')

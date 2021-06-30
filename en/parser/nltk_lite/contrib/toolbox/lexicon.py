@@ -98,7 +98,7 @@ class Lexicon(ShoeboxFile):
       if self._entries.has_key(key) :
           if unique :
               msg = "Non-unique entry! \nEntry: \n%s\nKey Fields: %s\nKey: '%s'\n" % (entry, self._key_fields, key)    
-              raise ValueError, msg
+              raise ValueError( msg )
       else :
           self._entries[key] = []
       # Now append entry to list of entries for key
