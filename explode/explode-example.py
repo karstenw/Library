@@ -21,4 +21,4 @@ strokewidth(0.5)
 root = "container"
 explode.explode(root, wordnet.hyponyms(root), 700, 700)
 
-print "WordNet definition for " + root + ": " + wordnet.gloss(root)
+print( "WordNet definition for " + root + ": " + wordnet.gloss(root) )

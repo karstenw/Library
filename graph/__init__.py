@@ -158,7 +158,8 @@ class links(list):
         list.append(self, node)
 
     def remove(self, node):
-        if self._edges.has_key(node.id): del self._edges[node.id]
+        if node.id in self._edges:
+            del self._edges[node.id]
         list.remove(self, node)
 
     def edge(self, id): 
@@ -285,10 +286,10 @@ class graph(dict):
         """ Add node from id and return the node object.
         """
         
-        if self.has_key(id): 
+        if id in self: 
             return self[id]
             
-        if not isinstance(style, str) and style.__dict__.has_key["name"]:
+        if not isinstance(style, str) and "name" in style.__dict__: # .has_key["name"]:
             style = style.name
         
         n = self.new_node(self, id, radius, style, category, label, properties)
@@ -313,8 +314,10 @@ class graph(dict):
         
         if id1 == id2: return None
         
-        if not self.has_key(id1): self.add_node(id1)
-        if not self.has_key(id2): self.add_node(id2)
+        if not id1 in self:
+            self.add_node(id1)
+        if not id2 in self:
+            self.add_node(id2)
         n1 = self[id1]
         n2 = self[id2]
         
@@ -338,7 +341,7 @@ class graph(dict):
         """ Remove node with given id.
         """
  
-        if self.has_key(id):
+        if id in self:
             n = self[id]
             self.nodes.remove(n)
             del self[id]
@@ -367,7 +370,7 @@ class graph(dict):
     def node(self, id):
         """ Returns the node in the graph associated with the given id.
         """
-        if self.has_key(id):
+        if id in self:
             return self[id]
         return None
     
@@ -384,9 +387,9 @@ class graph(dict):
         
         """ Returns the node in the graph associated with the given id.
         """
-        if self.has_key(a): 
+        if a in self:
             return self[a]
-        raise AttributeError, "graph object has no attribute '"+str(a)+"'"
+        raise AttributeError( "graph object has no attribute '"+str(a)+"'" )
     
     def update(self, iterations=10):
         
@@ -407,7 +410,7 @@ class graph(dict):
         elif self.layout.i == 1:
             self.layout.iterate()
         elif self.layout.i < self.layout.n:
-            n = min(iterations, self.layout.i / 10 + 1)
+            n = min(iterations, self.layout.i // 10 + 1)
             for i in range(n): 
                 self.layout.iterate()
         
@@ -415,9 +418,9 @@ class graph(dict):
         min_, max = self.layout.bounds
         self.x = _ctx.WIDTH - max.x*self.d - min_.x*self.d
         self.y = _ctx.HEIGHT - max.y*self.d - min_.y*self.d
-        self.x /= 2
-        self.y /= 2
-            
+        self.x = self.x // 2
+        self.y = self.y // 2
+
         return not self.layout.done
         
     def solve(self):
@@ -434,8 +437,8 @@ class graph(dict):
     def offset(self, node):
         """ Returns the distance from the center to the given node.
         """
-        x = self.x + node.x - _ctx.WIDTH/2
-        y = self.y + node.y - _ctx.HEIGHT/2
+        x = self.x + node.x - _ctx.WIDTH // 2
+        y = self.y + node.y - _ctx.HEIGHT // 2
         return x, y
     
     def draw(self, dx=0, dy=0, weighted=False, directed=False, highlight=[], traffic=None):
@@ -524,7 +527,8 @@ class graph(dict):
         Node betweenness weights are updated in the process.
         """
         bc = proximity.brandes_betweenness_centrality(self, normalized, directed)
-        for id, w in bc.iteritems(): self[id]._betweenness = w
+        for id, w in bc.items():
+            self[id]._betweenness = w
         return bc
         
     def eigenvector_centrality(self, normalized=True, reversed=True, rating={},
@@ -535,7 +539,8 @@ class graph(dict):
         ec = proximity.eigenvector_centrality(
             self, normalized, reversed, rating, start, iterations, tolerance
         )
-        for id, w in ec.iteritems(): self[id]._eigenvalue = w
+        for id, w in ec.items():
+            self[id]._eigenvalue = w
         return ec
     
     def nodes_by_betweenness(self, treshold=0.0):
@@ -543,7 +548,8 @@ class graph(dict):
         Nodes with a lot of passing traffic will be at the front of the list.
         """
         nodes = [(n.betweenness, n) for n in self.nodes if n.betweenness > treshold]
-        nodes.sort(); nodes.reverse()
+        nodes.sort()
+        nodes.reverse()
         return [n for w, n in nodes]
         
     nodes_by_traffic = nodes_by_betweenness
@@ -553,7 +559,8 @@ class graph(dict):
         Nodes with a lot of incoming traffic will be at the front of the list
         """
         nodes = [(n.eigenvalue, n) for n in self.nodes if n.eigenvalue > treshold]
-        nodes.sort(); nodes.reverse()
+        nodes.sort()
+        nodes.reverse()
         return [n for w, n in nodes]
         
     nodes_by_weight = nodes_by_eigenvalue
@@ -582,7 +589,7 @@ class graph(dict):
     def _density(self):
         """ The number of edges in relation to the total number of possible edges.
         """
-        return 2.0*len(self.edges) / (len(self.nodes) * (len(self.nodes)-1))
+        return 2.0 * len(self.edges) / (len(self.nodes) * (len(self.nodes)-1))
 
     density = property(_density)
     

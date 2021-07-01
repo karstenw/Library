@@ -16,7 +16,7 @@ l = c.append(color(0))
 # Create an image layer with a radial mask.
 # Use the first image in the image folder.
 img = choice(list(imagefiles("/Library/Desktop Pictures", True)))
-print img
+print( img )
 l = c.layer( img )
 l.mask.gradient(type="radial", spread=0.5)
 l.y -= 120
@@ -54,7 +54,7 @@ strokewidth(0.25)
 autoclosepath(False)
 
 # This is the bounding box of the pixel region.
-print p.x, p.y, p.w, p.h
+print( (p.x, p.y, p.w, p.h) )
 
 # Traverse each pixel.
 for i in range(p.w):

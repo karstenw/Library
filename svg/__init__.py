@@ -9,7 +9,7 @@ __version__   = "1.9.4.5"
 __copyright__ = "Copyright (c) 2007-2009 Tom De Smedt"
 __license__   = "GPL"
 
-import arc
+from . import arc
 import xml.dom.minidom as parser
 import re
 # import md5
@@ -255,7 +255,7 @@ def parse_path(e):
         # Absolute MOVETO.
         # Move the current point to the new coordinates.
         if command == "M":
-            for i in range(len(points)/2):
+            for i in range(len(points) // 2):
                 pointx = points[i*2]
                 pointy = points[i*2+1]
 
@@ -269,7 +269,7 @@ def parse_path(e):
         # Relative MOVETO.
         # Offset from the current point.
         elif command == "m":
-            for i in range(len(points)/2):
+            for i in range(len(points) // 2):
                 pointx = points[i*2]
                 pointy = points[i*2+1]
 
@@ -283,7 +283,7 @@ def parse_path(e):
         # Absolute LINETO.
         # Draw a line from the current point to the new coordinate.
         elif command == "L":
-            for i in range(len(points)/2):
+            for i in range(len(points) // 2):
                 pointx = points[i*2]
                 pointy = points[i*2+1]
 
@@ -295,7 +295,7 @@ def parse_path(e):
         # Relative LINETO.
         # Offset from the current point.
         elif command == "l":
-            for i in range(len(points)/2):
+            for i in range(len(points) // 2):
                 pointx = points[i*2]
                 pointy = points[i*2+1]
 
@@ -335,7 +335,7 @@ def parse_path(e):
         # Absolute CURVETO.
         # Draw a bezier with given control handles and destination.
         elif command == "C":
-            for i in range(len(points)/6):
+            for i in range(len(points) // 6):
                 p1x = points[i*6+0]; p1y = points[i*6+1]
                 p2x = points[i*6+2]; p2y = points[i*6+3]
                 p3x = points[i*6+4]; p3y = points[i*6+5]
@@ -351,7 +351,7 @@ def parse_path(e):
         # Relative CURVETO.
         # Offset from the current point.
         elif command == "c":
-            for i in range(len(points)/6):
+            for i in range(len(points) // 6):
                 p1x = points[i*6+0]; p1y = points[i*6+1]
                 p2x = points[i*6+2]; p2y = points[i*6+3]
                 p3x = points[i*6+4]; p3y = points[i*6+5]
@@ -369,7 +369,7 @@ def parse_path(e):
         # Only the second control handle is given,
         # the first is the reflexion of the previous handle.
         elif command == "S":
-            for i in range(len(points)/4):
+            for i in range(len(points) // 4):
                 p1x = points[i*4]; p1y = points[i*4+1]
                 p2x = points[i*4+2]; p2y = points[i*4+3]
                 if previous_command not in ["C", "c", "S", "s"]:
@@ -391,7 +391,7 @@ def parse_path(e):
         # Relative reflexive CURVETO.
         # Offset from the current point.
         elif command == "s":
-            for i in range(len(points)/4):
+            for i in range(len(points) // 4):
                 p1x = points[i*4]; p1y = points[i*4+1]
                 p2x = points[i*4+2]; p2y = points[i*4+3]
                 if previous_command not in ["C", "c", "S", "s"]:
@@ -524,8 +524,8 @@ def add_color_info(e, path):
     # at the same location is considered closed.
     # Unless it contains a MOVETO somewhere in the middle.
     path.closed = False
-    if path[0].x == path[len(path)-1].x and \
-       path[0].y == path[len(path)-1].y: 
+    if (    path[0].x == path[len(path)-1].x
+        and path[0].y == path[len(path)-1].y ):
         path.closed = True
     for i in range(1,len(path)-1):
         if path[i].cmd == MOVETO:

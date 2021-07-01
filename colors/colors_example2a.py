@@ -31,9 +31,9 @@ sea = list(set(sea))
 n = len(sea)
 image(img, 0, 50, width=WIDTH)
 
-print img
-print n
-print 
+print( img )
+print( n )
+print()
 
 sea.sort()
 

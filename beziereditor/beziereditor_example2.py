@@ -10,7 +10,7 @@ size(800, 800)
 fonts = fontnames()
 
 f = choice( fonts )
-print f
+print( f )
 
 def setup():
     

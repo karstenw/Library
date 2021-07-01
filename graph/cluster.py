@@ -82,9 +82,10 @@ def subgraph(graph, id, distance=1):
             g.add_node(n.id, n.r, n.style, n.category, n.label, (n==graph.root), n.__dict__)
         
     for e in graph.edges:
-        if g.has_key(e.node1.id) and \
-           g.has_key(e.node2.id):
-            g.add_edge(e.node1.id, e.node2.id, e.weight, e.length, e.label, e.__dict__)
+        if (    e.node1.id in g
+            and e.node2.id in g ):
+            g.add_edge(e.node1.id, e.node2.id, e.weight,
+                       e.length, e.label, e.__dict__)
     
     # Should we look for shortest paths between nodes here?
     
@@ -181,6 +182,6 @@ def partition(graph):
     
     g = merged
     g = [graph.sub(g, distance=0) for g in g]
-    g.sort(lambda a, b: len(b) - len(a))             
+    g.sort(lambda a, b: len(b) - len(a))
     
     return g

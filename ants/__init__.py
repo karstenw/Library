@@ -3,6 +3,8 @@
 # Copyright (c) 2007 Tom De Smedt.
 # See LICENSE.txt for details.
 
+from __future__ import print_function
+
 from random import random, randint, uniform
 
 class Food:
@@ -199,5 +201,5 @@ if __name__=='__main__':
         for ant in c:
             from pudb import set_trace; set_trace()
             ant.forage()
-            print ant.x, ant.y
+            print( ant.x, ant.y )
         

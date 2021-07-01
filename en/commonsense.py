@@ -2,10 +2,10 @@
 # Author: Tom De Smedt <tomdesmedt@organisms.be>
 # See LICENSE.txt for details.
 
-import numeral
-import tags
-import wordnet
-import singular
+from . import numeral
+from . import tags
+from . import wordnet
+from . import singular
 
 # Connectives from a file somewhere in Darwin:
 commonsense_connectives = [

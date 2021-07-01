@@ -284,15 +284,15 @@ class Canvas:
         """
         
         x = y = w = h = None
-        if kwargs.has_key("x"): x = kwargs["x"]
-        if kwargs.has_key("y"): y = kwargs["y"]
-        if kwargs.has_key("w"): w = kwargs["w"]
-        if kwargs.has_key("h"): h = kwargs["h"]
+        if 'x' in kwargs: x = kwargs["x"]
+        if 'y' in kwargs: y = kwargs["y"]
+        if 'w' in kwargs: w = kwargs["w"]
+        if 'h' in kwargs: h = kwargs["h"]
         
         name = ""
         type = ""
-        if kwargs.has_key("name"): name = kwargs["name"]
-        if kwargs.has_key("type"): type = kwargs["type"]
+        if 'name' in kwargs: name = kwargs["name"]
+        if 'type' in kwargs: type = kwargs["type"]
 
         # Creates a new Layer object in the Canvas.
         def _add_layer(data, type, x=None, y=None, w=None, h=None, s=Point(1.0,1.0)):
@@ -316,7 +316,7 @@ class Canvas:
             if h != None: s.y = float(h) / h0
             w, h = w0, h0           
             return _add_layer(args[0], type, x, y, w, h, s)
-        except Exception, err:
+        except Exception as err:
             # print err
             pass
 
@@ -328,7 +328,7 @@ class Canvas:
             r, g, b, a = args[1].r, args[1].g, args[1].b, args[1].a
             if type == "radial":
                 type = LAYER_RADIAL_GRADIENT
-                if not kwargs.has_key("spread") or kwargs["spread"] == None: 
+                if not 'spread' in kwargs or kwargs["spread"] == None: 
                     kwargs["spread"] = 0.0        
                 return _add_layer( (args[0], args[1], float(kwargs["spread"])),
                                     type, x, y, w, h)
@@ -3193,8 +3193,10 @@ class CoreImageHelper:
                 break
         name = str(self._i) + "_" +  name
         _ctx.var(name, BOOLEAN, True)
-        try: vars["render"] = _ctx.findvar(name).value
-        except: vars["render"] = True
+        try:
+            vars["render"] = _ctx.findvar(name).value
+        except:
+            vars["render"] = True
         
         # For each parameter,
         # find the defaults in the corresponding CIFilter.
@@ -3208,8 +3210,10 @@ class CoreImageHelper:
  
             if param == "helper":
                 _ctx.var(n, BOOLEAN, False)
-                try: vars[param] = _ctx.findvar(n).value
-                except: vars[param] = False
+                try:
+                    vars[param] = _ctx.findvar(n).value
+                except:
+                    vars[param] = False
             
             if (    isinstance(value, (int, float))
                 and param != "interface"
@@ -3235,8 +3239,10 @@ class CoreImageHelper:
                             break
                 
                 _ctx.var(n, NUMBER, value, min, max)
-                try: vars[param] = _ctx.findvar(n).value
-                except: vars[param] = value
+                try:
+                    vars[param] = _ctx.findvar(n).value
+                except:
+                    vars[param] = value
         
         self._i += 1 
         return vars

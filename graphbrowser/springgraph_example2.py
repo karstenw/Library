@@ -1,5 +1,5 @@
 springgraph = ximport("springgraph")
-reload(springgraph)
+# reload(springgraph)
 
 size(400, 400)
 speed(30)

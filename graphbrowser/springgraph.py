@@ -668,7 +668,7 @@ class GraphStyles(dict):
         if self.has_key(a): 
             return self[a]
             
-        raise AttributeError, "'GraphStyles' object has no attribute '"+a+"'"
+        raise AttributeError( "'GraphStyles' object has no attribute '"+a+"'" )
         
     def __setattr__(self, a, v):
         
@@ -680,7 +680,7 @@ class GraphStyles(dict):
                 style.__dict__[a] = v
                 
         else:
-            raise AttributeError, "'GraphStyle' object has no attribute '"+a+"'"
+            raise AttributeError( "'GraphStyle' object has no attribute '"+a+"'" )
 
 #### GRAPHSTYLE ######################################################################################
         
@@ -1042,7 +1042,8 @@ def centrality(g, normalized=True):
             sorted = [(id, w) for w, id in sorted]
             for id, w in sorted:
                 g.index[id].weight = w+1
-                print w
+                print( w )
             return sorted
                     
         return betweenness
+

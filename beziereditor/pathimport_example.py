@@ -1,7 +1,10 @@
 size(1200, 1000)
 
-svg = ximport("svg")
-reload(svg)
+try:
+    svg = ximport("svg")
+except ImportError:
+    svg = ximport("__init__")
+    reload(pb)
 
 paths = svg.parse(open("path.svg").read())
 

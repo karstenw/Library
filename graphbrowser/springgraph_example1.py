@@ -1,5 +1,5 @@
 springgraph = ximport("springgraph")
-reload(springgraph)
+# reload(springgraph)
 
 from time import time
 
@@ -85,9 +85,9 @@ if g.update() == False:
     id2 = choice(g.index.keys())
     path = g.shortest_path(id1, id2)
 
-print g.distance_map()
-print springgraph.centrality(g)
-print g.strongest_nodes()
+print( g.distance_map() )
+print( springgraph.centrality(g) )
+print( g.strongest_nodes() )
 
 # Draw the graph
 # and display the shortest path.

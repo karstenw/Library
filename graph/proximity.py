@@ -120,7 +120,7 @@ def dijkstra_shortest_path(graph, id1, id2, heuristic=None, directed=False):
         if v1 == end:
             return list(flatten(path))[::-1] + [v1]
         path = (v1, path)
-        for (v2, cost2) in G[v1].iteritems():
+        for (v2, cost2) in G[v1].items():
             if v2 not in visited:
                 heapq.heappush(q, (cost1 + cost2, v2, path))
 
@@ -189,7 +189,7 @@ def brandes_betweenness_centrality(graph, normalized=True, directed=False):
         else:
             m = 1
             
-        betweenness = dict([(id, w/m) for id, w in betweenness.iteritems()])
+        betweenness = dict([(id, w/m) for id, w in betweenness.items()])
         return betweenness
 
 #--- EIGENVECTOR CENTRALITY --------------------------------------------------------------------------
@@ -239,7 +239,8 @@ def eigenvector_centrality(graph, normalized=True, reversed=True, rating={},
         for n in x:
             for nbr in W[n]:
                 r = 1
-                if rating.has_key(n): r = rating[n]
+                if n in rating:
+                    r = rating[n]
                 x[n] += 0.01 + x0[nbr] * W[n][nbr] * r
         _normalize(x)          
         e = sum([abs(x[n]-x0[n]) for n in x])
@@ -248,7 +249,7 @@ def eigenvector_centrality(graph, normalized=True, reversed=True, rating={},
                 # Normalize between 0.0 and 1.0.
                 m = max(x.values())
                 if m == 0: m = 1
-                x = dict([(id, w/m) for id, w in x.iteritems()])
+                x = dict([(id, w // m) for id, w in x.items()])
             return x
 
     #raise NoConvergenceError
