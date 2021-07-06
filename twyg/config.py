@@ -348,7 +348,7 @@ def buildconfig(tokens, cwd=None, state='start', config=None, curr=None,
                                 % (name, configpath), prevtoken)
 
                         tokens, cwd = _tokenize_file(configpath, flat=False)
-                    except IOError, e:
+                    except IOError as e:
                         raise ConfigError(
                             "Error while processing '%s' directive:\n"
                             "\t%s: '%s'" % (name, e.strerror, e.filename),
@@ -741,7 +741,7 @@ def unaryop(t, op):
     try:
         a = t.first.eval()
         return op(a)
-    except TypeError, e:
+    except TypeError as e:
         raise ConfigError("Cannot use operator '%s' on type '%s'"
                           % (opnames[op.__name__], type(a).__name__), t)
 
@@ -754,7 +754,7 @@ def binaryop(t, op):
         if type(b) == int:
             b = float(b)
         return op(a, b)
-    except TypeError, e:
+    except TypeError as e:
         raise ConfigError("Cannot use operator '%s' on types '%s' and '%s'"
                           % (opnames[op.__name__], type(a).__name__,
                              type(b).__name__), t)
@@ -799,7 +799,7 @@ def eval(self):
     a = [x.eval() for x in args]
     try:
         return fn(*a)
-    except TypeError, e:
+    except TypeError as e:
         raise ConfigError(str(e).capitalize(), self)
 
 
@@ -1134,13 +1134,13 @@ class Properties(object):
 
         # Build properties dictionary
         self._properties = {}
-        for name, prop_params in properties.iteritems():
+        for name, prop_params in properties.items():
             # The first parameter is the property class, the second the
             # optional constructor parameters
             prop_class, opts = prop_params
             self._properties[name] = prop_class(name, **opts)
 
-        for name, prop in self._properties.iteritems():
+        for name, prop in self._properties.items():
             if name not in config:
                 raise ConfigError("Missing property: '%s'" % name)
             e = parse_expr(config[name])
@@ -1175,7 +1175,7 @@ class Properties(object):
 
         p = self._properties[name]
         if scope:
-            for propname, varname in scope.property_mappings.iteritems():
+            for propname, varname in scope.property_mappings.items():
                 if hasattr(scope, propname):
                     vars[varname] = getattr(scope, propname)
                 # TODO triggered by 'basecolor' -- why?
@@ -1198,16 +1198,18 @@ def format_paramvalue_error(configname, paramname, value, correct_type):
 
 def get_stylename(configname, config):
     if STYLE not in config:
-        raise ConfigError, ("Style must be specified in '%s'" % (configname))
+        raise ConfigError("Style must be specified in '%s'" % (configname))
 
     expr = config[STYLE]
-    if len(expr) == 2 and expr[0].id == '(name)' and expr[1].id == '(end)':
+    if (    len(expr) == 2
+        and expr[0].id == '(name)'
+        and expr[1].id == '(end)'):
         stylename = expr[0].value
     else:
         raise ConfigError("Invalid style name", expr[0])
 
     if not (type(stylename) == str or type(stylename) == unicode):
-        raise ConfigError, format_paramvalue_error(configname, STYLE,
-                                                   stylename, str)
+        raise ConfigError( format_paramvalue_error(configname, STYLE,
+                                                   stylename, str))
     return stylename
 
