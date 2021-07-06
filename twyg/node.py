@@ -180,8 +180,7 @@ class NodeDrawer(object):
         _ctx.lineheight(node.lineheight)
 
         lineheight = node.lineheight * node.fontsize
-        textwidth_func = lambda(txt): textwidth(_ctx, txt,
-                                                node.fontname, node.fontsize)
+        textwidth_func = lambda txt: textwidth(_ctx, txt, node.fontname, node.fontsize)
 
         if self._wraprect:
             (node._textlines, node._textlinewidths, node._textrects,
@@ -678,5 +677,5 @@ def nodedrawer_by_name(name):
     if name in _nodedrawer_map:
         return _nodedrawer_map[name]
     else:
-        raise ValueError, 'Unrecognized node drawer name: %s' % name
+        raise ValueError( 'Unrecognized node drawer name: %s' % name )
 
