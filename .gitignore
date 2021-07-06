@@ -16,11 +16,16 @@ beziereditor/+latex
 lsys/Examples/Lindenmayer Systems, Fractals, and Plants/*.png
 sklearn/examples/applications/page_links_en.nt.bz2
 sklearn/examples/applications/redirects_en.nt.bz2 
+
 pattern/examples/02-db/store.db
 pattern/examples/02-db/food.txt
 pattern/examples/*/*.slp
 pattern/examples/*/*.csv
 pattern/examples/*/*.svm
+
+pattern
+
+
 photobot/images/*
 photobot/examples/exports/
 coreimage/Missing Filters.tab
