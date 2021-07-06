@@ -9,7 +9,7 @@ except:
 # Get a random URL from our favorites list.
 url = choice(web.newsfeed.favorites.values())
 
-print "URL", url
+print( "URL", url )
 
 # Parse the newsfeed data into a handy object.
 feed = web.newsfeed.parse(url)
