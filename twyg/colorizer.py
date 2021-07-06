@@ -203,5 +203,5 @@ def colorizer_by_name(name):
     if name in _colorizer_map:
         return _colorizer_map[name]
     else:
-        raise ValueError, 'Unrecognized colorizer name: %s' % name
+        raise ValueError( 'Unrecognized colorizer name: %s' % name )
 
