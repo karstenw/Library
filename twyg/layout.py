@@ -310,5 +310,5 @@ def layout_by_name(name):
     if name in _layout_map:
         return _layout_map[name]
     else:
-        raise ValueError, 'Unrecognized layout name: %s' % name
+        raise ValueError( 'Unrecognized layout name: %s' % name )
 
