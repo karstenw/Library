@@ -75,8 +75,7 @@ def _wraptext(words, wordwidths, spacewidth, textwidth_func, rects=None,
     """
 
     if not rects and maxwidth <= 0:
-        raise (ValueError,
-               'maxwidth must be greater than 0 if no rects are provided')
+        raise ValueError( 'maxwidth must be greater than 0 if no rects are provided' )
 
     maxwidth = max(maxwidth, max(wordwidths))
 
