@@ -17,7 +17,7 @@ def opposite_dir(d):
     if d == Direction.Left:
         return Direction.Right
     else:
-        raise ValueError, 'Invalid direction: %s' % d
+        raise ValueError( 'Invalid direction: %s' % d )
 
 
 class Node(object):
@@ -88,7 +88,7 @@ class Node(object):
                 depth += 1
                 if depth == n:
                     return curr
-            raise ValueError, 'Node ancestor argument out of range: ' + n
+            raise ValueError( 'Node ancestor argument out of range: ' + n )
 
         # If n is negative or zero, get n-th ancestor from the root
         # towards the node
@@ -104,8 +104,7 @@ class Node(object):
             else:
                 n -= 1
                 if -n > len(ancestors):
-                    raise (ValueError,
-                          'Node ancestor argument out of range: ' + n)
+                    raise ValueError( 'Node ancestor argument out of range: ' + n )
                 return ancestors[n]
 
     def direction(self):
