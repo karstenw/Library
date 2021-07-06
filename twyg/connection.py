@@ -332,5 +332,5 @@ def conndrawer_by_name(name):
     if name in _conndrawer_map:
         return _conndrawer_map[name]
     else:
-        raise ValueError, 'Unrecognized connection drawer name: %s' % name
+        raise ValueError( 'Unrecognized connection drawer name: %s' % name )
 
