@@ -20,12 +20,12 @@ import twyg.node
 
 # Detect nodebox
 try:
-    #print "_fullname(_ctx)", repr(_fullname(_ctx))
+    #print( "_fullname(_ctx)", repr(_fullname(_ctx)) )
     #print
     #nodebox = _fullname(_ctx) == 'nodebox.graphics.Context'
     nodebox = 'nodebox.graphics.Context'
 except NameError:
-    print "NO NODEBOX!"
+    print( "NO NODEBOX!" )
     nodebox = False
 
 
@@ -113,7 +113,7 @@ def _create_drawers(config, section, factory_func, constr_args=()):
     level_dict = c if _has_levels(c) else {DEFAULT_LEVEL: c}
     drawers = []
 
-    for levelname, conf in level_dict.iteritems():
+    for levelname, conf in level_dict.items():
         style = _get_style(section + '.' + levelname, conf)
         level = createlevel(levelname, conf)
         drawer_class = factory_func(style)
