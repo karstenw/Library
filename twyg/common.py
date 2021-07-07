@@ -96,7 +96,7 @@ def brightness(col):
 def loadjson(path):
     """ Loads a JSON file. """
     try:
-        fp = io.open(path)
+        fp = io.open(path, encoding="utf-8")
         data = json.load(fp)
         fp.close()
     except Exception as e:

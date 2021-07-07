@@ -177,7 +177,7 @@ def generate_output_nodebox(data_fname, config_fname, colorscheme=None,
     # Center tree
     tree.shiftnodes(padleft, padtop)
 
-    _ctx.size(width, height)
+    _ctx.size( int(width), int(height) )
     _ctx.background(tree.background_color())
 
     tree.draw()
