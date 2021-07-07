@@ -630,7 +630,12 @@ def symbol(id, value=None, bp=0):
         s.value = value
         symbol_table[key] = s
 
-    s.lbp = max(bp, s.lbp)
+    # crashes in py3; cmp( int, None )
+    if s.lbp != None:
+        if bp != None:
+            s.lbp = max(bp, s.lbp)
+    elif bp != None:
+        s.lbp = bp
     return s
 
 def operator(op, bp=None):
