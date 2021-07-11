@@ -8,7 +8,7 @@ from twyg.common import validate_margins
 
 
 def exit_error(msg):
-    print >>sys.stderr, sys.argv[0] + ': ' + msg
+    print( "XXX  " + sys.argv[0] + ': ' + msg, file=sys.stderr)
     sys.exit(1)
 
 
