@@ -11,7 +11,7 @@ isight/*.jpg
 web/cache/*
 noise/texture.jpg
 coreimage/images/*
-beziereditor/path.svg
+beziereditor/*.svg
 beziereditor/+latex
 lsys/Examples/Lindenmayer Systems, Fractals, and Plants/*.png
 sklearn/examples/applications/page_links_en.nt.bz2
