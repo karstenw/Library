@@ -20,7 +20,7 @@ def setup():
     # constructed from a character.
     fontsize(800)
     p = textpath("&", 100, 700, font=f)
-    editor = beziereditor.start(p, filename="path")
+    editor = beziereditor.start(p, filename="char")
 
 def draw():
     
