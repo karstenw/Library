@@ -29,9 +29,9 @@ else:
 
 if kwdbg:
     # make random choices repeatable for debugging
-    rnd.seed(0)
+    rnd.seed(8)
 
-imagewell = pb.loadImageWell()
+imagewell = pb.loadImageWell(resultfile="imagewell-files")
 tiles = imagewell['landscape']
 rnd.shuffle(tiles)
 
@@ -91,5 +91,5 @@ c.top.hue()
 pb.label(c, "Hue Image1 over Image2", x, y)
 
 # draw the result
-c.draw()
+c.draw(name="Layer_function_hue")
 

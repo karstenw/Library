@@ -29,9 +29,13 @@ else:
 
 if kwdbg:
     # make random choices repeatable for debugging
-    rnd.seed(0)
+    rnd.seed(8)
 
-imagewell = pb.loadImageWell()
+imagewell = pb.loadImageWell(   resultfile="imagewell-files",
+                                ignoreFolderNames=('+offline',))
+
+
+
 tiles = imagewell['landscape']
 rnd.shuffle(tiles)
 
@@ -91,5 +95,5 @@ c.top.multiply()
 pb.label(c, "Multiply Image1 over Image2", x, y)
 
 # draw the result
-c.draw()
+c.draw(name="Layer_function_multiply")
 

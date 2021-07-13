@@ -7,6 +7,7 @@ import sys, os
 import pprint
 pp = pprint.pprint
 kwdbg = 0
+kwlog = 0
 
 # need a different name for nodebox
 import random as rnd
@@ -15,7 +16,7 @@ import libgradient
 
 if kwdbg and 1:
     # make random choices repeatable for debugging
-    rnd.seed( 1 )
+    rnd.seed( 123456 )
 
 
 # width and height of destination image
@@ -68,8 +69,10 @@ c = pb.canvas( WIDTH, HEIGHT)
 c.fill( (85,85,85) )
 
 
-if 1: #not kwdbg:
-    turns = int(10 + rnd.random() * 10)
+if not kwdbg:
+    turns = int( round(20 + (rnd.random() * 10)) )
+    if kwlog:
+        print( "shuffle turns: %i" % turns )
     for turn in range( turns ):
         rnd.shuffle(tiles)
         rnd.shuffle(backgrounds)
