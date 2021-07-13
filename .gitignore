@@ -10,12 +10,9 @@ isight/*.jpg
 */doc/*
 web/cache/*
 noise/texture.jpg
-coreimage/images/*
 beziereditor/*.svg
 beziereditor/+latex
 lsys/Examples/Lindenmayer Systems, Fractals, and Plants/*.png
-sklearn/examples/applications/page_links_en.nt.bz2
-sklearn/examples/applications/redirects_en.nt.bz2 
 
 pattern/examples/02-db/store.db
 pattern/examples/02-db/food.txt
@@ -26,19 +23,23 @@ pattern/examples/*/*.svm
 pattern
 pattern-old.zip
 
+*.webloc
 
-photobot/images/*
-photobot/examples/exports/
 coreimage/Missing Filters.tab
-coreimage/coreimage-example5b.py
+coreimage/citools.py
 coreimage/coreimage-example5a.py
+coreimage/coreimage-example5b.py
+coreimage/explorer.py
+coreimage/images/*
+
 fatpath/fatpath-0.6.py
-photobot/examples/exports
+
+imagewell-files.tab
 imagewell.txt
+
+photobot/examples/exports/
+photobot/examples/landslide@coreimage
+photobot/examples/transform2/*
+photobot/images/*
 photobot/photobot-standalone
 photobot/photobot.leo
-photobot/examples/transform2/*
-*.webloc
-coreimage/explorer.py
-coreimage/citools.py
-photobot/examples/landslide@coreimage
