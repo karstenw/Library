@@ -1,5 +1,8 @@
 """A parser for SGML, using the derived class as a static DTD."""
 
+from __future__ import print_function
+
+
 # XXX This only supports those SGML features used by HTML.
 
 # XXX There should be a way to distinguish between PCDATA (parsed
@@ -10,6 +13,7 @@
 
 import _markupbase
 import re
+
 
 __all__ = ["SGMLParser", "SGMLParseError"]
 
