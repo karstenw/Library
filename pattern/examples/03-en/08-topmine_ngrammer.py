@@ -6,7 +6,7 @@ from builtins import str, bytes, dict, int
 import os
 import sys
 import codecs
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
+# sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
 
 import pattern.text as text_module
 from pattern.text.en.wordlist import STOPWORDS
