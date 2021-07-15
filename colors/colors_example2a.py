@@ -42,4 +42,4 @@ x = 0
 for clr in sea:
     fill(clr)
     rect(x, 0, w, 50)
-    x += w
+    x += w 

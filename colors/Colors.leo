@@ -27,11 +27,13 @@
 <v t="karstenw.20210712120542.10"><vh>hsv_to_rgb</vh></v>
 <v t="karstenw.20210712120542.11"><vh>rgb_to_hsv</vh></v>
 </v>
+<v t="karstenw.20210715121613.1"><vh>NAMED COLOR HUES</vh></v>
+<v t="karstenw.20210715121757.1"><vh>NAMED COLORS</vh></v>
 <v t="karstenw.20210712122004.1" a="E"><vh>COLOR CONTEXT</vh>
 <v t="karstenw.20210712122100.1"><vh>newHeadline</vh></v>
 </v>
 <v t="karstenw.20210712120918.1" a="E"><vh>NAMED COLOR HUES</vh>
-<v t="karstenw.20210712120542.12"><vh>class BaseColor</vh>
+<v t="karstenw.20210712120542.12" a="E"><vh>class BaseColor</vh>
 <v t="karstenw.20210712120542.13"><vh>__init__</vh></v>
 <v t="karstenw.20210712120542.14"><vh>__repr__</vh></v>
 <v t="karstenw.20210712120542.15"><vh>copy</vh></v>
@@ -53,6 +55,8 @@
 <v t="karstenw.20210712120542.30"><vh>hex</vh></v>
 <v t="karstenw.20210712120542.31"><vh>__eq__</vh></v>
 <v t="karstenw.20210712120542.32"><vh>__ne__</vh></v>
+<v t="karstenw.20210715171955.1"><vh>__lt__</vh></v>
+<v t="karstenw.20210715171804.1"><vh>__hash__</vh></v>
 <v t="karstenw.20210712120542.33"><vh>darken</vh></v>
 <v t="karstenw.20210712120542.34"><vh>lighten</vh></v>
 <v t="karstenw.20210712120542.35"><vh>desaturate</vh></v>
@@ -91,7 +95,7 @@
 <v t="karstenw.20210712120542.64"><vh>join</vh></v>
 <v t="karstenw.20210712120542.65"><vh>blend</vh></v>
 <v t="karstenw.20210712120542.66"><vh>sort_by_distance</vh></v>
-<v t="karstenw.20210712122340.1"><vh>TROUBLEMAKERS</vh>
+<v t="karstenw.20210712122340.1" a="E"><vh>TROUBLEMAKERS</vh>
 <v t="karstenw.20210712120542.67"><vh>_sorted_copy</vh></v>
 <v t="karstenw.20210712120542.68"><vh>sort_by_hue</vh></v>
 <v t="karstenw.20210712120542.69"><vh>sort_by_saturation</vh></v>
@@ -157,11 +161,11 @@
 </v>
 <v t="karstenw.20210712120542.122"><vh>outline</vh></v>
 <v t="karstenw.20210712121307.1"><vh>FAVORITE COLOR LISTS</vh>
-<v t="karstenw.20210712120542.123"><vh>class Favorites</vh>
+<v t="karstenw.20210712120542.123" a="E"><vh>class Favorites</vh>
 <v t="karstenw.20210712120542.124"><vh>__getattr__</vh></v>
 </v>
 </v>
-<v t="karstenw.20210712121331.1" a="E"><vh>COLOR RANGE</vh>
+<v t="karstenw.20210712121331.1"><vh>COLOR RANGE</vh>
 <v t="karstenw.20210712120542.125"><vh>class ColorRange</vh>
 <v t="karstenw.20210712120542.126"><vh>__init__</vh></v>
 <v t="karstenw.20210712120542.127"><vh>constrain_hue</vh></v>
@@ -185,16 +189,16 @@
 </v>
 <v t="karstenw.20210712120542.145"><vh>colorrange</vh></v>
 </v>
-<v t="karstenw.20210712121349.1" a="E"><vh>COLOR SHADES</vh>
+<v t="karstenw.20210712121349.1"><vh>COLOR SHADES</vh>
 <v t="karstenw.20210712121356.1"><vh>shades</vh></v>
 <v t="karstenw.20210712120542.146"><vh>shade</vh></v>
 <v t="karstenw.20210712120542.147"><vh>shade_opposite</vh></v>
 <v t="karstenw.20210712120542.148"><vh>guess_name</vh></v>
 </v>
-<v t="karstenw.20210712121445.1" a="E"><vh>COLOR SHADER</vh>
+<v t="karstenw.20210712121445.1"><vh>COLOR SHADER</vh>
 <v t="karstenw.20210712120542.149"><vh>shader</vh></v>
 </v>
-<v t="karstenw.20210712121503.1" a="E"><vh>COLOR AGGREGATE</vh>
+<v t="karstenw.20210712121503.1"><vh>COLOR AGGREGATE</vh>
 <v t="karstenw.20210712121514.1"><vh>newHeadline</vh></v>
 <v t="karstenw.20210712120542.150"><vh>aggregated</vh></v>
 <v t="karstenw.20210712120542.151"><vh>class ColorThemeNotFound</vh></v>
@@ -225,26 +229,26 @@
 </v>
 <v t="karstenw.20210712120542.176"><vh>theme</vh></v>
 </v>
-<v t="karstenw.20210712121541.1" a="E"><vh>COLORS FROM WEB</vh>
+<v t="karstenw.20210712121541.1"><vh>COLORS FROM WEB</vh>
 <v t="karstenw.20210712120542.177"><vh>search_engine</vh></v>
 <v t="karstenw.20210712120543.1"><vh>google</vh></v>
 <v t="karstenw.20210712120543.2"><vh>yahoo</vh></v>
 <v t="karstenw.20210712120543.3"><vh>morguefile</vh></v>
 </v>
-<v t="karstenw.20210712121604.1" a="E"><vh>GRADIENT FILLS AND SHADOWS</vh>
+<v t="karstenw.20210712121604.1"><vh>GRADIENT FILLS AND SHADOWS</vh>
 <v t="karstenw.20210712121620.1"><vh>newHeadline</vh></v>
 <v t="karstenw.20210712120543.4"><vh>class shadow</vh>
 <v t="karstenw.20210712120543.5"><vh>__init__</vh></v>
 <v t="karstenw.20210712120543.6"><vh>_draw</vh></v>
 </v>
 <v t="karstenw.20210712120543.7"><vh>noshadow</vh></v>
-<v t="karstenw.20210712120543.8"><vh>class gradientpath</vh>
+<v t="karstenw.20210712120543.8" a="E"><vh>class gradientpath</vh>
 <v t="karstenw.20210712120543.9"><vh>__init__</vh></v>
 <v t="karstenw.20210712120543.10"><vh>_draw</vh></v>
 </v>
 <v t="karstenw.20210712120543.11"><vh>gradientbackground</vh></v>
 </v>
-<v t="karstenw.20210712121646.1"><vh>TOOLS</vh>
+<v t="karstenw.20210712121646.1" a="E"><vh>TOOLS</vh>
 <v t="karstenw.20210712120543.12"><vh>colorwheel</vh></v>
 </v>
 <v t="karstenw.20210712121727.1"><vh>TODO &amp; VERSIONS</vh></v>
@@ -572,191 +576,13 @@ list = colorlist
         elif g == v : h = 2 + (b-r) / d
         else        : h = 4 + (r-g) / d
 
-    h = h * (60.0/360)
+    h = h * (60.0 / 360)
     if h &lt; 0: 
         h = h + 1.0
         
     return h, s, v
 
 rgb2hsv = rgb2hsb = rgb_to_hsb = rgb_to_hsv
-
-#### NAMED COLOR HUES ##############################################################
-
-# Names for each distinctive hue on the color wheel.
-
-named_hues = {
-    "red"         : 0.0   / 360,
-    "orange"      : 30.0  / 360,
-    "yellow"      : 60.0  / 360,
-    "lime"        : 90.0  / 360,
-    "green"       : 120.0 / 360,
-    "teal"        : 150.0 / 360,
-    "cyan"        : 180.0 / 360,
-    "azure"       : 210.0 / 360,
-    "blue"        : 240.0 / 360,
-    "indigo"      : 270.0 / 360,
-    "purple"      : 300.0 / 360,
-    "pink"        : 330.0 / 360,
-}
-
-primary_hues = ["red", "orange", "yellow", "green", "blue", "purple", "pink"]
-primary_and_secondary_hues = [
-    "red", "orange", "yellow", "lime", "green", "teal", 
-    "cyan", "azure", "blue", "indigo", "purple", "pink"
-]
-
-### NAMED COLORS ###################################################################
-
-# HTML named colors.
-
-named_colors = {
-                
-    "lightpink"            : (1.00, 0.71, 0.76),
-    "pink"                 : (1.00, 0.75, 0.80),
-    "crimson"              : (0.86, 0.08, 0.24),
-    "lavenderblush"        : (1.00, 0.94, 0.96),
-    "palevioletred"        : (0.86, 0.44, 0.58),
-    "hotpink"              : (1.00, 0.41, 0.71),
-    "deeppink"             : (1.00, 0.08, 0.58),
-    "mediumvioletred"      : (0.78, 0.08, 0.52),
-    "orchid"               : (0.85, 0.44, 0.84),
-    "thistle"              : (0.85, 0.75, 0.85),
-    "plum"                 : (0.87, 0.63, 0.87),
-    "violet"               : (0.93, 0.51, 0.93),
-    "fuchsia"              : (1.00, 0.00, 1.00),
-    "darkmagenta"          : (0.55, 0.00, 0.55),
-    "purple"               : (0.50, 0.00, 0.50),
-    "mediumorchid"         : (0.73, 0.33, 0.83),
-    "darkviolet"           : (0.58, 0.00, 0.83),
-    "darkorchid"           : (0.60, 0.20, 0.80),
-    "indigo"               : (0.29, 0.00, 0.51),
-    "blueviolet"           : (0.54, 0.17, 0.89),
-    "mediumpurple"         : (0.58, 0.44, 0.86),
-    "mediumslateblue"      : (0.48, 0.41, 0.93),
-    "slateblue"            : (0.42, 0.35, 0.80),
-    "darkslateblue"        : (0.28, 0.24, 0.55),
-    "ghostwhite"           : (0.97, 0.97, 1.00),
-    "lavender"             : (0.90, 0.90, 0.98),
-    "blue"                 : (0.00, 0.00, 1.00),
-    "mediumblue"           : (0.00, 0.00, 0.80),
-    "darkblue"             : (0.00, 0.00, 0.55),
-    "navy"                 : (0.00, 0.00, 0.50),
-    "midnightblue"         : (0.10, 0.10, 0.44),
-    "royalblue"            : (0.25, 0.41, 0.88),
-    "cornflowerblue"       : (0.39, 0.58, 0.93),
-    "lightsteelblue"       : (0.69, 0.77, 0.87),
-    "lightslategray"       : (0.47, 0.53, 0.60),
-    "slategray"            : (0.44, 0.50, 0.56),
-    "dodgerblue"           : (0.12, 0.56, 1.00),
-    "aliceblue"            : (0.94, 0.97, 1.00),
-    "steelblue"            : (0.27, 0.51, 0.71),
-    "lightskyblue"         : (0.53, 0.81, 0.98),
-    "skyblue"              : (0.53, 0.81, 0.92),
-    "deepskyblue"          : (0.00, 0.75, 1.00),
-    "lightblue"            : (0.68, 0.85, 0.90),
-    "powderblue"           : (0.69, 0.88, 0.90),
-    "cadetblue"            : (0.37, 0.62, 0.63),
-    "darkturquoise"        : (0.00, 0.81, 0.82),
-    "azure"                : (0.94, 1.00, 1.00),
-    "lightcyan"            : (0.88, 1.00, 1.00),
-    "paleturquoise"        : (0.69, 0.93, 0.93),
-    "aqua"                 : (0.00, 1.00, 1.00),
-    "darkcyan"             : (0.00, 0.55, 0.55),
-    "teal"                 : (0.00, 0.50, 0.50),
-    "darkslategray"        : (0.18, 0.31, 0.31),
-    "mediumturquoise"      : (0.28, 0.82, 0.80),
-    "lightseagreen"        : (0.13, 0.70, 0.67),
-    "turquoise"            : (0.25, 0.88, 0.82),
-    "aquamarine"           : (0.50, 1.00, 0.83),
-    "mediumaquamarine"     : (0.40, 0.80, 0.67),
-    "mediumspringgreen"    : (0.00, 0.98, 0.60),
-    "mintcream"            : (0.96, 1.00, 0.98),
-    "springgreen"          : (0.00, 1.00, 0.50),
-    "mediumseagreen"       : (0.24, 0.70, 0.44),
-    "seagreen"             : (0.18, 0.55, 0.34),
-    "honeydew"             : (0.94, 1.00, 0.94),
-    "darkseagreen"         : (0.56, 0.74, 0.56),
-    "palegreen"            : (0.60, 0.98, 0.60),
-    "lightgreen"           : (0.56, 0.93, 0.56),
-    "limegreen"            : (0.20, 0.80, 0.20),
-    "lime"                 : (0.00, 1.00, 0.00),
-    "forestgreen"          : (0.13, 0.55, 0.13),
-    "green"                : (0.00, 0.50, 0.00),
-    "darkgreen"            : (0.00, 0.39, 0.00),
-    "lawngreen"            : (0.49, 0.99, 0.00),
-    "chartreuse"           : (0.50, 1.00, 0.00),
-    "greenyellow"          : (0.68, 1.00, 0.18),
-    "darkolivegreen"       : (0.33, 0.42, 0.18),
-    "yellowgreen"          : (0.60, 0.80, 0.20),
-    "olivedrab"            : (0.42, 0.56, 0.14),
-    "ivory"                : (1.00, 1.00, 0.94),
-    "beige"                : (0.96, 0.96, 0.86),
-    "lightyellow"          : (1.00, 1.00, 0.88),
-    "lightgoldenrodyellow" : (0.98, 0.98, 0.82),
-    "yellow"               : (1.00, 1.00, 0.00),
-    "olive"                : (0.50, 0.50, 0.00),
-    "darkkhaki"            : (0.74, 0.72, 0.42),
-    "palegoldenrod"        : (0.93, 0.91, 0.67),
-    "lemonchiffon"         : (1.00, 0.98, 0.80),
-    "khaki"                : (0.94, 0.90, 0.55),
-    "gold"                 : (1.00, 0.84, 0.00),
-    "cornsilk"             : (1.00, 0.97, 0.86),
-    "goldenrod"            : (0.85, 0.65, 0.13),
-    "darkgoldenrod"        : (0.72, 0.53, 0.04),
-    "floralwhite"          : (1.00, 0.98, 0.94),
-    "oldlace"              : (0.99, 0.96, 0.90),
-    "wheat"                : (0.96, 0.87, 0.07),
-    "orange"               : (1.00, 0.65, 0.00),
-    "moccasin"             : (1.00, 0.89, 0.71),
-    "papayawhip"           : (1.00, 0.94, 0.84),
-    "blanchedalmond"       : (1.00, 0.92, 0.80),
-    "navajowhite"          : (1.00, 0.87, 0.68),
-    "antiquewhite"         : (0.98, 0.92, 0.84),
-    "tan"                  : (0.82, 0.71, 0.55),
-    "burlywood"            : (0.87, 0.72, 0.53),
-    "darkorange"           : (1.00, 0.55, 0.00),
-    "bisque"               : (1.00, 0.89, 0.77),
-    "linen"                : (0.98, 0.94, 0.90),
-    "peru"                 : (0.80, 0.52, 0.25),
-    "peachpuff"            : (1.00, 0.85, 0.73),
-    "sandybrown"           : (0.96, 0.64, 0.38),
-    "chocolate"            : (0.82, 0.41, 0.12),
-    "saddlebrown"          : (0.55, 0.27, 0.07),
-    "seashell"             : (1.00, 0.96, 0.93),
-    "sienna"               : (0.63, 0.32, 0.18),
-    "lightsalmon"          : (1.00, 0.63, 0.48),
-    "coral"                : (1.00, 0.50, 0.31),
-    "orangered"            : (1.00, 0.27, 0.00),
-    "darksalmon"           : (0.91, 0.59, 0.48),
-    "tomato"               : (1.00, 0.39, 0.28),
-    "salmon"               : (0.98, 0.50, 0.45),
-    "mistyrose"            : (1.00, 0.89, 0.88),
-    "lightcoral"           : (0.94, 0.50, 0.50),
-    "snow"                 : (1.00, 0.98, 0.98),
-    "rosybrown"            : (0.74, 0.56, 0.56),
-    "indianred"            : (0.80, 0.36, 0.36),
-    "red"                  : (1.00, 0.00, 0.00),
-    "brown"                : (0.65, 0.16, 0.16),
-    "firebrick"            : (0.70, 0.13, 0.13),
-    "darkred"              : (0.55, 0.00, 0.00),
-    "maroon"               : (0.50, 0.00, 0.00),
-    "white"                : (1.00, 1.00, 1.00),
-    "whitesmoke"           : (0.96, 0.96, 0.96),
-    "gainsboro"            : (0.86, 0.86, 0.86),
-    "lightgrey"            : (0.83, 0.83, 0.83),
-    "silver"               : (0.75, 0.75, 0.75),
-    "darkgray"             : (0.66, 0.66, 0.66),
-    "gray"                 : (0.50, 0.50, 0.50),
-    "grey"                 : (0.50, 0.50, 0.50),
-    "dimgray"              : (0.41, 0.41, 0.41),
-    "dimgrey"              : (0.41, 0.41, 0.41),
-    "black"                : (0.00, 0.00, 0.00),
-    "cyan"                 : (0.00, 0.68, 0.94),
-    
-    "transparent"          : (0.00, 0.00, 0.00, 0.00),
-    "bark"                 : (0.25, 0.19, 0.13),
-
-}
 
 </t>
 <t tx="karstenw.20210712120542.110">def tetrad(clr, angle=90):
@@ -907,8 +733,7 @@ def rule(name, clr, angle=None, contrast=0.3, flip=False):
     """
     
     if len(colors) == 1:
-        if isinstance(colors[0], _list) \
-        or isinstance(colors[0], tuple):
+        if isinstance(colors[0], (_list, tuple) ):
             self._colors = _list(colors[0])
         else:
             self._colors = [colors[0]]
@@ -1757,8 +1582,7 @@ shade_opposites = {
     # e.g. "dark ivory".
     if isinstance(range, str) and clr == None:
         for word in range.split(" "):
-            if word in named_hues \
-            or word in named_colors:
+            if word in named_hues or word in named_colors:
                 clr = named_color(word)
             if shade(word) != None:
                 range = shade(word)
@@ -2566,10 +2390,6 @@ class NoCoreImageOrPIL(Exception): pass
 
 _list = [].__class__
 
-# "range" is also the name of a command in the library.
-# http://aspn.activestate.com/ASPN/Cookbook/Python/Recipe/66472
-# Edvard Majakari
-
 </t>
 <t tx="karstenw.20210712120542.40">def rotate_rgb(self, angle=180):
     h = (self.h + 1.0*angle/360)%1
@@ -2678,11 +2498,11 @@ inverse = property(invert)
     if primary:
         hues = primary_hues
     else:
-        hues = named_hues.keys()
+        hues = list( named_hues.keys() )
     nearest, d = "", 1.0
     for hue in hues:
-        if abs(self.hue-named_hues[hue])%1 &lt; d:
-            nearest, d = hue, abs(self.hue-named_hues[hue])%1
+        if abs(self.hue - named_hues[hue]) % 1 &lt; d:
+            nearest, d = hue, abs(self.hue-named_hues[hue]) % 1
 
     return nearest
 
@@ -2740,7 +2560,11 @@ draw = swatch
     return color(r, g, b, a, mode="rgb", name=name, range=range)
     
 </t>
-<t tx="karstenw.20210712120542.5">def _range(start, stop=None, step=1):
+<t tx="karstenw.20210712120542.5"># "range" is also the name of a command in the library.
+# http://aspn.activestate.com/ASPN/Cookbook/Python/Recipe/66472
+# Edvard Majakari
+
+def _range(start, stop=None, step=1):
     if stop is None:
         stop, start = start, 0
     cur = start
@@ -2824,8 +2648,7 @@ draw = swatch
             pass
         
         # From a list or tuple of Color objects.
-        if isinstance(arg, _list) \
-        or isinstance(arg, tuple):
+        if isinstance(arg, (tuple, _list) ):
             for clr in arg:
                 if clr.__class__ == Color:
                     self.append(clr)
@@ -2836,7 +2659,8 @@ draw = swatch
         if isinstance(arg, (pstr, punicode)):
             if os.path.exists(arg):
                 n = 10
-                if "n" in kwargs.keys(): n = kwargs["n"]
+                if "n" in kwargs:
+                    n = kwargs["n"]
                 self.image_to_rgb(arg, n)
             else:
                 clr = Color(arg)
@@ -2847,9 +2671,9 @@ draw = swatch
                     self.extend(self.context_to_rgb(arg))
                     self.tags = arg
                     
-    if "name" in kwargs.keys():
+    if "name" in kwargs:
         self.name = kwargs["name"]
-    if "tags" in kwargs.keys():
+    if "tags" in kwargs:
         self.tags = kwargs["tags"]
 
 </t>
@@ -3092,16 +2916,16 @@ smooth = smoothen = blend
     """ Returns a sorted copy with the colors arranged according to the given comparison.
     """
     
-    sorted = self.copy()
+    sortedlist = self.copy()
     print("_sorted_copy( ", repr(comparison), " )" )
     if py3:
-        _list.sort(sorted, key=cmp_to_key(comparison))
+        _list.sort(sortedlist, key=cmp_to_key(comparison))
     else:
-        _list.sort(sorted, comparison)
+        _list.sort(sortedlist, comparison)
     # sortlistfunction(_list, comparison)
     if reversed: 
-        _list.reverse(sorted)
-    return sorted        
+        _list.reverse(sortedlist)
+    return sortedlist        
 
 </t>
 <t tx="karstenw.20210712120542.68">def sort_by_hue(self, reversed=False):
@@ -3231,35 +3055,48 @@ cmyk2rgb = cmyk_to_rgb
 
     """
     
-    sorted = self.colorlist_sort( comparison=cmp1 )
-    # sortlistfunction(sorted, cmp1)
+    sortedlist = self.colorlist_sort( comparison=cmp1 )
+    # print( "cluster_sort().sortedlist:")
+    # pp(sortedlist)
+    # sortlistfunction(sortedlist, cmp1)
+
     clusters = ColorList()
     
     d = 1.0
     i = 0
-    for j in _range(len(sorted)):
-        if getattr(sorted[j], cmp1) &lt; d:
+
+    for j in _range( len(sortedlist) ):
+        # print("j:", j)
+        if getattr(sortedlist[j], cmp1) &lt; d:
             try:
-                clusters.extend( sorted[i:j].colorlist_sort( comparison=cmp2 ) )
-                # sortlistfunction(sorted[i:j], cmp2)
+                sortedslice = sortedlist[i:j]
+                # print("type(sortedslice):", type(sortedslice))
+                if sortedslice:
+                    sortedslice = colorlist( sortedslice )
+                    clusters.extend( sortedslice.colorlist_sort( comparison=cmp2 ) )
+                # sortlistfunction(sortedlist[i:j], cmp2)
             except Exception as err:
                 print()
-                print( "cluster_sort(i,j)", i, j )
+                print( "ERROR cluster_sort(i,j)", i, j )
                 #pdb.set_trace()
                 print( err )
                 print( repr(cmp2) )
                 print()
-                #pp( sorted )
-            clusters.extend( sorted[i:j] )
+
+            sortedslice = sortedlist[i:j]
+            if sortedslice:
+                sortedslice = colorlist( sortedslice )
+                clusters.extend( sortedslice )
+            # clusters.extend( sortedlist[i:j] )
             d -= 1.0 / n
             i = j
-    if type(sorted) == ColorList:
-        clusters.extend( sorted[i:].colorlist_sort( comparison=cmp2 ) )
-    else:
-        clusters.extend( sorted[i:].sort( comparison=cmp2 ) )
-    # clusters.extend( sorted[i:].colorlist_sort( key=cmp_to_key(cmp2) ) )
-    # sortlistfunction(sorted[i:], cmp2)
-    
+
+    sortedslice = sortedlist[i:]
+    if sortedslice:
+        sortedslice = colorlist( sortedslice )
+
+    clusters.extend( sortedslice.colorlist_sort( comparison=cmp2 ) )
+
     if reversed: _list.reverse(clusters)
     return clusters
     
@@ -3558,29 +3395,30 @@ prism = google
 </t>
 <t tx="karstenw.20210712120543.12">def colorwheel(x, y, r=250, labels=True, scope=1.0, shift=0.0):
 
-    keys = list( named_hues.keys() )
+    # Remember? Have to use _list instead of list... 
+    keys = _list( named_hues.keys() )
+
     def cmp(a, b):
         if named_hues[a] &lt; named_hues[b]: return 1
         return -1
     #keys.sort(cmp)
     sortlistfunction(keys, cmp)
 
-
     _ctx.fill(0,0,0)
     _ctx.oval(x-r, y-r, r*2, r*2)
 
     for i in _range(10):
-        ri = r/6 * (1-i*0.1)
-        _ctx.fill(i*0.1)
+        ri = r/6 * (1 - i * 0.1)
+        _ctx.fill( i*0.1 )
         _ctx.oval(x-ri, y-ri, ri*2, ri*2)
         
     _ctx.transform(CORNER)
     _ctx.translate(x, y)
     _ctx.rotate(65)
-    a = 360.0/len(named_hues)
+    a = 360.0 / len(named_hues)
     for name in keys:
         _ctx.rotate(a)
-        h = (named_hues[name]*scope+shift)%1
+        h = (named_hues[name] * scope + shift) % 1
         for i in _range(20):
             if i &lt; 2: continue
             x = r/40.0 * (25-i)
@@ -3600,7 +3438,6 @@ prism = google
             _ctx.fontsize(r/16)
             _ctx.text(name, r*i*0.015, -r/6.5)
             _ctx.pop()
-    
     _ctx.reset()
 
 #colorwheel(301, 266)
@@ -4028,5 +3865,198 @@ for f in glob(path):
 
 </t>
 <t tx="karstenw.20210712122340.1"></t>
+<t tx="karstenw.20210715121613.1">#### NAMED COLOR HUES ##############################################################
+
+# Names for each distinctive hue on the color wheel.
+
+named_hues = {
+    "red"         : 0.0   / 360,
+    "orange"      : 30.0  / 360,
+    "yellow"      : 60.0  / 360,
+    "lime"        : 90.0  / 360,
+    "green"       : 120.0 / 360,
+    "teal"        : 150.0 / 360,
+    "cyan"        : 180.0 / 360,
+    "azure"       : 210.0 / 360,
+    "blue"        : 240.0 / 360,
+    "indigo"      : 270.0 / 360,
+    "purple"      : 300.0 / 360,
+    "pink"        : 330.0 / 360,
+}
+
+primary_hues = ["red", "orange", "yellow", "green", "blue", "purple", "pink"]
+primary_and_secondary_hues = [
+    "red", "orange", "yellow", "lime", "green", "teal", 
+    "cyan", "azure", "blue", "indigo", "purple", "pink"
+]
+
+# pp( named_hues )
+
+</t>
+<t tx="karstenw.20210715121757.1">### NAMED COLORS ###################################################################
+
+# HTML named colors.
+
+named_colors = {
+                
+    "lightpink"            : (1.00, 0.71, 0.76),
+    "pink"                 : (1.00, 0.75, 0.80),
+    "crimson"              : (0.86, 0.08, 0.24),
+    "lavenderblush"        : (1.00, 0.94, 0.96),
+    "palevioletred"        : (0.86, 0.44, 0.58),
+    "hotpink"              : (1.00, 0.41, 0.71),
+    "deeppink"             : (1.00, 0.08, 0.58),
+    "mediumvioletred"      : (0.78, 0.08, 0.52),
+    "orchid"               : (0.85, 0.44, 0.84),
+    "thistle"              : (0.85, 0.75, 0.85),
+    "plum"                 : (0.87, 0.63, 0.87),
+    "violet"               : (0.93, 0.51, 0.93),
+    "fuchsia"              : (1.00, 0.00, 1.00),
+    "darkmagenta"          : (0.55, 0.00, 0.55),
+    "purple"               : (0.50, 0.00, 0.50),
+    "mediumorchid"         : (0.73, 0.33, 0.83),
+    "darkviolet"           : (0.58, 0.00, 0.83),
+    "darkorchid"           : (0.60, 0.20, 0.80),
+    "indigo"               : (0.29, 0.00, 0.51),
+    "blueviolet"           : (0.54, 0.17, 0.89),
+    "mediumpurple"         : (0.58, 0.44, 0.86),
+    "mediumslateblue"      : (0.48, 0.41, 0.93),
+    "slateblue"            : (0.42, 0.35, 0.80),
+    "darkslateblue"        : (0.28, 0.24, 0.55),
+    "ghostwhite"           : (0.97, 0.97, 1.00),
+    "lavender"             : (0.90, 0.90, 0.98),
+    "blue"                 : (0.00, 0.00, 1.00),
+    "mediumblue"           : (0.00, 0.00, 0.80),
+    "darkblue"             : (0.00, 0.00, 0.55),
+    "navy"                 : (0.00, 0.00, 0.50),
+    "midnightblue"         : (0.10, 0.10, 0.44),
+    "royalblue"            : (0.25, 0.41, 0.88),
+    "cornflowerblue"       : (0.39, 0.58, 0.93),
+    "lightsteelblue"       : (0.69, 0.77, 0.87),
+    "lightslategray"       : (0.47, 0.53, 0.60),
+    "slategray"            : (0.44, 0.50, 0.56),
+    "dodgerblue"           : (0.12, 0.56, 1.00),
+    "aliceblue"            : (0.94, 0.97, 1.00),
+    "steelblue"            : (0.27, 0.51, 0.71),
+    "lightskyblue"         : (0.53, 0.81, 0.98),
+    "skyblue"              : (0.53, 0.81, 0.92),
+    "deepskyblue"          : (0.00, 0.75, 1.00),
+    "lightblue"            : (0.68, 0.85, 0.90),
+    "powderblue"           : (0.69, 0.88, 0.90),
+    "cadetblue"            : (0.37, 0.62, 0.63),
+    "darkturquoise"        : (0.00, 0.81, 0.82),
+    "azure"                : (0.94, 1.00, 1.00),
+    "lightcyan"            : (0.88, 1.00, 1.00),
+    "paleturquoise"        : (0.69, 0.93, 0.93),
+    "aqua"                 : (0.00, 1.00, 1.00),
+    "darkcyan"             : (0.00, 0.55, 0.55),
+    "teal"                 : (0.00, 0.50, 0.50),
+    "darkslategray"        : (0.18, 0.31, 0.31),
+    "mediumturquoise"      : (0.28, 0.82, 0.80),
+    "lightseagreen"        : (0.13, 0.70, 0.67),
+    "turquoise"            : (0.25, 0.88, 0.82),
+    "aquamarine"           : (0.50, 1.00, 0.83),
+    "mediumaquamarine"     : (0.40, 0.80, 0.67),
+    "mediumspringgreen"    : (0.00, 0.98, 0.60),
+    "mintcream"            : (0.96, 1.00, 0.98),
+    "springgreen"          : (0.00, 1.00, 0.50),
+    "mediumseagreen"       : (0.24, 0.70, 0.44),
+    "seagreen"             : (0.18, 0.55, 0.34),
+    "honeydew"             : (0.94, 1.00, 0.94),
+    "darkseagreen"         : (0.56, 0.74, 0.56),
+    "palegreen"            : (0.60, 0.98, 0.60),
+    "lightgreen"           : (0.56, 0.93, 0.56),
+    "limegreen"            : (0.20, 0.80, 0.20),
+    "lime"                 : (0.00, 1.00, 0.00),
+    "forestgreen"          : (0.13, 0.55, 0.13),
+    "green"                : (0.00, 0.50, 0.00),
+    "darkgreen"            : (0.00, 0.39, 0.00),
+    "lawngreen"            : (0.49, 0.99, 0.00),
+    "chartreuse"           : (0.50, 1.00, 0.00),
+    "greenyellow"          : (0.68, 1.00, 0.18),
+    "darkolivegreen"       : (0.33, 0.42, 0.18),
+    "yellowgreen"          : (0.60, 0.80, 0.20),
+    "olivedrab"            : (0.42, 0.56, 0.14),
+    "ivory"                : (1.00, 1.00, 0.94),
+    "beige"                : (0.96, 0.96, 0.86),
+    "lightyellow"          : (1.00, 1.00, 0.88),
+    "lightgoldenrodyellow" : (0.98, 0.98, 0.82),
+    "yellow"               : (1.00, 1.00, 0.00),
+    "olive"                : (0.50, 0.50, 0.00),
+    "darkkhaki"            : (0.74, 0.72, 0.42),
+    "palegoldenrod"        : (0.93, 0.91, 0.67),
+    "lemonchiffon"         : (1.00, 0.98, 0.80),
+    "khaki"                : (0.94, 0.90, 0.55),
+    "gold"                 : (1.00, 0.84, 0.00),
+    "cornsilk"             : (1.00, 0.97, 0.86),
+    "goldenrod"            : (0.85, 0.65, 0.13),
+    "darkgoldenrod"        : (0.72, 0.53, 0.04),
+    "floralwhite"          : (1.00, 0.98, 0.94),
+    "oldlace"              : (0.99, 0.96, 0.90),
+    "wheat"                : (0.96, 0.87, 0.07),
+    "orange"               : (1.00, 0.65, 0.00),
+    "moccasin"             : (1.00, 0.89, 0.71),
+    "papayawhip"           : (1.00, 0.94, 0.84),
+    "blanchedalmond"       : (1.00, 0.92, 0.80),
+    "navajowhite"          : (1.00, 0.87, 0.68),
+    "antiquewhite"         : (0.98, 0.92, 0.84),
+    "tan"                  : (0.82, 0.71, 0.55),
+    "burlywood"            : (0.87, 0.72, 0.53),
+    "darkorange"           : (1.00, 0.55, 0.00),
+    "bisque"               : (1.00, 0.89, 0.77),
+    "linen"                : (0.98, 0.94, 0.90),
+    "peru"                 : (0.80, 0.52, 0.25),
+    "peachpuff"            : (1.00, 0.85, 0.73),
+    "sandybrown"           : (0.96, 0.64, 0.38),
+    "chocolate"            : (0.82, 0.41, 0.12),
+    "saddlebrown"          : (0.55, 0.27, 0.07),
+    "seashell"             : (1.00, 0.96, 0.93),
+    "sienna"               : (0.63, 0.32, 0.18),
+    "lightsalmon"          : (1.00, 0.63, 0.48),
+    "coral"                : (1.00, 0.50, 0.31),
+    "orangered"            : (1.00, 0.27, 0.00),
+    "darksalmon"           : (0.91, 0.59, 0.48),
+    "tomato"               : (1.00, 0.39, 0.28),
+    "salmon"               : (0.98, 0.50, 0.45),
+    "mistyrose"            : (1.00, 0.89, 0.88),
+    "lightcoral"           : (0.94, 0.50, 0.50),
+    "snow"                 : (1.00, 0.98, 0.98),
+    "rosybrown"            : (0.74, 0.56, 0.56),
+    "indianred"            : (0.80, 0.36, 0.36),
+    "red"                  : (1.00, 0.00, 0.00),
+    "brown"                : (0.65, 0.16, 0.16),
+    "firebrick"            : (0.70, 0.13, 0.13),
+    "darkred"              : (0.55, 0.00, 0.00),
+    "maroon"               : (0.50, 0.00, 0.00),
+    "white"                : (1.00, 1.00, 1.00),
+    "whitesmoke"           : (0.96, 0.96, 0.96),
+    "gainsboro"            : (0.86, 0.86, 0.86),
+    "lightgrey"            : (0.83, 0.83, 0.83),
+    "silver"               : (0.75, 0.75, 0.75),
+    "darkgray"             : (0.66, 0.66, 0.66),
+    "gray"                 : (0.50, 0.50, 0.50),
+    "grey"                 : (0.50, 0.50, 0.50),
+    "dimgray"              : (0.41, 0.41, 0.41),
+    "dimgrey"              : (0.41, 0.41, 0.41),
+    "black"                : (0.00, 0.00, 0.00),
+    "cyan"                 : (0.00, 0.68, 0.94),
+    
+    "transparent"          : (0.00, 0.00, 0.00, 0.00),
+    "bark"                 : (0.25, 0.19, 0.13),
+
+}
+
+</t>
+<t tx="karstenw.20210715171804.1">def __hash__( self ):
+    return hash( (self.r, self.g, self.b, self.a) )
+
+
+</t>
+<t tx="karstenw.20210715171955.1">def __lt__( self, other ):
+    return (    self.r &lt; other.r and self.g &lt; other.g
+            and self.b &lt; other.b and self.a &lt; other.a )
+
+
+</t>
 </tnodes>
 </leo_file>
