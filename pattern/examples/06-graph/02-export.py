@@ -6,7 +6,7 @@ from builtins import range
 
 import os
 import sys
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
+# sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
 
 from pattern.graph import Graph, WEIGHT, CENTRALITY, DEGREE, DEFAULT
 from random import choice, random
@@ -46,7 +46,7 @@ g["1"].text.string = "home"
 # You can drag the nodes around - open index.html in a browser and try it out!
 # The layout can be tweaked in many ways:
 
-g.export(os.path.join(os.path.dirname(__file__), "test"),
+g.export(os.path.join(os.path.abspath('.'), "test"),
         width = 700,     # <canvas> width.
        height = 500,     # <canvas> height.
        frames = 500,     # Number of frames of animation.

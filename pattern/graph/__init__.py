@@ -1601,8 +1601,8 @@ class HTMLCanvasRenderer(GraphRenderer):
         # Copy compressed graph.js + canvas.js (unless a custom path is given.)
         if self.javascript is None:
             for p, f in (("..", "canvas.js"), (".", "graph.js")):
-                a = open(os.path.join(MODULE, p, f), "r")
-                b = open(os.path.join(path, f), "w")
+                a = open(os.path.join(MODULE, p, f), "r", encoding="utf-8")
+                b = open(os.path.join(path, f), "w", encoding="utf-8")
                 b.write(minify(a.read()))
                 b.close()
         # Create style.css.

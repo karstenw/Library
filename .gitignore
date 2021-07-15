@@ -19,7 +19,11 @@ pattern/examples/02-db/food.txt
 pattern/examples/*/*.slp
 pattern/examples/*/*.csv
 pattern/examples/*/*.svm
-
+pattern/examples/08-server/04-db/store.db
+pattern/examples/08-server/02-api/rate.db
+pattern/examples/06-graph/test*
+pattern/examples/06-graph/trend*
+pattern/web/cache
 # pattern
 pattern-old.zip
 

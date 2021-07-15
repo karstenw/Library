@@ -5,7 +5,7 @@ from builtins import str, bytes, dict, int
 
 import os
 import sys
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
+# sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
 
 from pattern.server import App, Database, html
 
@@ -38,7 +38,7 @@ app = App("store")
 # The SQL code below creates a "products" table in the database.
 # Each table has fields (or columns) with a type (text, int, float, ...).
 
-STORE = os.path.join(os.path.dirname(__file__), "store.db")
+STORE = os.path.join(os.path.abspath('.'), "store.db")
 
 if not os.path.exists(STORE):
     db = Database(STORE, schema="""

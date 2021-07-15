@@ -8,7 +8,7 @@ from builtins import range
 
 import os
 import sys
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
+# sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
 import random
 
 from collections import defaultdict
@@ -42,7 +42,7 @@ def corpus(path, encoding="utf-8"):
         yield s
 
 # The corpus is included in the Pattern download zip, in pattern/test/corpora:
-path = os.path.join(os.path.dirname(__file__), "..", "..", "test", "corpora", "tagged-en-oanc.txt")
+path = os.path.join(os.path.abspath('.'), "..", "..", "test", "corpora", "tagged-en-oanc.txt")
 data = list(corpus(path))
 
 # A parser is typically based on a lexicon of known words (aka a tag dictionary),
@@ -117,7 +117,7 @@ for iteration in range(5):
             prev = (w, tag)
             next = None
 
-f = os.path.join(os.path.dirname(__file__), "en-model.slp")
+f = os.path.join(os.path.abspath('.'), "en-model.slp")
 m.save(f, final=True)
 
 # Each parser in Pattern (pattern.en, pattern.es, pattern.it, ...)
@@ -131,7 +131,7 @@ m.save(f, final=True)
 
 print("loading model...")
 
-f = os.path.join(os.path.dirname(__file__), "en-model.slp")
+f = os.path.join(os.path.abspath('.'), "en-model.slp")
 lexicon.model = Model.load(f, lexicon)
 
 # To test the accuracy of the language model,
