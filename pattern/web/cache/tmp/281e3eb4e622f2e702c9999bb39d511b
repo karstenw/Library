@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Welcome | NodeBox</title>
+  
+  <meta name="author" content="Experimental Media Research Group">
+
+  <!--[if lt IE 9]>
+    <script src="/media/js/html5.js"></script>
+  <![endif]-->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link type="text/css" rel="stylesheet" media="screen" href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow">
+  <link type="text/css" rel="stylesheet" media="screen" href="/media/css/nbar.css">
+  <link type="text/css" rel="stylesheet" media="screen" href="/media/css/skeleton.css">
+  <link type="text/css" rel="stylesheet" media="screen" href="/media/css/normalize.css">
+  <link type="text/css" rel="stylesheet" media="screen" href="/media/css/syntax.css">
+  <link type="text/css" rel="stylesheet" media="screen" href="/media/fancybox/jquery.fancybox.css">
+  <link type="text/css" rel="stylesheet" media="screen" href="/media/css/screen.css">
+</head>
+<body id="node">
+
+
+<div class="nbar">
+  <ol>
+    <li>
+      
+        <a class="node" href="/node/">NodeBox 3<span class="nbar-arrow"></span></a>
+      
+      <ol class="nbar-dropdown">
+        <li><a href="/">Homepage</a></li>
+        <li><a href="/node/">NodeBox 3<small>Node-based app for generative design and data visualization</small></a></li>
+        <li><a href="/opengl/">NodeBox OpenGL<small>Hardware-accelerated cross-platform graphics library</small></a></li>
+        <li><a href="/code/index.php/Home">NodeBox 1<small>Generate 2D visuals using Python code (Mac OS X only)</small></a></li>
+      </ol>
+    </li>
+    <li><a class="gallery" href="/gallery/">Gallery</a></li>
+    <li><a class="download" href="/download/">Download</a></li>
+    <li><a class="documentation" href="/node/documentation/">Documentation</a></li>
+    <li><a class="forum" href="http://support.nodebox.net/discussions">Forum</a></li>
+    <li><a class="blog" href="/blog/">Blog</a></li>
+  </ol>
+</div>
+
+<div id="content" class="container">
+  <div class="hero row" id="hero">
+  <div class="eight columns">
+    <div class="hero-text">
+      <h1>Meet NodeBox 3.</h1>
+      <p>NodeBox makes it easy to do data visualisations, generative design and complex production challenges.</p>
+      <a class="hero-button" href="/download/">Download</a><br />
+      <a class="hero-button" href="/node/documentation/">Documentation &amp; Screencasts</a>
+    </div>
+  </div>
+  <div class="eight columns">
+    <img class="hero-shot" src="/media/homepage/NB3iconoutlineonly.png" />
+<!--<a class="fancybox fancybox.iframe" href=""> http://www.youtube.com/embed/s01wX9t6NcE?autoplay=1 src="/media/homepage/nodebox-screencast-teaser.png"</a>-->
+  </div>
+</div>
+
+<div class="summary row">
+  <p class="sixteen columns">NodeBox is a node-based software application for generative design. It's built from the ground up by designers to be easy-to-use, efficient, and fast.</p>
+</div>
+
+<div class="features row">
+  <div class="four columns">
+    <a class="thumb" href="/media/node/features-dataviz.png"><img src="/media/node/features-dataviz-thumb.png" alt="Screenshot of NodeBox used for data visualization" /></a>
+    <h2>Visualize Your Data</h2>
+    <p>Because of its unique approach, NodeBox is ideal for rapid data visualization. NodeBox can import many data formats such as Excel spreadsheets and you can write your own data importers and exporters.</p>
+  </div>
+  <div class="four columns">
+    <a class="thumb" href="/media/node/features-animation.png"><img src="/media/node/features-animation-thumb.png" alt="Animation" /></a>
+    <h2>An Animated Partner</h2>
+    <p>Every parameter in NodeBox can be animated. Animations can be exported as common movie formats or as a sequence of images.</p>
+  </div>
+  <div class="four columns">
+    <a class="thumb" href="/media/node/features-nodes.png"><img src="/media/node/features-nodes-thumb.png" alt="Screenshot of the node-based GUI" /></a>
+    <h2>A Friendly Face</h2>
+    <p>You want to explore generative design without learning the ins and outs of programming? Using its node-based interface, NodeBox makes generative design easy and fast.</p>
+  </div>
+  <div class="four columns">
+    <a class="thumb" href="/media/node/features-under-the-hood.png"><img src="/media/node/features-under-the-hood-thumb.png" alt="Screenshot of a Nodebox sub-network" /></a>
+    <h2>Peek Under The Hood</h2>
+    <p>Using nodes doesn't have to mean giving up expressive power. NodeBox makes it easy to customize the functionality of existing nodes or to build your own from scratch.</p>
+  </div>
+</div>
+
+<div class="action row">
+  <div class="eight columns">
+    <h2>Get Started</h2>
+    <ul>
+      <li><a href="/download/">Download the application</a></li>
+      <li><a href="/node/documentation/">Read the tutorial</a></li>
+    </ul>
+  </div>
+  <div class="eight columns">
+    <h2>Sponsors</h2>
+      <p>YourKit is kindly supporting open source projects with its full-featured Java Profiler.
+      YourKit, LLC is the creator of innovative and intelligent tools for profiling
+      Java and .NET applications. Take a look at YourKit's leading software products:
+      <a href="http://www.yourkit.com/java/profiler/index.jsp">YourKit Java Profiler</a> and
+      <a href="http://www.yourkit.com/.net/profiler/index.jsp">YourKit .NET Profiler</a>.</p>
+  </div>
+</div>
+
+
+</div><!-- .content -->
+
+<footer>
+  <div class="container">
+    <div class="four columns">
+      <h2>Software</h2>
+      <ul>
+        <li><a href="/node/">NodeBox 3</a></li>
+        <li><a href="/code/index.php/Home">NodeBox 1</a></li>
+        <li><a href="/opengl/">NodeBox OpenGL</a></li>
+      </ul>
+    </div>
+    <div class="four columns">
+      <h2>Exhibition</h2>
+      <ul>
+        <li><a href="/gallery/">Gallery</a></li>
+      </ul>
+    </div>
+    <div class="four columns">
+      <h2>Documentation</h2>
+      <ul>
+        <li><a href="/node/documentation/">Documentation</a></li>
+        <li><a href="/node/documentation/tutorial/getting-started">Tutorial</a></li>
+        <li><a href="/node/reference/">Reference</a></li>
+      </ul>
+    </div>
+    <div class="four columns">
+      <h2>Community</h2>
+      <ul>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="http://support.nodebox.net/discussions">Forum</a></li>
+        <li><a href="http://twitter.com/nodebox">Twitter</a></li>
+        <li><a href="https://github.com/nodebox/nodebox">GitHub</a></li>
+      </ul>
+    </div>
+    <div class="sixteen columns copyright">
+      <p>All content on this website is licensed under the <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons</a>. NodeBox is built and maintained by the <a href="http://www.emrg.be/">Experimental Media Research Group</a>.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/media/js/jquery-1.8.2.min.js"></script>
+<script src="/media/js/jquery.mousewheel-3.0.6.pack.js"></script>
+<script src="/media/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-1668598-1']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script type="text/javascript">
+$(document).ready(function() {
+  $('a.thumb,a.fancybox').fancybox();
+});
+</script>
+<script src="https://nodebox.tenderapp.com/tender_widget.js" type="text/javascript"></script>
+</body>
+</html>

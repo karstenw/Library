@@ -1,0 +1,300 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="viewport" content="width=1024" />
+    <meta content="authenticity_token" name="csrf-param" />
+<meta content="9a1ca47b8cc6dc1a557f3b246f66cc9cc1764cf11de303f461969d361593ebc5" name="csrf-token" />
+    <title>Discussion Area - NodeBox Support</title>
+     <link rel="canonical" href="http://support.nodebox.net/discussions" /> 
+
+      <!--[if (!IE)|(gte IE 8)]><!-->
+      <link href="http://dygqdiu5wzisf.cloudfront.net/pkg/201805251244/frontend-datauri.css?1527478654" media="all" rel="stylesheet" type="text/css" />
+      <!--<![endif]-->
+      <!--[if lte IE 7]>
+      <link href="http://dygqdiu5wzisf.cloudfront.net/pkg/201805251244/frontend-mhtml.css?1527353398" media="all" rel="stylesheet" type="text/css" />
+      <![endif]-->
+
+      <link href="http://dygqdiu5wzisf.cloudfront.net/pkg/201805251244/frontend.css?1527478654" media="all" rel="stylesheet" type="text/css" />
+      
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"/>
+
+      <!--[if lte IE 8]>
+      <link embed_assets="false" href="http://dygqdiu5wzisf.cloudfront.net/pkg/201805251244/ie.css?1527353398" media="all" rel="stylesheet" type="text/css" />
+      <![endif]-->
+      <!--[if IE 6]>
+      <link href="http://dygqdiu5wzisf.cloudfront.net/pkg/201805251244/ie6.css?1527353398" media="all" rel="stylesheet" type="text/css" />
+      <![endif]-->
+      <!--[if IE 7]>
+      <link href="http://dygqdiu5wzisf.cloudfront.net/pkg/201805251244/ie7.css?1527353398" media="all" rel="stylesheet" type="text/css" />
+      <![endif]-->
+      <!--[if IE 8]>
+      <link href="http://dygqdiu5wzisf.cloudfront.net/pkg/201805251244/ie8.css?1527353398" media="all" rel="stylesheet" type="text/css" />
+      <![endif]-->
+      <link href="http://dygqdiu5wzisf.cloudfront.net/pkg/201805251244/safari.css?1527478654" media="all" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" charset="utf-8">
+  function getAuthKey() { return "9a1ca47b8cc6dc1a557f3b246f66cc9cc1764cf11de303f461969d361593ebc5"; }
+  Tender = {"mobile":false,"logged_in":false,"kb_enabled":false,"is_supporter":false,"user_id":0,"user_name":"","user_email":"","user_created":"","user_flags":{},"user_markdown":false,"root":"/","discussion_editable":null};
+</script>
+
+  
+<link rel="apple-touch-icon" href="/help/images/apple-touch-icon.png" />
+
+<link rel="alternate" media="handheld" href="http://support.nodebox.net/discussions" />
+<link rel="fluid-icon" href="/help/images/fluidicon.png" title="Tender Support" />
+          <link href="http://support.nodebox.net/discussions.atom" rel="alternate" title="All Discussions" type="application/atom+xml" />
+
+       <link rel="stylesheet" type="text/css" media="all" href="/help/theme.css?1475376937" /> 
+      <link type='text/css' href='/help/custom.css?t=5cb45482fd98011a634d9e4bcd1c1670' media='all' rel='stylesheet'/>
+      <script src="http://dygqdiu5wzisf.cloudfront.net/pkg/201805251244/frontend.js?1527478654" type="text/javascript"></script>
+      
+  </head>
+
+  <body  class="page-discussions_categories section-discussions logged-out desktop">
+    
+    <div id="wrapper">
+      
+
+<div id="superheader">
+
+  <div class="inner hide-mobile" data-bind="css: { 'hide-mobile': hideMobileMenu() }">
+    
+    <p class="welcome">
+        <a href="http://support.nodebox.net/login?to=http%3A%2F%2Fsupport.nodebox.net%2Fdiscussions" class="welcome-login" target="_top">Log in</a>
+          <span class="welcome-createaccount hide-mobile">or <a href="http://support.nodebox.net/signup?to=http%3A%2F%2Fsupport.nodebox.net%2Fdiscussions">Create a profile</a></span>
+    </p>
+    
+    <ul id="tender_nav" class="gnav">
+        <li class="home"><a href="/home">Support Home</a></li>
+          <li class="public_issues"><a href="/discussions">Public Discussions</a></li>
+        <li class="visit_site"><a href="http://www.nodebox.net/">Go to NodeBox &rarr;</a></li>
+    </ul>
+  </div>
+</div><!-- /#superheader -->
+
+      <div id="page">
+
+        <div id="header" class="hide-mobile">
+          <h2 id="logo"><a href="/">NodeBox Support</a></h2>
+          <div id="search" class="hide-mobile">
+              <form accept-charset="UTF-8" action="/search" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>                <input class="searchfield" id="q" name="q" placeholder="Search discussions" type="text" />
+                <input id="t" name="t" type="hidden" value="d" />
+                <input id="recommend" name="recommend" type="hidden" value="1" />
+                <button type="submit" class="gbutton">Search</button>
+</form>          </div>
+        </div><!-- /#header -->
+
+        <div id="content">
+          
+          
+              <div class="nbar">
+  <ol>
+    <li>
+      <a class="home" href="http://nodebox.net/">Home<span class="nbar-arrow"></span></a>
+      <ol class="nbar-dropdown">
+        <li><a href="/">Homepage</a></li>
+        <li><a href="http://nodebox.net/node/">NodeBox 3<small>Node-based app for generative design and data visualization</small></a></li>
+        <li><a href="http://nodebox.net/opengl/">NodeBox OpenGL<small>Hardware-accelerated cross-platform graphics library</small></a></li>
+        <li><a href="http://nodebox.net/code/">NodeBox 1<small>Generate 2D visuals using Python code (Mac OS X only)</small></a></li>
+      </ol>
+    </li>
+    <li><a class="gallery" href="http://nodebox.net/gallery/">Gallery</a></li>
+    <li><a class="documentation" href="http://nodebox.net/node/documentation/">Documentation</a></li>
+    <li><a class="forum" href="http://support.nodebox.net/discussions">Forum</a></li>
+    <li><a class="blog" href="http://nodebox.net/blog/">Blog</a></li>
+  </ol>
+</div>
+
+            <div class="columns">
+                <h1>Public Discussion</h1>
+  <p class="pagedesc">Welcome to the public discussion area. You can read and respond to discussions other people have posted, or create your own discussion in the category of your choice.</p>
+  <table class="discussion-listing">
+    <tr>
+      <th colspan="2">Category</th>
+      <th>Latest Post</th>
+    </tr>
+    <tr class="general-discussion">
+      <td class="icon"><span class="marker">No new posts</span></td>
+      <td>
+        <h4><a href="/discussions/general-discussion">General Discussion</a>
+          
+        </h4>
+        <div><p>Open conversation about NodeBox and generative design in
+general.</p></div></p>
+      </td>
+      <td>
+        <span class="date"><a href="/discussions/general-discussion/15034-special-needs-of-pen-plotters"><span class='timestamp' rel='%b %d, %Y %I:%M%p' title='05 Jun, 2021 07:45 AM'>05 Jun, 2021 07:45 AM</span></a></span>
+        <span class="byuser">by florisdejonge</span>
+      </td>
+    </tr>
+    <tr class="show-your-work">
+      <td class="icon"><span class="marker">No new posts</span></td>
+      <td>
+        <h4><a href="/discussions/show-your-work">Show your Work</a>
+          
+        </h4>
+        <div><p>A place to share projects and source code.</p></div></p>
+      </td>
+      <td>
+        <span class="date"><a href="/discussions/show-your-work/446-upload-test"><span class='timestamp' rel='%b %d, %Y %I:%M%p' title='30 Jun, 2021 03:32 AM'>30 Jun, 2021 03:32 AM</span></a></span>
+        <span class="byuser">by john</span>
+      </td>
+    </tr>
+    <tr class="nodebox-1">
+      <td class="icon"><span class="marker">No new posts</span></td>
+      <td>
+        <h4><a href="/discussions/nodebox-1">NodeBox 1</a>
+          
+        </h4>
+        <div><p>Questions &amp; answers about the "classic" code-based
+environment.</p></div></p>
+      </td>
+      <td>
+        <span class="date"><a href="/discussions/nodebox-1/94-ann-nodebox-1-on-python-38-preview"><span class='timestamp' rel='%b %d, %Y %I:%M%p' title='30 Jun, 2021 08:55 PM'>30 Jun, 2021 08:55 PM</span></a></span>
+        <span class="byuser">by karstenwo</span>
+      </td>
+    </tr>
+    <tr class="nodebox-2-3">
+      <td class="icon"><span class="marker">No new posts</span></td>
+      <td>
+        <h4><a href="/discussions/nodebox-2-3">NodeBox 3</a>
+          
+        </h4>
+        <div><p>Questions &amp; answers about our node-based tools.</p></div></p>
+      </td>
+      <td>
+        <span class="date"><a href="/discussions/nodebox-2-3/6390-update-instalation-instructions-for-linux"><span class='timestamp' rel='%b %d, %Y %I:%M%p' title='23 May, 2021 10:05 PM'>23 May, 2021 10:05 PM</span></a></span>
+        <span class="byuser">by john</span>
+      </td>
+    </tr>
+    <tr class="nodebox-opengl">
+      <td class="icon"><span class="marker">No new posts</span></td>
+      <td>
+        <h4><a href="/discussions/nodebox-opengl">NodeBox OpenGL</a>
+          
+        </h4>
+        <div><p>Questions &amp; answers about the cross-platform OpenGL
+port.</p></div></p>
+      </td>
+      <td>
+        <span class="date"><a href="/discussions/nodebox-opengl/33-problem-with-installation"><span class='timestamp' rel='%b %d, %Y %I:%M%p' title='09 Feb, 2016 09:10 AM'>09 Feb, 2016 09:10 AM</span></a></span>
+        <span class="byuser">by Frederik De Bleser</span>
+      </td>
+    </tr>
+  </table>
+  <ul class="feed-links">
+      <li><a href="http://support.nodebox.net/discussions.atom">All discussions</a></li>
+  </ul>
+
+
+
+            </div><!-- /.columns -->
+          
+            <!-- footer_box cached on 2021-07-01 22:10:55 UTC -->
+<div class="footerbox columns">
+  <div class="column first">
+    <h2>Recent Discussions</h2>
+    <table class="listing">
+      <tr>
+        <td class="icon"><span class="icon nodebox-1"></span></td>
+        <td class="date"><span class='timestamp' rel='%d %b %H:%M' title='30 Jun, 2021 08:55 PM'>30 Jun, 2021 08:55 PM</span></td>
+        <td class="link"><a href="/discussions/nodebox-1/94-ann-nodebox-1-on-python-38-preview">[ANN] Nodebox 1 on Python 3.8 Preview</a></td>
+      </tr>
+      <tr>
+        <td class="icon"><span class="icon show-your-work"></span></td>
+        <td class="date"><span class='timestamp' rel='%d %b %H:%M' title='30 Jun, 2021 03:32 AM'>30 Jun, 2021 03:32 AM</span></td>
+        <td class="link"><a href="/discussions/show-your-work/446-upload-test">A trying to Draw a Electronic Circuit</a></td>
+      </tr>
+      <tr>
+        <td class="icon"><span class="icon show-your-work"></span></td>
+        <td class="date"><span class='timestamp' rel='%d %b %H:%M' title='29 Jun, 2021 12:55 PM'>29 Jun, 2021 12:55 PM</span></td>
+        <td class="link"><a href="/discussions/show-your-work/440-kolam-animator">Kolam Animator</a></td>
+      </tr>
+      <tr>
+        <td class="icon"><span class="icon show-your-work"></span></td>
+        <td class="date"><span class='timestamp' rel='%d %b %H:%M' title='29 Jun, 2021 07:18 AM'>29 Jun, 2021 07:18 AM</span></td>
+        <td class="link"><a href="/discussions/show-your-work/442-a-trying-to-draw-a-electronic-circuit">N/A</a></td>
+      </tr>
+      <tr>
+        <td class="icon"><span class="icon show-your-work"></span></td>
+        <td class="date"><span class='timestamp' rel='%d %b %H:%M' title='20 Jun, 2021 07:19 AM'>20 Jun, 2021 07:19 AM</span></td>
+        <td class="link"><a href="/discussions/show-your-work/436-quad-curves">Quad Curves</a></td>
+      </tr>
+    </table>
+  </div>
+  <div class="column last">
+      <h2>&nbsp;<!-- pro --></h2>
+      <table class="listing">
+        <tr>
+          <td class="icon"><span class="icon show-your-work"></span></td>
+          <td class="date"><span class='timestamp' rel='%d %b %H:%M' title='13 Jun, 2021 11:19 PM'>13 Jun, 2021 11:19 PM</span></td>
+          <td class="link"><a href="/discussions/show-your-work/438-occlusion">Occlusion</a></td>
+        </tr>
+        <tr>
+          <td class="icon"><span class="icon show-your-work"></span></td>
+          <td class="date"><span class='timestamp' rel='%d %b %H:%M' title='06 Jun, 2021 09:27 AM'>06 Jun, 2021 09:27 AM</span></td>
+          <td class="link"><a href="/discussions/show-your-work/432-cartan-node-library-23">Cartan Node Library 2.3</a></td>
+        </tr>
+        <tr>
+          <td class="icon"><span class="icon show-your-work"></span></td>
+          <td class="date"><span class='timestamp' rel='%d %b %H:%M' title='05 Jun, 2021 10:17 AM'>05 Jun, 2021 10:17 AM</span></td>
+          <td class="link"><a href="/discussions/show-your-work/434-paper-size-node-for-penplotters">Paper size node for penplotters</a></td>
+        </tr>
+        <tr>
+          <td class="icon"><span class="icon general-discussion"></span></td>
+          <td class="date"><span class='timestamp' rel='%d %b %H:%M' title='05 Jun, 2021 07:45 AM'>05 Jun, 2021 07:45 AM</span></td>
+          <td class="link"><a href="/discussions/general-discussion/15034-special-needs-of-pen-plotters">Special Needs of Pen Plotters</a></td>
+        </tr>
+        <tr>
+          <td class="icon"><span class="icon nodebox-2-3"></span></td>
+          <td class="date"><span class='timestamp' rel='%d %b %H:%M' title='23 May, 2021 10:05 PM'>23 May, 2021 10:05 PM</span></td>
+          <td class="link"><a href="/discussions/nodebox-2-3/6390-update-instalation-instructions-for-linux">Update Instalation Instructions for Linux</a></td>
+        </tr>
+        <tr>
+          <td class="icon"><span class="icon nodebox-2-3"></span></td>
+          <td class="date"><span class='timestamp' rel='%d %b %H:%M' title='23 May, 2021 10:02 PM'>23 May, 2021 10:02 PM</span></td>
+          <td class="link"><a href="/discussions/nodebox-2-3/6328-installation-on-linux">Installation on Linux</a></td>
+        </tr>
+      </table>
+  </div>
+</div>
+<!--/octopus -->
+
+        </div><!-- /#content -->
+        <div id="footer">
+  <p class="copyleft">Powered by <a href="http://tenderapp.com">Tender&trade;</a>.</p>
+</div><!-- /#footer -->
+
+      </div><!-- /#page -->
+    </div><!-- /#wrapper -->
+
+      <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-3465274-5', 'auto');
+    ga('set', 'anonymizeIp', true);
+    ga('send', 'pageview');
+
+
+    // Customer-specific Tracking. Keep old GA code.
+    // https://developers.google.com/analytics/devguides/collection/gajs/methods/gaJSApi_gaq
+    var _gaq = _gaq || [];
+    _gaq.push(['customer._setAccount', "UA-1668598-1"]);
+    _gaq.push(['customer._setDomainName', "none"]);
+    _gaq.push(['customer._setAllowLinker', true]);
+    _gaq.push(['customer._anonymizeIp']);
+    _gaq.push(['customer._trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+  </body>
+</html>

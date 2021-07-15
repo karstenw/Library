@@ -20,7 +20,7 @@ pattern/examples/*/*.slp
 pattern/examples/*/*.csv
 pattern/examples/*/*.svm
 
-pattern
+# pattern
 pattern-old.zip
 
 *.webloc
