@@ -6,9 +6,11 @@
 ######################################################################################################
 
 
+import io
+
 from nodebox.util import random, choice
 import en
-dictionary = open("vocabulary.txt").readlines()
+dictionary = io.open("vocabulary.txt", encoding="utf-8").readlines()
 
 def alliterations(head="", tail=""):
 
