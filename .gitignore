@@ -3,6 +3,7 @@
 .DS_Store
 */+private
 +latex
++shoebot
 cornu/*.svg
 database/book.*
 isight/tras*
