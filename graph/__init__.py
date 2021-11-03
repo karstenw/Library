@@ -18,11 +18,11 @@ __license__   = "GPL"
 
 ######################################################################################################
 
-import cluster
-import event
-import layout
-import proximity
-import style
+from . import cluster
+from . import event
+from . import layout
+from . import proximity
+from . import style
 
 #### GRAPH NODE ######################################################################################
 
@@ -214,27 +214,9 @@ class graph(dict):
         self.styles.append(style.style(style.DEFAULT, _ctx))
         self.alpha = 0
 
-        # Try to specialize intensive math operations.
-        try:
-            import psyco
-            psyco.bind(self.layout._bounds)
-            psyco.bind(self.layout.iterate)
-            psyco.bind(self.__or__)
-            psyco.bind(cluster.flatten)
-            psyco.bind(cluster.subgraph)
-            psyco.bind(cluster.clique)
-            psyco.bind(cluster.partition)
-            psyco.bind(proximity.dijkstra_shortest_path)
-            psyco.bind(proximity.brandes_betweenness_centrality)
-            psyco.bind(proximity.eigenvector_centrality)
-            psyco.bind(style.edge_arrow)
-            psyco.bind(style.edge_label)
-            #print "using psyco"
-        except:
-            pass
-
     def _get_distance(self):
         return self.d / (node(None).r * 2.5)
+
     def _set_distance(self, value):
         self.d = node(None).r * 2.5 * value
     distance = property(_get_distance, _set_distance)
@@ -302,7 +284,8 @@ class graph(dict):
     def add_nodes(self, nodes):
         """ Add nodes from a list of id's.
         """
-        try: [self.add_node(n) for n in nodes]
+        try:
+            [self.add_node(n) for n in nodes]
         except:
             pass
     
