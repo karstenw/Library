@@ -47,3 +47,5 @@ photobot/examples/transform2/*
 photobot/images/*
 photobot/photobot-standalone
 photobot/photobot.leo
+
+nltk
