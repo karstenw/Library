@@ -6,15 +6,16 @@
 
 from __future__ import print_function
 
-ALL = ['canvas', 'Layers', 'Layer', 'label', 'invertimage', 'cropimage',
+ALL = ['canvas', 'Layers', 'Layer', 'invertimage', 'cropimage',
     'aspectRatio', 'normalizeOrientationImage', 'insetRect',
     'cropImageToRatioHorizontal', 'scaleLayerToHeight', 'placeImage',
-    'resizeImage', 'hashFromString', 'makeunicode', 'datestring', 'filelist',
-    'imagefiles', 'imagewells', 'loadImageWell' ]
+    'resizeImage', 'hashFromString', 'makeunicode', 'datestring',
+    'label' ]
 
 import sys
 import os
 
+import random
 import math
 sqrt = math.sqrt
 pow = math.pow
@@ -31,9 +32,6 @@ import datetime
 import time
 import hashlib
 import unicodedata
-
-import pickle
-import json
 
 import colorsys
 
@@ -76,6 +74,7 @@ except NameError:
     py3 = True
     punichr = chr
     long = int
+    xrange = range
 
 
 # PIL interpolation modes
@@ -109,6 +108,7 @@ SOLID = "solid"
 LINEAR = "linear"
 RADIAL = "radial"
 DIAMOND = "diamond"
+SCATTER = "scatter"
 COSINE = "cosine"
 SINE = "sine"
 ROUNDRECT = "roundrect"
@@ -215,16 +215,22 @@ class Canvas:
             w = -w
         if h < 0:
             h = -h
-        w = max(1,w)
-        h = max(1,h)
+        w = int( round( max(1,w) ))
+        h = int( round( max(1,h) ))
+
+        w2 = w // 2
+        h2 = h // 2
 
         if kwlog:
             print( (style, self.w,self.h,w,h) )
 
-        if style not in (RADIALCOSINE,):
-            img = Image.new("L", (int(w),int(h)), 255)
+        if style in (RADIALCOSINE,): #, SCATTER):
+            img = Image.new("L", (w, h), 0)
+        elif style in (SCATTER, ):
+            img = Image.new("L", (w, h), 0)
+            # img = Image.new("RGBA", (w, h), (0,0,0,0))
         else:
-            img = Image.new("L", (int(w),int(h)), 0)
+            img = Image.new("L", (w, h), 255)
 
         draw = ImageDraw.Draw(img)
 
@@ -232,22 +238,23 @@ class Canvas:
             draw.rectangle((0, 0, w, h), fill=255)
 
         if style == LINEAR:
-            for i in range(int(w)):
-                k = 255.0 * i / w
-                draw.rectangle((i, 0, i, h), fill=int(k))
-            
+            for i in xrange( w ):
+                k = int( round( 255.0 * i / w ))
+                draw.rectangle((i, 0, i, h), fill=k)
+
         if style == RADIAL:
-            r = min(w,h)/2
-            for i in range(int(r)):
-                k = 255 - 255.0 * i/r
+            r = min(w,h) / 2.0
+            r0 = int( round( r ))
+            for i in xrange( r0 ):
+                k = int( round( 255 - 255.0 * i/r ))
                 draw.ellipse((w/2-r+i, h/2-r+i,
-                              w/2+r-i, h/2+r-i), fill=int(k))
+                              w/2+r-i, h/2+r-i), fill=k)
             
         if style == RADIALCOSINE:
             r = max(w,h) / 2.0
             rx = w / 2.0
             ry = h / 2.0
-            
+            r0 = int( round( r ))
             deg = 90
             base = 90 - deg
             deltaxdeg = deg / rx
@@ -255,21 +262,61 @@ class Canvas:
             deltadeg = deg / r
 
             step = min(deltaxdeg, deltaydeg)
-            for i in range(int(r)):
+            for i in xrange( r0 ):
                 # k = 255.0 * i/r
-                k = 256 * sin( radians( base + i * deltadeg ) )
+                k = int( round( 256 * sin( radians( base + i * deltadeg ) ) ))
                 ix = i * (rx / r)
                 iy = i * (ry / r)
                 draw.ellipse((0 + ix, 0 + iy,
-                              w - ix, h - iy), fill=int(k))
+                              w - ix, h - iy), fill=k)
 
         if style == DIAMOND:
-            r = max(w,h)
-            for i in range(int(r)):
-                x = int( i*w / r*0.5 )
-                y = int( i*h / r*0.5 )
-                k = 255.0 * i/r
-                draw.rectangle((x, y, w-x, h-y), outline=int(k))
+            maxwidthheight = int( round( max(w,h) ))
+            widthradius = w * 0.5
+            heightradius = h * 0.5
+            for i in xrange( maxwidthheight ):
+                ratio = i / float( maxwidthheight )
+                x = int( round( ratio * widthradius ) )
+                y = int( round( ratio * heightradius ) )
+                k = int( round( 256.0 * ratio ))
+                draw.rectangle((x, y, w-x, h-y), outline=k)
+
+        if style == SCATTER:
+            # scatter should be some circles randomly across WxH
+            
+            # img, draw
+            maxwidthheight = int( round( max(w,h) ))
+            minwidthheight = int( round( min(w,h) ))
+
+            def rnd( w, offset ):
+                r = random.random()
+                o2 = offset / 2.0
+                result = o2 + r * (w - (offset * 2))
+                return result
+
+            # circles at 12.5%
+            circleplacemin = int( round( minwidthheight / 9.0 ) )
+            circleplacemax = int( round( maxwidthheight / 9.0 ) )
+            c2 = 2 * circleplacemin
+            
+            for count in xrange( 511 ):
+                tempimage = Image.new("L", (w, h), (0,) )
+                draw2 = ImageDraw.Draw( tempimage )
+                x = int( round( rnd( w, circleplacemin ) ))
+                y = int( round( rnd( h, circleplacemin ) ))
+                k = min(255, int( round( 33 + random.random() * 127)) )
+                r = (circleplacemin / 4.0) + random.random() * (circleplacemin / 4.0)
+                bottom = int(round(y + r))
+                right = int(round(x + r))
+                draw2.ellipse( (x, y, right, bottom), fill=( k ) )
+                if 0:
+                    print( (x, y, bottom, right) )
+                
+                # merge
+                img = ImageChops.add(img, tempimage)
+                del draw2
+            img = img.convert("L")
+
 
         if style in (SINE, COSINE):
             # sin/cos 0...180 left to right
@@ -281,9 +328,9 @@ class Canvas:
                 deg = 90.0
                 base = 90.0 - deg
             deltadeg = deg / w
-            for i in range( int(w) ):
-                k = 256 * action( radians( base + i * deltadeg ) )
-                draw.line( (i,0,i, h), fill=int(k), width=1)
+            for i in xrange( w ):
+                k = int( round( 256.0 * action( radians( base + i * deltadeg ) ) ))
+                draw.line( (i,0,i, h), fill=k, width=1)
 
         
         result = img.convert("RGBA")
@@ -304,22 +351,22 @@ class Canvas:
         easily be flipped, rotated, scaled, inverted, made brighter
         or darker, ...
 
-        Styles for gradients are LINEAR, RADIAL, DIAMOND, SINE,
-        COSINE and ROUNDRECT
+        Styles for gradients are LINEAR, RADIAL, DIAMOND, SCATTER,
+        SINE, COSINE and ROUNDRECT
         """
 
         w0 = self.w
         h0 = self.h
         if type(w) == float:
-            w = int(w*w0)
+            w = int( round( w * w0 ))
         if type(h) == float:
-            h = int(h*h0)
+            h = int( round( h * h0 )) 
 
 
         img = None
 
         if style in (SOLID, LINEAR, RADIAL, DIAMOND,
-                     SINE, COSINE, RADIALCOSINE):
+                     SCATTER, SINE, COSINE, RADIALCOSINE):
             img = self.makegradientimage(style, w, h)
             img = img.convert("RGBA")
             return self.layer(img, 0, 0, name=name)
@@ -327,17 +374,17 @@ class Canvas:
 
         if style == QUAD:
             # make a rectangle with softened edges
-            result = Image.new("L", (int(w),int(h)), 255)
+            result = Image.new("L", ( w, h ), 255)
             
-            mask = Image.new("L", (w,h), 255)
+            mask = Image.new("L", ( w, h ), 255)
             draw = ImageDraw.Draw(mask)
 
             if radius == 0 and radius2 == 0:
                 radius = w / 4.0
                 radius2 = w / 10.0
 
-            r1 = int(round(radius,0))
-            r2 = int(round(radius2,0))
+            r1 = int(round( radius ))
+            r2 = int(round( radius2 ))
             
             if r1 == 0:
                 r1 = 1
@@ -376,9 +423,9 @@ class Canvas:
             return self.layer(result, 0, 0, name=name)
 
         if style == ROUNDRECT:
-            result = Image.new("L", (int(w),int(h)), 255)
-            r1 = int(round(radius))
-            r2 = int(round(radius2))
+            result = Image.new("L", ( w, h ), 255)
+            r1 = int( round( radius ))
+            r2 = int( round( radius2 ))
             if r1 == 0:
                 r1 = 1
             if r2 == 0:
@@ -483,7 +530,7 @@ class Canvas:
             start = time.time()
 
         if layers == []:
-            layers = range(1, len(self.layers))
+            layers = xrange(1, len(self.layers))
 
         background = self.layers._get_bg()
         background.name = "Background"
@@ -593,9 +640,9 @@ class Canvas:
 
             # Merge the base to the flattened canvas.
 
-            x = max(0, int(layer.x))
-            y = max(0, int(layer.y))
-            background.img.paste(baseimage, (x,y))
+            x = max(0, int( round( layer.x )) )
+            y = max(0, int( round( layer.y )) )
+            background.img.paste(baseimage, (x,y) )
             del baseimage, buffimage, buffalpha, basealpha, blendimage
 
         layers = list(layers)
@@ -616,6 +663,7 @@ class Canvas:
         if kwlog:
             stop = time.time()
             print("Canvas.flatten( %s ) in %.3fsec." % (repr(layers), stop-start))
+
 
     def export(self, name, ext=".png", format="PNG", unique=False):
 
@@ -667,7 +715,7 @@ class Canvas:
 
             background = self.layers._get_bg()
             background.name = "Background"
-            layers = range(1, len(self.layers) )
+            layers = xrange(1, len(self.layers) )
             for i in layers:
                 layer = self.layers[i]
 
@@ -701,6 +749,9 @@ class Canvas:
                 print( "export() DBG: '%s'" % path.encode("utf-8") )
 
         self.flatten()
+        if format in ("JPEG",):
+            if self.layers[1].img.mode == "RGBA":
+                self.layers[1].img = self.layers[1].img.convert("RGB")
         self.layers[1].img.save(path, format=format, optimize=False)
         if kwlog:
             print( "export() %s" % path.encode("utf-8") )
@@ -799,6 +850,23 @@ class Canvas:
         self.layers.append( layer )
         return self.top
 
+    def copy(self):
+        
+        """Returns a copy of the canvas.
+        
+        """
+        
+        _canvas = canvas( self.w, self.h )
+        _canvas.interpolation = self.interpolation
+        _canvas.layers = Layers()
+        _canvas.w = self.w
+        _canvas.h = self.h
+        for layer in self.layers:
+            layercopy = layer.copy()
+            layercopy.canvas = self
+            _canvas.layer( layercopy )
+        return _canvas
+
 
 def canvas(w, h):
     return Canvas(w, h)
@@ -878,7 +946,7 @@ class Layer:
         
         """
         
-        for i in range(len(self.canvas.layers)):
+        for i in xrange(len(self.canvas.layers)):
             if self.canvas.layers[i] == self:
                 break
         if self.canvas.layers[i] == self:
@@ -1115,7 +1183,6 @@ class Layer:
         self.img = self.img.convert("RGBA")
         self.img.putalpha(alpha)
 
-
     def colorize(self, black, white, mid=None,
                        blackpoint=0, whitepoint=255, midpoint=127):
 
@@ -1133,9 +1200,6 @@ class Layer:
         self.img = img
 
     def posterize(self, bits=8):
-        if 0: #not (1 <= bits <= 8):
-            return
-        # alpha = self.img.split()[3]
         alpha = self.img.getchannel("A")
         img = self.img.convert("RGB")
         img = ImageOps.posterize(img, bits)
@@ -1163,11 +1227,16 @@ class Layer:
         img.putalpha(alpha)
         self.img = img
 
-    def deform( self, deformer, resample=2 ):
+    def deform( self, deformer, resample=LANCZOS ):
         self.img = ImageOps.deform(self.img, deformer, resample)
 
     def equalize(self, mask=None):
-        self.img = ImageOps.equalize(self.img, mask)
+        alpha = self.img.getchannel("A")
+        img = self.img.convert("RGB")
+        img = ImageOps.equalize(img, mask)
+        img = img.convert("RGBA")
+        img.putalpha(alpha)
+        self.img = img
 
     def invert(self):
 
@@ -1200,9 +1269,9 @@ class Layer:
         """
         w0, h0 = self.img.size
         if type(w) == float:
-            w = int(w*w0)
+            w = int( round( w*w0 ) )
         if type(h) == float:
-            h = int(h*h0)
+            h = int( round( h*h0 ) )
         self.img = self.img.resize((w,h), resample=LANCZOS)
         self.w = w
         self.h = h
@@ -1231,7 +1300,7 @@ class Layer:
         
         def mid( t1, t2, makeint=True ):
             # calculate the middle between t1 and t2
-            return int(round( (t2-t1) / 2.0 ))
+            return int( round( (t2-t1) / 2.0 ))
 
         w0, h0 = self.img.size
         diag0 = sqrt(pow(w0,2) + pow(h0,2))
@@ -1244,13 +1313,13 @@ class Layer:
 
         w = sin(radians(d_angle + angle)) * diag0
         w = max(w, sin(radians(d_angle - angle)) * diag0)
-        w = int(abs(w))
+        w = int( round( abs(w) )) 
 
         h = cos(radians(d_angle + angle)) * diag0
         h = max(h, cos(radians(d_angle - angle)) * diag0)
-        h = int(abs(h))
+        h = int( round( abs(h) ))
 
-        diag1 = int(round(diag0))
+        diag1 = int( round( diag0 ))
 
         # The rotation box's background color
         # is the mean pixel value of the rotating image.
@@ -1521,13 +1590,13 @@ class Blend:
 
         """
 
-        p1 = list(img1.getdata())
-        p2 = list(img2.getdata())
+        p1 = list( img1.getdata() )
+        p2 = list( img2.getdata() )
 
-        for i in range(len(p1)):
+        for i in xrange(len(p1)):
         
             p3 = ()
-            for j in range(len(p1[i])):
+            for j in xrange(len(p1[i])):
 
                 a = p1[i][j] / 255.0
                 b = p2[i][j] / 255.0
@@ -1536,14 +1605,14 @@ class Blend:
                 # take the alpha of the most transparent layer.
             
                 if j == 3:
-                    # d = (a+b)*0.5
+                    # d = (a+b) * 0.5
                     # d = a
                     d = min(a,b)
                 elif a > 0.5:
-                    d = 2*(a+b-a*b)-1
+                    d = 2 * (a+b - a*b)-1
                 else:
                     d = 2*a*b            
-                p3 += (int(d*255),)
+                p3 += ( int( round(d * 255.0)), )
         
             p1[i] = p3
         
@@ -1564,7 +1633,8 @@ class Blend:
 
         p1 = list(img1.getdata())
         p2 = list(img2.getdata())
-        for i in range(len(p1)):
+
+        for i in xrange(len(p1)):
         
             r1, g1, b1, a1 = p1[i]
             r1 = r1 / 255.0
@@ -1581,9 +1651,9 @@ class Blend:
         
             r3, g3, b3 = colorsys.hsv_to_rgb(h2, s1, v1)
         
-            r3 = int(r3*255)
-            g3 = int(g3*255)
-            b3 = int(b3*255)
+            r3 = int( round( r3*255.0 ))
+            g3 = int( round( g3*255.0 ))
+            b3 = int( round( b3*255.0 ))
             p1[i] = (r3, g3, b3, a1)
 
         img = Image.new("RGBA", img1.size, 255)
@@ -1602,7 +1672,7 @@ class Blend:
         """
         p1 = list(img1.getdata())
         p2 = list(img2.getdata())
-        for i in range(len(p1)):
+        for i in xrange(len(p1)):
         
             r1, g1, b1, a1 = p1[i]
             r1 = r1 / 255.0
@@ -1619,9 +1689,10 @@ class Blend:
         
             r3, g3, b3 = colorsys.hsv_to_rgb(h2, s2, v1)
         
-            r3 = int(r3*255)
-            g3 = int(g3*255)
-            b3 = int(b3*255)
+            r3 = int( round( r3*255.0 ))
+            g3 = int( round( g3*255.0 ))
+            b3 = int( round( b3*255.0 ))
+
             p1[i] = (r3, g3, b3, a1)
 
         img = Image.new("RGBA", img1.size, 255)
@@ -1780,6 +1851,28 @@ def datestring(dt = None, dateonly=False, nospaces=True, nocolons=True):
     return now
 
 
+def grid(cols, rows, colSize=1, rowSize=1, shuffled=False):
+    """Returns an iterator that contains coordinate tuples.
+    
+    The grid can be used to quickly create grid-like structures.
+    A common way to use them is:
+        for x, y in grid(10,10,12,12):
+            rect(x,y, 10,10)
+    """
+    # Prefer using generators.
+    rowRange = range( int(rows) )
+    colRange = range( int(cols) )
+    # Shuffled needs a real list, though.
+    if (shuffled):
+        rowRange = list(rowRange)
+        colRange = list(colRange)
+        random.shuffle(rowRange)
+        random.shuffle(colRange)
+    for y in rowRange:
+        for x in colRange:
+            yield (x*colSize, y*rowSize)
+
+
 #
 # image tools section
 #
@@ -1802,12 +1895,48 @@ def cropimage( img, bounds):
     return img.crop( bounds )
 
 
-def splitimage( img, hor=1, vert=1):
-    """Split a PIL image hor times horizontally and vert times vertically.
+def splitrect( left, top, right, bottom, hor=True, t=0.5 ):
+    """Split a PIL image horizontally or vertically.
     
-    Return a (hor+1) * (vert+1) list with images.
+    A split is horizontal if the splitline is horizontal.
+    
+    Return a list with images.
     """
+
+    # w,h = img.size
+    w = int( round( right-left ))
+    h = int( round( bottom-top ))
+
+    w2 = int( round( w * t ))
+    h2 = int( round( h * t ))
+
+    if hor:
+        rects = [ (left, top, right, top+h2), (left, top+h2+1, right, bottom) ]
+    else:
+        rects = [ (left, top, l+w2, bottom), (left+w2+1, top, right, bottom) ]
+    return rects
+
+
+def splitimage( img ):
     pass
+
+# gridsizeh = w // hor
+# remainderh = w % hor
+# noofmainchunks = noofrecords // chunksize
+# remainingrecords = noofrecords % chunksize
+
+"""
+with Image.open("hopper.jpg") as im:
+
+    # The crop method from the Image module takes four coordinates as input.
+    # The right can also be represented as (left+width)
+    # and lower can be represented as (upper+height).
+    (left, upper, right, lower) = (20, 20, 100, 100)
+
+    # Here the image "im" is cropped and assigned to new variable im_crop
+    im_crop = im.crop((left, upper, right, lower))
+"""    
+    
 
 
 def aspectRatio(size, maxsize, height=False, width=False, assize=False):
@@ -1836,8 +1965,8 @@ def aspectRatio(size, maxsize, height=False, width=False, assize=False):
         pass
     else:
         scale = float(maxsize) / currmax
-        w = int( round( w*scale, 0) )
-        h = int( round( h*scale, 0) )
+        w = int( round( w*scale ) )
+        h = int( round( h*scale ) )
         size = (w,h)
     if assize:
         return size
@@ -1865,7 +1994,7 @@ def cropImageToRatioHorizontal( layer, ratio ):
     """
     """
     w, h = layer.bounds()
-    newwidth = int( round( h*ratio) )
+    newwidth = int( round( h*ratio ))
     d = int( newwidth / 2.0 )
     x,y,w,h = insetRect( (0,0,w,h), d, 0 )
     layer.img = layer.img.crop(box=(x,y,x+w,y+h))
@@ -1983,427 +2112,5 @@ def label( canvas, string, x, y, fontsize=18, fontpath="" ):
     canvas.layer( blatt )
     canvas.layer( mask )
     canvas.top.mask()
-
-
-#
-# folderscanner section
-#
-
-def filelist( folderpathorlist, pathonly=True ):
-    """Walk a folder or a list of folders and return
-    paths or ((filepath, size, lastmodified, mode) tuples..
-    """
-
-    folders = folderpathorlist
-    if type(folderpathorlist) in (pstr, punicode):
-        folders = [folderpathorlist]
-    result = []
-    for folder in folders:
-        for root, dirs, files in os.walk( folder ):
-            root = makeunicode( root )
-            if kwlog:
-                print (root.encode("utf-8"))
-            for thefile in files:
-                thefile = makeunicode( thefile )
-                basename, ext = os.path.splitext(thefile)
-
-                # exclude dotfiles
-                if thefile.startswith(u'.'):
-                    continue
-
-                # exclude the specials
-                for item in (u'\r', u'\n', u'\t'):
-                    if item in thefile:
-                        continue
-
-                filepath = os.path.join( root, thefile )
-                filepath = filepath.encode("utf-8")
-
-                record = filepath
-                if not pathonly:
-                    info = os.stat( filepath )
-                    lastmodf = datetime.datetime.fromtimestamp( info.st_mtime )
-                    islink = os.path.islink( filepath )
-                    record = (filepath,
-                              info.st_size,
-                              lastmodf,
-                              oct(info.st_mode),
-                              islink )
-                yield record
-
-
-def imagefiles( folderpathorlist, pathonly=True ):
-    """Get a list of images from a list of folders.
-
-    folderpathorlist: is either a string with a path or a list of paths
-    
-    pathonly: if True return list of fullpath
-              else: return a list of filetuples
-    filetuple = 
-        (path, filesize, lastmodf, mode, islink, width, height)
-    
-    """
-    filetuples = filelist( folderpathorlist, pathonly=pathonly )
-    exts = ".tif .tiff .gif .jpg .jpeg .png" # + " .eps"
-    extensions = tuple( exts.split() )
-    for filetuple in filetuples:
-        path = filetuple
-        if not pathonly:
-            path = filetuple[0]
-        path = makeunicode( path )
-
-        _, ext = os.path.splitext( path )
-        if ext.lower() not in extensions:
-            continue
-        if pathonly:
-            # print (path.encode("utf-8"))
-            yield path
-        else:
-            path, filesize, lastmodf, mode, islink = filetuple
-            s = (-1,-1)
-            try:
-                img = Image.open(path)
-                s = img.size
-                del img
-            except:
-                pass #continue
-            filetuple = (path, filesize, lastmodf, mode, islink, s[0], s[1])
-            # print (path.encode("utf-8"))
-            yield filetuple
-
-
-#
-# image well section
-#
-
-def getImageWellsFile( imagewellsfile="imagewell.txt" ):
-    return os.path.abspath( imagewellsfile )
-
-
-def imagewells( imagewellsfile="imagewell.txt" ):
-    """Find a file named "imagewell.txt" and interpret it as image folder paths.
-    If no file is found create one with the desktop image folders for
-    mac & win10.
-    
-    """
-    folders = [
-        # macos system wallpapers
-        "/Library/Desktop Pictures",
-        
-        # windows
-        "C:\Windows\Web",
-        
-        # linux wallpapers
-        "/usr/share/backgrounds",
-        "/usr/share/wallpapers" ]
-
-    images = os.path.abspath( "images" )
-    if os.path.exists( images ):
-        folders.append( images )
-    fullpath = getImageWellsFile( imagewellsfile )
-    
-    if not os.path.exists( fullpath ):
-        try:
-            f = open(fullpath, 'w')
-            f.write( "\n".join( folders ) )
-            f.close()
-        except:
-            pass
-        return folders
-    try:
-        with open(fullpath, 'Ur') as f:
-            lines = f.readlines()
-        if not lines:
-            return folders
-        folders = []
-        for line in lines:
-            line = line.strip("\n\r")
-            folders.append( makeunicode( line ) )
-    except:
-        pass
-    folders = [x for x in folders if os.path.exists(x)]
-    return folders
-
-class Imagecollection(object):
-    """
-    ImageCollection should be the return value of loadImageWell() and
-    transparently handle the imagewell.txt pickling.
-
-    The folders in imagewell.txt should be parsed, if one of the folders
-    is newer or imagewell.txt is newer than imagewell-files.pick.
-
-    """
-
-    def __init__(self):
-        self.data = {}
-    
-    
-
-def loadImageWell( bgsize=(1024,768), minsize=(256,256),
-                   maxfilesize=100000000, maxpixellength=16000,
-                   pathonly=True, additionals=None, ignorelibs=False,
-                   imagewellsfile="imagewell.txt",
-                   resultfile=False, ignoreFolderNames=None):
-
-    """
-    Find images imagewells or additional folders. 
-       
-    Params:
-        bgsize
-            tuple with width and height for images to be classified background
-
-        minsize
-            tuple with minimal width and height for images not to be ignored
-
-        maxfilesize
-            in bytes. Images above this file size will be ignored
-
-        maxpixellength
-            in pixels. Images above in either dimension will be ignored
-
-        pathonly
-            return path or record
-        additionals
-            list of folders to me considered for this run
-
-        ignorelibs
-            if imagewells file should be ignored
-
-    Returns:
-        A dict of dicts with several image classifications.
-
-        list of file paths if pathonly is True
-        list of file records else.
-    """
-
-    tiles = []
-    backgrounds = []
-    proportions = {}
-    fractions = {}
-
-    result = {
-        'allimages': [],
-        'tiles': [],
-        'backgrounds': [],
-        'landscape': [],
-        'portrait': [],
-        'fractions': {},
-        'WxH largest': "",
-        'WxH smallest': "",
-        'WxH median': "",
-    }
-
-    minw, minh = minsize
-    bgw, bgh = bgsize
-    smallestw, smallesth = 99999,99999
-    largestw, largesth = 0,0
-    medianw, medianh = 0,0
-    slope = 1.0
-    imagecount = 0
-    filetuples = []
-
-    fileLoaded = False
-
-    imageWellsFile = getImageWellsFile( imagewellsfile )
-    imageTabsfileIsNewer = False
-
-
-    # pdb.set_trace()
-    if ignorelibs == False:
-        if not additionals:
-            if resultfile != False:
-                path = os.path.abspath( resultfile )
-                folder, filename = os.path.split( path )
-                tabfile = os.path.join( folder, filename + ".tab" )
-                if os.path.exists( tabfile ):
-                    try:
-                        info1 = os.stat( imageWellsFile )
-                        lastmodf1 = datetime.datetime.fromtimestamp( info1.st_mtime )
-
-                        info2 = os.stat( tabfile )
-                        lastmodf2 = datetime.datetime.fromtimestamp( info2.st_mtime )
-                        
-                        imageTabsfileIsNewer = lastmodf2 > lastmodf1
-                    except:
-                        pass
-
-                    if imageTabsfileIsNewer:
-                        print("Reading tabfile...")
-                        start = time.time()
-                        f = io.open(tabfile, "r", encoding="utf-8")
-                        lines = f.readlines()
-                        f.close()
-                        filetuples = []
-
-                        for line in lines:
-                            path, filesize, lastmodified, mode, islink, w0, h0 = line.split( u"\t" )
-                            filesize = int(filesize)
-                            islink = bool(islink)
-                            w0 = int(w0)
-                            h0 = int(h0)
-                            if os.path.exists( path ):
-                                filetuples.append( (path, filesize, lastmodified, mode, islink, w0, h0) )
-
-                        fileLoaded = True
-                        print("%i records loaded from tabfile." % len(filetuples))
-                        print("Reading tabfile... Done.")
-                        stop = time.time()
-                        print( "READ TIME: %.3f" % (stop-start,) )        
-
-    # get all images from user image wells
-    folders = []
-    if not ignorelibs:
-        folders = imagewells()
-
-    if additionals:
-        folders.extend( additionals )
-
-    # check if it has read the cache
-    if not filetuples:
-        start = time.time()
-        filetuples = []
-        items = list( imagefiles( folders, pathonly=False ) )
-        for filetuple in items:
-            path, filesize, lastmodified, mode, islink, w0, h0 = filetuple
-            path = makeunicode(path)
-            item = ( path, filesize, lastmodified, mode, islink, w0, h0 )
-            filetuples.append( item )
-        stop = time.time()
-        print("FOLDER SCAN TIME: %.3f" % (stop-start,))
-
-    if kwlog:
-        print("File loop...")
-
-    # pdb.set_trace()
-    for t in filetuples:
-        path, filesize, lastmodified, mode, islink, w0, h0 = t
-        path = makeunicode( path )
-        folder, filename = os.path.split( path )
-        root, parent =  os.path.split( folder )
-        basename, ext = os.path.splitext( filename )
-
-        # parent names
-        cancel = False
-        if ignoreFolderNames:
-            for name in ignoreFolderNames:
-                if parent.startswith( name ):
-                    cancel = True
-                    # print("IGNORE PARENT: %s  %s" % (name,path))
-                    break
-        if cancel:
-            continue
-            
-        # filter minimal pixel lengths
-        if ext.lower() != ".eps":
-            if (w0 < minw) and (h0 < minh):
-                continue
-            if (w0 > maxpixellength) or (h0 > maxpixellength):
-                continue
-
-        # filter maximal pixel lengths
-        if (w0 > maxpixellength) or (h0 > maxpixellength):
-            continue
-
-        # filter max filesize
-        if filesize > maxfilesize:
-            continue
-
-        # filter images with anormal width or height
-        if w0 in (0, 0.0):
-            print( "Anormal width: %s %s %s" % (repr(path),
-                                                repr(w0), repr(h0)))
-            continue
-        if h0 in (0, 0.0):
-            print( "Anormal height: %s %s %s" % (repr(path),
-                                                 repr(w0), repr(h0)))
-            continue
-
-        imagecount += 1
-
-        # collect some stats
-        if w0 < smallestw:
-            smallestw = w0
-        if  h0 < smallesth:
-            smallesth = h0
-        if w0 > largestw:
-            largestw = w0
-        if  h0 > largesth:
-            largesth = h0
-
-        medianw += w0
-        medianh += h0
-
-        proportion = "landscape"
-        if h0 > w0:
-            proportion = "portrait"
-
-        fracs = "x:y"
-        try:
-            frac = Fraction(w0, h0)
-            fracs = "%i:%i" % (frac.numerator, frac.denominator )
-        except TypeError as err:
-            print(err)
-            print(w0)
-            print(h0)
-
-        if pathonly:
-            record = path
-        else:
-            record = (path, filesize, lastmodified, mode, islink,
-                      w0, h0, proportion, frac)
-
-        result['allimages'].append( record )
-
-        # candidate has at least canvas size and can be used as background
-        # otherwise it is a tile
-        if (w0 >= bgw) and (h0 >= bgh):
-            result['backgrounds'].append( record )
-        else:
-            # print( "TILE: %i < %i  and  %i < %i" % (w0,bgw,h0,bgh) )
-            result['tiles'].append( record )
-
-        if fracs not in result['fractions']:
-            result['fractions'][fracs] = []
-        result['fractions'][fracs].append( record )
-
-        if proportion == "landscape":
-            result['landscape'].append( record )
-        else:
-            result['portrait'].append( record )
-
-    if kwlog:
-        print("File loop... Done.")
-
-    result[ 'WxH largest' ] = (largestw,largesth)
-    result[ 'WxH smallest' ] = (smallestw,smallesth)
-    result[ 'WxH median' ] = (medianw / float(imagecount),
-                              medianh / float(imagecount))
-
-    if resultfile and not fileLoaded:
-        print("Writing tabfile...")
-
-        path = os.path.abspath( resultfile )
-        folder, filename = os.path.split( path )
-        
-        if os.path.exists( folder ):
-            start = time.time()
-            tabfile = os.path.join( folder, filename + ".tab" )
-            items = []
-            template = u"%s\t%s\t%s\t%s\t%i\t%i\t%i\n"
-            f = io.open(tabfile, "w", encoding="utf-8")
-            for item in filetuples:
-                path, filesize, lastmodified, mode, islink, w0, h0 = item
-                w0 = int(w0)
-                h0 = int(h0)
-                islink = int(bool(islink))
-                filesize  = str( filesize )
-                item = ( path, filesize, lastmodified, mode, islink, w0, h0 )
-                f.write( template % item )
-            f.close()
-            print("Writing tabfile... Done.")
-            stop = time.time()
-            print("WRITE TIME: %.3f" % (stop-start,) )        
-
-    return result
 
 
