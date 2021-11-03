@@ -316,7 +316,8 @@ def dada(query, foreground=None, background=None, fonts=[], transparent=False):
                         d = random(100)
                         _ctx.stroke(foreground)
                         _ctx.strokewidth(0.5)
-                        _ctx.line(x+_ctx.textwidth(word), y, x+_ctx.textwidth(word)+d, y)
+                        _ctx.line(x + _ctx.textwidth(word),     y,
+                                  x + _ctx.textwidth(word) + d, y)
                         x += d
                     
                     # Some play with indentation.
