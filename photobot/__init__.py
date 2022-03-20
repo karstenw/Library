@@ -79,8 +79,8 @@ except NameError:
 
 # PIL interpolation modes
 NEAREST = Image.NEAREST
-BICUBIC = Image.BICUBIC
 BILINEAR = Image.BILINEAR
+BICUBIC = Image.BICUBIC
 LANCZOS = Image.LANCZOS
 INTERPOLATION = Image.BICUBIC
 
@@ -1227,7 +1227,7 @@ class Layer:
         img.putalpha(alpha)
         self.img = img
 
-    def deform( self, deformer, resample=LANCZOS ):
+    def deform( self, deformer, resample=BICUBIC ):
         self.img = ImageOps.deform(self.img, deformer, resample)
 
     def equalize(self, mask=None):
