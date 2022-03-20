@@ -1,12 +1,32 @@
-#include <Python.h>
 #include <math.h>
+#include <Python.h>
 //#include <stdio.h>
 
-void _eval(double m,double n1,double n2,double n3,double phi,double *x,double *y)
+
+#if PY_MAJOR_VERSION >= 3
+  #define MOD_ERROR_VAL NULL
+  #define MOD_SUCCESS_VAL(val) val
+  #define MOD_INIT(name) PyMODINIT_FUNC PyInit_##name(void)
+  #define MOD_DEF(ob, name, doc, methods) \
+          static struct PyModuleDef moduledef = { \
+            PyModuleDef_HEAD_INIT, name, doc, -1, methods, }; \
+          ob = PyModule_Create(&moduledef);
+#else
+  #define MOD_ERROR_VAL
+  #define MOD_SUCCESS_VAL(val)
+  #define MOD_INIT(name) void init##name(void)
+  #define MOD_DEF(ob, name, doc, methods) \
+    ob = Py_InitModule3(name, methods, doc);
+#endif
+
+
+void
+_eval(	double m, double n1, double n2, double n3, double phi,
+		double *x, double *y)
 {
     double r;
-    double t1,t2;
-    double a=1,b=1;
+    double t1, t2;
+    double a=1, b=1;
 
     t1 = cos(m * phi / 4.0) / a;
     t1 = fabs(t1);
@@ -16,7 +36,7 @@ void _eval(double m,double n1,double n2,double n3,double phi,double *x,double *y
     t2 = fabs(t2);
     t2 = pow(t2,n3);
 
-    r = pow(t1+t2,1.0/n1);
+    r = pow(t1 + t2, 1.0 / n1);
     if (fabs(r) == 0) {
         *x = 0;
         *y = 0;
@@ -43,21 +63,25 @@ cSuperformula_supercalc(PyObject *self, PyObject *args)
 static PyObject *SuperformulaError;
 
 static PyMethodDef SuperformulaMethods[] = {
-    {"supercalc",  cSuperformula_supercalc, METH_VARARGS,
-    "Supercalc."},
+    {"supercalc",  cSuperformula_supercalc, METH_VARARGS, "Supercalc."},
     {NULL, NULL, 0, NULL}        /* Sentinel */
 };
 
-PyMODINIT_FUNC
-initcSuperformula(void)
-{
+
+MOD_INIT(cSuperformula) { 
     PyObject *m;
     
-    m = Py_InitModule("cSuperformula", SuperformulaMethods);
+    // m = Py_InitModule("cSuperformula", SuperformulaMethods);
+    MOD_DEF(m, "cSuperformula", "Superformula c-extension.", SuperformulaMethods)
     
+    /* // Not now
     SuperformulaError = PyErr_NewException("cSuperformula.error", NULL, NULL);
     Py_INCREF(SuperformulaError);
     PyModule_AddObject(m, "error", SuperformulaError);
+    */
+#if PY_MAJOR_VERSION >= 3
+    return( m );
+#endif
 }
 
 int
@@ -70,7 +94,11 @@ main(int argc, char *argv[])
     Py_Initialize();
 
     /* Add a static module */
+#if PY_MAJOR_VERSION >= 3
+    PyInit_cSuperformula();
+#else
     initcSuperformula();
+#endif
     
     return 0;
 }

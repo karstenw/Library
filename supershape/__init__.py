@@ -6,6 +6,8 @@
 # The superformula was published by Johan Gielis,
 # you may use it in NodeBox for non-commercial purposes.
 
+from __future__ import print_function
+
 from math import pi, sin, cos, pow
 _range = range
 
@@ -18,7 +20,7 @@ try:
     from cSuperformula import supercalc
 
 except:
-    
+    print("Failed loading shared object")
     # Else, use the native python
     # calculation of supershapes.
     def supercalc(m, n1, n2, n3, phi):
@@ -31,7 +33,7 @@ except:
     
         t2 = sin(m * phi / 4) / b
         t2 = abs(t2)
-        print t2, n3
+        print( t2, n3 )
         t2 = pow(t2, n3)
     
         r = pow(t1 + t2, 1 / n1)

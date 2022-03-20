@@ -2,7 +2,7 @@ try:
     supershape = ximport("supershape")
 except:
     supershape = ximport("__init__")
-    reload(supershape)
+    # reload(supershape)
 
 size(600, 400)
 
