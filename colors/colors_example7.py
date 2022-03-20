@@ -8,22 +8,24 @@ except ImportError:
 
 # Deep green gradient background.
 size(400, 400)
+
 bg = rect(0,0,WIDTH,HEIGHT,draw=False)
 colors.gradientfill(bg, color(0.15,0.2,0), color(0,0,0))
 colors.shadow()
 
 for i in range(800):
     
-    x = random(400)
-    y = random(400)
+    x = random( WIDTH )
+    y = random( HEIGHT )
     
     # A lightsource positioned at the centre of the canvas.
     d = colors.shader(x, y, WIDTH/2, HEIGHT/2, angle=None, radius=150)
     
     # Ovals become smaller when further away from the light.
     # If they become too small, don't draw them.
-    r = d*40
-    if r < 4: continue
+    r = d * 40
+    if r < 4:
+        continue
     p = oval(x, y, r*2, r*2, draw=False)
     
     # Two colors for an oval gradient fill.
