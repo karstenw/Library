@@ -13,6 +13,8 @@ kwlog = 0
 import random as rnd
 
 import libgradient
+import imagewells
+loadImageWell = imagewells.loadImageWell
 
 if kwdbg and 1:
     # make random choices repeatable for debugging
@@ -47,12 +49,12 @@ RATIO = WIDTH / HEIGHT
 additionals = sys.argv[1:]
 
 # get all images from user image wells
-imagewell = pb.loadImageWell(   bgsize=(WIDTH, HEIGHT),
-                                minsize=(256,256),
-                                pathonly=True,
-                                additionals=additionals,
-                                resultfile="imagewell-files",
-                                ignoreFolderNames=('+offline',))
+imagewell = loadImageWell(   bgsize=(WIDTH, HEIGHT),
+                             minsize=(256,256),
+                             pathonly=True,
+                             additionals=additionals,
+                             resultfile="imagewell-files",
+                             ignoreFolderNames=('+offline',))
 
 # tiles are images >256x256 and <=WIDTH, HEIGHT
 tiles = imagewell['tiles']
@@ -101,7 +103,6 @@ print( "Background: %s" % bgimage.encode("utf-8") )
 for j in range(rows):
     colw = 0
     for i in range(columns):
-        idx += 1
         # new layer with a random image
         top = c.layer( tiles.pop() )
 
@@ -154,8 +155,8 @@ for j in range(rows):
         # mask destroys top layer
         c.top.mask()
         
-        # c.top.translate(colw+i*w, j*y_offset)
-        c.top.translate(x_offset * i, j*y_offset)
+        c.top.translate(colw+i*w, j*y_offset)
+        # c.top.translate(x_offset * i, j*y_offset)
         
         c.top.opacity( 66 + rnd.random() * 29 )
 
