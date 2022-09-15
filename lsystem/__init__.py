@@ -11,7 +11,8 @@ __license__   = "MIT"
 ### L-SYSTEM #######################################################################
 
 from nodebox.graphics import CORNER, CENTER
-from sys import maxint
+#from sys import maxint
+maxint = 2**32
 
 class LSystem(object):
 
