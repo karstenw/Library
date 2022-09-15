@@ -1,13 +1,7 @@
 # Soaring text.
 
 
-# get screen size
-
-import AppKit
-s = AppKit.NSScreen.mainScreen()
-X,Y = s.frame().size
-
-size(500, 500)
+size(800, 800)
 
 speed(100)
 
