@@ -24,10 +24,8 @@ import urllib
 import base64
 import json
 
-if sys.version > "3":
-    import csv as csvlib
-else:
-    from backports import csv as csvlib
+import csv as csvlib
+
 
 from codecs import BOM_UTF8
 from itertools import islice
@@ -162,7 +160,8 @@ class Date(datetime):
     @property
     def timestamp(self):
 
-        # In Python 3, years before 1900 are accepted whilee mktime() raises ValueError in Python 2. Let's stick to this.
+        # In Python 3, years before 1900 are accepted while mktime()
+        # raises ValueError in Python 2. Let's stick to this.
         if self.timetuple().tm_year < 1900:
             raise ValueError("year out of range")
 
@@ -1936,7 +1935,7 @@ class CSV(list):
         """
         # Optional parameters include all arguments for csv.writer(), see:
         # http://docs.python.org/library/csv.html#csv.writer
-        kwargs.setdefault("delimiter", separator)
+        kwargs.setdefault("delimiter", separator )
         kwargs.setdefault("quoting", csvlib.QUOTE_ALL)
         # csv.writer will handle str, int, float and bool:
         s = StringIO()
