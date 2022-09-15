@@ -6,14 +6,14 @@
 # Python version adapted from Malcolm Kesson's code: 
 # http://www.fundza.com/c4serious/noise/perlin/perlin.html
 
-######################################################################################################
+################################################################################
 
 import random
-from sys import maxint
+# from sys import maxint
 from math import floor
 from warnings import warn
 
-########################################################################################
+################################################################################
 
 try:
     
@@ -34,13 +34,14 @@ try:
     def perlin(x, y, z):
         return _noise.perlin(x, y, z)
         
-    # print "FAST"
+    print( "FAST" )
 except:
     
     """ Pure Python implementation of the C library.
     """
-    # print "SLOW"
-    warn("Couldn't import fast C library, using native Python version.", Warning)
+    print( "SLOW" )
+    warn("Couldn't import fast C library, using native Python version.",
+         Warning)
     
     p = []
     def seed(i=None):
@@ -121,7 +122,7 @@ except:
     except:
         pass
 
-########################################################################################
+################################################################################
 
 def generate(x, y=0.0, z=0.0, width=1.0, height=1.0, depth=1.0, scale=1.0):
     
