@@ -8,7 +8,7 @@ try:
     noise = ximport("noise")
 except:
     noise = ximport("__init__")
-    reload(noise)
+    # reload(noise)
 
 size(400,400)
 
