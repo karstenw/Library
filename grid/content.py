@@ -37,7 +37,7 @@ class content(object):
         self._type = None
         self._data = None
         
-        print( "data", repr(type(data)) )
+        # print( "data", repr(type(data)) )
 
         if type(data) in (MethodType, FunctionType):
             self._type = CONTENT_FUNCTION
