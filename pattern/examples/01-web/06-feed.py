@@ -13,14 +13,15 @@ from pattern.db import date
 # This example reads a given RSS or Atom newsfeed channel.
 # Some example feeds to try out:
 NATURE = "http://feeds.nature.com/nature/rss/current"
-SCIENCE = "http://www.sciencemag.org/rss/podcast.xml"
-NYT = "http://rss.nytimes.com/services/xml/rss/nyt/GlobalHome.xml"
+SCIENCE = "https://www.science.org/content/page/email-alerts-and-rss-feeds"
+NYT = "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml"
 TIME = "http://feeds.feedburner.com/time/topstories"
 CNN = "http://rss.cnn.com/rss/edition.rss"
+SCRIPTINGNEWS = "http://scripting.com/rss.xml"
 
 engine = Newsfeed()
 
-for result in engine.search(CNN, cached=True):
+for result in engine.search(NATURE, cached=True):
     print(result.title.upper())
     print(plaintext(result.text))  # Remove HTML formatting.
     print(result.url)
