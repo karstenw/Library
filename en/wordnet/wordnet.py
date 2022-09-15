@@ -209,9 +209,11 @@ class Word:
     
     def __init__(self, line):
         """Initialize the word from a line of a WN POS file."""
-        tokens = string.split(line)
+        tokens = line.split() # string.split(line)
         ints = map(int, tokens[int(tokens[3]) + 4:])
-        self.form = string.replace(tokens[0], '_', ' ')
+        # self.form = string.replace(tokens[0], '_', ' ')
+        self.form = tokens[0].replace('_', ' ')
+
         "Orthographic representation of the word."
         self.pos = _normalizePOS(tokens[1])
         "Part of speech.  One of NOUN, VERB, ADJECTIVE, ADVERB."
@@ -358,9 +360,12 @@ class Synset:
         self.offset = offset
         """integer offset into the part-of-speech file.  Together
         with pos, this can be used as a unique id."""
-        tokens = string.split(line[:string.index(line, '|')])
+        # tokens = string.split(line[:string.index(line, '|')])
+        tokens = line[:line.index('|')].split()
         self.ssType = tokens[2]
+        # self.gloss = string.strip(line[string.index(line, '|') + 1:])
         self.gloss = string.strip(line[string.index(line, '|') + 1:])
+
         self.lexname = Lexname.lexnames[int(tokens[1])]
         (self._senseTuples, remainder) = _partition(tokens[4:], 2, string.atoi(tokens[3], 16))
         (self._pointerTuples, remainder) = _partition(remainder[1:], 4, int(remainder[0]))
@@ -762,7 +767,8 @@ class Lexname:
 
 def setupLexnames():
     for l in open(WNSEARCHDIR+'/lexnames').readlines():
-        i,name,category = string.split(l)
+        # i,name,category = string.split(l)
+        i,name,category = l.split()
         Lexname(name,PartsOfSpeech[int(category)-1])
 
 setupLexnames()
@@ -1373,10 +1379,11 @@ def _initializePOSTables():
             (VERB, "verb v v."),
             (ADJECTIVE, "adjective adj adj. a s"),
             (ADVERB, "adverb adv adv. r")):
-        tokens = string.split(abbreviations)
+        # tokens = string.split(abbreviations)
+        tokens = abbreviations.split()
         for token in tokens:
             _POSNormalizationTable[token] = pos
-            _POSNormalizationTable[string.upper(token)] = pos
+            _POSNormalizationTable[token.upper()] = pos
     for dict in Dictionaries:
         _POSNormalizationTable[dict] = dict.pos
         _POStoDictionaryTable[dict.pos] = dict
