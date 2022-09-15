@@ -52,8 +52,8 @@ for cat in cicategories:
         if f == u"CIPerspectiveTile":
             flt = CIFilter.filterWithName_( f )
             attr = flt.attributes()
-            print
-            print f
+            print()
+            print( f )
             pp(attr)
 
 

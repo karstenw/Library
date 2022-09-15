@@ -2965,7 +2965,7 @@ class CoreImageRenderer(Renderer):
         
         data = img.representationUsingType_properties_(typ_, options)
         # print "Data bytes:", repr(data.bytes().tobytes())
-        f = open(name, "w")
+        f = open(name, "wb")
         f.write(data.bytes().tobytes())
         f.close()
         # del img, data
@@ -3280,14 +3280,14 @@ class CoreImageHelper:
         _ctx.strokewidth(0.5)
         _ctx.font(self.font, self.fontsize)
         d = 10
-        n = (h-rw)/d
+        n = int( ( h - rw) / d )
         for i in range(n):
             if (i+3) % 5 == 0:
                 _ctx.text(str((i+3)*d), x+2, rw+i*d-2)
                 _ctx.stroke(1.0)
             _ctx.line(x, rw+i*d, x+rw, rw+i*d)
             _ctx.stroke(self.foreground)
-        n = (w-rw)/d
+        n = int( ( w - rw ) / d )
         for i in range(n):
             if (i+3) % 5 == 0:
                 _ctx.stroke(1.0)
