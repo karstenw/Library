@@ -1341,7 +1341,7 @@ class ColorList(_list):
         """
         
         sortedlist = self.copy()
-        print("_sorted_copy( ", repr(comparison), " )" )
+        # print("_sorted_copy( ", repr(comparison), " )" )
         if py3:
             _list.sort(sortedlist, key=cmp_to_key(comparison))
         else:
