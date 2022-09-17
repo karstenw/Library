@@ -10,6 +10,10 @@ database/book.*
 isight/tras*
 isight/*.jpg
 */doc/*
+*/build
+*/dist
+
+
 web/cache/*
 noise/texture.jpg
 beziereditor/*.svg

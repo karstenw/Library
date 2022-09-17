@@ -1,12 +1,12 @@
-#### PATTERN | WEB #################################################################################
+#### PATTERN | WEB #############################################################
 # -*- coding: utf-8 -*-
 # Copyright (c) 2010 University of Antwerp, Belgium
 # Author: Tom De Smedt <tom@organisms.be>
 # License: BSD (see LICENSE.txt for details).
 # http://www.clips.ua.ac.be/pages/pattern
 
-####################################################################################################
-# Python API interface for various web services (Google, Twitter, Wikipedia, ...)
+################################################################################
+# Python API interface for various web services (Google, Twitter, Wikipedia, …)
 
 from __future__ import absolute_import
 from __future__ import unicode_literals
@@ -2892,7 +2892,7 @@ class Wikia(MediaWiki):
                 batch, done = [], False
                 try:
                     for i in range(10):
-                        batch.append(next(iterator))
+                        batch.append( next(iterator) )
                 except StopIteration:
                     done = True # No more articles, finish batch and raise StopIteration.
                 url = URL(self._url.replace("api.php", "wikia.php"), method=GET, query={
