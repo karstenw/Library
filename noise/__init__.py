@@ -16,11 +16,10 @@ from warnings import warn
 ################################################################################
 
 try:
-    
     """ Attempt to load the C library which is faster.
     """
     
-    import _noise
+    from . import _noise
 
     def seed(i=None):
         if i == None: 
@@ -35,7 +34,10 @@ try:
         return _noise.perlin(x, y, z)
         
     print( "FAST" )
-except:
+
+except Exception as err:
+    print()
+    print(err)
     
     """ Pure Python implementation of the C library.
     """
