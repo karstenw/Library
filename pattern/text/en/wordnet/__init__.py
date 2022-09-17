@@ -1,13 +1,14 @@
-#### PATTERN | WORDNET #############################################################################
+#### PATTERN | WORDNET #########################################################
 # -*- coding: utf-8 -*-
 # Copyright (c) 2010 University of Antwerp, Belgium
 # Author: Tom De Smedt <tom@organisms.be>
 # License: BSD (see LICENSE.txt for details).
 # http://www.clips.ua.ac.be/pages/pattern
 
-####################################################################################################
+################################################################################
 # WordNet is a lexical database for English.
-# It disambiguates word senses, e.g., "tree" in the sense of a plant or in the sense of a graph.
+# It disambiguates word senses, e.g., "tree" in the sense of a plant
+# or in the sense of a graph.
 # It groups similar word senses into sets of synonyms called synsets,
 # with a short description and semantic relations to other synsets:
 # -  synonym = a word that is similar in meaning,
