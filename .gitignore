@@ -1,6 +1,7 @@
 */*.pyc
 *.pdf
 .DS_Store
++private
 */+private
 +latex
 +shoebot
@@ -36,8 +37,11 @@ coreimage/coreimage-example5a.py
 coreimage/coreimage-example5b.py
 coreimage/explorer.py
 coreimage/images/*
+coreimage/*.png
 
 fatpath/fatpath-0.6.py
+
+photobot/examples/Example collage 6.py
 
 imagewell-files.tab
 imagewell.txt
