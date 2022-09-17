@@ -12,6 +12,13 @@ except ImportError:
 size(100,100)
 
 noise.seed()
+
+# activate one of these for non-randomness
+# noise.shape( [0,1]*256 )
+# noise.shape( [0,1,2,3]*128 )
+# noise.shape( [0,1,2,3,random(6),3,2,1]*64 )
+
+
 w = 100
 h = 100
 for i in range(w):
