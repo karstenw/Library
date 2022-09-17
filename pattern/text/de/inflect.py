@@ -1,10 +1,10 @@
-#### PATTERN | DE | INFLECT ########################################################################
+#### PATTERN | DE | INFLECT ####################################################
 # -*- coding: utf-8 -*-
 # Copyright (c) 2012 University of Antwerp, Belgium
 # Author: Tom De Smedt <tom@organisms.be>
 # License: BSD (see LICENSE.txt for details).
 
-####################################################################################################
+################################################################################
 # Regular expressions-based rules for German word inflection:
 # - pluralization and singularization of nouns and adjectives,
 # - conjugation of verbs,
@@ -55,8 +55,9 @@ VOWELS = "aeiouy"
 re_vowel = re.compile(r"a|e|i|o|u|y", re.I)
 is_vowel = lambda ch: ch in VOWELS
 
-#### ARTICLE #######################################################################################
-# German inflection of depends on gender, role and number + the determiner (if any).
+#### ARTICLE ###################################################################
+# German inflection of depends on gender, role and number + the
+# determiner (if any).
 
 # Inflection gender.
 # Masculine is the most common, so it is the default for all functions.
@@ -69,8 +70,12 @@ MASCULINE, FEMININE, NEUTER, PLURAL = \
 # - acc = object, "Das Mädchen küsst den Hund" (the girl kisses the dog).
 # - dat = object (indirect), "Der Mann gibt einen Knochen zum Hund" (the man gives the dog a bone).
 # - gen = property, "die Knochen des Hundes" (the dog's bone).
-NOMINATIVE, ACCUSATIVE, DATIVE, GENITIVE = SUBJECT, OBJECT, INDIRECT, PROPERTY = \
-    "nominative", "accusative", "dative", "genitive"
+
+NOMINATIVE = SUBJECT = "nominative"
+ACCUSATIVE = OBJECT = "accusative"
+DATIVE = INDIRECT = "dative"
+GENITIVE = PROPERTY = "genitive"
+    
 
 article_definite = {
     ("m", "nom"): "der", ("f", "nom"): "die", ("n", "nom"): "das", ("p", "nom"): "die",
@@ -103,11 +108,12 @@ INDEFINITE = "indefinite"
 
 
 def article(word, function=INDEFINITE, gender=MALE, role=SUBJECT):
-    """ Returns the indefinite (ein) or definite (der/die/das/die) article for the given word.
+    """ Returns the indefinite (ein) or definite (der/die/das/die) article for
+    the given word.
     """
-    return function == DEFINITE \
-       and definite_article(word, gender, role) \
-        or indefinite_article(word, gender, role)
+    return (    function == DEFINITE
+            and definite_article(word, gender, role)
+             or indefinite_article(word, gender, role) )
 _article = article
 
 
@@ -116,37 +122,40 @@ def referenced(word, article=INDEFINITE, gender=MALE, role=SUBJECT):
     """
     return "%s %s" % (_article(word, article, gender, role), word)
 
-#### GENDER #########################################################################################
+#### GENDER ####################################################################
 
 gender_masculine = (
     "ant", "ast", "ich", "ig", "ismus", "ling", "or", "us"
 )
 gender_feminine = (
-    "a", "anz", "ei", "enz", "heit", "ie", "ik", "in", "keit", "schaf", "sion", "sis",
-    "tät", "tion", "ung", "ur"
+    "a", "anz", "ei", "enz", "heit", "ie", "ik", "in", "keit", "schaf", "sion",
+    "sis", "tät", "tion", "ung", "ur"
 )
 gender_neuter = (
-    "chen", "icht", "il", "it", "lein", "ma", "ment", "tel", "tum", "um", "al", "an", "ar",
-    "ät", "ent", "ett", "ier", "iv", "o", "on", "nis", "sal"
+    "chen", "icht", "il", "it", "lein", "ma", "ment", "tel", "tum", "um", "al",
+    "an", "ar", "ät", "ent", "ett", "ier", "iv", "o", "on", "nis", "sal"
 )
 gender_majority_vote = {
     MASCULINE: (
-        "ab", "af", "ag", "ak", "am", "an", "ar", "at", "au", "ch", "ck", "eb", "ef", "eg",
-        "el", "er", "es", "ex", "ff", "go", "hn", "hs", "ib", "if", "ig", "ir", "kt", "lf",
-        "li", "ll", "lm", "ls", "lt", "mi", "nd", "nk", "nn", "nt", "od", "of", "og", "or",
-        "pf", "ph", "pp", "ps", "rb", "rd", "rf", "rg", "ri", "rl", "rm", "rr", "rs", "rt",
-        "rz", "ss", "st", "tz", "ub", "uf", "ug", "uh", "un", "us", "ut", "xt", "zt"
+        "ab", "af", "ag", "ak", "am", "an", "ar", "at", "au", "ch", "ck", "eb",
+        "ef", "eg", "el", "er", "es", "ex", "ff", "go", "hn", "hs", "ib", "if",
+        "ig", "ir", "kt", "lf", "li", "ll", "lm", "ls", "lt", "mi", "nd", "nk",
+        "nn", "nt", "od", "of", "og", "or", "pf", "ph", "pp", "ps", "rb", "rd",
+        "rf", "rg", "ri", "rl", "rm", "rr", "rs", "rt", "rz", "ss", "st", "tz",
+        "ub", "uf", "ug", "uh", "un", "us", "ut", "xt", "zt"
     ),
     FEMININE: (
-        "be", "ce", "da", "de", "dt", "ee", "ei", "et", "eu", "fe", "ft", "ge", "he", "hr",
-        "ht", "ia", "ie", "ik", "in", "it", "iz", "ka", "ke", "la", "le", "me", "na", "ne",
-        "ng", "nz", "on", "pe", "ra", "re", "se", "ta", "te", "ue", "ur", "ve", "ze"
+        "be", "ce", "da", "de", "dt", "ee", "ei", "et", "eu", "fe", "ft", "ge",
+        "he", "hr", "ht", "ia", "ie", "ik", "in", "it", "iz", "ka", "ke", "la",
+        "le", "me", "na", "ne", "ng", "nz", "on", "pe", "ra", "re", "se", "ta",
+        "te", "ue", "ur", "ve", "ze"
     ),
 
     NEUTER: (
-        "ad", "al", "as", "do", "ed", "eh", "em", "en", "hl", "id", "il", "im", "io", "is",
-        "iv", "ix", "ld", "lk", "lo", "lz", "ma", "md", "mm", "mt", "no", "ns", "ol", "om",
-        "op", "os", "ot", "pt", "rk", "rn", "ro", "to", "tt", "ul", "um", "uz"
+        "ad", "al", "as", "do", "ed", "eh", "em", "en", "hl", "id", "il", "im",
+        "io", "is", "iv", "ix", "ld", "lk", "lo", "lz", "ma", "md", "mm", "mt",
+        "no", "ns", "ol", "om", "op", "os", "ot", "pt", "rk", "rn", "ro", "to",
+        "tt", "ul", "um", "uz"
     )
 }
 
@@ -169,17 +178,19 @@ def gender(word, pos=NOUN):
             if w.endswith(gender_majority_vote[g]):
                 return g
 
-#### PLURALIZE ######################################################################################
+#### PLURALIZE #################################################################
 
 plural_inflections = [
-    ("aal", "äle"   ), ("aat", "aaten"), ("abe", "aben" ), ("ach", "ächer"), ("ade", "aden"  ),
-    ("age", "agen"  ), ("ahn", "ahnen"), ("ahr", "ahre" ), ("akt", "akte" ), ("ale", "alen"  ),
-    ("ame", "amen"  ), ("amt", "ämter"), ("ane", "anen" ), ("ang", "änge" ), ("ank", "änke"  ),
-    ("ann", "änner" ), ("ant", "anten"), ("aph", "aphen"), ("are", "aren" ), ("arn", "arne"  ),
-    ("ase", "asen"  ), ("ate", "aten" ), ("att", "ätter"), ("atz", "ätze" ), ("aum", "äume"  ),
-    ("aus", "äuser" ), ("bad", "bäder"), ("bel", "bel"  ), ("ben", "ben"  ), ("ber", "ber"   ),
-    ("bot", "bote"  ), ("che", "chen" ), ("chs", "chse" ), ("cke", "cken" ), ("del", "del"   ),
-    ("den", "den"   ), ("der", "der"  ), ("ebe", "ebe"  ), ("ede", "eden" ), ("ehl", "ehle"  ),
+    ("aal", "äle"   ), ("aat", "aaten"), ("abe", "aben" ), ("ach", "ächer"),
+    ("ade", "aden"  ), ("age", "agen" ), ("ahn", "ahnen"), ("ahr", "ahre" ),
+    ("akt", "akte"  ), ("ale", "alen" ), ("ame", "amen" ), ("amt", "ämter"),
+    ("ane", "anen"  ), ("ang", "änge" ), ("ank", "änke" ), ("ann", "änner"),
+    ("ant", "anten" ), ("aph", "aphen"), ("are", "aren" ), ("arn", "arne" ),
+    ("ase", "asen"  ), ("ate", "aten" ), ("att", "ätter"), ("atz", "ätze" ),
+    ("aum", "äume"  ), ("aus", "äuser"), ("bad", "bäder"), ("bel", "bel"  ),
+    ("ben", "ben"   ), ("ber", "ber"  ), ("bot", "bote" ), ("che", "chen" ),
+    ("chs", "chse"  ), ("cke", "cken" ), ("del", "del"  ), ("den", "den"  ),
+    ("der", "der"   ), ("ebe", "ebe"  ), ("ede", "eden" ), ("ehl", "ehle" ),
     ("ehr", "ehr"   ), ("eil", "eile" ), ("eim", "eime" ), ("eis", "eise" ), ("eit", "eit"   ),
     ("ekt", "ekte"  ), ("eld", "elder"), ("ell", "elle" ), ("ene", "enen" ), ("enz", "enzen" ),
     ("erd", "erde"  ), ("ere", "eren" ), ("erk", "erke" ), ("ern", "erne" ), ("ert", "erte"  ),
@@ -237,9 +248,11 @@ def pluralize(word, pos=NOUN, gender=MALE, role=SUBJECT, custom={}):
             return w + "n"
         if w.endswith("ien"):
             return w[:-2] + "um"
-        if w.endswith(("au", "ein", "eit", "er", "en", "el", "chen", "mus", "tät", "tik", "tum", "u")):
+        if w.endswith( ("au", "ein", "eit", "er", "en", "el", "chen", "mus",
+                        "tät", "tik", "tum", "u")):
             return w
-        if w.endswith(("ant", "ei", "enz", "ion", "ist", "or", "schaft", "tur", "ung")):
+        if w.endswith(( "ant", "ei", "enz", "ion", "ist", "or", "schaft",
+                        "tur", "ung")):
             return w + "en"
         if w.endswith("in"):
             return w + "nen"
@@ -252,7 +265,8 @@ def pluralize(word, pos=NOUN, gender=MALE, role=SUBJECT, custom={}):
         if w.endswith("a"):
             return w[:-1] + "en"
         # Inflect common umlaut vowels: Kopf => Köpfe.
-        if w.endswith(("all", "and", "ang", "ank", "atz", "auf", "ock", "opf", "uch", "uss")):
+        if w.endswith(( "all", "and", "ang", "ank", "atz", "auf", "ock", "opf",
+                        "uch", "uss")):
             umlaut = w[-3]
             umlaut = umlaut.replace("a", "ä")
             umlaut = umlaut.replace("o", "ö")
@@ -347,20 +361,22 @@ def singularize(word, pos=NOUN, gender=MALE, role=SUBJECT, custom={}):
         return w
     return w
 
-#### VERB CONJUGATION ##############################################################################
+#### VERB CONJUGATION ##########################################################
 # The verb table was trained on CELEX and contains the top 2000 most frequent verbs.
 
-prefix_inseparable = (
-    "be", "emp", "ent", "er", "ge", "miss", "über", "unter", "ver", "voll", "wider", "zer"
-)
+prefix_inseparable = ( "be", "emp", "ent", "er", "ge", "miss", "über", "unter",
+                       "ver", "voll", "wider", "zer" )
+
 prefix_separable = (
-    "ab", "an", "auf", "aus", "bei", "durch", "ein", "fort", "mit", "nach", "vor", "weg",
-    "zurück", "zusammen", "zu", "dabei", "daran", "da", "empor", "entgegen", "entlang",
-    "fehl", "fest", "gegenüber", "gleich", "herab", "heran", "herauf", "heraus", "herum",
-    "her", "hinweg", "hinzu", "hin", "los", "nieder", "statt", "umher", "um", "weg",
-    "weiter", "wieder", "zwischen"
+    "ab", "an", "auf", "aus", "bei", "durch", "ein", "fort", "mit", "nach",
+    "vor", "weg", "zurück", "zusammen", "zu", "dabei", "daran", "da", "empor",
+    "entgegen", "entlang", "fehl", "fest", "gegenüber", "gleich", "herab",
+    "heran", "herauf", "heraus", "herum", "her", "hinweg", "hinzu", "hin",
+    "los", "nieder", "statt", "umher", "um", "weg", "weiter", "wieder",
+    "zwischen"
 ) + ( # There are many more...
-     "dort", "fertig", "frei", "gut", "heim", "hoch", "klein", "klar", "nahe", "offen", "richtig"
+     "dort", "fertig", "frei", "gut", "heim", "hoch", "klein", "klar",
+     "nahe", "offen", "richtig"
 )
 prefixes = prefix_inseparable + prefix_separable
 
@@ -378,12 +394,14 @@ class Verbs(_Verbs):
     def __init__(self):
         _Verbs.__init__(self, os.path.join(MODULE, "de-verbs.txt"),
             language = "de",
-              format = [0, 1, 2, 3, 4, 5, 8, 17, 18, 19, 20, 21, 24, 52, 54, 53, 55, 56, 58, 59, 67, 68, 70, 71],
+              format = [0, 1, 2, 3, 4, 5, 8, 17, 18, 19, 20, 21, 24, 52, 54,
+                        53, 55, 56, 58, 59, 67, 68, 70, 71],
              default = {6: 4, 22: 20, 57: 55, 60: 58, 69: 67, 72: 70}
             )
 
     def find_lemma(self, verb):
-        """ Returns the base form of the given inflected verb, using a rule-based approach.
+        """ Returns the base form of the given inflected verb, using
+        a rule-based approach.
         """
         v = verb.lower()
         # Common prefixes: be-finden and emp-finden probably inflect like finden.
