@@ -1,11 +1,11 @@
-#### PATTERN | EN ##################################################################################
+#### PATTERN | EN ##############################################################
 # -*- coding: utf-8 -*-
 # Copyright (c) 2010 University of Antwerp, Belgium
 # Author: Tom De Smedt <tom@organisms.be>
 # License: BSD (see LICENSE.txt for details).
 # http://www.clips.ua.ac.be/pages/pattern
 
-####################################################################################################
+################################################################################
 # English linguistical tools using fast regular expressions.
 
 from __future__ import unicode_literals
@@ -27,9 +27,9 @@ sys.path.insert(0, os.path.join(MODULE, "..", "..", "..", ".."))
 
 # Import parser base classes.
 from pattern.text import (
-    Lexicon, Model, Morphology, Context, Parser as _Parser, ngrams, pprint, commandline,
-    PUNCTUATION
-)
+         Lexicon, Model, Morphology, Context, Parser
+     as _Parser, ngrams, pprint, commandline, PUNCTUATION )
+
 # Import parser universal tagset.
 from pattern.text import (
     penntreebank2universal,
@@ -82,7 +82,7 @@ from pattern.text.en import wordlist
 
 sys.path.pop(0)
 
-#--- ENGLISH PARSER --------------------------------------------------------------------------------
+#--- ENGLISH PARSER ------------------------------------------------------------
 
 
 def find_lemmata(tokens):
@@ -110,7 +110,8 @@ class Parser(_Parser):
         if kwargs.get("tagset") in (PENN, None):
             kwargs.setdefault("map", lambda token, tag: (token, tag))
         if kwargs.get("tagset") == UNIVERSAL:
-            kwargs.setdefault("map", lambda token, tag: penntreebank2universal(token, tag))
+            kwargs.setdefault("map",
+                        lambda token, tag: penntreebank2universal(token, tag))
         return _Parser.find_tags(self, tokens, **kwargs)
 
 
