@@ -67,9 +67,10 @@ class SemanticRelationBrowser(graphbrowser.GraphBrowser):
                 id2 = rule[2].strip()
                 
                 # Add new concept nodes.
-                if not self.nodes.has_key(id1): 
+                
+                if not id1 in self.nodes:
                     self.nodes[id1] = SemanticRelationNode(id1, category)
-                if not self.nodes.has_key(id2): 
+                if not id2 in self.nodes:
                     self.nodes[id2] = SemanticRelationNode(id2, category)
             
                 # Build explicit relations.
@@ -79,12 +80,12 @@ class SemanticRelationBrowser(graphbrowser.GraphBrowser):
                 # Build implicit relations.
                 if i == 6 or i == 8:
                     self.nodes[id2].links.append( (i, id1) )
-                if semantic_relations_implicit.has_key(i+80):
+                if (i+80) in semantic_relations_implicit:
                     self.nodes[id2].links.append( (i+80, id1) )
                  
     def has_node(self, node_id):
     
-        if self.nodes.has_key(node_id):
+        if node_id in self.nodes:
             return True
         else:
             return False
@@ -94,9 +95,9 @@ class SemanticRelationBrowser(graphbrowser.GraphBrowser):
         children = []
         n = self.nodes[node_id]
         for type, id in n.links:
-            if semantic_relations_explicit.has_key(type):
+            if type in semantic_relations_explicit:
                 relation = semantic_relations_explicit[type]
-            if semantic_relations_implicit.has_key(type):
+            if type in semantic_relations_implicit:
                 relation = semantic_relations_implicit[type]
             relation = relation.replace("_", " ")
             relation = relation.replace("is", " ").strip()
@@ -104,7 +105,7 @@ class SemanticRelationBrowser(graphbrowser.GraphBrowser):
             
         return children
         
-######################################################################################################
+################################################################################
 
 size(500, 500)
 speed(30)

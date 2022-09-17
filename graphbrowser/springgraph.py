@@ -116,7 +116,7 @@ class Graph:
         """ Adds a node with given id to the graph.
         """
         
-        if self.index.has_key(id):
+        if id in self.index:
             return self.index[id]
         
         n = GraphNode(self, id, radius, style)
@@ -169,7 +169,7 @@ class Graph:
         """ Returns the node in the graph associated with the given id.
         """
         
-        if self.index.has_key(id):
+        if id in self.index:
             return self.index[id]
         else:
             return None
@@ -665,7 +665,7 @@ class GraphStyles(dict):
         """ Keys in the dictionaries are accessible as attributes.
         """ 
         
-        if self.has_key(a): 
+        if a in self: 
             return self[a]
             
         raise AttributeError( "'GraphStyles' object has no attribute '"+a+"'" )
@@ -675,7 +675,7 @@ class GraphStyles(dict):
         """ Setting an attribute is like setting it in all of the contained styles.
         """
         
-        if GraphStyle(None).__dict__.has_key(a):
+        if a in GraphStyle(None).__dict__:
             for style in self.values():
                 style.__dict__[a] = v
                 

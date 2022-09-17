@@ -2,12 +2,12 @@
 # based on nouns in their descriptions.
 
 springgraph = ximport("springgraph")
-reload(springgraph)
+#reload(springgraph)
 
 graphbrowser = ximport("graphbrowser")
-reload(graphbrowser)
+#reload(graphbrowser)
 
-import en
+# import en
 from os.path import basename
 
 class ContextualLinkBrowser(graphbrowser.GraphBrowser):
@@ -249,4 +249,5 @@ def setup():
 def draw():
     
     global clb
-    clb.draw()            
+    clb.draw()
+

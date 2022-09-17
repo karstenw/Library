@@ -1,12 +1,15 @@
 # A graph that browses through the WordNet dictionary.
 
 springgraph = ximport("springgraph")
-reload(springgraph)
+#reload(springgraph)
 
 graphbrowser = ximport("graphbrowser")
-reload(graphbrowser)
+#reload(graphbrowser)
 
-import en
+#import en
+pattern = ximport("pattern")
+en = pattern.text.en
+
 from random import shuffle
 
 class WordNetBrowser(graphbrowser.GraphBrowser):
@@ -40,8 +43,8 @@ class WordNetBrowser(graphbrowser.GraphBrowser):
         and node_id != self.graph.nodes[0].id:
             return True
 
-        if en.wordnet.NOUNS.has_key(node_id.lower()) \
-        or node_id in ["parts ", "specific "]:
+        if (   node_id.lower() in en.wordnet.NOUNS
+            or node_id in ["parts ", "specific "]):
             return True
         else:
             return False
