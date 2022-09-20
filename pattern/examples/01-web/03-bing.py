@@ -5,10 +5,10 @@ from builtins import str, bytes, dict, int
 
 import os
 import sys
-# sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "..", ".."))
+# sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "..", ".."))
+pattern = ximport("pattern")
 
-from pattern.web import Bing, asynchronous, plaintext
+from pattern.web import Bing, Google, asynchronous, plaintext
 from pattern.web import SEARCH, IMAGE, NEWS
 
 import time
@@ -22,7 +22,7 @@ import time
 # If this limit is exceeded, SearchEngineLimitError is raised.
 # You should obtain your own license key at:
 # https://datamarket.azure.com/account/
-engine = Bing(license=None, language="en")
+engine = Google(license=None, language="en")
 
 # Quote a query to match it exactly:
 q = "\"is more important than\""

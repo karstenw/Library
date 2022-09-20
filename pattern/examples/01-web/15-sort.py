@@ -5,8 +5,10 @@ from builtins import str, bytes, dict, int
 
 import os
 import sys
-# sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "..", ".."))
+# sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "..", ".."))
+
+pattern = ximport("pattern")
+
 
 from pattern.web import GOOGLE, YAHOO, BING, sort
 
@@ -27,7 +29,7 @@ results = sort(
         "mickey mouse",
         ],
     context = "dangerous", # Term used for sorting.
-    service = BING,        # GOOGLE, YAHOO, BING, ...
+    service = GOOGLE,        # GOOGLE, YAHOO, BING, ...
     license = None,        # You should supply your own API license key for the given service.
      strict = True,        # Wraps the query in quotes, i.e. 'mac sweet'.
     reverse = True,        # Reverses term and context: 'sweet mac' instead of 'mac sweet'.

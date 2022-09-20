@@ -63,7 +63,7 @@ from collections import defaultdict
 from io import open
 
 import numpy as np
-import scipy
+# import scipy
 
 try:
     MODULE = os.path.dirname(os.path.realpath(__file__))

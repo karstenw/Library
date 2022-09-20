@@ -7,8 +7,9 @@ from builtins import str, bytes, dict, int
 
 import os
 import sys
-# sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "..", ".."))
+# sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "..", ".."))
+pattern = ximport("pattern")
+
 
 from pattern.db import Database, SQLITE, MYSQL
 from pattern.db import field, pk, STRING, INTEGER, DATE, NOW
