@@ -7,6 +7,8 @@ from builtins import range
 import os
 import sys
 # sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
+p = os.path.abspath( os.path.join(os.path.dirname(__file__), "..", "..", "..") )
+sys.path.insert(0, p )
 
 from pattern.web import Twitter
 from pattern.graph import Graph

@@ -6,6 +6,7 @@ from builtins import str, bytes, dict, int
 import os
 import sys
 # sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "..", ".."))
 
 from pattern.web import Newsfeed, plaintext, URL
 from pattern.db import date
@@ -13,7 +14,8 @@ from pattern.db import date
 # This example reads a given RSS or Atom newsfeed channel.
 # Some example feeds to try out:
 NATURE = "http://feeds.nature.com/nature/rss/current"
-SCIENCE = "https://www.science.org/content/page/email-alerts-and-rss-feeds"
+# SCIENCE = "https://www.science.org/content/page/email-alerts-and-rss-feeds"
+SCIENCE = "https://www.science.org/rss/news_current.xml"
 NYT = "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml"
 TIME = "http://feeds.feedburner.com/time/topstories"
 CNN = "http://rss.cnn.com/rss/edition.rss"

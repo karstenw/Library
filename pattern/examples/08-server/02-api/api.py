@@ -6,6 +6,7 @@ from builtins import str, bytes, dict, int
 import os
 import sys
 # sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
+p = os.path.abspath( os.path.join(os.path.dirname(__file__), "..", "..", "..","..") )
 
 from pattern.server import App
 from pattern.server import MINUTE, HOUR, DAY

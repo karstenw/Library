@@ -7,8 +7,11 @@ import os
 import sys
 import time
 # sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "..", ".."))
 
 from pattern.web import Crawler, DEPTH, BREADTH, FIFO, LIFO, crawl, asynchronous
+
+import pdb
 
 # This example demonstrates how to use the Crawler class for web crawling.
 
@@ -25,15 +28,15 @@ from pattern.web import Crawler, DEPTH, BREADTH, FIFO, LIFO, crawl, asynchronous
 #    def fail(self, link):
 #        print("failed:", link.url)
 #
-# p = Polly(links=["http://nodebox.net/"], domains=["nodebox.net"], delay=5)
+# p = Polly(links=["https://nodebox.net/"], domains=["nodebox.net"], delay=5)
 # while not p.done:
 #    p.crawl(method=DEPTH, cached=True, throttle=5)
 
 
-# for link, source in crawl("http://www.clips.ua.ac.be/", delay=0, throttle=1, cached=False):
+# for link, source in crawl("https://www.uantwerpen.be/en/research-groups/clips/", delay=0, throttle=1, cached=False):
 #    print(link)
 #
-# g = crawl("http://www.clips.ua.ac.be/")
+# g = crawl("https://www.uantwerpen.be/en/research-groups/clips/")
 # for i in range(10):
 #    p = asynchronous(g.next)
 #    while not p.done:
@@ -60,8 +63,12 @@ class SimpleCrawler1(Crawler):
 # 3) The delay parameter specifies a number of seconds to wait before revisiting the same domain.
 #    In the meantime, other queued links will be crawled if possible.
 
-crawler1 = SimpleCrawler1(links=["http://nodebox.net/"], domains=["nodebox.net"], delay=1)
 
+# pdb.set_trace()
+
+crawler1 = SimpleCrawler1(links=["https://nodebox.net/"], domains=["nodebox.net"], delay=1)
+# crawler1 = SimpleCrawler1(links=["http://scripting.com/"], domains=["scripting.com"], delay=1)
+# http://scripting.com/
 print("CRAWLER 1 " + "-" * 50)
 while len(crawler1.visited) < 5:  # Crawler.visited is a dictionary of all URL's visited so far.
     # The Crawler.crawl() method has the same optional parameters as URL.download(),
@@ -75,10 +82,12 @@ while len(crawler1.visited) < 5:  # Crawler.visited is a dictionary of all URL's
 # A higher delay (in a real-world scenario, say 30 seconds) is better:
 
 crawler2 = SimpleCrawler1(
-    links=["http://nodebox.net/"],
-    domains=["nodebox.net"],
+    links=["https://scripting.com/"],
+    domains=["scripting.com"],
       delay=0.1
 )
+
+# pdb.set_trace()
 
 print("")
 print("CRAWLER 2 " + "-" * 50)
@@ -87,7 +96,7 @@ while True:
     print("wait...")
     # Of course we don't want this example to run forever,
     # so we still add a stop condition:
-    if len(crawler2.visited) > 2:
+    if len(crawler2.visited) >= 1:
         break
 
 # -------------------------------------------------------------------------------------------------
@@ -99,7 +108,7 @@ while True:
 # which use DEPTH and BREADTH respectively.
 
 crawler3 = SimpleCrawler1(
-    links=["http://nodebox.net/"],
+    links=["https://nodebox.net/"],
     delay=0.0
 )
 
@@ -109,7 +118,7 @@ while len(crawler3.visited) < 3:
     crawler3.crawl(method=DEPTH)
 
 crawler4 = SimpleCrawler1(
-    links=["http://nodebox.net/"],
+    links=["https://nodebox.net/"],
     delay=0.0
 )
 
@@ -125,7 +134,7 @@ while len(crawler4.visited) < 3:
 # Usually this means that it will alternate between a couple of domains:
 
 crawler5 = SimpleCrawler1(
-    links=["http://nodebox.net/"],
+    links=["https://nodebox.net/"],
     delay=0.1
 )
 
@@ -166,7 +175,7 @@ class SimpleCrawler2(Crawler):
 # If you observe the given URL in a browser,
 # you'll notice that the last external link at the bottom of the page is now visited first.
 crawler6 = SimpleCrawler2(
-    links=["http://nodebox.net/"],
+    links=["https://nodebox.net/"],
     delay=0.1,
     sort=LIFO
 )

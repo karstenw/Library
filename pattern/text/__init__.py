@@ -24,6 +24,8 @@ import json
 import codecs
 import operator
 
+import pdb
+
 from io import open
 
 from codecs import BOM_UTF8
@@ -606,7 +608,7 @@ def _read(path, encoding="utf-8", comment=";;;"):
             if not line or (comment and line.startswith(comment)):
                 continue
             yield line
-    raise StopIteration
+    # raise StopIteration
 
 
 class Lexicon(lazydict):
@@ -2123,6 +2125,7 @@ class Verbs(lazydict):
 
     def load(self):
         # have,,,has,,having,,,,,had,had,haven't,,,hasn't,,,,,,,hadn't,hadn't
+        # pdb.set_trace()
         id = self._format[TENSES_ID[INFINITIVE]]
         for v in _read(self._path):
             v = v.split(",")

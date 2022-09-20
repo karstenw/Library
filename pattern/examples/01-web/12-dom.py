@@ -6,6 +6,7 @@ from builtins import str, bytes, dict, int
 import os
 import sys
 # sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "..", ".."))
 
 from pattern.web import URL, DOM, plaintext
 from pattern.web import NODE, TEXT, COMMENT, ELEMENT, DOCUMENT
@@ -27,7 +28,7 @@ from pattern.web import NODE, TEXT, COMMENT, ELEMENT, DOCUMENT
 # </div>
 #
 # ... which - naturally - is a picture of a cat.
-url = URL("http://www.reddit.com/top/")
+url = URL("https://www.reddit.com/top/")
 dom = DOM(url.download(cached=True))
 #print(dom.body.content)
 for e in dom.by_tag("div._1poyrkZ7g36PawDueRza-J s1r3zmnv-7 bmeGah")[:5]: # Top 5 reddit entries.
@@ -42,7 +43,7 @@ for e in dom.by_tag("div._1poyrkZ7g36PawDueRza-J s1r3zmnv-7 bmeGah")[:5]: # Top 
 # However, this can get messy with anchors, trailing slashes and redirected URL's.
 # A good way to get absolute URL's is to use the module's abs() function:
 from pattern.web import abs
-url = URL("http://nodebox.net")
+url = URL("https://nodebox.net")
 for link in DOM(url.download()).by_tag("a"):
     link = link.attrs.get("href", "")
     link = abs(link, base=url.redirect or url.string)
@@ -88,7 +89,8 @@ print("")
 # If you know CSS, you can also use short and handy CSS selectors:
 # http://www.w3.org/TR/CSS2/selector.html
 # Element(selector) will return a list of nested elements that match the given string.
-dom = DOM(URL("http://www.clips.ua.ac.be").download())
+#dom = DOM(URL("http://www.clips.ua.ac.be").download())
+dom = DOM(URL("https://www.uantwerpen.be/en/research-groups/clips/").download())
 for e in dom("div#ContentPlaceHolder1_ctl00_ctl01_Omkadering span div:contents p"):
     print(plaintext(e.content))
     print("")
@@ -98,7 +100,7 @@ for e in dom("div#ContentPlaceHolder1_ctl00_ctl01_Omkadering span div:contents p
 ######################################## Test Techcrunch - https://techcrunch.com/ ####################################
 
 print("#"*40, "Test Techcrunch", "#"*40)
-url = URL("https://techcrunch.com/startups/")
+url = URL("https://techcrunch.com/category/startups/")
 dom = DOM(url.download(cached=True))
 
 for e in dom.by_tag("header.post-block__header")[:5]:
@@ -136,7 +138,7 @@ for e in dom("header:post-block__header h2:post-block__title a:post-block__title
 ################################ Test Habr - https://habr.com ####################################
 
 print("#"*40, "Test Habr", "#"*40)
-url = URL("https://habr.com")
+url = URL("https://habr.com/en/all/")
 dom = DOM(url.download(cached=True))
 
 for e in dom.by_tag("h2.post__title")[:5]:

@@ -2300,7 +2300,10 @@ def retweets(string):
 # http://en.wikipedia.org/w/api.php
 
 WIKIA = "http://wikia.com"
-WIKIPEDIA = "http://wikipedia.com"
+WIKIA = "https://www.fandom.com/explore"
+
+
+WIKIPEDIA = "https://www.wikipedia.org/"
 WIKIPEDIA_LICENSE = api.license["Wikipedia"]
 MEDIAWIKI_LICENSE = None
 MEDIAWIKI = "http://{SUBDOMAIN}.{DOMAIN}{API}"
@@ -2384,7 +2387,7 @@ class MediaWiki(SearchEngine):
                     yield x[id]
             start = data.get("query-continue", {}).get("allpages", {})
             start = start.get("apcontinue", start.get("apfrom", -1))
-        raise StopIteration
+        #raise StopIteration
 
     # Backwards compatibility.
     list = index
@@ -2909,7 +2912,8 @@ class Wikia(MediaWiki):
                 for x in (data or {}).get("pages", {}).values():
                     yield WikiaArticle(title=x.get("title", ""), source=x.get("html", ""))
                 if done:
-                    raise StopIteration
+                    # raise StopIteration
+                    return
         for title in self.index(**kwargs):
             yield self.search(title, **kwargs)
 

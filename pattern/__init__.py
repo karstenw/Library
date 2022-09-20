@@ -1,9 +1,12 @@
-#### PATTERN #######################################################################################
+#### PATTERN ###################################################################
 
-# Authors: Tom De Smedt <tom@organisms.be>, Walter Daelemans <walter.daelemans@ua.ac.be>
-# License: BSD License, see LICENSE.txt
+# Authors:
+#   Tom De Smedt <tom@organisms.be>,
+#   Walter Daelemans <walter.daelemans@ua.ac.be>
+# License:
+#   BSD License, see LICENSE.txt
 
-#### BSD LICENSE ###################################################################################
+#### BSD LICENSE ###############################################################
 
 # Copyright (c) 2010 University of Antwerp, Belgium
 # All rights reserved.
@@ -40,7 +43,7 @@
 
 from __future__ import unicode_literals
 
-### CREDITS ########################################################################################
+### CREDITS ####################################################################
 
 __author__    = "Tom De Smedt"
 __credits__   = "Tom De Smedt, Walter Daelemans"
@@ -48,7 +51,7 @@ __version__   = "3.6"
 __copyright__ = "Copyright (c) 2010 University of Antwerp (BE)"
 __license__   = "BSD"
 
-####################################################################################################
+################################################################################
 
 import os
 
@@ -58,3 +61,9 @@ try:
     __path__.append(os.path.join(__path__[0], "text"))
 except:
     pass
+# from . import db
+# from . import graph
+# from . import text
+# from . import vector
+# from . import web
+
