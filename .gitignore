@@ -1,6 +1,7 @@
-*/*.pyc
+*.pyc
 __pycache__
 *.pdf
+*.webloc
 .DS_Store
 +private
 */+private
@@ -13,7 +14,6 @@ isight/*.jpg
 */doc/*
 */build
 */dist
-
 
 web/cache/*
 noise/texture.jpg
@@ -30,11 +30,7 @@ pattern/examples/08-server/04-db/store.db
 pattern/examples/08-server/02-api/rate.db
 pattern/examples/06-graph/test*
 pattern/examples/06-graph/trend*
-pattern/web/cache
-# pattern
-pattern-old.zip
-
-*.webloc
+pattern/web/cache/tmp
 
 coreimage/Missing Filters.tab
 coreimage/citools.py
