@@ -9,16 +9,48 @@
 # This example imports both WordNet and Explode.
 # Place this file along with explode.py in the WordNet folder,
 # next to wordnet.py and the pywordnet folder.
-size(1400,1400)
-wordnet = ximport("wordnet")
+
+
+import pprint
+pp=pprint.pprint
+
+# wordnet = ximport("wordnet")
+from pattern.en import wordnet
 explode = ximport("explode")
-reload(explode)
+# reload(explode)
+
+
+cellsize = 900
+halfsize = int( cellsize / 2 )
+size( cellsize, cellsize )
+background( 0.75 )
 
 font("Arial", 10)
 fill(0.2)
 strokewidth(0.5)
 
-root = "container"
-explode.explode(root, wordnet.hyponyms(root), 700, 700)
+longlistwords = (
+    "container", "proponent", "car", "being", "animal",
+    "human", "ape" )
 
-print( "WordNet definition for " + root + ": " + wordnet.gloss(root) )
+nouns = list( wordnet.NOUNS() )
+
+if 0:
+    hypolen = 0
+    while hypolen < 2:
+        root = choice( nouns )
+        synset = wordnet.synsets( root )[0]
+        hyponyms = list( synset.hyponyms() )
+        hypolen = len( hyponyms )
+else:
+    root = "container"
+
+
+synsets = wordnet.synsets( root ) 
+synset = synsets[0]
+#pp( dir(synset) )
+hyponyms = list( synset.hyponyms() )
+
+explode.explode(root, hyponyms, halfsize, halfsize)
+
+print( """WordNet definition for '%s': "%s".""" % (root, synset.gloss ) )
