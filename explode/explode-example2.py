@@ -11,20 +11,30 @@
 # next to wordnet.py and the pywordnet folder.
 
 #size(1600,1900)
+size(1800,900)
 speed(5)
 
 def setup():
     pass
 
-wordnet = ximport("wordnet")
+# wordnet = ximport("pattern.text.en.wordnet")
 explode = ximport("explode")
-reload(explode)
+# reload(explode)
+from pattern.en import wordnet
+# from pattern.en import NOUN, VERB
 
-nouns = wordnet.wn.N.keys()
-root = "container"
-# root = choice( nouns )
-hyponyms = wordnet.hyponyms(root)
-hyponyms.sort()
+nouns = list( wordnet.NOUNS() )
+
+hypolen = 0
+while hypolen < 2: #'_' in root or hypolen < 2:
+    root = choice( nouns )
+    synset = wordnet.synsets( root )[0]
+    hyponyms = list( synset.hyponyms() )
+    hypolen = len( hyponyms )
+
+
+print("root:", root)
+print("hyponyms:", hyponyms)
 
 phi = 0
 
@@ -42,3 +52,4 @@ def draw():
     pop()
 
 # print "WordNet definition for " + root + ": " + wordnet.gloss(root)
+# draw()
