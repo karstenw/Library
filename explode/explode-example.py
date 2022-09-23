@@ -23,7 +23,7 @@ explode = ximport("explode")
 cellsize = 900
 halfsize = int( cellsize / 2 )
 size( cellsize, cellsize )
-background( 0.75 )
+background( 0.89 )
 
 font("Arial", 10)
 fill(0.2)
@@ -35,7 +35,7 @@ longlistwords = (
 
 nouns = list( wordnet.NOUNS() )
 
-if 0:
+if 1:
     hypolen = 0
     while hypolen < 2:
         root = choice( nouns )
