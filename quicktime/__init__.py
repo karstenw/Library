@@ -42,14 +42,14 @@ class Media:
             self.path = data[0]
             self._qtmovie = QTMovie.movie().initWithMovie_timeRange_error_(
                                                             data[1], data[2], None)
-            print "MOVIE", self._qtmovie
+            print( "MOVIE", self._qtmovie )
             self._qtmovie = self._qtmovie[0]
 
-        #print "QTMovie:"
+        #print( "QTMovie:" )
         #pp(dir(self._qtmovie))
         
         self.duration = self._qtmovie.duration()
-        # print "DURATION",  self.duration
+        # print( "DURATION",  self.duration )
         self.duration = 1.0 * self.duration.timeValue / self.duration.timeScale
         self.timescale = self._qtmovie.attributeForKey_("QTMovieTimeScaleAttribute")
 
@@ -65,7 +65,7 @@ class Media:
             s = self.selection(start, stop)
             self._qtmovie = s._qtmovie
             self.duration = s.duration
-        # print repr(self)
+        # print( repr(self) )
 
 
     def __repr__(self):

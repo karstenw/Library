@@ -6,8 +6,8 @@ except:
 
 movie = quicktime.movie("twisted_world.mp4")
 
-print movie.fps
-print movie.duration
+print( movie.fps )
+print( movie.duration )
 
 size(movie.width, movie.height)
 speed(50)
