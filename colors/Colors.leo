@@ -13,13 +13,15 @@
 <v t="karstenw.20210712120529.1" a="E"><vh>@clean __init__.py</vh>
 <v t="karstenw.20210712120630.1"><vh>Header</vh></v>
 <v t="karstenw.20210712120542.1"><vh>Declarations</vh></v>
+<v t="karstenw.20220923144041.1" a="E"><vh>py3 stuff</vh>
 <v t="karstenw.20210712120542.2"><vh>cmp_to_key</vh></v>
 <v t="karstenw.20210712120542.3"><vh>sortlistfunction</vh></v>
-<v t="karstenw.20210712120819.1" a="E"><vh>REWIRING</vh>
+</v>
+<v t="karstenw.20210712120819.1"><vh>REWIRING</vh>
 <v t="karstenw.20210712120542.4"><vh>class NoCoreImageOrPIL</vh></v>
 <v t="karstenw.20210712120542.5"><vh>_range</vh></v>
 </v>
-<v t="karstenw.20210712120847.1" a="E"><vh>COLOR SPACES</vh>
+<v t="karstenw.20210712120847.1"><vh>COLOR SPACES</vh>
 <v t="karstenw.20210712120542.6"><vh>hex_to_rgb</vh></v>
 <v t="karstenw.20210712120542.7"><vh>lab_to_rgb</vh></v>
 <v t="karstenw.20210712120542.8"><vh>cmyk_to_rgb</vh></v>
@@ -29,11 +31,11 @@
 </v>
 <v t="karstenw.20210715121613.1"><vh>NAMED COLOR HUES</vh></v>
 <v t="karstenw.20210715121757.1"><vh>NAMED COLORS</vh></v>
-<v t="karstenw.20210712122004.1" a="E"><vh>COLOR CONTEXT</vh>
+<v t="karstenw.20210712122004.1"><vh>COLOR CONTEXT</vh>
 <v t="karstenw.20210712122100.1"><vh>newHeadline</vh></v>
 </v>
-<v t="karstenw.20210712120918.1" a="E"><vh>NAMED COLOR HUES</vh>
-<v t="karstenw.20210712120542.12" a="E"><vh>class BaseColor</vh>
+<v t="karstenw.20210712120918.1"><vh>NAMED COLOR HUES</vh>
+<v t="karstenw.20210712120542.12"><vh>class BaseColor</vh>
 <v t="karstenw.20210712120542.13"><vh>__init__</vh></v>
 <v t="karstenw.20210712120542.14"><vh>__repr__</vh></v>
 <v t="karstenw.20210712120542.15"><vh>copy</vh></v>
@@ -44,7 +46,7 @@
 <v t="karstenw.20210712120542.20"><vh>__setattr__</vh></v>
 <v t="karstenw.20210712120542.21"><vh>__getattr__</vh></v>
 </v>
-<v t="karstenw.20210712120542.22" a="E"><vh>class Color</vh>
+<v t="karstenw.20210712120542.22"><vh>class Color</vh>
 <v t="karstenw.20210712120542.23"><vh>__init__</vh></v>
 <v t="karstenw.20210712120542.24"><vh>str_to_rgb</vh></v>
 <v t="karstenw.20210712120542.25"><vh>copy</vh></v>
@@ -248,7 +250,7 @@
 </v>
 <v t="karstenw.20210712120543.11"><vh>gradientbackground</vh></v>
 </v>
-<v t="karstenw.20210712121646.1" a="E"><vh>TOOLS</vh>
+<v t="karstenw.20210712121646.1"><vh>TOOLS</vh>
 <v t="karstenw.20210712120543.12"><vh>colorwheel</vh></v>
 </v>
 <v t="karstenw.20210712121727.1"><vh>TODO &amp; VERSIONS</vh></v>
@@ -292,21 +294,6 @@ try:
 except:
     pass
 
-
-# py3 stuff
-py3 = False
-try:
-    unicode('')
-    punicode = unicode
-    pstr = str
-    punichr = unichr
-except NameError:
-    punicode = str
-    pstr = bytes
-    py3 = True
-    punichr = chr
-    long = int
-    xrange = range
 
 </t>
 <t tx="karstenw.20210712120542.10">def hsv_to_rgb(h, s, v):
@@ -2917,7 +2904,7 @@ smooth = smoothen = blend
     """
     
     sortedlist = self.copy()
-    print("_sorted_copy( ", repr(comparison), " )" )
+    # print("_sorted_copy( ", repr(comparison), " )" )
     if py3:
         _list.sort(sortedlist, key=cmp_to_key(comparison))
     else:
@@ -4056,6 +4043,22 @@ named_colors = {
     return (    self.r &lt; other.r and self.g &lt; other.g
             and self.b &lt; other.b and self.a &lt; other.a )
 
+
+</t>
+<t tx="karstenw.20220923144041.1"># py3 stuff
+py3 = False
+try:
+    unicode('')
+    punicode = unicode
+    pstr = str
+    punichr = unichr
+except NameError:
+    punicode = str
+    pstr = bytes
+    py3 = True
+    punichr = chr
+    long = int
+    xrange = range
 
 </t>
 </tnodes>
