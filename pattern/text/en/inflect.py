@@ -1,10 +1,10 @@
-#### PATTERN | EN | INFLECT ########################################################################
+#### PATTERN | EN | INFLECT ####################################################
 # -*- coding: utf-8 -*-
 # Copyright (c) 2010 University of Antwerp, Belgium
 # Author: Tom De Smedt <tom@organisms.be>
 # License: BSD (see LICENSE.txt for details).
 
-####################################################################################################
+################################################################################
 # Regular expressions-based rules for English word inflection:
 # - pluralization and singularization of nouns and adjectives,
 # - conjugation of verbs,
@@ -51,15 +51,16 @@ VOWELS = "aeiouy"
 re_vowel = re.compile(r"a|e|i|o|u|y", re.I)
 is_vowel = lambda ch: ch in VOWELS
 
-#### ARTICLE #######################################################################################
+#### ARTICLE ###################################################################
 # Based on the Ruby Linguistics module by Michael Granger:
 # http://www.deveiate.org/projects/Linguistics/wiki/English
 
 RE_ARTICLE = list(map(lambda x: (re.compile(x[0]), x[1]), (
-    (r"euler|hour(?!i)|heir|honest|hono", "an"), # exceptions: an hour, an honor
+    # exceptions: an hour, an honor
+    (r"euler|hour(?!i)|heir|honest|hono", "an"),
     # Abbreviations:
-    # strings of capitals starting with a vowel-sound consonant followed by another consonant,
-    # which are not likely to be real words.
+    # strings of capitals starting with a vowel-sound consonant followed by
+    # another consonant, which are not likely to be real words.
     (r"(?!FJO|[HLMNS]Y.|RY[EO]|SQU|(F[LR]?|[HL]|MN?|N|RH?|S[CHKLMNPTVW]?|X(YL)?)[AEIOU])[FHLMNRSX][A-Z]", "an"),
     (r"^[aefhilmnorsx][.-]"  , "an"), # hyphenated: an f-16, an e-mail
     (r"^[a-z][.-]"           , "a" ), # hyphenated: a b-52
