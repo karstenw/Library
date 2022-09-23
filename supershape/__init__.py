@@ -18,6 +18,7 @@ try:
     # Attempt to import the C library
     # for faster performance.
     from cSuperformula import supercalc
+    print("FAST")
 
 except:
     print("Failed loading shared object")
@@ -33,7 +34,12 @@ except:
     
         t2 = sin(m * phi / 4) / b
         t2 = abs(t2)
-        print( t2, n3 )
+        if t2 == 0.0:
+            t2 = 0.001
+        if 0:
+            print( "t2:", t2 )
+            print( "n1:", n1 )
+            print( "n3:", n3 )
         t2 = pow(t2, n3)
     
         r = pow(t1 + t2, 1 / n1)
@@ -42,6 +48,8 @@ except:
         else:
             r = 1 / r
             return (r * cos(phi), r * sin(phi))
+    print("SLOW")
+
 
 def path(x, y, w, h, m, n1, n2, n3, points=1000, percentage=1.0, range=TWOPI):
     first = True
