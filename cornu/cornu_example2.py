@@ -6,7 +6,7 @@ try:
     cornu = ximport("cornu")
 except:
     cornu = ximport("__init__")
-    reload(cornu)
+    # reload(cornu)
     
 points = []
 drag = None
