@@ -1,0 +1,16 @@
+import os
+
+nltk = ximport("nltk")
+
+nltkpath = nltk.__file__
+nltkfolder, _ = os.path.split( nltkpath )
+
+nltkfolderdata = os.path.join( nltkfolder, '+data')
+if not os.path.exists( nltkfolderdata ):
+    os.makedirs( nltkfolderdata )
+
+
+print("nltkfolderdata:", nltkfolderdata)
+if 0:
+    nltk.data.path = [ nltkfolderdata, ]
+print("nltk.data.path:", nltk.data.path)
