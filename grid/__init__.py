@@ -203,7 +203,7 @@ class statistics(object):
     def _used(self):
         """ Counts the cells that have content.
         """
-        return len(filter(lambda cell: cell.has_content(), self))
+        return len( list(filter(lambda cell: cell.has_content(), self)) )
     used = property(_used)
 
     def _empty(self):
