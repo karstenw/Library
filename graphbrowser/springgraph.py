@@ -205,9 +205,9 @@ class Graph:
             self.iteration += 1
         elif self.iteration == 1:
             self.iteration += 1
-        elif self.iteration < self.layout.iterations \
-        and self.iteration > 1:
-            n = min(iterations, self.iteration / 10 + 1)
+        elif (    self.iteration < self.layout.iterations
+              and self.iteration > 1):
+            n = int( min(iterations, self.iteration / 10 + 1) )
             for i in range(n): 
                 self.layout.iterate()
             self.layout.calculate_bounds()
@@ -488,7 +488,7 @@ class Graph:
             
     def strongest_nodes(self, treshold=0.0):
         
-        nodes = [(n.weight, n) for n in self.nodes if n.weight > treshold]
+        nodes = [(n.weight, n) for n in self.nodes if n.weight and n.weight > treshold]
         nodes.sort()
         nodes.reverse()
         nodes = [n for s, n in nodes]
