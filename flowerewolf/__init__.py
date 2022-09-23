@@ -3,14 +3,27 @@
 # Copyright (c) 2004-2007 by Tom De Smedt.
 # Licensed under GPL, see LICENSE.txt for details.
 
-######################################################################################################
+################################################################################
 
 
 import io
+import pprint
+pp = pprint.pprint
 
 from nodebox.util import random, choice
-import en
+
+# from pattern import en
+import pattern # = ximport("pattern")
+import pattern.en
+en = pattern.en
+from pattern.en import wordnet
+
+
 dictionary = io.open("vocabulary.txt", encoding="utf-8").readlines()
+
+allnouns = list( wordnet.NOUNS() )
+allverbs = list( wordnet.VERBS() )
+alladjectives = list( wordnet.ADJECTIVES() )
 
 def alliterations(head="", tail=""):
 
@@ -22,8 +35,8 @@ def alliterations(head="", tail=""):
     """
     words = []
     for word in dictionary:
-        if (head=="" or word[:len(head)]== head) and \
-           (tail=="" or word.strip()[-len(tail):]== tail):
+        if (    (head=="" or word[:len(head)]== head)
+            and (tail=="" or word.strip()[-len(tail):]== tail)):
             words.append(word)
     
     return words
@@ -36,7 +49,8 @@ def nouns(list):
     words = []
     for word in list:
         word = word.strip()
-        if en.is_noun(word): words.append(word)
+        if word in allnouns:
+            words.append(word)
     
     return words
     
@@ -48,7 +62,8 @@ def adjectives(list):
     words = []
     for word in list:
         word = word.strip()
-        if en.is_adjective(word): words.append(word)
+        if word in alladjectives:
+            words.append(word)
     
     return words
 
@@ -60,7 +75,8 @@ def verbs(list):
     words = []
     for word in list:
         word = word.strip()
-        if en.is_verb(word): words.append(word)
+        if word in allverbs:
+            words.append(word)
     
     return words
 
@@ -117,7 +133,15 @@ def eloquate(noun, antonise=True):
     
     """
 
-    antonym = en.noun.antonym(noun)
+    if type(noun) in (str,):
+        synsets = wordnet.synsets( noun )
+        synset = synsets[0]
+        hyponyms = list( synset.hyponyms() )
+        noun = synset
+
+
+    # antonym = en.noun.antonym(noun)
+    antonym = noun.antonym
     if antonise and len(antonym) > 0 and random() > 0.4:
         antonym = choice(choice(antonym))
         return "no " + eloquate(antonym, antonise=False)
@@ -197,7 +221,8 @@ def verse(word):
     
     """
 
-    g = en.noun.gloss(word)
+    # g = en.noun.gloss(word)
+    g = word.gloss
     words = g.split(" ")
     
     for i in range(len(words)):
@@ -205,14 +230,17 @@ def verse(word):
         w = words[i]
         w = w.replace("\"", "")
         
-        if en.is_noun(w):
+        if w in allnouns:
             w = eloquate(w)
             
         if random(100) > 60:
 
-            if en.is_noun(w): w = incorporate(w).upper()
-            if en.is_verb(w): w = incorporate(w, VERB)
-            if en.is_adjective(w): w = incorporate(w, ADJECTIVE)
+            if w in allnouns:
+                w = incorporate(w).upper()
+            if w in allverbs:
+                w = incorporate(w, VERB)
+            if w in alladjectives:
+                w = incorporate(w, ADJECTIVE)
             
         if i > 0 and i % 3 == 0:
             words[i] = words[i] + "\n"
@@ -227,10 +255,24 @@ def verse(word):
 def dada(query, foreground=None, background=None, fonts=[], transparent=False):
 
     # Create some lines of poetry based on the query.
-    h = en.noun.hyponyms(query)
-    h = choice(en.wordnet.flatten(h))
+    print("query", query)
+    
 
-    lines = verse(h)
+    synsets = wordnet.synsets( query )
+    synset = synsets[0]
+    
+    h = list( synset.hyponyms() )
+    print("h:", h)
+    
+    #import pdb
+    #pdb.set_trace()
+    #pp( dir( h[0] ) )
+    #h = en.noun.hyponyms(query)
+    #h = choice(en.wordnet.flatten(h))
+    w = choice( h )
+    
+
+    lines = verse(w)
     lines = lines.split("\n")
 
     # Setup the colors and fonts.

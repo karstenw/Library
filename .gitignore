@@ -54,4 +54,4 @@ photobot/images/*
 photobot/photobot-standalone
 photobot/photobot.leo
 
-nltk
+nltk/+data/corpora

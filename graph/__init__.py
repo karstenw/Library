@@ -141,6 +141,10 @@ class node:
     def __eq__(self, node):
         if not isinstance(node, self.__class__): return False
         return self.id == node.id
+    
+    def __le__(self, node):
+        if not isinstance(node, self.__class__): return False
+        return self.id < node.id
 
 #### GRAPH NODE LINKS ################################################################################
 
