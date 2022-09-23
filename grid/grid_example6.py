@@ -120,11 +120,22 @@ for task, timing in schedule.items():
 g.bottom.name = "total"
 g.total.left.content = "total"
 total = 0
+#import pdb
+#pdb.set_trace()
 for i in range(1, len(g.total)-1):
-    g.total[i].content = g.column(i)[1:].used
+    # g.total[i].content = g.column(i)[1:].used
+    col = g.column(i)
+    slice = grid.cells( col[1:] )
+    g.total[i].content = slice.used
 g.total.right.content = int(g.total.sum)
 
-g.total[1:-1].style = "total-units"
+
+# g.total[1:-1].style = "total-units"
+n = len(g.total)
+for i in range( n-2 ):
+    g.total[i].style = "total-units"
+
+
 s = g.styles.create("total-units", template="total")
 s.padding.left = 0
 s.align = CENTER
