@@ -80,6 +80,13 @@ if not kwdbg:
         rnd.shuffle(backgrounds)
 
 
+# background image
+if len(backgrounds) > 0:
+    bgimage = backgrounds.pop()
+    top, w, h = pb.placeImage(c, bgimage, 0, 0, WIDTH, "Image 1", width=True, height=True)
+    print( "Background: %s" % bgimage.encode("utf-8") )
+
+
 def grid(cols, rows, colSize=1, rowSize=1, shuffled=False):
     """Returns an iterator that contains coordinate tuples.
     Taken from nodebox.utils
@@ -124,9 +131,6 @@ paintoverlay = not kwdbg
 
 #  create, scale and place the image
 x, y = 0, 0
-bgimage = backgrounds.pop()
-top, w, h = pb.placeImage(c, bgimage, x, y, W, "Image 1")
-print( "Background: %s" % bgimage.encode("utf-8") )
 
 
 for position in positions:

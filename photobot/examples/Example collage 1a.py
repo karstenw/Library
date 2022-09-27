@@ -80,6 +80,13 @@ if not kwdbg:
         rnd.shuffle(backgrounds)
 
 
+# background image
+if len(backgrounds) > 0:
+    bgimage = backgrounds.pop()
+    top, w, h = pb.placeImage(c, bgimage, 0, 0, WIDTH, "Image 1", width=True, height=True)
+    print( "Background: %s" % bgimage.encode("utf-8") )
+
+
 # CONFIGURATION
 
 columns = 5
@@ -95,11 +102,6 @@ gilb =0
 # 
 y_offset = HEIGHT / float(rows)
 y_offset = int(round(y_offset))
-
-# background image
-bgimage = backgrounds.pop()
-pb.placeImage(c, bgimage, 0, 0, WIDTH, "Image 1")
-print( "Background: %s" % bgimage.encode("utf-8") )
 
 tilecounter = 0
 for j in range(rows):
