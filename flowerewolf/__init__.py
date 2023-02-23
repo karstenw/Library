@@ -5,6 +5,7 @@
 
 ################################################################################
 
+import pdb
 
 import io
 import pprint
@@ -12,18 +13,24 @@ pp = pprint.pprint
 
 from nodebox.util import random, choice
 
-# from pattern import en
-import pattern # = ximport("pattern")
-import pattern.en
-en = pattern.en
-from pattern.en import wordnet
+import en
+import en.wordnet
+wordnet = en.wordnet
 
 
-dictionary = io.open("vocabulary.txt", encoding="utf-8").readlines()
+f = io.open("vocabulary.txt", 'r', encoding="utf-8")
+dictionary = f.readlines()
+f.close()
 
-allnouns = list( wordnet.NOUNS() )
-allverbs = list( wordnet.VERBS() )
-alladjectives = list( wordnet.ADJECTIVES() )
+# pdb.set_trace()
+
+allnouns = list(wordnet.NOUNS.keys())
+allverbs = list(wordnet.VERBS.keys())
+alladjectives = list(wordnet.ADJECTIVES.keys())
+
+#allnouns = list( wordnet.NOUNS() )
+#allverbs = list( wordnet.VERBS() )
+#alladjectives = list( wordnet.ADJECTIVES() )
 
 def alliterations(head="", tail=""):
 
@@ -97,8 +104,8 @@ def alliterate(word, type=ADJECTIVE):
     
     """
     
-    if type == NOUN: f = adjectives
-    if type == ADJECTIVE: f = nouns
+    if type == NOUN:        f = adjectives
+    if type == ADJECTIVE:   f = nouns
     if type == VERB:
         word = en.verb.infinitive(word)
         f = verbs
@@ -255,15 +262,18 @@ def verse(word):
 def dada(query, foreground=None, background=None, fonts=[], transparent=False):
 
     # Create some lines of poetry based on the query.
-    print("query", query)
-    
+    print("query:", query)
 
-    synsets = wordnet.synsets( query )
-    synset = synsets[0]
-    
-    h = list( synset.hyponyms() )
-    print("h:", h)
-    
+    #synsets = wordnet.synsets( query )
+    #synset = synsets[0]
+    #h = list( synset.hyponyms() )
+    # Create some lines of poetry based on the query.
+    # pdb.set_trace()
+
+    h = en.noun.hyponyms(query)
+    h = choice(en.wordnet.flatten(h))
+
+    print("random hyponym:", h)
     #import pdb
     #pdb.set_trace()
     #pp( dir( h[0] ) )
@@ -292,7 +302,7 @@ def dada(query, foreground=None, background=None, fonts=[], transparent=False):
     _ctx.strokewidth(0.5)
     
     # Poem title.
-    _ctx.text(query, _ctx.WIDTH/15, _ctx.HEIGHT/7-f)
+    _ctx.text(query, _ctx.WIDTH / 15, _ctx.HEIGHT / 7-f)
     
     for i in range(1):
         
