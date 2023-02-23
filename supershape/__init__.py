@@ -9,7 +9,8 @@
 from __future__ import print_function
 
 from math import pi, sin, cos, pow
-_range = range
+
+
 
 TWOPI = pi * 2
 
@@ -18,10 +19,11 @@ try:
     # Attempt to import the C library
     # for faster performance.
     from cSuperformula import supercalc
-    print("FAST")
+    print("FAST Superformula")
 
-except:
-    print("Failed loading shared object")
+except Exception as err:
+    print("Failed loading shared object for Superformula")
+    print(err)
     # Else, use the native python
     # calculation of supershapes.
     def supercalc(m, n1, n2, n3, phi):
@@ -51,12 +53,12 @@ except:
     print("SLOW")
 
 
-def path(x, y, w, h, m, n1, n2, n3, points=1000, percentage=1.0, range=TWOPI):
+def path(x, y, w, h, m, n1, n2, n3, points=1000, percentage=1.0, range_=TWOPI):
     first = True
-    for i in _range(points):
+    for i in range(points):
         if i > points*percentage: 
             continue
-        phi = i * range / points
+        phi = i * range_ / points
         dx, dy = supercalc(m, n1, n2, n3, phi)
         dx = (dx * w) + x
         dy = (dy * h) + y
@@ -67,11 +69,11 @@ def path(x, y, w, h, m, n1, n2, n3, points=1000, percentage=1.0, range=TWOPI):
             _ctx.lineto(dx, dy)
     return _ctx.endpath(draw=False)
     
-def transform(path, m, n1, n2, n3, points=100, range=TWOPI):
+def transform(path, m, n1, n2, n3, points=100, range_=TWOPI):
     first = True
-    for i in _range(points):
+    for i in range(points):
         pt = path.point(float(i)/points)
-        phi = i * range / points
+        phi = i * range_ / points
         dx, dy = supercalc(m, n1, n2, n3, phi)
         if first:
             _ctx.beginpath(pt.x+dx, pt.y+dy)
@@ -80,3 +82,5 @@ def transform(path, m, n1, n2, n3, points=100, range=TWOPI):
             _ctx.lineto(pt.x+dx, pt.y+dy)
     return _ctx.endpath(draw=False)
 
+import pprint
+pprint.pprint( globals() )
