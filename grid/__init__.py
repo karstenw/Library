@@ -8,7 +8,7 @@ __version__   = "1.9.4.2"
 __copyright__ = "Copyright (c) 2008 Tom De Smedt"
 __license__   = "GPL"
 
-### NODEBOX GRID ##############################################################
+### NODEBOX GRID ###############################################################
 
 # The NodeBox Grid library offers a number of tools to work with rows and
 # columns in a page layout.
