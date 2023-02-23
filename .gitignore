@@ -40,6 +40,10 @@ coreimage/explorer.py
 coreimage/images/*
 coreimage/*.png
 
+en
+en/wn
+en/wn/data
+
 fatpath/fatpath-0.6.py
 
 photobot/examples/Example collage 6.py
