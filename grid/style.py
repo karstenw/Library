@@ -363,8 +363,10 @@ def begin_grob(style, grob, x, y):
     # This way you can set a style for a collection of peer cells.
     # An exception to this rule is when style.delegate is False, then the style
     # is drawn for the container and not used for the containing cells.
-    # This is useful when you have a background that spans different rows and columns
-    # (instead of the background being applied to each individual row/column).
+    # This is useful when you have a background that spans different rows
+    # and columns (instead of the background being applied to each
+    # individual row/column).
+
     style._ctx.push()
     if (style.delegate and len(grob) > 0):
         style._ctx.translate(x, y)
