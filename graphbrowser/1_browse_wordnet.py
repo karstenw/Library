@@ -6,9 +6,9 @@ springgraph = ximport("springgraph")
 graphbrowser = ximport("graphbrowser")
 #reload(graphbrowser)
 
-#import en
-pattern = ximport("pattern")
-en = pattern.text.en
+import en
+# pattern = ximport("pattern")
+# en = pattern.text.en
 
 from random import shuffle
 

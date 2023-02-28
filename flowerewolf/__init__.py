@@ -13,10 +13,13 @@ pp = pprint.pprint
 
 from nodebox.util import random, choice
 
-import en
-import en.wordnet
-wordnet = en.wordnet
-
+if 0:
+    import en
+    import en.wordnet
+    wordnet = en.wordnet
+else:
+    import nbwn
+    
 
 f = io.open("vocabulary.txt", 'r', encoding="utf-8")
 dictionary = f.readlines()
@@ -24,13 +27,21 @@ f.close()
 
 # pdb.set_trace()
 
-allnouns = list(wordnet.NOUNS.keys())
-allverbs = list(wordnet.VERBS.keys())
-alladjectives = list(wordnet.ADJECTIVES.keys())
+# nbwn
 
+# pattern
+#allnouns = list(wordnet.NOUNS.keys())
+#allverbs = list(wordnet.VERBS.keys())
+#alladjectives = list(wordnet.ADJECTIVES.keys())
+
+# en
 #allnouns = list( wordnet.NOUNS() )
 #allverbs = list( wordnet.VERBS() )
 #alladjectives = list( wordnet.ADJECTIVES() )
+
+NOUN = "noun"
+ADJECTIVE = "adjective"
+VERB = "verb"
 
 def alliterations(head="", tail=""):
 
@@ -47,7 +58,7 @@ def alliterations(head="", tail=""):
             words.append(word)
     
     return words
-    
+
 def nouns(list):
     
     """Parses nouns from a list of words.
@@ -87,11 +98,7 @@ def verbs(list):
     
     return words
 
-NOUN = "noun"
-ADJECTIVE = "adjective"
-VERB = "verb"
-
-def alliterate(word, type=ADJECTIVE):
+def alliterate(word, typ=ADJECTIVE):
     
     """Returns an alliteration of the given word.
     
@@ -104,9 +111,9 @@ def alliterate(word, type=ADJECTIVE):
     
     """
     
-    if type == NOUN:        f = adjectives
-    if type == ADJECTIVE:   f = nouns
-    if type == VERB:
+    if typ == NOUN:        f = adjectives
+    if typ == ADJECTIVE:   f = nouns
+    if typ == VERB:
         word = en.verb.infinitive(word)
         f = verbs
     
@@ -149,7 +156,9 @@ def eloquate(noun, antonise=True):
 
     # antonym = en.noun.antonym(noun)
     antonym = noun.antonym
-    if antonise and len(antonym) > 0 and random() > 0.4:
+    if (    antonise
+        and len(antonym) > 0
+        and random() > 0.4 ):
         antonym = choice(choice(antonym))
         return "no " + eloquate(antonym, antonise=False)
     
@@ -190,7 +199,7 @@ def consonate(verb, noun):
     
     return verb
     
-def incorporate(word, type=NOUN):
+def incorporate(word, typ=NOUN):
     
     """Combines this noun with another.
     
@@ -202,19 +211,23 @@ def incorporate(word, type=NOUN):
     
     """
     
-    if type == NOUN: f = nouns
-    if type == ADJECTIVE: f = adjectives
-    if type == VERB:
+    if typ == NOUN:
+        f = nouns
+    if typ == ADJECTIVE:
+        f = adjectives
+    if typ == VERB:
         word = en.verb.infinitive(word)
         f = verbs
     
     for i in [4,3,2,1]:
         a = alliterations(head=word[-i:])
-        if type != None: a = f(a)
+        if typ != None:
+            a = f(a)
         if len(a) > 0:
             tail = choice(a)
             if random() > 0.25: 
-                if i > len(word): return tail
+                if i > len(word):
+                    return tail
                 return word + tail[i:]
         
     return word + tail[i:]
@@ -261,46 +274,52 @@ def verse(word):
 
 def dada(query, foreground=None, background=None, fonts=[], transparent=False):
 
-    # Create some lines of poetry based on the query.
-    print("query:", query)
+    """Create some lines of poetry based on the query."""
 
+    #import pdb
+    # en
+    #h = en.noun.hyponyms(query)
+    #h = choice(en.wordnet.flatten(h))
+
+    # alternate hyponyms with pattern
     #synsets = wordnet.synsets( query )
     #synset = synsets[0]
     #h = list( synset.hyponyms() )
-    # Create some lines of poetry based on the query.
-    # pdb.set_trace()
 
+    # alternate hyponyms with nbwn
     h = en.noun.hyponyms(query)
     h = choice(en.wordnet.flatten(h))
 
+    print("query:", query)
     print("random hyponym:", h)
-    #import pdb
-    #pdb.set_trace()
-    #pp( dir( h[0] ) )
-    #h = en.noun.hyponyms(query)
-    #h = choice(en.wordnet.flatten(h))
     w = choice( h )
-    
 
     lines = verse(w)
     lines = lines.split("\n")
 
     # Setup the colors and fonts.
+
     if foreground == None: 
         foreground = _ctx.color(1,1,1)
+
     if background == None:
         background = _ctx.color(1,0,0)
+
     if len(fonts) == 0: 
         fonts = [_ctx.font()]
+
     f = _ctx.fontsize()
     _ctx.background(background)
+
     if transparent: 
         _ctx.background(None)
+
     _ctx.lineheight(1)
     _ctx.fill(foreground)
     _ctx.stroke(foreground)
     _ctx.strokewidth(0.5)
-    
+
+
     # Poem title.
     _ctx.text(query, _ctx.WIDTH / 15, _ctx.HEIGHT / 7-f)
     
@@ -381,3 +400,4 @@ def dada(query, foreground=None, background=None, fonts=[], transparent=False):
             
             x = _ctx.WIDTH / 15
             y += _ctx.textheight(word)
+
