@@ -1,4 +1,0 @@
-import os
-
-nltk = ximport("nltk")
-nltk.download('wordnet')
