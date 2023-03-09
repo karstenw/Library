@@ -1,8 +1,11 @@
 # This script tests if the SVG library works correctly.
 import unittest
 
-svg = ximport("__init__")
-reload(svg)
+try:
+    svg = ximport("svg")
+except:
+    svg = ximport("__init__")
+    reload(svg)
 
 BLACK = Color()
 WHITE = Color(1)
@@ -80,4 +83,4 @@ class SVGTest(unittest.TestCase):
         
 suite = unittest.TestLoader().loadTestsFromTestCase(SVGTest)
 suite.debug()
-print "All tests passed."
+print( "All tests passed." )
