@@ -37,35 +37,35 @@ The module ```flowerewolf``` is in adaption.
 
 The module ```graph``` runs mostly.
 
-The module ```graphbrowser``` runs unchanged.
+The module ```graphbrowser``` runs mostly.
 
-The module ```grid``` runs unchanged.
+The module ```grid``` runs.
 
 The module ```ìsight``` has been rewritten to use the newer [imagesnap](http://iharder.net/imagesnap) tool which makes it possible to take sequences of images very quickly.
 
 The module ```lsys```has been written from scratch. Why? Because lindemayer systems are fun. Included are a lot of demos from "Algorithmic Beauty of Plants" and "Lindenmayer Systems, Fractals, and Plants".
 
-The module ```lsystem``` runs unchanged.
+The module ```lsystem``` runs.
 
-The module ```noise``` has been adapted and the _noise.so file has been compiled for i386/x86_64
+The module ```noise``` has been adapted and the _noise.so file has been compiled for x86\_64
 
-The module ```perception``` runs unchanged.
+The module ```perception``` currently removed; may come back.
 
 The module ```photobot``` has been adapted to use [Pillow](https://github.com/python-pillow/Pillow), the PIL successor. You'll need at least Nodebox version 1.9.12.
 
-The module ```pixie``` runs unchanged.
+The module ```pixie``` runs.
 
-The module ```quicktime``` runs unchanged.
+The module ```quicktime``` runs on Intel. Can't run on newer Macs with M-*
 
-The module ```supershape``` has been adapted and the cSuperformula.so file has been compiled for i386/x86_64
+The module ```supershape``` has been adapted and the cSuperformula.so file has been compiled for x86_64
 
-The module ```svg``` runs unchanged.
+The module ```svg``` runs.
 
-The module ```web``` runs somehow. Many of the interfaced services have ceased to exist.
+The module ```web``` removed. Use linguistics.pattern.web
 
-The module ```wikipedia``` runs unchanged.
+The module ```wikipedia``` removed. Use linguistics.pattern.wikipedia
 
-The module ```wordnet``` runs unchanged.
+The module ```wordnet``` removed. Use linguistics.pattern.text.wordnet
 
 
 
