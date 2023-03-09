@@ -3,10 +3,13 @@ springgraph = ximport("springgraph")
 
 from time import time
 
-size(400, 400)
+size(600, 600)
+
+iters = 500
+nodecount = 50
 
 # A graph object.
-g = springgraph.graph(iterations=500, distance=1.0)
+g = springgraph.graph(iterations=iters, distance=1.0)
 
 # Graph properties:
 #
@@ -36,7 +39,7 @@ g = springgraph.graph(iterations=500, distance=1.0)
 from random import seed
 seed(6)
 
-for i in range(40):
+for i in range(nodecount):
     # Add nodes with a random id.
     id = random(500)
     if not id in g.index.keys():
@@ -80,15 +83,19 @@ g.solve()
 # (according to the number of iterations),
 # show shortest path between random nodes.
 path = []
-if g.update() == False:
-    id1 = choice(g.index.keys())
-    id2 = choice(g.index.keys())
+if 1: #g.update() == False:
+    items = list( g.index.keys() )
+    id1 = choice( items )
+    id2 = choice( items )
     path = g.shortest_path(id1, id2)
 
-print( g.distance_map() )
-print( springgraph.centrality(g) )
-print( g.strongest_nodes() )
+print( "\n\ng.distance_map():", g.distance_map() )
+print( "\n\nspringgraph.centrality(g):", springgraph.centrality(g) )
+print( "\n\ng.strongest_nodes():", g.strongest_nodes() )
 
 # Draw the graph
 # and display the shortest path.
+print( "\n\npath from to:", id1, id2 )
+print( path )
+
 g.draw(highlight=path)
