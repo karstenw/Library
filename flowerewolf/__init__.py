@@ -28,12 +28,12 @@ if 1:
     import pattern.text
     import pattern.text.en
     en = pattern.text.en
-    wn = en.wordnet
+    wordnet = en.wordnet
 
 
-allnouns = set( wn.NOUNS() )
-allverbs = set( wn.VERBS() )
-alladjectives = set( wn.ADJECTIVES() )
+allnouns = set( wordnet.NOUNS() )
+allverbs = set( wordnet.VERBS() )
+alladjectives = set( wordnet.ADJECTIVES() )
 
 f = io.open("vocabulary.txt", 'r', encoding="utf-8")
 dictionary = f.readlines()
@@ -155,7 +155,7 @@ def eloquate(noun, antonise=True):
     """
 
     if type(noun) in (str,):
-        synsets = wn.synsets( noun )
+        synsets = wordnet.synsets( noun )
         if synsets:
             synset = synsets[0]
             hyponyms = list( synset.hyponyms() )
@@ -183,7 +183,7 @@ def eloquate(noun, antonise=True):
         noun = choice(choice(en.noun.hyponyms(noun)))
     else:
         hyponyms = []
-        for h in wn.synsets( noun ):
+        for h in wordnet.synsets( noun ):
             hyponyms.extend( list(h.hyponyms()) )
         if hyponyms:
             noun = choice( hyponyms )
@@ -195,7 +195,7 @@ def eloquate(noun, antonise=True):
             adjective = alliterate(noun, typ=NOUN)
         else:
             hypernyms = []
-            for h in wn.synsets( noun ):
+            for h in wordnet.synsets( noun ):
                 hypernyms.extend( list(h.hypernyms()) )
             if hypernyms:
                 noun = choice( hyponyms )
@@ -321,14 +321,14 @@ def dada(query, foreground=None, background=None, fonts=[], transparent=False):
     print("query:", query)
 
     # en
-    if 0:
+    if old:
         h = en.noun.hyponyms(query)
         h = choice(en.wordnet.flatten(h))
 
-    # alternate hyponyms with wn
-    if 1:
+    # alternate hyponyms with pattern.wordnet
+    else:
         # pdb.set_trace()
-        synsets = wn.synsets( query )
+        synsets = wordnet.synsets( query )
         h = []
         for synset in synsets:
             hyponyms = synset.hyponyms()
