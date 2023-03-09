@@ -7,41 +7,44 @@
 
 import pdb
 
+import time
 import io
 import pprint
 pp = pprint.pprint
 
 from nodebox.util import random, choice
 
+# old en lib
 if 0:
     import en
     import en.wordnet
     wordnet = en.wordnet
-else:
-    import nbwn
-    
+
+# new linguistics/pattern
+if 1:
+    # need to import linguistics first - sets up sys.path and corpus/data folders for the sublibs
+    import linguistics
+    import pattern
+    import pattern.text
+    import pattern.text.en
+    en = pattern.text.en
+    wn = en.wordnet
+
+
+allnouns = set( wn.NOUNS() )
+allverbs = set( wn.VERBS() )
+alladjectives = set( wn.ADJECTIVES() )
 
 f = io.open("vocabulary.txt", 'r', encoding="utf-8")
 dictionary = f.readlines()
 f.close()
 
-# pdb.set_trace()
-
-# nbwn
-
-# pattern
-#allnouns = list(wordnet.NOUNS.keys())
-#allverbs = list(wordnet.VERBS.keys())
-#alladjectives = list(wordnet.ADJECTIVES.keys())
-
-# en
-#allnouns = list( wordnet.NOUNS() )
-#allverbs = list( wordnet.VERBS() )
-#alladjectives = list( wordnet.ADJECTIVES() )
 
 NOUN = "noun"
 ADJECTIVE = "adjective"
 VERB = "verb"
+
+old = False
 
 def alliterations(head="", tail=""):
 
@@ -56,8 +59,8 @@ def alliterations(head="", tail=""):
         if (    (head=="" or word[:len(head)]== head)
             and (tail=="" or word.strip()[-len(tail):]== tail)):
             words.append(word)
-    
     return words
+
 
 def nouns(list):
     
@@ -69,9 +72,9 @@ def nouns(list):
         word = word.strip()
         if word in allnouns:
             words.append(word)
-    
     return words
-    
+
+
 def adjectives(list):
     
     """Parses adjectives from a list of words.
@@ -82,8 +85,8 @@ def adjectives(list):
         word = word.strip()
         if word in alladjectives:
             words.append(word)
-    
     return words
+
 
 def verbs(list):
     
@@ -95,8 +98,8 @@ def verbs(list):
         word = word.strip()
         if word in allverbs:
             words.append(word)
-    
     return words
+
 
 def alliterate(word, typ=ADJECTIVE):
     
@@ -114,7 +117,11 @@ def alliterate(word, typ=ADJECTIVE):
     if typ == NOUN:        f = adjectives
     if typ == ADJECTIVE:   f = nouns
     if typ == VERB:
-        word = en.verb.infinitive(word)
+        if old:
+            word = en.verb.infinitive(word)
+        else:
+            pdb.set_trace()
+            word = en.verbs.conjugate(word, en.INFINITIVE)
         f = verbs
     
     x = alliterations(word[0:3], word[-2:])
@@ -148,25 +155,51 @@ def eloquate(noun, antonise=True):
     """
 
     if type(noun) in (str,):
-        synsets = wordnet.synsets( noun )
-        synset = synsets[0]
-        hyponyms = list( synset.hyponyms() )
-        noun = synset
+        synsets = wn.synsets( noun )
+        if synsets:
+            synset = synsets[0]
+            hyponyms = list( synset.hyponyms() )
+            noun = synset
 
+    if old:
+        antonym = en.noun.antonym(noun)
+    else:
+        antonym = noun.antonym
 
-    # antonym = en.noun.antonym(noun)
-    antonym = noun.antonym
-    if (    antonise
-        and len(antonym) > 0
-        and random() > 0.4 ):
-        antonym = choice(choice(antonym))
-        return "no " + eloquate(antonym, antonise=False)
+    if old:
+        if (        antonise
+                and (    antonym
+                     and len( str(antonym)) > 0 )
+                and random() > 0.4 ):
+            antonym = choice(choice(antonym))
+            return "no " + eloquate(antonym, antonise=False)
+    else:
+        if antonise:
+            if antonym:
+                if random() > 0.4:
+                    return "no " + eloquate(antonym, antonise=False)
+
+    if old:    
+        noun = choice(choice(en.noun.hyponyms(noun)))
+    else:
+        hyponyms = []
+        for h in wn.synsets( noun ):
+            hyponyms.extend( list(h.hyponyms()) )
+        if hyponyms:
+            noun = choice( hyponyms )
     
-    noun = choice(choice(en.noun.hyponyms(noun)))
-    adjective = alliterate(noun, type=NOUN)
+    adjective = alliterate(noun, typ=NOUN)
     if adjective == None:
-        noun = choice(choice(en.noun.hypernyms(noun)))
-        adjective = alliterate(noun, type=NOUN)
+        if old:
+            noun = choice(choice(en.noun.hypernyms(noun)))
+            adjective = alliterate(noun, typ=NOUN)
+        else:
+            hypernyms = []
+            for h in wn.synsets( noun ):
+                hypernyms.extend( list(h.hypernyms()) )
+            if hypernyms:
+                noun = choice( hyponyms )
+                adjective = alliterate(noun, typ=NOUN)
         
     if adjective == None:
         return noun
@@ -176,6 +209,7 @@ def eloquate(noun, antonise=True):
         return noun + " " + adjective
     else:
         return noun + " so " + adjective
+
 
 def consonate(verb, noun):
     
@@ -232,6 +266,7 @@ def incorporate(word, typ=NOUN):
         
     return word + tail[i:]
 
+
 def verse(word):
     
     """Creates a small rhyme for a given word.
@@ -241,10 +276,14 @@ def verse(word):
     
     """
 
-    # g = en.noun.gloss(word)
-    g = word.gloss
+    if old:
+        g = en.noun.gloss(word)
+    else:
+        g = word.gloss
+
     words = g.split(" ")
-    
+
+    pdb.set_trace()
     for i in range(len(words)):
         
         w = words[i]
@@ -252,9 +291,11 @@ def verse(word):
         
         if w in allnouns:
             w = eloquate(w)
+            if type(w) not in (str,):
+                w = w.senses[0]
+            # w = w.lemma
+        if random() > 0.6:
             
-        if random(100) > 60:
-
             if w in allnouns:
                 w = incorporate(w).upper()
             if w in allverbs:
@@ -272,26 +313,35 @@ def verse(word):
     g = g.replace("group A ", "!")
     return g
 
+
 def dada(query, foreground=None, background=None, fonts=[], transparent=False):
 
     """Create some lines of poetry based on the query."""
 
-    #import pdb
-    # en
-    #h = en.noun.hyponyms(query)
-    #h = choice(en.wordnet.flatten(h))
-
-    # alternate hyponyms with pattern
-    #synsets = wordnet.synsets( query )
-    #synset = synsets[0]
-    #h = list( synset.hyponyms() )
-
-    # alternate hyponyms with nbwn
-    h = en.noun.hyponyms(query)
-    h = choice(en.wordnet.flatten(h))
-
     print("query:", query)
-    print("random hyponym:", h)
+
+    # en
+    if 0:
+        h = en.noun.hyponyms(query)
+        h = choice(en.wordnet.flatten(h))
+
+    # alternate hyponyms with wn
+    if 1:
+        # pdb.set_trace()
+        synsets = wn.synsets( query )
+        h = []
+        for synset in synsets:
+            hyponyms = synset.hyponyms()
+            for hyponym in hyponyms:
+                if 0:
+                    lemmas = hyponym.lemmas()
+                    for lemma in lemmas:
+                        h.append( lemma )
+                if 1:
+                    h.append( hyponym )
+        # h = list( h )
+
+    print("hyponyms for '%s':  %s" % (query, str(h)) )
     w = choice( h )
 
     lines = verse(w)
