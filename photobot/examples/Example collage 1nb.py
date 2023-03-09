@@ -1,5 +1,3 @@
-
-
 # heavily inspired by https://www.nodebox.net/code/index.php/Landslide
 
 from __future__ import print_function
@@ -8,35 +6,42 @@ import sys, os
 
 import pprint
 pp = pprint.pprint
-kwdbg = False
+kwdbg = 0
+kwlog = 0
 
-# need a different name
+# need a different name for nodebox
 import random as rnd
 
-if kwdbg:
+import libgradient
+import imagewells
+loadImageWell = imagewells.loadImageWell
+
+if kwdbg and 1:
     # make random choices repeatable for debugging
-    rnd.seed(0)
+    rnd.seed( 123456 )
 
 
-W, H = 1024,768
-W, H = 1920, 1050
+# width and height of destination image
+# W, H =  800,  600
+# W, H = 1024,  768
+# W, H = 1280,  800
+# W, H = 1440,  900
+W, H = 1920, 1080
 
-
-# check for Nodebox
-NB = True
+# import photobot lib
 try:
-    _ctx
-except(NameError):
-    NB = False
-
-if NB:
-    size(W, H)
     pb = ximport("photobot")
+    size(W, H)
     background( 0.333 )
-else:
-    WIDTH, HEIGHT = W, H
+except ImportError:
+    pb = ximport("__init__")
+    reload(pb)
+    size(W, H)
+    background( 0.333 )
+except NameError:
     import photobot as pb
-
+    WIDTH, HEIGHT = W, H
+    print( "File: %s" % (__file__,) )
 RATIO = WIDTH / HEIGHT
 
 # load the image library
@@ -44,28 +49,35 @@ RATIO = WIDTH / HEIGHT
 additionals = sys.argv[1:]
 
 # get all images from user image wells
-imagewell = pb.loadImageWell(   bgsize=(WIDTH, HEIGHT),
-                                minsize=(256,256),
-                                pathonly=True,
-                                additionals=additionals)
+imagewell = loadImageWell(   bgsize=(WIDTH, HEIGHT),
+                             minsize=(256,256),
+                             pathonly=True,
+                             additionals=additionals,
+                             resultfile="imagewell-files",
+                             ignoreFolderNames=('+offline',))
 
-# tiles are images >256x256 and <=1024x768
+# tiles are images >256x256 and <=WIDTH, HEIGHT
 tiles = imagewell['tiles']
 
-# backgrounds are images >1024x768
+# backgrounds are images >W,H
 backgrounds = imagewell['backgrounds']
-rnd.shuffle(tiles)
-rnd.shuffle(backgrounds)
 
-print( "tiles: %i " % len(tiles) )
+print( "tiles: %i" % len(tiles) )
 print( "backgrounds: %i" % len(backgrounds) )
 
-
-# CONFIGURATION
 
 # create the canvas
 c = pb.canvas( WIDTH, HEIGHT)
 c.fill( (85,85,85) )
+
+
+if not kwdbg:
+    turns = int( round(20 + (rnd.random() * 10)) )
+    if kwlog:
+        print( "shuffle turns: %i" % turns )
+    for turn in range( turns ):
+        rnd.shuffle(tiles)
+        rnd.shuffle(backgrounds)
 
 
 # CONFIGURATION
@@ -83,26 +95,14 @@ gilb =0
 y_offset = HEIGHT / float(rows)
 y_offset = int(round(y_offset))
 
-x_offset = WIDTH / float(columns)
-
-# 
-if 0:
-    bgimage = backgrounds.pop()
-    top = c.layer(bgimage)
-    w, h = c.top.bounds()
-    w1,h1 = pb.aspectRatio( (w,h), WIDTH, height=False, assize=True )
-    c.top.scale(w1,h1)
-else:
-    bgimage = backgrounds.pop()
-    pb.placeImage(c, bgimage, 0, 0, WIDTH, "bgimage")
-print( "Background:  %s" % bgimage.encode("utf-8") )
-
-idx = 0
+# background image
+bgimage = backgrounds.pop()
+pb.placeImage(c, bgimage, 0, 0, WIDTH, "Image 1")
+print( "Background: %s" % bgimage.encode("utf-8") )
 
 for j in range(rows):
     colw = 0
     for i in range(columns):
-        idx += 1
         # new layer with a random image
         top = c.layer( tiles.pop() )
 
@@ -155,8 +155,8 @@ for j in range(rows):
         # mask destroys top layer
         c.top.mask()
         
-        # c.top.translate(colw+i*w, j*y_offset)
-        c.top.translate(x_offset * i, j*y_offset)
+        c.top.translate(colw+i*w, j*y_offset)
+        # c.top.translate(x_offset * i, j*y_offset)
         
         c.top.opacity( 66 + rnd.random() * 29 )
 

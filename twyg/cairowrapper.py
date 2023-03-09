@@ -29,7 +29,7 @@ class Color(object):
             self.a = a
             self._update_rgb()
         else:
-            raise ValueError, 'Invalid color mode: ' + mode
+            raise ValueError( 'Invalid color mode: ' + mode )
 
     def __repr__(self):
         return 'Color(r=%.3f, g=%.3f, b=%.3f, a=%.3f)' % (self.r, self.g, self.b, self.a)
@@ -75,7 +75,7 @@ def color(*args):
     elif n == 4:
         r, g, b, a = args
     else:
-        raise ValueError, "Invalid color value: '%s'" % args
+        raise ValueError( "Invalid color value: '%s'" % args )
 
     r = min(max(0.0, r), 1.0)
     g = min(max(0.0, g), 1.0)
@@ -439,7 +439,7 @@ class Context(object):
         elif fmt == 'ps':
             self._surface = cairo.PSSurface(fname, w, h)
         else:
-            raise ValueError, "Invalid output format: '%s'" % (fmt)
+            raise ValueError( "Invalid output format: '%s'" % (fmt) )
 
         self._format = fmt
         self._filename = fname

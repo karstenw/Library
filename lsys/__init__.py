@@ -46,9 +46,9 @@ class DrawingState(object):
 
     def pop(self):
         if len(self.stack) == 0:
-            print "EMPTY STACK ERROR"
+            print( "EMPTY STACK ERROR" )
             # pdb.set_trace()
-            print
+            print()
         
         item = self.stack.pop()
         self._x, self._y, self._heading, self.pen, self.scale = item
@@ -300,7 +300,7 @@ class LindenmayerSystem(object):
         # finally draw it
         self.walk(0, 0,  self.phi, drawit=True)
         
-        print "%i Symbols." % len(self.symbols)
+        print( "%i Symbols." % len(self.symbols) )
 
 
 

@@ -81,15 +81,15 @@ class proportion(list):
         elif n == 1:
             list.__init__(self, [1.0])
         elif self.distribution == PROPORTION_RANDOM:
-            list.__init__(self, [random() for i in range(n/r)])
+            list.__init__(self, [random() for i in range(n//r)])
         elif self.distribution in (PROPORTION_EVEN):
-            list.__init__(self, [1.0/n for i in range(n/r)])
+            list.__init__(self, [1.0/n for i in range(n//r)])
         elif self.distribution in (PROPORTION_FIBONACCI, PROPORTION_FIB):
             # Values distributed according to the golden ratio.
-            list.__init__(self, [self.fib(i) for i in range(2,(n/r)+2)])  
+            list.__init__(self, [self.fib(i) for i in range(2,(n//r)+2)])  
         elif self.distribution == PROPORTION_CONTRAST:
             # Split the range: 80% are 0.05-0.15 value and 20% are 0.85-1.0 values.
-            i = max(1, int(round((n/r) * 0.2)))
+            i = max(1, int(round((n//r) * 0.2)))
             j = (n/r) - i
             if self.reversed: i, j = j, i
             list.__init__(self, [random()*0.15+0.85 for k in range(i)])

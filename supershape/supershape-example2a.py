@@ -2,7 +2,7 @@ try:
     supershape = ximport("supershape")
 except:
     supershape = ximport("__init__")
-    reload(supershape)
+    # reload(supershape)
 
 size(600, 400)
 
@@ -13,7 +13,7 @@ fonts = list(fontnames())
 
 chosenfont = choice(fonts)
 
-print chosenfont
+print( chosenfont )
 font(chosenfont, 200)
 path = textpath("FUN!", 50, 250)
 

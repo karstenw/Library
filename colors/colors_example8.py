@@ -5,14 +5,36 @@
 # Since the word is part of the category,
 # the infered color for that category should apply to the word.
 
+import os
+import sys
+import pprint
+pp=pprint.pprint
+
 colors = ximport("colors")
-en = ximport("en")
+# pattern = ximport("pattern")
+
+import linguistics
+import pattern
+import pattern.en
+import pattern.en.wordnet
+en = pattern.en
+wordnet = pattern.en.wordnet
 
 # WordNet has a set of global categories (or lexnames)
 # into which it classifies all words.
 # Examples: verb.weather, noun.artifactm nou.animal, ...
 lexname_scores = {}
-for lexname in en.wordnet.wn.Lexname.dict.keys():
+
+# wordnet.wn._lexnames ???
+
+lexnames = list( wordnet.wn._lexnames )
+#pp(lexnames)
+
+#nouns = list( wordnet.NOUNS() )
+#verbs = list( wordnet.VERBS() )
+#adjectives = list( wordnet.ADJECTIVES() )
+
+for lexname in lexnames: #wordnet.wn.Lexname.dict.keys():
     lexname_scores[lexname] = []
 
 # Traverse all colors in the context (blue, green, ...)
@@ -29,25 +51,33 @@ for clr in colors.context.keys():
     # Count the number of tags in each lexname category.
     count = {}
     for tag in colors.context[clr]:
-        for pos, ref in [("noun", en.wordnet.NOUNS), 
-                         ("verb", en.wordnet.VERBS), 
-                         ("adj",  en.wordnet.ADJECTIVES)]:
-            try:
-                lexname = pos+"." + en.wordnet.lexname(tag, pos=ref)
-                if not count.has_key(lexname):
-                    count[lexname] = 0
-                count[lexname] += weight
-            except:
-                pass
-    
+        # list(wordnet.NOUNS())
+        # list(wordnet.VERBS())
+        
+        synsets = wordnet.synsets( tag )
+        if not synsets:
+            continue
+        synsets = [ synsets[0] ]
+        # print("tag:", tag)
+        # synset = synsets[0]
+        for synset in synsets:
+            lexname = synset.lexname
+            pos = synset.pos
+            #print("    lexname:", lexname)
+            if not lexname in count:
+                count[lexname] = 0.0
+            count[lexname] += weight
+
+    #print("count:")
+    #pp(count)
     # Each lexname then points to a list of colors
     # that have tags categorized under this lexname,
     # together with the tag score from the count dict.
     # noun.feeling -> (blue, 0.09)
-    for lexname in count.keys():
-        if not lexname_scores.has_key(lexname):
+    for lexname in count:
+        if not lexname in lexname_scores:
             lexname_scores[lexname] = []
-        lexname_scores[lexname].append((clr, count[lexname]))
+        lexname_scores[lexname].append( (clr, count[lexname]) )
 
 # So now each lexname in the scores dict points to a number of (color, weight) tuples.
 # We normalize the weight so their total weight is 1.0.
@@ -59,27 +89,46 @@ for lexname in lexname_scores.keys():
     lexname_scores[lexname] = normalized
 
 # This prints out the full list of colors scores per lexname category.
-from pprint import pprint
-#pprint(lexname_scores)
+# pp(lexname_scores)
 
 q = "rabbit" # try out: rave, keyboard, love
-q = str(q)
 
-# Now we can do some guessing!
-# If we supply "fox" as a query, we can find out that fox is an animal.
-# Since we have color scores for noun.animal, these might also apply to foxes.
-if   en.is_noun(q): 
-    l = "noun."+en.noun.lexname(q)
-elif en.is_verb(q): 
-    l = "verb."+en.verb.lexname(q)
-elif en.is_adjective(q): 
-    l = "adj."+en.adjective.lexname(q)
-    
-print q, "is-a", l
+for q,x,y in (
+    ("rabbit",   150, 150),
+    ("rave",     300, 150),
+    ("keyboard", 450, 150),
+    ("love",     150, 300),
+    ("yearn",    300, 300),
+    ):
 
-clrs = colors.list()
-for clr, weight in lexname_scores[l]:
-    for i in range(int(weight*100)):
-        clrs += colors.color(clr)
+    # Now we can do some guessing!
+    # If we supply "fox" as a query, we can find out that fox is an animal.
+    # Since we have color scores for noun.animal, these might also apply to foxes.
 
-clrs.swarm(150, 150)
+    # use wordnet.synset.lexname()
+    l = ""
+    synset = wordnet.synsets( q )
+    if synset:
+        l = synset[0].lexname
+    if 0:
+        if q in nouns: #  en.is_noun(q):
+            synset = wordnet.synsets( q )[0]
+            l = synset.lexname
+            # l = "noun."+en.noun.lexname(q)
+        elif q in verbs: #en.is_verb(q): 
+            #l = "verb."+en.verb.lexname(q)
+            synset = wordnet.synsets( q )[0]
+            l = "verb." + synset.lexname
+        elif q in adjectives: #en.is_adjective(q): 
+            # l = "adj."+en.adjective.lexname(q)
+            synset = wordnet.synsets( q )[0]
+            l = "adj." + synset.lexname
+
+    print( q, "is-a", l )
+
+    clrs = colors.list()
+    for clr, weight in lexname_scores[l]:
+        for i in range(int(weight*100)):
+            clrs += colors.color(clr)
+
+    clrs.swarm(x, y, 50)

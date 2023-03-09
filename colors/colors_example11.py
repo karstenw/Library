@@ -12,7 +12,7 @@ except ImportError:
 r = colors.range(h=(0.75,0.95))
 transform(CORNER)
 rotate(45)
-for i in range(HEIGHT/10):
+for i in range(HEIGHT // 10):
     fill(choice(r))
     rect(-WIDTH, i*15, WIDTH*2, 20)
 
@@ -20,7 +20,11 @@ for i in range(HEIGHT/10):
 
 reset()
 
-font("Georgia", 58)
+fonts = fontnames()
+fontname = choice( fonts )
+print( "Font: %s" % fontname )
+
+font( fontname, 58)
 p = textpath("gradient text is back!", 10, 350)
 g = colors.gradient(color(1,0,0.5), color(0,0.5,1))
  

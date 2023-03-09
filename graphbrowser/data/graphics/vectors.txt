@@ -10,6 +10,6 @@
 3, EPS, vector graphics format
 3, SVG, vector graphics format
 3, document, vector graphics format
-6, BŽzier curve, vector-based drawing
+6, BÃ©zier curve, vector-based drawing
 7, vector-based drawing, computer graphics
-2, BŽzier curve, curve
+2, BÃ©zier curve, curve

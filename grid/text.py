@@ -1,6 +1,7 @@
 # Copyright (c) 2008 Tom De Smedt.
 # See LICENSE.txt for details.
 
+
 from random import random, choice, randrange
 
 #### SYMBOLS ##################################################################
@@ -176,7 +177,8 @@ def split(txt, width, height, widows=1, orphans=1, forward=True):
 
     # Splitter parameters.
     d = 1.6
-    if _ctx.fontsize > 20: d = 1.15
+    if _ctx.fontsize() > 20:
+        d = 1.15
 
     # Approximate by cutting in large chunks a few times.
     # When it gets down to chunks increasing or decreasing by 10 characters,
@@ -312,7 +314,7 @@ def fit_lineheight(str, width, height):
 #    b, r = split(s, w, h)
 #    rect(0, 0, w, h, fill=None, stroke=0, strokewidth=1)
 #text(b, 0, fontsize(), width=w, fill=0)
-#print time()-t
+#print( time()-t )
 #text(r, 0, h+fontsize(), w, fill=(1,0,0))
 
 #fontsize(9)

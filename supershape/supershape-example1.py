@@ -3,7 +3,7 @@ try:
     supershape = ximport("supershape")
 except:
     supershape = ximport("__init__")
-    reload(supershape)
+    # reload(supershape)
 
 speed(100)
 size(400, 400)

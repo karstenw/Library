@@ -27,7 +27,7 @@ def draw():
     
     # The bottom layer is a brownish fill color.
     l = c.append(color(0.07,0.05,0))
-    print "l:", l
+    print( "l: %s" % l )
 
     if not cvscopy:
         # During the first frame,

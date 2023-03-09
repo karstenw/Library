@@ -17,12 +17,12 @@ class Vector2(object):
                 self.y = float(args[0].y)
                 return
             elif len(args) < 2:
-                raise ValueError, "Must specify 'x' and 'y' of new vector"
+                raise ValueError( "Must specify 'x' and 'y' of new vector" )
             self.x = float(args[0])
             self.y = float(args[1])
         else:
             if not ('m' in kwargs and 'angle' in kwargs):
-                raise ValueError, "Must specify 'm' and 'angle' of new vector"
+                raise ValueError( "Must specify 'm' and 'angle' of new vector" )
             m = kwargs['m']
             a = -kwargs['angle']
             self.x = m * math.cos(a)

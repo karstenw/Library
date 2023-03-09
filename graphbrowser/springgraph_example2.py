@@ -1,5 +1,5 @@
 springgraph = ximport("springgraph")
-reload(springgraph)
+# reload(springgraph)
 
 size(400, 400)
 speed(30)
@@ -52,8 +52,9 @@ def draw():
     # show shortest path between random nodes.
     path = []
     if g.update() == False:
-        id1 = choice(g.index.keys())
-        id2 = choice(g.index.keys())
+        items = list( g.index.keys() )
+        id1 = choice( items )
+        id2 = choice( items )
         path = g.shortest_path(id1, id2)    
     
     # Draw the graph

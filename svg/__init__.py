@@ -35,14 +35,17 @@ class cache(dict):
     def id(self, svg):
         # hash = md5.new()
         hash = hashlib.md5()
-        hash.update(str(_ctx)+svg)
+        #print("ctx:", bytes(_ctx) )
+        # print("svg:", svg)
+        # hash.update(str(_ctx)+svg.encode("utf-8"))
+        hash.update( svg.encode("utf-8") )
         return hash.digest()
         
     def save(self, id, paths):
         self[id] = paths
         
     def load(self, id, copy=True):  
-        if self.has_key(id):
+        if id in self:
             if copy: 
                 return [self.copypath(path) for path in self[id]]
             return self[id]
@@ -73,7 +76,7 @@ def parse(svg, cached=False, _copy=True):
         paths = parse_node(dom, [])
     else:
         id = _cache.id(svg)
-        if not _cache.has_key(id):
+        if not id in _cache:
             dom = parser.parseString(svg)
             _cache.save(id, parse_node(dom, []))
         paths = _cache.load(id, _copy)
@@ -255,7 +258,7 @@ def parse_path(e):
         # Absolute MOVETO.
         # Move the current point to the new coordinates.
         if command == "M":
-            for i in range(len(points)/2):
+            for i in range(len(points) // 2):
                 pointx = points[i*2]
                 pointy = points[i*2+1]
 
@@ -269,7 +272,7 @@ def parse_path(e):
         # Relative MOVETO.
         # Offset from the current point.
         elif command == "m":
-            for i in range(len(points)/2):
+            for i in range(len(points) // 2):
                 pointx = points[i*2]
                 pointy = points[i*2+1]
 
@@ -283,7 +286,7 @@ def parse_path(e):
         # Absolute LINETO.
         # Draw a line from the current point to the new coordinate.
         elif command == "L":
-            for i in range(len(points)/2):
+            for i in range(len(points) // 2):
                 pointx = points[i*2]
                 pointy = points[i*2+1]
 
@@ -295,7 +298,7 @@ def parse_path(e):
         # Relative LINETO.
         # Offset from the current point.
         elif command == "l":
-            for i in range(len(points)/2):
+            for i in range(len(points) // 2):
                 pointx = points[i*2]
                 pointy = points[i*2+1]
 
@@ -335,7 +338,7 @@ def parse_path(e):
         # Absolute CURVETO.
         # Draw a bezier with given control handles and destination.
         elif command == "C":
-            for i in range(len(points)/6):
+            for i in range(len(points) // 6):
                 p1x = points[i*6+0]; p1y = points[i*6+1]
                 p2x = points[i*6+2]; p2y = points[i*6+3]
                 p3x = points[i*6+4]; p3y = points[i*6+5]
@@ -351,7 +354,7 @@ def parse_path(e):
         # Relative CURVETO.
         # Offset from the current point.
         elif command == "c":
-            for i in range(len(points)/6):
+            for i in range(len(points) // 6):
                 p1x = points[i*6+0]; p1y = points[i*6+1]
                 p2x = points[i*6+2]; p2y = points[i*6+3]
                 p3x = points[i*6+4]; p3y = points[i*6+5]
@@ -369,7 +372,7 @@ def parse_path(e):
         # Only the second control handle is given,
         # the first is the reflexion of the previous handle.
         elif command == "S":
-            for i in range(len(points)/4):
+            for i in range(len(points) // 4):
                 p1x = points[i*4]; p1y = points[i*4+1]
                 p2x = points[i*4+2]; p2y = points[i*4+3]
                 if previous_command not in ["C", "c", "S", "s"]:
@@ -391,7 +394,7 @@ def parse_path(e):
         # Relative reflexive CURVETO.
         # Offset from the current point.
         elif command == "s":
-            for i in range(len(points)/4):
+            for i in range(len(points) // 4):
                 p1x = points[i*4]; p1y = points[i*4+1]
                 p2x = points[i*4+2]; p2y = points[i*4+3]
                 if previous_command not in ["C", "c", "S", "s"]:
@@ -524,8 +527,8 @@ def add_color_info(e, path):
     # at the same location is considered closed.
     # Unless it contains a MOVETO somewhere in the middle.
     path.closed = False
-    if path[0].x == path[len(path)-1].x and \
-       path[0].y == path[len(path)-1].y: 
+    if (    path[0].x == path[len(path)-1].x
+        and path[0].y == path[len(path)-1].y ):
         path.closed = True
     for i in range(1,len(path)-1):
         if path[i].cmd == MOVETO:

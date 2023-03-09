@@ -2,7 +2,7 @@
 size(800, 800)
 
 coreimage = ximport("__init__")
-reload(coreimage)
+# reload(coreimage)
 
 import time
 import pprint

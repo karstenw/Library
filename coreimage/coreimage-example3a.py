@@ -1,3 +1,6 @@
+
+from __future__ import print_function
+
 size( 800, 800)
 # The Twisted World example,
 # with random images from MorgueFile
@@ -7,7 +10,7 @@ size( 800, 800)
 try: 
     coreimage = ximport("coreimage")
 except:
-    print "IMPORT MISSED!"
+    print( "IMPORT MISSED!" )
     coreimage = ximport("__init__")
     reload(coreimage)
 

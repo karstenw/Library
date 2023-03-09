@@ -1,13 +1,10 @@
 
+# Run in full screen
+
 # get screen size
+size(0, 0)
 
-import AppKit
-s = AppKit.NSScreen.mainScreen()
-X,Y = s.frame().size
-
-size(X, Y)
-
-speed(20)
+speed(40)
 
 try:
     boids = ximport("boids")

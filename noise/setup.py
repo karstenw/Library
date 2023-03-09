@@ -17,16 +17,16 @@ CFLAGS=[
     "-Wno-import",
     
     # Universal binary flags
-    "-arch", "i386",
+    # "-arch", "i386",
     "-arch", "x86_64",
-    "-isysroot", "/Developer/SDKs/MacOSX10.6.sdk",
+    # "-isysroot", "/Developer/SDKs/MacOSX10.6.sdk",
     ]
 
 BASE_LDFLAGS = [
     # Universal binary flags
-    "-arch", "i386",
+    # "-arch", "i386",
     "-arch", "x86_64",
-    "-isysroot", "/Developer/SDKs/MacOSX10.6.sdk",
+    #"-isysroot", "/Developer/SDKs/MacOSX10.6.sdk",
 ]
 
 module = Extension("_noise", sources = ["_noise.c"], 

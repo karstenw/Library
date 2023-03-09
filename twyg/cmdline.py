@@ -8,7 +8,7 @@ from twyg.common import validate_margins
 
 
 def exit_error(msg):
-    print >>sys.stderr, sys.argv[0] + ': ' + msg
+    print( "XXX  " + sys.argv[0] + ': ' + msg, file=sys.stderr)
     sys.exit(1)
 
 
@@ -76,7 +76,7 @@ def main():
     margins = options.margin.split(',')
     try:
         validate_margins(margins)
-    except ValueError, e:
+    except ValueError as e:
         parser.error(e)
         return 2
 
@@ -87,7 +87,7 @@ def main():
                         colorscheme=options.colorscheme, scale=scale,
                         margins=margins)
 
-    except Exception, e:
+    except Exception as e:
         exit_error(traceback.format_exc() if options.verbose else str(e))
 
     return 0

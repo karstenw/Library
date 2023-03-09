@@ -1,8 +1,22 @@
-import math, os, re, sys
+import math, os, re, sys, io
 import operator as _operator
 
 # TODO what happens in NodeBox?
 from pkg_resources import resource_filename
+
+# py3 stuff
+py3 = False
+try:
+    unicode('')
+    punicode = unicode
+    pstr = str
+    punichr = unichr
+except NameError:
+    punicode = str
+    pstr = bytes
+    py3 = True
+    punichr = chr
+    long = int
 
 try:
     # Python 2.7+
@@ -16,6 +30,8 @@ from twyg.tree import Direction
 
 import twyg.common
 
+import pdb
+kwlog = False
 
 CONF_EXT = '.twg'
 
@@ -101,6 +117,8 @@ def tokenize(config, file=None, flat=False):
     parsed further.
     """
 
+    if kwlog:
+        print("tokenize()")
     lines = config.split('\n');
 
     def linenum(line_nr, flat):
@@ -236,6 +254,9 @@ def buildconfig(tokens, cwd=None, state='start', config=None, curr=None,
     }
     """
 
+    if kwlog:
+        print("buildconfig()")
+
     def isliteral(id):
         return id in ('(operator)', '(float)', '(percent)', '(integer)',
                       '(name)', '(hexcolor)', '(string)')
@@ -348,7 +369,7 @@ def buildconfig(tokens, cwd=None, state='start', config=None, curr=None,
                                 % (name, configpath), prevtoken)
 
                         tokens, cwd = _tokenize_file(configpath, flat=False)
-                    except IOError, e:
+                    except IOError as e:
                         raise ConfigError(
                             "Error while processing '%s' directive:\n"
                             "\t%s: '%s'" % (name, e.strerror, e.filename),
@@ -436,7 +457,9 @@ def _tokenize_file(file, flat=False):
     Returns the list of tokens and the directory the config file resides
     in (this will be used for processing the @include directives).
     """
-    f = open(file)
+    if kwlog:
+        print("_tokenize_file()")
+    f = io.open(file, encoding="utf-8")
     config = f.read()
     if flat:
         config = '[default]\n' + config
@@ -446,6 +469,8 @@ def _tokenize_file(file, flat=False):
 
 
 def loaddefaults(defaults):
+    if kwlog:
+        print("loaddefaults()")
     return loadconfig(defaults_path(defaults), flat=True)
 
 
@@ -460,6 +485,9 @@ def loadconfig(file, flat=False):
     See buildconfig for a detailed description of the returned config
     data structure.
     """
+
+    if kwlog:
+        print("loadconfig()")
 
     tokens, cwd = _tokenize_file(file, flat)
     config = buildconfig(tokens, cwd=cwd, prev_configs=[file])
@@ -476,6 +504,9 @@ def find_config(paths, name):
     the path, then tries with CONF_EXT extension appended at the end.
     """
 
+    if kwlog:
+        print("find_config()")
+
     for p in paths:
         if os.path.exists(p):
             return p
@@ -486,6 +517,9 @@ def find_config(paths, name):
 
 
 def defaults_path(configname):
+    if kwlog:
+        print("defaults_path()")
+
     conf = os.path.join(DEFAULTS_DIR, configname)
     home_conf = os.path.join(twyg.common.TWYG_HOME, conf)
     paths = [
@@ -496,6 +530,9 @@ def defaults_path(configname):
 
 
 def colors_path(configname):
+    if kwlog:
+        print("colors_path()")
+
     colors_conf = os.path.join(COLORS_DIR, configname)
     home_colors_conf = os.path.join(twyg.common.TWYG_HOME, colors_conf)
     paths = [
@@ -507,6 +544,8 @@ def colors_path(configname):
 
 
 def config_path(configname):
+    if kwlog:
+        print("config_path()")
     configs_conf = os.path.join(CONFIGS_DIR, configname)
     home_configs_conf = os.path.join(twyg.common.TWYG_HOME, configs_conf)
     paths = [
@@ -518,6 +557,8 @@ def config_path(configname):
 
 
 def include_path(configname):
+    if kwlog:
+        print("include_path()")
     return find_config([configname], 'included config')
 
 
@@ -542,6 +583,8 @@ def parsecolor(mode, *components):
     """ Helper function to parse colors specified by their individual
     component values using the CSS3 color parser.
     """
+    if kwlog:
+        print("parsecolor()")
     s = ', '.join([str(a) for a in components])
     if mode:
         s = mode + '(' + s + ')'
@@ -577,7 +620,11 @@ variable_table = {
 def init_variable_table_defaults():
     # Make all named CSS3 colors available as color.<colorname> in the
     # config file
+    if kwlog:
+        print("init_variable_table_defaults()")
     def inject_css3_colors():
+        if kwlog:
+            print("init_variable_table_defaults().inject_css3_colors()")
         global variable_table_defaults
 
         class Colors:
@@ -618,6 +665,8 @@ class SymbolBase(object):
 symbol_table = {}
 
 def symbol(id, value=None, bp=0):
+    if kwlog:
+        print("symbol(  %s,  %s,  %s)" % (repr(id),repr(value),repr(bp) ))
     key = value if value else id
     if key in symbol_table:
         s = symbol_table[key]
@@ -630,13 +679,22 @@ def symbol(id, value=None, bp=0):
         s.value = value
         symbol_table[key] = s
 
-    s.lbp = max(bp, s.lbp)
+    # crashes in py3; cmp( int, None )
+    if s.lbp != None:
+        if bp != None:
+            s.lbp = max(bp, s.lbp)
+    elif bp != None:
+        s.lbp = bp
     return s
 
 def operator(op, bp=None):
+    if kwlog:
+        print("operator()")
     return symbol('(operator)', op, bp)
 
 def infix(op, bp):
+    if kwlog:
+        print("infix()")
     def led(self, left):
         self.first = left
         self.second = expression(bp)
@@ -644,6 +702,8 @@ def infix(op, bp):
     operator(op, bp).led = led
 
 def prefix(op, bp):
+    if kwlog:
+        print("prefix()")
     def nud(self):
         self.first = expression(bp)
         self.second = None
@@ -651,8 +711,12 @@ def prefix(op, bp):
     operator(op).nud = nud
 
 def method(s):
+    if kwlog:
+        print("method()")
     assert issubclass(s, SymbolBase)
     def bind(fn):
+        if kwlog:
+            print("method().bind()")
         setattr(s, fn.__name__, fn)
     return bind
 
@@ -666,6 +730,8 @@ operator('.', 40); operator('[', 40); operator('(', 40)
 
 @method(symbol('('))
 def nud(self):
+    if kwlog:
+        print("nud( '(' )")
     expr = expression()
     advance(')')
     return expr
@@ -674,6 +740,8 @@ operator(')'); operator(',')
 
 @method(symbol('('))
 def led(self, left):
+    if kwlog:
+        print("led( '(' )")
     self.first = left
     self.second = []
     if not token.isoperator(')'):
@@ -687,6 +755,8 @@ def led(self, left):
 
 @method(symbol('.'))
 def led(self, left):
+    if kwlog:
+        print("led( '.' )")
     self.first = left
     self.second = token
     advance()
@@ -697,6 +767,8 @@ operator(']')
 
 @method(symbol('['))
 def nud(self):
+    if kwlog:
+        print("nud( '[' )")
     self.first = []
     if not token.isoperator(']'):
         while 1:
@@ -738,14 +810,18 @@ opnames = {
 }
 
 def unaryop(t, op):
+    if kwlog:
+        print("unaryop()")
     try:
         a = t.first.eval()
         return op(a)
-    except TypeError, e:
+    except TypeError as e:
         raise ConfigError("Cannot use operator '%s' on type '%s'"
                           % (opnames[op.__name__], type(a).__name__), t)
 
 def binaryop(t, op):
+    if kwlog:
+        print("binaryop()")
     try:
         a = t.first.eval()
         b = t.second.eval()
@@ -754,13 +830,15 @@ def binaryop(t, op):
         if type(b) == int:
             b = float(b)
         return op(a, b)
-    except TypeError, e:
+    except TypeError as e:
         raise ConfigError("Cannot use operator '%s' on types '%s' and '%s'"
                           % (opnames[op.__name__], type(a).__name__,
                              type(b).__name__), t)
 
 @method(symbol('+'))
 def eval(self):
+    if kwlog:
+        print("eval( '+' )")
     if self.second:
         return binaryop(self, _operator.add)
     else:
@@ -768,21 +846,30 @@ def eval(self):
 
 @method(symbol('-'))
 def eval(self):
+    if kwlog:
+        print("eval( '-' )")
     if self.second:
         return binaryop(self, _operator.sub)
     else:
         return unaryop(self, _operator.neg)
 
 symbol('*').eval = lambda self: binaryop(self, _operator.mul)
-symbol('/').eval = lambda self: binaryop(self, _operator.div)
+if py3:
+    symbol('/').eval = lambda self: binaryop(self, _operator.floordiv)
+else:
+    symbol('/').eval = lambda self: binaryop(self, _operator.div)
 
 
 def isfunction(o):
+    if kwlog:
+        print("isfunction()")
     return type(o).__name__ in ('function', 'instancemethod',
                                 'builtin_function_or_method')
 
 @method(symbol('('))
 def eval(self):
+    if kwlog:
+        print("eval( '(' )")
     if self.first.isoperator('.'):
         dot_op = self.first
         obj, attr = dot_operator(dot_op)
@@ -799,12 +886,14 @@ def eval(self):
     a = [x.eval() for x in args]
     try:
         return fn(*a)
-    except TypeError, e:
+    except TypeError as e:
         raise ConfigError(str(e).capitalize(), self)
 
 
 @method(symbol('.'))
 def eval(self):
+    if kwlog:
+        print("eval( '.' )")
     obj, attr = dot_operator(self)
     if not hasattr(obj, attr):
         raise ConfigError("'%s' has no property named '%s'"
@@ -818,6 +907,8 @@ def eval(self):
 
 
 def dot_operator(t):
+    if kwlog:
+        print("dot_operator()")
     i = t.first.id
     v = t.first.value
     if i == '(name)':
@@ -832,6 +923,8 @@ def dot_operator(t):
 
 @method(symbol('['))
 def eval(self):
+    if kwlog:
+        print("eval( '[' )")
     args = self.first
     a = [x.eval() for x in args]
     return a
@@ -846,6 +939,8 @@ symbol('(string)').eval   = lambda self: self.value.replace('\\"', '"')
 
 @method(symbol('(name)'))
 def eval(self):
+    if kwlog:
+        print("eval( 'name' )")
     v = self.value
     if v not in variable_table:
         raise ConfigError("Variable '%s' does not exist" % v, self)
@@ -855,6 +950,8 @@ def eval(self):
 # Pratt parser
 def nexttoken():
     global token, lasttoken
+    if kwlog:
+        print("nexttoken()")
     t = token
     if t.id != '(end)':
         lasttoken = t
@@ -863,15 +960,23 @@ def nexttoken():
 
 def expression(rbp=0):
     global token, lasttoken
+    if kwlog:
+        print("expression()")
     t = nexttoken()
     left = t.nud()
-    while rbp < token.lbp:
+
+    while True: # rbp < token.lbp:
+        if token.lbp in (None, False ):
+            break
         t = nexttoken()
         left = t.led(left)
+
     return left
 
 def advance(value=None, id='(operator)'):
     global token
+    if kwlog:
+        print("advance()")
     if value and not (token.id == id and token.value == value):
         raise ConfigError("Syntax error: expected '%s'" % value, lasttoken)
     token = next()
@@ -880,7 +985,13 @@ def advance(value=None, id='(operator)'):
 def parse_expr(expr):
     global next, token
 
-    next = (x for x in expr).next
+    if kwlog:
+        print("parse_expr()")
+
+    if py3:
+        next = (x for x in expr).__next__
+    else:
+        next = (x for x in expr).next
     token = next()
     try:
         e = expression()
@@ -895,6 +1006,10 @@ def parse_expr(expr):
 
 def eval_expr(expr, vars={}):
     global variable_table
+
+    if kwlog:
+        print("eval_expr()")
+
     if not variable_table_defaults:
         init_variable_table_defaults()
     variable_table = dict(variable_table_defaults)
@@ -976,6 +1091,8 @@ def createlevel(levelname, config):
     """ Create Level object from a config and then deletes all level
     related properties.
     """
+    if kwlog:
+        print("createlevel()")
     level = Level(levelname, config)
     for k in level._props._properties.keys():
         if k in config:
@@ -1018,7 +1135,7 @@ class Property(object):
 
 class StringProperty(Property):
     def _validate(self):
-        if type(self.value) not in (str, unicode):
+        if type(self.value) not in (pstr, punicode):
             raise ConfigError("Property '%s' must evaluate to a string"
                               % self.name, self.expr[0])
 
@@ -1134,17 +1251,17 @@ class Properties(object):
 
         # Build properties dictionary
         self._properties = {}
-        for name, prop_params in properties.iteritems():
+        for name, prop_params in properties.items():
             # The first parameter is the property class, the second the
             # optional constructor parameters
             prop_class, opts = prop_params
             self._properties[name] = prop_class(name, **opts)
 
-        for name, prop in self._properties.iteritems():
+        for name, prop in self._properties.items():
             if name not in config:
                 raise ConfigError("Missing property: '%s'" % name)
             e = parse_expr(config[name])
-#            print '>>>', name, ':', e
+            # print( '>>>', name, ':', e )
             prop.expr = e
             prop.name = name
 
@@ -1156,9 +1273,9 @@ class Properties(object):
         for p in extra_props:
             token = config[p][0]
             #TODO make displaying warnings optional? print to stdout?
-            print >>sys.stderr, (
-                "Warning: Unknown property '%s' in configuration "
-                "file '%s' on line %s" % (p, token.file, token.line))
+            print ( "Warning: Unknown property '%s' in configuration "
+                    "file '%s' on line %s" % (p, token.file, token.line),
+                    file=sys.stderr)
 
     def eval(self, name, scope=None, vars={}):
         """ Evaluate the value of a property.
@@ -1175,7 +1292,7 @@ class Properties(object):
 
         p = self._properties[name]
         if scope:
-            for propname, varname in scope.property_mappings.iteritems():
+            for propname, varname in scope.property_mappings.items():
                 if hasattr(scope, propname):
                     vars[varname] = getattr(scope, propname)
                 # TODO triggered by 'basecolor' -- why?
@@ -1198,16 +1315,18 @@ def format_paramvalue_error(configname, paramname, value, correct_type):
 
 def get_stylename(configname, config):
     if STYLE not in config:
-        raise ConfigError, ("Style must be specified in '%s'" % (configname))
+        raise ConfigError("Style must be specified in '%s'" % (configname))
 
     expr = config[STYLE]
-    if len(expr) == 2 and expr[0].id == '(name)' and expr[1].id == '(end)':
+    if (    len(expr) == 2
+        and expr[0].id == '(name)'
+        and expr[1].id == '(end)'):
         stylename = expr[0].value
     else:
         raise ConfigError("Invalid style name", expr[0])
 
-    if not (type(stylename) == str or type(stylename) == unicode):
-        raise ConfigError, format_paramvalue_error(configname, STYLE,
-                                                   stylename, str)
+    if not type(stylename) in (pstr, punicode):
+        raise ConfigError( format_paramvalue_error(configname, STYLE,
+                                                   stylename, str))
     return stylename
 

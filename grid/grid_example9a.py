@@ -18,7 +18,7 @@ def setup():
 roundabout = itertools.cycle( range(1, 19) )
 
 def draw():
-    i = roundabout.next()
+    i = next( roundabout )
     p = grid.proportion(
         distribution="fib",
         mirrored=False,
@@ -27,6 +27,6 @@ def draw():
         sorted=False,
         repetition=1
     )
-    print i
+    # print i
     p.generate(i)
     p.draw(10, 10, 500, 900)

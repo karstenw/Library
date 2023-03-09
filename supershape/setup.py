@@ -8,3 +8,4 @@ setup (name = "supershape",
        author = "Frederik De Bleser. Superformula by Johan Gielis.",
        description = "Library for calculating the superformula.",
        ext_modules = [cSuperformula])
+

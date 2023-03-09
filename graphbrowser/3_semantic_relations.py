@@ -4,13 +4,23 @@
 # fin isPartOf fish
 
 springgraph = ximport("springgraph")
-reload(springgraph)
+# reload(springgraph)
 
 graphbrowser = ximport("graphbrowser")
-reload(graphbrowser)
+# reload(graphbrowser)
 
-import en
-from os.path import basename
+# import pattern.en
+
+import os
+import io
+import pprint
+pp=pprint.pprint
+
+import pdb
+
+# from os.path import basename
+
+
 
 semantic_relations_explicit = {
     1   : "is_property_of",
@@ -45,6 +55,7 @@ class SemanticRelationNode:
         self.category = category
         self.links = []
 
+
 class SemanticRelationBrowser(graphbrowser.GraphBrowser):
     
     def __init__(self, lexicon=[]):
@@ -52,39 +63,50 @@ class SemanticRelationBrowser(graphbrowser.GraphBrowser):
         graphbrowser.GraphBrowser.__init__(self)
         self.nodes = {}
         
-        for f in files(lexicon):
+        for partialpath in files(lexicon):
+            path = os.path.abspath( partialpath )
+            print("path:", path)
             
+            folder, filename = os.path.split( path )
+            basename, ext = os.path.splitext( filename )
+
             # The file name is used as a category.
-            category = basename(f)[-4]
+            category = basename #(f)[-4]
             
-            rules = open(f).readlines()
-            for rule in rules:
+            f = io.open( path, 'r', encoding="utf-8" )
+            lines = f.readlines()
+            # rules = open(f).readlines()
+            # for rule in rules:
+            for line in lines:
                 
                 # A rule in the file has the following format:
                 # rulecode, concept1, concept2
-                rule = rule.split(",")
-                id1 = rule[1].strip()
-                id2 = rule[2].strip()
+                items = line.split(",")
+                id1 = items[1].strip()
+                id2 = items[2].strip()
                 
                 # Add new concept nodes.
-                if not self.nodes.has_key(id1): 
+                
+                if not id1 in self.nodes:
                     self.nodes[id1] = SemanticRelationNode(id1, category)
-                if not self.nodes.has_key(id2): 
+                if not id2 in self.nodes:
                     self.nodes[id2] = SemanticRelationNode(id2, category)
             
                 # Build explicit relations.
-                i = int(rule[0].strip())
+                i = int(items[0].strip())
                 self.nodes[id1].links.append( (i, id2) )
                 
                 # Build implicit relations.
                 if i == 6 or i == 8:
                     self.nodes[id2].links.append( (i, id1) )
-                if semantic_relations_implicit.has_key(i+80):
+                if (i+80) in semantic_relations_implicit:
                     self.nodes[id2].links.append( (i+80, id1) )
-                 
+            f.close()
+        pp( self.nodes )
+
     def has_node(self, node_id):
     
-        if self.nodes.has_key(node_id):
+        if node_id in self.nodes:
             return True
         else:
             return False
@@ -94,9 +116,9 @@ class SemanticRelationBrowser(graphbrowser.GraphBrowser):
         children = []
         n = self.nodes[node_id]
         for type, id in n.links:
-            if semantic_relations_explicit.has_key(type):
+            if type in semantic_relations_explicit:
                 relation = semantic_relations_explicit[type]
-            if semantic_relations_implicit.has_key(type):
+            if type in semantic_relations_implicit:
                 relation = semantic_relations_implicit[type]
             relation = relation.replace("_", " ")
             relation = relation.replace("is", " ").strip()
@@ -104,7 +126,7 @@ class SemanticRelationBrowser(graphbrowser.GraphBrowser):
             
         return children
         
-######################################################################################################
+################################################################################
 
 size(500, 500)
 speed(30)
@@ -113,6 +135,7 @@ def setup():
     
     global srb 
     lexicon = "data/graphics/*.txt"
+    # lexicon = [ "data/graphics" ]
     srb = SemanticRelationBrowser(lexicon)
     srb.view("aesthetics")
  

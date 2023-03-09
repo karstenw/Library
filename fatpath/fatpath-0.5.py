@@ -171,13 +171,13 @@ def path_div(p1, p2):
     
 def peprint(pe):
     if pe.cmd == MOVETO:
-        print "<PathElement moveto %s,%s>" % (pe.x, pe.y)
+        print( "<PathElement moveto %s,%s>" % (pe.x, pe.y) )
     elif pe.cmd == LINETO:
-        print "<PathElement lineto %s,%s>" % (pe.x, pe.y)
+        print( "<PathElement lineto %s,%s>" % (pe.x, pe.y) )
     elif pe.cmd == CURVETO:
-        print "<PathElement curveto %s,%s %s,%s %s,%s >" % (pe.x, pe.y, pe.ctrl1.x, pe.ctrl1.y, pe.ctrl2.x, pe.ctrl2.y)
+        print( "<PathElement curveto %s,%s %s,%s %s,%s >" % (pe.x, pe.y, pe.ctrl1.x, pe.ctrl1.y, pe.ctrl2.x, pe.ctrl2.y) )
     elif pe.cmd == CLOSE:
-        print "<PathElement close>"
+        print( "<PathElement close>" )
 
 def drawpoints(path):    
     fill(1, 0, 0)
@@ -216,7 +216,7 @@ def main():
         path_draw(path2, 0, 150, points)
         fp = fatpath(path1, path2, fatness)
         path_draw(fp, 0, 300, points)
-    except Exception, e:
+    except Exception as e:
         err_msg(str(e))
 
 def path_commands_equal(p1, p2):
@@ -230,9 +230,9 @@ def path_commands_equal(p1, p2):
 def letters_that_work():
     """Displays a list of letters that work"""
     import string
-    print
-    print "Letters that work with %s and %s:" % (font1, font2)
-    print "    ",
+    print()
+    print( "Letters that work with %s and %s:" % (font1, font2) )
+    print( "    ", )
     cnt = 0
     for letter in string.printable:
         font(font1, 150)
@@ -241,14 +241,14 @@ def letters_that_work():
         p2 = textpath(letter, 0, 0)
         if len(p1) == len(p2):
             if path_commands_equal(p1, p2):
-                print letter,
+                print( letter, )
                 cnt += 1
                 if cnt > 20:
-                    print 
-                    print "    ",
+                    print() 
+                    print( "    ", )
                     cnt = 0
-    print
-    print
+    print()
+    print()
     main()
 
 main()

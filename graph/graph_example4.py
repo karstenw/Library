@@ -9,22 +9,28 @@ try:
     graph = ximport("graph")
 except ImportError:
     graph = ximport("__init__")
-    reload(graph)
+    # reload(graph)
 
-import en
+import linguistics
+# import pattern
+from pattern.en import wordnet
+nouns = list( wordnet.NOUNS() )
+
+
+
 from random import shuffle
 
-#### WORDNET GRAPH ###################################################################################
+#### WORDNET GRAPH #############################################################
 
 class wordnetgraph(graph.graph):
     
     """ Browse WordNet in a graph.
     
     The wordnetgraph class is based on the standard graph class.
-    I've added some functionality to fetch data from WordNet and browse through it.
-    When you click on a node, the wordnetgraph.click() method is fired.
-    This will check if the clicked node is a noun in WordNet, and if so,
-    reload the graph's nodes and connections with that noun at the root.
+    I've added some functionality to fetch data from WordNet and browse
+    through it.  When you click on a node, the wordnetgraph.click() method
+    is fired.  This will check if the clicked node is a noun in WordNet, and
+    if so, reload the graph's nodes and connections with that noun at the root.
     
     The main methods, get_senses() and get_relations(),
     are called when the graph reloads.
@@ -64,12 +70,18 @@ class wordnetgraph(graph.graph):
         """ Every node that is a noun is clickable (except the root).
         """
         
-        if en.is_noun(str(node.id.lower())) \
-        or self.is_expandable(node.id) and node != self.root: 
-            return True
-        else:
+        
+        if node == self.root:
             return False
-    
+
+        id = node.id.lower()
+        if id in nouns:
+            return True
+        if self.is_expandable(node.id):
+            return True
+        return False
+
+
     def get_senses(self, word, top=6):
  
         """ The graph displays the different senses of a noun,
@@ -85,9 +97,9 @@ class wordnetgraph(graph.graph):
         words = []
         for i in range(2):
             for sense in en.noun.senses(word):
-                if len(sense) > i \
-                and sense[i] != word \
-                and sense[i] not in words: 
+                if (    len(sense) > i
+                    and sense[i] != word
+                    and sense[i] not in words):
                     words.append(sense[i])
                     
         return words[:top]
@@ -126,9 +138,9 @@ class wordnetgraph(graph.graph):
                 except:
                     continue
             for w in rng:
-                if  w[0] != word \
-                and w[0] not in r \
-                and len(w[0]) < 20:
+                if (    w[0] != word
+                    and w[0] not in r
+                    and len(w[0]) < 20):
                     r.append((w[0], relation))
                     
             words.extend(r[:top])
@@ -158,7 +170,7 @@ class wordnetgraph(graph.graph):
             # form a branch on their own.
             label = " "
             if w.find(root) < 0:
-                label = (i+4)/4*"  "
+                label = (i+4) / 4 * "  "
                 i += 1
             words.append((w, label))
             
@@ -218,7 +230,7 @@ class wordnetgraph(graph.graph):
         graph.graph.draw(self, *args, **kwargs)
         self.senses.draw()
 
-### WORD SENSE SELECTION #############################################################################
+### WORD SENSE SELECTION #######################################################
 
 class senses:
     

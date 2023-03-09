@@ -1,9 +1,12 @@
-import collections, math
 
-try:
-    import json                 # Python 2.6+
-except ImportError:
-    import simplejson as json   # Python 2.5 & Nodebox 1
+from __future__ import print_function
+
+import io
+import collections
+import math
+import json
+
+
 
 
 def init(nodebox=False, ctx=None):
@@ -36,22 +39,20 @@ def calculate_margins(width, height, margins):
         try:
             val = float(v[:-1])
         except ValueError:
-            raise ValueError, 'Invalid percentage margin value: %s' % v
+            raise ValueError( 'Invalid percentage margin value: %s' % v )
         if val < 0:
-            raise (ValueError,
-                   'Margin percentage value must be positive: %s' % v)
+            raise ValueError( 'Margin percentage value must be positive: %s' % v)
         elif val > 100:
-            raise (ValueError,
-                   'Margin percentage value must be less than 100: %s' % v)
+            raise ValueError( 'Margin percentage value must be less than 100: %s' % v)
         return val
 
     def value(v):
         try:
             val = float(v)
         except ValueError:
-            raise ValueError, 'Invalid margin value: %s' % v
+            raise ValueError( 'Invalid margin value: %s' % v )
         if val < 0:
-            raise ValueError, 'Margin value must be positive: %s' % v
+            raise ValueError( 'Margin value must be positive: %s' % v )
         return val
 
     if len(margins) == 1:
@@ -67,7 +68,7 @@ def calculate_margins(width, height, margins):
         bottom = margins[2]
         left = margins[3]
     else:
-        raise ValueError, 'Invalid margin description: %s' % margins
+        raise ValueError( 'Invalid margin description: %s' % margins )
 
     top_margin = (height * percent_value(top) / 100 if is_percent(top)
                   else value(top))
@@ -95,10 +96,10 @@ def brightness(col):
 def loadjson(path):
     """ Loads a JSON file. """
     try:
-        fp = file(path)
+        fp = io.open(path, encoding="utf-8")
         data = json.load(fp)
         fp.close()
-    except Exception, e:
+    except Exception as e:
         raise ValueError("Error loading JSON file '%s':\n\t%s" % (path, e))
     return data
 
@@ -157,7 +158,7 @@ def createpath(ctx, segments, close=True):
             elif len(s) == 4:
                 ctx.curveto(s[1].x, s[1].y, s[2].x, s[2].y, s[3].x, s[3].y)
             else:
-                raise ValueError, 'Invalid path segment: %s' % s
+                raise ValueError( 'Invalid path segment: %s' % s )
         else:
             ctx.lineto(s.x, s.y)
 

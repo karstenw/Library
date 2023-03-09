@@ -13,29 +13,29 @@ The contents of this repo go into the ```~/Library/Application Support/Nodebox/`
 
 These are modules that could be made to work with my [Nodebox fork](https://github.com/karstenw/nodebox-pyobjc).
 
-The module ```ants``` runs unchanged.
+The module ```ants``` runs.
 
-The module ```beziereditor``` runs unchanged.
+The module ```beziereditor``` runs.
 
-The module ```boids``` runs unchanged.
+The module ```boids``` runs.
 
 The module ```colors``` has been patched for zipfile support. The [patch](https://github.com/shoebot/shoebot/commit/b2b9c43b28acb9312ca2a0557cc8728fc49a47bb) came from the [shoebot](https://github.com/shoebot/shoebot) project. You'll need at least Nodebox version 1.9.17.
 
-The module ```coreimage``` has been adapted. The "perspectivetile" crash has been fixed.
+The module ```coreimage``` runs mostly.
 
-The module ```cornu``` runs unchanged.
+The module ```cornu``` runs.
 
-The module ```database``` has been adapted. Now uses the Python built-in sqlite3 library.
+The module ```database``` runs but should not be used. Use linguistics.pattern.db
 
-The module ```en``` runs unchanged.
+The module ```en``` has been removed. Use linguistics and adapt your scripts.
 
-The module ```explode``` runs unchanged.
+The module ```explode``` runs.
 
-The module ```fatpath``` runs unchanged.
+The module ```fatpath``` runs.
 
-The module ```flowerewolf``` runs unchanged.
+The module ```flowerewolf``` is in adaption.
 
-The module ```graph``` runs unchanged.
+The module ```graph``` runs mostly.
 
 The module ```graphbrowser``` runs unchanged.
 

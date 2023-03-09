@@ -9,7 +9,7 @@
 #include <math.h>
 
 static int p[512];
-void init(int i)
+void init_p_array(int i)
 {
     // Populate the permutation array p (defines the pattern of the noise).
     srand((unsigned)i);
@@ -71,8 +71,26 @@ double noise(double x, double y, double z)
 
 /* Python bindings */
 /* -------------------------------------------------------------------------------------- */
- 
+
+#define PY_SSIZE_T_CLEAN
 #include <Python.h> 
+
+#if PY_MAJOR_VERSION >= 3
+  #define MOD_ERROR_VAL NULL
+  #define MOD_SUCCESS_VAL(val) val
+  #define MOD_INIT(name) PyMODINIT_FUNC PyInit_##name(void)
+  #define MOD_DEF(ob, name, doc, methods) \
+          static struct PyModuleDef moduledef = { \
+            PyModuleDef_HEAD_INIT, name, doc, -1, methods, }; \
+          ob = PyModule_Create(&moduledef);
+#else
+  #define MOD_ERROR_VAL
+  #define MOD_SUCCESS_VAL(val)
+  #define MOD_INIT(name) void init##name(void)
+  #define MOD_DEF(ob, name, doc, methods) \
+    ob = Py_InitModule3(name, methods, doc);
+#endif
+
 
 // A typical Python binding:
 // get parameters from tuple and pass them to the C function.
@@ -90,23 +108,27 @@ seed(PyObject *self, PyObject *args) {
     // Calls init() to populate p with random numbers based on given seed.
     int i;   
     if (!PyArg_ParseTuple(args, "i", &i)) return NULL;
-    init(i);
+    init_p_array(i);
     return Py_BuildValue("");
 }
 
 static PyObject *
 shape(PyObject *self, PyObject *args) {
     // Populates p from a Python list (must contain 512 integers < 512).
-    PyObject * a;
-    if (!PyArg_ParseTuple(args, "O!", &PyList_Type, &a)) return NULL;
+    PyObject *a;
+    if (!PyArg_ParseTuple(args, "O!", &PyList_Type, &a))
+    	return NULL;
+
     int i;
-    for(i=0; i<512; i++)
-        p[i] = (int)PyInt_AsLong(PyList_GetItem(a, i));
+    for(i=0; i<512; i++) {
+        // p[i] = (int)PyInt_AsLong(PyList_GetItem(a, i));
+        p[i] = (int)PyLong_FromLong(PyList_GetItem(a, i));
+    }
     return Py_BuildValue("");
 }
 
 // List all Python bindings here.
-static PyMethodDef methods[]={ 
+static PyMethodDef noise_methods[]={ 
     { "perlin", perlin, METH_VARARGS },
     { "seed", seed, METH_VARARGS },
     { "shape", shape, METH_VARARGS },
@@ -114,16 +136,30 @@ static PyMethodDef methods[]={
 };
 
 // Initialization goes here.
-PyMODINIT_FUNC init_noise(void){ 
+MOD_INIT(_noise) {
     PyObject *m;
-    m = Py_InitModule("_noise", methods);
-    init(1);
+    // m = Py_InitModule("_noise", noise_methods);
+    MOD_DEF(m, "noise", "A C version of Ken Perlin's improved noise.", noise_methods )
+    
+    init_p_array(1);
+
+#if PY_MAJOR_VERSION >= 3
+    return(MOD_SUCCESS_VAL(m));
+#else
+	MOD_SUCCESS_VAL(m)
+#endif
+
 }
 
 int main(int argc, char *argv[])
 {
     Py_SetProgramName(argv[0]);
     Py_Initialize();
-    init_noise();
+    //init_noise();
+#if PY_MAJOR_VERSION >= 3
+    PyInit__noise();
+#else
+    initnoise();
+#endif
     return 0;
 }

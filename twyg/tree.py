@@ -2,6 +2,20 @@ import sys
 
 from twyg.geom import Vector2, Rectangle
 
+# py3 stuff
+py3 = False
+try:
+    unicode('')
+    punicode = unicode
+    pstr = str
+    punichr = unichr
+except NameError:
+    punicode = str
+    pstr = bytes
+    py3 = True
+    punichr = chr
+    long = int
+
 
 class Direction(object):
     Top, Right, Bottom, Left = range(4)
@@ -17,7 +31,7 @@ def opposite_dir(d):
     if d == Direction.Left:
         return Direction.Right
     else:
-        raise ValueError, 'Invalid direction: %s' % d
+        raise ValueError( 'Invalid direction: %s' % d )
 
 
 class Node(object):
@@ -88,7 +102,7 @@ class Node(object):
                 depth += 1
                 if depth == n:
                     return curr
-            raise ValueError, 'Node ancestor argument out of range: ' + n
+            raise ValueError( 'Node ancestor argument out of range: ' + n )
 
         # If n is negative or zero, get n-th ancestor from the root
         # towards the node
@@ -104,8 +118,7 @@ class Node(object):
             else:
                 n -= 1
                 if -n > len(ancestors):
-                    raise (ValueError,
-                          'Node ancestor argument out of range: ' + n)
+                    raise ValueError( 'Node ancestor argument out of range: ' + n )
                 return ancestors[n]
 
     def direction(self):
@@ -141,7 +154,12 @@ class TreeBuilder(object):
         if type(tree) != dict:
             raise ValueError('Invalid JSON structure: Root element must be a dict')
 
-        root = tree.iteritems().next()
+        # root = tree.iteritems().next()
+        if py3:
+            root = iter(tree.items()).__next__()
+        else:
+            root = tree.iteritems().next()
+
         root_label = root[0]
         children = root[1]
         root_node = Node(root_label)
@@ -149,13 +167,13 @@ class TreeBuilder(object):
         return root_node
 
     def _build_tree(self, node, children):
-        if type(children) in (str, unicode):
+        if type(children) in (pstr, punicode):
             Node(children, parent=node)
         else:
             for c in children:
                 if type(c) == dict:
-                    child = Node(c.keys()[0], parent=node)
-                    self._build_tree(child, c.values()[0])
+                    child = Node( list(c.keys())[0], parent=node)
+                    self._build_tree(child, list(c.values())[0])
                 elif type(c) in (list, tuple):
                     #TODO proper error handling
                     raise ValueError('Invalid JSON structure: Dicts cannot have List siblings')
@@ -231,7 +249,7 @@ class Tree(object):
                     node.colorizer = c
 
     def _print_tree(self, node):
-        print (" " * node.depth() * 2) + node.label
+        print( ( " " * node.depth() * 2) + node.label )
         for child in node.children:
             self._print_tree(child)
 
@@ -256,7 +274,7 @@ class Tree(object):
             self._colorize_nodes(child)
 
     def _calcbbox(self):
-        m = sys.maxint
+        m = 2**31 #sys.maxint
         topleft = Vector2(m, m)
         bottomright = Vector2(-m, -m)
         self._calcbbox_recurse(self.root, topleft, bottomright)

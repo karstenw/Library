@@ -6,7 +6,7 @@ try:
     lsys = ximport("lsys")
 except:
     lsys = ximport("__init__")
-reload(lsys)
+# reload( lsys )
 
 background( None )
 

@@ -155,7 +155,7 @@ class GraphBrowser:
                 # the root node and the linked node.
                 # Intermediary nodes get the DARK style.    
                 for bind_id in bindings:
-                    if not g.index.has_key(bind_id):
+                    if not bind_id in g.index:
                         g.add_node(bind_id, style=springgraph.STYLE_DARK)
                         g.add_edge(node_id, bind_id)
                     g.add_edge(bind_id, linked_id, weight=weight)

@@ -1,7 +1,7 @@
 size(512,512)
 background(0.334)
 pb = ximport("photobot")
-reload(pb)
+# reload(pb)
 
 pbh = ximport("pbhelpers")
 label = pbh.label

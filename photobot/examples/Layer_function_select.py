@@ -9,7 +9,9 @@ pp = pprint.pprint
 import pdb
 kwdbg = 0
 
-W, H = 600, 1050
+W, H = 542, 1050
+fullwidth = int(W-20)
+tilewidth = int((fullwidth-10) / 2.0)
 
 
 # check for Nodebox
@@ -26,12 +28,13 @@ else:
     WIDTH, HEIGHT = W, H
     import photobot as pb
 
+import imagewells
 
 if kwdbg:
     # make random choices repeatable for debugging
-    rnd.seed(0)
+    rnd.seed(8)
 
-imagewell = pb.loadImageWell()
+imagewell = imagewells.loadImageWell(resultfile="imagewell-files")
 tiles = imagewell['landscape']
 rnd.shuffle(tiles)
 
@@ -40,7 +43,7 @@ rnd.shuffle(tiles)
 img1path = tiles.pop()
 img2path = tiles.pop()
 
-# create a white canvas
+# create a gray canvas
 c = pb.canvas( WIDTH, HEIGHT)
 c.fill( (192, 192, 192) )
 
@@ -62,7 +65,7 @@ pb.label(c, filename, x, y)
 #
 c.layers[img1].duplicate()
 
-path=( (w1/2,0), (w1,int(h1*0.667)), (0,h1),(0,h1/2) )
+path=( (w1/2,0), (w1,int(h1*0.667)), (w1/2.0, h1), (0,h1*0.75),(0,h1/2) )
 c.top.select( path )
 
 x, y = 10, h1+20+10
@@ -70,5 +73,5 @@ c.top.translate( x, y)
 
 
 # draw the result
-c.draw()
+c.draw(name="Layer_function_select")
 

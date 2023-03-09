@@ -19,8 +19,10 @@ __license__   = "Research purposes only"
 
 ######################################################################################################
 
+import pprint
+
 from nodebox.graphics import Point, RGB
-from nodebox.util import random
+from nodebox.util import random,makeunicode
 from math import sqrt, log
 from math import degrees, atan2
 
@@ -116,7 +118,7 @@ class Graph:
         """ Adds a node with given id to the graph.
         """
         
-        if self.index.has_key(id):
+        if id in self.index:
             return self.index[id]
         
         n = GraphNode(self, id, radius, style)
@@ -169,7 +171,7 @@ class Graph:
         """ Returns the node in the graph associated with the given id.
         """
         
-        if self.index.has_key(id):
+        if id in self.index:
             return self.index[id]
         else:
             return None
@@ -205,9 +207,9 @@ class Graph:
             self.iteration += 1
         elif self.iteration == 1:
             self.iteration += 1
-        elif self.iteration < self.layout.iterations \
-        and self.iteration > 1:
-            n = min(iterations, self.iteration / 10 + 1)
+        elif (    self.iteration < self.layout.iterations
+              and self.iteration > 1):
+            n = int( min(iterations, self.iteration / 10 + 1) )
             for i in range(n): 
                 self.layout.iterate()
             self.layout.calculate_bounds()
@@ -488,11 +490,26 @@ class Graph:
             
     def strongest_nodes(self, treshold=0.0):
         
-        nodes = [(n.weight, n) for n in self.nodes if n.weight > treshold]
-        nodes.sort()
+        nodes = []
+        for i,n in enumerate(self.nodes):
+            if n.weight and n.weight > treshold:
+                nodes.append( (n.weight, i) )
+        # nodes = [(n.weight, n) for n in self.nodes if n.weight and n.weight > treshold]
+        
+        try:
+            nodes.sort()
+        except TypeError:
+            #import pdb
+            #pdb.set_trace()
+            pprint.pprint( nodes )
+            print()
         nodes.reverse()
-        nodes = [n for s, n in nodes]
-        return nodes
+        # nodes = [n for s, n in nodes]
+        result = []
+        for node in nodes:
+            w,i = node
+            result.append( self.nodes[i] )
+        return result
 
 ##### GRAPHSPRINGLAYOUT ##############################################################################
 
@@ -648,7 +665,7 @@ class GraphShortestPath:
             if v1 == end:
                 return list(flatten(path))[::-1] + [v1]
             path = (v1, path)
-            for (v2, cost2) in G[v1].iteritems():
+            for (v2, cost2) in G[v1].items():
                 if v2 not in visited:
                     heapq.heappush(q, (cost + cost2, v2, path))
 
@@ -665,22 +682,22 @@ class GraphStyles(dict):
         """ Keys in the dictionaries are accessible as attributes.
         """ 
         
-        if self.has_key(a): 
+        if a in self: 
             return self[a]
             
-        raise AttributeError, "'GraphStyles' object has no attribute '"+a+"'"
+        raise AttributeError( "'GraphStyles' object has no attribute '"+a+"'" )
         
     def __setattr__(self, a, v):
         
         """ Setting an attribute is like setting it in all of the contained styles.
         """
         
-        if GraphStyle(None).__dict__.has_key(a):
+        if a in GraphStyle(None).__dict__:
             for style in self.values():
                 style.__dict__[a] = v
                 
         else:
-            raise AttributeError, "'GraphStyle' object has no attribute '"+a+"'"
+            raise AttributeError( "'GraphStyle' object has no attribute '"+a+"'" )
 
 #### GRAPHSTYLE ######################################################################################
         
@@ -802,10 +819,12 @@ def draw_node_label(style, node, alpha=1.0):
         # This enhances the speed and avoids wiggling text.
         try: p = node._textpath
         except: 
-            txt = unicode(node.id)
-            try: txt = txt.decode("utf-8")
-            except:
-                pass
+            # txt = unicode(node.id)
+            txt = str(node.id)
+            #try:
+            #    txt = txt.decode("utf-8")
+            #except:
+            #    pass
             root = node.graph.nodes[0].id
             # Abbreviation.
             #if txt != root and txt[-len(root):] == root: 
@@ -1036,13 +1055,14 @@ def centrality(g, normalized=True):
         if normalized:
             s = sum(betweenness.values())
             if s == 0: s = 1
-            sorted = [(w/s, id) for id, w in betweenness.iteritems()]
+            sorted = [(w/s, id) for id, w in betweenness.items()]
             sorted.sort()
             sorted.reverse()
             sorted = [(id, w) for w, id in sorted]
             for id, w in sorted:
                 g.index[id].weight = w+1
-                print w
+                print( w )
             return sorted
                     
         return betweenness
+

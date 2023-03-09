@@ -9,7 +9,7 @@ try:
     lsys = ximport("lsys")
 except:
     lsys = ximport("__init__")
-reload(lsys)
+# reload(lsys)
 
 # color and line attributes
 strokewidth( 0.5 )

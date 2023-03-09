@@ -26,7 +26,7 @@ schedule = {
 # The number of tasks and the number of months (or weeks, years etc.)
 # The number of months equals the highest number in the timing lists.
 tasks  = len(schedule)
-units = max([max(timing) for task, timing in schedule.iteritems()])
+units = max( [max(timing) for task, timing in schedule.items() ])
 
 # --- STRUCTURE ---------------------------------------------------------
 
@@ -107,7 +107,7 @@ for cell in g.top[1:-1]:
 # The leftmost field in each row displays the task description.
 # Each month in which a task is worked on gets marked by an "x".
 i = 1
-for task, timing in schedule.iteritems():
+for task, timing in schedule.items():
     g.row(i).left.content = task
     for t in timing:
         g.row(i)[t].content = "x"
@@ -120,11 +120,22 @@ for task, timing in schedule.iteritems():
 g.bottom.name = "total"
 g.total.left.content = "total"
 total = 0
+#import pdb
+#pdb.set_trace()
 for i in range(1, len(g.total)-1):
-    g.total[i].content = g.column(i)[1:].used
+    # g.total[i].content = g.column(i)[1:].used
+    col = g.column(i)
+    slice = grid.cells( col[1:] )
+    g.total[i].content = slice.used
 g.total.right.content = int(g.total.sum)
 
-g.total[1:-1].style = "total-units"
+
+# g.total[1:-1].style = "total-units"
+n = len(g.total)
+for i in range( n-2 ):
+    g.total[i].style = "total-units"
+
+
 s = g.styles.create("total-units", template="total")
 s.padding.left = 0
 s.align = CENTER

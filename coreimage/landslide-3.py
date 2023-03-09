@@ -23,7 +23,7 @@ if kwdbg:
 try: 
     coreimage = ximport("coreimage")
 except:
-    print "IMPORT MISSED!"
+    print( "IMPORT MISSED!" )
     coreimage = ximport("__init__")
     reload(coreimage)
 
@@ -74,7 +74,7 @@ positions = list(grid(columns, rows, colwidth, rowheight))
 # base Image
 if 1:
     img = tiles.pop()
-    print "base image:", img
+    print( "base image:", img )
     l = c.layer(img)
     w, h = l.size()
     s = aspectRatio( (w,h), HEIGHT )
@@ -86,7 +86,7 @@ for position in positions:
 
     # top is the index of the image layer
     img = tiles.pop()
-    print "tile image:", img
+    print( "tile image:", img )
     l = c.layer(img)
 
     # scale the layer to row height
@@ -94,7 +94,7 @@ for position in positions:
 
     w, h = l.size()
     m = l.mask.layer_radial_gradient()
-    if l > h:
+    if w > h:
         m.scale(w=w/h, h=1.0)
     else:
         m.scale(w=1.0, h=h/w)

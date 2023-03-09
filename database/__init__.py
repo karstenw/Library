@@ -9,11 +9,27 @@ __copyright__ = "Copyright (c) 2007 Tom De Smedt"
 __license__   = "MIT"
 
 import sys, os
-sys.path.append(os.path.dirname(__file__))
+sys.path.append( os.path.abspath( '.' ))
 
 # from pysqlite2 import dbapi2 as sqlite
 import sqlite3
 sqlite = sqlite3
+
+# py3 stuff
+
+py3 = False
+try:
+    unicode('')
+    punicode = unicode
+    pstr = str
+    punichr = unichr
+except NameError:
+    punicode = str
+    pstr = bytes
+    py3 = True
+    punichr = chr
+    long = int
+
 
 ### DATABASE #########################################################################################
 
@@ -194,10 +210,12 @@ class Database:
         for table in self:
             data += "<table name=\""+table._name+"\" key=\""+table._key+"\">\n"
             for row in table.all():
-                data += "\t<row id=\""+unicode(row[table._fields.index(table._key)])+"\">\n"
+                data += (  "\t<row id=\""
+                         + punicode( row[table._fields.index(table._key)] )
+                         + "\">\n")
                 i = 0
                 for field in table._fields:
-                    r = unicode(row[i])
+                    r = punicode( row[i] )
                     if row[i] == None: r = ""
                     data += "\t\t<"+field+">"+r+"</"+field+">\n"
                     i += 1
@@ -238,9 +256,11 @@ class Table:
         self._fields = fields
         
         for f in self._fields:
-            import new
+            # import new
+            from types import MethodType as instancemethod
             im = lambda t, q, operator="=", fields="*", _field=f: t.find(q, operator, fields, _field)
-            setattr(self, f, new.instancemethod(im, self, None))
+            # setattr(self, f, new.instancemethod(im, self, None))
+            setattr(self, f, instancemethod( im, self ))
 
     def _get_name(self): return self._name
     name = property(_get_name)
@@ -270,12 +290,20 @@ class Table:
         """
         
         if key == None: key = self._key
-        if fields != "*": fields = ", ".join(fields)
-        try: q = unicode(q)
-        except: pass
-        if q != "*" and (q[0] == "*" or q[-1] == "*"):
-            if q[0]  == "*": q = "%"+q.lstrip("*")
-            if q[-1] == "*": q = q.rstrip("*")+"%"
+        if fields != "*":
+            fields = ", ".join(fields)
+        try:
+            q = unicode(q)
+        except:
+            pass
+        if (    q != "*"
+            and (   q[0] == "*"
+                or  q[-1] == "*") ):
+
+            if q[0]  == "*":
+                q = "%"+q.lstrip("*")
+            if q[-1] == "*":
+                q = q.rstrip("*")+"%"
             operator = "like"
         
         if q != "*":
@@ -289,7 +317,8 @@ class Table:
         # has entered the database: pysqlite will throw an OperationalError.
         # http://lists.initd.org/pipermail/pysqlite/2006-April/000488.html
         matches = []
-        for r in self._db._cur: matches.append(r)
+        for r in self._db._cur:
+            matches.append(r)
         return matches
 
     def all(self):
@@ -353,7 +382,13 @@ class Table:
             fields = [k for k in kw]
             v = [kw[k] for k in kw]
         
-        sql  = "update "+self._name+" set "+"=?, ".join(fields)+"=? where "+self._key+"="+unicode(id)
+        sql  = (  "update "
+                + self._name
+                + " set " + "=?, ".join(fields)
+                + "=? where "
+                + self._key
+                + "="
+                + punicode(id))
         self._db._cur.execute(sql, v)
         self._db._i += 1
         if self._db._i >= self._db._commit:
@@ -366,9 +401,15 @@ class Table:
         """
 
         if key == None: key = self._key
-        try: id = unicode(id)
-        except: pass        
-        sql = "delete from "+self._name+" where "+key+" "+operator+" ?"
+        try:
+            id = punicode(id)
+        except:
+            pass        
+        sql = (  "delete from "
+               + self._name
+               + " where "
+               + key + " " + operator
+               + " ?" )
         self._db._cur.execute(sql, (id,))
 
 ######################################################################################################
@@ -384,3 +425,4 @@ def connect(name):
     db = Database()
     db.connect(name)
     return db
+

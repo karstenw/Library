@@ -296,7 +296,7 @@ def color_to_rgba(col):
         r, g, b = colorsys.hls_to_rgb(h, l, s)
         return r, g, b, a
 
-    raise ValueError, ('Invalid color: %s' % col)
+    raise ValueError('Invalid color: %s' % col)
 
 
 def rgba_to_color(r, g, b, a, format='rgba'):
@@ -330,5 +330,5 @@ def rgba_to_color(r, g, b, a, format='rgba'):
         return ('hsla(%.0f, %.0f%%, %.0f%%, %.3f)'
                 % (h * 360, s * 100, l * 100, a))
 
-    raise ValueError, 'Invalid color format: %s' % format
+    raise ValueError( 'Invalid color format: %s' % format )
 
