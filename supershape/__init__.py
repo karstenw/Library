@@ -18,7 +18,7 @@ try:
     
     # Attempt to import the C library
     # for faster performance.
-    from cSuperformula import supercalc
+    from . cSuperformula import supercalc
     print("FAST Superformula")
 
 except Exception as err:
@@ -82,5 +82,5 @@ def transform(path, m, n1, n2, n3, points=100, range_=TWOPI):
             _ctx.lineto(pt.x+dx, pt.y+dy)
     return _ctx.endpath(draw=False)
 
-import pprint
-pprint.pprint( globals() )
+#import pprint
+#pprint.pprint( globals() )
