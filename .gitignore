@@ -7,17 +7,12 @@ __pycache__
 */+private
 +latex
 +shoebot
-cornu/*.svg
-database/book.*
-isight/tras*
-isight/*.jpg
 */doc/*
 */build
 */dist
 
 beziereditor/*.svg
 beziereditor/+latex
-lsys/Examples/Lindenmayer Systems, Fractals, and Plants/*.png
 
 coreimage/Missing Filters.tab
 coreimage/citools.py
@@ -27,6 +22,11 @@ coreimage/explorer.py
 coreimage/images/*
 coreimage/*.png
 
+cornu/*.svg
+
+database/*.db
+database/*.xml
+
 fatpath/fatpath-0.6.py
 flowerewolf/+*
 
@@ -34,9 +34,14 @@ imagewell-*.tab
 imagewell-*.txt
 imagewell.txt
 
+isight/tras*
+isight/*.jpg
+
 linguistics
 linguistics-data
 linguistics-archives
+
+lsys/Examples/Lindenmayer Systems, Fractals, and Plants/*.png
 
 noise/texture.jpg
 
