@@ -8,13 +8,15 @@ except:
     svg = ximport("__init__")
     reload(svg)
 
+import io
+
 # We'll need the Core Image library.
 coreimage = ximport("coreimage")
 
 canvas = coreimage.canvas(WIDTH, HEIGHT)
 canvas.append(color(0.1, 0, 0.1))
 
-paths = svg.parse(open("flower.svg").read(), cached=True)
+paths = svg.parse(io.open("flower.svg",'r', encoding="utf-8").read(), cached=True)
 for path in paths:    
     l = canvas.append(
         path, 
