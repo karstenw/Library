@@ -1,5 +1,7 @@
 size(500, 500)
 
+import io
+
 try:
     svg = ximport("svg")
 except:
@@ -8,7 +10,8 @@ except:
 
 # The parse() command will return
 # a list of the shapes in the SVG file.
-paths = svg.parse(open("flower.svg").read())
+#paths = svg.parse(open("flower.svg").read())
+paths = svg.parse(io.open("flower.svg",'r', encoding="utf-8").read(), cached=True)
 
 background(color(0.1, 0.1, 0.0))
 
