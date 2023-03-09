@@ -49,7 +49,7 @@ The module ```lsystem``` runs.
 
 The module ```noise``` has been adapted and the _noise.so file has been compiled for x86\_64
 
-The module ```perception``` currently removed; may come back.
+The module ```perception``` has been removed; may come back.
 
 The module ```photobot``` has been adapted to use [Pillow](https://github.com/python-pillow/Pillow), the PIL successor. You'll need at least Nodebox version 1.9.12.
 
@@ -61,11 +61,11 @@ The module ```supershape``` has been adapted and the cSuperformula.so file has b
 
 The module ```svg``` runs.
 
-The module ```web``` removed. Use linguistics.pattern.web
+The module ```web``` has been removed. Use linguistics.pattern.web; [docs](https://www.nodebox.net/code/index.php/Web.html)
 
-The module ```wikipedia``` removed. Use linguistics.pattern.wikipedia
+The module ```wikipedia``` has been removed. Use linguistics.pattern.wikipedia
 
-The module ```wordnet``` removed. Use linguistics.pattern.text.wordnet
+The module ```wordnet``` removed. Use linguistics.pattern.text.wordnet; [docs](https://www.nodebox.net/code/index.php/WordNet.html)
 
 
 
