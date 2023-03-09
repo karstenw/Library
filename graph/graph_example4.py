@@ -11,6 +11,8 @@ except ImportError:
     graph = ximport("__init__")
     # reload(graph)
 
+import linguistics
+# import pattern
 from pattern.en import wordnet
 nouns = list( wordnet.NOUNS() )
 
