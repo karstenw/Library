@@ -15,22 +15,9 @@ isight/*.jpg
 */build
 */dist
 
-web/cache/*
-noise/texture.jpg
 beziereditor/*.svg
 beziereditor/+latex
 lsys/Examples/Lindenmayer Systems, Fractals, and Plants/*.png
-
-pattern/examples/02-db/store.db
-pattern/examples/02-db/food.txt
-pattern/examples/*/*.slp
-pattern/examples/*/*.csv
-pattern/examples/*/*.svm
-pattern/examples/08-server/04-db/store.db
-pattern/examples/08-server/02-api/rate.db
-pattern/examples/06-graph/test*
-pattern/examples/06-graph/trend*
-pattern/web/cache/tmp
 
 coreimage/Missing Filters.tab
 coreimage/citools.py
@@ -40,25 +27,25 @@ coreimage/explorer.py
 coreimage/images/*
 coreimage/*.png
 
-en
-en/wn
-en/wn/data
-
 fatpath/fatpath-0.6.py
 
-photobot/examples/Example collage 6.py
-
-imagewell-files.tab
+imagewell-*.tab
+imagewell-*.txt
 imagewell.txt
 
+linguistics
+linguistics-data
+linguistics-archive
+
+noise/texture.jpg
+
+photobot/examples/Example collage 6.py
 photobot/examples/exports/
 photobot/examples/landslide@coreimage
 photobot/examples/transform2/*
 photobot/images/*
 photobot/photobot-standalone
 photobot/photobot.leo
-
-nltk/+data/corpora
 
 pixabay
 */APIKEY
