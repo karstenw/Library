@@ -37,6 +37,7 @@ imagewell.txt
 isight/tras*
 isight/*.jpg
 
+linguistics
 linguistics-data
 linguistics-archives
 linguistics/linguistics-data
@@ -45,6 +46,8 @@ linguistics/linguistics-archives
 lsys/Examples/Lindenmayer Systems, Fractals, and Plants/*.png
 
 noise/texture.jpg
+
+perception
 
 photobot/examples/Example collage 6.py
 photobot/examples/exports/
