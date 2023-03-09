@@ -9,7 +9,7 @@ __version__   = "1.9.4.5"
 __copyright__ = "Copyright (c) 2007-2009 Tom De Smedt"
 __license__   = "GPL"
 
-from . import arc
+import arc
 import xml.dom.minidom as parser
 import re
 # import md5
@@ -35,14 +35,17 @@ class cache(dict):
     def id(self, svg):
         # hash = md5.new()
         hash = hashlib.md5()
-        hash.update(str(_ctx)+svg)
+        #print("ctx:", bytes(_ctx) )
+        # print("svg:", svg)
+        # hash.update(str(_ctx)+svg.encode("utf-8"))
+        hash.update( svg.encode("utf-8") )
         return hash.digest()
         
     def save(self, id, paths):
         self[id] = paths
         
     def load(self, id, copy=True):  
-        if self.has_key(id):
+        if id in self:
             if copy: 
                 return [self.copypath(path) for path in self[id]]
             return self[id]
@@ -73,7 +76,7 @@ def parse(svg, cached=False, _copy=True):
         paths = parse_node(dom, [])
     else:
         id = _cache.id(svg)
-        if not _cache.has_key(id):
+        if not id in _cache:
             dom = parser.parseString(svg)
             _cache.save(id, parse_node(dom, []))
         paths = _cache.load(id, _copy)
