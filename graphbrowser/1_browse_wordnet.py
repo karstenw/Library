@@ -6,7 +6,9 @@ springgraph = ximport("springgraph")
 graphbrowser = ximport("graphbrowser")
 #reload(graphbrowser)
 
-import en
+import linguistics
+import pattern
+en = pattern.en
 # pattern = ximport("pattern")
 # en = pattern.text.en
 
