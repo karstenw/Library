@@ -28,6 +28,7 @@ coreimage/images/*
 coreimage/*.png
 
 fatpath/fatpath-0.6.py
+flowerewolf/+*
 
 imagewell-*.tab
 imagewell-*.txt
@@ -35,7 +36,7 @@ imagewell.txt
 
 linguistics
 linguistics-data
-linguistics-archive
+linguistics-archives
 
 noise/texture.jpg
 
