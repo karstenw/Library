@@ -12,8 +12,13 @@ pp=pprint.pprint
 
 colors = ximport("colors")
 # pattern = ximport("pattern")
-import pattern.en as en
-from pattern.en import wordnet
+
+import linguistics
+import pattern
+import pattern.en
+import pattern.en.wordnet
+en = pattern.en
+wordnet = pattern.en.wordnet
 
 # WordNet has a set of global categories (or lexnames)
 # into which it classifies all words.
@@ -84,7 +89,7 @@ for lexname in lexname_scores.keys():
     lexname_scores[lexname] = normalized
 
 # This prints out the full list of colors scores per lexname category.
-pp(lexname_scores)
+# pp(lexname_scores)
 
 q = "rabbit" # try out: rave, keyboard, love
 
