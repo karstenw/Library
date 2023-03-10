@@ -12,14 +12,15 @@ import pattern
 import pattern.text
 import pattern.text.en
 en = pattern.text.en
-wn = en.wordnet
+wordnet = en.wordnet
 
 s3 = time.time()
 print("import pattern %.3f" % (s3-s2) )
 
 
-pdb.set_trace()
-synsets = wn.synsets('bird')
+# pdb.set_trace()
+
+synsets = wordnet.synsets('bird')
 s = synsets[0]
 print( '    synset:', s )
 print( 'Definition:', s.gloss )
@@ -33,20 +34,22 @@ print( '   Antonym:', s.antonym )
 s4 = time.time()
 print("synset demo %.3f" % (s4-s3) )
 
-allnouns = set( wn.NOUNS())
-misses = {}
-for noun in allnouns:
-    ss = wn.synsets( noun )[0]
-    if ss.synonyms[0] != noun:
-        if noun in ss.synonyms:
-            continue
-        lower = [t.lower() for t in ss.synonyms]
-        if noun in lower:
-            continue
-        if noun not in misses:
-            misses[noun] = []
-        misses[noun].extend( ss.synonyms )
-print("##misses:", len(misses) )
+if 0:
+    allnouns = set( wordnet.NOUNS())
+    misses = {}
+    for noun in allnouns:
+        ss = wordnet.synsets( noun )[0]
+        if ss.synonyms[0] != noun:
+            if noun in ss.synonyms:
+                continue
+            lower = [t.lower() for t in ss.synonyms]
+            if noun in lower:
+                continue
+            if noun not in misses:
+                misses[noun] = []
+            misses[noun].extend( ss.synonyms )
+    print("##misses:", len(misses) )
 
-s5 = time.time()
-print("check all synsets %.3f" % (s5-s4) )
+    s5 = time.time()
+    print("check all synsets %.3f" % (s5-s4) )
+

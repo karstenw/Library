@@ -13,6 +13,12 @@
 <v t="karstenw.20230227153059.1" a="E"><vh>@clean __init__.py</vh>
 <v t="karstenw.20230227153123.1"><vh>Declarations</vh></v>
 <v t="karstenw.20230227161027.1"><vh>Globals</vh></v>
+<v t="karstenw.20230310124746.1" a="E"><vh>FlowerWord</vh>
+<v t="karstenw.20230310124806.1"><vh>__init__</vh></v>
+<v t="karstenw.20230310125018.1"><vh>hyponyms</vh></v>
+</v>
+<v t="karstenw.20230310134343.1"><vh>printsynset</vh></v>
+<v t="karstenw.20230310142415.1"><vh>newHeadline</vh></v>
 <v t="karstenw.20230227153522.1" a="E"><vh>+ GRAMMAR +</vh>
 <v t="karstenw.20230227153123.2"><vh>alliterations</vh></v>
 <v t="karstenw.20230227153123.3"><vh>nouns</vh></v>
@@ -88,15 +94,17 @@ f.close()
     This description is eloquated (alliterated or antonated), incorporated.
     
     """
-
+    fword = FlowerWord( word )
     if old:
         g = en.noun.gloss(word)
-    else:
-        g = word.gloss
+    elif False:
+        g = wordnet.synsets( word )[0].gloss #word.gloss
 
+    g = fword.gloss
     words = g.split(" ")
 
-    pdb.set_trace()
+    # pdb.set_trace()
+
     for i in range(len(words)):
         
         w = words[i]
@@ -147,16 +155,20 @@ f.close()
         for synset in synsets:
             hyponyms = synset.hyponyms()
             for hyponym in hyponyms:
-                if 0:
-                    lemmas = hyponym.lemmas()
-                    for lemma in lemmas:
-                        h.append( lemma )
+                # pdb.set_trace()
                 if 1:
+                    synonyms = hyponym.synonyms
+                    for synonym in synonyms:
+                        h.append( synonym )
+                if 0:
                     h.append( hyponym )
         # h = list( h )
 
     print("hyponyms for '%s':  %s" % (query, str(h)) )
-    w = choice( h )
+    if h:
+        w = choice( h )
+    else:
+        w = "Dummy"
 
     lines = verse(w)
     lines = lines.split("\n")
@@ -356,18 +368,23 @@ f.close()
     Alliterates an adjective for this synonym.
     
     """
+    
+    fword = FlowerWord( noun )
+    pdb.set_trace()
 
-    if type(noun) in (str,):
-        synsets = wordnet.synsets( noun )
-        if synsets:
-            synset = synsets[0]
-            hyponyms = list( synset.hyponyms() )
-            noun = synset
-
+    if 0:
+        if type(noun) in (str,):
+            synsets = wordnet.synsets( noun )
+            if synsets:
+                synset = synsets[0]
+                hyponyms = list( synset.hyponyms() )
+                noun = synset
+    
     if old:
         antonym = en.noun.antonym(noun)
     else:
-        antonym = noun.antonym
+        # antonym = noun.antonym
+        antonym = fword.antonym
 
     if old:
         if (        antonise
@@ -504,5 +521,195 @@ _ctx.stroke(foreground)
 _ctx.strokewidth(0.5)
 
 </t>
+<t tx="karstenw.20230310124746.1">class FlowerWord:
+    @others
+
+
+</t>
+<t tx="karstenw.20230310124806.1">def __init__(self, word):
+    # pdb.set_trace()
+    self.word = word
+    self.synsets = wordnet.synsets( word )
+    self.idx = 0
+    self.antonym = ""
+    self.gloss = ""
+    self.synset = None
+    if self.synsets:
+        synonyms = self.synsets[0].synonyms
+        try:
+            self.idx = synonyms.index(word)
+            self.synset = synonyms[self.idx]
+        except:
+            pass
+        self.antonym = self.synsets[0].antonym
+        self.gloss = self.synsets[0].gloss
+
+</t>
+<t tx="karstenw.20230310125018.1">def hyponyms(self):
+    result = set()
+    for synset in self.synsets:
+        hyponyms = s.hyponyms()
+        # hyponyms, antonym hypernyms hyponyms
+        </t>
+<t tx="karstenw.20230310134343.1">def printsynset( s ):
+    print( '    synset:', s )
+    print( '     gloss:', s.gloss )
+    print( '  synonyms:', s.synonyms )
+    print( '  hypernym:', s.hypernym )
+    print( ' hypernyms:', s.hypernyms() )
+    print( '  hyponyms:', s.hyponyms() )
+    print( '  holonyms:', s.holonyms() )
+    print( '  meronyms:', s.meronyms() )
+    print( '   antonym:', s.antonym )
+    print( '   lexname:', s.lexname )
+    print( '    senses:', s.senses )
+    print( '   similar:', s.similar() )
+
+    print( '   _wnsynset._all_hypernyms:', s._wnsynset._all_hypernyms )
+    print( '   _wnsynset._definition:', s._wnsynset._definition )
+    print( '   _wnsynset._doc:', s._wnsynset._doc )
+    print( '   _wnsynset._examples:', s._wnsynset._examples )
+    print( '   _wnsynset._frame_ids:', s._wnsynset._frame_ids )
+
+    print( '   _wnsynset._hypernyms:', s._wnsynset._hypernyms )
+    print( '   _wnsynset._instance_hypernyms:', s._wnsynset._instance_hypernyms )
+    print( '   _wnsynset._iter_hypernym_lists:', s._wnsynset._iter_hypernym_lists )
+    print( '   _wnsynset._lemma_names:', s._wnsynset._lemma_names )
+    print( '   _wnsynset._lemma_pointers:', s._wnsynset._lemma_pointers )
+    print( '   _wnsynset._lemmas:', s._wnsynset._lemmas )
+    print( '   _wnsynset._lexname:', s._wnsynset._lexname )
+    print( '   _wnsynset._max_depth:', s._wnsynset._max_depth )
+    print( '   _wnsynset._min_depth:', s._wnsynset._min_depth )
+    print( '   _wnsynset._name:', s._wnsynset._name )
+    print( '   _wnsynset._needs_root:', s._wnsynset._needs_root )
+    print( '   _wnsynset._offset:', s._wnsynset._offset )
+    print( '   _wnsynset._pointers:', s._wnsynset._pointers )
+    print( '   _wnsynset._pos:', s._wnsynset._pos )
+    print( '   _wnsynset._related:', s._wnsynset._related )
+    print( '   _wnsynset._shortest_hypernym_paths:', s._wnsynset._shortest_hypernym_paths )
+    print( '   _wnsynset._wordnet_corpus_reader:', s._wnsynset._wordnet_corpus_reader )
+    print( '   _wnsynset.acyclic_tree:', s._wnsynset.acyclic_tree )
+    print( '   _wnsynset.also_sees:', s._wnsynset.also_sees )
+    print( '   _wnsynset.attributes:', s._wnsynset.attributes )
+    print( '   _wnsynset.causes:', s._wnsynset.causes )
+    print( '   _wnsynset.closure:', s._wnsynset.closure )
+    print( '   _wnsynset.common_hypernyms:', s._wnsynset.common_hypernyms )
+    print( '   _wnsynset.definition:', s._wnsynset.definition )
+    print( '   _wnsynset.entailments:', s._wnsynset.entailments )
+    print( '   _wnsynset.examples:', s._wnsynset.examples )
+    print( '   _wnsynset.frame_ids:', s._wnsynset.frame_ids )
+    print( '   _wnsynset.hypernym_distances:', s._wnsynset.hypernym_distances )
+    print( '   _wnsynset.hypernym_paths:', s._wnsynset.hypernym_paths )
+    print( '   _wnsynset.hypernyms:', s._wnsynset.hypernyms )
+    print( '   _wnsynset.hyponyms:', s._wnsynset.hyponyms )
+    print( '   _wnsynset.in_region_domains:', s._wnsynset.in_region_domains )
+    print( '   _wnsynset.in_topic_domains:', s._wnsynset.in_topic_domains )
+    print( '   _wnsynset.in_usage_domains:', s._wnsynset.in_usage_domains )
+    print( '   _wnsynset.instance_hypernyms:', s._wnsynset.instance_hypernyms )
+    print( '   _wnsynset.instance_hyponyms:', s._wnsynset.instance_hyponyms )
+    print( '   _wnsynset.jcn_similarity:', s._wnsynset.jcn_similarity )
+    print( '   _wnsynset.lch_similarity:', s._wnsynset.lch_similarity )
+    print( '   _wnsynset.lemma_names:', s._wnsynset.lemma_names )
+    print( '   _wnsynset.lemmas:', s._wnsynset.lemmas )
+    print( '   _wnsynset.lexname:', s._wnsynset.lexname )
+    print( '   _wnsynset.lin_similarity:', s._wnsynset.lin_similarity )
+    print( '   _wnsynset.lowest_common_hypernyms:', s._wnsynset.lowest_common_hypernyms )
+    print( '   _wnsynset.max_depth:', s._wnsynset.max_depth )
+    print( '   _wnsynset.member_holonyms:', s._wnsynset.member_holonyms )
+    print( '   _wnsynset.member_meronyms:', s._wnsynset.member_meronyms )
+    print( '   _wnsynset.min_depth:', s._wnsynset.min_depth )
+    print( '   _wnsynset.mst:', s._wnsynset.mst )
+    print( '   _wnsynset.name:', s._wnsynset.name )
+    print( '   _wnsynset.offset:', s._wnsynset.offset )
+    print( '   _wnsynset.part_holonyms:', s._wnsynset.part_holonyms )
+    print( '   _wnsynset.part_meronyms:', s._wnsynset.part_meronyms )
+    print( '   _wnsynset.path_similarity:', s._wnsynset.path_similarity )
+    print( '   _wnsynset.pos:', s._wnsynset.pos )
+    print( '   _wnsynset.region_domains:', s._wnsynset.region_domains )
+    print( '   _wnsynset.res_similarity:', s._wnsynset.res_similarity )
+    print( '   _wnsynset.root_hypernyms:', s._wnsynset.root_hypernyms )
+    print( '   _wnsynset.shortest_path_distance:', s._wnsynset.shortest_path_distance )
+    print( '   _wnsynset.similar_tos:', s._wnsynset.similar_tos )
+    print( '   _wnsynset.substance_holonyms:', s._wnsynset.substance_holonyms )
+    print( '   _wnsynset.substance_meronyms:', s._wnsynset.substance_meronyms )
+    print( '   _wnsynset.topic_domains:', s._wnsynset.topic_domains )
+    print( '   _wnsynset.tree:', s._wnsynset.tree )
+    print( '   _wnsynset.usage_domains:', s._wnsynset.usage_domains )
+    print( '   _wnsynset.verb_groups:', s._wnsynset.verb_groups )
+    print( '   _wnsynset.wup_similarity:', s._wnsynset.wup_similarity )
+</t>
+<t tx="karstenw.20230310142415.1">"""
+ '_all_hypernyms',
+ '_definition',
+ '_doc',
+ '_examples',
+ '_frame_ids',
+ '_hypernyms',
+ '_instance_hypernyms',
+ '_iter_hypernym_lists',
+ '_lemma_names',
+ '_lemma_pointers',
+ '_lemmas',
+ '_lexname',
+ '_max_depth',
+ '_min_depth',
+ '_name',
+ '_needs_root',
+ '_offset',
+ '_pointers',
+ '_pos',
+ '_related',
+ '_shortest_hypernym_paths',
+ '_wordnet_corpus_reader',
+ 'acyclic_tree',
+ 'also_sees',
+ 'attributes',
+ 'causes',
+ 'closure',
+ 'common_hypernyms',
+ 'definition',
+ 'entailments',
+ 'examples',
+ 'frame_ids',
+ 'hypernym_distances',
+ 'hypernym_paths',
+ 'hypernyms',
+ 'hyponyms',
+ 'in_region_domains',
+ 'in_topic_domains',
+ 'in_usage_domains',
+ 'instance_hypernyms',
+ 'instance_hyponyms',
+ 'jcn_similarity',
+ 'lch_similarity',
+ 'lemma_names',
+ 'lemmas',
+ 'lexname',
+ 'lin_similarity',
+ 'lowest_common_hypernyms',
+ 'max_depth',
+ 'member_holonyms',
+ 'member_meronyms',
+ 'min_depth',
+ 'mst',
+ 'name',
+ 'offset',
+ 'part_holonyms',
+ 'part_meronyms',
+ 'path_similarity',
+ 'pos',
+ 'region_domains',
+ 'res_similarity',
+ 'root_hypernyms',
+ 'shortest_path_distance',
+ 'similar_tos',
+ 'substance_holonyms',
+ 'substance_meronyms',
+ 'topic_domains',
+ 'tree',
+ 'usage_domains',
+ 'verb_groups',
+ 'wup_similarity']
+"""</t>
 </tnodes>
 </leo_file>
