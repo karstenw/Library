@@ -1,6 +1,5 @@
 ## Nodebox Library folder ##
 
-Current work is in the [py38](https://github.com/karstenw/Library/tree/py38) branch.
 
 
 ## Things that are new ##
