@@ -66,11 +66,14 @@ class FlowerWord:
             self.gloss = self.synsets[0].gloss
 
     def hyponyms(self):
-        result = set()
+        result = []
         for synset in self.synsets:
             hyponyms = s.hyponyms()
+            for hyponym in hyponyms:
+                result.extend( hyponym.synonyms )
             # hyponyms, antonym hypernyms hyponyms
-            
+        result = list(set(result))
+        return result
 
 
 
@@ -160,79 +163,7 @@ def printsynset( s ):
     print( '   _wnsynset.usage_domains:', s._wnsynset.usage_domains )
     print( '   _wnsynset.verb_groups:', s._wnsynset.verb_groups )
     print( '   _wnsynset.wup_similarity:', s._wnsynset.wup_similarity )
-"""
- '_all_hypernyms',
- '_definition',
- '_doc',
- '_examples',
- '_frame_ids',
- '_hypernyms',
- '_instance_hypernyms',
- '_iter_hypernym_lists',
- '_lemma_names',
- '_lemma_pointers',
- '_lemmas',
- '_lexname',
- '_max_depth',
- '_min_depth',
- '_name',
- '_needs_root',
- '_offset',
- '_pointers',
- '_pos',
- '_related',
- '_shortest_hypernym_paths',
- '_wordnet_corpus_reader',
- 'acyclic_tree',
- 'also_sees',
- 'attributes',
- 'causes',
- 'closure',
- 'common_hypernyms',
- 'definition',
- 'entailments',
- 'examples',
- 'frame_ids',
- 'hypernym_distances',
- 'hypernym_paths',
- 'hypernyms',
- 'hyponyms',
- 'in_region_domains',
- 'in_topic_domains',
- 'in_usage_domains',
- 'instance_hypernyms',
- 'instance_hyponyms',
- 'jcn_similarity',
- 'lch_similarity',
- 'lemma_names',
- 'lemmas',
- 'lexname',
- 'lin_similarity',
- 'lowest_common_hypernyms',
- 'max_depth',
- 'member_holonyms',
- 'member_meronyms',
- 'min_depth',
- 'mst',
- 'name',
- 'offset',
- 'part_holonyms',
- 'part_meronyms',
- 'path_similarity',
- 'pos',
- 'region_domains',
- 'res_similarity',
- 'root_hypernyms',
- 'shortest_path_distance',
- 'similar_tos',
- 'substance_holonyms',
- 'substance_meronyms',
- 'topic_domains',
- 'tree',
- 'usage_domains',
- 'verb_groups',
- 'wup_similarity']
-"""
+
 
 def alliterations(head="", tail=""):
 
@@ -343,21 +274,7 @@ def eloquate(noun, antonise=True):
     """
     
     fword = FlowerWord( noun )
-    pdb.set_trace()
-
-    if 0:
-        if type(noun) in (str,):
-            synsets = wordnet.synsets( noun )
-            if synsets:
-                synset = synsets[0]
-                hyponyms = list( synset.hyponyms() )
-                noun = synset
-    
-    if old:
-        antonym = en.noun.antonym(noun)
-    else:
-        # antonym = noun.antonym
-        antonym = fword.antonym
+    antonym = fword.antonym
 
     if old:
         if (        antonise
@@ -370,17 +287,25 @@ def eloquate(noun, antonise=True):
         if antonise:
             if antonym:
                 if random() > 0.4:
+                    # antonym = choice(choice(antonym))
+
                     return "no " + eloquate(antonym, antonise=False)
 
     if old:    
         noun = choice(choice(en.noun.hyponyms(noun)))
     else:
         hyponyms = []
-        for h in wordnet.synsets( noun ):
-            hyponyms.extend( list(h.hyponyms()) )
+        for synset in wordnet.synsets( noun ):
+            h = list( synset.hyponyms() )
+            for hyp in h:
+                hyponyms.extend( list(hyp.synonyms) )
+        hyponyms = list(set(hyponyms))
         if hyponyms:
+            pp( hyponyms )
             noun = choice( hyponyms )
-    
+
+    # pdb.set_trace()
+
     adjective = alliterate(noun, typ=NOUN)
     if adjective == None:
         if old:
