@@ -40,6 +40,20 @@ for word in wordnet.words():
     else:
         missing.add( p )
 
-print("allnouns:", len(allnouns) )
-print("allverbs:", len(allverbs) )
-print("alladjectives:", len(alladjectives) )
+if 1:
+    directory = os.path.abspath('.')
+    if os.path.exists( os.path.join(directory, "+private" )):
+        directory = os.path.join(directory, "+private" )
+    template = "%s\n"
+    for p,s in ( ('allnouns.txt', allnouns),
+               ('allverbs.txt', allverbs),
+               ('alladjectives.txt', alladjectives)):
+        path = os.path.join( directory, p )
+        f = open(path,'w')
+        for line in s:
+            f.write( template % line )
+        f.close()
+
+    print("allnouns:", len(allnouns) )
+    print("allverbs:", len(allverbs) )
+    print("alladjectives:", len(alladjectives) )
