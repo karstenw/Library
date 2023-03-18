@@ -13,12 +13,12 @@
 <v t="karstenw.20230227153059.1" a="E"><vh>@clean __init__.py</vh>
 <v t="karstenw.20230227153123.1"><vh>Declarations</vh></v>
 <v t="karstenw.20230227161027.1"><vh>Globals</vh></v>
-<v t="karstenw.20230310124746.1" a="E"><vh>FlowerWord</vh>
+<v t="karstenw.20230310124746.1"><vh>FlowerWord</vh>
 <v t="karstenw.20230310124806.1"><vh>__init__</vh></v>
 <v t="karstenw.20230310125018.1"><vh>hyponyms</vh></v>
 </v>
 <v t="karstenw.20230310134343.1"><vh>printsynset</vh></v>
-<v t="karstenw.20230227153522.1" a="E"><vh>+ GRAMMAR +</vh>
+<v t="karstenw.20230227153522.1"><vh>+ GRAMMAR +</vh>
 <v t="karstenw.20230227153123.2"><vh>alliterations</vh></v>
 <v t="karstenw.20230227153123.3"><vh>nouns</vh></v>
 <v t="karstenw.20230227153123.4"><vh>adjectives</vh></v>
@@ -73,15 +73,6 @@ if 1:
     import pattern.text.en
     en = pattern.text.en
     wordnet = en.wordnet
-
-
-allnouns = set( wordnet.NOUNS() )
-allverbs = set( wordnet.VERBS() )
-alladjectives = set( wordnet.ADJECTIVES() )
-
-f = io.open("vocabulary.txt", 'r', encoding="utf-8")
-dictionary = f.readlines()
-f.close()
 
 
 </t>
@@ -208,7 +199,7 @@ f.close()
                 
                 # ...or we continue on this line as normal:
                 else:
-
+                    
                     # The word is sometimes printed DESREVNI:
                     # e.g red text in white box instead of white text on red.
                     # Some wiggling occurs.
@@ -484,7 +475,16 @@ f.close()
 
 </t>
 <t tx="karstenw.20230227153522.1"></t>
-<t tx="karstenw.20230227161027.1">NOUN = "noun"
+<t tx="karstenw.20230227161027.1">allnouns = set( wordnet.NOUNS() )
+allverbs = set( wordnet.VERBS() )
+alladjectives = set( wordnet.ADJECTIVES() )
+
+f = io.open("vocabulary.txt", 'r', encoding="utf-8")
+dictionary = f.readlines()
+f.close()
+
+
+NOUN = "noun"
 ADJECTIVE = "adjective"
 VERB = "verb"
 
