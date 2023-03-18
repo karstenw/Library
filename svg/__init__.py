@@ -70,7 +70,6 @@ def parse(svg, cached=False, _copy=True):
     
     """ Returns cached copies unless otherwise specified.
     """
-    
     if not cached:
         dom = parser.parseString(svg)
         paths = parse_node(dom, [])
