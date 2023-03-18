@@ -12,8 +12,12 @@ except ImportError:
     # reload(graph)
 
 import linguistics
-# import pattern
-from pattern.en import wordnet
+import pattern
+import pattern.text
+import pattern.text.en
+en = pattern.text.en
+wordnet = pattern.text.en.wordnet
+
 nouns = list( wordnet.NOUNS() )
 
 
@@ -90,7 +94,8 @@ class wordnetgraph(graph.graph):
         
         word = str(word)
         
-        if self.is_expandable(word): return []
+        if self.is_expandable(word):
+            return []
         
         # If there are 4 word senses and each of it a list of words,
         # take the first word from each list, then take the second etc.
