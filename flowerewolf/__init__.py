@@ -528,7 +528,7 @@ def dada(query, foreground=None, background=None, fonts=[], transparent=False):
                 
                 # ...or we continue on this line as normal:
                 else:
-
+                    
                     # The word is sometimes printed DESREVNI:
                     # e.g red text in white box instead of white text on red.
                     # Some wiggling occurs.
