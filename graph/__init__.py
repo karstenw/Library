@@ -18,6 +18,8 @@ __license__   = "GPL"
 
 ######################################################################################################
 
+import pdb
+
 from . import cluster
 from . import event
 from . import layout
@@ -568,7 +570,8 @@ class graph(dict):
         """ Returns a list of leaves, nodes connected to leaves, etc.
         """
         nodes = []
-        for node in self.leaves: nodes += node.flatten(depth-1)
+        for node in self.leaves:
+            nodes += node.flatten(depth-1)
         return cluster.unique(nodes)
         
     fringe = crown
