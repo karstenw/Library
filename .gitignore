@@ -33,6 +33,7 @@ flowerewolf/+*
 imagewell-*.tab
 imagewell-*.txt
 imagewell.txt
+imagewell.tab
 
 isight/tras*
 isight/*.jpg
@@ -51,6 +52,7 @@ perception
 
 photobot/examples/Example collage 6.py
 photobot/examples/exports/
+photobot/examples/imagewells/
 photobot/examples/landslide@coreimage
 photobot/examples/transform2/*
 photobot/images/*
