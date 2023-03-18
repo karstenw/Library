@@ -24,7 +24,9 @@ synsets = wordnet.synsets('bird')
 s = synsets[0]
 print( '    synset:', s )
 print( 'Definition:', s.gloss )
+print( '    Senses:', s.senses )
 print( '  Synonyms:', s.synonyms )
+
 print( ' Hypernyms:', s.hypernyms() )
 print( '  Hyponyms:', s.hyponyms() )
 print( '  Holonyms:', s.holonyms() )
