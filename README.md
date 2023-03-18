@@ -48,7 +48,7 @@ The module ```lsystem``` runs.
 
 The module ```noise``` has been adapted and the _noise.so file has been compiled for x86\_64
 
-The module ```perception``` has been removed; may come back.
+The module ```perception``` has been removed but may come back. The associated web application at "http://www.nodebox.net/perception/" for entering new rules has shut down.
 
 The module ```photobot``` has been adapted to use [Pillow](https://github.com/python-pillow/Pillow), the PIL successor. You'll need at least Nodebox version 1.9.12.
 
