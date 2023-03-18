@@ -1,5 +1,9 @@
-size(500, 500)
+size(900, 900)
 
+mx, my = int(WIDTH / 2), int(HEIGHT / 2)
+
+import pprint
+pp=pprint.pprint
 import io
 
 try:
@@ -12,14 +16,15 @@ except:
 # a list of the shapes in the SVG file.
 #paths = svg.parse(open("flower.svg").read())
 paths = svg.parse(io.open("flower.svg",'r', encoding="utf-8").read(), cached=True)
-
+# pp(paths)
 background(color(0.1, 0.1, 0.0))
 
 for i in range(10):
-    
+    reset()
     transform(CORNER)
-    translate(random(0, 200), random(0, 200))
-    scale(random(0.4, 1.6))
+    
+    translate(mx + random(-200, 200), my + random(-200, 200))
+    scale(random(0.2, 2.6))
     rotate(random(360))
 
     fill(1, 1, 0.9, 0.1)
@@ -31,3 +36,5 @@ for i in range(10):
         drawpath(path.copy())
         
     reset()
+
+# pp(list(svg._cache.keys()))
