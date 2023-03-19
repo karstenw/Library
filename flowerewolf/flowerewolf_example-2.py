@@ -1,5 +1,10 @@
 # Note: you'll also need the NodeBox English Linguistics library:
-# http://nodebox.net/code/index.php/Linguistics
+# old: http://nodebox.net/code/index.php/Linguistics
+# new: https://github.com/karstenw/linguistics
+
+from random import seed, sample
+
+# seed(1)
 
 try:
     flowerewolf = ximport("flowerewolf")
@@ -8,22 +13,18 @@ except:
     reload(flowerewolf)
 
 var("topic", TEXT, "kiss")
-size(600,700)
+size( 600, 700 )
 
-fontsize(26)
+fontsize(16)
 
 if 0:
     fonts = ["Georgia-Bold", "Helvetica", "ArialNarrow"]
 else:
-    fonts = []
-    allfonts = fontnames()
-    for i in range(5):
-        f = choice( allfonts )
-        fonts.append( f )
-        allfonts.remove( f )
+    # select 13 random fonts
+    fonts = sample( fontnames(), 13 )
 
-flowerewolf.dada(str(topic), 
-     foreground=color(1,1,1), 
-     background=color(1,0,0), 
-     fonts=fonts)
+flowerewolf.dada(
+        str(topic), 
+        foreground=color(1,1,1), background=color(1,0,0), 
+        fonts=fonts)
 
