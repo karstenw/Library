@@ -16,9 +16,10 @@
 <v t="karstenw.20230310124746.1"><vh>FlowerWord</vh>
 <v t="karstenw.20230310124806.1"><vh>__init__</vh></v>
 <v t="karstenw.20230310125018.1"><vh>hyponyms</vh></v>
+<v t="karstenw.20230319115908.1"><vh>hypernyms</vh></v>
 </v>
 <v t="karstenw.20230310134343.1"><vh>printsynset</vh></v>
-<v t="karstenw.20230227153522.1"><vh>+ GRAMMAR +</vh>
+<v t="karstenw.20230227153522.1" a="E"><vh>+ GRAMMAR +</vh>
 <v t="karstenw.20230227153123.2"><vh>alliterations</vh></v>
 <v t="karstenw.20230227153123.3"><vh>nouns</vh></v>
 <v t="karstenw.20230227153123.4"><vh>adjectives</vh></v>
@@ -28,9 +29,9 @@
 <v t="karstenw.20230227153123.8"><vh>consonate</vh></v>
 <v t="karstenw.20230227153123.9"><vh>incorporate</vh></v>
 <v t="karstenw.20230227153123.10"><vh>verse</vh></v>
-</v>
 <v t="karstenw.20230227153123.11" a="E"><vh>dada</vh>
 <v t="karstenw.20230227162021.1"><vh>&lt;&lt; Setup the colors and fonts &gt;&gt;</vh></v>
+</v>
 </v>
 </v>
 </v>
@@ -49,14 +50,18 @@
 
 ################################################################################
 
-import pdb
-
 import time
 import io
+
+kwdbg = 1
+import pdb
 import pprint
 pp = pprint.pprint
 
+from random import seed
 from nodebox.util import random, choice
+
+# seed(1)
 
 # old en lib
 if 0:
@@ -122,6 +127,8 @@ if 1:
     g = " ".join(words)
     g = g.replace("type A ", "!")
     g = g.replace("group A ", "!")
+    if kwdbg:
+        pp( ("verse():", word, g) )
     return g
 
 
@@ -130,7 +137,7 @@ if 1:
 
     """Create some lines of poetry based on the query."""
 
-    print("query:", query)
+    print("dada() query:", query)
 
     # en
     if old:
@@ -149,12 +156,15 @@ if 1:
                 if 1:
                     synonyms = hyponym.synonyms
                     for synonym in synonyms:
+                        if '_' in synonym:
+                            synonym = synonym.replace("_", " ")
                         h.append( synonym )
                 if 0:
                     h.append( hyponym )
         # h = list( h )
 
-    print("hyponyms for '%s':  %s" % (query, str(h)) )
+    if kwdbg:
+        print("dada() hyponyms for '%s':" % (query,), h )
     if h:
         w = choice( h )
     else:
@@ -168,83 +178,84 @@ if 1:
     # Poem title.
     _ctx.text(query, _ctx.WIDTH / 15, _ctx.HEIGHT / 7-f)
     
-    for i in range(1):
+    # initially spanned the rest of dada()
+    # for i in range(1):
         
-        _ctx.fill(foreground)
-        x = _ctx.WIDTH / 15
-        y = _ctx.HEIGHT / 7
-        
-        for words in lines:
-            for word in words.split(" "):
-                
-                # For each word in a line,
-                # pick a random font from the list and a random fontsize.
-                _ctx.font(choice(fonts))
-                if random() &gt; 0.7: 
-                    _ctx.fontsize(random(f*0.6, f*1.2))
-                
-                # A word that is s
-                #                 l
-                #                  a
-                #                   n
-                #                    t
-                #                     e
-                #                      d.
-                #                       The text continues on the next line.
-                if random() &gt; 0.9:
-                    _ctx.rotate(-45 * random(1, 2))
-                    _ctx.text(word+" ", x, y+_ctx.textwidth(word)/2)
-                    y += _ctx.textwidth(word) * 1.5
-                    _ctx.reset()
-                
-                # ...or we continue on this line as normal:
-                else:
-                    
-                    # The word is sometimes printed DESREVNI:
-                    # e.g red text in white box instead of white text on red.
-                    # Some wiggling occurs.
-                    if random() &gt; 0.85:    
-                        r = random(50)
-                        if random() &gt; 0.8: _ctx.oval(x, y, r, r)
-                        _ctx.rotate(random(-3, 3))
-                        _ctx.nostroke()
-                        _ctx.rect(
-                            x-2, 
-                            y-_ctx.textheight(word), 
-                            _ctx.textwidth(word)+4,
-                            _ctx.textheight(word)
-                        )
-                        _ctx.fill(background)
-                        _ctx.text(word+" ", x, y)
-                        _ctx.fill(foreground)
-                    
-                    # Otherwise, just print out the word.
-                    else:
-                        _ctx.text(word+" ", x, y)
-                    
-                    # Word is repeated for poetic stress effect.
-                    #         repeated
-                    if random() &gt; 0.99:
-                        _ctx.text(word+" ", x, y+_ctx.textheight(word))
-                    
-                    # Add a line for visual effect,.
-                    if random() &gt; 0.9:
-                        d = random(100)
-                        _ctx.stroke(foreground)
-                        _ctx.strokewidth(0.5)
-                        _ctx.line(x + _ctx.textwidth(word),     y,
-                                  x + _ctx.textwidth(word) + d, y)
-                        x += d
-                    
-                    # Some play with indentation.
-                    # Now where did I leave that oval?
-                    x += _ctx.textwidth(word+" ")
-                    if x &gt; _ctx.WIDTH * 0.65:
-                        x = _ctx.WIDTH / 15
-                        y += _ctx.textheight(word)
+    _ctx.fill(foreground)
+    x = _ctx.WIDTH / 15
+    y = _ctx.HEIGHT / 7
+    
+    for words in lines:
+        for word in words.split(" "):
             
-            x = _ctx.WIDTH / 15
-            y += _ctx.textheight(word)
+            # For each word in a line,
+            # pick a random font from the list and a random fontsize.
+            _ctx.font(choice(fonts))
+            if random() &gt; 0.7: 
+                _ctx.fontsize(random(f*0.6, f*1.2))
+            
+            # A word that is s
+            #                 l
+            #                  a
+            #                   n
+            #                    t
+            #                     e
+            #                      d.
+            #                       The text continues on the next line.
+            if random() &gt; 0.9:
+                _ctx.rotate(-45 * random(1, 2))
+                _ctx.text(word+" ", x, y+_ctx.textwidth(word)/2)
+                y += _ctx.textwidth(word) * 1.5
+                _ctx.reset()
+            
+            # ...or we continue on this line as normal:
+            else:
+                
+                # The word is sometimes printed DESREVNI:
+                # e.g red text in white box instead of white text on red.
+                # Some wiggling occurs.
+                if random() &gt; 0.85:    
+                    r = random(50)
+                    if random() &gt; 0.8: _ctx.oval(x, y, r, r)
+                    _ctx.rotate(random(-3, 3))
+                    _ctx.nostroke()
+                    _ctx.rect(
+                        x-2, 
+                        y-_ctx.textheight(word), 
+                        _ctx.textwidth(word)+4,
+                        _ctx.textheight(word)
+                    )
+                    _ctx.fill(background)
+                    _ctx.text(word+" ", x, y)
+                    _ctx.fill(foreground)
+                
+                # Otherwise, just print out the word.
+                else:
+                    _ctx.text(word+" ", x, y)
+                
+                # Word is repeated for poetic stress effect.
+                #         repeated
+                if random() &gt; 0.99:
+                    _ctx.text(word+" ", x, y+_ctx.textheight(word))
+                
+                # Add a line for visual effect,.
+                if random() &gt; 0.9:
+                    d = random(100)
+                    _ctx.stroke(foreground)
+                    _ctx.strokewidth(0.5)
+                    _ctx.line(x + _ctx.textwidth(word),     y,
+                              x + _ctx.textwidth(word) + d, y)
+                    x += d
+                
+                # Some play with indentation.
+                # Now where did I leave that oval?
+                x += _ctx.textwidth(word+" ")
+                if x &gt; _ctx.WIDTH * 0.65:
+                    x = _ctx.WIDTH / 15
+                    y += _ctx.textheight(word)
+        
+        x = _ctx.WIDTH / 15
+        y += _ctx.textheight(word)
 </t>
 <t tx="karstenw.20230227153123.2">def alliterations(head="", tail=""):
 
@@ -255,53 +266,68 @@ if 1:
     
     """
     words = []
+
+    if type(head) not in (str,):
+        pdb.set_trace()
+        print(head,tail)
+    if type(tail) not in (str,):
+        pdb.set_trace()
+        print(head,tail)
+
+    h = head.lower()
+    t = tail.lower()
+
     for word in dictionary:
-        if (    (head=="" or word[:len(head)]== head)
-            and (tail=="" or word.strip()[-len(tail):]== tail)):
+        if (    (   h == ""
+                 or word.startswith(h))
+            and (   t == ""
+                 or word.endswith(t))):
             words.append(word)
+    if 0: # kwdbg:
+        print("alliterations(): '%s'  '%s' -&gt; %s" % (head, tail, str(words) ) )
     return words
 
 
 </t>
-<t tx="karstenw.20230227153123.3">def nouns(list):
+<t tx="karstenw.20230227153123.3">def nouns( words ):
     
     """Parses nouns from a list of words.
     """
     
-    words = []
-    for word in list:
+    result = []
+    for word in words:
         word = word.strip()
         if word in allnouns:
-            words.append(word)
-    return words
+            result.append(word)
+    return result
 
 
 </t>
-<t tx="karstenw.20230227153123.4">def adjectives(list):
+<t tx="karstenw.20230227153123.4">def adjectives( words ):
     
     """Parses adjectives from a list of words.
     """
     
-    words = []
-    for word in list:
+    result = []
+    for word in words:
         word = word.strip()
         if word in alladjectives:
-            words.append(word)
-    return words
+            result.append(word)
+    return result
 
 
 </t>
-<t tx="karstenw.20230227153123.5">def verbs(list):
+<t tx="karstenw.20230227153123.5">def verbs( words ):
     
     """Parses verbs from a list of words.
     """
     
-    words = []
-    for word in list:
+    result = []
+    for word in words:
         word = word.strip()
         if word in allverbs:
-            words.append(word)
-    return words
+            result.append(word)
+    return result
 
 
 </t>
@@ -324,7 +350,6 @@ if 1:
         if old:
             word = en.verb.infinitive(word)
         else:
-            pdb.set_trace()
             word = en.verbs.conjugate(word, en.INFINITIVE)
         f = verbs
     
@@ -342,9 +367,11 @@ if 1:
     if len(x) == 0 or x[0] == word:
         x = alliterations(word[0])
         x = f(x)
-    
+
     try: 
         alliteration = choice(x)
+        if kwdbg:
+            print("alliterate():", word, typ, alliteration, x)
         return alliteration
     except:
         return None
@@ -372,24 +399,30 @@ if 1:
     else:
         if antonise:
             if antonym:
-                if random() &gt; 0.4:
+                if 1: #random() &gt; 0.4:
                     # antonym = choice(choice(antonym))
+                    try:
+                        result = "no " + eloquate(antonym, antonise=False)
+                    except TypeError as err:
+                        pdb.set_trace()
+                        print(err)
+                        print(result)
 
-                    return "no " + eloquate(antonym, antonise=False)
+                    print("eloquate '%s' eloquate(antonym='%s') result:" % (noun,antonym), result )
+                    return result
 
     if old:    
         noun = choice(choice(en.noun.hyponyms(noun)))
     else:
         hyponyms = []
-        for synset in wordnet.synsets( noun ):
-            h = list( synset.hyponyms() )
-            for hyp in h:
-                hyponyms.extend( list(hyp.synonyms) )
-        hyponyms = list(set(hyponyms))
+        hyponyms = fword.hyponyms()
         if hyponyms:
-            pp( hyponyms )
-            noun = choice( hyponyms )
-
+            pp( ("eloquate hyponyms:", noun, hyponyms) )
+            hyponym = choice( hyponyms )
+            hyponym = hyponym.replace("_", " ")
+            if kwdbg:
+                print("eloquate() Hyponym for noun %s:" % (repr(noun),), hyponym)
+            noun = hyponym
     # pdb.set_trace()
 
     adjective = alliterate(noun, typ=NOUN)
@@ -398,20 +431,25 @@ if 1:
             noun = choice(choice(en.noun.hypernyms(noun)))
             adjective = alliterate(noun, typ=NOUN)
         else:
-            hypernyms = []
-            for h in wordnet.synsets( noun ):
-                hypernyms.extend( list(h.hypernyms()) )
+            hypernyms = fword.hypernyms()
+            pp( ("eloquate hypernyms:", noun, hypernyms) )
+
             if hypernyms:
                 noun = choice( hyponyms )
                 adjective = alliterate(noun, typ=NOUN)
         
     if adjective == None:
+        print("eloquate '%s' nounonly result:" % (noun,),  noun )
+
         return noun
     elif random() &gt; 0.2:
+        print("eloquate '%s' adj + noun result:" % (noun,), adjective + " " + noun )
         return adjective + " " + noun
     elif random() &gt; 0.5:
+        print("eloquate '%s' noun + adj result:" % (noun,), noun + " " + adjective )
         return noun + " " + adjective
     else:
+        print("eloquate '%s' noun so adj result:" % (noun,), noun + " so " + adjective )
         return noun + " so " + adjective
 
 
@@ -456,7 +494,11 @@ if 1:
     if typ == ADJECTIVE:
         f = adjectives
     if typ == VERB:
-        word = en.verb.infinitive(word)
+        if old:
+            word = en.verb.infinitive(word)
+        else:
+            word = en.verbs.conjugate(word, en.INFINITIVE)
+
         f = verbs
     
     for i in [4,3,2,1]:
@@ -479,10 +521,26 @@ if 1:
 allverbs = set( wordnet.VERBS() )
 alladjectives = set( wordnet.ADJECTIVES() )
 
-f = io.open("vocabulary.txt", 'r', encoding="utf-8")
-dictionary = f.readlines()
-f.close()
+dictionary = []
+stopwords = []
+items = (
+    ("vocabulary.txt", dictionary),
+    ("stopwords.txt", stopwords) )
+for item in items:
+    path, container = item
+    f = open(path, 'r', encoding="utf-8")
+    for line in f.readlines():
+        if not line:
+            continue
+        if line[0] in (" ", '#'):
+            continue
+        line = line.strip(" \n\r\t" )
+        container.append( line )
+    f.close()
 
+dictionary = set( dictionary )
+stopwords = set( stopwords )
+dictionary = dictionary.difference( stopwords )
 
 NOUN = "noun"
 ADJECTIVE = "adjective"
@@ -541,10 +599,9 @@ _ctx.strokewidth(0.5)
 <t tx="karstenw.20230310125018.1">def hyponyms(self):
     result = []
     for synset in self.synsets:
-        hyponyms = s.hyponyms()
+        hyponyms = synset.hyponyms()
         for hyponym in hyponyms:
             result.extend( hyponym.synonyms )
-        # hyponyms, antonym hypernyms hyponyms
     result = list(set(result))
     return result
 
@@ -636,6 +693,17 @@ _ctx.strokewidth(0.5)
     print( '   _wnsynset.verb_groups:', s._wnsynset.verb_groups )
     print( '   _wnsynset.wup_similarity:', s._wnsynset.wup_similarity )
 
+
+</t>
+<t tx="karstenw.20230319115908.1">def hypernyms(self):
+    result = []
+    for synset in self.synsets:
+        hypernyms = synset.hypernyms()
+        for hypernym in hypernyms:
+            result.extend( hypernym.synonyms )
+        # hyponyms, antonym hypernyms
+    result = list(set(result))
+    return result
 
 </t>
 </tnodes>
