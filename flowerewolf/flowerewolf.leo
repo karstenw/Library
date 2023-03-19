@@ -53,7 +53,7 @@
 import time
 import io
 
-kwdbg = 1
+kwdbg = 0
 import pdb
 import pprint
 pp = pprint.pprint
