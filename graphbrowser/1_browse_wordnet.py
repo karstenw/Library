@@ -8,11 +8,22 @@ graphbrowser = ximport("graphbrowser")
 
 import linguistics
 import pattern
-en = pattern.en
+import pattern.text
+import pattern.text.en
+en = pattern.text.en
+wordnet = en.wordnet
+
 # pattern = ximport("pattern")
 # en = pattern.text.en
 
 from random import shuffle
+
+import pdb
+
+# pdb.set_trace()
+
+allnouns = list(wordnet.NOUNS())
+
 
 class WordNetBrowser(graphbrowser.GraphBrowser):
     
@@ -45,7 +56,7 @@ class WordNetBrowser(graphbrowser.GraphBrowser):
         and node_id != self.graph.nodes[0].id:
             return True
 
-        if (   node_id.lower() in en.wordnet.NOUNS
+        if (   node_id.lower() in allnouns
             or node_id in ["parts ", "specific "]):
             return True
         else:
@@ -61,12 +72,14 @@ class WordNetBrowser(graphbrowser.GraphBrowser):
         # take the first word from each sense list,
         # then take the second word etc. up to top.
         children = []
-        senses = en.noun.senses(node_id)
-        for i in range(2):
+        
+        # senses = en.noun.senses(node_id)
+        senses = wordnet.synsets( node_id ).senses
+        for i in range( 2 ):
             for sense in senses:
-                if len(sense) > i \
-                and sense[i] != node_id \
-                and sense[i] not in children:
+                if (    len(sense) > i 
+                    and sense[i] != node_id 
+                    and sense[i] not in children ):
                     children.append(sense[i])
                     
         children = [(5,id) for id in children]
@@ -203,7 +216,9 @@ class WordNetBrowser(graphbrowser.GraphBrowser):
         """
         
         graphbrowser.GraphBrowser.draw(self)
-
+        
+        pdb.set_trace()
+        
         s = self.graph.styles.default
         _ctx.reset()
         _ctx.nostroke()
@@ -264,3 +279,5 @@ def draw():
     
     global wnb
     wnb.draw()
+
+
