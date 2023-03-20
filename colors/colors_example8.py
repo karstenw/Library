@@ -20,6 +20,8 @@ import pattern.en.wordnet
 en = pattern.en
 wordnet = pattern.en.wordnet
 
+import pdb
+
 # WordNet has a set of global categories (or lexnames)
 # into which it classifies all words.
 # Examples: verb.weather, noun.artifactm nou.animal, ...
@@ -28,7 +30,7 @@ lexname_scores = {}
 # wordnet.wn._lexnames ???
 
 lexnames = list( wordnet.wn._lexnames )
-#pp(lexnames)
+pp(lexnames)
 
 #nouns = list( wordnet.NOUNS() )
 #verbs = list( wordnet.VERBS() )
@@ -37,9 +39,12 @@ lexnames = list( wordnet.wn._lexnames )
 for lexname in lexnames: #wordnet.wn.Lexname.dict.keys():
     lexname_scores[lexname] = []
 
+pdb.set_trace()
+
 # Traverse all colors in the context (blue, green, ...)
 for clr in colors.context.keys():
-    
+    print( clr )
+        
     # Each color has associated tags: blue -> air, cold, calm, ...
     # Calculate the weight of each tag,
     # if there os a total of 100 tags each weighs 0.01,
