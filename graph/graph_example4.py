@@ -18,7 +18,7 @@ import pattern.text.en
 en = pattern.text.en
 wordnet = pattern.text.en.wordnet
 
-nouns = list( wordnet.NOUNS() )
+nouns = set(list( wordnet.NOUNS() ))
 
 
 
@@ -100,8 +100,11 @@ class wordnetgraph(graph.graph):
         # If there are 4 word senses and each of it a list of words,
         # take the first word from each list, then take the second etc.
         words = []
+        fw = graph.FlowerWord( word )
+        snses = fw.senses()
         for i in range(2):
-            for sense in en.noun.senses(word):
+            
+            for sense in snses: # en.noun.senses(word):
                 if (    len(sense) > i
                     and sense[i] != word
                     and sense[i] not in words):
@@ -121,7 +124,9 @@ class wordnetgraph(graph.graph):
             return self.expand(word, previous)
 
         words = []
-        lexname = en.noun.lexname(word)
+        fw = graph.FlowerWord( word )
+        # lexname = en.noun.lexname(word)
+        lexname = fw.lexname
         if lexname != "":
             words.append((lexname, "category "))
         
@@ -137,9 +142,11 @@ class wordnetgraph(graph.graph):
         # Exclude long words and take the top of the list.
         for top, f, relation in relations:
             r = []
-            try: rng = f(word, sense=self.senses.current)
+            try:
+                rng = f(word, sense=self.senses.current)
             except:
-                try: rng = f(word)
+                try:
+                    rng = f(word)
                 except:
                     continue
             for w in rng:
