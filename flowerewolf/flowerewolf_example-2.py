@@ -4,27 +4,18 @@
 
 from random import seed, sample
 
-# seed(1)
+flowerewolf = ximport("flowerewolf")
 
-try:
-    flowerewolf = ximport("flowerewolf")
-except:
-    flowerewolf = ximport("__init__")
-    reload(flowerewolf)
+size( 800, 900 )
+fontsize(24)
 
-var("topic", TEXT, "kiss")
-size( 600, 700 )
+# select 13 random fonts
+fonts = sample( fontnames(), 13 )
 
-fontsize(16)
-
-if 0:
-    fonts = ["Georgia-Bold", "Helvetica", "ArialNarrow"]
-else:
-    # select 13 random fonts
-    fonts = sample( fontnames(), 13 )
+var("topic", TEXT, "kiss" )
 
 flowerewolf.dada(
         str(topic), 
-        foreground=color(1,1,1), background=color(1,0,0), 
+        foreground=color(1,1,1,0.9),
+        background=color(1,0,0), 
         fonts=fonts)
-
