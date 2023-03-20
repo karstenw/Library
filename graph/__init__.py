@@ -20,11 +20,123 @@ __license__   = "GPL"
 
 import pdb
 
+import linguistics
+import pattern
+import pattern.text
+import pattern.text.en
+en = pattern.text.en
+wordnet = en.wordnet
+
 from . import cluster
 from . import event
 from . import layout
 from . import proximity
 from . import style
+
+# py3 stuff
+py3 = False
+try:
+    unicode('')
+    punicode = unicode
+    pstr = str
+    punichr = unichr
+except NameError:
+    punicode = str
+    pstr = bytes
+    py3 = True
+    punichr = chr
+    long = int
+
+
+def cmp_to_key(mycmp):
+    'Convert a cmp= function into a key= function'
+    class K:
+        def __init__(self, obj, *args):
+            self.obj = obj
+        def __lt__(self, other):
+            return mycmp(self.obj, other.obj) < 0
+        def __gt__(self, other):
+            return mycmp(self.obj, other.obj) > 0
+        def __eq__(self, other):
+            return mycmp(self.obj, other.obj) == 0
+        def __le__(self, other):
+            return mycmp(self.obj, other.obj) <= 0
+        def __ge__(self, other):
+            return mycmp(self.obj, other.obj) >= 0
+        def __ne__(self, other):
+            return mycmp(self.obj, other.obj) != 0
+    return K
+
+
+def sortlist(thelist, thecompare):
+    if py3:
+        sortkeyfunction = cmp_to_key( thecompare )
+        thelist.sort( key=sortkeyfunction )
+    else:
+        thelist.sort( thecompare )
+
+
+class FlowerWord:
+    def __init__(self, word):
+        # pdb.set_trace()
+        self.word = word
+        self.synsets = wordnet.synsets( word )
+        self.idx = 0
+        self.antonym = ""
+        self.gloss = ""
+        self.synset = None
+        if len(self.synsets) > 0:
+            synonyms = self.synsets[0].synonyms
+            try:
+                self.idx = synonyms.index(word)
+                self.synset = synonyms[self.idx]
+            except:
+                pass
+            self.antonym = self.synsets[0].antonym
+            self.gloss = self.synsets[0].gloss
+            self.lexname = self.synsets[0].lexname
+
+    def hyponyms(self):
+        result = []
+        for synset in self.synsets:
+            hyponyms = synset.hyponyms()
+            for hyponym in hyponyms:
+                synonyms = hyponym.synonyms
+                for synonym in synonyms:
+                    synonym = synonym.replace("_", " ")
+                    result.append( synonym )
+        result = list(set(result))
+        return result
+
+    def hypernyms(self):
+        result = []
+        for synset in self.synsets:
+            hypernyms = synset.hypernyms()
+            for hypernym in hypernyms:
+                synonyms = hypernym.synonyms
+                for synonym in synonyms:
+                    synonym = synonym.replace("_", " ")
+                    result.append( synonym )
+        result = list(set(result))
+        return result
+
+
+    def senses(self):
+        result = []
+        for synset in self.synsets:
+            senses = synset.senses
+            result.append( senses )
+        return result
+
+
+
+
+def sortnodes_zero( a, b ):
+    if a[0] > b[0]:
+        return 1
+    elif a[0] < b[0]:
+        return -1
+    return 0
 
 #### GRAPH NODE ######################################################################################
 
@@ -62,12 +174,12 @@ class node:
         return self.links._edges.values()
 
     edges = property(_edges)
-    
+
     def _is_leaf(self):
         return len(self.links) == 1
-    
+
     is_leaf = property(_is_leaf)
-    
+
     def can_reach(self, node, traversable=lambda node, edge: True):
         
         """ Returns True if given node can be reached over traversable edges.
@@ -82,7 +194,7 @@ class node:
             visit=lambda n: node == n,
             traversable=traversable
             )
-    
+
     def _get_betweenness(self):
         if self._betweenness == None:
             self.graph.betweenness_centrality()
@@ -98,12 +210,12 @@ class node:
         
     eigenvalue = property(_get_eigenvalue)
     weight = eigenvalue
-    
+
     def _x(self): return self.vx * self.graph.d
     def _y(self): return self.vy * self.graph.d
     x = property(_x)
     y = property(_y)
-    
+
     def __contains__(self, pt):
         
         """ True if pt.x, pt.y is inside the node's absolute position.
@@ -117,7 +229,7 @@ class node:
         
     def flatten(self, distance=1):
         return cluster.flatten(self, distance)
-    
+
     def __and__(self, node, distance=1):
         return cluster.intersection(
             self.flatten(distance), node.flatten(distance))
@@ -125,11 +237,11 @@ class node:
     def __or__(self, node, distance=1):
         return cluster.union(
             self.flatten(distance), node.flatten(distance))
-    
+
     def __sub__(self, node, distance=1):
         return cluster.difference(
             self.flatten(distance), node.flatten(distance))
-    
+
     def __repr__(self): 
         try: return "<"+str(self.id)+" node>"
         except:
@@ -143,7 +255,7 @@ class node:
     def __eq__(self, node):
         if not isinstance(node, self.__class__): return False
         return self.id == node.id
-    
+
     def __le__(self, node):
         if not isinstance(node, self.__class__): return False
         return self.id < node.id
@@ -158,7 +270,7 @@ class links(list):
     
     def __init__(self): 
         self._edges = dict()
-    
+
     def append(self, node, edge=None): 
         if edge: self._edges[node.id] = edge
         list.append(self, node)
@@ -187,7 +299,7 @@ class edge(object):
         for k, v in properties.items():
             if not k in self.__dict__:
                 self.__dict__[k] = v
-    
+
     def _get_length(self): 
         return self._length
     def _set_length(self, v): 
@@ -257,7 +369,7 @@ class graph(dict):
         
         self.layout.i = 0
         self.alpha = 0
-    
+
     def new_node(self, *args, **kwargs):
         """ Returns a node object; can be overloaded when the node class is subclassed.
         """
@@ -267,7 +379,7 @@ class graph(dict):
         """ Returns an edge object; can be overloaded when the edge class is subclassed.
         """
         return edge(*args, **kwargs)
-    
+
     def add_node(self, id, radius=8, style=style.DEFAULT, category="", label=None, root=False,
                  properties={}):
         
@@ -286,7 +398,7 @@ class graph(dict):
         if root: self.root = n
             
         return n
-    
+
     def add_nodes(self, nodes):
         """ Add nodes from a list of id's.
         """
@@ -294,7 +406,7 @@ class graph(dict):
             [self.add_node(n) for n in nodes]
         except:
             pass
-    
+
     def add_edge(self, id1, id2, weight=0.0, length=1.0, label="", properties={}):
         
         """ Add weighted (0.0-1.0) edge between nodes, creating them if necessary.
@@ -329,7 +441,7 @@ class graph(dict):
         
         """ Remove node with given id.
         """
- 
+     
         if id in self:
             n = self[id]
             self.nodes.remove(n)
@@ -362,7 +474,7 @@ class graph(dict):
         if id in self:
             return self[id]
         return None
-    
+
     def edge(self, id1, id2):
         """ Returns the edge between the nodes with given id1 and id2.
         """
@@ -371,7 +483,7 @@ class graph(dict):
            self[id2] in self[id1].links:
             return self[id1].links.edge(id2)
         return None
-    
+
     def __getattr__(self, a):
         
         """ Returns the node in the graph associated with the given id.
@@ -379,7 +491,7 @@ class graph(dict):
         if a in self:
             return self[a]
         raise AttributeError( "graph object has no attribute '"+str(a)+"'" )
-    
+
     def update(self, iterations=10):
         
         """ Iterates the graph layout and updates node positions.
@@ -422,14 +534,14 @@ class graph(dict):
         return self.layout.done
         
     done = property(_done)
-    
+
     def offset(self, node):
         """ Returns the distance from the center to the given node.
         """
         x = self.x + node.x - _ctx.WIDTH // 2
         y = self.y + node.y - _ctx.HEIGHT // 2
         return x, y
-    
+
     def draw(self, dx=0, dy=0, weighted=False, directed=False, highlight=[], traffic=None):
         
         """ Layout the graph incrementally.
@@ -451,14 +563,16 @@ class graph(dict):
         # Center the graph on the canvas.
         _ctx.push()
         _ctx.translate(self.x+dx, self.y+dy)
- 
+     
         # Indicate betweenness centrality.
         if traffic:
             if isinstance(traffic, bool): 
                 traffic = 5
             for n in self.nodes_by_betweenness()[:traffic]:
-                try: s = self.styles[n.style]
-                except: s = self.styles.default
+                try:
+                    s = self.styles[n.style]
+                except:
+                    s = self.styles.default
                 if s.graph_traffic:
                     s.graph_traffic(s, n, self.alpha)        
 
@@ -470,21 +584,27 @@ class graph(dict):
         # Draw each node in the graph.
         # Apply individual style to each node (or default).        
         for n in self.nodes:
-            try:  s = self.styles[n.style]
-            except: s = self.styles.default
+            try:
+                s = self.styles[n.style]
+            except:
+                s = self.styles.default
             if s.node:
                 s.node(s, n, self.alpha)
         
         # Highlight the given shortest path.
-        try: s = self.styles.highlight
-        except: s = self.styles.default
+        try:
+            s = self.styles.highlight
+        except:
+            s = self.styles.default
         if s.path:
             s.path(s, self, highlight)
 
         # Draw node id's as labels on each node.
         for n in self.nodes:
-            try:  s = self.styles[n.style]
-            except: s = self.styles.default
+            try:
+                s = self.styles[n.style]
+            except:
+                s = self.styles.default
             if s.node_label:
                 s.node_label(s, n, self.alpha)
         
@@ -494,7 +614,7 @@ class graph(dict):
         self.events.update()
         
         _ctx.pop()
-    
+
     def prune(self, depth=0):
         """ Removes all nodes with less or equal links than depth.
         """
@@ -503,11 +623,12 @@ class graph(dict):
                 self.remove_node(n.id)
                 
     trim = prune
-    
+
     def shortest_path(self, id1, id2, heuristic=None, directed=False):
         """ Returns a list of node id's connecting the two nodes.
         """
-        try: return proximity.dijkstra_shortest_path(self, id1, id2, heuristic, directed)
+        try:
+            return proximity.dijkstra_shortest_path(self, id1, id2, heuristic, directed)
         except:
             return None
             
@@ -531,29 +652,31 @@ class graph(dict):
         for id, w in ec.items():
             self[id]._eigenvalue = w
         return ec
-    
+
     def nodes_by_betweenness(self, treshold=0.0):
         """ Returns nodes sorted by betweenness centrality.
         Nodes with a lot of passing traffic will be at the front of the list.
         """
         nodes = [(n.betweenness, n) for n in self.nodes if n.betweenness > treshold]
-        nodes.sort()
+        # nodes.sort()
+        sortlist(nodes, sortnodes_zero)
         nodes.reverse()
         return [n for w, n in nodes]
         
     nodes_by_traffic = nodes_by_betweenness
-    
+
     def nodes_by_eigenvalue(self, treshold=0.0):
         """ Returns nodes sorted by eigenvector centrality.
         Nodes with a lot of incoming traffic will be at the front of the list
         """
         nodes = [(n.eigenvalue, n) for n in self.nodes if n.eigenvalue > treshold]
-        nodes.sort()
+        # nodes.sort()
+        sortlist(nodes, sortnodes_zero)
         nodes.reverse()
         return [n for w, n in nodes]
         
     nodes_by_weight = nodes_by_eigenvalue
-    
+
     def nodes_by_category(self, category):
         """ Returns nodes with the given category attribute.
         """
@@ -565,7 +688,7 @@ class graph(dict):
         return [node for node in self.nodes if node.is_leaf]
         
     leaves = property(_leaves)
-    
+
     def crown(self, depth=2):
         """ Returns a list of leaves, nodes connected to leaves, etc.
         """
@@ -575,14 +698,14 @@ class graph(dict):
         return cluster.unique(nodes)
         
     fringe = crown
-    
+
     def _density(self):
         """ The number of edges in relation to the total number of possible edges.
         """
         return 2.0 * len(self.edges) / (len(self.nodes) * (len(self.nodes)-1))
 
     density = property(_density)
-    
+
     def _is_complete(self) : return self.density == 1.0    
     def _is_dense(self)    : return self.density > 0.65
     def _is_sparse(self)   : return self.density < 0.35
@@ -590,7 +713,7 @@ class graph(dict):
     is_complete = property(_is_complete)
     is_dense    = property(_is_dense)
     is_sparse   = property(_is_sparse)
-    
+
     def sub(self, id, distance=1):
         return cluster.subgraph(self, id, distance)
         
@@ -620,14 +743,14 @@ class graph(dict):
         return cluster.subgraph(all, nodes, 0)
 
     subtract = __sub__
-    
+
     def _is_clique(self):
         return cluster.is_clique(self)
     is_clique = property(_is_clique)
-    
+
     def clique(self, id, distance=0):
         return cluster.subgraph(self, cluster.clique(self, id), distance)
-    
+
     def cliques(self, threshold=3, distance=0):
         g = []
         c = cluster.cliques(self, threshold)
@@ -666,26 +789,26 @@ class xgraph(graph):
         
         self._dx = 0
         self._dy = 0
-    
+
     def has_node(self, id):
         return True
-    
+
     def get_links(self, id):    
         return []
         
     def get_cluster(self, id):
         return []
-    
+
     def load(self, id):
         
         """ Rebuilds the graph around the given node id.
         """
         
         self.clear()
-    
+
         # Root node.
         self.add_node(id, root=True)
-    
+
         # Directly connected nodes have priority.
         for w, id2 in self.get_links(id):
             self.add_edge(id, id2, weight=w)
