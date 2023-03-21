@@ -22,6 +22,57 @@ nouns = set(list( wordnet.NOUNS() ))
 
 
 
+def holonym( word, sense="" ):
+    fw = FlowerWord( word )
+    hn = fw.holonyms()
+    if len(hn) > 0:
+        return hn[0]
+    return ""
+
+def meronym( word, sense="" ):
+    fw = FlowerWord( word )
+    hn = fw.meronyms()
+    if len(hn) > 0:
+        return hn[0]
+    return ""
+
+def antonym( word, sense="" ):
+    fw = FlowerWord( word )
+    hn = fw.holonyms()
+    return hn.antonym
+
+def hypernym( word, sense="" ):
+    fw = FlowerWord( word )
+    hn = fw.hypernyms()
+    if len(hn) > 0:
+        return hn[0]
+    return ""
+
+def senses( word, sense="" ):
+    fw = FlowerWord( word )
+    hn = fw.hypernyms()
+    if len(hn) > 0:
+        return hn[0]
+    return ""
+
+def hyponym( word, sense="" ):
+    fw = FlowerWord( word )
+    hn = fw.hyponyms()
+    if len(hn) > 0:
+        return hn[0]
+    return ""
+
+"""
+(6, en.noun.holonym  , "has-parts"),
+(2, en.noun.meronym  , "is-part-of"),
+(2, en.noun.antonym  , "is-opposite-of"),
+(3, en.noun.hypernym , "is-a"),
+(2, en.verb.senses   , "is-action"),
+(6, en.noun.hyponym  , "has-specific"),
+"""
+
+
+
 from random import shuffle
 
 #### WORDNET GRAPH #############################################################
@@ -131,12 +182,12 @@ class wordnetgraph(graph.graph):
             words.append((lexname, "category "))
         
         relations = [
-            (6, en.noun.holonym  , "has-parts"),
-            (2, en.noun.meronym  , "is-part-of"),
-            (2, en.noun.antonym  , "is-opposite-of"),
-            (3, en.noun.hypernym , "is-a"),
-            (2, en.verb.senses   , "is-action"),
-            (6, en.noun.hyponym  , "has-specific"),
+            (6, holonym  , "has-parts"),
+            (2, meronym  , "is-part-of"),
+            (2, antonym  , "is-opposite-of"),
+            (3, hypernym , "is-a"),
+            (2, senses   , "is-action"),
+            (6, hyponym  , "has-specific"),
         ]
         # Get related words from WordNet.
         # Exclude long words and take the top of the list.
