@@ -13,11 +13,13 @@
 <v t="karstenw.20230227153059.1" a="E"><vh>@clean __init__.py</vh>
 <v t="karstenw.20230227153123.1"><vh>Declarations</vh></v>
 <v t="karstenw.20230227161027.1"><vh>Globals</vh></v>
-<v t="karstenw.20230320155634.1"><vh>FlowerWord</vh>
-<v t="karstenw.20230320155634.2"><vh>__init__</vh></v>
-<v t="karstenw.20230320155634.3"><vh>hyponyms</vh></v>
-<v t="karstenw.20230320155634.4"><vh>hypernyms</vh></v>
-<v t="karstenw.20230320155634.5"><vh>senses</vh></v>
+<v t="karstenw.20230323132157.1"><vh>FlowerWord</vh>
+<v t="karstenw.20230323132157.2"><vh>__init__</vh></v>
+<v t="karstenw.20230323132157.3"><vh>hyponyms</vh></v>
+<v t="karstenw.20230323132157.4"><vh>hypernyms</vh></v>
+<v t="karstenw.20230323132157.5"><vh>senses</vh></v>
+<v t="karstenw.20230323132157.6"><vh>holonyms</vh></v>
+<v t="karstenw.20230323132157.7"><vh>meronyms</vh></v>
 </v>
 <v t="karstenw.20230310134343.1"><vh>printsynset</vh></v>
 <v t="karstenw.20230227153522.1" a="E"><vh>+ GRAMMAR +</vh>
@@ -672,12 +674,12 @@ _ctx.strokewidth(0.5)
 
 
 </t>
-<t tx="karstenw.20230320155634.1">class FlowerWord:
+<t tx="karstenw.20230323132157.1">class FlowerWord:
     @others
 
 
 </t>
-<t tx="karstenw.20230320155634.2">def __init__(self, word):
+<t tx="karstenw.20230323132157.2">def __init__(self, word):
     # pdb.set_trace()
     self.word = word
     self.synsets = wordnet.synsets( word )
@@ -685,19 +687,27 @@ _ctx.strokewidth(0.5)
     self.antonym = ""
     self.gloss = ""
     self.synset = None
+    self.synonyms = []
+    self.antonym = ""
+    self.gloss = ""
+    self.lexname = ""
+
     if len(self.synsets) &gt; 0:
         synonyms = self.synsets[0].synonyms
         try:
             self.idx = synonyms.index(word)
-            self.synset = synonyms[self.idx]
+            w = self.synset = self.synsets[self.idx]
+            #print("Found synset:", w)
         except:
-            pass
-        self.antonym = self.synsets[0].antonym
-        self.gloss = self.synsets[0].gloss
-        self.lexname = self.synsets[0].lexname
+            w = self.synsets[0]
+            #print("Use synset:", w)
+
+        self.antonym = w.antonym
+        self.gloss = w.gloss
+        self.lexname = w.lexname
 
 </t>
-<t tx="karstenw.20230320155634.3">def hyponyms(self):
+<t tx="karstenw.20230323132157.3">def hyponyms(self):
     result = []
     for synset in self.synsets:
         hyponyms = synset.hyponyms()
@@ -710,7 +720,7 @@ _ctx.strokewidth(0.5)
     return result
 
 </t>
-<t tx="karstenw.20230320155634.4">def hypernyms(self):
+<t tx="karstenw.20230323132157.4">def hypernyms(self):
     result = []
     for synset in self.synsets:
         hypernyms = synset.hypernyms()
@@ -724,13 +734,39 @@ _ctx.strokewidth(0.5)
 
 
 </t>
-<t tx="karstenw.20230320155634.5">def senses(self):
+<t tx="karstenw.20230323132157.5">def senses(self):
     result = []
     for synset in self.synsets:
         senses = synset.senses
         result.append( senses )
     return result
 
+
+</t>
+<t tx="karstenw.20230323132157.6">def holonyms(self):
+    result = []
+    for synset in self.synsets:
+        holonyms = synset.holonyms()
+        for holonym in holonyms:
+            synonyms = hyponym.synonyms
+            for synonym in synonyms:
+                synonym = synonym.replace("_", " ")
+                result.append( synonym )
+    result = list(set(result))
+    return result
+
+</t>
+<t tx="karstenw.20230323132157.7">def meronyms(self):
+    result = []
+    for synset in self.synsets:
+        meronyms = synset.meronyms()
+        for meronym in meronyms:
+            synonyms = hyponym.synonyms
+            for synonym in synonyms:
+                synonym = synonym.replace("_", " ")
+                result.append( synonym )
+    result = list(set(result))
+    return result
 
 </t>
 </tnodes>
