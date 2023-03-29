@@ -43,12 +43,12 @@
 <v t="karstenw.20230316191528.21"><vh>_concepts</vh></v>
 <v t="karstenw.20230316191528.22"><vh>disambiguate</vh></v>
 </v>
-<v t="karstenw.20230316191528.23"><vh>query_old</vh>
+<v t="karstenw.20230316191528.23" a="E"><vh>query_nodebox.net</vh>
 <v t="karstenw.20230318130728.1"><vh>&lt;&lt; init &gt;&gt;</vh></v>
 <v t="karstenw.20230318130824.1"><vh>&lt;&lt; url params &gt;&gt;</vh></v>
 <v t="karstenw.20230318130949.1"><vh>&lt;&lt; read and cache url &gt;&gt;</vh></v>
 </v>
-<v t="karstenw.20230329015952.1"><vh>query_new</vh></v>
+<v t="karstenw.20230329015952.1"><vh>query_api.conceptnet.io</vh></v>
 <v t="karstenw.20230329020107.1"><vh>query</vh></v>
 </v>
 <v t="karstenw.20230316194255.1"><vh>+ CONCEPT CLUSTER +</vh>
@@ -68,7 +68,7 @@
 <v t="karstenw.20230316191528.37"><vh>is_related</vh></v>
 <v t="karstenw.20230316191528.38"><vh>is_effect</vh></v>
 </v>
-<v t="karstenw.20230316194456.1" a="E"><vh>+ NODE RULE RETRIEVAL +</vh>
+<v t="karstenw.20230316194456.1"><vh>+ NODE RULE RETRIEVAL +</vh>
 <v t="karstenw.20230316191528.39"><vh>enumerate_rules</vh></v>
 <v t="karstenw.20230316191528.40"><vh>specific parts opposites properties associations aliases effects type whole objects causes</vh></v>
 </v>
@@ -77,7 +77,7 @@
 <v t="karstenw.20230316191528.52"><vh>add_rule</vh></v>
 <v t="karstenw.20230316191528.53"><vh>cluster</vh></v>
 </v>
-<v t="karstenw.20230316194605.1" a="E"><vh>+ CLUSTER HEURISTICS +</vh>
+<v t="karstenw.20230316194605.1"><vh>+ CLUSTER HEURISTICS +</vh>
 <v t="karstenw.20230316191528.54"><vh>proper_nouns</vh></v>
 <v t="karstenw.20230316191528.55"><vh>proper_leaves</vh></v>
 <v t="karstenw.20230316191528.56"><vh>neighbors</vh></v>
@@ -91,7 +91,7 @@
 <v t="karstenw.20230316191528.63"><vh>graph_specific</vh></v>
 <v t="karstenw.20230316191528.64"><vh>graph_objects</vh></v>
 </v>
-<v t="karstenw.20230316194702.1" a="E"><vh>+ TAXONOMY +</vh>
+<v t="karstenw.20230316194702.1"><vh>+ TAXONOMY +</vh>
 <v t="karstenw.20230316191528.65"><vh>taxonomy</vh></v>
 <v t="karstenw.20230316191528.66" a="E"><vh>class _range</vh>
 <v t="karstenw.20230316191528.67"><vh>__init__</vh></v>
@@ -101,7 +101,7 @@
 <v t="karstenw.20230316191528.71"><vh>__call__</vh></v>
 </v>
 </v>
-<v t="karstenw.20230316194807.1" a="E"><vh>+ INDEX +</vh>
+<v t="karstenw.20230316194807.1"><vh>+ INDEX +</vh>
 <v t="karstenw.20230316191528.72" a="E"><vh>class _index</vh>
 <v t="karstenw.20230316191528.73"><vh>__init__</vh></v>
 <v t="karstenw.20230316191528.74"><vh>_get_name</vh></v>
@@ -113,7 +113,7 @@
 </v>
 <v t="karstenw.20230316191528.80"><vh>_build_properties_index</vh></v>
 </v>
-<v t="karstenw.20230316194837.1" a="E"><vh>+ SOLVER +</vh>
+<v t="karstenw.20230316194837.1"><vh>+ SOLVER +</vh>
 <v t="karstenw.20230316191528.81"><vh>add_method</vh></v>
 <v t="karstenw.20230316191528.82"><vh>score</vh></v>
 <v t="karstenw.20230316191528.83"><vh>class IndexError</vh></v>
@@ -126,7 +126,7 @@
 <v t="karstenw.20230316191528.90"><vh>sort_by_relevance</vh></v>
 </v>
 </v>
-<v t="karstenw.20230316194920.1" a="E"><vh>+ ANALOGY +</vh>
+<v t="karstenw.20230316194920.1"><vh>+ ANALOGY +</vh>
 <v t="karstenw.20230316191528.91" a="E"><vh>class _analogy</vh>
 <v t="karstenw.20230316191528.92"><vh>__init__</vh></v>
 <v t="karstenw.20230316191528.93"><vh>_best_first</vh></v>
@@ -136,11 +136,11 @@
 <v t="karstenw.20230316191528.96"><vh>count</vh></v>
 <v t="karstenw.20230316191528.97"><vh>clean</vh></v>
 </v>
-<v t="karstenw.20230316195011.1" a="E"><vh>+ SIMILE +</vh>
+<v t="karstenw.20230316195011.1"><vh>+ SIMILE +</vh>
 <v t="karstenw.20230316191528.98"><vh>suggest_properties</vh></v>
 <v t="karstenw.20230316191528.99"><vh>suggest_objects</vh></v>
 </v>
-<v t="karstenw.20230316195027.1" a="E"><vh>+ COMPARATIVE +</vh>
+<v t="karstenw.20230316195027.1"><vh>+ COMPARATIVE +</vh>
 <v t="karstenw.20230316191528.100" a="E"><vh>class compare_concepts</vh>
 <v t="karstenw.20230316191528.101"><vh>__init__</vh></v>
 <v t="karstenw.20230316191528.102"><vh>graph</vh></v>
@@ -150,13 +150,34 @@
 </v>
 <v t="karstenw.20230316195056.1"><vh>+ OUTRO +</vh></v>
 </v>
+<v t="karstenw.20230329114829.1" a="E"><vh>@clean conceptnet_api.py</vh>
+<v t="karstenw.20230329114912.1"><vh>Declarations</vh></v>
+<v t="karstenw.20230329120105.1"><vh>+ TOOLS +</vh>
+<v t="karstenw.20230329120105.2"><vh>py3</vh>
+<v t="karstenw.20230329120105.3"><vh>py3 stuff</vh></v>
+<v t="karstenw.20230329120105.4"><vh>cmp_to_key</vh></v>
+<v t="karstenw.20230329120105.5"><vh>sortlist</vh></v>
+</v>
+<v t="karstenw.20230329120105.6"><vh>nodecompare</vh></v>
+<v t="karstenw.20230329120105.7"><vh>makeunicode</vh></v>
+<v t="karstenw.20230329120105.8"><vh>hashFromString</vh></v>
+</v>
+<v t="karstenw.20230329120012.1"><vh>+ Cache +</vh>
+<v t="karstenw.20230329120012.2"><vh>_path</vh></v>
+<v t="karstenw.20230329120012.3"><vh>cache</vh></v>
+<v t="karstenw.20230329120012.4"><vh>cached</vh></v>
+<v t="karstenw.20230329120012.5"><vh>in_cache</vh></v>
+<v t="karstenw.20230329120012.6"><vh>clear_cache</vh></v>
+</v>
+<v t="karstenw.20230329115242.1"><vh>query_api.conceptnet.io</vh></v>
+</v>
 </v>
 </vnodes>
 <tnodes>
 <t tx="karstenw.20230316191437.2"></t>
-<t tx="karstenw.20230316191501.1">@others
-@language python
+<t tx="karstenw.20230316191501.1">@language python
 @tabwidth -4
+@others
 </t>
 <t tx="karstenw.20230316191528.1"># coding: utf-8
 
@@ -334,8 +355,8 @@ typ = type
         os.unlink(f)
 
 </t>
-<t tx="karstenw.20230316191528.14">def is_robot(author):
-    return author == "robots@nodebox.net"
+<t tx="karstenw.20230316191528.14">#def is_robot(author):
+#    return author == "robots@nodebox.net"
 
 </t>
 <t tx="karstenw.20230316191528.15">def normalize( s ):
@@ -461,7 +482,7 @@ concepts = property(_concepts)
 
 
 </t>
-<t tx="karstenw.20230316191528.23">def query_old(concept, relation=None, context=None, author=None, depth=1, max=None, wait=10):
+<t tx="karstenw.20230316191528.23">def query_nb(concept, relation=None, context=None, author=None, depth=1, max=None, wait=10):
     
     """ Returns search results from the NodeBox Perception database.
     Retrieves a list of rules involving the given concept, relation, context and author.
@@ -681,16 +702,20 @@ VOTE = 0.05
         # is-opposite-of edges are not interesting when looking for a shortest path,
         # because they represent a reversal in logic.
         weight = 0.25
-    if author == "":
-        # Discourage rules from anonymous authors.
-        weight -= 0.25
-    if is_robot(author):
-        # Robots score less than people.
-        weight -= 0.25
+
+    # switch to conceptnet
+    #if author == "":
+    #    # Discourage rules from anonymous authors.
+    #    weight -= 0.25
+    #if is_robot(author):
+    #    # Robots score less than people.
+    #    weight -= 0.25
+
     e = graph.edge(concept1, concept2)
     if e and e.relation == relation:# and e.context == context:
         v = VOTE
-        if is_robot(author): v *= 0.5
+        #if is_robot(author):
+        #    v *= 0.5
         e.weight += v
     else:
         e = graph.add_edge(concept1, concept2, weight, length, label)
@@ -1131,7 +1156,7 @@ solver = _solver()
 </t>
 <t tx="karstenw.20230316191528.9">def _path(key):
     h = hashFromString(key)
-    return os.path.join(CACHE, h + ".txt")
+    return os.path.join(CACHE, h + ".json")
     
 </t>
 <t tx="karstenw.20230316191528.90">def sort_by_relevance(self, root, concepts, threshold=0, weighted=False):
@@ -1458,6 +1483,7 @@ basic_properties = [
 <t tx="karstenw.20230316191816.1">#### CACHE ###########################################################################################
 # Caches the results returned from the NodeBox Perception API so queries run faster.
 
+# TODO: Move to linguistics data
 CACHE = os.path.join(os.path.dirname(__file__), "cache")
 
 </t>
@@ -1583,7 +1609,7 @@ else:
         raise InternetError( api + "\n" + e)
 </t>
 <t tx="karstenw.20230318131229.1"></t>
-<t tx="karstenw.20230329015952.1">def query_new(concept, relation=None, context=None, depth=1, max=None, wait=20):
+<t tx="karstenw.20230329015952.1">def query_cn(concept, relation=None, context=None, depth=1, max=None, wait=20, lang="en"):
     
     """ Returns search results from Conceptnet.
     Retrieves a list of rules involving the given concept, relation and context.
@@ -1645,7 +1671,218 @@ else:
     return rules
 
 </t>
-<t tx="karstenw.20230329020107.1">query = query_old
+<t tx="karstenw.20230329020107.1">query = query_nb
+
+</t>
+<t tx="karstenw.20230329114829.1">@language python
+@tabwidth -4
+@others
+
+if __name__ == '__main__':
+    pdb.set_trace()
+    r1,j1 = query_cn( 'kiss' )
+    r2,j2 = query_cn( 'dog' )
+    r3,j3 = query_cn( 'bird' )
+    pp(r1)
+    pp(r2)
+    pp(r3)
+
+
+</t>
+<t tx="karstenw.20230329114912.1">
+# coding: utf-8
+
+
+
+# Copyright (c) 2023 Karsten Wolf
+# 
+
+__author__    = "Karsten Wolf"
+__version__   = "alpha"
+__copyright__ = "Copyright (c) 2023 Karsten Wolf"
+__license__   = "BSD"
+
+########################################################################################
+
+import sys
+import os
+import pprint
+pp = pprint.pprint
+
+import hashlib
+import requests
+import json
+
+import pdb
+</t>
+<t tx="karstenw.20230329115242.1">def query_cn(concept, relation=None, context=None, depth=1, max=None, wait=2, lang="en"):
+    
+    """ Returns search results from Conceptnet.
+    Retrieves a list of rules involving the given concept, relation and context.
+    If depth is &gt; 1, returns a cluster of rules:
+    - concepts connected to the given concept = depth 1
+    - concepts connected to the depth 1 set = depth 2, etc.
+    """
+
+    if concept == None:
+        concept = ""
+
+    concept = concept.lower()
+    concept = concept.replace(" ", "_")
+    lang = lang.lower()
+    
+    url = 'http://api.conceptnet.io/c/%s/%s' % (lang,concept)
+
+    if in_cache( url ):
+        jsontext = cached( url )
+        data = json.loads( jsontext )
+        response = ""
+        print("CACHED")
+    else:
+        print("URL load:", url)
+        try:
+            # setdefaulttimeout(wait)
+            response = requests.get( url )
+            data = response.json()
+            cache(url, json.dumps(data) )
+        except Exception as e:
+            print("\nquery_cn() failed.")
+            print(url)
+            print(e)
+            print()
+            # raise InternetError( url + "\n" + e)
+    
+    
+    rules = Rules()
+    if not data:
+        return rules
+
+    for rule in response.split("\n"):
+        rule = rule.split(",")
+        concept1 = _parse(rule[0])
+        relation = _parse(rule[1])
+        concept2 = _parse(rule[2])
+        context  = _parse(rule[3])
+        weight   = float(_parse(rule[4]))
+        author   = _parse(rule[5])
+        date     = _parse(rule[6])
+        rules.append(Rule(concept1, relation, concept2, context, weight, author, date))
+
+    return rules
+
+</t>
+<t tx="karstenw.20230329120012.1">#### CACHE ###########################################################################################
+# Caches the results returned from the NodeBox Perception API so queries run faster.
+
+# TODO: Move to linguistics data
+CACHE = os.path.join(os.path.dirname(__file__), "cache")
+
+</t>
+<t tx="karstenw.20230329120012.2">def _path(key):
+    print("_path( %s )" % (key,))
+    h = hashFromString(key)
+    return os.path.join(CACHE, h + ".json")
+    
+</t>
+<t tx="karstenw.20230329120012.3">def cache(key, value):
+    print("cache( %s, value )" % (key,))
+    open(_path(key), "w").write(value)
+    
+</t>
+<t tx="karstenw.20230329120012.4">def cached(key):
+    print("cached( %s )" % (key,))
+    return open(_path(key)).read()
+    
+</t>
+<t tx="karstenw.20230329120012.5">def in_cache(key):
+    print("in_cache( %s )" % (key,))
+    return os.path.exists(_path(key))
+
+</t>
+<t tx="karstenw.20230329120012.6">def clear_cache():
+    for f in glob.glob(os.path.join(CACHE, "*")):
+        os.unlink(f)
+
+</t>
+<t tx="karstenw.20230329120105.1"></t>
+<t tx="karstenw.20230329120105.2"></t>
+<t tx="karstenw.20230329120105.3"># py3 stuff
+py3 = False
+try:
+    unicode('')
+    punicode = unicode
+    pstr = str
+    punichr = unichr
+except NameError:
+    punicode = str
+    pstr = bytes
+    py3 = True
+    punichr = chr
+    long = int
+
+
+</t>
+<t tx="karstenw.20230329120105.4">def cmp_to_key(mycmp):
+    'Convert a cmp= function into a key= function'
+    class K:
+        def __init__(self, obj, *args):
+            self.obj = obj
+        def __lt__(self, other):
+            return mycmp(self.obj, other.obj) &lt; 0
+        def __gt__(self, other):
+            return mycmp(self.obj, other.obj) &gt; 0
+        def __eq__(self, other):
+            return mycmp(self.obj, other.obj) == 0
+        def __le__(self, other):
+            return mycmp(self.obj, other.obj) &lt;= 0
+        def __ge__(self, other):
+            return mycmp(self.obj, other.obj) &gt;= 0
+        def __ne__(self, other):
+            return mycmp(self.obj, other.obj) != 0
+    return K
+
+
+</t>
+<t tx="karstenw.20230329120105.5">def sortlist(thelist, thecompare):
+    if py3:
+        sortkeyfunction = cmp_to_key( thecompare )
+        thelist.sort( key=sortkeyfunction )
+    else:
+        thelist.sort( thecompare )
+
+
+</t>
+<t tx="karstenw.20230329120105.6">def nodecompare( a, b):
+    if a[0] &gt; b[0]:
+        return 1
+    elif a[0] &lt; b[0]:
+        return -1
+    return 0
+
+
+</t>
+<t tx="karstenw.20230329120105.7">def makeunicode(s, srcencoding="utf-8", normalizer="NFC"):
+    try:
+        if typ(s) not in (punicode, pstr):
+            s = str( s )
+
+        if typ(s) not in (punicode,):
+            s = str(s, srcencoding)
+    except TypeError:
+        print( "makeunicode type conversion error" )
+        print( "FAILED converting", typ(s), "to unicode" )
+    s = unicodedata.normalize(normalizer, s)
+    return s
+
+
+</t>
+<t tx="karstenw.20230329120105.8">def hashFromString( s ):
+    if type( s ) in (punicode,):
+        s = s.encode("utf-8")
+    h = hashlib.sha1()
+    h.update( s )
+    return h.hexdigest()
+
 
 </t>
 </tnodes>

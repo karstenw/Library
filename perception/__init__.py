@@ -159,11 +159,12 @@ basic_properties = [
 #### CACHE ###########################################################################################
 # Caches the results returned from the NodeBox Perception API so queries run faster.
 
+# TODO: Move to linguistics data
 CACHE = os.path.join(os.path.dirname(__file__), "cache")
 
 def _path(key):
     h = hashFromString(key)
-    return os.path.join(CACHE, h + ".txt")
+    return os.path.join(CACHE, h + ".json")
     
 def cache(key, value):
     open(_path(key), "w").write(value)
@@ -183,8 +184,8 @@ def clear_cache():
 # Locally cached results are used whenever available.
 
 AUTHOR = ""
-def is_robot(author):
-    return author == "robots@nodebox.net"
+#def is_robot(author):
+#    return author == "robots@nodebox.net"
 
 def normalize( s ):
     """ Returns lowercase version of string with accents removed.
@@ -278,7 +279,7 @@ class Rules(list):
         return self._root
 
 
-def query_old(concept, relation=None, context=None, author=None, depth=1, max=None, wait=10):
+def query_nb(concept, relation=None, context=None, author=None, depth=1, max=None, wait=10):
     
     """ Returns search results from the NodeBox Perception database.
     Retrieves a list of rules involving the given concept, relation, context and author.
@@ -341,7 +342,7 @@ def query_old(concept, relation=None, context=None, author=None, depth=1, max=No
         rules.append(Rule(concept1, relation, concept2, context, weight, author, date))
     return rules
 
-def query_new(concept, relation=None, context=None, depth=1, max=None, wait=20):
+def query_cn(concept, relation=None, context=None, depth=1, max=None, wait=20, lang="en"):
     
     """ Returns search results from Conceptnet.
     Retrieves a list of rules involving the given concept, relation and context.
@@ -402,7 +403,7 @@ def query_new(concept, relation=None, context=None, depth=1, max=None, wait=20):
         rules.append(Rule(concept1, relation, concept2, context, weight, author, date))
     return rules
 
-query = query_old
+query = query_nb
 
 #### CONCEPT CLUSTER ################################################################################# 
 # Extends the Graph and Node objects for handling a semantic network of rules.
@@ -566,16 +567,20 @@ def add_rule(graph, concept1, relation, concept2, context="", author="",
         # is-opposite-of edges are not interesting when looking for a shortest path,
         # because they represent a reversal in logic.
         weight = 0.25
-    if author == "":
-        # Discourage rules from anonymous authors.
-        weight -= 0.25
-    if is_robot(author):
-        # Robots score less than people.
-        weight -= 0.25
+
+    # switch to conceptnet
+    #if author == "":
+    #    # Discourage rules from anonymous authors.
+    #    weight -= 0.25
+    #if is_robot(author):
+    #    # Robots score less than people.
+    #    weight -= 0.25
+
     e = graph.edge(concept1, concept2)
     if e and e.relation == relation:# and e.context == context:
         v = VOTE
-        if is_robot(author): v *= 0.5
+        #if is_robot(author):
+        #    v *= 0.5
         e.weight += v
     else:
         e = graph.add_edge(concept1, concept2, weight, length, label)
