@@ -20,7 +20,7 @@ print("import pattern %.3f" % (s3-s2) )
 
 # pdb.set_trace()
 
-synsets = wordnet.synsets('bird')
+synsets = wordnet.synsets('dog')
 s = synsets[0]
 print( '    synset:', s )
 print( '     gloss:', s.gloss )
@@ -58,3 +58,14 @@ if 0:
     s5 = time.time()
     print("check all synsets %.3f" % (s5-s4) )
 
+
+#import nltk
+#import nltk.corpus
+#from nltk.corpus.reader.framenet import PrettyList
+#fn = import nltk.corpus.framenet
+
+
+import perception
+pdb.set_trace()
+q = perception.cluster("cool", depth=2, max=30, labeled=False)
+print( q )
