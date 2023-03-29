@@ -11,6 +11,8 @@ except ImportError:
     graph = ximport("__init__")
     # reload(graph)
 
+from random import shuffle
+
 import linguistics
 import pattern
 import pattern.text
@@ -18,8 +20,14 @@ import pattern.text.en
 en = pattern.text.en
 wordnet = pattern.text.en.wordnet
 
+
 nouns = set(list( wordnet.NOUNS() ))
 
+
+
+#### REPLACEMENTS ##############################################################
+# 
+# these should move two levels up into linguistics
 
 
 def holonym( word, sense="" ):
@@ -31,15 +39,17 @@ def holonym( word, sense="" ):
 
 def meronym( word, sense="" ):
     fw = FlowerWord( word )
-    hn = fw.meronyms()
+    mn = fw.meronyms()
     if len(hn) > 0:
-        return hn[0]
+        return mn[0]
     return ""
 
 def antonym( word, sense="" ):
     fw = FlowerWord( word )
     hn = fw.holonyms()
-    return hn.antonym
+    if len(hn) > 0:
+        return hn[0].antonym
+    return ""
 
 def hypernym( word, sense="" ):
     fw = FlowerWord( word )
@@ -62,18 +72,6 @@ def hyponym( word, sense="" ):
         return hn[0]
     return ""
 
-"""
-(6, en.noun.holonym  , "has-parts"),
-(2, en.noun.meronym  , "is-part-of"),
-(2, en.noun.antonym  , "is-opposite-of"),
-(3, en.noun.hypernym , "is-a"),
-(2, en.verb.senses   , "is-action"),
-(6, en.noun.hyponym  , "has-specific"),
-"""
-
-
-
-from random import shuffle
 
 #### WORDNET GRAPH #############################################################
 
@@ -182,6 +180,7 @@ class wordnetgraph(graph.graph):
             words.append((lexname, "category "))
         
         relations = [
+            # (6, en.noun.holonym  , "has-parts"),
             (6, holonym  , "has-parts"),
             (2, meronym  , "is-part-of"),
             (2, antonym  , "is-opposite-of"),

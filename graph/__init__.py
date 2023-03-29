@@ -95,10 +95,10 @@ class FlowerWord:
             try:
                 self.idx = synonyms.index(word)
                 w = self.synset = self.synsets[self.idx]
-                print("Found synset:", w)
+                #print("Found synset:", w)
             except:
                 w = self.synsets[0]
-                print("Use synset:", w)
+                #print("Use synset:", w)
 
             self.antonym = w.antonym
             self.gloss = w.gloss

@@ -9,14 +9,14 @@
 <preferences/>
 <find_panel_settings/>
 <vnodes>
-<v t="karstenw.20230319195648.2" a="E"><vh>grapgh</vh>
+<v t="karstenw.20230319195648.2" a="E"><vh>graph</vh>
 <v t="karstenw.20230319195720.1" a="E"><vh>@clean __init__.py</vh>
 <v t="karstenw.20230319195736.1"><vh>Declarations</vh></v>
 <v t="karstenw.20230319202717.1" a="E"><vh>py3</vh>
 <v t="karstenw.20230319202717.2"><vh>py3 stuff</vh></v>
 <v t="karstenw.20230319202717.3"><vh>cmp_to_key</vh></v>
 <v t="karstenw.20230319202717.4"><vh>sortlist</vh></v>
-<v t="karstenw.20230320154844.1" a="E"><vh>FlowerWord</vh>
+<v t="karstenw.20230320154844.1"><vh>FlowerWord</vh>
 <v t="karstenw.20230320154844.2"><vh>__init__</vh></v>
 <v t="karstenw.20230320154844.3"><vh>hyponyms</vh></v>
 <v t="karstenw.20230320154844.4"><vh>hypernyms</vh></v>
@@ -26,7 +26,7 @@
 </v>
 <v t="karstenw.20230319203345.1"><vh>newHeadline</vh></v>
 </v>
-<v t="karstenw.20230319195736.2"><vh>class node</vh>
+<v t="karstenw.20230319195736.2" a="E"><vh>class node</vh>
 <v t="karstenw.20230319195736.3"><vh>__init__</vh></v>
 <v t="karstenw.20230319195736.4"><vh>_edges</vh></v>
 <v t="karstenw.20230319195736.5"><vh>_is_leaf</vh></v>
@@ -1148,10 +1148,10 @@ except NameError:
         try:
             self.idx = synonyms.index(word)
             w = self.synset = self.synsets[self.idx]
-            print("Found synset:", w)
+            #print("Found synset:", w)
         except:
             w = self.synsets[0]
-            print("Use synset:", w)
+            #print("Use synset:", w)
 
         self.antonym = w.antonym
         self.gloss = w.gloss
