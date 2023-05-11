@@ -1,6 +1,5 @@
 from random import random
-from math import pi, sin, cos
-from math import sqrt
+from math import pi, sin, cos, sqrt
 
 class Point:
     def __init__(self, x, y):
@@ -40,21 +39,24 @@ class layout(object):
             n.vx = 0
             n.vy = 0
             n.force = Point(0,0)    
-    
+
     def _bounds(self):
         
-        min = Point(float( INFINITY), float( INFINITY))
-        max = Point(float(-INFINITY), float(-INFINITY))
+        # min = Point(float( INFINITY), float( INFINITY))
+        # max = Point(float(-INFINITY), float(-INFINITY))
+        minx, miny = float( INFINITY), float( INFINITY)
+        maxx, maxy = float(-INFINITY), float(-INFINITY)
         for n in self.graph.nodes:
-            if (n.vx < min.x): min.x = n.vx
-            if (n.vy < min.y): min.y = n.vy
-            if (n.vx > max.x): max.x = n.vx
-            if (n.vy > max.y): max.y = n.vy
+            if (n.vx < minx): minx = n.vx
+            if (n.vy < miny): miny = n.vy
+            if (n.vx > maxx): maxx = n.vx
+            if (n.vy > maxy): maxy = n.vy
       
-        return (min, max)
+        # return (min, max)
+        return Point(minx,miny), Point( maxx, maxy )
 
     bounds = property(_bounds)
-    
+
     def _get_done(self):
         
         if self.i >= self.n: 
@@ -62,7 +64,7 @@ class layout(object):
         return False
         
     done = property(_get_done)
-    
+
     def iterate(self):
         
         self.i += 1
@@ -89,24 +91,24 @@ class circle_layout(layout):
     """
     
     def __init__(self, graph, iterations=100):
-    
+
         layout.__init__(self, graph, iterations)
         self.type = "circle"    
         
         self.r = 8    # outer circle radius
         self.c = 2    # number of circles
         self.a = pi/2 # starting angle
-    
+
     def _get_orbits(self): return self.c
     def _set_orbits(self, v): self.c = v
     orbits = property(_get_orbits, _set_orbits)
-    
+
     def copy(self, graph):
         
         l = layout.copy(self, graph)
         l.r, l.c, l.a = self.r, self.c, self.a
         return l
-    
+
     def iterate(self):
         
         if len(self.graph.nodes) == 1: return
@@ -179,14 +181,14 @@ class spring_layout(layout):
         self.w = 15   # edge weight multiplier
         self.d = 0.5  # maximum vertex movement
         self.r = 15   # maximum repulsive force radius
-    
+
     def tweak(self, k=2, m=0.01, w=15, d=0.5, r=15):
         self.k = k
         self.m = m
         self.w = w
         self.d = d
         self.r = r
-    
+
     def _get_force(self): return self.m
     def _set_force(self, v): self.m = v
     force = property(_get_force, _set_force)
@@ -194,13 +196,13 @@ class spring_layout(layout):
     def _get_repulsion(self): return self.r
     def _set_repulsion(self, v): self.r = v
     repulsion = property(_get_repulsion, _set_repulsion)
-    
+
     def copy(self, graph):
         
         l = layout.copy(self, graph)
         l.k, l.m, l.d, l.r = self.k, self.m, self.d, self.r
         return l
-    
+
     def iterate(self):
         
         # Forces on all nodes due to node-node repulsions.
@@ -224,7 +226,7 @@ class spring_layout(layout):
             n.force.y = 0
         
         return layout.iterate(self)
-    
+
     def _distance(self, n1, n2):
         
         dx = n2.vx - n1.vx
@@ -239,7 +241,7 @@ class spring_layout(layout):
         d = sqrt(d2)
         
         return dx, dy, d
-    
+
     def _repulse(self, n1, n2):
         
         dx, dy, d = self._distance(n1, n2)
