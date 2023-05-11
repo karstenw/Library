@@ -198,14 +198,17 @@ class GraphBrowser:
         
         """
         
-        if not self.has_node(node.id): return
-        if node == self.graph.nodes[0]: return
+        if not self.has_node(node.id):
+            return
+        if node == self.graph.nodes[0]:
+            return
         
         d = self.graph.distance_from_center(node)
         self.dx = d.x
         self.dy = d.y
         p = self.graph.nodes[0].id
-        if p == node.id: prev = None
+        if p == node.id:
+            prev = None
         self._reload(node.id, previous=p)  
 
     def node_hovered(self, node):
@@ -218,8 +221,8 @@ class GraphBrowser:
         
         """
         
-        if self.marquee == None \
-        or self.marquee.id != node.id:
+        if (    self.marquee == None
+             or self.marquee.id != node.id ):
             msg = self.get_node_descriptions(node.id)
             if len(msg) > 0:
                 self.marquee = GraphMarquee(node.id, msg, speed=self.marquee_speed, w=self.marquee_width)
