@@ -7,7 +7,7 @@ except ImportError:
     # we may need to try something different when
     # the library is not located in /Application Support
     graph = ximport("__init__")
-    reload(graph)
+    # reload(graph)
 
 size(500, 500)
 
