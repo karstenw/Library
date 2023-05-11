@@ -649,7 +649,7 @@ class Color(BaseColor):
         which default to the state colormode and color range.
         
         """
-
+        # pdb.set_trace()
         self.name = ""
 
         try:
@@ -2931,7 +2931,9 @@ class ColorTheme(_list):
             xml = archive.read(member)
         dom = parseString(xml).documentElement
         
-        attr = lambda e, a: e.attributes[a].value
+        # attr = lambda e, a: e.attributes[a].value
+        def attr( e, a ):
+            return e.attributes[a].value
         
         for e in dom.getElementsByTagName("color")[:top]:
             w = float(attr(e, "weight")) 
@@ -2946,12 +2948,14 @@ class ColorTheme(_list):
                 )
                 try: 
                     clr.name = attr(e, "name")
-                    if clr.name == "blue": clr = color(blue)
+                    if clr.name == "blue":
+                        clr = color(blue)
                 except: 
                     pass
             except:
                 name = attr(e, "name")
-                if name == "blue": name = blue
+                if name == "blue":
+                    name = blue
                 clr = color(name)
                
             for s in e.getElementsByTagName("shade"):
