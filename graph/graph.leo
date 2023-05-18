@@ -250,24 +250,26 @@
 </v>
 </v>
 <v t="karstenw.20230507120719.1" a="E"><vh>examples</vh>
-<v t="karstenw.20230507120724.1" a="E"><vh>@clean graph_example1.py</vh>
+<v t="karstenw.20230507120724.1"><vh>@clean graph_example1.py</vh>
 <v t="karstenw.20230507120759.1"><vh>Declarations</vh></v>
 </v>
-<v t="karstenw.20230507120741.1" a="E"><vh>@clean graph_example2.py</vh>
+<v t="karstenw.20230507120741.1"><vh>@clean graph_example2.py</vh>
 <v t="karstenw.20230507120757.1"><vh>Declarations</vh></v>
 </v>
-<v t="karstenw.20230507120743.1" a="E"><vh>@clean graph_example3.py</vh>
+<v t="karstenw.20230507120743.1"><vh>@clean graph_example3.py</vh>
 <v t="karstenw.20230507120755.1"><vh>Declarations</vh></v>
 <v t="karstenw.20230507120755.2"><vh>draw</vh></v>
 </v>
 <v t="karstenw.20230507120747.1" a="E"><vh>@clean graph_example4.py</vh>
 <v t="karstenw.20230507120753.1"><vh>Declarations</vh></v>
+<v t="karstenw.20230518121333.1" a="E"><vh>+ REPLACEMENTS</vh>
 <v t="karstenw.20230507120753.2"><vh>holonym</vh></v>
 <v t="karstenw.20230507120753.3"><vh>meronym</vh></v>
 <v t="karstenw.20230507120753.4"><vh>antonym</vh></v>
 <v t="karstenw.20230507120753.5"><vh>hypernym</vh></v>
 <v t="karstenw.20230507120753.6"><vh>senses</vh></v>
 <v t="karstenw.20230507120753.7"><vh>hyponym</vh></v>
+</v>
 <v t="karstenw.20230507120753.8"><vh>class wordnetgraph</vh>
 <v t="karstenw.20230507120753.9"><vh>__init__</vh></v>
 <v t="karstenw.20230507120753.10"><vh>is_expandable</vh></v>
@@ -286,6 +288,7 @@
 <v t="karstenw.20230507120753.22"><vh>log_pressed</vh></v>
 <v t="karstenw.20230507120753.23"><vh>log_clicked</vh></v>
 </v>
+<v t="karstenw.20230518121412.1"><vh>newHeadline</vh></v>
 <v t="karstenw.20230507120753.24"><vh>draw</vh></v>
 </v>
 </v>
@@ -3102,34 +3105,34 @@ def makeunicode(s, srcencoding="utf-8", normalizer="NFC"):
 
 </t>
 <t tx="karstenw.20230507120719.1"></t>
-<t tx="karstenw.20230507120724.1">@others
-@language python
+<t tx="karstenw.20230507120724.1">@language python
 @tabwidth -4
+@others
 </t>
-<t tx="karstenw.20230507120741.1">@others
-@language python
+<t tx="karstenw.20230507120741.1">@language python
 @tabwidth -4
+@others
 </t>
-<t tx="karstenw.20230507120743.1">@others
-@language python
+<t tx="karstenw.20230507120743.1">@language python
 @tabwidth -4
+@others
 </t>
-<t tx="karstenw.20230507120747.1"># A graph that browses through the WordNet dictionary.
+<t tx="karstenw.20230507120747.1">@language python
+@tabwidth -4
+@others
+</t>
+<t tx="karstenw.20230507120753.1"># A graph that browses through the WordNet dictionary.
 # You can click on nodes (including "has-parts" and "has-specific").
 # You'll need the NodeBox Linguistics library installed.
 # Author: Tom De Smedt.
 
-@others
-@language python
-@tabwidth -4
-</t>
-<t tx="karstenw.20230507120753.1">query = "bird"
+query = "bird"
 
 try:
     graph = ximport("graph")
 except ImportError:
     graph = ximport("__init__")
-    # reload(graph)
+
 
 from random import shuffle
 
@@ -3143,11 +3146,6 @@ wordnet = pattern.text.en.wordnet
 
 nouns = set(list( wordnet.NOUNS() ))
 
-
-
-#### REPLACEMENTS ##############################################################
-# 
-# these should move two levels up into linguistics
 
 
 </t>
@@ -3182,7 +3180,7 @@ nouns = set(list( wordnet.NOUNS() ))
 
 </t>
 <t tx="karstenw.20230507120753.12">def get_senses(self, word, top=6):
- 
+
     """ The graph displays the different senses of a noun,
     e.g. light -&gt; lighter, luminosity, sparkle, ...
     """
@@ -3344,19 +3342,14 @@ nouns = set(list( wordnet.NOUNS() ))
     self.senses.draw()
 
 </t>
-<t tx="karstenw.20230507120753.18">class senses:
+<t tx="karstenw.20230507120753.18">### WORD SENSE SELECTION #######################################################
+
+class senses:
     
     """ A row of word sense selection buttons.
     """
     
     @others
-######################################################################################################
-
-g = wordnetgraph(distance=1.2)
-g.load(query)
-
-size(550, 550)
-speed(30) 
 </t>
 <t tx="karstenw.20230507120753.19">def __init__(self, graph, x, y):
     
@@ -3514,8 +3507,6 @@ speed(30)
     """
     
     @others
-### WORD SENSE SELECTION #######################################################
-
 </t>
 <t tx="karstenw.20230507120753.9">def __init__(self, iterations=2000, distance=1.3):
     
@@ -3543,7 +3534,7 @@ g = graph.create(iterations=1000, distance=1.2, layout="spring")
 
 # Add nodes with a random id,
 # connected to other random nodes.
-for i in range(90):
+for i in range(60):
     node1 = g.add_node(random(500))
     if random() &gt; 0.5:
         for i in range(choice((1, 4))):
@@ -3553,7 +3544,7 @@ for i in range(90):
 g.prune()
 g.styles.apply()
 
-speed(30)
+speed(10)
 </t>
 <t tx="karstenw.20230507120755.2">def draw():
     
@@ -3649,6 +3640,20 @@ g.draw(
 
 # You'll see that "house" is the key node,
 # and that "room" gets the most traffic.
+</t>
+<t tx="karstenw.20230518121333.1">#### REPLACEMENTS ##############################################################
+# 
+# these should move two levels up into linguistics
+
+
+</t>
+<t tx="karstenw.20230518121412.1">######################################################################################################
+
+g = wordnetgraph(distance=1.2)
+g.load(query)
+
+size(550, 550)
+speed(30) 
 </t>
 </tnodes>
 </leo_file>
