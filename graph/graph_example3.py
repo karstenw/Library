@@ -4,13 +4,13 @@ except ImportError:
     graph = ximport("__init__")
     # reload(graph)
 
-size(500, 500)
+size(800, 800)
 
 g = graph.create(iterations=1000, distance=1.2, layout="spring")
 
 # Add nodes with a random id,
 # connected to other random nodes.
-for i in range(30):
+for i in range(60):
     node1 = g.add_node(random(500))
     if random() > 0.5:
         for i in range(choice((1, 4))):
@@ -20,7 +20,7 @@ for i in range(30):
 g.prune()
 g.styles.apply()
 
-speed(30)
+speed(10)
 def draw():
     
     # If the graph layout is done,

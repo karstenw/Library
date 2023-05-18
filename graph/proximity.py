@@ -11,7 +11,7 @@ class priorityqueue(dict):
     
     def push(self, e, w): 
         self[e] = w
-    
+
     def pop(self):
         p, w = None, float(INFINITY)
         for e in self:
@@ -192,9 +192,10 @@ def brandes_betweenness_centrality(graph, normalized=True, directed=False):
         betweenness = dict([(id, w/m) for id, w in betweenness.items()])
         return betweenness
 
-#--- EIGENVECTOR CENTRALITY --------------------------------------------------------------------------
+class NoConvergenceError(Exception):
+    pass
 
-class NoConvergenceError(Exception): pass
+#--- EIGENVECTOR CENTRALITY --------------------------------------------------------------------------
 
 def eigenvector_centrality(graph, normalized=True, reversed=True, rating={},
                            start=None, iterations=100, tolerance=0.0001):

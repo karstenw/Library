@@ -12,8 +12,9 @@
 <v t="karstenw.20230316191437.2" a="E"><vh>perception</vh>
 <v t="karstenw.20230316191501.1" a="E"><vh>@clean __init__.py</vh>
 <v t="karstenw.20230316191528.1"><vh>Declarations</vh></v>
+<v t="karstenw.20230417110004.1"><vh>+ GLOBALS +</vh></v>
 <v t="karstenw.20230318131229.1"><vh>+ TOOLS +</vh>
-<v t="karstenw.20230316191631.1"><vh>py3</vh>
+<v t="karstenw.20230316191631.1" a="E"><vh>py3</vh>
 <v t="karstenw.20230316191639.1"><vh>py3 stuff</vh></v>
 <v t="karstenw.20230316191528.2"><vh>cmp_to_key</vh></v>
 <v t="karstenw.20230316191528.3"><vh>sortlist</vh></v>
@@ -23,50 +24,54 @@
 <v t="karstenw.20230316191528.7"><vh>hashFromString</vh></v>
 <v t="karstenw.20230316191528.8"><vh>range_</vh></v>
 </v>
-<v t="karstenw.20230316191737.1"><vh>BASIC PROPERTIES</vh></v>
+<v t="karstenw.20230316191737.1"><vh>+ BASIC PROPERTIES +</vh></v>
 <v t="karstenw.20230316191816.1"><vh>+ Cache +</vh>
+<v t="karstenw.20230403165828.1"><vh>_newpath  ## UNUSED ##</vh></v>
 <v t="karstenw.20230316191528.9"><vh>_path</vh></v>
 <v t="karstenw.20230316191528.10"><vh>cache</vh></v>
 <v t="karstenw.20230316191528.11"><vh>cached</vh></v>
 <v t="karstenw.20230316191528.12"><vh>in_cache</vh></v>
 <v t="karstenw.20230316191528.13"><vh>clear_cache</vh></v>
+<v t="karstenw.20230505121633.1"><vh>cachefiles</vh></v>
 </v>
-<v t="karstenw.20230318130644.1" a="E"><vh>+ API +</vh>
-<v t="karstenw.20230316191528.14"><vh>is_robot</vh></v>
+<v t="karstenw.20230318130644.1"><vh>+ API +</vh>
+<v t="karstenw.20230505102222.1" a="E"><vh>+ OFF +</vh>
+<v t="karstenw.20230316191528.14"><vh>is_robot - OFF</vh></v>
+<v t="karstenw.20230330102024.1" a="E"><vh>+ QUERY CONCEPTNET API +</vh>
+<v t="karstenw.20230330142517.1"><vh>download_url</vh></v>
+<v t="karstenw.20230330170426.1"><vh>make_url</vh></v>
+<v t="karstenw.20230330103714.1"><vh>get_query_cnconcept</vh></v>
+<v t="karstenw.20230329145218.1"><vh>get_query_lang_concept</vh></v>
+<v t="karstenw.20230329150729.1"><vh>get_egde_nodes</vh></v>
+<v t="karstenw.20230329150748.1"><vh>get_next_page</vh></v>
+<v t="karstenw.20230330104408.1"><vh>get_all_pages</vh></v>
+<v t="karstenw.20230329135420.1"><vh>query_cn   --   api.conceptnet.io</vh></v>
+<v t="karstenw.20230403170112.1" a="E"><vh>+ NEW STUFF UNSORTED +</vh>
+<v t="karstenw.20230403170027.1"><vh>getoldwords</vh></v>
+<v t="karstenw.20230403170129.1"><vh>getpatternwords</vh></v>
+<v t="karstenw.20230403170137.1"><vh>scancache</vh></v>
+<v t="karstenw.20230403170145.1"><vh>loadcache</vh></v>
+<v t="karstenw.20230403170157.1"><vh>ask</vh></v>
+</v>
+</v>
+</v>
 <v t="karstenw.20230316191528.15"><vh>normalize</vh></v>
 <v t="karstenw.20230316191528.16"><vh>class InternetError</vh></v>
 <v t="karstenw.20230316191528.17"><vh>class Rule</vh>
 <v t="karstenw.20230316191528.18"><vh>__init__</vh></v>
 <v t="karstenw.20230316191528.19"><vh>__repr__</vh></v>
 </v>
-<v t="karstenw.20230316191528.20"><vh>class Rules</vh>
+<v t="karstenw.20230316191528.20" a="E"><vh>class Rules</vh>
 <v t="karstenw.20230316191528.21"><vh>_concepts</vh></v>
 <v t="karstenw.20230316191528.22"><vh>disambiguate</vh></v>
 </v>
-<v t="karstenw.20230316191528.23" a="E"><vh>query_nodebox.net</vh>
-<v t="karstenw.20230318130728.1"><vh>&lt;&lt; init &gt;&gt;</vh></v>
-<v t="karstenw.20230318130824.1"><vh>&lt;&lt; url params &gt;&gt;</vh></v>
-<v t="karstenw.20230318130949.1"><vh>&lt;&lt; read and cache url &gt;&gt;</vh></v>
 </v>
-<v t="karstenw.20230329015952.1"><vh>query_api.conceptnet.io</vh></v>
-<v t="karstenw.20230329020107.1"><vh>query</vh></v>
+<v t="karstenw.20230417110310.1" a="E"><vh>+ QUERY SQLITE +</vh>
+<v t="karstenw.20230417105918.1"><vh>query_cnr</vh></v>
 </v>
-<v t="karstenw.20230316194255.1"><vh>+ CONCEPT CLUSTER +</vh>
+<v t="karstenw.20230316194255.1" a="E"><vh>+ CONCEPT CLUSTER +</vh>
 <v t="karstenw.20230316191528.24"><vh>has_rule</vh></v>
 <v t="karstenw.20230316191528.25"><vh>is_a</vh></v>
-<v t="karstenw.20230316191528.26"><vh>is_part_of</vh></v>
-<v t="karstenw.20230316191528.27"><vh>is_opposite_of</vh></v>
-<v t="karstenw.20230316191528.28"><vh>is_property_of</vh></v>
-<v t="karstenw.20230316191528.29"><vh>is_related_to</vh></v>
-<v t="karstenw.20230316191528.30"><vh>is_same_as</vh></v>
-<v t="karstenw.20230316191528.31"><vh>is_effect_of</vh></v>
-<v t="karstenw.20230316191528.32"><vh>has_specific</vh></v>
-<v t="karstenw.20230316191528.33"><vh>has_part</vh></v>
-<v t="karstenw.20230316191528.34"><vh>has_property</vh></v>
-<v t="karstenw.20230316191528.35"><vh>has_effect</vh></v>
-<v t="karstenw.20230316191528.36"><vh>is_property</vh></v>
-<v t="karstenw.20230316191528.37"><vh>is_related</vh></v>
-<v t="karstenw.20230316191528.38"><vh>is_effect</vh></v>
 </v>
 <v t="karstenw.20230316194456.1"><vh>+ NODE RULE RETRIEVAL +</vh>
 <v t="karstenw.20230316191528.39"><vh>enumerate_rules</vh></v>
@@ -77,7 +82,7 @@
 <v t="karstenw.20230316191528.52"><vh>add_rule</vh></v>
 <v t="karstenw.20230316191528.53"><vh>cluster</vh></v>
 </v>
-<v t="karstenw.20230316194605.1"><vh>+ CLUSTER HEURISTICS +</vh>
+<v t="karstenw.20230316194605.1" a="E"><vh>+ CLUSTER HEURISTICS +</vh>
 <v t="karstenw.20230316191528.54"><vh>proper_nouns</vh></v>
 <v t="karstenw.20230316191528.55"><vh>proper_leaves</vh></v>
 <v t="karstenw.20230316191528.56"><vh>neighbors</vh></v>
@@ -91,9 +96,9 @@
 <v t="karstenw.20230316191528.63"><vh>graph_specific</vh></v>
 <v t="karstenw.20230316191528.64"><vh>graph_objects</vh></v>
 </v>
-<v t="karstenw.20230316194702.1"><vh>+ TAXONOMY +</vh>
+<v t="karstenw.20230316194702.1" a="E"><vh>+ TAXONOMY +</vh>
 <v t="karstenw.20230316191528.65"><vh>taxonomy</vh></v>
-<v t="karstenw.20230316191528.66" a="E"><vh>class _range</vh>
+<v t="karstenw.20230316191528.66"><vh>class _range</vh>
 <v t="karstenw.20230316191528.67"><vh>__init__</vh></v>
 <v t="karstenw.20230316191528.68"><vh>append</vh></v>
 <v t="karstenw.20230316191528.69"><vh>_hyponyms</vh></v>
@@ -102,7 +107,7 @@
 </v>
 </v>
 <v t="karstenw.20230316194807.1"><vh>+ INDEX +</vh>
-<v t="karstenw.20230316191528.72" a="E"><vh>class _index</vh>
+<v t="karstenw.20230316191528.72"><vh>class _index</vh>
 <v t="karstenw.20230316191528.73"><vh>__init__</vh></v>
 <v t="karstenw.20230316191528.74"><vh>_get_name</vh></v>
 <v t="karstenw.20230316191528.75"><vh>_set_name</vh></v>
@@ -113,7 +118,7 @@
 </v>
 <v t="karstenw.20230316191528.80"><vh>_build_properties_index</vh></v>
 </v>
-<v t="karstenw.20230316194837.1"><vh>+ SOLVER +</vh>
+<v t="karstenw.20230316194837.1" a="E"><vh>+ SOLVER +</vh>
 <v t="karstenw.20230316191528.81"><vh>add_method</vh></v>
 <v t="karstenw.20230316191528.82"><vh>score</vh></v>
 <v t="karstenw.20230316191528.83"><vh>class IndexError</vh></v>
@@ -126,21 +131,23 @@
 <v t="karstenw.20230316191528.90"><vh>sort_by_relevance</vh></v>
 </v>
 </v>
-<v t="karstenw.20230316194920.1"><vh>+ ANALOGY +</vh>
+<v t="karstenw.20230316194920.1" a="E"><vh>+ ANALOGY +</vh>
 <v t="karstenw.20230316191528.91" a="E"><vh>class _analogy</vh>
 <v t="karstenw.20230316191528.92"><vh>__init__</vh></v>
 <v t="karstenw.20230316191528.93"><vh>_best_first</vh></v>
 <v t="karstenw.20230316191528.94"><vh>__call__</vh></v>
 </v>
+<v t="karstenw.20230330100356.1" a="E"><vh>+ SEARCH-MATCH-PARSE +</vh>
 <v t="karstenw.20230316191528.95"><vh>search_match_parse</vh></v>
+</v>
 <v t="karstenw.20230316191528.96"><vh>count</vh></v>
 <v t="karstenw.20230316191528.97"><vh>clean</vh></v>
 </v>
-<v t="karstenw.20230316195011.1"><vh>+ SIMILE +</vh>
+<v t="karstenw.20230316195011.1" a="E"><vh>+ SIMILE +</vh>
 <v t="karstenw.20230316191528.98"><vh>suggest_properties</vh></v>
 <v t="karstenw.20230316191528.99"><vh>suggest_objects</vh></v>
 </v>
-<v t="karstenw.20230316195027.1"><vh>+ COMPARATIVE +</vh>
+<v t="karstenw.20230316195027.1" a="E"><vh>+ COMPARATIVE +</vh>
 <v t="karstenw.20230316191528.100" a="E"><vh>class compare_concepts</vh>
 <v t="karstenw.20230316191528.101"><vh>__init__</vh></v>
 <v t="karstenw.20230316191528.102"><vh>graph</vh></v>
@@ -149,27 +156,6 @@
 <v t="karstenw.20230316191528.104"><vh>suggest_comparisons</vh></v>
 </v>
 <v t="karstenw.20230316195056.1"><vh>+ OUTRO +</vh></v>
-</v>
-<v t="karstenw.20230329114829.1" a="E"><vh>@clean conceptnet_api.py</vh>
-<v t="karstenw.20230329114912.1"><vh>Declarations</vh></v>
-<v t="karstenw.20230329120105.1"><vh>+ TOOLS +</vh>
-<v t="karstenw.20230329120105.2"><vh>py3</vh>
-<v t="karstenw.20230329120105.3"><vh>py3 stuff</vh></v>
-<v t="karstenw.20230329120105.4"><vh>cmp_to_key</vh></v>
-<v t="karstenw.20230329120105.5"><vh>sortlist</vh></v>
-</v>
-<v t="karstenw.20230329120105.6"><vh>nodecompare</vh></v>
-<v t="karstenw.20230329120105.7"><vh>makeunicode</vh></v>
-<v t="karstenw.20230329120105.8"><vh>hashFromString</vh></v>
-</v>
-<v t="karstenw.20230329120012.1"><vh>+ Cache +</vh>
-<v t="karstenw.20230329120012.2"><vh>_path</vh></v>
-<v t="karstenw.20230329120012.3"><vh>cache</vh></v>
-<v t="karstenw.20230329120012.4"><vh>cached</vh></v>
-<v t="karstenw.20230329120012.5"><vh>in_cache</vh></v>
-<v t="karstenw.20230329120012.6"><vh>clear_cache</vh></v>
-</v>
-<v t="karstenw.20230329115242.1"><vh>query_api.conceptnet.io</vh></v>
 </v>
 </v>
 </vnodes>
@@ -205,6 +191,14 @@ __license__   = "GPL"
 ########################################################################################
 
 import os
+import time
+
+startimport = time.time()
+
+
+import linguistics
+import conceptnetreader
+
 # import md5
 import hashlib
 import glob
@@ -213,32 +207,39 @@ from socket import setdefaulttimeout
 # from urllib2 import urlopen
 from urllib.request import urlopen
 import urllib.parse
+
 import pickle
+import json
+import pprint
+pp = pprint.pprint
+
 from random import random
-
 import requests
+import pdb
 
-# import pdb
 
 import graph
 from graph.cluster import sorted, unique
 
-import linguistics
+
 import pattern
-import pattern.text
 import pattern.web
+import pattern.text
 import pattern.text.en
 en = pattern.text.en
-wordnet = en.wordnet
-web = pattern.web
 
-# for whoever effed up the def type() below...
-typ = type
+import textblob
+
+stopimport = time.time()
+print("perception import pattern: %.3f" % (stopimport-startimport,)  )
 
 </t>
-<t tx="karstenw.20230316191528.10">def cache(key, value):
-    open(_path(key), "w").write(value)
-    
+<t tx="karstenw.20230316191528.10">def cache(key, value, ext='.json'):
+    if ext=='.json':
+        return open(_path(key,ext), "w").write(value)
+    return open(_path(key,ext), "wb").write(value)
+
+
 </t>
 <t tx="karstenw.20230316191528.100">class compare_concepts(list):
     
@@ -333,7 +334,7 @@ typ = type
     """ With the reverse logic we can find relations between concepts.
     """
     matches = search_match_parse(
-        "\""+concept1+" is * than "+concept2+"\"",
+        "\"" + concept1 + " is * than " + concept2 + "\"",
         "is (*) * than",
         lambda chunk_: " ".join(x[0] for x in chunk_[1:-1]), # A is bigger than B --&gt; bigger
         service="google", 
@@ -342,17 +343,21 @@ typ = type
     return count(matches)
 
 </t>
-<t tx="karstenw.20230316191528.11">def cached(key):
-    return open(_path(key)).read()
-    
+<t tx="karstenw.20230316191528.11">def cached(key, ext='.json'):
+    if ext == '.json':
+        return open(_path(key, ext=ext)).read()
+    return open(_path(key, ext=ext), 'rb').read()
+
 </t>
-<t tx="karstenw.20230316191528.12">def in_cache(key):
-    return os.path.exists(_path(key))
+<t tx="karstenw.20230316191528.12">def in_cache(key, ext=".json"):
+    return os.path.exists(_path(key, ext))
+
 
 </t>
 <t tx="karstenw.20230316191528.13">def clear_cache():
     for f in glob.glob(os.path.join(CACHE, "*")):
         os.unlink(f)
+
 
 </t>
 <t tx="karstenw.20230316191528.14">#def is_robot(author):
@@ -388,18 +393,20 @@ typ = type
     
     @others
 </t>
-<t tx="karstenw.20230316191528.18">def __init__(self, concept1, relation, concept2, context=None, weight=1,
+<t tx="karstenw.20230316191528.18">def __init__(self, concept1, relation, concept2, lang1="en", lang2="en", context=None, weight=1.0,
                    author=None, date=None):
     """ A rule from the NodeBox Perception database,
     e.g. 'cat' is-a 'predator' in the 'nature' context.
     """
     self.concept1 = concept1
+    self.lang1    = lang1
     self.relation = relation
     self.concept2 = concept2
+    self.lang2    = lang2
     self.context  = context
     self.weight   = weight
-    self.author   = author
-    self.date     = date
+    #self.author   = author
+    #self.date     = date
 
 </t>
 <t tx="karstenw.20230316191528.19">def __repr__(self):
@@ -482,41 +489,6 @@ concepts = property(_concepts)
 
 
 </t>
-<t tx="karstenw.20230316191528.23">def query_nb(concept, relation=None, context=None, author=None, depth=1, max=None, wait=10):
-    
-    """ Returns search results from the NodeBox Perception database.
-    Retrieves a list of rules involving the given concept, relation, context and author.
-    If depth is &gt; 1, returns a cluster of rules:
-    - concepts connected to the given concept = depth 1
-    - concepts connected to the depth 1 set = depth 2, etc.
-    """
-
-    &lt;&lt; init &gt;&gt;
-
-    &lt;&lt; url params &gt;&gt;
-
-    &lt;&lt; read and cache url &gt;&gt;
-    
-    rules = Rules()
-    if response == "": 
-        return rules
-    def _parse(s):
-        s = s.strip(" '")
-        s = s.replace("\\'", "'")
-        return s
-    for rule in response.split("\n"):
-        rule = rule.split(",")
-        concept1 = _parse(rule[0])
-        relation = _parse(rule[1])
-        concept2 = _parse(rule[2])
-        context  = _parse(rule[3])
-        weight   = float(_parse(rule[4]))
-        author   = _parse(rule[5])
-        date     = _parse(rule[6])
-        rules.append(Rule(concept1, relation, concept2, context, weight, author, date))
-    return rules
-
-</t>
 <t tx="karstenw.20230316191528.24">def has_rule(node1, relation, node2=None, direct=True, reversed=False):
     """ Returns True if the edge between node1 and node2 is the given relation type.
     If node2 is not given, searches all linked nodes for the relation type.
@@ -555,36 +527,17 @@ graph.node.has_rule = has_rule
 
 </t>
 <t tx="karstenw.20230316191528.25">def is_a(node1, node2, direct=True)           : return node1.has_rule("is-a",           node2, direct)
-</t>
-<t tx="karstenw.20230316191528.26">def is_part_of(node1, node2, direct=True)     : return node1.has_rule("is-part-of",     node2, direct)
-</t>
-<t tx="karstenw.20230316191528.27">def is_opposite_of(node1, node2, direct=True) : return node1.has_rule("is-opposite-of", node2, direct)
-</t>
-<t tx="karstenw.20230316191528.28">def is_property_of(node1, node2, direct=True) : return node1.has_rule("is-property-of", node2, direct)
-</t>
-<t tx="karstenw.20230316191528.29">def is_related_to(node1, node2, direct=True)  : return node1.has_rule("is-related-to",  node2, direct)
-</t>
-<t tx="karstenw.20230316191528.3">def sortlist(thelist, thecompare):
-    if py3:
-        sortkeyfunction = cmp_to_key( thecompare )
-        thelist.sort( key=sortkeyfunction )
-    else:
-        thelist.sort( thecompare )
+def is_part_of(node1, node2, direct=True)     : return node1.has_rule("is-part-of",     node2, direct)
+def is_opposite_of(node1, node2, direct=True) : return node1.has_rule("is-opposite-of", node2, direct)
+def is_property_of(node1, node2, direct=True) : return node1.has_rule("is-property-of", node2, direct)
+def is_related_to(node1, node2, direct=True)  : return node1.has_rule("is-related-to",  node2, direct)
+def is_same_as(node1, node2, direct=True)     : return node1.has_rule("is-same-as",     node2, direct)
+def is_effect_of(node1, node2, direct=True)   : return node1.has_rule("is-effect-of",   node2, direct)
 
-
-</t>
-<t tx="karstenw.20230316191528.30">def is_same_as(node1, node2, direct=True)     : return node1.has_rule("is-same-as",     node2, direct)
-</t>
-<t tx="karstenw.20230316191528.31">def is_effect_of(node1, node2, direct=True)   : return node1.has_rule("is-effect-of",   node2, direct)
-
-</t>
-<t tx="karstenw.20230316191528.32">def has_specific(node1, node2, direct=True)   : return node2.has_rule("is-a",           node1, direct)
-</t>
-<t tx="karstenw.20230316191528.33">def has_part(node1, node2, direct=True)       : return node2.has_rule("is-part-of",     node1, direct)
-</t>
-<t tx="karstenw.20230316191528.34">def has_property(node1, node2, direct=True)   : return node2.has_rule("is-property-of", node1, direct)
-</t>
-<t tx="karstenw.20230316191528.35">def has_effect(node1, node2, direct=True)     : return node2.has_rule("is-effect_of",   node1, direct)
+def has_specific(node1, node2, direct=True)   : return node2.has_rule("is-a",           node1, direct)
+def has_part(node1, node2, direct=True)       : return node2.has_rule("is-part-of",     node1, direct)
+def has_property(node1, node2, direct=True)   : return node2.has_rule("is-property-of", node1, direct)
+def has_effect(node1, node2, direct=True)     : return node2.has_rule("is-effect_of",   node1, direct)
 
 graph.node.is_a           = is_a
 graph.node.is_part_of     = is_part_of
@@ -599,16 +552,22 @@ graph.node.has_part       = has_part
 graph.node.has_property   = has_property
 graph.node.has_effect     = has_effect 
 
-</t>
-<t tx="karstenw.20230316191528.36">def is_property(node) : return node.has_rule("is-property-of")
-</t>
-<t tx="karstenw.20230316191528.37">def is_related(node)  : return node.has_rule("is-related-to")
-</t>
-<t tx="karstenw.20230316191528.38">def is_effect(node)   : return node.has_rule("is-effect-of")
+def is_property(node) : return node.has_rule("is-property-of")
+def is_related(node)  : return node.has_rule("is-related-to")
+def is_effect(node)   : return node.has_rule("is-effect-of")
 
 graph.node.is_property = property(is_property)
 graph.node.is_related  = property(is_related)
 graph.node.is_effect   = property(is_effect)
+
+</t>
+<t tx="karstenw.20230316191528.3">def sortlist(thelist, thecompare):
+    if py3:
+        sortkeyfunction = cmp_to_key( thecompare )
+        thelist.sort( key=sortkeyfunction )
+    else:
+        thelist.sort( thecompare )
+
 
 </t>
 <t tx="karstenw.20230316191528.39">def enumerate_rules(node, relation, depth=1, reversed=False):
@@ -722,13 +681,13 @@ VOTE = 0.05
         if e:
             e.relation = relation
             e.context  = context
-            e.author   = author
+            # e.author   = author
     return e
     
 graph.graph.add_rule = add_rule
 
 </t>
-<t tx="karstenw.20230316191528.53">def cluster(concept, relation=None, context=None, author=None, depth=2, max=None, labeled=False, 
+<t tx="karstenw.20230316191528.53">def cluster(concept, relation=None, context=None, author=None, depth=2, maxedges=None, labeled=False, 
             wait=15):
     """ Returns the given Perception query as a graph of connected concept nodes.
     """
@@ -736,7 +695,8 @@ graph.graph.add_rule = add_rule
         graph._ctx = _ctx
     except:
         pass
-    rules = query(concept, relation, context, author, depth, max, wait)
+    rules = query(concept, relation, context, depth, maxedges, wait)
+
     concept = rules.disambiguate(concept)
     g = graph.create()
     style(g)
@@ -748,7 +708,7 @@ graph.graph.add_rule = add_rule
             rule.relation, 
             rule.concept2,
             rule.context,
-            rule.author,
+            "", #rule.author,
             weight = 0.5 + VOTE*(rule.weight-1)
         )
         if e and labeled:
@@ -792,7 +752,7 @@ heuristic = cost
 </t>
 <t tx="karstenw.20230316191528.58">def __init__(self, costs={}, graph=None):
     self.graph = graph
-    for k, v in costs.iteritems():
+    for k, v in costs.items():
         self[k] = v
 </t>
 <t tx="karstenw.20230316191528.59">def tax(self, relation, cost):
@@ -917,6 +877,7 @@ range = _range()
     The dictionary itself contains settings for how graph.specific() is called.
     """
     self.rules = {
+                    #  concept     context   fringe proper 
         "animal"   : ("animal",   "nature",    3, False),
         "tree"     : ("tree",     "nature",    2, False),
         "flower"   : ("flower",   "nature",    2, False),
@@ -1154,10 +1115,11 @@ solver = _solver()
     return _SOLVER_CACHE[concept]
 
 </t>
-<t tx="karstenw.20230316191528.9">def _path(key):
+<t tx="karstenw.20230316191528.9">def _path(key, ext='.json'):
     h = hashFromString(key)
-    return os.path.join(CACHE, h + ".json")
-    
+    return os.path.join(CACHE, h + ext)
+
+
 </t>
 <t tx="karstenw.20230316191528.90">def sort_by_relevance(self, root, concepts, threshold=0, weighted=False):
     
@@ -1229,8 +1191,6 @@ find = sort_by_relevance
     
     @others
 analogy = _analogy()
-
-#### SEARCH-MATCH-PARSE ################################################################
 
 </t>
 <t tx="karstenw.20230316191528.92">def __init__(self):
@@ -1324,6 +1284,9 @@ map_object = __call__
     matches = []
     rawresults = []
 
+    if 1:
+        print( "search_match_parse query:", query )
+        print( "search_match_parse pattern_:", pattern_ )
     if service == "google":
         n = min(n, 4)
         engine = Google(license=None, language="en")
@@ -1358,16 +1321,19 @@ map_object = __call__
             for result in request.value:
                 collect.append( result )
 
-
-        for result in collect:
-            if result.text:
-                # result.description = result.description.replace(",",", ").replace("  "," ")
-                #match = en.sentence.find(result.description.lower(), pattern_)
-                #if len(match) &gt; 0 and len(match[0]) &gt; 0:
-                #    x = parse(match[0])
-                #    matches.append(x)
-                if pattern_ in result.text:
-                    matches.append(x)
+    pdb.set_trace()
+    
+    for result in collect:
+        if result.text:
+            # result.description = result.description.replace(",",", ").replace("  "," ")
+            #match = en.sentence.find(result.description.lower(), pattern_)
+            #if len(match) &gt; 0 and len(match[0]) &gt; 0:
+            #    x = parse(match[0])
+            #    matches.append(x)
+            if 1:
+                pp( result )
+            if pattern_ in result.text:
+                matches.append(result.text)
     return matches
 
 </t>
@@ -1383,8 +1349,13 @@ map_object = __call__
 <t tx="karstenw.20230316191528.97">def clean(word):
     word = word.strip(",;:.?!'`\"-[()]")
     word = word.strip(u"‘“")
-    if word.endswith( "'s"): word = word[:-2]
-    if word.endswith(u"’s"): word = word[:-2]
+    if word[-2:] in ("'s", "’s"):
+        word = word[:-2]
+    if 0:
+        if word.endswith( "'s"):
+            word = word[:-2]
+        if word.endswith(u"’s"):
+            word = word[:-2]
     return word.strip()
 
 </t>
@@ -1484,7 +1455,8 @@ basic_properties = [
 # Caches the results returned from the NodeBox Perception API so queries run faster.
 
 # TODO: Move to linguistics data
-CACHE = os.path.join(os.path.dirname(__file__), "cache")
+CACHE = os.path.abspath(os.path.join(os.path.dirname(__file__), "cache"))
+
 
 </t>
 <t tx="karstenw.20230316194255.1">#### CONCEPT CLUSTER ################################################################################# 
@@ -1566,6 +1538,8 @@ INDEX = os.path.join(os.path.dirname(__file__), "index")
 # - Rebuilt properties index.
 # - Tested if numerical index paths instead of string index paths 
 #   would shrink file size: no difference (due to pickle format?)
+
+
 </t>
 <t tx="karstenw.20230318130644.1">#### API #############################################################################################
 # The query() command returns a list of rules from the online Perception database.
@@ -1573,43 +1547,9 @@ INDEX = os.path.join(os.path.dirname(__file__), "index")
 
 AUTHOR = ""
 </t>
-<t tx="karstenw.20230318130728.1">if concept == None:
-    concept = ""
-
-if author  == None:
-    author  = AUTHOR
-
-robots = author==None
-robots = True
-
-api  = "http://nodebox.net/perception/?q="
-#api  = "http://127.0.0.1/~tom/perception/?q="
-api += concept.replace(" ", "_")
-api += "&amp;format=txt"
-</t>
-<t tx="karstenw.20230318130824.1">if relation != None: api += "&amp;relation=" + relation
-if context  != None: api += "&amp;context="  + context
-if author   != None: api += "&amp;author="   + author
-if depth    &gt;  1   : api += "&amp;depth="    + str(depth)
-if max      != None: api += "&amp;max="      + str(max)
-if robots   == True: api += "&amp;robots=1"
-</t>
-<t tx="karstenw.20230318130949.1">if in_cache(api):
-    response = cached(api)
-else:
-    try:
-        setdefaulttimeout(wait)
-        response = urlopen(api).read()
-        cache(api, response)
-    except Exception as e:
-        print("\nquery() failed.")
-        print(api)
-        print(e)
-        print()
-        raise InternetError( api + "\n" + e)
-</t>
 <t tx="karstenw.20230318131229.1"></t>
-<t tx="karstenw.20230329015952.1">def query_cn(concept, relation=None, context=None, depth=1, max=None, wait=20, lang="en"):
+<t tx="karstenw.20230329135420.1">@
+def query_cn(concept, relation=None, context=None, depth=1, max=None, wait=2, lang="en"):
     
     """ Returns search results from Conceptnet.
     Retrieves a list of rules involving the given concept, relation and context.
@@ -1619,45 +1559,31 @@ else:
     """
 
     if concept == None:
-        concept = ""
+        return Rules()
 
-    api = 'http://nodebox.net/perception/?'
-    params = {'var1': 'some data', 'var2': 1337}
-    print(url + urllib.parse.urlencode(params))
-    
-    api  = "http://nodebox.net/perception/?q="
-    #api  = "http://127.0.0.1/~tom/perception/?q="
-    api += concept.replace(" ", "_")
-    api += "&amp;format=txt"
+    concept = concept.lower()
+    concept = concept.replace(" ", "_")
+    lang = lang.lower()
+    url = make_url( concept, lang)
+    # pdb.set_trace()
 
-    if relation != None: api += "&amp;relation=" + relation
-    if context  != None: api += "&amp;context="  + context
-    if author   != None: api += "&amp;author="   + author
-    if depth    &gt;  1   : api += "&amp;depth="    + str(depth)
-    if max      != None: api += "&amp;max="      + str(max)
-    if robots   == True: api += "&amp;robots=1"
-
-    if in_cache(api):
-        response = cached(api)
+    response, data, pick = get_query_lang_concept( concept, lang, docache=True )
+    if not 'error' in data:
+        if pick==0:
+            data, filecount = get_all_pages( data )
+            cache( url, pickle.dumps( data ), ext='.pickle' )
     else:
-        try:
-            setdefaulttimeout(wait)
-            response = urlopen(api).read()
-            cache(api, response)
-        except Exception as e:
-            print("\nquery() failed.")
-            print(api)
-            print(e)
-            print()
-            raise InternetError( api + "\n" + e)
+        pp( data['error'] )
+    return data
 
+
+    
+    edges = get_edge_nodes( data )
+    
     rules = Rules()
-    if response == "": 
+    if not data:
         return rules
-    def _parse(s):
-        s = s.strip(" '")
-        s = s.replace("\\'", "'")
-        return s
+    
     for rule in response.split("\n"):
         rule = rule.split(",")
         concept1 = _parse(rule[0])
@@ -1665,223 +1591,541 @@ else:
         concept2 = _parse(rule[2])
         context  = _parse(rule[3])
         weight   = float(_parse(rule[4]))
-        author   = _parse(rule[5])
+        # author   = _parse(rule[5])
         date     = _parse(rule[6])
-        rules.append(Rule(concept1, relation, concept2, context, weight, author, date))
+        rules.append(Rule(concept1, relation, concept2, context, weight=weight )) #, author=author, date=date))
+        
     return rules
 
 </t>
-<t tx="karstenw.20230329020107.1">query = query_nb
-
-</t>
-<t tx="karstenw.20230329114829.1">@language python
-@tabwidth -4
-@others
-
-if __name__ == '__main__':
-    pdb.set_trace()
-    r1,j1 = query_cn( 'kiss' )
-    r2,j2 = query_cn( 'dog' )
-    r3,j3 = query_cn( 'bird' )
-    pp(r1)
-    pp(r2)
-    pp(r3)
-
-
-</t>
-<t tx="karstenw.20230329114912.1">
-# coding: utf-8
-
-
-
-# Copyright (c) 2023 Karsten Wolf
-# 
-
-__author__    = "Karsten Wolf"
-__version__   = "alpha"
-__copyright__ = "Copyright (c) 2023 Karsten Wolf"
-__license__   = "BSD"
-
-########################################################################################
-
-import sys
-import os
-import pprint
-pp = pprint.pprint
-
-import hashlib
-import requests
-import json
-
-import pdb
-</t>
-<t tx="karstenw.20230329115242.1">def query_cn(concept, relation=None, context=None, depth=1, max=None, wait=2, lang="en"):
-    
-    """ Returns search results from Conceptnet.
-    Retrieves a list of rules involving the given concept, relation and context.
-    If depth is &gt; 1, returns a cluster of rules:
-    - concepts connected to the given concept = depth 1
-    - concepts connected to the depth 1 set = depth 2, etc.
+<t tx="karstenw.20230329145218.1">@
+def get_query_lang_concept( concept, language, docache=True ):
+    """Retrieve the URL and cache the JSON result.
     """
-
-    if concept == None:
-        concept = ""
-
-    concept = concept.lower()
-    concept = concept.replace(" ", "_")
-    lang = lang.lower()
+    # print("get_query_lang_concept( %s, %s )" % (concept, language) )
+    response = ""
+    data = {}
     
-    url = 'http://api.conceptnet.io/c/%s/%s' % (lang,concept)
+    url = 'http://api.conceptnet.io/c/%s/%s' % (language,concept)
+    found = False
+    if docache:
+        if in_cache( url, ext='.pickle'):
+            print("CACHED PICKLE", concept)
+            s = cached( url, ext='.pickle')
+            data = pickle.loads( s )
+            return "", data, 1
+        elif in_cache( url ):
+            print("CACHED JSON", concept)
+            jsontext = cached( url )
+            data = json.loads( jsontext )
+            return "", data, 0
 
-    if in_cache( url ):
+    response, data, err = download_url( url )
+    if docache:
+        cache(url, json.dumps(data), ext='.json')
+    return response, data, 0
+
+
+</t>
+<t tx="karstenw.20230329150729.1">@
+def get_egde_nodes( data ):
+    result = []
+    if 'edges' in data:
+        result.extend( data['edges'] )
+    return result
+
+
+</t>
+<t tx="karstenw.20230329150748.1">@
+def get_next_page( data ):
+    # dummy for now
+    if not 'view' in data:
+        print("get_next_page( data ) FINISHED 1.")
+        return 1,data
+    
+    view = data['view']
+    if not 'nextPage' in view:
+        print("get_next_page( data ) FINISHED 2.")
+        return 1,data
+    
+    cnconcept = view['nextPage']
+    resp, newdata = get_query_cnconcept( cnconcept, docache=True )
+    if 'paginatedProperty' in view:
+        paginatedProperty = view['paginatedProperty']
+        data[paginatedProperty].extend( newdata[paginatedProperty] )
+        if 'nextPage' in newdata['view']:
+            if 0: #resp != "":
+                print("cur / next:", view['nextPage'], newdata['view']['nextPage'] )
+            if view['nextPage'] != newdata['view']['nextPage']:
+                view['nextPage'] = newdata['view']['nextPage']
+                if 0: #resp != "":
+                    print("get_next_page( data ) CONTINUED.")
+                return 0,data
+            else:
+                if 0: #resp != "":
+                    print("get_next_page( data ) FINISHED 3.")
+                return 1,data
+        else:
+            view['lastPage'] = view.get('nextPage', "")
+            view.pop('nextPage', "")
+            if 0: #resp != "":
+                print("get_next_page( data ) FINISHED 4.")
+            return 1,data
+    if resp != "":
+        print("get_next_page( data ) FINISHED 5.")
+    return 1,data
+
+
+</t>
+<t tx="karstenw.20230330100356.1">#### SEARCH-MATCH-PARSE ################################################################
+
+</t>
+<t tx="karstenw.20230330102024.1"></t>
+<t tx="karstenw.20230330103714.1">@
+def get_query_cnconcept( cnconcept, docache=True ):
+    """Retrieve the conceptnet concept (/c/en/word ) and cache the JSON result.
+    """
+    response = ""
+    data = {}
+    
+    url = 'http://api.conceptnet.io%s' % (cnconcept,)
+    
+    print("get_query_cnconcept( %s )" % (cnconcept,) )
+
+    if docache and in_cache( url ):
         jsontext = cached( url )
         data = json.loads( jsontext )
         response = ""
         print("CACHED")
     else:
-        print("URL load:", url)
-        try:
-            # setdefaulttimeout(wait)
-            response = requests.get( url )
-            data = response.json()
-            cache(url, json.dumps(data) )
-        except Exception as e:
-            print("\nquery_cn() failed.")
-            print(url)
-            print(e)
-            print()
-            # raise InternetError( url + "\n" + e)
+        response, data, err = download_url( url )
+        if not 'error' in data:
+            if docache:
+                cache(url, json.dumps(data), ext='.json')
+    return response, data
+
+
+</t>
+<t tx="karstenw.20230330104408.1">@
+def get_all_pages( data ):
+    # pdb.set_trace()
+    i = 1
+    if not 'edges' in data:
+        pp( data )
+        pdb.set_trace()
+        print()
+    print("#edges %i:" % (i,), len(data['edges']) )
+    while True:
+        finished, newdata = get_next_page( data )
+        # print("get_all_pages -&gt; finished:", finished, i)
+        i += 1
+        data = newdata
+        print("#edges %i:" % (i,), len(data['edges']) )
+        if finished:
+            break
+    return data, i
+
+
+</t>
+<t tx="karstenw.20230330142517.1">@
+def download_url( url ):
+    response = ""
+    data = {}
+    err = ""
+    # print("URL load:", url)
+    try:
+        # setdefaulttimeout(wait)
+        response = requests.get( url )
+        jsontext = response.json()
+        time.sleep(0.9)
+    except Exception as err:
+        print("\ndownload_url() failed.")
+        print(url)
+        print(err)
+        print()
+        # raise InternetError( url + "\n" + e)
+    return response, jsontext, err
+
+</t>
+<t tx="karstenw.20230330170426.1">@
+def make_url( concept, language="" ):
+    if language != "":
+        return 'http://api.conceptnet.io/c/%s/%s' % (language,concept)
+    return 'http://api.conceptnet.io%s' % (concept,)
+
+
+</t>
+<t tx="karstenw.20230403165828.1">def _newpath( key, ext='.json' ):
+    h = hashFromString(key)
+    foldername = h[:2]
+    folder = os.path.join(CACHE, folder)
+    if not os.path.exists( folder ):
+        os.makedirs( folder )
+    return os.path.join(CACHE, folder, h + ext)
+
+
+</t>
+<t tx="karstenw.20230403170027.1">@
+def getoldwords():
+    words = getpatternwords()
+    # print(words)
+    print("#words and concepts:", len(words))
+    cachedc, totalc, words = scancache( words )
+    print( "LOADED:  %i / %i" % (cachedc, totalc) )
+    print( "REMAINING:", len(words) )
+    for word in words:
+        print()
+        print(word)
+        q = query_cn( word )
+
+
+</t>
+<t tx="karstenw.20230403170112.1"></t>
+<t tx="karstenw.20230403170129.1">@
+def getpatternwords():
+    path = os.path.abspath("./doc/data/commonsense.tab")
+    f = open(path, 'r')
+    words = set()
+    # pdb.set_trace()
+    for line in f:
+        line = line.rstrip( "\r\n" )
+        items = line.split("\t")
+        c1,rel,c2,ctx,w = items
+        if float(w) &gt;= 1.0:
+            words.add( c1.lower().strip() )
+            words.add( c2.lower().strip() )
+            if ctx.lower().strip():
+                words.add( ctx.lower().strip() )
+    return words
+
+
+</t>
+<t tx="karstenw.20230403170137.1">@
+def scancache( concepts ):
+    totalc = cachedc = 0
+    result = set()
+    for concept in concepts:
+        totalc += 1
+        concept = concept.lower()
+        concept = concept.replace(" ", "_")
+        url = make_url( concept, 'en')
+        if in_cache( url, ext='.pickle'):
+            cachedc += 1
+        else:
+            result.add( concept )
+    return cachedc, totalc, result
+
+
+</t>
+<t tx="karstenw.20230403170145.1">@
+def loadcache():
+    allfiles = cachefiles( old=True )
+    result = {}
+    paths = []
+    
+    # pdb.set_trace()
+    
+    for path in allfiles:
+        path = os.path.abspath( path )
+        folder, filename = os.path.split( path )
+        basename, ext = os.path.splitext( filename )
+        
+        if ext.lower() not in ('.pickle',):
+            continue
+        paths.append( path )
     
     
+    fout = open("allrules.tab", 'w')
+    keyout = open("allkeys.tab", 'w')
+    
+    okrelations = (
+        "/r/RelatedTo /r/FormOf /r/IsA /r/PartOf /r/HasA "
+        "/r/UsedFor /r/CapableOf /r/AtLocation /r/HasProperty "
+        "/r/Synonym /r/Antonym /r/DistinctFrom /r/DerivedFrom "
+        "/r/SymbolOf /r/DefinedAs /r/MannerOf /r/HasContext "
+        "/r/SimilarTo /r/EtymologicallyRelatedTo /r/EtymologicallyDerivedFrom "
+        "/r/MadeOf ").split()
+    okrelations = tuple( okrelations )
+    
+    symmetricrelations = (
+        "/r/RelatedTo /r/Synonym /r/Antonym /r/DistinctFrom /r/LocatedNear "
+        "/r/SimilarTo /r/EtymologicallyRelatedTo ").split()
+    symmetricrelations = tuple( symmetricrelations )
+    
+    template = "%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n"
+    fout.write( "allrulesid\t"
+                "concept1\tconcept1label\tconcept1language\ttype1\tcontext1\t"
+                "relation\t"
+                "concept2\tconcept2label\tconcept2language\ttype2\tcontext2\t"
+                "weight\n")
+    keyout.write( "idallrules\n" )
+    
+    translationskips = doubles = 0
+    
+    # switches
+    
+    # skip translation /r/RelatedTo
+    skipRelatedTranslations = True
+    
+    # 
+    # filter and convert perception relations
+    # 
+    #
+    
+    longurls = {}
+    i = 0
+    
+    uniquerules = {}
+    
+    
+    for path in paths:
+        f = open( path, 'rb' )
+        data = pickle.load( f )
+        f.close()
+        key = data['@id']
+        if key in result:
+            pdb.set_trace()
+            print( data )
+            continue
+        result[ key ] = []
+        records = set()
+        concepts = {}
+        keyout.write( "%s\n" % key )
+        for edge in data['edges']:
+            rel = edge['rel']['@id']
+            
+            i += 1
+            if i % 10000 == 0:
+                sys.stdout.write('.')
+                if i % 1000000 == 0:
+                    sys.stdout.write('  %i\n' % (i,))
+                    if i % 5000000 == 0:
+                        sys.stdout.write('\n')
+                sys.stdout.flush()
+
+            if not rel in okrelations:
+                continue
+
+            # start = edge['start']
+            startid = edge['start']['@id']
+            startlabel = edge['start']['label']
+            startlang = edge['start']['language']
+            type1 = src1 = context1 = ""
+
+            # end = edge['end']
+            # end = edge['end']['@id']
+            endid = edge['end']['@id']
+            endlabel = edge['end']['label']
+            endlang = edge['end']['language']
+            type2 = src2 = context2 = ""
+            
+            recordkey = (startid,rel,endid)
+            if recordkey not in uniquerules:
+                uniquerules[recordkey] = 0
+            uniquerules[recordkey] += 1
+            
+            w = str( round( edge['weight'], 5 ) )
+            w = w.replace(".", ",")
+
+            #
+            # check for long conceptnet urls
+            #
+            # /c/LANG/CONCEPT/TYPE/SOURCE/CONTEXT
+
+            n = startid.count("/")
+            if n &gt; 3:
+                # pdb.set_trace()
+                items = startid.split('/')
+                type1 = items[4]
+                if n &gt; 4:
+                    src1 = items[5]
+                    if src1 not in ("jmdict", "wikt"):
+                        longurl = '/'.join( ('', *items[5:]) )
+                        if longurl not in longurls:
+                            longurls[longurl] = 0
+                        longurls[longurl] += 1
+                if n &gt; 5:
+                    if src1 not in ("jmdict", "wikt"):
+                        context1 = longurl # items[6]
+            
+            n = endid.count("/")
+            if n &gt; 3:
+                # pdb.set_trace()
+                items = endid.split('/')
+                type1 = items[4]
+                if n &gt; 4:
+                    src2 = items[5]
+                    if src2 not in ("jmdict", "wikt"):
+                        longurl = '/'.join( ('', *items[5:]) )
+                        if longurl not in longurls:
+                            longurls[longurl] = 0
+                        longurls[longurl] += 1
+                if n &gt; 5:
+                    if src2 not in ("jmdict", "wikt"):
+                        context2 = longurl # items[6]
+            
+            # is key concept 1 or concept 2
+            # mainlabel = 
+            
+            # check language inequality - only synonyms, 
+            if skipRelatedTranslations and (startlang != endlang):
+                if rel in ( '/r/RelatedTo', ):
+                    translationskips += 1
+                    continue
+            
+            recordkey = (startid,rel,endid)
+            
+            record = (  key,
+                        startid,startlabel,startlang,type1,context1,
+                        rel,
+                        endid,endlabel,endlang,type2,context2,
+                        w )
+            
+            # canonicalize - check doubles
+            if recordkey in records:
+                doubles += 1
+                continue
+            
+            records.add( recordkey )
+            
+            fout.write( template % record )
+
+    print("doubles:", doubles)
+    print( "translationskips:", translationskips )
+    # print("longurls:")
+    
+    
+    # uniquerules
+    uniqueout = open("alluniques.tab", 'w')
+    uniqueout.write("idunique\tcount\n")
+    template = "%s\t%i\n"
+    
+    # uniquerules[recordkey]
+    total = 0
+    for recordkey in uniquerules:
+        count = uniquerules[recordkey]
+        if int(count) &gt; 1:
+            total += count
+            uniqueout.write( template % (recordkey,count) )
+    uniqueout.write("Summe\t%i\n" % (total,) )
+    uniqueout.close()
+    
+    
+    contextout = open("allcontexts.tab", 'w')
+    contextout.write("idcontext\tcount\n")
+    template = "%s\t%i\n"
+    for longurl in longurls:
+        count = longurls[longurl]
+        contextout.write( template % (longurl,count) )
+    contextout.close()
+    # pp(longurls)
+    keyout.close()
+    fout.close()
+
+
+</t>
+<t tx="karstenw.20230403170157.1">@
+def ask(name, lang="en"):
+    q = query_cn( name, lang=lang )
+    
+    alledges = len(q.get('edges', []))
+    langedges = 0
+    for edge in q.get('edges', []):
+        start = edge.get('start', False)
+        end = edge.get('end', False)
+        rel = edge.get('rel', False)
+        if not start and end and rel:
+            pdb.set_trace()
+            print(start)
+            print(rel)
+            print(end)
+            continue
+        else:
+            lg1 = start.get("language", "''")
+            lb1 = start.get("label", start['@id'])
+            lg2 = end.get("language", "''")
+            lb2 = end.get("label", end['@id'])
+            w = edge.get('weight', 0.1)
+            rell = rel['label']
+            if rell in ('ExternalURL',):
+                continue
+            if lg1 != lg2:
+                # continue
+                if lg1 not in ('de', 'en', 'fr', 'es', 'it', 'da', 'no', 'sv'):
+                    continue
+                if lg2 not in ('de', 'en', 'fr', 'es', 'it', 'da', 'no', 'sv'):
+                    continue
+            if w &lt; 1.5:
+                continue
+            t = "%s:%s  --%s--  %s:%s    %.3f" 
+            print( t % (lg1,lb1,rell,lg2,lb2,w) )
+            langedges += 1
+    print("#edges: %i / %i" % (langedges,alledges) )
+    return 
+
+</t>
+<t tx="karstenw.20230417105918.1">def query_cnr(concept, relation=None, context=None, depth=1, maxedges=0, wait=2, lang="en"):
+    
+    """ Returns search results from sqlite database.
+
+    Retrieves a list of rules involving the given concept, relation and context.
+    If depth is &gt; 1, returns a cluster of rules:
+    - concepts connected to the given concept = depth 1
+    - concepts connected to the depth 1 set = depth 2, etc.
+    """
+
     rules = Rules()
-    if not data:
+
+    if concept == None:
         return rules
 
-    for rule in response.split("\n"):
-        rule = rule.split(",")
-        concept1 = _parse(rule[0])
-        relation = _parse(rule[1])
-        concept2 = _parse(rule[2])
-        context  = _parse(rule[3])
-        weight   = float(_parse(rule[4]))
-        author   = _parse(rule[5])
-        date     = _parse(rule[6])
-        rules.append(Rule(concept1, relation, concept2, context, weight, author, date))
+    # pdb.set_trace()
 
+    concepts, edges, loadedConcepts = conceptnetreader.query_concept( concept, context=context, maxedges=maxedges, lang=lang, weight=0.5 )
+
+    if not edges:
+        return rules
+    
+    if not concepts:
+        return rules
+
+    context = concepts[0].get('context', '')
+
+    for edge in edges:
+        concept1lang,concept1name,relation,concept2lang,concept2name,weight,rev,sym = edge
+        rule = Rule( concept1name, relation, concept2name, concept1lang, concept2lang, context, weight=weight )
+        rules.append( rule )
+        
     return rules
 
-</t>
-<t tx="karstenw.20230329120012.1">#### CACHE ###########################################################################################
-# Caches the results returned from the NodeBox Perception API so queries run faster.
-
-# TODO: Move to linguistics data
-CACHE = os.path.join(os.path.dirname(__file__), "cache")
+query = query_cnr
 
 </t>
-<t tx="karstenw.20230329120012.2">def _path(key):
-    print("_path( %s )" % (key,))
-    h = hashFromString(key)
-    return os.path.join(CACHE, h + ".json")
+<t tx="karstenw.20230417110004.1"># for whoever effed up the def type() below...
+typ = type
+
+# code -&gt; id, name, autonym
+languages = {}
+
+# id -&gt; patternrelation
+relations = {}
+
+# contexts -&gt; id
+contexts = {}
+
+
+</t>
+<t tx="karstenw.20230417110310.1"></t>
+<t tx="karstenw.20230505102222.1"></t>
+<t tx="karstenw.20230505121633.1">def cachefiles( old=True):
     
-</t>
-<t tx="karstenw.20230329120012.3">def cache(key, value):
-    print("cache( %s, value )" % (key,))
-    open(_path(key), "w").write(value)
-    
-</t>
-<t tx="karstenw.20230329120012.4">def cached(key):
-    print("cached( %s )" % (key,))
-    return open(_path(key)).read()
-    
-</t>
-<t tx="karstenw.20230329120012.5">def in_cache(key):
-    print("in_cache( %s )" % (key,))
-    return os.path.exists(_path(key))
-
-</t>
-<t tx="karstenw.20230329120012.6">def clear_cache():
-    for f in glob.glob(os.path.join(CACHE, "*")):
-        os.unlink(f)
-
-</t>
-<t tx="karstenw.20230329120105.1"></t>
-<t tx="karstenw.20230329120105.2"></t>
-<t tx="karstenw.20230329120105.3"># py3 stuff
-py3 = False
-try:
-    unicode('')
-    punicode = unicode
-    pstr = str
-    punichr = unichr
-except NameError:
-    punicode = str
-    pstr = bytes
-    py3 = True
-    punichr = chr
-    long = int
-
-
-</t>
-<t tx="karstenw.20230329120105.4">def cmp_to_key(mycmp):
-    'Convert a cmp= function into a key= function'
-    class K:
-        def __init__(self, obj, *args):
-            self.obj = obj
-        def __lt__(self, other):
-            return mycmp(self.obj, other.obj) &lt; 0
-        def __gt__(self, other):
-            return mycmp(self.obj, other.obj) &gt; 0
-        def __eq__(self, other):
-            return mycmp(self.obj, other.obj) == 0
-        def __le__(self, other):
-            return mycmp(self.obj, other.obj) &lt;= 0
-        def __ge__(self, other):
-            return mycmp(self.obj, other.obj) &gt;= 0
-        def __ne__(self, other):
-            return mycmp(self.obj, other.obj) != 0
-    return K
-
-
-</t>
-<t tx="karstenw.20230329120105.5">def sortlist(thelist, thecompare):
-    if py3:
-        sortkeyfunction = cmp_to_key( thecompare )
-        thelist.sort( key=sortkeyfunction )
+    if old:
+        f = glob.glob( CACHE + '/*.*' )
     else:
-        thelist.sort( thecompare )
-
-
-</t>
-<t tx="karstenw.20230329120105.6">def nodecompare( a, b):
-    if a[0] &gt; b[0]:
-        return 1
-    elif a[0] &lt; b[0]:
-        return -1
-    return 0
-
-
-</t>
-<t tx="karstenw.20230329120105.7">def makeunicode(s, srcencoding="utf-8", normalizer="NFC"):
-    try:
-        if typ(s) not in (punicode, pstr):
-            s = str( s )
-
-        if typ(s) not in (punicode,):
-            s = str(s, srcencoding)
-    except TypeError:
-        print( "makeunicode type conversion error" )
-        print( "FAILED converting", typ(s), "to unicode" )
-    s = unicodedata.normalize(normalizer, s)
-    return s
-
-
-</t>
-<t tx="karstenw.20230329120105.8">def hashFromString( s ):
-    if type( s ) in (punicode,):
-        s = s.encode("utf-8")
-    h = hashlib.sha1()
-    h.update( s )
-    return h.hexdigest()
+        f = glob.glob( CACHE + '/??/*.*' )
+    # a9fab0421559435f727de417975aa4d40f2547d7.json
+    # pp(f)
+    return f
 
 
 </t>

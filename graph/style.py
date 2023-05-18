@@ -1,8 +1,11 @@
+
+
 # Copyright (c) 2007 Tom De Smedt.
 # See LICENSE.txt for details.
 
-from math import degrees, sqrt, atan2
-from math import radians, sin, cos
+import unicodedata
+
+from math import degrees, sqrt, atan2,radians, sin, cos
 
 CORNER = "corner"
 CENTER = "center"
@@ -16,16 +19,43 @@ BACK      = "back"       # used as "back-button", green with a curved edge
 IMPORTANT = "important"  # like dark, but with a double stroke
 MARKED    = "marked"     # has a white dot inside the node
 
+# py3 stuff
+py3 = False
+try:
+    unicode('')
+    punicode = unicode
+    pstr = str
+    punichr = unichr
+except NameError:
+    punicode = str
+    pstr = bytes
+    py3 = True
+    punichr = chr
+    long = int
+
+
+def makeunicode(s, srcencoding="utf-8", normalizer="NFC"):
+    """Make input string normalized unicode."""
+    
+    if type(s) not in (pstr, punicode):
+        # apart from str/unicode/bytes we just need the repr
+        s = str( s )
+    if type(s) != punicode:
+        s = punicode(s, srcencoding)
+    s = unicodedata.normalize(normalizer, s)
+    return s
+
+
 #### GRAPH STYLES ####################################################################################
 
 class styles(dict):
     
     def __init__(self, graph):
         self.guide = styleguide(graph)
-    
+
     def apply(self):
         self.guide.apply()
-    
+
     def create(self, stylename, **kwargs):
         """ Creates a new style which inherits from the default style,
         or any other style which name is supplied to the optional template parameter.
@@ -39,10 +69,10 @@ class styles(dict):
             if attr in s.__dict__:
                 s.__dict__[attr] = kwargs[attr]
         return s
-    
+
     def append(self, style):
         self[style.name] = style
-    
+
     def __getattr__(self, a):
         """ Keys in the dictionaries are accessible as attributes.
         """
@@ -80,17 +110,17 @@ class styleguide(dict):
     def __init__(self, graph):
         self.graph = graph
         self.order = []
-    
+
     def append(self, stylename, function):
         """ The name of a style and a function that takes a graph and a node.
         It returns True when the style should be applied to the given node.
         """
         self[stylename] = function
-    
+
     def clear(self):
         self.order = []
         dict.__init__(self)
-    
+
     def apply(self):
         """ Check the rules for each node in the graph and apply the style.
         """
@@ -225,8 +255,10 @@ def node(s, node, alpha=1.0):
     """
 
     if s.depth:
-        try: colors.shadow(dx=5, dy=5, blur=10, alpha=0.5*alpha)
-        except: pass
+        try:
+            colors.shadow(dx=5, dy=5, blur=10, alpha=0.5*alpha)
+        except:
+            pass
     
     s._ctx.nofill()
     s._ctx.nostroke()
@@ -269,14 +301,14 @@ def node_label(s, node, alpha=1.0):
 
         # Cache an outlined label text and translate it.
         # This enhances the speed and avoids wiggling text.
-        try: p = node._textpath
+        try:
+            p = node._textpath
         except: 
             txt = node.label
-            try: txt = unicode(txt)
+            try:
+                txt = makeunicode(txt)
             except:
-                try: txt = txt.decode("utf-8")
-                except:
-                    pass
+                pass
             # Abbreviation.
             #root = node.graph.root
             #if txt != root and txt[-len(root):] == root: 
@@ -289,8 +321,10 @@ def node_label(s, node, alpha=1.0):
             p = node._textpath
         
         if s.depth:
-            try: __colors.shadow(dx=2, dy=4, blur=5, alpha=0.3*alpha)
-            except: pass
+            try:
+                __colors.shadow(dx=2, dy=4, blur=5, alpha=0.3*alpha)
+            except:
+                pass
         
         s._ctx.push()
         s._ctx.translate(node.x, node.y)
@@ -440,13 +474,15 @@ def edge_label(s, edge, alpha=1.0):
         
         # Cache an outlined label text and translate it.
         # This enhances the speed and avoids wiggling text.
-        try: p = edge._textpath
+        txt = "dummy"
+        try:
+            p = edge._textpath
         except:
-            try: txt = unicode(edge.label)
-            except:
-                try: txt = edge.label.decode("utf-8")
-                except:
-                    pass
+            try:
+                txt = makeunicode(edge.label)
+            except Exception as err:
+                print("edge_label ERROR:", err)
+                print("txt:", repr(txt) )
             edge._textpath = s._ctx.textpath(txt, s._ctx.textwidth(" "), 0, width=s.textwidth)
             p = edge._textpath
         

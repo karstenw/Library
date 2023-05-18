@@ -32,17 +32,17 @@ lexname_scores = {}
 lexnames = list( wordnet.wn._lexnames )
 pp(lexnames)
 
-#nouns = list( wordnet.NOUNS() )
-#verbs = list( wordnet.VERBS() )
-#adjectives = list( wordnet.ADJECTIVES() )
+nouns = list( wordnet.NOUNS() )
+verbs = list( wordnet.VERBS() )
+adjectives = list( wordnet.ADJECTIVES() )
 
 for lexname in lexnames: #wordnet.wn.Lexname.dict.keys():
     lexname_scores[lexname] = []
 
-pdb.set_trace()
+# pdb.set_trace()
 
 # Traverse all colors in the context (blue, green, ...)
-for clr in colors.context.keys():
+for clr in colors.context: #.keys():
     print( clr )
         
     # Each color has associated tags: blue -> air, cold, calm, ...
@@ -62,6 +62,7 @@ for clr in colors.context.keys():
         synsets = wordnet.synsets( tag )
         if not synsets:
             continue
+        # pdb.set_trace()
         synsets = [ synsets[0] ]
         # print("tag:", tag)
         # synset = synsets[0]
@@ -88,7 +89,7 @@ for clr in colors.context.keys():
 # We normalize the weight so their total weight is 1.0.
 # So now we have a percentage of each color's importance for the lexname.
 # verb.weather -> grey 24%, orange 19%, white 57%
-for lexname in lexname_scores.keys():
+for lexname in lexname_scores: #.keys():
     s = sum([weight for clr, weight in lexname_scores[lexname]])
     normalized = [(clr, weight/s) for clr, weight in lexname_scores[lexname]]
     lexname_scores[lexname] = normalized
@@ -115,7 +116,7 @@ for q,x,y in (
     synset = wordnet.synsets( q )
     if synset:
         l = synset[0].lexname
-    if 0:
+    else:
         if q in nouns: #  en.is_noun(q):
             synset = wordnet.synsets( q )[0]
             l = synset.lexname

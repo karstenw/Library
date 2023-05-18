@@ -1,11 +1,22 @@
 # Copyright (c) 2007 Tom De Smedt.
 # See LICENSE.txt for details.
 
-try: from en import wordnet
+try:
+    from en import wordnet
 except:
-    try: import wordnet
+    try:
+        import wordnet
     except:
         pass
+
+import linguistics
+import pattern
+import pattern.text
+# import pattern.web
+import pattern.text.en
+en = pattern.text.en
+wordnet = en.wordnet
+# web = pattern.web
 
 class Point:
     def __init__(self, x, y):
@@ -32,16 +43,16 @@ class events:
         # Displays when hovering over a node.
         self.popup = False
         self.popup_text = {}
-    
+
     def copy(self, graph):
-    
+
         """ Returns a copy of the event handler, remembering the last node clicked.
         """
-    
+
         e = events(graph, self._ctx)
         e.clicked = self.clicked
         return e
-    
+
     def _mouse(self):
         
         return Point(
@@ -50,7 +61,7 @@ class events:
         )
         
     mouse = property(_mouse)
- 
+     
     def _mousedown(self):
         
         if self._ctx._ns["mousedown"]:
@@ -61,12 +72,12 @@ class events:
     mousedown = property(_mousedown)
 
     def update(self):
-    
+
         """ Interacts with the graph by clicking or dragging nodes.
         Hovering a node fires the callback function events.hover().
         Clicking a node fires the callback function events.click().
         """
-    
+
         if self.mousedown:
         
             # When not pressing or dragging, check each node.
@@ -85,14 +96,14 @@ class events:
             elif self.dragged and self.graph.layout.type == "spring":
                 self.drag(self.dragged)
                 self.graph.layout.i = min(100, max(2, self.graph.layout.n-100))
-    
+
         # Mouse is clicked on a node, fire callback.
         elif self.pressed and self.mouse in self.pressed:
             self.clicked = self.pressed
             self.pressed = None
             self.graph.layout.i = 2
             self.click(self.clicked)
-    
+
         # Mouse up.
         else:
             self.hovered = None
@@ -105,12 +116,12 @@ class events:
                     self.hovered = n
                     self.hover(n)
                     break
-    
+
     def drag(self, node):
 
         """ Drags given node to mouse location.
         """
-    
+
         dx = self.mouse.x - self.graph.x
         dy = self.mouse.y - self.graph.y
 
@@ -127,13 +138,14 @@ class events:
                 0.75
             )
         p = self._ctx.line(node.x, node.y, dx, dy, draw=False)
-        try: p._nsBezierPath.setLineDash_count_phase_([2,4], 2, 50)
+        try:
+            p._nsBezierPath.setLineDash_count_phase_([2,4], 2, 50)
         except:
             pass
         self._ctx.drawpath(p)
         r = node.__class__(None).r * 0.75
         self._ctx.oval(dx-r/2, dy-r/2, r, r)
-    
+
         node.vx = dx / self.graph.d
         node.vy = dy / self.graph.d
         
@@ -142,7 +154,8 @@ class events:
         """ Displays a popup when hovering over a node.
         """
         
-        if self.popup == False: return
+        if self.popup == False:
+            return
         if self.popup == True or self.popup.node != node:
             if node.id in self.popup_text:
                 texts = self.popup_text[node.id]
@@ -185,7 +198,7 @@ class popup:
                     self.q.append(txt)
             except:
                 pass
-    
+
         # Defaults for colors and typography.
         self.background = self._ctx.color(0.00, 0.10, 0.15, 0.60)
         self.text       = self._ctx.color(1.00, 1.00, 1.00, 0.80)

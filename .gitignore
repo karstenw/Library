@@ -7,7 +7,8 @@ __pycache__
 */+private
 +latex
 +shoebot
-*/doc/*
+*/cache
+*/doc
 */build
 */dist
 
@@ -38,11 +39,11 @@ imagewell.tab
 isight/tras*
 isight/*.jpg
 
-linguistics
+#linguistics
 linguistics-data
 linguistics-archives
-linguistics/linguistics-data
-linguistics/linguistics-archives
+#linguistics/linguistics-data
+#linguistics/linguistics-archives
 
 lsys/Examples/Lindenmayer Systems, Fractals, and Plants/*.png
 

@@ -1,4 +1,4 @@
-<colors query="r&b">
+<colors query="r&amp;b">
 
 <color name="black" weight="0.708925300869">
  <shade name="warm" weight="0.724912949858" />

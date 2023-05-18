@@ -1,6 +1,6 @@
 # coding: utf-8
 
-### PERCEPTION ########################################################################################
+### PERCEPTION #################################################################
 # Analysis tools for working with data from http://nodebox.net/perception in NodeBox.
 # The library is roughly organised in 5 parts that add up to the final solver object:
 # 1) query()   : returns lists of rules form the online database, using a caching mechanism.
@@ -11,7 +11,7 @@
 # => solver    : object for inferring knowledge from the database, using clusters,
 #                indices and ranges.
 
-### CREDITS ########################################################################################
+### CREDITS ####################################################################
 
 # Copyright (c) 2008 Tom De Smedt.
 # See LICENSE.txt for details.
@@ -21,38 +21,60 @@ __version__   = "beta+"
 __copyright__ = "Copyright (c) 2008 Tom De Smedt"
 __license__   = "GPL"
 
-########################################################################################
+################################################################################
 
 import os
-# import md5
+import time
+
+startimport = time.time()
+
+
+import linguistics
+import conceptnetreader
+
 import hashlib
 import glob
 from re import sub
 from socket import setdefaulttimeout
-# from urllib2 import urlopen
 from urllib.request import urlopen
 import urllib.parse
+
 import pickle
+import json
+import pprint
+pp = pprint.pprint
+
 from random import random
-
 import requests
-
-# import pdb
+import pdb
 
 import graph
 from graph.cluster import sorted, unique
 
-import linguistics
 import pattern
-import pattern.text
 import pattern.web
+import pattern.text
 import pattern.text.en
 en = pattern.text.en
-wordnet = en.wordnet
-web = pattern.web
+
+import textblob
+
+stopimport = time.time()
+if 1:
+    print("perception import pattern: %.3f" % (stopimport-startimport,)  )
 
 # for whoever effed up the def type() below...
 typ = type
+
+# code -> id, name, autonym
+languages = {}
+
+# id -> patternrelation
+relations = {}
+
+# contexts -> id
+contexts = {}
+
 
 # py3 stuff
 py3 = False
@@ -138,7 +160,7 @@ def range_(start, stop=None, step=1):
         cur += step
 
 
-#### BASIC PROPERTIES ################################################################################
+#### BASIC PROPERTIES ##########################################################
 # Those we think can easily be translated visually.
 
 basic_properties = [
@@ -156,36 +178,57 @@ basic_properties = [
     "tangible", "abstract",   "thick",    "thin", "repetitive"
 ]
 
-#### CACHE ###########################################################################################
+#### CACHE #####################################################################
 # Caches the results returned from the NodeBox Perception API so queries run faster.
 
 # TODO: Move to linguistics data
-CACHE = os.path.join(os.path.dirname(__file__), "cache")
+CACHE = os.path.abspath(os.path.join(os.path.dirname(__file__), "cache"))
 
-def _path(key):
+
+def _newpath( key, ext='.json' ):
     h = hashFromString(key)
-    return os.path.join(CACHE, h + ".json")
-    
-def cache(key, value):
-    open(_path(key), "w").write(value)
-    
-def cached(key):
-    return open(_path(key)).read()
-    
-def in_cache(key):
-    return os.path.exists(_path(key))
+    foldername = h[:2]
+    folder = os.path.join(CACHE, folder)
+    if not os.path.exists( folder ):
+        os.makedirs( folder )
+    return os.path.join(CACHE, folder, h + ext)
+
+
+def _path(key, ext='.json'):
+    h = hashFromString(key)
+    return os.path.join(CACHE, h + ext)
+
+
+def cache(key, value, ext='.json'):
+    if ext=='.json':
+        return open(_path(key,ext), "w").write(value)
+    return open(_path(key,ext), "wb").write(value)
+
+
+def cached(key, ext='.json'):
+    if ext == '.json':
+        return open(_path(key, ext=ext)).read()
+    return open(_path(key, ext=ext), 'rb').read()
+
+def in_cache(key, ext=".json"):
+    return os.path.exists(_path(key, ext))
+
 
 def clear_cache():
     for f in glob.glob(os.path.join(CACHE, "*")):
         os.unlink(f)
 
-#### API #############################################################################################
-# The query() command returns a list of rules from the online Perception database.
-# Locally cached results are used whenever available.
 
-AUTHOR = ""
-#def is_robot(author):
-#    return author == "robots@nodebox.net"
+def cachefiles( old=True):
+    
+    if old:
+        f = glob.glob( CACHE + '/*.*' )
+    else:
+        f = glob.glob( CACHE + '/??/*.*' )
+    # a9fab0421559435f727de417975aa4d40f2547d7.json
+    # pp(f)
+    return f
+
 
 def normalize( s ):
     """ Returns lowercase version of string with accents removed.
@@ -212,18 +255,20 @@ class InternetError(BaseException):
 
 class Rule:
     
-    def __init__(self, concept1, relation, concept2, context=None, weight=1,
-                       author=None, date=None):
+    def __init__(self, concept1, relation, concept2, lang1="en", lang2="en",
+                       context=None, weight=1.0, author=None, date=None):
         """ A rule from the NodeBox Perception database,
         e.g. 'cat' is-a 'predator' in the 'nature' context.
         """
         self.concept1 = concept1
+        self.lang1    = lang1
         self.relation = relation
         self.concept2 = concept2
+        self.lang2    = lang2
         self.context  = context
         self.weight   = weight
-        self.author   = author
-        self.date     = date
+        #self.author   = author
+        #self.date     = date
 
     def __repr__(self):
         s = self.concept1 + " " + self.relation + " " +self.concept2
@@ -279,136 +324,49 @@ class Rules(list):
         return self._root
 
 
-def query_nb(concept, relation=None, context=None, author=None, depth=1, max=None, wait=10):
+def query_cnr(concept, relation=None, context=None, depth=1, maxedges=0, wait=2, lang="en"):
     
-    """ Returns search results from the NodeBox Perception database.
-    Retrieves a list of rules involving the given concept, relation, context and author.
-    If depth is > 1, returns a cluster of rules:
-    - concepts connected to the given concept = depth 1
-    - concepts connected to the depth 1 set = depth 2, etc.
-    """
+    """ Returns search results from sqlite database.
 
-    if concept == None:
-        concept = ""
-
-    if author  == None:
-        author  = AUTHOR
-
-    robots = author==None
-    robots = True
-
-    api  = "http://nodebox.net/perception/?q="
-    #api  = "http://127.0.0.1/~tom/perception/?q="
-    api += concept.replace(" ", "_")
-    api += "&format=txt"
-
-    if relation != None: api += "&relation=" + relation
-    if context  != None: api += "&context="  + context
-    if author   != None: api += "&author="   + author
-    if depth    >  1   : api += "&depth="    + str(depth)
-    if max      != None: api += "&max="      + str(max)
-    if robots   == True: api += "&robots=1"
-
-    if in_cache(api):
-        response = cached(api)
-    else:
-        try:
-            setdefaulttimeout(wait)
-            response = urlopen(api).read()
-            cache(api, response)
-        except Exception as e:
-            print("\nquery() failed.")
-            print(api)
-            print(e)
-            print()
-            raise InternetError( api + "\n" + e)
-    
-    rules = Rules()
-    if response == "": 
-        return rules
-    def _parse(s):
-        s = s.strip(" '")
-        s = s.replace("\\'", "'")
-        return s
-    for rule in response.split("\n"):
-        rule = rule.split(",")
-        concept1 = _parse(rule[0])
-        relation = _parse(rule[1])
-        concept2 = _parse(rule[2])
-        context  = _parse(rule[3])
-        weight   = float(_parse(rule[4]))
-        author   = _parse(rule[5])
-        date     = _parse(rule[6])
-        rules.append(Rule(concept1, relation, concept2, context, weight, author, date))
-    return rules
-
-def query_cn(concept, relation=None, context=None, depth=1, max=None, wait=20, lang="en"):
-    
-    """ Returns search results from Conceptnet.
     Retrieves a list of rules involving the given concept, relation and context.
     If depth is > 1, returns a cluster of rules:
     - concepts connected to the given concept = depth 1
     - concepts connected to the depth 1 set = depth 2, etc.
     """
 
-    if concept == None:
-        concept = ""
-
-    api = 'http://nodebox.net/perception/?'
-    params = {'var1': 'some data', 'var2': 1337}
-    print(url + urllib.parse.urlencode(params))
-    
-    api  = "http://nodebox.net/perception/?q="
-    #api  = "http://127.0.0.1/~tom/perception/?q="
-    api += concept.replace(" ", "_")
-    api += "&format=txt"
-
-    if relation != None: api += "&relation=" + relation
-    if context  != None: api += "&context="  + context
-    if author   != None: api += "&author="   + author
-    if depth    >  1   : api += "&depth="    + str(depth)
-    if max      != None: api += "&max="      + str(max)
-    if robots   == True: api += "&robots=1"
-
-    if in_cache(api):
-        response = cached(api)
-    else:
-        try:
-            setdefaulttimeout(wait)
-            response = urlopen(api).read()
-            cache(api, response)
-        except Exception as e:
-            print("\nquery() failed.")
-            print(api)
-            print(e)
-            print()
-            raise InternetError( api + "\n" + e)
-
     rules = Rules()
-    if response == "": 
+
+    if concept == None:
         return rules
-    def _parse(s):
-        s = s.strip(" '")
-        s = s.replace("\\'", "'")
-        return s
-    for rule in response.split("\n"):
-        rule = rule.split(",")
-        concept1 = _parse(rule[0])
-        relation = _parse(rule[1])
-        concept2 = _parse(rule[2])
-        context  = _parse(rule[3])
-        weight   = float(_parse(rule[4]))
-        author   = _parse(rule[5])
-        date     = _parse(rule[6])
-        rules.append(Rule(concept1, relation, concept2, context, weight, author, date))
+
+    # pdb.set_trace()
+
+    concepts, edges, loadedConcepts = conceptnetreader.query_concept( concept,
+                    context=context, maxedges=maxedges, lang=lang, weight=0.5 )
+
+    if not edges:
+        return rules
+    
+    if not concepts:
+        return rules
+
+    context = concepts[0].get('context', '')
+
+    for edge in edges:
+        concept1lang,concept1name,relation,concept2lang,concept2name,weight,rev,sym = edge
+        rule = Rule( concept1name, relation, concept2name,
+                     concept1lang, concept2lang,
+                     context, weight=weight )
+        rules.append( rule )
+        
     return rules
 
-query = query_nb
+query = query_cnr
 
-#### CONCEPT CLUSTER ################################################################################# 
+#### CONCEPT CLUSTER ###########################################################
 # Extends the Graph and Node objects for handling a semantic network of rules.
 
-#--- NODE RULE ASSERTION -----------------------------------------------------------------------------
+#--- NODE RULE ASSERTION -------------------------------------------------------
 
 graph.edge.relation = None
 graph.edge.context = None
@@ -484,7 +442,7 @@ graph.node.is_property = property(is_property)
 graph.node.is_related  = property(is_related)
 graph.node.is_effect   = property(is_effect)
 
-#--- NODE RULE RETRIEVAL -----------------------------------------------------------------------------
+#--- NODE RULE RETRIEVAL -------------------------------------------------------
 
 def enumerate_rules(node, relation, depth=1, reversed=False):
     """ Lists all nodes involving edges of the given relation.
@@ -528,12 +486,13 @@ graph.node.synonyms     = graph.node.aliases      = aliases
 graph.node.effects                                = effects
 graph.node.causes                                 = causes
 
-#--- CLUSTER ----------------------------------------------------------------------------------------
+#--- CLUSTER -------------------------------------------------------------------
 
 def style(graph, relation=True):
     """ Apply styling to match the online Perception module.
     """
-    try: __ctx = _ctx
+    try:
+        __ctx = _ctx
     except:
         return
     graph.styles.background     = _ctx.color(0.36, 0.36, 0.34)
@@ -587,20 +546,22 @@ def add_rule(graph, concept1, relation, concept2, context="", author="",
         if e:
             e.relation = relation
             e.context  = context
-            e.author   = author
+            # e.author   = author
     return e
     
 graph.graph.add_rule = add_rule
 
-def cluster(concept, relation=None, context=None, author=None, depth=2, max=None, labeled=False, 
-            wait=15):
+def cluster(concept, relation=None, context=None, author=None, depth=2,
+            maxedges=None, labeled=False, wait=15, lang="en"):
     """ Returns the given Perception query as a graph of connected concept nodes.
     """
     try:
         graph._ctx = _ctx
     except:
         pass
-    rules = query(concept, relation, context, author, depth, max, wait)
+    # query_cnr(concept, relation=None, context=None, depth=1, maxedges=0, wait=2, lang="en")
+    rules = query(concept, relation, context, depth, maxedges, wait, lang)
+
     concept = rules.disambiguate(concept)
     g = graph.create()
     style(g)
@@ -612,14 +573,14 @@ def cluster(concept, relation=None, context=None, author=None, depth=2, max=None
             rule.relation, 
             rule.concept2,
             rule.context,
-            rule.author,
+            "", #rule.author,
             weight = 0.5 + VOTE*(rule.weight-1)
         )
         if e and labeled:
             e.label = rule.relation
     return g
 
-#--- CLUSTER HEURISTICS ------------------------------------------------------------------------------
+#--- CLUSTER HEURISTICS --------------------------------------------------------
 
 def proper_nouns(graph):
     return [n for n in graph.nodes if n.id != n.id.lower()]
@@ -650,7 +611,7 @@ class cost(dict):
     """
     def __init__(self, costs={}, graph=None):
         self.graph = graph
-        for k, v in costs.iteritems():
+        for k, v in costs.items():
             self[k] = v
     def tax(self, relation, cost):
         self[relation] = cost
@@ -734,7 +695,7 @@ graph.graph.perceptonyms = graph.graph.properties = graph_properties
 graph.graph.hyponyms     = graph.graph.specific   = graph_specific
 graph.graph.objects      = graph_objects
 
-#### TAXONOMY ########################################################################################
+#### TAXONOMY ##################################################################
 # Taxonomies are used to find specific/concrete interpretations of a concept.
 
 def taxonomy(concept, context, author=None, depth=4):
@@ -753,6 +714,7 @@ class _range(dict):
         The dictionary itself contains settings for how graph.specific() is called.
         """
         self.rules = {
+                        #  concept     context   fringe proper 
             "animal"   : ("animal",   "nature",    3, False),
             "tree"     : ("tree",     "nature",    2, False),
             "flower"   : ("flower",   "nature",    2, False),
@@ -800,7 +762,7 @@ class _range(dict):
 
 range = _range()
 
-#### INDEX #############################################################################
+#### INDEX #####################################################################
 # A cached index of shortest paths between concepts.
 # You give it a list of concepts and it looks up all the paths between them,
 # based on the rules in the Perception database.
@@ -901,7 +863,7 @@ def _build_properties_index():
               "is-opposite-of" : 10})
     )
 
-#### SOLVER ############################################################################
+#### SOLVER ####################################################################
 # The solver finds the best match between a property and a range of concepts
 # (e.g. creepy <=> flowers).
 # To retrieve the creepiest flower, it analyzes the properties of each specific flower.
@@ -1029,7 +991,7 @@ class _solver:
 
 solver = _solver()
 
-#--- ANALOGY ---------------------------------------------------------------------------
+#--- ANALOGY -------------------------------------------------------------------
 # Uses the solver to analyze multiple properties of a given object.
 # This way we can map objects to a different context: 
 # music styles to colors, people to animals, cars to geometric shapes, ...
@@ -1111,7 +1073,7 @@ class _analogy:
 
 analogy = _analogy()
 
-#### SEARCH-MATCH-PARSE ################################################################
+#### SEARCH-MATCH-PARSE ########################################################
 
 def search_match_parse(query, pattern_, parse=lambda x: x, service="google", cached=True, n=2,):
     """ Parses words from search engine queries that match a given syntactic pattern.
@@ -1129,6 +1091,9 @@ def search_match_parse(query, pattern_, parse=lambda x: x, service="google", cac
     matches = []
     rawresults = []
 
+    if 1:
+        print( "search_match_parse query:", query )
+        print( "search_match_parse pattern_:", pattern_ )
     if service == "google":
         n = min(n, 4)
         engine = Google(license=None, language="en")
@@ -1163,16 +1128,19 @@ def search_match_parse(query, pattern_, parse=lambda x: x, service="google", cac
             for result in request.value:
                 collect.append( result )
 
-
-        for result in collect:
-            if result.text:
-                # result.description = result.description.replace(",",", ").replace("  "," ")
-                #match = en.sentence.find(result.description.lower(), pattern_)
-                #if len(match) > 0 and len(match[0]) > 0:
-                #    x = parse(match[0])
-                #    matches.append(x)
-                if pattern_ in result.text:
-                    matches.append(x)
+    pdb.set_trace()
+    
+    for result in collect:
+        if result.text:
+            # result.description = result.description.replace(",",", ").replace("  "," ")
+            #match = en.sentence.find(result.description.lower(), pattern_)
+            #if len(match) > 0 and len(match[0]) > 0:
+            #    x = parse(match[0])
+            #    matches.append(x)
+            if 1:
+                pp( result )
+            if pattern_ in result.text:
+                matches.append(result.text)
     return matches
 
 def count(list):
@@ -1186,8 +1154,13 @@ def count(list):
 def clean(word):
     word = word.strip(",;:.?!'`\"-[()]")
     word = word.strip(u"‘“")
-    if word.endswith( "'s"): word = word[:-2]
-    if word.endswith(u"’s"): word = word[:-2]
+    if word[-2:] in ("'s", "’s"):
+        word = word[:-2]
+    if 0:
+        if word.endswith( "'s"):
+            word = word[:-2]
+        if word.endswith(u"’s"):
+            word = word[:-2]
     return word.strip()
 
 #--- SIMILE ----------------------------------------------------------------------------
@@ -1275,7 +1248,8 @@ class compare_concepts(list):
         """ Returns a graph with edges connecting concepts.
         Different unconnected clusters will be present in the graph.
         """
-        try: graph._ctx = _ctx
+        try:
+            graph._ctx = _ctx
         except:
             pass
         g = graph.create()
@@ -1336,7 +1310,7 @@ def suggest_comparisons(concept1, concept2, cached=True):
     """ With the reverse logic we can find relations between concepts.
     """
     matches = search_match_parse(
-        "\""+concept1+" is * than "+concept2+"\"",
+        "\"" + concept1 + " is * than " + concept2 + "\"",
         "is (*) * than",
         lambda chunk_: " ".join(x[0] for x in chunk_[1:-1]), # A is bigger than B --> bigger
         service="google", 
@@ -1367,3 +1341,5 @@ def suggest_comparisons(concept1, concept2, cached=True):
 # - Rebuilt properties index.
 # - Tested if numerical index paths instead of string index paths 
 #   would shrink file size: no difference (due to pickle format?)
+
+

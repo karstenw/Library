@@ -304,7 +304,8 @@ class links(list):
         self._edges = dict()
 
     def append(self, node, edge=None): 
-        if edge: self._edges[node.id] = edge
+        if edge:
+            self._edges[node.id] = edge
         list.append(self, node)
 
     def remove(self, node):
@@ -313,7 +314,8 @@ class links(list):
         list.remove(self, node)
 
     def edge(self, id): 
-        if isinstance(id, node): id = id.id
+        if isinstance(id, node):
+            id = id.id
         return self._edges[id]
 
 ##### GRAPH EDGE #####################################################################################
@@ -369,7 +371,9 @@ class graph(dict):
 
     def _set_distance(self, value):
         self.d = node(None).r * 2.5 * value
+
     distance = property(_get_distance, _set_distance)
+
 
     def copy(self, empty=False):
         
@@ -421,13 +425,14 @@ class graph(dict):
         if id in self: 
             return self[id]
             
-        if not isinstance(style, str) and "name" in style.__dict__: # .has_key["name"]:
+        if not isinstance(style, str) and "name" in style.__dict__:
             style = style.name
         
         n = self.new_node(self, id, radius, style, category, label, properties)
         self[n.id] = n
         self.nodes.append(n)
-        if root: self.root = n
+        if root:
+            self.root = n
             
         return n
 
@@ -510,9 +515,9 @@ class graph(dict):
     def edge(self, id1, id2):
         """ Returns the edge between the nodes with given id1 and id2.
         """
-        if id1 in self and \
-           id2 in self and \
-           self[id2] in self[id1].links:
+        if (        id1 in self
+                and id2 in self
+                and self[id2] in self[id1].links):
             return self[id1].links.edge(id2)
         return None
 

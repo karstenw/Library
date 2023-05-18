@@ -19,7 +19,8 @@ wordnet = en.wordnet
 from random import shuffle
 
 import pdb
-
+import pprint
+pp=pprint.pprint
 # pdb.set_trace()
 
 allnouns = list(wordnet.NOUNS())
@@ -42,28 +43,29 @@ class WordNetBrowser(graphbrowser.GraphBrowser):
     def __init__(self):
         
         # Keep the word sense as a state parameter.
+        pdb.set_trace()
         graphbrowser.GraphBrowser.__init__(self)
         self.sense = 0
         self.sense_count = 0
         self.sense_mousedown = None
-    
+
     def has_node(self, node_id):
 
         # Accept clicks on the "parts" and "specific" branches
         # (unless it is the root node being clicked).
         # In this case get_branch_details() is called.
-        if node_id in ["parts ", "specific "] \
-        and node_id != self.graph.nodes[0].id:
+        if node_id in ("parts ", "specific "):
+            if node_id != self.graph.nodes[0].id:
+                return True
+        if node_id.lower() in allnouns:
             return True
+        if node_id in ("parts ", "specific "):
+            return True
+        return False
 
-        if (   node_id.lower() in allnouns
-            or node_id in ["parts ", "specific "]):
-            return True
-        else:
-            return False
-    
+
     def get_direct_links(self, node_id, top=6):
- 
+        
         if node_id in ["parts ", "specific "]: 
             return []
         
@@ -84,7 +86,7 @@ class WordNetBrowser(graphbrowser.GraphBrowser):
                     
         children = [(5,id) for id in children]
         return children[:top]
-    
+
     def get_links(self, node_id):
         
         if node_id == "specific ":
@@ -124,7 +126,7 @@ class WordNetBrowser(graphbrowser.GraphBrowser):
             children.extend(branch[:top])
             
         return children
-    
+
     def get_branch_details(self, branch):
         
         """ Fetches data when clicked on the parts/specific branches.
@@ -176,10 +178,10 @@ class WordNetBrowser(graphbrowser.GraphBrowser):
                     previous = self.graph.nodes[-1].id
         
         # If a new node is loaded, reset the current sense.
-        if self.graph \
-        and node_id != self.graph.root.id \
-        and node_id not in ["parts ", "specific "] \
-        and previous not in ["parts ", "specific "]:
+        if (    self.graph
+            and node_id != self.graph.root.id
+            and node_id not in ["parts ", "specific "]
+            and previous not in ["parts ", "specific "] ):
             self.sense = 0
         
         graphbrowser.GraphBrowser._reload(self, node_id, previous)
@@ -217,7 +219,7 @@ class WordNetBrowser(graphbrowser.GraphBrowser):
         
         graphbrowser.GraphBrowser.draw(self)
         
-        pdb.set_trace()
+        # pdb.set_trace()
         
         s = self.graph.styles.default
         _ctx.reset()
@@ -228,8 +230,10 @@ class WordNetBrowser(graphbrowser.GraphBrowser):
         x = s.fontsize
         y = _ctx.HEIGHT - w - s.fontsize
         
-        try: colors.noshadow()
-        except: pass
+        try:
+            colors.noshadow()
+        except:
+            pass
 
         for i in range(self.sense_count):
             
@@ -248,14 +252,14 @@ class WordNetBrowser(graphbrowser.GraphBrowser):
             x += w * 1.1
             
             # The mouse is pressed on a button.
-            if mousedown \
-            and self.graph.dragged == None \
-            and p.contains(MOUSEX, MOUSEY):
+            if (    mousedown
+                and self.graph.dragged == None
+                and p.contains(MOUSEX, MOUSEY)):
                 self.sense_mousedown = i
             
             # The mouse is no longer pressed on a button.    
-            if not mousedown \
-            and self.sense_mousedown == i:
+            if (    not mousedown
+                and self.sense_mousedown == i ):
                 self.sense_mousedown = None
                 # The mouse is released (clicked) on a button.
                 if p.contains(MOUSEX, MOUSEY):

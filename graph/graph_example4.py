@@ -9,7 +9,7 @@ try:
     graph = ximport("graph")
 except ImportError:
     graph = ximport("__init__")
-    # reload(graph)
+
 
 from random import shuffle
 
@@ -106,7 +106,7 @@ class wordnetgraph(graph.graph):
         
         # A row of buttons to select the current word sense.
         self.senses = senses(self, 20, 20)
-    
+
     def is_expandable(self, id):
         
         """ Some of the branches are expandable:
@@ -117,7 +117,7 @@ class wordnetgraph(graph.graph):
             return True
         else:
             return False
-    
+
     def is_clickable(self, node):
         
         """ Every node that is a noun is clickable (except the root).
@@ -136,7 +136,7 @@ class wordnetgraph(graph.graph):
 
 
     def get_senses(self, word, top=6):
- 
+
         """ The graph displays the different senses of a noun,
         e.g. light -> lighter, luminosity, sparkle, ...
         """
@@ -160,7 +160,7 @@ class wordnetgraph(graph.graph):
                     words.append(sense[i])
                     
         return words[:top]
-    
+
     def get_relations(self, word, previous=None):
         
         """ The graph displays semantic relations for a noun,
@@ -208,7 +208,7 @@ class wordnetgraph(graph.graph):
             words.extend(r[:top])
             
         return words
-    
+
     def expand(self, relation, previous=None):
         
         """ Zoom in to the hyponym or holonym branch.
@@ -237,7 +237,7 @@ class wordnetgraph(graph.graph):
             words.append((w, label))
             
         return words
-    
+
     def click(self, node):
         
         """ If the node is indeed clickable, load it.
@@ -248,7 +248,7 @@ class wordnetgraph(graph.graph):
             # Use the previous back node instead of "has specific".
             if self.is_expandable(p): p = self.nodes[-1].id
             self.load(node.id, previous=p)
-    
+
     def load(self, word, previous=None):
         
         self.clear()
@@ -308,7 +308,7 @@ class senses:
         
         self.current = 0
         self.pressed = None
-    
+
     def count(self):
         
         """ The number of senses for the current word.
@@ -324,7 +324,7 @@ class senses:
                 pass
                 
         return self._count
-    
+
     def draw(self):
         
         s = self.graph.styles.default
@@ -348,7 +348,7 @@ class senses:
             
             self.log_pressed(p, i)
             self.log_clicked(p, i)
-    
+
     def log_pressed(self, path, i):
         
         """ Update senses.pressed to the last button pressed.

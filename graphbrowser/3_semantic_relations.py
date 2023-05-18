@@ -58,51 +58,55 @@ class SemanticRelationNode:
 
 class SemanticRelationBrowser(graphbrowser.GraphBrowser):
     
-    def __init__(self, lexicon=[]):
+    def __init__(self, lexica=[]):
         
         graphbrowser.GraphBrowser.__init__(self)
         self.nodes = {}
         
-        for partialpath in files(lexicon):
-            path = os.path.abspath( partialpath )
-            print("path:", path)
+        for lexicon in lexica:
             
-            folder, filename = os.path.split( path )
-            basename, ext = os.path.splitext( filename )
+            directory = os.path.abspath( lexicon )
+            # print("path:", path)
+            
+            paths = files( directory + "/*.txt" )
+            for path in paths:
+                folder, filename = os.path.split( path )
+                basename, ext = os.path.splitext( filename )
 
-            # The file name is used as a category.
-            category = basename #(f)[-4]
+                # The file name is used as a category.
+                category = basename #(f)[-4]
             
-            f = io.open( path, 'r', encoding="utf-8" )
-            lines = f.readlines()
-            # rules = open(f).readlines()
-            # for rule in rules:
-            for line in lines:
+                f = io.open( path, 'r', encoding="utf-8" )
+                lines = f.readlines()
+                f.close()
+                # rules = open(f).readlines()
+                # for rule in rules:
+                for line in lines:
+                    
+                    # A rule in the file has the following format:
+                    # rulecode, concept1, concept2
+                    items = line.split(",")
+                    rulecode = int(items[0].strip())
+                    id1 = items[1].strip()
+                    id2 = items[2].strip()
+                    
+                    # Add new concept nodes.
+                    
+                    if not id1 in self.nodes:
+                        self.nodes[id1] = SemanticRelationNode(id1, category)
+                    if not id2 in self.nodes:
+                        self.nodes[id2] = SemanticRelationNode(id2, category)
+                    
+                    # Build explicit relations.
+                    i = int(items[0].strip())
+                    self.nodes[id1].links.append( (rulecode, id2) )
                 
-                # A rule in the file has the following format:
-                # rulecode, concept1, concept2
-                items = line.split(",")
-                id1 = items[1].strip()
-                id2 = items[2].strip()
-                
-                # Add new concept nodes.
-                
-                if not id1 in self.nodes:
-                    self.nodes[id1] = SemanticRelationNode(id1, category)
-                if not id2 in self.nodes:
-                    self.nodes[id2] = SemanticRelationNode(id2, category)
-            
-                # Build explicit relations.
-                i = int(items[0].strip())
-                self.nodes[id1].links.append( (i, id2) )
-                
-                # Build implicit relations.
-                if i == 6 or i == 8:
-                    self.nodes[id2].links.append( (i, id1) )
-                if (i+80) in semantic_relations_implicit:
-                    self.nodes[id2].links.append( (i+80, id1) )
-            f.close()
-        pp( self.nodes )
+                    # Build implicit relations.
+                    if rulecode in (6, 8):
+                        self.nodes[id2].links.append( (rulecode, id1) )
+                    if (rulecode +80) in semantic_relations_implicit:
+                        self.nodes[id2].links.append( (rulecode+80, id1) )
+        # pp( self.nodes )
 
     def has_node(self, node_id):
     
@@ -134,11 +138,17 @@ speed(30)
 def setup():
     
     global srb 
-    lexicon = "data/graphics/*.txt"
-    # lexicon = [ "data/graphics" ]
-    srb = SemanticRelationBrowser(lexicon)
-    srb.view("aesthetics")
- 
+    lexica = [ "data/graphics", ]
+    # stoopid data contents
+    # lexica = [ "data/graphics", "data/colors", "data/metaphors" ]
+    srb = SemanticRelationBrowser(lexica)
+    names = [x for x in srb.nodes]
+    # print( names )
+    name = choice(names)
+    # srb.view("aesthetics")
+    srb.view( name )
+    print(name)
+
 def draw():
     
     global srb

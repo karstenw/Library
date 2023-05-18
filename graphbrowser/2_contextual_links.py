@@ -1,14 +1,36 @@
 # A graph that connects concepts
 # based on nouns in their descriptions.
 
+import io
+import os
+# import en
+from os.path import basename
+
+import linguistics
+import pattern
+import pattern.text
+import pattern.text.en
+
+#print("\n\nen:")
+#pp(dir(pattern.text.en))
+
+en = pattern.text.en
+
 springgraph = ximport("springgraph")
 #reload(springgraph)
 
 graphbrowser = ximport("graphbrowser")
 #reload(graphbrowser)
 
-# import en
-from os.path import basename
+
+def loadtext( filepath ):
+    result = ""
+    path = os.path.abspath( filepath )
+    print(filepath)
+    f = io.open(path, 'r', encoding="utf-8")
+    s = f.read()
+    f.close()
+    return s
 
 class ContextualLinkBrowser(graphbrowser.GraphBrowser):
     
@@ -23,9 +45,9 @@ class ContextualLinkBrowser(graphbrowser.GraphBrowser):
         for lexicon in lexicons:
             for f in files(lexicon):
                 n = basename(f)[:-4]
-                if not self.nodes.has_key(n):
+                if not n in self.nodes:
                     self.nodes[n] = ""
-                self.nodes[n] += " "+open(f).read()
+                self.nodes[n] += " " + loadtext(f)
         
         self.link_pattern = "(JJ) NN"    
         self.filters = [
@@ -34,7 +56,7 @@ class ContextualLinkBrowser(graphbrowser.GraphBrowser):
             "the", "an", "connotation", "side", "part", "aspect",
             "symbol", "quality", "sense", "thing", "metaphor", "trait", "person"
         ]
-    
+
     def generate_filters(self):
         
         count = {}
@@ -48,7 +70,7 @@ class ContextualLinkBrowser(graphbrowser.GraphBrowser):
                 if not noun in unique_nouns:
                     unique_nouns.append(noun)
             for noun in unique_nouns:
-                if not count.has_key(noun):
+                if not noun in count:
                     count[noun] = 1
                 else:
                     count[noun] += 1
@@ -60,7 +82,7 @@ class ContextualLinkBrowser(graphbrowser.GraphBrowser):
         #n = len(self.nodes)
         #count = [(float(count)/n, noun) in count]
         
-    
+
     def _strip_tokens(self, str):
         
         """ Cleans up a node description string for searching.
@@ -72,8 +94,9 @@ class ContextualLinkBrowser(graphbrowser.GraphBrowser):
         str = str.replace("/"," ")
         str = " "+str+" "
         return str
-    
-    def _lazy_singularize(self, str):
+
+
+    def _lazy_singularize(self, s):
         
         """ Attempts to singularize the given string.
         
@@ -90,13 +113,13 @@ class ContextualLinkBrowser(graphbrowser.GraphBrowser):
             ("s"   , "")
         ]
         for pl, sg in inflections:
-            singular = str.strip(pl) + sg
-            if str == en.noun.plural(singular) \
-            and en.is_noun(singular):
-                return singular
+            singular = s.strip(pl) + sg
+            if s == en.noun.plural(singular):
+                if en.is_noun(singular):
+                    return singular
+        return s
 
-        return str
-    
+
     def _parse_nouns(self, node_id):
 
         """ Parses nouns from the node's description.
@@ -113,35 +136,35 @@ class ContextualLinkBrowser(graphbrowser.GraphBrowser):
         # and the order in which they appeared.
         # We assume nouns that occur early in the text to be
         # more relevant than nouns that occur later.    
-        if not self.cache.has_key(node_id):
+        if not node_id in self.cache:
 
             # Get each chunk of words in the description that matches the pattern.
             matches = en.sentence.find(self.nodes[node_id], self.link_pattern, chunked=False)
             strings = []
             count = {}
-            for str in matches:
+            for s in matches:
                 # We assume the last word in the pattern is the most important.
                 # We assume it is a noun.
-                str = str.lower().strip("\"").split()
-                noun = str[-1]
+                s = s.lower().strip("\"").split()
+                noun = s[-1]
                 noun = noun.strip(" ()\"'").replace("'s", "")
                 noun = self._lazy_singularize(noun)
-                str = " ".join(str[:-1]) + " " + noun
-                str = str.strip()
+                s = " ".join(s[:-1]) + " " + noun
+                s = s.strip()
                 # Pick up singularized, lowercase nouns and count them.
-                if  str != node_id \
-                and str not in strings \
-                and noun != node_id \
-                and noun not in self.filters:
-                    strings.append(str)
-                if not count.has_key(str):
-                    count[str] = 0
-                count[str] += 1
+                if  s != node_id:
+                    if s not in strings:
+                        if noun != node_id:
+                            if noun not in self.filters:
+                                strings.append(s)
+                if not s in count:
+                    count[s] = 0
+                count[s] += 1
                 
             sorted = []
             i = len(strings)
-            for str in strings:
-                sorted.append ( (count[str], i, str) )
+            for s in strings:
+                sorted.append ( (count[s], i, s) )
                 i -= 1
             sorted.sort()
             sorted.reverse()
@@ -149,15 +172,16 @@ class ContextualLinkBrowser(graphbrowser.GraphBrowser):
             self.cache[node_id] = sorted                    
 
         return self.cache[node_id]
-    
+
     def has_node(self, node_id):
         
-        #if self.nodes.has_key(node_id):
-        return True
-    
+        if node_id in self.nodes:
+            return True
+        return False
+
     def get_direct_links(self, node_id, top=6):
- 
-        if self.nodes.has_key(node_id):
+     
+        if node_id in self.nodes:
         
             nouns = self._parse_nouns(node_id)
             children = [(5, noun) for count, noun in nouns]
@@ -171,7 +195,8 @@ class ContextualLinkBrowser(graphbrowser.GraphBrowser):
                 # of the given node id is a relation to that node.
                 description = self._strip_tokens(self.nodes[id])
                 count = description.count(" "+node_id+" ")
-                if count > 0: children.append( (count, id) )
+                if count > 0:
+                    children.append( (count, id) )
             children.sort()
             children.reverse()
             children = [(5, id) for count, id in children]
@@ -181,7 +206,7 @@ class ContextualLinkBrowser(graphbrowser.GraphBrowser):
         
         children = []
         
-        if self.nodes.has_key(node_id):
+        if node_id in self.nodes:
             
             nouns = self._parse_nouns(node_id)
             for id in self.nodes:
@@ -226,7 +251,7 @@ class ContextualLinkBrowser(graphbrowser.GraphBrowser):
         
     def _reload(self, node_id, previous=None):
         
-        if not self.nodes.has_key(node_id):
+        if not node_id in self.nodes:
             if node_id.find("/") >= 0:
                 node_id = node_id.split("/")[-1]        
             if node_id.find(" ") >= 0:
@@ -237,14 +262,16 @@ class ContextualLinkBrowser(graphbrowser.GraphBrowser):
 
 size(500, 500)
 speed(30)
+clb = None
 
 def setup():
     
     global clb
     lexicons = ["data/colors/*.txt", "data/metaphors/*.txt"]
     clb = ContextualLinkBrowser(lexicons)
+    print("clb:", clb)
     clb.view("love")
-    #clb.generate_filters()
+    clb.generate_filters()
 
 def draw():
     

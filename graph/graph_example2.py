@@ -2,7 +2,7 @@ try:
     graph = ximport("graph")
 except ImportError:
     graph = ximport("__init__")
-    reload(graph)
+    # reload(graph)
 
 size(600, 600)
 
