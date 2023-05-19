@@ -14,7 +14,7 @@
 <v t="karstenw.20230316191528.1"><vh>Declarations</vh></v>
 <v t="karstenw.20230417110004.1"><vh>+ GLOBALS +</vh></v>
 <v t="karstenw.20230318131229.1"><vh>+ TOOLS +</vh>
-<v t="karstenw.20230316191631.1" a="E"><vh>py3</vh>
+<v t="karstenw.20230316191631.1"><vh>py3</vh>
 <v t="karstenw.20230316191639.1"><vh>py3 stuff</vh></v>
 <v t="karstenw.20230316191528.2"><vh>cmp_to_key</vh></v>
 <v t="karstenw.20230316191528.3"><vh>sortlist</vh></v>
@@ -34,10 +34,10 @@
 <v t="karstenw.20230316191528.13"><vh>clear_cache</vh></v>
 <v t="karstenw.20230505121633.1"><vh>cachefiles</vh></v>
 </v>
-<v t="karstenw.20230318130644.1"><vh>+ API +</vh>
-<v t="karstenw.20230505102222.1" a="E"><vh>+ OFF +</vh>
+<v t="karstenw.20230318130644.1" a="E"><vh>+ API +</vh>
+<v t="karstenw.20230505102222.1"><vh>+ OFF +</vh>
 <v t="karstenw.20230316191528.14"><vh>is_robot - OFF</vh></v>
-<v t="karstenw.20230330102024.1" a="E"><vh>+ QUERY CONCEPTNET API +</vh>
+<v t="karstenw.20230330102024.1"><vh>+ QUERY CONCEPTNET API +</vh>
 <v t="karstenw.20230330142517.1"><vh>download_url</vh></v>
 <v t="karstenw.20230330170426.1"><vh>make_url</vh></v>
 <v t="karstenw.20230330103714.1"><vh>get_query_cnconcept</vh></v>
@@ -61,23 +61,23 @@
 <v t="karstenw.20230316191528.18"><vh>__init__</vh></v>
 <v t="karstenw.20230316191528.19"><vh>__repr__</vh></v>
 </v>
-<v t="karstenw.20230316191528.20" a="E"><vh>class Rules</vh>
+<v t="karstenw.20230316191528.20"><vh>class Rules</vh>
 <v t="karstenw.20230316191528.21"><vh>_concepts</vh></v>
 <v t="karstenw.20230316191528.22"><vh>disambiguate</vh></v>
 </v>
 </v>
-<v t="karstenw.20230417110310.1" a="E"><vh>+ QUERY SQLITE +</vh>
+<v t="karstenw.20230417110310.1"><vh>+ QUERY SQLITE +</vh>
 <v t="karstenw.20230417105918.1"><vh>query_cnr</vh></v>
 </v>
 <v t="karstenw.20230316194255.1" a="E"><vh>+ CONCEPT CLUSTER +</vh>
 <v t="karstenw.20230316191528.24"><vh>has_rule</vh></v>
 <v t="karstenw.20230316191528.25"><vh>is_a</vh></v>
 </v>
-<v t="karstenw.20230316194456.1"><vh>+ NODE RULE RETRIEVAL +</vh>
+<v t="karstenw.20230316194456.1" a="E"><vh>+ NODE RULE RETRIEVAL +</vh>
 <v t="karstenw.20230316191528.39"><vh>enumerate_rules</vh></v>
 <v t="karstenw.20230316191528.40"><vh>specific parts opposites properties associations aliases effects type whole objects causes</vh></v>
 </v>
-<v t="karstenw.20230316194540.1" a="E"><vh>+ CLUSTER +</vh>
+<v t="karstenw.20230316194540.1"><vh>+ CLUSTER +</vh>
 <v t="karstenw.20230316191528.51"><vh>style</vh></v>
 <v t="karstenw.20230316191528.52"><vh>add_rule</vh></v>
 <v t="karstenw.20230316191528.53"><vh>cluster</vh></v>
@@ -96,7 +96,7 @@
 <v t="karstenw.20230316191528.63"><vh>graph_specific</vh></v>
 <v t="karstenw.20230316191528.64"><vh>graph_objects</vh></v>
 </v>
-<v t="karstenw.20230316194702.1" a="E"><vh>+ TAXONOMY +</vh>
+<v t="karstenw.20230316194702.1"><vh>+ TAXONOMY +</vh>
 <v t="karstenw.20230316191528.65"><vh>taxonomy</vh></v>
 <v t="karstenw.20230316191528.66"><vh>class _range</vh>
 <v t="karstenw.20230316191528.67"><vh>__init__</vh></v>
@@ -118,21 +118,21 @@
 </v>
 <v t="karstenw.20230316191528.80"><vh>_build_properties_index</vh></v>
 </v>
-<v t="karstenw.20230316194837.1" a="E"><vh>+ SOLVER +</vh>
+<v t="karstenw.20230316194837.1"><vh>+ SOLVER +</vh>
 <v t="karstenw.20230316191528.81"><vh>add_method</vh></v>
 <v t="karstenw.20230316191528.82"><vh>score</vh></v>
 <v t="karstenw.20230316191528.83"><vh>class IndexError</vh></v>
 <v t="karstenw.20230316191528.84"><vh>class MethodError</vh></v>
 <v t="karstenw.20230316191528.85"><vh>class analysis</vh></v>
-<v t="karstenw.20230316191528.86" a="E"><vh>class _solver</vh>
+<v t="karstenw.20230316191528.86"><vh>class _solver</vh>
 <v t="karstenw.20230316191528.87"><vh>__init__</vh></v>
 <v t="karstenw.20230316191528.88"><vh>_prepare</vh></v>
 <v t="karstenw.20230316191528.89"><vh>_retrieve</vh></v>
 <v t="karstenw.20230316191528.90"><vh>sort_by_relevance</vh></v>
 </v>
 </v>
-<v t="karstenw.20230316194920.1" a="E"><vh>+ ANALOGY +</vh>
-<v t="karstenw.20230316191528.91" a="E"><vh>class _analogy</vh>
+<v t="karstenw.20230316194920.1"><vh>+ ANALOGY +</vh>
+<v t="karstenw.20230316191528.91"><vh>class _analogy</vh>
 <v t="karstenw.20230316191528.92"><vh>__init__</vh></v>
 <v t="karstenw.20230316191528.93"><vh>_best_first</vh></v>
 <v t="karstenw.20230316191528.94"><vh>__call__</vh></v>
@@ -143,7 +143,7 @@
 <v t="karstenw.20230316191528.96"><vh>count</vh></v>
 <v t="karstenw.20230316191528.97"><vh>clean</vh></v>
 </v>
-<v t="karstenw.20230316195011.1" a="E"><vh>+ SIMILE +</vh>
+<v t="karstenw.20230316195011.1"><vh>+ SIMILE +</vh>
 <v t="karstenw.20230316191528.98"><vh>suggest_properties</vh></v>
 <v t="karstenw.20230316191528.99"><vh>suggest_objects</vh></v>
 </v>
@@ -167,7 +167,7 @@
 </t>
 <t tx="karstenw.20230316191528.1"># coding: utf-8
 
-### PERCEPTION ########################################################################################
+### PERCEPTION #################################################################
 # Analysis tools for working with data from http://nodebox.net/perception in NodeBox.
 # The library is roughly organised in 5 parts that add up to the final solver object:
 # 1) query()   : returns lists of rules form the online database, using a caching mechanism.
@@ -178,7 +178,7 @@
 # =&gt; solver    : object for inferring knowledge from the database, using clusters,
 #                indices and ranges.
 
-### CREDITS ########################################################################################
+### CREDITS ####################################################################
 
 # Copyright (c) 2008 Tom De Smedt.
 # See LICENSE.txt for details.
@@ -188,7 +188,7 @@ __version__   = "beta+"
 __copyright__ = "Copyright (c) 2008 Tom De Smedt"
 __license__   = "GPL"
 
-########################################################################################
+################################################################################
 
 import os
 import time
@@ -199,12 +199,10 @@ startimport = time.time()
 import linguistics
 import conceptnetreader
 
-# import md5
 import hashlib
 import glob
 from re import sub
 from socket import setdefaulttimeout
-# from urllib2 import urlopen
 from urllib.request import urlopen
 import urllib.parse
 
@@ -217,10 +215,8 @@ from random import random
 import requests
 import pdb
 
-
 import graph
 from graph.cluster import sorted, unique
-
 
 import pattern
 import pattern.web
@@ -231,7 +227,8 @@ en = pattern.text.en
 import textblob
 
 stopimport = time.time()
-print("perception import pattern: %.3f" % (stopimport-startimport,)  )
+if 1:
+    print("perception import pattern: %.3f" % (stopimport-startimport,)  )
 
 </t>
 <t tx="karstenw.20230316191528.10">def cache(key, value, ext='.json'):
@@ -271,7 +268,8 @@ print("perception import pattern: %.3f" % (stopimport-startimport,)  )
     """ Returns a graph with edges connecting concepts.
     Different unconnected clusters will be present in the graph.
     """
-    try: graph._ctx = _ctx
+    try:
+        graph._ctx = _ctx
     except:
         pass
     g = graph.create()
@@ -360,10 +358,7 @@ print("perception import pattern: %.3f" % (stopimport-startimport,)  )
 
 
 </t>
-<t tx="karstenw.20230316191528.14">#def is_robot(author):
-#    return author == "robots@nodebox.net"
-
-</t>
+<t tx="karstenw.20230316191528.14"></t>
 <t tx="karstenw.20230316191528.15">def normalize( s ):
     """ Returns lowercase version of string with accents removed.
     Used in Rules.disambiguate() to get the correct cluster root.
@@ -393,8 +388,8 @@ print("perception import pattern: %.3f" % (stopimport-startimport,)  )
     
     @others
 </t>
-<t tx="karstenw.20230316191528.18">def __init__(self, concept1, relation, concept2, lang1="en", lang2="en", context=None, weight=1.0,
-                   author=None, date=None):
+<t tx="karstenw.20230316191528.18">def __init__(self, concept1, relation, concept2, lang1="en", lang2="en",
+                   context=None, weight=1.0, author=None, date=None):
     """ A rule from the NodeBox Perception database,
     e.g. 'cat' is-a 'predator' in the 'nature' context.
     """
@@ -505,20 +500,21 @@ concepts = property(_concepts)
     if reversed:
         node1, node2 = node2, node1
     if not direct:
+
         # If both nodes are the same, they can reach each other.
         # However, the given relation still needs to exist before we return True.
         # This is a special case but not impossible: recusion is-part-of recursion.
-        if node1 == node2 \
-        and ((not node2 in node1.links) \
-        or (not node1.links.edge(node2).relation == relation)):
+        if (    node1 == node2
+            and (   (not node2 in node1.links)
+                 or (not node1.links.edge(node2).relation == relation))):
             return False
+
         # Check nodes connected to nodes with the given relation.
-        return node1.can_reach(node2, 
-            traversable=lambda n, e: n == e.node1 and e.relation == relation)
+        return node1.can_reach(node2, traversable=lambda n, e: n == e.node1 and e.relation == relation)
     # Assert that given relation goes from n1 directly to n2.
-    if  node1 in node2.links \
-    and node2.links.edge(node1).node1 == node1 \
-    and node2.links.edge(node1).relation == relation:
+    if (    node1 in node2.links
+        and node2.links.edge(node1).node1 == node1
+        and node2.links.edge(node1).relation == relation):
         return True
     else:
         return False
@@ -626,7 +622,8 @@ graph.node.causes                                 = causes
 <t tx="karstenw.20230316191528.51">def style(graph, relation=True):
     """ Apply styling to match the online Perception module.
     """
-    try: __ctx = _ctx
+    try:
+        __ctx = _ctx
     except:
         return
     graph.styles.background     = _ctx.color(0.36, 0.36, 0.34)
@@ -687,15 +684,16 @@ VOTE = 0.05
 graph.graph.add_rule = add_rule
 
 </t>
-<t tx="karstenw.20230316191528.53">def cluster(concept, relation=None, context=None, author=None, depth=2, maxedges=None, labeled=False, 
-            wait=15):
+<t tx="karstenw.20230316191528.53">def cluster(concept, relation=None, context=None, author=None, depth=2,
+            maxedges=None, labeled=False, wait=15, lang="en"):
     """ Returns the given Perception query as a graph of connected concept nodes.
     """
     try:
         graph._ctx = _ctx
     except:
         pass
-    rules = query(concept, relation, context, depth, maxedges, wait)
+    # query_cnr(concept, relation=None, context=None, depth=1, maxedges=0, wait=2, lang="en")
+    rules = query(concept, relation, context, depth, maxedges, wait, lang)
 
     concept = rules.disambiguate(concept)
     g = graph.create()
@@ -1432,7 +1430,7 @@ except NameError:
 
 
 </t>
-<t tx="karstenw.20230316191737.1">#### BASIC PROPERTIES ################################################################################
+<t tx="karstenw.20230316191737.1">#### BASIC PROPERTIES ##########################################################
 # Those we think can easily be translated visually.
 
 basic_properties = [
@@ -1451,7 +1449,7 @@ basic_properties = [
 ]
 
 </t>
-<t tx="karstenw.20230316191816.1">#### CACHE ###########################################################################################
+<t tx="karstenw.20230316191816.1">#### CACHE #####################################################################
 # Caches the results returned from the NodeBox Perception API so queries run faster.
 
 # TODO: Move to linguistics data
@@ -1459,30 +1457,30 @@ CACHE = os.path.abspath(os.path.join(os.path.dirname(__file__), "cache"))
 
 
 </t>
-<t tx="karstenw.20230316194255.1">#### CONCEPT CLUSTER ################################################################################# 
+<t tx="karstenw.20230316194255.1">#### CONCEPT CLUSTER ###########################################################
 # Extends the Graph and Node objects for handling a semantic network of rules.
 
-#--- NODE RULE ASSERTION -----------------------------------------------------------------------------
+#--- NODE RULE ASSERTION -------------------------------------------------------
 
 graph.edge.relation = None
 graph.edge.context = None
 graph.edge.author = None
 
 </t>
-<t tx="karstenw.20230316194456.1">#--- NODE RULE RETRIEVAL -----------------------------------------------------------------------------
+<t tx="karstenw.20230316194456.1">#--- NODE RULE RETRIEVAL -------------------------------------------------------
 
 </t>
-<t tx="karstenw.20230316194540.1">#--- CLUSTER ----------------------------------------------------------------------------------------
+<t tx="karstenw.20230316194540.1">#--- CLUSTER -------------------------------------------------------------------
 
 </t>
-<t tx="karstenw.20230316194605.1">#--- CLUSTER HEURISTICS ------------------------------------------------------------------------------
+<t tx="karstenw.20230316194605.1">#--- CLUSTER HEURISTICS --------------------------------------------------------
 
 </t>
-<t tx="karstenw.20230316194702.1">#### TAXONOMY ########################################################################################
+<t tx="karstenw.20230316194702.1">#### TAXONOMY ##################################################################
 # Taxonomies are used to find specific/concrete interpretations of a concept.
 
 </t>
-<t tx="karstenw.20230316194807.1">#### INDEX #############################################################################
+<t tx="karstenw.20230316194807.1">#### INDEX #####################################################################
 # A cached index of shortest paths between concepts.
 # You give it a list of concepts and it looks up all the paths between them,
 # based on the rules in the Perception database.
@@ -1493,7 +1491,7 @@ graph.edge.author = None
 INDEX = os.path.join(os.path.dirname(__file__), "index")
 
 </t>
-<t tx="karstenw.20230316194837.1">#### SOLVER ############################################################################
+<t tx="karstenw.20230316194837.1">#### SOLVER ####################################################################
 # The solver finds the best match between a property and a range of concepts
 # (e.g. creepy &lt;=&gt; flowers).
 # To retrieve the creepiest flower, it analyzes the properties of each specific flower.
@@ -1502,7 +1500,7 @@ INDEX = os.path.join(os.path.dirname(__file__), "index")
 # (factor m).
 # XXX - how many paths does the human brain take into account (high m, low m?)
 </t>
-<t tx="karstenw.20230316194920.1">#--- ANALOGY ---------------------------------------------------------------------------
+<t tx="karstenw.20230316194920.1">#--- ANALOGY -------------------------------------------------------------------
 # Uses the solver to analyze multiple properties of a given object.
 # This way we can map objects to a different context: 
 # music styles to colors, people to animals, cars to geometric shapes, ...
@@ -1541,219 +1539,27 @@ INDEX = os.path.join(os.path.dirname(__file__), "index")
 
 
 </t>
-<t tx="karstenw.20230318130644.1">#### API #############################################################################################
-# The query() command returns a list of rules from the online Perception database.
-# Locally cached results are used whenever available.
-
-AUTHOR = ""
-</t>
+<t tx="karstenw.20230318130644.1"></t>
 <t tx="karstenw.20230318131229.1"></t>
 <t tx="karstenw.20230329135420.1">@
-def query_cn(concept, relation=None, context=None, depth=1, max=None, wait=2, lang="en"):
-    
-    """ Returns search results from Conceptnet.
-    Retrieves a list of rules involving the given concept, relation and context.
-    If depth is &gt; 1, returns a cluster of rules:
-    - concepts connected to the given concept = depth 1
-    - concepts connected to the depth 1 set = depth 2, etc.
-    """
-
-    if concept == None:
-        return Rules()
-
-    concept = concept.lower()
-    concept = concept.replace(" ", "_")
-    lang = lang.lower()
-    url = make_url( concept, lang)
-    # pdb.set_trace()
-
-    response, data, pick = get_query_lang_concept( concept, lang, docache=True )
-    if not 'error' in data:
-        if pick==0:
-            data, filecount = get_all_pages( data )
-            cache( url, pickle.dumps( data ), ext='.pickle' )
-    else:
-        pp( data['error'] )
-    return data
-
-
-    
-    edges = get_edge_nodes( data )
-    
-    rules = Rules()
-    if not data:
-        return rules
-    
-    for rule in response.split("\n"):
-        rule = rule.split(",")
-        concept1 = _parse(rule[0])
-        relation = _parse(rule[1])
-        concept2 = _parse(rule[2])
-        context  = _parse(rule[3])
-        weight   = float(_parse(rule[4]))
-        # author   = _parse(rule[5])
-        date     = _parse(rule[6])
-        rules.append(Rule(concept1, relation, concept2, context, weight=weight )) #, author=author, date=date))
-        
-    return rules
-
 </t>
 <t tx="karstenw.20230329145218.1">@
-def get_query_lang_concept( concept, language, docache=True ):
-    """Retrieve the URL and cache the JSON result.
-    """
-    # print("get_query_lang_concept( %s, %s )" % (concept, language) )
-    response = ""
-    data = {}
-    
-    url = 'http://api.conceptnet.io/c/%s/%s' % (language,concept)
-    found = False
-    if docache:
-        if in_cache( url, ext='.pickle'):
-            print("CACHED PICKLE", concept)
-            s = cached( url, ext='.pickle')
-            data = pickle.loads( s )
-            return "", data, 1
-        elif in_cache( url ):
-            print("CACHED JSON", concept)
-            jsontext = cached( url )
-            data = json.loads( jsontext )
-            return "", data, 0
-
-    response, data, err = download_url( url )
-    if docache:
-        cache(url, json.dumps(data), ext='.json')
-    return response, data, 0
-
-
 </t>
 <t tx="karstenw.20230329150729.1">@
-def get_egde_nodes( data ):
-    result = []
-    if 'edges' in data:
-        result.extend( data['edges'] )
-    return result
-
-
 </t>
 <t tx="karstenw.20230329150748.1">@
-def get_next_page( data ):
-    # dummy for now
-    if not 'view' in data:
-        print("get_next_page( data ) FINISHED 1.")
-        return 1,data
-    
-    view = data['view']
-    if not 'nextPage' in view:
-        print("get_next_page( data ) FINISHED 2.")
-        return 1,data
-    
-    cnconcept = view['nextPage']
-    resp, newdata = get_query_cnconcept( cnconcept, docache=True )
-    if 'paginatedProperty' in view:
-        paginatedProperty = view['paginatedProperty']
-        data[paginatedProperty].extend( newdata[paginatedProperty] )
-        if 'nextPage' in newdata['view']:
-            if 0: #resp != "":
-                print("cur / next:", view['nextPage'], newdata['view']['nextPage'] )
-            if view['nextPage'] != newdata['view']['nextPage']:
-                view['nextPage'] = newdata['view']['nextPage']
-                if 0: #resp != "":
-                    print("get_next_page( data ) CONTINUED.")
-                return 0,data
-            else:
-                if 0: #resp != "":
-                    print("get_next_page( data ) FINISHED 3.")
-                return 1,data
-        else:
-            view['lastPage'] = view.get('nextPage', "")
-            view.pop('nextPage', "")
-            if 0: #resp != "":
-                print("get_next_page( data ) FINISHED 4.")
-            return 1,data
-    if resp != "":
-        print("get_next_page( data ) FINISHED 5.")
-    return 1,data
-
-
 </t>
-<t tx="karstenw.20230330100356.1">#### SEARCH-MATCH-PARSE ################################################################
+<t tx="karstenw.20230330100356.1">#### SEARCH-MATCH-PARSE ########################################################
 
 </t>
 <t tx="karstenw.20230330102024.1"></t>
 <t tx="karstenw.20230330103714.1">@
-def get_query_cnconcept( cnconcept, docache=True ):
-    """Retrieve the conceptnet concept (/c/en/word ) and cache the JSON result.
-    """
-    response = ""
-    data = {}
-    
-    url = 'http://api.conceptnet.io%s' % (cnconcept,)
-    
-    print("get_query_cnconcept( %s )" % (cnconcept,) )
-
-    if docache and in_cache( url ):
-        jsontext = cached( url )
-        data = json.loads( jsontext )
-        response = ""
-        print("CACHED")
-    else:
-        response, data, err = download_url( url )
-        if not 'error' in data:
-            if docache:
-                cache(url, json.dumps(data), ext='.json')
-    return response, data
-
-
 </t>
 <t tx="karstenw.20230330104408.1">@
-def get_all_pages( data ):
-    # pdb.set_trace()
-    i = 1
-    if not 'edges' in data:
-        pp( data )
-        pdb.set_trace()
-        print()
-    print("#edges %i:" % (i,), len(data['edges']) )
-    while True:
-        finished, newdata = get_next_page( data )
-        # print("get_all_pages -&gt; finished:", finished, i)
-        i += 1
-        data = newdata
-        print("#edges %i:" % (i,), len(data['edges']) )
-        if finished:
-            break
-    return data, i
-
-
 </t>
 <t tx="karstenw.20230330142517.1">@
-def download_url( url ):
-    response = ""
-    data = {}
-    err = ""
-    # print("URL load:", url)
-    try:
-        # setdefaulttimeout(wait)
-        response = requests.get( url )
-        jsontext = response.json()
-        time.sleep(0.9)
-    except Exception as err:
-        print("\ndownload_url() failed.")
-        print(url)
-        print(err)
-        print()
-        # raise InternetError( url + "\n" + e)
-    return response, jsontext, err
-
 </t>
 <t tx="karstenw.20230330170426.1">@
-def make_url( concept, language="" ):
-    if language != "":
-        return 'http://api.conceptnet.io/c/%s/%s' % (language,concept)
-    return 'http://api.conceptnet.io%s' % (concept,)
-
-
 </t>
 <t tx="karstenw.20230403165828.1">def _newpath( key, ext='.json' ):
     h = hashFromString(key)
@@ -1766,303 +1572,15 @@ def make_url( concept, language="" ):
 
 </t>
 <t tx="karstenw.20230403170027.1">@
-def getoldwords():
-    words = getpatternwords()
-    # print(words)
-    print("#words and concepts:", len(words))
-    cachedc, totalc, words = scancache( words )
-    print( "LOADED:  %i / %i" % (cachedc, totalc) )
-    print( "REMAINING:", len(words) )
-    for word in words:
-        print()
-        print(word)
-        q = query_cn( word )
-
-
 </t>
 <t tx="karstenw.20230403170112.1"></t>
 <t tx="karstenw.20230403170129.1">@
-def getpatternwords():
-    path = os.path.abspath("./doc/data/commonsense.tab")
-    f = open(path, 'r')
-    words = set()
-    # pdb.set_trace()
-    for line in f:
-        line = line.rstrip( "\r\n" )
-        items = line.split("\t")
-        c1,rel,c2,ctx,w = items
-        if float(w) &gt;= 1.0:
-            words.add( c1.lower().strip() )
-            words.add( c2.lower().strip() )
-            if ctx.lower().strip():
-                words.add( ctx.lower().strip() )
-    return words
-
-
 </t>
 <t tx="karstenw.20230403170137.1">@
-def scancache( concepts ):
-    totalc = cachedc = 0
-    result = set()
-    for concept in concepts:
-        totalc += 1
-        concept = concept.lower()
-        concept = concept.replace(" ", "_")
-        url = make_url( concept, 'en')
-        if in_cache( url, ext='.pickle'):
-            cachedc += 1
-        else:
-            result.add( concept )
-    return cachedc, totalc, result
-
-
 </t>
 <t tx="karstenw.20230403170145.1">@
-def loadcache():
-    allfiles = cachefiles( old=True )
-    result = {}
-    paths = []
-    
-    # pdb.set_trace()
-    
-    for path in allfiles:
-        path = os.path.abspath( path )
-        folder, filename = os.path.split( path )
-        basename, ext = os.path.splitext( filename )
-        
-        if ext.lower() not in ('.pickle',):
-            continue
-        paths.append( path )
-    
-    
-    fout = open("allrules.tab", 'w')
-    keyout = open("allkeys.tab", 'w')
-    
-    okrelations = (
-        "/r/RelatedTo /r/FormOf /r/IsA /r/PartOf /r/HasA "
-        "/r/UsedFor /r/CapableOf /r/AtLocation /r/HasProperty "
-        "/r/Synonym /r/Antonym /r/DistinctFrom /r/DerivedFrom "
-        "/r/SymbolOf /r/DefinedAs /r/MannerOf /r/HasContext "
-        "/r/SimilarTo /r/EtymologicallyRelatedTo /r/EtymologicallyDerivedFrom "
-        "/r/MadeOf ").split()
-    okrelations = tuple( okrelations )
-    
-    symmetricrelations = (
-        "/r/RelatedTo /r/Synonym /r/Antonym /r/DistinctFrom /r/LocatedNear "
-        "/r/SimilarTo /r/EtymologicallyRelatedTo ").split()
-    symmetricrelations = tuple( symmetricrelations )
-    
-    template = "%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n"
-    fout.write( "allrulesid\t"
-                "concept1\tconcept1label\tconcept1language\ttype1\tcontext1\t"
-                "relation\t"
-                "concept2\tconcept2label\tconcept2language\ttype2\tcontext2\t"
-                "weight\n")
-    keyout.write( "idallrules\n" )
-    
-    translationskips = doubles = 0
-    
-    # switches
-    
-    # skip translation /r/RelatedTo
-    skipRelatedTranslations = True
-    
-    # 
-    # filter and convert perception relations
-    # 
-    #
-    
-    longurls = {}
-    i = 0
-    
-    uniquerules = {}
-    
-    
-    for path in paths:
-        f = open( path, 'rb' )
-        data = pickle.load( f )
-        f.close()
-        key = data['@id']
-        if key in result:
-            pdb.set_trace()
-            print( data )
-            continue
-        result[ key ] = []
-        records = set()
-        concepts = {}
-        keyout.write( "%s\n" % key )
-        for edge in data['edges']:
-            rel = edge['rel']['@id']
-            
-            i += 1
-            if i % 10000 == 0:
-                sys.stdout.write('.')
-                if i % 1000000 == 0:
-                    sys.stdout.write('  %i\n' % (i,))
-                    if i % 5000000 == 0:
-                        sys.stdout.write('\n')
-                sys.stdout.flush()
-
-            if not rel in okrelations:
-                continue
-
-            # start = edge['start']
-            startid = edge['start']['@id']
-            startlabel = edge['start']['label']
-            startlang = edge['start']['language']
-            type1 = src1 = context1 = ""
-
-            # end = edge['end']
-            # end = edge['end']['@id']
-            endid = edge['end']['@id']
-            endlabel = edge['end']['label']
-            endlang = edge['end']['language']
-            type2 = src2 = context2 = ""
-            
-            recordkey = (startid,rel,endid)
-            if recordkey not in uniquerules:
-                uniquerules[recordkey] = 0
-            uniquerules[recordkey] += 1
-            
-            w = str( round( edge['weight'], 5 ) )
-            w = w.replace(".", ",")
-
-            #
-            # check for long conceptnet urls
-            #
-            # /c/LANG/CONCEPT/TYPE/SOURCE/CONTEXT
-
-            n = startid.count("/")
-            if n &gt; 3:
-                # pdb.set_trace()
-                items = startid.split('/')
-                type1 = items[4]
-                if n &gt; 4:
-                    src1 = items[5]
-                    if src1 not in ("jmdict", "wikt"):
-                        longurl = '/'.join( ('', *items[5:]) )
-                        if longurl not in longurls:
-                            longurls[longurl] = 0
-                        longurls[longurl] += 1
-                if n &gt; 5:
-                    if src1 not in ("jmdict", "wikt"):
-                        context1 = longurl # items[6]
-            
-            n = endid.count("/")
-            if n &gt; 3:
-                # pdb.set_trace()
-                items = endid.split('/')
-                type1 = items[4]
-                if n &gt; 4:
-                    src2 = items[5]
-                    if src2 not in ("jmdict", "wikt"):
-                        longurl = '/'.join( ('', *items[5:]) )
-                        if longurl not in longurls:
-                            longurls[longurl] = 0
-                        longurls[longurl] += 1
-                if n &gt; 5:
-                    if src2 not in ("jmdict", "wikt"):
-                        context2 = longurl # items[6]
-            
-            # is key concept 1 or concept 2
-            # mainlabel = 
-            
-            # check language inequality - only synonyms, 
-            if skipRelatedTranslations and (startlang != endlang):
-                if rel in ( '/r/RelatedTo', ):
-                    translationskips += 1
-                    continue
-            
-            recordkey = (startid,rel,endid)
-            
-            record = (  key,
-                        startid,startlabel,startlang,type1,context1,
-                        rel,
-                        endid,endlabel,endlang,type2,context2,
-                        w )
-            
-            # canonicalize - check doubles
-            if recordkey in records:
-                doubles += 1
-                continue
-            
-            records.add( recordkey )
-            
-            fout.write( template % record )
-
-    print("doubles:", doubles)
-    print( "translationskips:", translationskips )
-    # print("longurls:")
-    
-    
-    # uniquerules
-    uniqueout = open("alluniques.tab", 'w')
-    uniqueout.write("idunique\tcount\n")
-    template = "%s\t%i\n"
-    
-    # uniquerules[recordkey]
-    total = 0
-    for recordkey in uniquerules:
-        count = uniquerules[recordkey]
-        if int(count) &gt; 1:
-            total += count
-            uniqueout.write( template % (recordkey,count) )
-    uniqueout.write("Summe\t%i\n" % (total,) )
-    uniqueout.close()
-    
-    
-    contextout = open("allcontexts.tab", 'w')
-    contextout.write("idcontext\tcount\n")
-    template = "%s\t%i\n"
-    for longurl in longurls:
-        count = longurls[longurl]
-        contextout.write( template % (longurl,count) )
-    contextout.close()
-    # pp(longurls)
-    keyout.close()
-    fout.close()
-
-
 </t>
 <t tx="karstenw.20230403170157.1">@
-def ask(name, lang="en"):
-    q = query_cn( name, lang=lang )
-    
-    alledges = len(q.get('edges', []))
-    langedges = 0
-    for edge in q.get('edges', []):
-        start = edge.get('start', False)
-        end = edge.get('end', False)
-        rel = edge.get('rel', False)
-        if not start and end and rel:
-            pdb.set_trace()
-            print(start)
-            print(rel)
-            print(end)
-            continue
-        else:
-            lg1 = start.get("language", "''")
-            lb1 = start.get("label", start['@id'])
-            lg2 = end.get("language", "''")
-            lb2 = end.get("label", end['@id'])
-            w = edge.get('weight', 0.1)
-            rell = rel['label']
-            if rell in ('ExternalURL',):
-                continue
-            if lg1 != lg2:
-                # continue
-                if lg1 not in ('de', 'en', 'fr', 'es', 'it', 'da', 'no', 'sv'):
-                    continue
-                if lg2 not in ('de', 'en', 'fr', 'es', 'it', 'da', 'no', 'sv'):
-                    continue
-            if w &lt; 1.5:
-                continue
-            t = "%s:%s  --%s--  %s:%s    %.3f" 
-            print( t % (lg1,lb1,rell,lg2,lb2,w) )
-            langedges += 1
-    print("#edges: %i / %i" % (langedges,alledges) )
-    return 
-
 </t>
 <t tx="karstenw.20230417105918.1">def query_cnr(concept, relation=None, context=None, depth=1, maxedges=0, wait=2, lang="en"):
     
@@ -2081,7 +1599,8 @@ def ask(name, lang="en"):
 
     # pdb.set_trace()
 
-    concepts, edges, loadedConcepts = conceptnetreader.query_concept( concept, context=context, maxedges=maxedges, lang=lang, weight=0.5 )
+    concepts, edges, loadedConcepts = conceptnetreader.query_concept( concept,
+                    context=context, maxedges=maxedges, lang=lang, weight=0.5 )
 
     if not edges:
         return rules
@@ -2093,7 +1612,9 @@ def ask(name, lang="en"):
 
     for edge in edges:
         concept1lang,concept1name,relation,concept2lang,concept2name,weight,rev,sym = edge
-        rule = Rule( concept1name, relation, concept2name, concept1lang, concept2lang, context, weight=weight )
+        rule = Rule( concept1name, relation, concept2name,
+                     concept1lang, concept2lang,
+                     context, weight=weight )
         rules.append( rule )
         
     return rules
@@ -2103,15 +1624,6 @@ query = query_cnr
 </t>
 <t tx="karstenw.20230417110004.1"># for whoever effed up the def type() below...
 typ = type
-
-# code -&gt; id, name, autonym
-languages = {}
-
-# id -&gt; patternrelation
-relations = {}
-
-# contexts -&gt; id
-contexts = {}
 
 
 </t>
