@@ -9,7 +9,7 @@
 <preferences/>
 <find_panel_settings/>
 <vnodes>
-<v t="karstenw.20230319195648.2"><vh>graph</vh>
+<v t="karstenw.20230319195648.2" a="E"><vh>graph</vh>
 <v t="karstenw.20230319195720.1"><vh>@clean __init__.py</vh>
 <v t="karstenw.20230319195736.1"><vh>Declarations</vh></v>
 <v t="karstenw.20230319202717.1"><vh>py3</vh>
@@ -108,8 +108,22 @@
 </v>
 <v t="karstenw.20230319195736.79"><vh>create</vh></v>
 </v>
-<v t="karstenw.20230329160917.1"><vh>@clean cluster.py</vh>
+<v t="karstenw.20230329160917.1" a="E"><vh>@clean cluster.py</vh>
 <v t="karstenw.20230329160929.1"><vh>Declarations</vh></v>
+<v t="karstenw.20230518183122.1" a="E"><vh>py3</vh>
+<v t="karstenw.20230518183122.2"><vh>py3 stuff</vh></v>
+<v t="karstenw.20230518183122.3"><vh>cmp_to_key</vh></v>
+<v t="karstenw.20230518183122.4"><vh>sortlist</vh></v>
+<v t="karstenw.20230518183122.5"><vh>FlowerWord</vh>
+<v t="karstenw.20230518183122.6"><vh>__init__</vh></v>
+<v t="karstenw.20230518183122.7"><vh>hyponyms</vh></v>
+<v t="karstenw.20230518183122.8"><vh>hypernyms</vh></v>
+<v t="karstenw.20230518183122.9"><vh>senses</vh></v>
+<v t="karstenw.20230518183122.10"><vh>holonyms</vh></v>
+<v t="karstenw.20230518183122.11"><vh>meronyms</vh></v>
+</v>
+<v t="karstenw.20230518183122.12"><vh>newHeadline</vh></v>
+</v>
 <v t="karstenw.20230329160948.1"><vh>+ LIST OPERATIONS +</vh>
 <v t="karstenw.20230329160929.2"><vh>sorted</vh></v>
 <v t="karstenw.20230329160929.3"><vh>unique</vh></v>
@@ -120,17 +134,13 @@
 <v t="karstenw.20230329160929.6"><vh>union</vh></v>
 <v t="karstenw.20230329160929.7"><vh>difference</vh></v>
 </v>
-<v t="karstenw.20230329161036.1"><vh>+ SUBGRAPH +</vh>
 <v t="karstenw.20230329160929.8"><vh>subgraph</vh></v>
-</v>
 <v t="karstenw.20230329161057.1"><vh>+ CLIQUE +</vh>
 <v t="karstenw.20230329160929.9"><vh>is_clique</vh></v>
 <v t="karstenw.20230329160929.10"><vh>clique</vh></v>
 <v t="karstenw.20230329160929.11"><vh>cliques</vh></v>
 </v>
-<v t="karstenw.20230329161117.1"><vh>+ UNCONNECTED SUBGRAPHS +</vh>
 <v t="karstenw.20230329160929.12"><vh>partition</vh></v>
-</v>
 </v>
 <v t="karstenw.20230329161629.1"><vh>@clean event.py</vh>
 <v t="karstenw.20230329161638.1"><vh>Declarations</vh></v>
@@ -249,7 +259,7 @@
 <v t="karstenw.20230329163243.27"><vh>path</vh></v>
 </v>
 </v>
-<v t="karstenw.20230507120719.1" a="E"><vh>examples</vh>
+<v t="karstenw.20230507120719.1"><vh>examples</vh>
 <v t="karstenw.20230507120724.1"><vh>@clean graph_example1.py</vh>
 <v t="karstenw.20230507120759.1"><vh>Declarations</vh></v>
 </v>
@@ -260,7 +270,7 @@
 <v t="karstenw.20230507120755.1"><vh>Declarations</vh></v>
 <v t="karstenw.20230507120755.2"><vh>draw</vh></v>
 </v>
-<v t="karstenw.20230507120747.1" a="E"><vh>@clean graph_example4.py</vh>
+<v t="karstenw.20230507120747.1"><vh>@clean graph_example4.py</vh>
 <v t="karstenw.20230507120753.1"><vh>Declarations</vh></v>
 <v t="karstenw.20230518121333.1" a="E"><vh>+ REPLACEMENTS</vh>
 <v t="karstenw.20230507120753.2"><vh>holonym</vh></v>
@@ -1452,7 +1462,9 @@ from types import FunctionType, LambdaType
     return cliques
 
 </t>
-<t tx="karstenw.20230329160929.12">def partition(graph):
+<t tx="karstenw.20230329160929.12">#--- UNCONNECTED SUBGRAPHS -------------------------------------------------------------------------
+
+def partition(graph):
     
     """ Splits unconnected subgraphs.
     
@@ -1495,21 +1507,27 @@ from types import FunctionType, LambdaType
     g.sort(lambda a, b: len(b) - len(a))
     
     return g
-</t>
-<t tx="karstenw.20230329160929.2">def sorted(list, cmp=None, reversed=False):
-    """ Returns a sorted copy of the list.
-    """
-    list = [x for x in list]
-    list.sort(cmp)
-    if reversed: list.reverse()
-    return list
 
 </t>
-<t tx="karstenw.20230329160929.3">def unique(list):
+<t tx="karstenw.20230329160929.2">def sorted(thelist, cmp=None, reversed=False):
+    """ Returns a sorted copy of the list.
+    """
+    thelist = [x for x in thelist]
+    # thelist.sort(cmp)
+    sortlist(thelist, cmp)
+    if reversed:
+        thelist.reverse()
+    return thelist
+
+
+</t>
+<t tx="karstenw.20230329160929.3">def unique( thelist ):
     """ Returns a copy of the list without duplicates.
     """
-    unique = []; [unique.append(x) for x in list if x not in unique]
-    return unique    
+    unique = []
+    [unique.append(x) for x in thelist if x not in unique]
+    return unique
+
 
 </t>
 <t tx="karstenw.20230329160929.4">def flatten(node, distance=1):
@@ -1556,7 +1574,9 @@ from types import FunctionType, LambdaType
     return filter(lambda x: x not in b, a)
     
 </t>
-<t tx="karstenw.20230329160929.8">def subgraph(graph, id, distance=1):
+<t tx="karstenw.20230329160929.8">#--- SUBGRAPH ----------------------------------------------------------------------------------------
+
+def subgraph(graph, id, distance=1):
     
     """ Creates the subgraph of the flattened node with given id (or list of id's).
     Finds all the edges between the nodes that make up the subgraph.
@@ -1607,14 +1627,8 @@ from types import FunctionType, LambdaType
 <t tx="karstenw.20230329161013.1">#--- SET THEORY --------------------------------------------------------------------------------------
 
 </t>
-<t tx="karstenw.20230329161036.1">#--- SUBGRAPH ----------------------------------------------------------------------------------------
-
-</t>
 <t tx="karstenw.20230329161057.1">#--- CLIQUE ----------------------------------------------------------------------------------------
  
-</t>
-<t tx="karstenw.20230329161117.1">#--- UNCONNECTED SUBGRAPHS -------------------------------------------------------------------------
-
 </t>
 <t tx="karstenw.20230329161629.1">@language python
 @tabwidth -4
@@ -3654,6 +3668,156 @@ g.load(query)
 
 size(550, 550)
 speed(30) 
+</t>
+<t tx="karstenw.20230518183122.1"></t>
+<t tx="karstenw.20230518183122.10">def holonyms(self):
+    result = []
+    for synset in self.synsets:
+        holonyms = synset.holonyms()
+        for holonym in holonyms:
+            synonyms = hyponym.synonyms
+            for synonym in synonyms:
+                synonym = synonym.replace("_", " ")
+                result.append( synonym )
+    result = list(set(result))
+    return result
+
+</t>
+<t tx="karstenw.20230518183122.11">def meronyms(self):
+    result = []
+    for synset in self.synsets:
+        meronyms = synset.meronyms()
+        for meronym in meronyms:
+            synonyms = hyponym.synonyms
+            for synonym in synonyms:
+                synonym = synonym.replace("_", " ")
+                result.append( synonym )
+    result = list(set(result))
+    return result
+
+</t>
+<t tx="karstenw.20230518183122.12">def sortnodes_zero( a, b ):
+    if a[0] &gt; b[0]:
+        return 1
+    elif a[0] &lt; b[0]:
+        return -1
+    return 0
+
+</t>
+<t tx="karstenw.20230518183122.2"># py3 stuff
+py3 = False
+try:
+    unicode('')
+    punicode = unicode
+    pstr = str
+    punichr = unichr
+except NameError:
+    punicode = str
+    pstr = bytes
+    py3 = True
+    punichr = chr
+    long = int
+
+
+</t>
+<t tx="karstenw.20230518183122.3">def cmp_to_key(mycmp):
+    'Convert a cmp= function into a key= function'
+    class K:
+        def __init__(self, obj, *args):
+            self.obj = obj
+        def __lt__(self, other):
+            return mycmp(self.obj, other.obj) &lt; 0
+        def __gt__(self, other):
+            return mycmp(self.obj, other.obj) &gt; 0
+        def __eq__(self, other):
+            return mycmp(self.obj, other.obj) == 0
+        def __le__(self, other):
+            return mycmp(self.obj, other.obj) &lt;= 0
+        def __ge__(self, other):
+            return mycmp(self.obj, other.obj) &gt;= 0
+        def __ne__(self, other):
+            return mycmp(self.obj, other.obj) != 0
+    return K
+
+
+</t>
+<t tx="karstenw.20230518183122.4">def sortlist(thelist, thecompare):
+    if py3:
+        sortkeyfunction = cmp_to_key( thecompare )
+        thelist.sort( key=sortkeyfunction )
+    else:
+        thelist.sort( thecompare )
+
+
+</t>
+<t tx="karstenw.20230518183122.5">class FlowerWord:
+    @others
+
+
+</t>
+<t tx="karstenw.20230518183122.6">def __init__(self, word):
+    # pdb.set_trace()
+    self.word = word
+    self.synsets = wordnet.synsets( word )
+    self.idx = 0
+    self.antonym = ""
+    self.gloss = ""
+    self.synset = None
+    self.synonyms = []
+    self.antonym = ""
+    self.gloss = ""
+    self.lexname = ""
+
+    if len(self.synsets) &gt; 0:
+        synonyms = self.synsets[0].synonyms
+        try:
+            self.idx = synonyms.index(word)
+            w = self.synset = self.synsets[self.idx]
+            #print("Found synset:", w)
+        except:
+            w = self.synsets[0]
+            #print("Use synset:", w)
+
+        self.antonym = w.antonym
+        self.gloss = w.gloss
+        self.lexname = w.lexname
+
+</t>
+<t tx="karstenw.20230518183122.7">def hyponyms(self):
+    result = []
+    for synset in self.synsets:
+        hyponyms = synset.hyponyms()
+        for hyponym in hyponyms:
+            synonyms = hyponym.synonyms
+            for synonym in synonyms:
+                synonym = synonym.replace("_", " ")
+                result.append( synonym )
+    result = list(set(result))
+    return result
+
+</t>
+<t tx="karstenw.20230518183122.8">def hypernyms(self):
+    result = []
+    for synset in self.synsets:
+        hypernyms = synset.hypernyms()
+        for hypernym in hypernyms:
+            synonyms = hypernym.synonyms
+            for synonym in synonyms:
+                synonym = synonym.replace("_", " ")
+                result.append( synonym )
+    result = list(set(result))
+    return result
+
+
+</t>
+<t tx="karstenw.20230518183122.9">def senses(self):
+    result = []
+    for synset in self.synsets:
+        senses = synset.senses
+        result.append( senses )
+    return result
+
+
 </t>
 </tnodes>
 </leo_file>
