@@ -11,6 +11,8 @@ __pycache__
 */doc
 */build
 */dist
+*/classbrowser*
+
 
 beziereditor/*.svg
 beziereditor/+latex
