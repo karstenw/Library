@@ -221,10 +221,16 @@ class WordNetBrowser(graphbrowser.GraphBrowser):
         
         # pdb.set_trace()
         
-        s = self.graph.styles.default
+        try:
+            s = self.graph.styles.default
+        except Exception as err:
+            print("draw().style ERR:", err)
         _ctx.reset()
         _ctx.nostroke()
-        _ctx.fontsize(s.fontsize)
+        try:
+            _ctx.fontsize(s.fontsize)
+        except Exception:
+            _ctx.fontsize( 9 )
         
         w = s.fontsize * 2
         x = s.fontsize
@@ -266,7 +272,7 @@ class WordNetBrowser(graphbrowser.GraphBrowser):
                     self.sense = i
                     self._reload(self.graph.root.id)
         
-######################################################################################################
+################################################################################################
 
 size(500, 500)
 speed(30)

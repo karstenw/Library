@@ -57,7 +57,7 @@
 </v>
 <v t="karstenw.20230316191528.15"><vh>normalize</vh></v>
 <v t="karstenw.20230316191528.16"><vh>class InternetError</vh></v>
-<v t="karstenw.20230316191528.17"><vh>class Rule</vh>
+<v t="karstenw.20230316191528.17" a="E"><vh>class Rule</vh>
 <v t="karstenw.20230316191528.18"><vh>__init__</vh></v>
 <v t="karstenw.20230316191528.19"><vh>__repr__</vh></v>
 </v>
@@ -66,7 +66,7 @@
 <v t="karstenw.20230316191528.22"><vh>disambiguate</vh></v>
 </v>
 </v>
-<v t="karstenw.20230417110310.1"><vh>+ QUERY SQLITE +</vh>
+<v t="karstenw.20230417110310.1" a="E"><vh>+ QUERY SQLITE +</vh>
 <v t="karstenw.20230417105918.1"><vh>query_cnr</vh></v>
 </v>
 <v t="karstenw.20230316194255.1" a="E"><vh>+ CONCEPT CLUSTER +</vh>
@@ -77,7 +77,7 @@
 <v t="karstenw.20230316191528.39"><vh>enumerate_rules</vh></v>
 <v t="karstenw.20230316191528.40"><vh>specific parts opposites properties associations aliases effects type whole objects causes</vh></v>
 </v>
-<v t="karstenw.20230316194540.1"><vh>+ CLUSTER +</vh>
+<v t="karstenw.20230316194540.1" a="E"><vh>+ CLUSTER +</vh>
 <v t="karstenw.20230316191528.51"><vh>style</vh></v>
 <v t="karstenw.20230316191528.52"><vh>add_rule</vh></v>
 <v t="karstenw.20230316191528.53"><vh>cluster</vh></v>
@@ -131,7 +131,7 @@
 <v t="karstenw.20230316191528.90"><vh>sort_by_relevance</vh></v>
 </v>
 </v>
-<v t="karstenw.20230316194920.1"><vh>+ ANALOGY +</vh>
+<v t="karstenw.20230316194920.1" a="E"><vh>+ ANALOGY +</vh>
 <v t="karstenw.20230316191528.91"><vh>class _analogy</vh>
 <v t="karstenw.20230316191528.92"><vh>__init__</vh></v>
 <v t="karstenw.20230316191528.93"><vh>_best_first</vh></v>
@@ -143,7 +143,7 @@
 <v t="karstenw.20230316191528.96"><vh>count</vh></v>
 <v t="karstenw.20230316191528.97"><vh>clean</vh></v>
 </v>
-<v t="karstenw.20230316195011.1"><vh>+ SIMILE +</vh>
+<v t="karstenw.20230316195011.1" a="E"><vh>+ SIMILE +</vh>
 <v t="karstenw.20230316191528.98"><vh>suggest_properties</vh></v>
 <v t="karstenw.20230316191528.99"><vh>suggest_objects</vh></v>
 </v>
@@ -193,11 +193,6 @@ __license__   = "GPL"
 import os
 import time
 
-startimport = time.time()
-
-
-import linguistics
-import conceptnetreader
 
 import hashlib
 import glob
@@ -215,8 +210,10 @@ from random import random
 import requests
 import pdb
 
-import graph
-from graph.cluster import sorted, unique
+startimport = time.time()
+
+import linguistics
+import conceptnetreader
 
 import pattern
 import pattern.web
@@ -226,9 +223,12 @@ en = pattern.text.en
 
 import textblob
 
+import graph
+from graph.cluster import sorted, unique
+
 stopimport = time.time()
 if 1:
-    print("perception import pattern: %.3f" % (stopimport-startimport,)  )
+    print("perception import linguistics et al: %.3f" % (stopimport-startimport,)  )
 
 </t>
 <t tx="karstenw.20230316191528.10">def cache(key, value, ext='.json'):

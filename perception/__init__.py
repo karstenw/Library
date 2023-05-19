@@ -26,11 +26,6 @@ __license__   = "GPL"
 import os
 import time
 
-startimport = time.time()
-
-
-import linguistics
-import conceptnetreader
 
 import hashlib
 import glob
@@ -48,8 +43,10 @@ from random import random
 import requests
 import pdb
 
-import graph
-from graph.cluster import sorted, unique
+startimport = time.time()
+
+import linguistics
+import conceptnetreader
 
 import pattern
 import pattern.web
@@ -59,9 +56,12 @@ en = pattern.text.en
 
 import textblob
 
+import graph
+from graph.cluster import sorted, unique
+
 stopimport = time.time()
 if 1:
-    print("perception import pattern: %.3f" % (stopimport-startimport,)  )
+    print("perception import linguistics et al: %.3f" % (stopimport-startimport,)  )
 
 # for whoever effed up the def type() below...
 typ = type

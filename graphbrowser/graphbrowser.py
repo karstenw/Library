@@ -1,11 +1,11 @@
-### CREDITS ##########################################################################################
+### CREDITS ####################################################################################
 
 __author__    = "Tom De Smedt"
 __version__   = "alpha"
 __copyright__ = "Copyright (c) 2007 Tom De Smedt"
 __license__   = "Research purposes only"
 
-### GRAPHBROWSER #####################################################################################
+### GRAPHBROWSER ###############################################################################
 
 # A graph browser provides a way to browse through data interactively.
 # A GraphBrowser needs to be inherited by another class that provides the data.
@@ -17,7 +17,7 @@ __license__   = "Research purposes only"
 # 4) get_node_descriptions(node_id): a list of descriptions for the given node id.
 #    By default, attempts to return the WordNet interpretations of the id.
 
-### GRAPHBROWSER #####################################################################################
+### GRAPHBROWSER ###############################################################################
 
 class GraphBrowser:
     
@@ -225,7 +225,9 @@ class GraphBrowser:
              or self.marquee.id != node.id ):
             msg = self.get_node_descriptions(node.id)
             if len(msg) > 0:
-                self.marquee = GraphMarquee(node.id, msg, speed=self.marquee_speed, w=self.marquee_width)
+                self.marquee = GraphMarquee(node.id, msg,
+                                            speed=self.marquee_speed,
+                                            w=self.marquee_width)
             else:
                 self.marquee = None
     
@@ -246,7 +248,7 @@ class GraphBrowser:
             self.dx *= 0.9
             self.dy *= 0.9
             
-### GRAPHMARQUEE #####################################################################################   
+### GRAPHMARQUEE ###############################################################################
 
 class GraphMarquee:
     
@@ -309,14 +311,16 @@ class GraphMarquee:
         """ Returns a textpath of the current message in queue.
         """
         
-        if self._cache == None \
-        or self._cache[0] != self.current:
+        if (    self._cache == None
+             or self._cache[0] != self.current):
             # Cache the current textpath so it doesn't
             # need to be rebuilt every call.
             msg = self.queue[self.current]
             if len(self.queue) > 1:
                 # Indicate current message (e.g. 5/13)
-                msg += " ("+str(self.current+1)+"/"+str(len(self.queue))+")"
+                # s = " ("+str(self.current+1)+"/"+str(len(self.queue))+")"
+                s = " (%s/%s)" % (str(self.current+1), str(len(self.queue)) )
+                msg += s
             self._textheight = _ctx.textheight(msg, width=self._textwidth)
             p = _ctx.textpath(msg, 0, 0, width=self._textwidth)
             self._cache = (self.current, p)
@@ -336,8 +340,8 @@ class GraphMarquee:
         
         self.update()
         
-        if len(self.queue) > 0 \
-        and self.intro <= 0:
+        if (    len(self.queue) > 0
+            and self.intro <= 0 ):
             fs = _ctx.fontsize()
             p = self.textpath()
             _ctx.fill(self.background)
@@ -355,3 +359,4 @@ class GraphMarquee:
             _ctx.translate(x, y)
             _ctx.scale(scale)
             _ctx.drawpath(p)
+

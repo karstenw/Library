@@ -1,4 +1,4 @@
-### CREDITS ##########################################################################################
+### CREDITS ####################################################################################
 
 # Copyright (c) 2007 Tom De Smedt.
 # See LICENSE.txt for details.
@@ -8,7 +8,7 @@ __version__   = "alpha"
 __copyright__ = "Copyright (c) 2007 Tom De Smedt"
 __license__   = "Research purposes only"
 
-### SPRINGGRAPH ######################################################################################
+### SPRINGGRAPH ################################################################################
 
 # The NodeBox Springgraph library provides tools to implement a fast graph in animation.
 # You can load it with connected nodes and display them as a network of data,
@@ -17,7 +17,7 @@ __license__   = "Research purposes only"
 # The Springgraph is extended in Graphbrowser which links user interaction to datasets
 # and the graphing math.
 
-######################################################################################################
+################################################################################################
 
 import pprint
 
@@ -36,7 +36,7 @@ STYLE_IMPORTANT = "important"
 STYLE_MARKED    = "marked"
 STYLE_BLUE      = "blue"
 
-#### GRAPHNODE #######################################################################################
+#### GRAPHNODE #################################################################################
 
 class GraphNode:
     
@@ -73,7 +73,7 @@ class GraphNode:
 
     edges = property(_edges)
 
-##### GRAPHEDGE ######################################################################################
+##### GRAPHEDGE ################################################################################
 
 class GraphEdge:
     
@@ -87,7 +87,7 @@ class GraphEdge:
         self.label = label
         self.weight = weight
 
-#### GRAPH ###########################################################################################
+#### GRAPH #####################################################################################
 
 class Graph:
     
@@ -511,7 +511,7 @@ class Graph:
             result.append( self.nodes[i] )
         return result
 
-##### GRAPHSPRINGLAYOUT ##############################################################################
+##### GRAPHSPRINGLAYOUT ########################################################################
 
 class GraphSpringLayout:
     
@@ -631,7 +631,7 @@ class GraphSpringLayout:
         n1.force.x += f * dx / d
         n1.force.y += f * dy / d
 
-#### GRAPHSHORTESTPATH ###############################################################################
+#### GRAPHSHORTESTPATH #########################################################################
 
 class GraphShortestPath:
         
@@ -669,7 +669,7 @@ class GraphShortestPath:
                 if v2 not in visited:
                     heapq.heappush(q, (cost + cost2, v2, path))
 
-#### GRAPHSTYLE ######################################################################################
+#### GRAPHSTYLE ################################################################################
 
 class GraphStyles(dict):
     
@@ -699,7 +699,7 @@ class GraphStyles(dict):
         else:
             raise AttributeError( "'GraphStyle' object has no attribute '"+a+"'" )
 
-#### GRAPHSTYLE ######################################################################################
+#### GRAPHSTYLE ################################################################################
         
 class GraphStyle:
     
@@ -732,7 +732,7 @@ class GraphStyle:
     
         self.draw = GraphDraw()
 
-#### GRAPHDRAW ####################################################################################### 
+#### GRAPHDRAW #################################################################################
 
 # The draw methods are actually just a bunch of functions,
 # so another function can easily be assigned.
@@ -750,7 +750,7 @@ class GraphDraw:
         self.background = draw_background
         self.cluster    = draw_cluster        
 
-#--- DRAW_BACKGROUND ---------------------------------------------------------------------------------
+#--- DRAW_BACKGROUND ---------------------------------------------------------------------------
 
 def draw_background(style):
 
@@ -769,7 +769,7 @@ def draw_background(style):
     except:
         _ctx.background(style.background)  
 
-#--- DRAW_NODE ---------------------------------------------------------------------------------------
+#--- DRAW_NODE ---------------------------------------------------------------------------------
 
 def draw_cluster(style, node, alpha=1.0):
     
@@ -779,7 +779,7 @@ def draw_cluster(style, node, alpha=1.0):
     _ctx.oval(node.x * node.graph.d - r*0.5, 
               node.y * node.graph.d - r*0.5, r, r)      
 
-#--- DRAW_NODE ---------------------------------------------------------------------------------------
+#--- DRAW_NODE ---------------------------------------------------------------------------------
 
 def draw_node(style, node, alpha=1.0):
     
@@ -800,7 +800,7 @@ def draw_node(style, node, alpha=1.0):
     _ctx.oval(node.x * node.graph.d - r*0.5, 
               node.y * node.graph.d - r*0.5, r, r)        
 
-#--- DRAW_NODE_LABEL --------------------------------------------------------------------------------
+#--- DRAW_NODE_LABEL ---------------------------------------------------------------------------
 
 def draw_node_label(style, node, alpha=1.0):
 
@@ -842,7 +842,7 @@ def draw_node_label(style, node, alpha=1.0):
         _ctx.drawpath(p)
         _ctx.pop()
 
-#--- DRAW_EDGE ---------------------------------------------------------------------------------------
+#--- DRAW_EDGE ---------------------------------------------------------------------------------
 
 def draw_edge(style, x0, y0, x1, y1, edge):
     
@@ -856,7 +856,7 @@ def draw_edge(style, x0, y0, x1, y1, edge):
     else:
         _ctx.lineto(x1, y1)
 
-#--- DRAW_EDGE_LABEL ---------------------------------------------------------------------------------
+#--- DRAW_EDGE_LABEL ---------------------------------------------------------------------------
 
 def draw_edge_label(style, edge, alpha=1.0):
 
@@ -906,7 +906,7 @@ def draw_edge_label(style, edge, alpha=1.0):
         _ctx.drawpath(p)
         _ctx.pop()        
 
-#### COMMANDS ########################################################################################
+#### COMMANDS ##################################################################################
 
 def graph(iterations=500, distance=1.0):
     
@@ -921,8 +921,11 @@ def graph(iterations=500, distance=1.0):
     g.styles.append(graph_style(STYLE_BACK     , fill   = _ctx.color(0.5, 0.8, 0.0, 0.50)))
     g.styles.append(graph_style(STYLE_BLUE     , fill   = _ctx.color(0.1, 0.1, 0.9, 0.50)))
     g.styles.append(graph_style(STYLE_IMPORTANT, fill   = _ctx.color(0.3, 0.6, 0.8, 0.75)))
-    g.styles.append(graph_style(STYLE_HIGHLIGHT, stroke = _ctx.color(1.0, 0.0, 0.5), strokewidth=1.5))
+
+    g.styles.append(graph_style(STYLE_HIGHLIGHT, stroke = _ctx.color(1.0, 0.0, 0.5),
+                                                 strokewidth=1.5))
     g.styles.append(graph_style(STYLE_MARKED))
+
     g.styles.append(graph_style(STYLE_ROOT     , text   = _ctx.color(1.0, 0.0, 0.4, 1.00), 
                                                  stroke = _ctx.color(0.8, 0.8, 0.8, 0.60),
                                                  strokewidth=1.5, 
@@ -1048,7 +1051,7 @@ def centrality(g, normalized=True):
         while S: 
             w = S.pop() 
             for v in P[w]: 
-                delta[v] = delta[v] + (float(sigma[v]) / float(sigma[w])) * (1.0 + delta[w]) 
+                delta[v] = delta[v] + (float(sigma[v]) / float(sigma[w])) * (1.0 + delta[w])
                 if w != s: 
                     betweenness[w] = betweenness[w] + delta[w]
 
