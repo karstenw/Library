@@ -3,21 +3,163 @@
 
 from types import FunctionType, LambdaType
 
+# py3 stuff
+py3 = False
+try:
+    unicode('')
+    punicode = unicode
+    pstr = str
+    punichr = unichr
+except NameError:
+    punicode = str
+    pstr = bytes
+    py3 = True
+    punichr = chr
+    long = int
+
+
+def cmp_to_key(mycmp):
+    'Convert a cmp= function into a key= function'
+    class K:
+        def __init__(self, obj, *args):
+            self.obj = obj
+        def __lt__(self, other):
+            return mycmp(self.obj, other.obj) < 0
+        def __gt__(self, other):
+            return mycmp(self.obj, other.obj) > 0
+        def __eq__(self, other):
+            return mycmp(self.obj, other.obj) == 0
+        def __le__(self, other):
+            return mycmp(self.obj, other.obj) <= 0
+        def __ge__(self, other):
+            return mycmp(self.obj, other.obj) >= 0
+        def __ne__(self, other):
+            return mycmp(self.obj, other.obj) != 0
+    return K
+
+
+def sortlist(thelist, thecompare):
+    if py3:
+        sortkeyfunction = cmp_to_key( thecompare )
+        thelist.sort( key=sortkeyfunction )
+    else:
+        thelist.sort( thecompare )
+
+
+class FlowerWord:
+    def __init__(self, word):
+        # pdb.set_trace()
+        self.word = word
+        self.synsets = wordnet.synsets( word )
+        self.idx = 0
+        self.antonym = ""
+        self.gloss = ""
+        self.synset = None
+        self.synonyms = []
+        self.antonym = ""
+        self.gloss = ""
+        self.lexname = ""
+
+        if len(self.synsets) > 0:
+            synonyms = self.synsets[0].synonyms
+            try:
+                self.idx = synonyms.index(word)
+                w = self.synset = self.synsets[self.idx]
+                #print("Found synset:", w)
+            except:
+                w = self.synsets[0]
+                #print("Use synset:", w)
+
+            self.antonym = w.antonym
+            self.gloss = w.gloss
+            self.lexname = w.lexname
+
+    def hyponyms(self):
+        result = []
+        for synset in self.synsets:
+            hyponyms = synset.hyponyms()
+            for hyponym in hyponyms:
+                synonyms = hyponym.synonyms
+                for synonym in synonyms:
+                    synonym = synonym.replace("_", " ")
+                    result.append( synonym )
+        result = list(set(result))
+        return result
+
+    def hypernyms(self):
+        result = []
+        for synset in self.synsets:
+            hypernyms = synset.hypernyms()
+            for hypernym in hypernyms:
+                synonyms = hypernym.synonyms
+                for synonym in synonyms:
+                    synonym = synonym.replace("_", " ")
+                    result.append( synonym )
+        result = list(set(result))
+        return result
+
+
+    def senses(self):
+        result = []
+        for synset in self.synsets:
+            senses = synset.senses
+            result.append( senses )
+        return result
+
+
+    def holonyms(self):
+        result = []
+        for synset in self.synsets:
+            holonyms = synset.holonyms()
+            for holonym in holonyms:
+                synonyms = hyponym.synonyms
+                for synonym in synonyms:
+                    synonym = synonym.replace("_", " ")
+                    result.append( synonym )
+        result = list(set(result))
+        return result
+
+    def meronyms(self):
+        result = []
+        for synset in self.synsets:
+            meronyms = synset.meronyms()
+            for meronym in meronyms:
+                synonyms = hyponym.synonyms
+                for synonym in synonyms:
+                    synonym = synonym.replace("_", " ")
+                    result.append( synonym )
+        result = list(set(result))
+        return result
+
+
+
+def sortnodes_zero( a, b ):
+    if a[0] > b[0]:
+        return 1
+    elif a[0] < b[0]:
+        return -1
+    return 0
+
 #--- LIST OPERATIONS ---------------------------------------------------------------------------------
 
-def sorted(list, cmp=None, reversed=False):
+def sorted(thelist, cmp=None, reversed=False):
     """ Returns a sorted copy of the list.
     """
-    list = [x for x in list]
-    list.sort(cmp)
-    if reversed: list.reverse()
-    return list
+    thelist = [x for x in thelist]
+    # thelist.sort(cmp)
+    sortlist(thelist, cmp)
+    if reversed:
+        thelist.reverse()
+    return thelist
 
-def unique(list):
+
+def unique( thelist ):
     """ Returns a copy of the list without duplicates.
     """
-    unique = []; [unique.append(x) for x in list if x not in unique]
-    return unique    
+    unique = []
+    [unique.append(x) for x in thelist if x not in unique]
+    return unique
+
 
 #--- SET THEORY --------------------------------------------------------------------------------------
 
@@ -185,3 +327,4 @@ def partition(graph):
     g.sort(lambda a, b: len(b) - len(a))
     
     return g
+
