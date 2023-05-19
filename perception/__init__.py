@@ -66,15 +66,6 @@ if 1:
 # for whoever effed up the def type() below...
 typ = type
 
-# code -> id, name, autonym
-languages = {}
-
-# id -> patternrelation
-relations = {}
-
-# contexts -> id
-contexts = {}
-
 
 # py3 stuff
 py3 = False
@@ -388,20 +379,21 @@ def has_rule(node1, relation, node2=None, direct=True, reversed=False):
     if reversed:
         node1, node2 = node2, node1
     if not direct:
+
         # If both nodes are the same, they can reach each other.
         # However, the given relation still needs to exist before we return True.
         # This is a special case but not impossible: recusion is-part-of recursion.
-        if node1 == node2 \
-        and ((not node2 in node1.links) \
-        or (not node1.links.edge(node2).relation == relation)):
+        if (    node1 == node2
+            and (   (not node2 in node1.links)
+                 or (not node1.links.edge(node2).relation == relation))):
             return False
+
         # Check nodes connected to nodes with the given relation.
-        return node1.can_reach(node2, 
-            traversable=lambda n, e: n == e.node1 and e.relation == relation)
+        return node1.can_reach(node2, traversable=lambda n, e: n == e.node1 and e.relation == relation)
     # Assert that given relation goes from n1 directly to n2.
-    if  node1 in node2.links \
-    and node2.links.edge(node1).node1 == node1 \
-    and node2.links.edge(node1).relation == relation:
+    if (    node1 in node2.links
+        and node2.links.edge(node1).node1 == node1
+        and node2.links.edge(node1).relation == relation):
         return True
     else:
         return False
