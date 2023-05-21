@@ -26,7 +26,8 @@ def load(node, lang="en"):
 # load("Huis", "nl")
 # load("Maison", "fr")
 # load("Haus", "de")
-load("Nada", "es")
+# load("Nada", "es")
+load("domus", "la")
 
 
 size(850, 850)
