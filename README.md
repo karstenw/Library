@@ -42,6 +42,8 @@ The module ```grid``` runs.
 
 The module ```ìsight``` has been rewritten to use the newer [imagesnap](http://iharder.net/imagesnap) tool which makes it possible to take sequences of images very quickly.
 
+The module ```linguistics``` is new and needs an initialisation for downloading databases. See linguistics/README.md
+
 The module ```lsys```has been written from scratch. Why? Because lindemayer systems are fun. Included are a lot of demos from "Algorithmic Beauty of Plants" and "Lindenmayer Systems, Fractals, and Plants".
 
 The module ```lsystem``` runs.
