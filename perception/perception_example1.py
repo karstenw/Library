@@ -21,13 +21,18 @@ def load(node, lang="en"):
     g.layout.force = 0.001 # lower if nodes are twitching
     g.events.click = load
 
-# load("House")
-# load("Casa", "it")
-# load("Huis", "nl")
-# load("Maison", "fr")
-# load("Haus", "de")
-# load("Nada", "es")
-load("domus", "la")
+targets = (
+    ("House", 'en'),
+    ("Casa", "it"),
+    ("Huis", "nl"),
+    ("Maison", "fr"),
+    ("Haus", "de"),
+    ("Nada", "es"),
+    ("domus", "la"))
+
+p = choice( targets )
+print( p )
+load( *p )
 
 
 size(850, 850)
