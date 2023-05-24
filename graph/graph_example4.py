@@ -14,12 +14,16 @@ except ImportError:
 from random import shuffle
 
 import linguistics
+import linguistics.FlowerWord
+FlowerWord = linguistics.FlowerWord.FlowerWord
+
+# from linguistics import FlowerWord
+
 import pattern
 import pattern.text
 import pattern.text.en
 en = pattern.text.en
 wordnet = pattern.text.en.wordnet
-
 
 nouns = set(list( wordnet.NOUNS() ))
 
@@ -149,7 +153,7 @@ class wordnetgraph(graph.graph):
         # If there are 4 word senses and each of it a list of words,
         # take the first word from each list, then take the second etc.
         words = []
-        fw = graph.FlowerWord( word )
+        fw = FlowerWord( word )
         snses = fw.senses()
         for i in range(2):
             
@@ -173,7 +177,7 @@ class wordnetgraph(graph.graph):
             return self.expand(word, previous)
 
         words = []
-        fw = graph.FlowerWord( word )
+        fw = FlowerWord( word )
         # lexname = en.noun.lexname(word)
         lexname = fw.lexname
         if lexname != "":
