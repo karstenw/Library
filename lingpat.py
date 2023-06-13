@@ -67,5 +67,5 @@ if 0:
 
 import perception
 pdb.set_trace()
-q = perception.cluster("cool", depth=2, max=30, labeled=False)
+q = perception.cluster("cool", depth=2, maxedges=30, labeled=False)
 print( q )
