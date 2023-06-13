@@ -4,7 +4,7 @@ pp=pprint.pprint
 
 s1 = time.time()
 import linguistics
-linguistics.init_wn()
+# linguistics.init_wn()
 s2 = time.time()
 print("import linguistics %.3f" % (s2-s1) )
 
