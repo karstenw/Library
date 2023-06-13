@@ -9,7 +9,7 @@ __version__   = "1.9.4.5"
 __copyright__ = "Copyright (c) 2007-2009 Tom De Smedt"
 __license__   = "GPL"
 
-import arc
+from . import arc
 import xml.dom.minidom as parser
 import re
 # import md5
