@@ -2,7 +2,7 @@ try:
     beziereditor = ximport("beziereditor")
 except:
     beziereditor = ximport("__init__")
-    reload(beziereditor)
+    # reload(beziereditor)
 
 speed(100)
 size(800, 800)
