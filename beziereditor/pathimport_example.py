@@ -1,17 +1,15 @@
 size(1200, 1000)
 
-try:
-    svg = ximport("svg")
-except ImportError:
-    svg = ximport("__init__")
-    reload(pb)
+svg = ximport("svg")
 
 allpaths = []
-try:
-    allpaths.append( svg.parse(open("path.svg").read()) )
-    allpaths.append( svg.parse(open("char.svg").read()) )
-except:
-    pass
+for name in ("path.svg", "char.svg"):
+    with open(name, 'r') as f:
+        t = f.read()
+        s = svg.parse(t)
+        allpaths.append( s )
+
+# print(allpaths)
 
 # Create a copy of the path
 # we can manipulate with
