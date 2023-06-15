@@ -4,7 +4,7 @@ try:
     perception = ximport("perception")
 except ImportError:
     perception = ximport("__init__")
-    reload(perception)
+    # reload(perception)
 
 size(1000, 1000)
 
