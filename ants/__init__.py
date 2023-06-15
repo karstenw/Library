@@ -28,9 +28,9 @@ class Pheromone:
 class Ant:
 
     def __init__(self, colony, x, y):
-    
+
         self.colony = colony
-    
+
         self.x = x
         self.y = y
         self.vx = 0
@@ -39,7 +39,7 @@ class Ant:
         self.has_food = False
         self.trail = []
         self.wandering = randint(0, 10)
-    
+
     def near(self, obj, radius=10):
         
         """Checks if something is nearby.
@@ -72,7 +72,7 @@ class Ant:
             pass
         
         self.wandering = 0
-    
+
     def wander(self, d=0.3):
         
         """Wander around randomly.
@@ -93,7 +93,7 @@ class Ant:
         self.wandering += 1
         if self.wandering > self.colony.r: self.goal(self.colony)
         if self.near(self.colony): self.wandering = 0
-    
+
     def follow(self):
         
         """Follow a nearby pheromone trail.
@@ -114,7 +114,7 @@ class Ant:
                         self.goal(pheromone)
                         if pheromone.strength > 0.5: return
                         else: break
-    
+
     def harvest(self):
         
         """Collect nearby food.
@@ -154,7 +154,7 @@ class Ant:
             self.vy = 0
             self.has_food = False
             self.colony.food += 1
-    
+
     def forage(self, speed=2):
         
         self.follow() #follow nearby trails to food.
@@ -202,4 +202,4 @@ if __name__=='__main__':
             from pudb import set_trace; set_trace()
             ant.forage()
             print( ant.x, ant.y )
-        
+

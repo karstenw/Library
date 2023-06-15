@@ -2,11 +2,11 @@ try:
     ants = ximport("ants")
 except:
     ants = ximport("__init__")
-    reload(ants)
+    # reload(ants)
 
 
 size(500,500)
-speed(200)
+speed(20)
 
 def setup():    
     
@@ -37,7 +37,8 @@ def draw():
     # Watch it shrink as the ants eat away its size parameter!
     fill(0.6,0.8,0)
     for f in colony.foodsources:
-        oval(f.x-f.size/2, f.y-f.size/2, f.size, f.size)
+        # oval(f.x-f.size/2, f.y-f.size/2, f.size, f.size)
+        circle(f.x, f.y, f.size/2, f.size/2)
     
     for ant in colony:
         
@@ -51,13 +52,15 @@ def draw():
         # enabling other ants to find the food as well!
         if len(ant.trail) > 0:
             beginpath(ant.trail[0].x, ant.trail[0].y)
-            for p in ant.trail: lineto(p.x, p.y)
+            for p in ant.trail:
+                lineto(p.x, p.y)
             endpath()
         
         # Change ant color when carrying food.
         nostroke()
         fill(0.8,0.8,0.8,0.5)
-        if ant.has_food: fill(0.6,0.8,0)
+        if ant.has_food:
+            fill(0.6,0.8,0)
         
         # The main ant behaviour:
         # 1) follow an encountered trail,
