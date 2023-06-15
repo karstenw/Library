@@ -15,12 +15,14 @@ import pprint
 pp=pprint.pprint
 
 # wordnet = ximport("wordnet")
+import linguistics
+import pattern
 from pattern.en import wordnet
 explode = ximport("explode")
 # reload(explode)
 
 
-cellsize = 900
+cellsize = 854
 halfsize = int( cellsize / 2 )
 size( cellsize, cellsize )
 background( 0.89 )
@@ -39,6 +41,10 @@ if 1:
     hypolen = 0
     while hypolen < 2:
         root = choice( nouns )
+        root = choice( longlistwords )
+        # root="dupe"
+        root="bird"
+        # root="protestamt_denomination"
         synset = wordnet.synsets( root )[0]
         hyponyms = list( synset.hyponyms() )
         hypolen = len( hyponyms )
@@ -50,7 +56,8 @@ synsets = wordnet.synsets( root )
 synset = synsets[0]
 #pp( dir(synset) )
 hyponyms = list( synset.hyponyms() )
-
-explode.explode(root, hyponyms, halfsize, halfsize)
+translate(halfsize, halfsize)
+scale(0.9)
+explode.explode(root, hyponyms, 0,0 )
 
 print( """WordNet definition for '%s': "%s".""" % (root, synset.gloss ) )
