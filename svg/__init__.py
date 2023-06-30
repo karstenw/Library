@@ -12,18 +12,13 @@ __license__   = "GPL"
 from . import arc
 import xml.dom.minidom as parser
 import re
+import pprint
+
 # import md5
 import hashlib
+
 from nodebox.graphics import RGB, MOVETO
 
-def hash_md5( filepath, resulttype ):
-    m = hashlib.md5()
-    return gethash(m, filepath, resulttype)
-
-
-
-
-import pprint
 
 #### CACHE ####################################################################
 
@@ -33,11 +28,7 @@ class cache(dict):
     """
     
     def id(self, svg):
-        # hash = md5.new()
         hash = hashlib.md5()
-        #print("ctx:", bytes(_ctx) )
-        # print("svg:", svg)
-        # hash.update(str(_ctx)+svg.encode("utf-8"))
         hash.update( svg.encode("utf-8") )
         return hash.digest()
         
@@ -57,10 +48,12 @@ class cache(dict):
         p.stroke = path.stroke
         p.strokewidth = path.strokewidth
         p.closed = path.closed
+        p.id = path.id
         return p
     
     def clear(self):
-        for k in self.keys(): del self[k]
+        for k in self.keys():
+            del self[k]
         
 _cache = cache()
 
@@ -75,12 +68,13 @@ def parse(svg, cached=False, _copy=True):
         paths = parse_node(dom, [])
     else:
         id = _cache.id(svg)
-        if not id in _cache:
+        if id not in _cache:
             dom = parser.parseString(svg)
             _cache.save(id, parse_node(dom, []))
         paths = _cache.load(id, _copy)
    
     return paths
+
 
 def get_attribute(element, attribute, default=0):
     
@@ -190,14 +184,15 @@ def parse_polygon(e):
     d = d.split(",")
     points = []
     for x in d:
-        if x != "": points.append(float(x))
+        if x != "":
+            points.append(float(x))
     
     _ctx.autoclosepath()
     if (e.tagName == "polyline") :
         _ctx.autoclosepath(False)
         
     _ctx.beginpath(points[0], points[1])
-    for i in range(len(points)/2):
+    for i in range( len(points) // 2 ):
         _ctx.lineto(points[i*2], points[i*2+1])
     p = _ctx.endpath(draw=False)
     return p
@@ -248,7 +243,8 @@ def parse_path(e):
             # The command is a pen move, line or curve.
             # Get the coordinates.
             points = segment[1:].strip()
-            points = points.replace("-", ",-")
+            if not "e" in points:
+                points = points.replace("-", ",-")
             points = points.replace(" ", ",")
             points = re.sub(",+", ",", points)
             points = points.strip(",")
@@ -261,7 +257,10 @@ def parse_path(e):
                 pointx = points[i*2]
                 pointy = points[i*2+1]
 
-                _ctx.moveto(pointx, pointy)
+                if i == 0:
+                    _ctx.moveto(pointx, pointy)
+                else:
+                    _ctx.lineto(pointx, pointy)
 
                 dx = pointx
                 dy = pointy
@@ -275,7 +274,7 @@ def parse_path(e):
                 pointx = points[i*2]
                 pointy = points[i*2+1]
 
-                _ctx.moveto(dx+pointx, dy+pointy)
+                _ctx.moveto( dx+pointx, dy+pointy )
 
                 dx += pointx
                 dy += pointy
