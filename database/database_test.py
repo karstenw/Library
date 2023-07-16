@@ -8,7 +8,7 @@ except:
     reload(db)
 
 book = db.create("book")
-book.create_table("pages", ["title", "description", "pagenumber"])
+book.create_table("pages", ["title", "description", "pagenumber"] )
 
 book.pages.append(title="introduction", pagenumber=1)
 book.pages.append(title="chapter one", pagenumber=2)

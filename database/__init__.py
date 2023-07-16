@@ -15,6 +15,9 @@ sys.path.append( os.path.abspath( '.' ))
 import sqlite3
 sqlite = sqlite3
 
+from types import MethodType as instancemethod
+
+
 # py3 stuff
 
 py3 = False
@@ -29,6 +32,8 @@ except NameError:
     py3 = True
     punichr = chr
     long = int
+
+import pdb
 
 
 ### DATABASE #########################################################################################
@@ -60,7 +65,7 @@ class Database:
         self._name = name.rstrip(".db")
         self._con = sqlite.connect(self._name + ".db")
         self._cur = self._con.cursor()
- 
+     
         self._tables = []
         self._cur.execute("select name from sqlite_master where type='table'")
         for r in self._cur: self._tables.append(r[0])
@@ -74,10 +79,14 @@ class Database:
             fields = []
             key = ""
             for r in self._cur:
+                name, typ = r[1], r[2]
                 fields.append(r[1])
-                if r[2] == "integer": key = r[1]
+                # if r[2] == "INTEGER":
+                if "integer primary key" in typ.lower():
+                    key = r[1]
             setattr(self, t, Table(self, t, key, fields))
-        
+
+
     def create(self, name, overwrite=True):
         
         """Creates an SQLite database file.
@@ -95,35 +104,39 @@ class Database:
             except: pass       
         self._con = sqlite.connect(self._name + ".db")
         self._cur = self._con.cursor()        
-    
+
     def __len__(self):
         return len(self._tables)
-    
+
     def __getitem__(self, name):
         if isinstance(name, int): name = self._tables[name]
         return getattr(self, name)
         
     # Deprecated, use for-loop and Database[table_name] instead.
-    def tables(self): return self._tables
+    def tables(self):
+        return self._tables
     table = __getitem__
-    
-    def create_table(self, name, fields=[], key="id"):
+
+    def create_table(self, name, fields=[], key=""):
         
         """Creates a new table.
         
         Creates a table with the given name,
         containing the list of given fields.
         Since SQLite uses manifest typing, no data type need be supplied.
-        The primary key is "id" by default,
+        The primary key is "id"+name by default,
         an integer that can be set or otherwise autoincrements.
         
         """
-        
+        # pdb.set_trace()
+        if key == "":
+            key = "id" + name
         for f in fields: 
             if f == key: fields.remove(key)
         sql  = "create table "+name+" "
         sql += "("+key+" integer primary key"
-        for f in fields: sql += ", "+f+" varchar(255)"
+        for f in fields:
+            sql += ", "+f+" varchar(255)"
         sql += ")"
         self._cur.execute(sql)
         self._con.commit()
@@ -132,7 +145,7 @@ class Database:
 
     # Deprecated, use create_table() instead.
     append = create_table
-    
+
     def create_index(self, table, field, unique=False, ascending=True):
         
         """Creates a table index.
@@ -151,7 +164,7 @@ class Database:
         sql += "on "+table+"("+field+" "+a+")"
         self._cur.execute(sql)
         self._con.commit()
-    
+
     # Deprecated, use create_index() instead.
     index = create_index
         
@@ -198,7 +211,7 @@ class Database:
         self._con.commit()
         if ext == ".xml":
             return self._dump_xml()
-    
+
     def _dump_xml(self):
         
         data  = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
@@ -249,20 +262,21 @@ class Table:
         table.id(query, operator="=")
         
         """
-    
+        # pdb.set_trace()
         self._db = db
         self._name = name
+        if not key:
+            key = "id"+name
         self._key = key
         self._fields = fields
         
         for f in self._fields:
-            # import new
-            from types import MethodType as instancemethod
             im = lambda t, q, operator="=", fields="*", _field=f: t.find(q, operator, fields, _field)
             # setattr(self, f, new.instancemethod(im, self, None))
             setattr(self, f, instancemethod( im, self ))
 
-    def _get_name(self): return self._name
+    def _get_name(self):
+        return self._name
     name = property(_get_name)
 
     def __len__(self):
@@ -273,7 +287,8 @@ class Table:
         sql = "select "+self._key+" from "+self._name
         self._db._cur.execute(sql)
         i = 0
-        for r in self._db._cur: i += 1
+        for r in self._db._cur:
+            i += 1
         return i
 
     def find(self, q, operator="=", fields="*", key=None):
@@ -289,19 +304,24 @@ class Table:
         
         """
         
-        if key == None: key = self._key
+        if key == None:
+            key = self._key
+
         if fields != "*":
             fields = ", ".join(fields)
+
         try:
             q = unicode(q)
         except:
             pass
-        if (    q != "*"
+
+        if (     q != "*"
             and (   q[0] == "*"
-                or  q[-1] == "*") ):
+                 or  q[-1] == "*") ):
 
             if q[0]  == "*":
                 q = "%"+q.lstrip("*")
+
             if q[-1] == "*":
                 q = q.rstrip("*")+"%"
             operator = "like"
@@ -338,7 +358,7 @@ class Table:
         """
         
         return self._fields
-    
+
     def append(self, *args, **kw):
         
         """Adds a new row to a table.
@@ -399,21 +419,26 @@ class Table:
 
         """ Deletes the row with given id.
         """
+        # pdb.set_trace()
 
-        if key == None: key = self._key
+        if key == None:
+            key = self._key
         try:
             id = punicode(id)
         except:
-            pass        
-        sql = (  "delete from "
-               + self._name
-               + " where "
-               + key + " " + operator
-               + " ?" )
+            pass
+        sql = "DELETE FROM `%s` WHERE %s %s ?"  % (self._name, key, operator)
+        if 0:
+            print(sql)
+        #sql = (  "delete from "
+        #       + self._name
+        #       + " where "
+        #       + key + " " + operator
+        #       + " ?" )
         self._db._cur.execute(sql, (id,))
 
-######################################################################################################
 
+######################################################################################################
 def create(name, overwrite=True):
     
     db = Database()
@@ -425,4 +450,5 @@ def connect(name):
     db = Database()
     db.connect(name)
     return db
+
 
