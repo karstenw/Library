@@ -50,9 +50,9 @@
 </vnodes>
 <tnodes>
 <t tx="karstenw.20230716135655.2"></t>
-<t tx="karstenw.20230716135718.1">@others
-@language python
+<t tx="karstenw.20230716135718.1">@language python
 @tabwidth -4
+@others
 </t>
 <t tx="karstenw.20230716135730.1">__author__    = "Tom De Smedt"
 __version__   = "1.9.2"
@@ -65,6 +65,11 @@ sys.path.append( os.path.abspath( '.' ))
 # from pysqlite2 import dbapi2 as sqlite
 import sqlite3
 sqlite = sqlite3
+
+import pprint
+pp = pprint.pprint
+
+# import pdb
 
 from types import MethodType as instancemethod
 
@@ -84,7 +89,6 @@ except NameError:
     punichr = chr
     long = int
 
-import pdb
 
 
 </t>
@@ -444,11 +448,13 @@ name = property(_get_name)
  
     self._tables = []
     self._cur.execute("select name from sqlite_master where type='table'")
-    for r in self._cur: self._tables.append(r[0])
+    for r in self._cur:
+        self._tables.append(r[0])
     
     self._indices = []
     self._cur.execute("select name from sqlite_master where type='index'")
-    for r in self._cur: self._indices.append(r[0])
+    for r in self._cur:
+        self._indices.append(r[0])
     
     for t in self._tables:
         self._cur.execute("pragma table_info("+t+")")
@@ -461,6 +467,8 @@ name = property(_get_name)
             if "integer primary key" in typ.lower():
                 key = r[1]
         setattr(self, t, Table(self, t, key, fields))
+    #pdb.set_trace()
+    #pp(dir(self))
 
 
 </t>

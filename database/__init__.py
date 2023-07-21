@@ -15,6 +15,11 @@ sys.path.append( os.path.abspath( '.' ))
 import sqlite3
 sqlite = sqlite3
 
+import pprint
+pp = pprint.pprint
+
+# import pdb
+
 from types import MethodType as instancemethod
 
 
@@ -33,7 +38,6 @@ except NameError:
     punichr = chr
     long = int
 
-import pdb
 
 
 ### DATABASE #########################################################################################
@@ -68,11 +72,13 @@ class Database:
      
         self._tables = []
         self._cur.execute("select name from sqlite_master where type='table'")
-        for r in self._cur: self._tables.append(r[0])
+        for r in self._cur:
+            self._tables.append(r[0])
         
         self._indices = []
         self._cur.execute("select name from sqlite_master where type='index'")
-        for r in self._cur: self._indices.append(r[0])
+        for r in self._cur:
+            self._indices.append(r[0])
         
         for t in self._tables:
             self._cur.execute("pragma table_info("+t+")")
@@ -85,6 +91,8 @@ class Database:
                 if "integer primary key" in typ.lower():
                     key = r[1]
             setattr(self, t, Table(self, t, key, fields))
+        #pdb.set_trace()
+        #pp(dir(self))
 
 
     def create(self, name, overwrite=True):
