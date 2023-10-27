@@ -45,8 +45,10 @@ def keywords(list=[], all=False):
     """
     
     #If list is a string, convert it to a list.
-    from types import StringType
-    if type(list) == StringType: list = [list]
+    # from types import StringType
+    #if type(list) == StringType: list = [list]
+    if type(list) in (str,):
+        list = [list]
     
     global KEYWORDS, KEYWORDS_ALL
     KEYWORDS = list
