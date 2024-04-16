@@ -43,7 +43,7 @@ class WordNetBrowser(graphbrowser.GraphBrowser):
     def __init__(self):
         
         # Keep the word sense as a state parameter.
-        pdb.set_trace()
+        # pdb.set_trace()
         graphbrowser.GraphBrowser.__init__(self)
         self.sense = 0
         self.sense_count = 0
