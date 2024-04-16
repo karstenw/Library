@@ -7,14 +7,17 @@
 from __future__ import print_function
 
 from math import *
+import pdb
 
 ### CORNU ############################################################################################
 
 # fit arc to pts (0, 0), (x, y), and (1, 0), return th tangent to
 # arc at (x, y)
 def fit_arc(x, y):
-    th = atan2(y - 2 * x * y, y * y + x - x * x)
+    th = atan2( y - 2 * x * y,
+                y * y + x - x * x)
     return th
+
 
 # find thetas tangent to path using local cspline logic
 def local_ths(path, closed):
@@ -42,10 +45,16 @@ def local_ths(path, closed):
 # set the endpoint thetas so endpoint curves are circular arcs
 def boundary_ths(path, ths, closed):
     if not closed:
-        first_th = 2 * atan2(path[1][1] - path[0][1], path[1][0] - path[0][0]) - ths[1]
-        ths[0] = first_th
-        last_th = 2 * atan2(path[-1][1] - path[-2][1], path[-1][0] - path[-2][0]) - ths[-2]
-        ths[-1] = last_th
+        pointFirst = path[0]
+        pointSecond = path[1]
+        pointLast = path[-1]
+        pointSeocondLast = path[-2]
+        # pdb.set_trace()
+        # first_th = 2 * atan2(path[1][1] - path[0][1], path[1][0] - path[0][0]) - ths[1]
+        first_theta  = 2 * atan2(pointSecond[1] - pointFirst[1], pointSecond[0] - pointFirst[0]) - ths[1]
+        ths[0] = first_theta
+        last_theta = 2 * atan2(pointLast[1] - pointSeocondLast[1], pointLast[0] - pointSeocondLast[0]) - ths[-2]
+        ths[-1] = last_theta
    
 # implementation adapted from cephes
 def polevl(x, coef):
