@@ -46,6 +46,7 @@ linguistics-data
 linguistics-archives
 #linguistics/linguistics-data
 #linguistics/linguistics-archives
+ling_notwork3-pat.py
 
 lsys/Examples/Lindenmayer Systems, Fractals, and Plants/*.png
 
@@ -65,5 +66,10 @@ photobot/photobot.leo
 
 pixabay
 */APIKEY
+
+# ignore for now
+svg/Enthought_svg.py
+svg/svg-example3.py
+svg/svg-example4-icons.py
 
 svg/+lib
