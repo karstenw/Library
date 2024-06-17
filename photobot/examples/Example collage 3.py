@@ -53,7 +53,8 @@ imagewell = loadImageWell(   bgsize=(WIDTH, HEIGHT),
                              minsize=(256,256),
                              pathonly=True,
                              additionals=additionals,
-                             resultfile="imagewell-files",
+                             imagewellfilename="imagewell.txt",
+                             tabfilename="imagewell.tab",
                              ignoreFolderNames=('+offline',))
 
 # tiles are images >256x256 and <=WIDTH, HEIGHT
