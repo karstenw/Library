@@ -38,6 +38,7 @@ stopwords = []
 items = (
     ("vocabulary.txt", dictionary),
     ("stopwords.txt", stopwords) )
+
 for item in items:
     path, container = item
     f = open(path, 'r', encoding="utf-8")
@@ -73,7 +74,7 @@ class FlowerWord:
         self.antonym = ""
         self.gloss = ""
         self.lexname = ""
-
+        
         if len(self.synsets) > 0:
             synonyms = self.synsets[0].synonyms
             try:
