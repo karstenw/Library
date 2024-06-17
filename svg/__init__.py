@@ -13,6 +13,7 @@ from . import arc
 import xml.dom.minidom as parser
 import re
 import pprint
+# import pdb
 
 # import md5
 import hashlib
@@ -48,7 +49,8 @@ class cache(dict):
         p.stroke = path.stroke
         p.strokewidth = path.strokewidth
         p.closed = path.closed
-        p.id = path.id
+        # pdb.set_trace()
+        # p.id = path.id
         return p
     
     def clear(self):
