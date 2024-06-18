@@ -7,7 +7,7 @@ from random import seed, sample
 flowerewolf = ximport("flowerewolf")
 
 size( 1000, 900 )
-fontsize(32)
+fontsize(24)
 
 # select 13 random fonts
 
