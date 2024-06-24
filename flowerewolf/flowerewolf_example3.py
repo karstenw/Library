@@ -12,14 +12,14 @@ fontsize(24)
 # select 13 random fonts
 
 allnouns = list(flowerewolf.allnouns)
-
+allfonts = fontnames()
 speed( 0.334 )
 
 def setup():
     pass
 
 def draw():
-    fonts = sample( fontnames(), 20 )
+    fonts = sample( allfonts, 20 )
     topic = choice( allnouns )
     print("topic:", topic)
     flowerewolf.dada(
