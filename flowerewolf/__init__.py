@@ -5,6 +5,7 @@
 
 ################################################################################
 
+import os
 import time
 import io
 
@@ -39,9 +40,12 @@ items = (
     ("vocabulary.txt", dictionary),
     ("stopwords.txt", stopwords) )
 
+PACKAGE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 for item in items:
-    path, container = item
-    f = open(path, 'r', encoding="utf-8")
+    filename, container = item
+    path = os.path.join( PACKAGE_DIR, filename)
+    f = io.open(path, 'r', encoding="utf-8")
     for line in f.readlines():
         if not line:
             continue
