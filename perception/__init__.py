@@ -1,15 +1,37 @@
 # coding: utf-8
 
 ### PERCEPTION #################################################################
-# Analysis tools for working with data from http://nodebox.net/perception in NodeBox.
-# The library is roughly organised in 5 parts that add up to the final solver object:
-# 1) query()   : returns lists of rules form the online database, using a caching mechanism.
-# 2) cluster() : returns a graph objects based on a cluster of rules around a central concept.
-# 3) range()   : find sibling concepts (e.g. fonts, movies, colors, trees) using a taxonomy graph.
-# 4) index     : object for building and searching cached indices of shortest paths.
-# 5) cost      : object that simplifies the creation of path search heuristics.
-# => solver    : object for inferring knowledge from the database, using clusters,
-#                indices and ranges.
+#
+# Analysis tools for working with data from http://nodebox.net/perception
+# in NodeBox.
+# 
+# The library is roughly organised in 5 parts that add up to the final
+# solver object:
+# 
+# 1) query()
+#           returns lists of rules form the online database,
+#           using a caching mechanism.
+# 
+# 2) cluster()
+#           returns a graph objects based on a cluster of rules
+#           around a central concept.
+# 
+# 3) range()
+#           find sibling concepts (e.g. fonts, movies, colors,
+#           trees) using a taxonomy graph.
+# 
+# 4) index
+#           object for building and searching cached indices
+#           of shortest paths.
+#
+# 5) cost
+#           object that simplifies the creation of path
+#           search heuristics.
+#
+# => solver
+#           object for inferring knowledge from the database,
+#           using clusters, indices and ranges.
+
 
 ### CREDITS ####################################################################
 
@@ -42,19 +64,22 @@ pp = pprint.pprint
 from random import random
 import requests
 import pdb
+kwdbg = True
+kwlog= True
 
 startimport = time.time()
 
 import linguistics
 import conceptnetreader
 
+# used in search_match_parse()
 import pattern
 import pattern.web
 import pattern.text
 import pattern.text.en
 en = pattern.text.en
 
-import textblob
+# import textblob
 
 import graph
 from graph.cluster import sorted, unique
@@ -65,6 +90,7 @@ if 1:
 
 # for whoever effed up the def type() below...
 typ = type
+
 
 
 # py3 stuff
@@ -1067,7 +1093,13 @@ analogy = _analogy()
 
 #### SEARCH-MATCH-PARSE ########################################################
 
-def search_match_parse(query, pattern_, parse=lambda x: x, service="google", cached=True, n=2,):
+def search_match_parse(
+        query,
+        pattern_,
+        parse=lambda x: x,
+        service="google",
+        cached=True, n=2,):
+
     """ Parses words from search engine queries that match a given syntactic pattern.
     query   : a Google/Yahoo query. Google queries can include * wildcards. 
     pattern : an en.sentence.find() pattern, e.g. as big as * NN
@@ -1119,8 +1151,8 @@ def search_match_parse(query, pattern_, parse=lambda x: x, service="google", cac
                 raise request.error
             for result in request.value:
                 collect.append( result )
-
-    pdb.set_trace()
+    if kwdbg:
+        pdb.set_trace()
     
     for result in collect:
         if result.text:
