@@ -537,9 +537,13 @@ stopwords = []
 items = (
     ("vocabulary.txt", dictionary),
     ("stopwords.txt", stopwords) )
+
+PACKAGE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 for item in items:
-    path, container = item
-    f = open(path, 'r', encoding="utf-8")
+    filename, container = item
+    path = os.path.join( PACKAGE_DIR, filename)
+    f = io.open(path, 'r', encoding="utf-8")
     for line in f.readlines():
         if not line:
             continue
@@ -691,7 +695,7 @@ _ctx.strokewidth(0.5)
     self.antonym = ""
     self.gloss = ""
     self.lexname = ""
-
+    
     if len(self.synsets) &gt; 0:
         synonyms = self.synsets[0].synonyms
         try:
