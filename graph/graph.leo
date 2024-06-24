@@ -10,11 +10,10 @@
 <find_panel_settings/>
 <vnodes>
 <v t="karstenw.20230319195648.2" a="E"><vh>graph</vh>
-<v t="karstenw.20230319195720.1"><vh>@clean __init__.py</vh>
+<v t="karstenw.20230319195720.1" a="E"><vh>@clean __init__.py</vh>
 <v t="karstenw.20230319195736.1"><vh>Declarations</vh></v>
 <v t="karstenw.20230319202717.1"><vh>py3</vh>
 <v t="karstenw.20230319202717.2"><vh>py3 stuff</vh></v>
-<v t="karstenw.20230319202717.3"><vh>cmp_to_key</vh></v>
 <v t="karstenw.20230319202717.4"><vh>sortlist</vh></v>
 <v t="karstenw.20230319203345.1"><vh>sortnodes_zero</vh></v>
 </v>
@@ -100,7 +99,7 @@
 </v>
 <v t="karstenw.20230319195736.79"><vh>create</vh></v>
 </v>
-<v t="karstenw.20230329160917.1" a="E"><vh>@clean cluster.py</vh>
+<v t="karstenw.20230329160917.1"><vh>@clean cluster.py</vh>
 <v t="karstenw.20230329160929.1"><vh>Declarations</vh></v>
 <v t="karstenw.20230518183122.1"><vh>py3</vh>
 <v t="karstenw.20230518183122.2"><vh>py3 stuff</vh></v>
@@ -221,7 +220,7 @@
 <v t="karstenw.20230329163243.8"><vh>__setattr__</vh></v>
 <v t="karstenw.20230329163243.9"><vh>copy</vh></v>
 </v>
-<v t="karstenw.20230329163243.10"><vh>class styleguide</vh>
+<v t="karstenw.20230329163243.10" a="E"><vh>class styleguide</vh>
 <v t="karstenw.20230329163243.11"><vh>__init__</vh></v>
 <v t="karstenw.20230329163243.12"><vh>append</vh></v>
 <v t="karstenw.20230329163243.13"><vh>clear</vh></v>
@@ -264,7 +263,7 @@
 <v t="karstenw.20230507120753.6"><vh>senses</vh></v>
 <v t="karstenw.20230507120753.7"><vh>hyponym</vh></v>
 </v>
-<v t="karstenw.20230507120753.8"><vh>class wordnetgraph</vh>
+<v t="karstenw.20230507120753.8" a="E"><vh>class wordnetgraph</vh>
 <v t="karstenw.20230507120753.9"><vh>__init__</vh></v>
 <v t="karstenw.20230507120753.10"><vh>is_expandable</vh></v>
 <v t="karstenw.20230507120753.11"><vh>is_clickable</vh></v>
@@ -293,13 +292,14 @@
 @tabwidth -4
 @others
 </t>
-<t tx="karstenw.20230319195736.1">### GRAPH ############################################################################################
+<t tx="karstenw.20230319195736.1">### GRAPH ######################################################################
 
 # The NodeBox Graph library includes algorithms from NetworkX for 
-# betweenness centrality and eigenvector centrality, Connelly Barnes' implementation of 
-# Dijksta shortest paths (here) and the spring layout for JavaScript by Aslak Hellesoy 
-# and Dave Hoover (here). The goal of this library is visualization of small graphs (&lt;200 elements), 
-# if you need something more robust we recommend using NetworkX.
+# betweenness centrality and eigenvector centrality, Connelly Barnes'
+# implementation of Dijksta shortest paths (here) and the spring layout
+# for JavaScript by Aslak Hellesoy and Dave Hoover (here). The goal of
+# this library is visualization of small graphs (&lt;200 elements), if you
+# need something more robust we recommend using NetworkX.
 
 ### CREDITS ##########################################################################################
 
@@ -314,6 +314,7 @@ __license__   = "GPL"
 ######################################################################################################
 
 import pdb
+from functools import cmp_to_key
 
 import linguistics
 import pattern
@@ -1266,27 +1267,6 @@ except NameError:
     py3 = True
     punichr = chr
     long = int
-
-
-</t>
-<t tx="karstenw.20230319202717.3">def cmp_to_key(mycmp):
-    'Convert a cmp= function into a key= function'
-    class K:
-        def __init__(self, obj, *args):
-            self.obj = obj
-        def __lt__(self, other):
-            return mycmp(self.obj, other.obj) &lt; 0
-        def __gt__(self, other):
-            return mycmp(self.obj, other.obj) &gt; 0
-        def __eq__(self, other):
-            return mycmp(self.obj, other.obj) == 0
-        def __le__(self, other):
-            return mycmp(self.obj, other.obj) &lt;= 0
-        def __ge__(self, other):
-            return mycmp(self.obj, other.obj) &gt;= 0
-        def __ne__(self, other):
-            return mycmp(self.obj, other.obj) != 0
-    return K
 
 
 </t>
@@ -3029,7 +3009,12 @@ def makeunicode(s, srcencoding="utf-8", normalizer="NFC"):
 # You'll need the NodeBox Linguistics library installed.
 # Author: Tom De Smedt.
 
-query = "bird"
+query = "house"
+
+import os
+import pdb
+kwdbg = True
+kwlog = True
 
 try:
     graph = ximport("graph")
@@ -3040,12 +3025,16 @@ except ImportError:
 from random import shuffle
 
 import linguistics
+import linguistics.FlowerWord
+FlowerWord = linguistics.FlowerWord.FlowerWord
+
+# from linguistics import FlowerWord
+
 import pattern
 import pattern.text
 import pattern.text.en
 en = pattern.text.en
 wordnet = pattern.text.en.wordnet
-
 
 nouns = set(list( wordnet.NOUNS() ))
 
@@ -3096,7 +3085,7 @@ nouns = set(list( wordnet.NOUNS() ))
     # If there are 4 word senses and each of it a list of words,
     # take the first word from each list, then take the second etc.
     words = []
-    fw = graph.FlowerWord( word )
+    fw = FlowerWord( word )
     snses = fw.senses()
     for i in range(2):
         
@@ -3121,7 +3110,7 @@ nouns = set(list( wordnet.NOUNS() ))
         return self.expand(word, previous)
 
     words = []
-    fw = graph.FlowerWord( word )
+    fw = FlowerWord( word )
     # lexname = en.noun.lexname(word)
     lexname = fw.lexname
     if lexname != "":
@@ -3138,6 +3127,7 @@ nouns = set(list( wordnet.NOUNS() ))
     ]
     # Get related words from WordNet.
     # Exclude long words and take the top of the list.
+    pdb.set_trace()
     for top, f, relation in relations:
         r = []
         try:
@@ -3154,7 +3144,8 @@ nouns = set(list( wordnet.NOUNS() ))
                 r.append((w[0], relation))
                 
         words.extend(r[:top])
-        
+    if kwdbg:
+        print("get_relations(%s): %s" % (word, str(words)))
     return words
 
 </t>
@@ -3265,9 +3256,10 @@ class senses:
     self.pressed = None
 
 </t>
-<t tx="karstenw.20230507120753.2">def holonym( word, sense="" ):
+<t tx="karstenw.20230507120753.2">def holonym( word, sense="", all=False ):
     fw = FlowerWord( word )
     hn = fw.holonyms()
+    print("holonym(%s): %s" % (word, str(hn)))
     if len(hn) &gt; 0:
         return hn[0]
     return ""
@@ -3320,9 +3312,9 @@ class senses:
     """ Update senses.pressed to the last button pressed.
     """
     
-    if mousedown \
-    and self.graph.events.dragged == None \
-    and path.contains(MOUSEX, MOUSEY):
+    if (    mousedown 
+        and self.graph.events.dragged == None 
+        and path.contains(MOUSEX, MOUSEY)):
         self.pressed = i
 
 </t>
@@ -3347,41 +3339,46 @@ class senses:
     )
     
 </t>
-<t tx="karstenw.20230507120753.3">def meronym( word, sense="" ):
+<t tx="karstenw.20230507120753.3">def meronym( word, sense="", all=False ):
     fw = FlowerWord( word )
     mn = fw.meronyms()
-    if len(hn) &gt; 0:
+    print("meronym(%s): %s" % (word, str(mn)))
+    if len(mn) &gt; 0:
         return mn[0]
     return ""
 
 </t>
-<t tx="karstenw.20230507120753.4">def antonym( word, sense="" ):
+<t tx="karstenw.20230507120753.4">def antonym( word, sense="", all=False ):
     fw = FlowerWord( word )
-    hn = fw.holonyms()
-    if len(hn) &gt; 0:
-        return hn[0].antonym
+    an = fw.holonyms()
+    if len(an) &gt; 0:
+        print("antonym(%s): %s" % (word, str(an[0].antonym)))
+        return an[0].antonym
     return ""
 
 </t>
-<t tx="karstenw.20230507120753.5">def hypernym( word, sense="" ):
+<t tx="karstenw.20230507120753.5">def hypernym( word, sense="", all=False ):
     fw = FlowerWord( word )
     hn = fw.hypernyms()
+    print("hypernym(%s): %s" % (word, str(hn)))
     if len(hn) &gt; 0:
         return hn[0]
     return ""
 
 </t>
-<t tx="karstenw.20230507120753.6">def senses( word, sense="" ):
+<t tx="karstenw.20230507120753.6">def senses( word, sense="", all=False ):
     fw = FlowerWord( word )
-    hn = fw.hypernyms()
-    if len(hn) &gt; 0:
-        return hn[0]
+    sn = fw.senses()
+    print("senses(%s): %s" % (word, str(sn)))
+    if len(sn) &gt; 0:
+        return sn[0]
     return ""
 
 </t>
-<t tx="karstenw.20230507120753.7">def hyponym( word, sense="" ):
+<t tx="karstenw.20230507120753.7">def hyponym( word, sense="", all=False ):
     fw = FlowerWord( word )
     hn = fw.hyponyms()
+    print("hyponym(%s): %s" % (word, str(hn)))
     if len(hn) &gt; 0:
         return hn[0]
     return ""
@@ -3555,7 +3552,7 @@ g.draw(
 g = wordnetgraph(distance=1.2)
 g.load(query)
 
-size(550, 550)
+size(800, 650)
 speed(30) 
 </t>
 <t tx="karstenw.20230518183122.1"></t>
