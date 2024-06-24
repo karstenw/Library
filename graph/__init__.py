@@ -1,10 +1,11 @@
-### GRAPH ############################################################################################
+### GRAPH ######################################################################
 
 # The NodeBox Graph library includes algorithms from NetworkX for 
-# betweenness centrality and eigenvector centrality, Connelly Barnes' implementation of 
-# Dijksta shortest paths (here) and the spring layout for JavaScript by Aslak Hellesoy 
-# and Dave Hoover (here). The goal of this library is visualization of small graphs (<200 elements), 
-# if you need something more robust we recommend using NetworkX.
+# betweenness centrality and eigenvector centrality, Connelly Barnes'
+# implementation of Dijksta shortest paths (here) and the spring layout
+# for JavaScript by Aslak Hellesoy and Dave Hoover (here). The goal of
+# this library is visualization of small graphs (<200 elements), if you
+# need something more robust we recommend using NetworkX.
 
 ### CREDITS ##########################################################################################
 
@@ -19,6 +20,7 @@ __license__   = "GPL"
 ######################################################################################################
 
 import pdb
+from functools import cmp_to_key
 
 import linguistics
 import pattern
@@ -48,26 +50,6 @@ except NameError:
     long = int
 
 
-def cmp_to_key(mycmp):
-    'Convert a cmp= function into a key= function'
-    class K:
-        def __init__(self, obj, *args):
-            self.obj = obj
-        def __lt__(self, other):
-            return mycmp(self.obj, other.obj) < 0
-        def __gt__(self, other):
-            return mycmp(self.obj, other.obj) > 0
-        def __eq__(self, other):
-            return mycmp(self.obj, other.obj) == 0
-        def __le__(self, other):
-            return mycmp(self.obj, other.obj) <= 0
-        def __ge__(self, other):
-            return mycmp(self.obj, other.obj) >= 0
-        def __ne__(self, other):
-            return mycmp(self.obj, other.obj) != 0
-    return K
-
-
 def sortlist(thelist, thecompare):
     if py3:
         sortkeyfunction = cmp_to_key( thecompare )
@@ -83,7 +65,7 @@ def sortnodes_zero( a, b ):
         return -1
     return 0
 
-#### GRAPH NODE ######################################################################################
+#### GRAPH NODE ################################################################
 
 class node:
     
@@ -205,7 +187,7 @@ class node:
         if not isinstance(node, self.__class__): return False
         return self.id < node.id
 
-#### GRAPH NODE LINKS ################################################################################
+#### GRAPH NODE LINKS ##########################################################
 
 class links(list):
     
@@ -231,11 +213,12 @@ class links(list):
             id = id.id
         return self._edges[id]
 
-##### GRAPH EDGE #####################################################################################
+##### GRAPH EDGE ###############################################################
 
 class edge(object):
     
-    def __init__(self, node1, node2, weight=0.0, length=1.0, label="", properties={}):
+    def __init__(self, node1, node2, weight=0.0, length=1.0,
+                 label="", properties={}):
 
         self.node1  = node1
         self.node2  = node2
@@ -253,7 +236,7 @@ class edge(object):
         self._length = max(0.1, v)
     length = property(_get_length, _set_length)
 
-#### GRAPH ###########################################################################################
+#### GRAPH #####################################################################
 
 LAYOUT_CIRCLE = "circle"
 LAYOUT_SPRING = "spring"
@@ -300,9 +283,11 @@ class graph(dict):
 
         if not empty:
             for n in self.nodes:
-                g.add_node(n.id, n.r, n.style, n.category, n.label, (n == self.root), n.__dict__)
+                g.add_node( n.id, n.r, n.style, n.category, n.label,
+                            (n == self.root), n.__dict__)
             for e in self.edges:
-                g.add_edge(e.node1.id, e.node2.id, e.weight, e.length, e.label, e.__dict__)
+                g.add_edge( e.node1.id, e.node2.id, e.weight,
+                            e.length, e.label, e.__dict__)
         
         return g
 
@@ -320,17 +305,19 @@ class graph(dict):
         self.alpha = 0
 
     def new_node(self, *args, **kwargs):
-        """ Returns a node object; can be overloaded when the node class is subclassed.
+        """ Returns a node object; can be overloaded when the node class
+        is subclassed.
         """
         return node(*args, **kwargs)
 
     def new_edge(self, *args, **kwargs):
-        """ Returns an edge object; can be overloaded when the edge class is subclassed.
+        """ Returns an edge object; can be overloaded when the edge class
+        is subclassed.
         """
         return edge(*args, **kwargs)
 
-    def add_node(self, id, radius=8, style=style.DEFAULT, category="", label=None, root=False,
-                 properties={}):
+    def add_node(self, id, radius=8, style=style.DEFAULT, category="",
+                 label=None, root=False, properties={}):
         
         """ Add node from id and return the node object.
         """
@@ -357,10 +344,12 @@ class graph(dict):
         except:
             pass
 
-    def add_edge(self, id1, id2, weight=0.0, length=1.0, label="", properties={}):
+    def add_edge(self, id1, id2, weight=0.0, length=1.0, label="",
+                 properties={}):
         
-        """ Add weighted (0.0-1.0) edge between nodes, creating them if necessary.
-        The weight represents the importance of the connection (not the cost).
+        """ Add weighted (0.0-1.0) edge between nodes, creating them if
+        necessary.  The weight represents the importance of the
+        connection (not the cost).
         """
         
         if id1 == id2: return None
@@ -492,7 +481,8 @@ class graph(dict):
         y = self.y + node.y - _ctx.HEIGHT // 2
         return x, y
 
-    def draw(self, dx=0, dy=0, weighted=False, directed=False, highlight=[], traffic=None):
+    def draw(self, dx=0, dy=0, weighted=False, directed=False, highlight=[],
+             traffic=None):
         
         """ Layout the graph incrementally.
         
@@ -524,7 +514,7 @@ class graph(dict):
                 except:
                     s = self.styles.default
                 if s.graph_traffic:
-                    s.graph_traffic(s, n, self.alpha)        
+                    s.graph_traffic(s, n, self.alpha)
 
         # Draw the edges and their labels.
         s = self.styles.default
@@ -532,7 +522,7 @@ class graph(dict):
             s.edges(s, self.edges, self.alpha, weighted, directed)
         
         # Draw each node in the graph.
-        # Apply individual style to each node (or default).        
+        # Apply individual style to each node (or default).
         for n in self.nodes:
             try:
                 s = self.styles[n.style]
@@ -578,13 +568,15 @@ class graph(dict):
         """ Returns a list of node id's connecting the two nodes.
         """
         try:
-            return proximity.dijkstra_shortest_path(self, id1, id2, heuristic, directed)
+            return proximity.dijkstra_shortest_path(self, id1, id2,
+                                                    heuristic, directed)
         except:
             return None
             
     def betweenness_centrality(self, normalized=True, directed=False):
-        """ Calculates betweenness centrality and returns an node id -> weight dictionary.
-        Node betweenness weights are updated in the process.
+        """ Calculates betweenness centrality and returns an node
+            id -> weight dictionary.
+            Node betweenness weights are updated in the process.
         """
         bc = proximity.brandes_betweenness_centrality(self, normalized, directed)
         for id, w in bc.items():
@@ -593,8 +585,9 @@ class graph(dict):
         
     def eigenvector_centrality(self, normalized=True, reversed=True, rating={},
                                start=None, iterations=100, tolerance=0.0001):
-        """ Calculates eigenvector centrality and returns an node id -> weight dictionary.
-        Node eigenvalue weights are updated in the process.
+        """ Calculates eigenvector centrality and returns an
+            node id -> weight dictionary.
+            Node eigenvalue weights are updated in the process.
         """
         ec = proximity.eigenvector_centrality(
             self, normalized, reversed, rating, start, iterations, tolerance
@@ -710,7 +703,7 @@ class graph(dict):
     def split(self):
         return cluster.partition(self)
 
-### DYNAMIC GRAPH ####################################################################################
+### DYNAMIC GRAPH ##############################################################
 
 class xgraph(graph):
     
@@ -800,7 +793,7 @@ class xgraph(graph):
         self._dx *= 0.9
         self._dy *= 0.9
 
-#### COMMANDS ########################################################################################
+#### COMMANDS ##################################################################
 
 def create(iterations=1000, distance=1.0, layout=LAYOUT_SPRING, depth=True):
     
