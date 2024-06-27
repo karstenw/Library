@@ -7,7 +7,7 @@
 # this library is visualization of small graphs (<200 elements), if you
 # need something more robust we recommend using NetworkX.
 
-### CREDITS ##########################################################################################
+### CREDITS ####################################################################
 
 # Copyright (c) 2008 Tom De Smedt.
 # See LICENSE.txt for details.
@@ -17,7 +17,7 @@ __version__   = "1.9.5.6"
 __copyright__ = "Copyright (c) 2008 Tom De Smedt"
 __license__   = "GPL"
 
-######################################################################################################
+################################################################################
 
 import pdb
 from functools import cmp_to_key
@@ -69,8 +69,8 @@ def sortnodes_zero( a, b ):
 
 class node:
     
-    def __init__(self, graph, id="", radius=8, style=style.DEFAULT, category="", label=None,
-                 properties={}):
+    def __init__(self, graph, id="", radius=8, style=style.DEFAULT, category="",
+                 label=None, properties={}):
         
         """ A node with a unique id in the graph.
         Its position is calculated by graph.layout.
