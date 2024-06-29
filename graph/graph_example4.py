@@ -413,12 +413,12 @@ query = choice( allnouns )
 goodies = ("inconvenience", "biology", "cyberpunk", "frankfurt", "computer",
            "monastery", "africa", "rhetoric")
 
-# query = choice( goodies )
+query = choice( goodies )
 
 g = wordnetgraph(distance=1.2)
 g.load(query)
 
-size(800, 650)
+size(700, 550)
 speed(30) 
 def draw():
     g.styles.textwidth = 160
