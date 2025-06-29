@@ -43,7 +43,7 @@ canv = coreimage.canvas( WIDTH, HEIGHT )
 for pict in imagepaths:
     l = canv.layer( pict )
     if not l:
-        print "FAIL:", pict
+        print( "FAIL:", pict )
         continue
     l.scale(0.33)
     lpw, lph = l.size()
