@@ -29,26 +29,35 @@ for word in wn.words(lang="en"):
         adjectives.append( word )
 
 s3 = time.time()
-print("buikd wordlists %.3f" % (s3-s2) )
+print("build wordlists %.3f" % (s3-s2) )
+print("nouns: %i" % (len(nouns),) )
+print("verbs: %i" % (len(verbs),) )
+print("adjectives: %i" % (len(adjectives),) )
 
 
-synsets = wn.synsets('bird')
-s = synsets[0]
-w = s.words()[0]
+wrd = 'bird'
+w = wn.words( wrd )[0]
+senses = wn.senses( wrd )
+synsets = wn.synsets( wrd )
+
+w = s[0]
 synonyms = w.synsets()
+antonyms = w.antonyms()
 lemmasynonyms = [t.lemmas()[0] for t in synonyms]
 
 
-pp(synsets)
-
-print( '    synset:', s )
-print( 'Definition:', s.definition() )
-print( '  Synonyms:', synonyms )
-print( ' Hypernyms:', s.hypernyms() )
-print( '  Hyponyms:', s.hyponyms() )
-print( '  Holonyms:', s.holonyms() )
-print( '  Meronyms:', s.meronyms() )
-# print( '   Antonym:', s.antonym )
+# pp(synsets)
+print( wrd )
+print( '\n    synset:', synsets )
+print( '\n    senses:', senses )
+# print( '\nDefinition:', w.definition() )
+if 0:
+    print( '\n  Synonyms:', synonyms )
+    print( '\n Hypernyms:', w.hypernyms() )
+    print( '\n  Hyponyms:', w.hyponyms() )
+    print( '\n  Holonyms:', w.holonyms() )
+    print( '\n  Meronyms:', w.meronyms() )
+    print( '\n   Antonym:', antonyms )
 
 s4 = time.time()
 print("synset demo %.3f" % (s4-s3) )
