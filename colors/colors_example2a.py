@@ -4,7 +4,7 @@ try:
     colors = ximport("colors")
 except ImportError:
     colors = ximport("__init__")
-    reload(colors)
+    # reload(colors)
     
 
 size(1200, 900)
