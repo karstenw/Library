@@ -7,7 +7,7 @@ except ImportError:
     # we may need to try something different when
     # the library is not located in /Application Support
     noise = ximport("__init__")
-    reload(noise)
+    # reload(noise)
 
 size(400,300)
 
