@@ -20,6 +20,10 @@ def setup():
 # wordnet = ximport("pattern.text.en.wordnet")
 explode = ximport("explode")
 # reload(explode)
+
+import linguistics
+# import linguistics.pattern
+# import linguistics.pattern.en
 from pattern.en import wordnet
 # from pattern.en import NOUN, VERB
 
