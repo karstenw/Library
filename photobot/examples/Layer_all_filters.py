@@ -39,7 +39,7 @@ for f in filetuples:
     folder, filename = os.path.split( path )
     images[filename] = path
 
-filenames = images.keys()
+filenames = list(images.keys())
 filenames.sort()
 
 
@@ -60,7 +60,7 @@ def imageselected(val, name):
     g_image = val
     path = images.get( val )
 
-    print val
+    print( val )
     pb.placeImage(c, path, 10, 50, WIDTH-20, "" )
     if g_filter == "blur":
         c.top.blur()
