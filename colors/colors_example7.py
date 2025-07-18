@@ -8,13 +8,13 @@ except ImportError:
     reload(colors)
 
 # Deep green gradient background.
-size(400, 400)
+size(600, 600)
 
 bg = rect(0,0,WIDTH,HEIGHT,draw=False)
 colors.gradientfill(bg, color(0.15,0.2,0), color(0,0,0))
 colors.shadow()
 
-for i in range(80):
+for i in range(100):
     
     x = random( WIDTH )
     y = random( HEIGHT )
