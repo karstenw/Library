@@ -10,7 +10,7 @@ import linguistics
 import linguistics.conceptnetreader
 cnr = linguistics.conceptnetreader
 
-if 0:
+if 1:
     print( "cnr.databasefile:", cnr.databasefile )
 
     print( "#languages:", len(cnr.languages) )
