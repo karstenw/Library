@@ -60,7 +60,7 @@ def placeImage(canvas, path, x, y, maxsize, name):
 
 def transformimage(val, name):
     global x1,y1,x2,y2,x3,y3,x4,y420
-    print "transformimage(val, name):", val, name
+    print( "transformimage(val, name):", val, name )
     # create the canvas
     c = pb.canvas(int(WIDTH), int(HEIGHT))
     c.fill(120, 120,120)
@@ -85,11 +85,11 @@ def transformimage(val, name):
     
     top, w1, h1 = placeImage(c, img1path, x, y, 400, "Image 1")
     c.layers[top].distort(_x1,_y1,_x2,_y2,_x3,_y3,_x4,_y4)
-    print "x1,y1,x2,y2,x3,y3,x4,y4", _x1,_y1,_x2,_y2,_x3,_y3,_x4,_y4
+    print( "x1,y1,x2,y2,x3,y3,x4,y4", _x1,_y1,_x2,_y2,_x3,_y3,_x4,_y4 )
     label("Image 1", x, y)
     c.draw(0, 0)
     canvas._grobs.reverse()
-    print "top:", top
+    print( "top:", top )
 
 var("x1", NUMBER, 0, -200, 200, handler=transformimage)
 var("y1", NUMBER, 0, -200, 200, handler=transformimage)
