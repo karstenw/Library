@@ -23,10 +23,11 @@ nofill()
 # the actual lsystem parameters
 # since L and R move forward in the lib they are replaced here
 # with P and Q
-axiom = "-L"
+
+axiom = "-P"
 rules = {
-         "L": "LF+RFR+FL-F-LFLFL-FRFR+",
-         "R": "-LFLF+RFRFR+F+RF-LFL-FR",
+         "P": "PF+QFQ+FP-F-PFPFP-FQFQ+",
+         "Q": "-PFPF+QFQFQ+F+QF-PFP-FQ",
          }
 
 myangle = 90
