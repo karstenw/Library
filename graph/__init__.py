@@ -69,8 +69,8 @@ def sortnodes_zero( a, b ):
 
 class node:
     
-    def __init__(self, graph, id="", radius=8, style=style.DEFAULT, category="",
-                 label=None, properties={}):
+    def __init__(   self, graph, id="", radius=8, style=style.DEFAULT,
+                    category="", label=None, properties={}):
         
         """ A node with a unique id in the graph.
         Its position is calculated by graph.layout.
