@@ -18,7 +18,7 @@ import twyg.config
 import twyg.connection
 import twyg.node
 
-pdb.set_trace()
+# pdb.set_trace()
 
 # Detect nodebox
 try:
