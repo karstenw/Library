@@ -35,7 +35,7 @@ print( p )
 load( *p )
 
 
-size(850, 850)
+size(950, 950)
 speed(60)
 def draw():
     g.update()
