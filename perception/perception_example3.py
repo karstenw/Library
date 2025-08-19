@@ -1,5 +1,7 @@
 # SIMILE
-from __future__ import print_function
+
+import pprint
+pp=pprint.pprint
 
 try:
     perception = ximport("perception")
