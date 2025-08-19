@@ -14,11 +14,17 @@ void init_p_array(int i)
     // Populate the permutation array p (defines the pattern of the noise).
     srand((unsigned)i);
     for(i=0; i<256; i++)     
-        p[i] = p[256+i] = rand()%256;
+        p[i] = p[256+i] = rand() % 256;
 }
 
-double fade(double t) { return t * t * t * (t * (t * 6 - 15) + 10); }
-double lerp(double t, double a, double b) { return a + t * (b - a); }
+double fade(double t) {
+	return t * t * t * (t * (t * 6 - 15) + 10);
+}
+
+double lerp(double t, double a, double b) {
+	return a + t * (b - a);
+}
+
 double grad(int hash, double x, double y, double z) 
 {
     // Convert lo 4 bits of hash code into 12 gradient directions.
@@ -98,7 +104,8 @@ static PyObject *
 perlin(PyObject *self, PyObject *args) {
     // Calls noise() with x, y, z parameters and returns d.
     double x, y, z, d;   
-    if (!PyArg_ParseTuple(args, "ddd", &x, &y, &z)) return NULL;
+    if (!PyArg_ParseTuple(args, "ddd", &x, &y, &z))
+    	return NULL;
     d = noise(x, y, z);
     return Py_BuildValue("d", d);
 }
@@ -107,7 +114,8 @@ static PyObject *
 seed(PyObject *self, PyObject *args) {
     // Calls init() to populate p with random numbers based on given seed.
     int i;   
-    if (!PyArg_ParseTuple(args, "i", &i)) return NULL;
+    if (!PyArg_ParseTuple(args, "i", &i))
+    	return NULL;
     init_p_array(i);
     return Py_BuildValue("");
 }
@@ -119,10 +127,11 @@ shape(PyObject *self, PyObject *args) {
     if (!PyArg_ParseTuple(args, "O!", &PyList_Type, &a))
     	return NULL;
 
-    int i;
+    Py_ssize_t i;
     for(i=0; i<512; i++) {
         // p[i] = (int)PyInt_AsLong(PyList_GetItem(a, i));
-        p[i] = (int)PyLong_FromLong(PyList_GetItem(a, i));
+        // p[i] = (int)PyLong_FromLong(PyList_GetItem(a, i));
+        p[i] = (int)PyLong_AsInt(PyList_GetItem(a, i));
     }
     return Py_BuildValue("");
 }
