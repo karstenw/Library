@@ -48,6 +48,7 @@ __license__   = "GPL"
 import os
 import time
 
+import functools
 
 import hashlib
 import glob
@@ -108,29 +109,9 @@ except NameError:
     long = int
 
 
-def cmp_to_key(mycmp):
-    'Convert a cmp= function into a key= function'
-    class K:
-        def __init__(self, obj, *args):
-            self.obj = obj
-        def __lt__(self, other):
-            return mycmp(self.obj, other.obj) < 0
-        def __gt__(self, other):
-            return mycmp(self.obj, other.obj) > 0
-        def __eq__(self, other):
-            return mycmp(self.obj, other.obj) == 0
-        def __le__(self, other):
-            return mycmp(self.obj, other.obj) <= 0
-        def __ge__(self, other):
-            return mycmp(self.obj, other.obj) >= 0
-        def __ne__(self, other):
-            return mycmp(self.obj, other.obj) != 0
-    return K
-
-
 def sortlist(thelist, thecompare):
     if py3:
-        sortkeyfunction = cmp_to_key( thecompare )
+        sortkeyfunction = functools.cmp_to_key( thecompare )
         thelist.sort( key=sortkeyfunction )
     else:
         thelist.sort( thecompare )
@@ -356,7 +337,8 @@ def query_cnr(concept, relation=None, context=None, depth=1, maxedges=0, wait=2,
     if concept == None:
         return rules
 
-    # pdb.set_trace()
+    #if kwdbg:
+    #    pdb.set_trace()
 
     concepts, edges, loadedConcepts = conceptnetreader.query_concept( concept,
                     context=context, maxedges=maxedges, lang=lang, weight=0.5 )
@@ -1156,6 +1138,10 @@ def search_match_parse(
     
     for result in collect:
         if result.text:
+            #
+            # TODO
+            #
+            
             # result.description = result.description.replace(",",", ").replace("  "," ")
             #match = en.sentence.find(result.description.lower(), pattern_)
             #if len(match) > 0 and len(match[0]) > 0:
