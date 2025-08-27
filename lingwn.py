@@ -40,7 +40,7 @@ w = wn.words( wrd )[0]
 senses = wn.senses( wrd )
 synsets = wn.synsets( wrd )
 
-w = s[0]
+w = senses[0]
 synonyms = w.synsets()
 antonyms = w.antonyms()
 lemmasynonyms = [t.lemmas()[0] for t in synonyms]
