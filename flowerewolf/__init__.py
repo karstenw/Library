@@ -554,7 +554,8 @@ def verse(word):
     return g
 
 
-def dada(query, foreground=None, background=None, fonts=[], transparent=False):
+def dada(   query, foreground=None, background=None, fonts=[],
+            transparent=False, fontsizepts=24):
 
     """Create some lines of poetry based on the query."""
 
@@ -609,7 +610,7 @@ def dada(query, foreground=None, background=None, fonts=[], transparent=False):
     if len(fonts) == 0: 
         fonts = [_ctx.font()]
 
-    f = _ctx.fontsize()
+    # f = _ctx.fontsize()
     _ctx.background(background)
 
     if transparent: 
@@ -622,7 +623,7 @@ def dada(query, foreground=None, background=None, fonts=[], transparent=False):
 
 
     # Poem title.
-    _ctx.text(query, _ctx.WIDTH / 15, _ctx.HEIGHT / 7-f)
+    _ctx.text(query, _ctx.WIDTH / 15, _ctx.HEIGHT / 7-fontsizepts)
     
     # initially spanned the rest of dada()
     # for i in range(1):
@@ -638,7 +639,7 @@ def dada(query, foreground=None, background=None, fonts=[], transparent=False):
             # pick a random font from the list and a random fontsize.
             _ctx.font(choice(fonts))
             if random() > 0.7: 
-                _ctx.fontsize(random(f*0.6, f*1.2))
+                _ctx.fontsize(random(fontsizepts*0.6, fontsizepts*1.2))
             
             # A word that is s
             #                 l
