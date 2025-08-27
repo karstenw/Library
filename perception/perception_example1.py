@@ -15,27 +15,28 @@ def load(node, lang="en"):
     # We use it here to cap the number of rules returned.
     # A fast graph is more important right now than all of the data.
     g = perception.cluster(str(node), depth=2, maxedges=999, labeled=1, lang=lang)
-    g.distance = 2.8
+    g.distance = 4.0
     g.layout.n = 2000
     g.styles.apply()
     g.layout.force = 0.001 # lower if nodes are twitching
     g.events.click = load
 
 targets = (
-    ("House", 'en'),
-    ("Casa", "it"),
-    ("Huis", "nl"),
-    ("Maison", "fr"),
-    ("Haus", "de"),
-    ("Nada", "es"),
-    ("domus", "la"))
+    ("House",   'en'),
+    ("Casa",    'it'),
+    ("Huis",    'nl'),
+    ("Maison",  'fr'),
+    ("Haus",    'de'),
+    ("Nada",    'es'),
+    ("domus",   'la'))
 
 p = choice( targets )
+# p = ("House",   'en')
 print( p )
 load( *p )
 
 
-size(950, 950)
+size(1150, 1150)
 speed(60)
 def draw():
     g.update()
