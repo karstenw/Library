@@ -10,7 +10,7 @@
 <find_panel_settings/>
 <vnodes>
 <v t="karstenw.20230319195648.2" a="E"><vh>graph</vh>
-<v t="karstenw.20230319195720.1" a="E"><vh>@clean __init__.py</vh>
+<v t="karstenw.20230319195720.1"><vh>@clean __init__.py</vh>
 <v t="karstenw.20230319195736.1"><vh>Declarations</vh></v>
 <v t="karstenw.20230319202717.1"><vh>py3</vh>
 <v t="karstenw.20230319202717.2"><vh>py3 stuff</vh></v>
@@ -101,24 +101,19 @@
 </v>
 <v t="karstenw.20230329160917.1"><vh>@clean cluster.py</vh>
 <v t="karstenw.20230329160929.1"><vh>Declarations</vh></v>
-<v t="karstenw.20230518183122.1"><vh>py3</vh>
-<v t="karstenw.20230518183122.2"><vh>py3 stuff</vh></v>
-<v t="karstenw.20230518183122.3"><vh>cmp_to_key</vh></v>
-<v t="karstenw.20230518183122.4"><vh>sortlist</vh></v>
-<v t="karstenw.20230518183122.12"><vh>newHeadline</vh></v>
-</v>
-<v t="karstenw.20230329160948.1"><vh>+ LIST OPERATIONS +</vh>
+<v t="karstenw.20230518183122.1"><vh>py3</vh></v>
+<v t="karstenw.20230329160948.1" a="E"><vh>+ LIST OPERATIONS +</vh>
 <v t="karstenw.20230329160929.2"><vh>sorted</vh></v>
 <v t="karstenw.20230329160929.3"><vh>unique</vh></v>
 </v>
-<v t="karstenw.20230329161013.1"><vh>+ SET THEORY +</vh>
+<v t="karstenw.20230329161013.1" a="E"><vh>+ SET THEORY +</vh>
 <v t="karstenw.20230329160929.4"><vh>flatten</vh></v>
 <v t="karstenw.20230329160929.5"><vh>intersection</vh></v>
 <v t="karstenw.20230329160929.6"><vh>union</vh></v>
 <v t="karstenw.20230329160929.7"><vh>difference</vh></v>
 </v>
 <v t="karstenw.20230329160929.8"><vh>subgraph</vh></v>
-<v t="karstenw.20230329161057.1"><vh>+ CLIQUE +</vh>
+<v t="karstenw.20230329161057.1" a="E"><vh>+ CLIQUE +</vh>
 <v t="karstenw.20230329160929.9"><vh>is_clique</vh></v>
 <v t="karstenw.20230329160929.10"><vh>clique</vh></v>
 <v t="karstenw.20230329160929.11"><vh>cliques</vh></v>
@@ -220,7 +215,7 @@
 <v t="karstenw.20230329163243.8"><vh>__setattr__</vh></v>
 <v t="karstenw.20230329163243.9"><vh>copy</vh></v>
 </v>
-<v t="karstenw.20230329163243.10" a="E"><vh>class styleguide</vh>
+<v t="karstenw.20230329163243.10"><vh>class styleguide</vh>
 <v t="karstenw.20230329163243.11"><vh>__init__</vh></v>
 <v t="karstenw.20230329163243.12"><vh>append</vh></v>
 <v t="karstenw.20230329163243.13"><vh>clear</vh></v>
@@ -245,17 +240,20 @@
 <v t="karstenw.20230507120719.1" a="E"><vh>examples</vh>
 <v t="karstenw.20230507120724.1"><vh>@clean graph_example1.py</vh>
 <v t="karstenw.20230507120759.1"><vh>Declarations</vh></v>
+<v t="karstenw.20250827122608.1"><vh>script</vh></v>
 </v>
 <v t="karstenw.20230507120741.1"><vh>@clean graph_example2.py</vh>
 <v t="karstenw.20230507120757.1"><vh>Declarations</vh></v>
+<v t="karstenw.20250827122640.1"><vh>script</vh></v>
 </v>
 <v t="karstenw.20230507120743.1"><vh>@clean graph_example3.py</vh>
 <v t="karstenw.20230507120755.1"><vh>Declarations</vh></v>
 <v t="karstenw.20230507120755.2"><vh>draw</vh></v>
+<v t="karstenw.20250827122705.1"><vh>script</vh></v>
 </v>
 <v t="karstenw.20230507120747.1" a="E"><vh>@clean graph_example4.py</vh>
 <v t="karstenw.20230507120753.1"><vh>Declarations</vh></v>
-<v t="karstenw.20230518121333.1" a="E"><vh>+ REPLACEMENTS</vh>
+<v t="karstenw.20230518121333.1"><vh>+ REPLACEMENTS</vh>
 <v t="karstenw.20230507120753.2"><vh>holonym</vh></v>
 <v t="karstenw.20230507120753.3"><vh>meronym</vh></v>
 <v t="karstenw.20230507120753.4"><vh>antonym</vh></v>
@@ -263,7 +261,7 @@
 <v t="karstenw.20230507120753.6"><vh>senses</vh></v>
 <v t="karstenw.20230507120753.7"><vh>hyponym</vh></v>
 </v>
-<v t="karstenw.20230507120753.8" a="E"><vh>class wordnetgraph</vh>
+<v t="karstenw.20230507120753.8"><vh>class wordnetgraph</vh>
 <v t="karstenw.20230507120753.9"><vh>__init__</vh></v>
 <v t="karstenw.20230507120753.10"><vh>is_expandable</vh></v>
 <v t="karstenw.20230507120753.11"><vh>is_clickable</vh></v>
@@ -274,14 +272,14 @@
 <v t="karstenw.20230507120753.16"><vh>load</vh></v>
 <v t="karstenw.20230507120753.17"><vh>draw</vh></v>
 </v>
-<v t="karstenw.20230507120753.18"><vh>class senses</vh>
+<v t="karstenw.20230507120753.18" a="E"><vh>class senses</vh>
 <v t="karstenw.20230507120753.19"><vh>__init__</vh></v>
 <v t="karstenw.20230507120753.20"><vh>count</vh></v>
 <v t="karstenw.20230507120753.21"><vh>draw</vh></v>
 <v t="karstenw.20230507120753.22"><vh>log_pressed</vh></v>
 <v t="karstenw.20230507120753.23"><vh>log_clicked</vh></v>
 </v>
-<v t="karstenw.20230518121412.1"><vh>newHeadline</vh></v>
+<v t="karstenw.20230518121412.1"><vh>script</vh></v>
 <v t="karstenw.20230507120753.24"><vh>draw</vh></v>
 </v>
 </v>
@@ -301,7 +299,7 @@
 # this library is visualization of small graphs (&lt;200 elements), if you
 # need something more robust we recommend using NetworkX.
 
-### CREDITS ##########################################################################################
+### CREDITS ####################################################################
 
 # Copyright (c) 2008 Tom De Smedt.
 # See LICENSE.txt for details.
@@ -311,7 +309,7 @@ __version__   = "1.9.5.6"
 __copyright__ = "Copyright (c) 2008 Tom De Smedt"
 __license__   = "GPL"
 
-######################################################################################################
+################################################################################
 
 import pdb
 from functools import cmp_to_key
@@ -388,13 +386,13 @@ y = property(_y)
     return self.id &lt; node.id
 
 </t>
-<t tx="karstenw.20230319195736.2">#### GRAPH NODE ######################################################################################
+<t tx="karstenw.20230319195736.2">#### GRAPH NODE ################################################################
 
 class node:
     
     @others
 </t>
-<t tx="karstenw.20230319195736.20">#### GRAPH NODE LINKS ################################################################################
+<t tx="karstenw.20230319195736.20">#### GRAPH NODE LINKS ##########################################################
 
 class links(list):
     
@@ -426,13 +424,14 @@ class links(list):
     return self._edges[id]
 
 </t>
-<t tx="karstenw.20230319195736.25">##### GRAPH EDGE #####################################################################################
+<t tx="karstenw.20230319195736.25">##### GRAPH EDGE ###############################################################
 
 class edge(object):
     
     @others
 </t>
-<t tx="karstenw.20230319195736.26">def __init__(self, node1, node2, weight=0.0, length=1.0, label="", properties={}):
+<t tx="karstenw.20230319195736.26">def __init__(self, node1, node2, weight=0.0, length=1.0,
+             label="", properties={}):
 
     self.node1  = node1
     self.node2  = node2
@@ -453,7 +452,7 @@ class edge(object):
 length = property(_get_length, _set_length)
 
 </t>
-<t tx="karstenw.20230319195736.29">#### GRAPH ###########################################################################################
+<t tx="karstenw.20230319195736.29">#### GRAPH #####################################################################
 
 LAYOUT_CIRCLE = "circle"
 LAYOUT_SPRING = "spring"
@@ -463,8 +462,8 @@ class graph(dict):
     
     @others
 </t>
-<t tx="karstenw.20230319195736.3">def __init__(self, graph, id="", radius=8, style=style.DEFAULT, category="", label=None,
-             properties={}):
+<t tx="karstenw.20230319195736.3">def __init__(   self, graph, id="", radius=8, style=style.DEFAULT,
+                category="", label=None, properties={}):
     
     """ A node with a unique id in the graph.
     Its position is calculated by graph.layout.
@@ -534,9 +533,11 @@ distance = property(_get_distance, _set_distance)
 
     if not empty:
         for n in self.nodes:
-            g.add_node(n.id, n.r, n.style, n.category, n.label, (n == self.root), n.__dict__)
+            g.add_node( n.id, n.r, n.style, n.category, n.label,
+                        (n == self.root), n.__dict__)
         for e in self.edges:
-            g.add_edge(e.node1.id, e.node2.id, e.weight, e.length, e.label, e.__dict__)
+            g.add_edge( e.node1.id, e.node2.id, e.weight,
+                        e.length, e.label, e.__dict__)
     
     return g
 
@@ -556,19 +557,21 @@ distance = property(_get_distance, _set_distance)
 
 </t>
 <t tx="karstenw.20230319195736.35">def new_node(self, *args, **kwargs):
-    """ Returns a node object; can be overloaded when the node class is subclassed.
+    """ Returns a node object; can be overloaded when the node class
+    is subclassed.
     """
     return node(*args, **kwargs)
 
 </t>
 <t tx="karstenw.20230319195736.36">def new_edge(self, *args, **kwargs):
-    """ Returns an edge object; can be overloaded when the edge class is subclassed.
+    """ Returns an edge object; can be overloaded when the edge class
+    is subclassed.
     """
     return edge(*args, **kwargs)
 
 </t>
-<t tx="karstenw.20230319195736.37">def add_node(self, id, radius=8, style=style.DEFAULT, category="", label=None, root=False,
-             properties={}):
+<t tx="karstenw.20230319195736.37">def add_node(self, id, radius=8, style=style.DEFAULT, category="",
+             label=None, root=False, properties={}):
     
     """ Add node from id and return the node object.
     """
@@ -597,10 +600,12 @@ distance = property(_get_distance, _set_distance)
         pass
 
 </t>
-<t tx="karstenw.20230319195736.39">def add_edge(self, id1, id2, weight=0.0, length=1.0, label="", properties={}):
+<t tx="karstenw.20230319195736.39">def add_edge(self, id1, id2, weight=0.0, length=1.0, label="",
+             properties={}):
     
-    """ Add weighted (0.0-1.0) edge between nodes, creating them if necessary.
-    The weight represents the importance of the connection (not the cost).
+    """ Add weighted (0.0-1.0) edge between nodes, creating them if
+    necessary.  The weight represents the importance of the
+    connection (not the cost).
     """
     
     if id1 == id2: return None
@@ -748,7 +753,8 @@ done = property(_done)
     return x, y
 
 </t>
-<t tx="karstenw.20230319195736.49">def draw(self, dx=0, dy=0, weighted=False, directed=False, highlight=[], traffic=None):
+<t tx="karstenw.20230319195736.49">def draw(self, dx=0, dy=0, weighted=False, directed=False, highlight=[],
+         traffic=None):
     
     """ Layout the graph incrementally.
     
@@ -780,7 +786,7 @@ done = property(_done)
             except:
                 s = self.styles.default
             if s.graph_traffic:
-                s.graph_traffic(s, n, self.alpha)        
+                s.graph_traffic(s, n, self.alpha)
 
     # Draw the edges and their labels.
     s = self.styles.default
@@ -788,7 +794,7 @@ done = property(_done)
         s.edges(s, self.edges, self.alpha, weighted, directed)
     
     # Draw each node in the graph.
-    # Apply individual style to each node (or default).        
+    # Apply individual style to each node (or default).
     for n in self.nodes:
         try:
             s = self.styles[n.style]
@@ -842,14 +848,16 @@ trim = prune
     """ Returns a list of node id's connecting the two nodes.
     """
     try:
-        return proximity.dijkstra_shortest_path(self, id1, id2, heuristic, directed)
+        return proximity.dijkstra_shortest_path(self, id1, id2,
+                                                heuristic, directed)
     except:
         return None
         
 </t>
 <t tx="karstenw.20230319195736.52">def betweenness_centrality(self, normalized=True, directed=False):
-    """ Calculates betweenness centrality and returns an node id -&gt; weight dictionary.
-    Node betweenness weights are updated in the process.
+    """ Calculates betweenness centrality and returns an node
+        id -&gt; weight dictionary.
+        Node betweenness weights are updated in the process.
     """
     bc = proximity.brandes_betweenness_centrality(self, normalized, directed)
     for id, w in bc.items():
@@ -859,8 +867,9 @@ trim = prune
 </t>
 <t tx="karstenw.20230319195736.53">def eigenvector_centrality(self, normalized=True, reversed=True, rating={},
                            start=None, iterations=100, tolerance=0.0001):
-    """ Calculates eigenvector centrality and returns an node id -&gt; weight dictionary.
-    Node eigenvalue weights are updated in the process.
+    """ Calculates eigenvector centrality and returns an
+        node id -&gt; weight dictionary.
+        Node eigenvalue weights are updated in the process.
     """
     ec = proximity.eigenvector_centrality(
         self, normalized, reversed, rating, start, iterations, tolerance
@@ -1017,7 +1026,7 @@ traffic = betweenness
     return cluster.partition(self)
 
 </t>
-<t tx="karstenw.20230319195736.71">### DYNAMIC GRAPH ####################################################################################
+<t tx="karstenw.20230319195736.71">### DYNAMIC GRAPH ##############################################################
 
 class xgraph(graph):
     
@@ -1116,7 +1125,7 @@ class xgraph(graph):
     self._dy *= 0.9
 
 </t>
-<t tx="karstenw.20230319195736.79">#### COMMANDS ########################################################################################
+<t tx="karstenw.20230319195736.79">#### COMMANDS ##################################################################
 
 def create(iterations=1000, distance=1.0, layout=LAYOUT_SPRING, depth=True):
     
@@ -1255,18 +1264,11 @@ weight = eigenvalue
 </t>
 <t tx="karstenw.20230319202717.1"></t>
 <t tx="karstenw.20230319202717.2"># py3 stuff
-py3 = False
-try:
-    unicode('')
-    punicode = unicode
-    pstr = str
-    punichr = unichr
-except NameError:
-    punicode = str
-    pstr = bytes
-    py3 = True
-    punichr = chr
-    long = int
+punicode = str
+pstr = bytes
+py3 = True
+punichr = chr
+long = int
 
 
 </t>
@@ -1293,6 +1295,8 @@ except NameError:
 </t>
 <t tx="karstenw.20230329160929.1"># Copyright (c) 2007 Tom De Smedt.
 # See LICENSE.txt for details.
+
+from functools import cmp_to_key
 
 from types import FunctionType, LambdaType
 
@@ -3009,12 +3013,11 @@ def makeunicode(s, srcencoding="utf-8", normalizer="NFC"):
 # You'll need the NodeBox Linguistics library installed.
 # Author: Tom De Smedt.
 
-query = "house"
 
 import os
 import pdb
-kwdbg = True
-kwlog = True
+kwdbg = False
+kwlog = False
 
 try:
     graph = ximport("graph")
@@ -3036,7 +3039,8 @@ import pattern.text.en
 en = pattern.text.en
 wordnet = pattern.text.en.wordnet
 
-nouns = set(list( wordnet.NOUNS() ))
+allnouns = list( wordnet.NOUNS() )
+nouns = set( allnouns )
 
 
 
@@ -3071,7 +3075,7 @@ nouns = set(list( wordnet.NOUNS() ))
 
 
 </t>
-<t tx="karstenw.20230507120753.12">def get_senses(self, word, top=6):
+<t tx="karstenw.20230507120753.12">def get_senses(self, word, top=12):
 
     """ The graph displays the different senses of a noun,
     e.g. light -&gt; lighter, luminosity, sparkle, ...
@@ -3119,30 +3123,36 @@ nouns = set(list( wordnet.NOUNS() ))
     relations = [
         # (6, en.noun.holonym  , "has-parts"),
         (6, holonym  , "has-parts"),
-        (2, meronym  , "is-part-of"),
+        (3, meronym  , "is-part-of"),
         (2, antonym  , "is-opposite-of"),
-        (3, hypernym , "is-a"),
-        (2, senses   , "is-action"),
+        (4, hypernym , "is-a"),
+        (3, senses   , "is-action"),
         (6, hyponym  , "has-specific"),
     ]
     # Get related words from WordNet.
     # Exclude long words and take the top of the list.
-    pdb.set_trace()
     for top, f, relation in relations:
         r = []
         try:
-            rng = f(word, sense=self.senses.current)
+            wordlist = f(word, sense=self.senses.current, all=True)
         except:
             try:
-                rng = f(word)
+                wordlist = f(word, all=True)
             except:
                 continue
-        for w in rng:
-            if (    w[0] != word
-                and w[0] not in r
-                and len(w[0]) &lt; 20):
-                r.append((w[0], relation))
-                
+        # old
+        if 0:
+            for w in wordlist:
+                if (    w[0] != word
+                    and w[0] not in r
+                    and len(w[0]) &lt; 20):
+                    r.append( (w[0], relation) )
+        else:
+            for w in wordlist:
+                if w != word:
+                    if w not in r:
+                        if len(w) &lt; 20:
+                            r.append( (w, relation) )
         words.extend(r[:top])
     if kwdbg:
         print("get_relations(%s): %s" % (word, str(words)))
@@ -3260,6 +3270,8 @@ class senses:
     fw = FlowerWord( word )
     hn = fw.holonyms()
     print("holonym(%s): %s" % (word, str(hn)))
+    if all:
+        return hn
     if len(hn) &gt; 0:
         return hn[0]
     return ""
@@ -3331,7 +3343,7 @@ class senses:
     
 </t>
 <t tx="karstenw.20230507120753.24">def draw():
-    g.styles.textwidth = 120
+    g.styles.textwidth = 160
     g.draw(
         directed=True, 
         weighted=True,
@@ -3343,6 +3355,8 @@ class senses:
     fw = FlowerWord( word )
     mn = fw.meronyms()
     print("meronym(%s): %s" % (word, str(mn)))
+    if all:
+        return mn
     if len(mn) &gt; 0:
         return mn[0]
     return ""
@@ -3351,6 +3365,8 @@ class senses:
 <t tx="karstenw.20230507120753.4">def antonym( word, sense="", all=False ):
     fw = FlowerWord( word )
     an = fw.holonyms()
+    if all:
+        return an
     if len(an) &gt; 0:
         print("antonym(%s): %s" % (word, str(an[0].antonym)))
         return an[0].antonym
@@ -3361,6 +3377,8 @@ class senses:
     fw = FlowerWord( word )
     hn = fw.hypernyms()
     print("hypernym(%s): %s" % (word, str(hn)))
+    if all:
+        return hn
     if len(hn) &gt; 0:
         return hn[0]
     return ""
@@ -3370,6 +3388,8 @@ class senses:
     fw = FlowerWord( word )
     sn = fw.senses()
     print("senses(%s): %s" % (word, str(sn)))
+    if all:
+        return sn
     if len(sn) &gt; 0:
         return sn[0]
     return ""
@@ -3379,6 +3399,8 @@ class senses:
     fw = FlowerWord( word )
     hn = fw.hyponyms()
     print("hyponym(%s): %s" % (word, str(hn)))
+    if all:
+        return hn
     if len(hn) &gt; 0:
         return hn[0]
     return ""
@@ -3428,23 +3450,6 @@ except ImportError:
     graph = ximport("__init__")
     # reload(graph)
 
-size(800, 800)
-
-g = graph.create(iterations=1000, distance=1.2, layout="spring")
-
-# Add nodes with a random id,
-# connected to other random nodes.
-for i in range(60):
-    node1 = g.add_node(random(500))
-    if random() &gt; 0.5:
-        for i in range(choice((1, 4))):
-            node2 = choice(g.nodes)
-            g.add_edge(node1.id, node2.id, weight=random())
-
-g.prune()
-g.styles.apply()
-
-speed(10)
 </t>
 <t tx="karstenw.20230507120755.2">def draw():
     
@@ -3465,7 +3470,107 @@ except ImportError:
     graph = ximport("__init__")
     # reload(graph)
 
-size(600, 600)
+</t>
+<t tx="karstenw.20230507120759.1"># Import the library
+try:
+    # This is the statement you normally use.
+    graph = ximport("graph")
+except ImportError:
+    # But since these examples are "inside" the library
+    # we may need to try something different when
+    # the library is not located in /Application Support
+    graph = ximport("__init__")
+    # reload(graph)
+
+</t>
+<t tx="karstenw.20230518121333.1">#### REPLACEMENTS ##############################################################
+# 
+# these should move two levels up into linguistics
+
+
+</t>
+<t tx="karstenw.20230518121412.1">######################################################################################################
+
+query = "house"
+query = "rhetoric"
+query = choice( allnouns )
+goodies = ("inconvenience", "biology", "cyberpunk", "frankfurt", "computer",
+           "monastery", "africa", "rhetoric")
+
+query = choice( goodies )
+
+g = wordnetgraph(distance=1.2)
+g.load(query)
+
+size(700, 550)
+speed(30) 
+</t>
+<t tx="karstenw.20230518183122.1"># py3 stuff
+py3 = False
+try:
+    unicode('')
+    punicode = unicode
+    pstr = str
+    punichr = unichr
+except NameError:
+    punicode = str
+    pstr = bytes
+    py3 = True
+    punichr = chr
+    long = int
+
+
+def sortlist(thelist, thecompare):
+    if py3:
+        sortkeyfunction = cmp_to_key( thecompare )
+        thelist.sort( key=sortkeyfunction )
+    else:
+        thelist.sort( thecompare )
+
+
+###
+
+def sortnodes_zero( a, b ):
+    if a[0] &gt; b[0]:
+        return 1
+    elif a[0] &lt; b[0]:
+        return -1
+    return 0
+
+</t>
+<t tx="karstenw.20250827122608.1">size(500, 500)
+
+g = graph.create()
+
+# Create some relations.
+g.add_edge("roof"        , "house")
+g.add_edge("garden"      , "house")
+g.add_edge("room"        , "house")
+g.add_edge("kitchen"     , "room")
+g.add_edge("bedroom"     , "room")
+g.add_edge("bathroom"    , "room")
+g.add_edge("living room" , "room")
+g.add_edge("sofa"        , "living room")
+g.add_edge("table"       , "living room")
+
+# Calculate a good layout.
+g.solve()
+
+# Apply default rules for node colors and size,
+# for example, important nodes become blue.
+g.styles.apply()
+
+# Draw the graph, indicating the direction of each relation
+# and the two nodes that get the most traffic.
+g.draw(
+    directed=True,
+    traffic=1
+)
+
+# You'll see that "house" is the key node,
+# and that "room" gets the most traffic.
+</t>
+<t tx="karstenw.20250827122640.1">size(600, 600)
 
 # A graph object.
 g = graph.create(iterations=500, distance=1.0)
@@ -3498,116 +3603,23 @@ path = g.shortest_path(id1, id2)
 # Draw the graph and display the shortest path.
 g.draw(highlight=path, weighted=True, directed=True)
 </t>
-<t tx="karstenw.20230507120759.1"># Import the library
-try:
-    # This is the statement you normally use.
-    graph = ximport("graph")
-except ImportError:
-    # But since these examples are "inside" the library
-    # we may need to try something different when
-    # the library is not located in /Application Support
-    graph = ximport("__init__")
-    # reload(graph)
+<t tx="karstenw.20250827122705.1">size(800, 800)
 
-size(500, 500)
+speed(10)
 
-g = graph.create()
+g = graph.create(iterations=1000, distance=1.2, layout="spring")
 
-# Create some relations.
-g.add_edge("roof"        , "house")
-g.add_edge("garden"      , "house")
-g.add_edge("room"        , "house")
-g.add_edge("kitchen"     , "room")
-g.add_edge("bedroom"     , "room")
-g.add_edge("bathroom"    , "room")
-g.add_edge("living room" , "room")
-g.add_edge("sofa"        , "living room")
-g.add_edge("table"       , "living room")
+# Add nodes with a random id,
+# connected to other random nodes.
+for i in range(60):
+    node1 = g.add_node(random(500))
+    if random() &gt; 0.5:
+        for i in range(choice((1, 4))):
+            node2 = choice(g.nodes)
+            g.add_edge(node1.id, node2.id, weight=random())
 
-# Calculate a good layout.
-g.solve()
-
-# Apply default rules for node colors and size,
-# for example, important nodes become blue.
+g.prune()
 g.styles.apply()
-
-# Draw the graph, indicating the direction of each relation
-# and the two nodes that get the most traffic.
-g.draw(
-    directed=True,
-    traffic=1
-)
-
-# You'll see that "house" is the key node,
-# and that "room" gets the most traffic.
-</t>
-<t tx="karstenw.20230518121333.1">#### REPLACEMENTS ##############################################################
-# 
-# these should move two levels up into linguistics
-
-
-</t>
-<t tx="karstenw.20230518121412.1">######################################################################################################
-
-g = wordnetgraph(distance=1.2)
-g.load(query)
-
-size(800, 650)
-speed(30) 
-</t>
-<t tx="karstenw.20230518183122.1"></t>
-<t tx="karstenw.20230518183122.12">def sortnodes_zero( a, b ):
-    if a[0] &gt; b[0]:
-        return 1
-    elif a[0] &lt; b[0]:
-        return -1
-    return 0
-
-</t>
-<t tx="karstenw.20230518183122.2"># py3 stuff
-py3 = False
-try:
-    unicode('')
-    punicode = unicode
-    pstr = str
-    punichr = unichr
-except NameError:
-    punicode = str
-    pstr = bytes
-    py3 = True
-    punichr = chr
-    long = int
-
-
-</t>
-<t tx="karstenw.20230518183122.3">def cmp_to_key(mycmp):
-    'Convert a cmp= function into a key= function'
-    class K:
-        def __init__(self, obj, *args):
-            self.obj = obj
-        def __lt__(self, other):
-            return mycmp(self.obj, other.obj) &lt; 0
-        def __gt__(self, other):
-            return mycmp(self.obj, other.obj) &gt; 0
-        def __eq__(self, other):
-            return mycmp(self.obj, other.obj) == 0
-        def __le__(self, other):
-            return mycmp(self.obj, other.obj) &lt;= 0
-        def __ge__(self, other):
-            return mycmp(self.obj, other.obj) &gt;= 0
-        def __ne__(self, other):
-            return mycmp(self.obj, other.obj) != 0
-    return K
-
-
-</t>
-<t tx="karstenw.20230518183122.4">def sortlist(thelist, thecompare):
-    if py3:
-        sortkeyfunction = cmp_to_key( thecompare )
-        thelist.sort( key=sortkeyfunction )
-    else:
-        thelist.sort( thecompare )
-
 
 </t>
 </tnodes>
