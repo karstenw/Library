@@ -4,7 +4,21 @@ except ImportError:
     graph = ximport("__init__")
     # reload(graph)
 
+def draw():
+    
+    # If the graph layout is done,
+    # show the shortest path between random nodes.
+    path = []
+    if g.done:
+        id1 = choice( list(g.keys()) )
+        id2 = choice( list(g.keys()) )
+        path = g.shortest_path(id1, id2)    
+        
+    # Draw the graph and display the shortest path.
+    g.draw(highlight=path, traffic=4, weighted=True, directed=True)
 size(800, 800)
+
+speed(10)
 
 g = graph.create(iterations=1000, distance=1.2, layout="spring")
 
@@ -20,16 +34,3 @@ for i in range(60):
 g.prune()
 g.styles.apply()
 
-speed(10)
-def draw():
-    
-    # If the graph layout is done,
-    # show the shortest path between random nodes.
-    path = []
-    if g.done:
-        id1 = choice( list(g.keys()) )
-        id2 = choice( list(g.keys()) )
-        path = g.shortest_path(id1, id2)    
-        
-    # Draw the graph and display the shortest path.
-    g.draw(highlight=path, traffic=4, weighted=True, directed=True)
