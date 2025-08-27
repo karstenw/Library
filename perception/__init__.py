@@ -139,12 +139,11 @@ def hashFromString( s ):
     h = hashlib.sha1()
     h.update( s )
     return h.hexdigest()
-
-
 #### BASIC PROPERTIES ##########################################################
 # Those we think can easily be translated visually.
 
 basic_properties = [
+    # except the last one, these are pairwise
     "angular",  "round",      "large",    "small",
     "long",     "short",      "bright",   "dark",
     "calm",     "wild",       "chaotic",  "structured",
@@ -156,7 +155,8 @@ basic_properties = [
     "heavy",    "light",      "loud",     "quiet",
     "natural",  "artificial", "old",      "new",
     "elegant",  "raw",        "strong",   "weak",
-    "tangible", "abstract",   "thick",    "thin", "repetitive"
+    "tangible", "abstract",   "thick",    "thin",
+    "repetitive"
 ]
 
 #### CACHE #####################################################################
@@ -735,8 +735,7 @@ class ConcepRange(dict):
         elif a == "properties":
             g = cluster(None, context="properties", depth=None, wait=30)
             return sorted(g.keys())
-        elif a == "basic properties" \
-          or a == "basic_properties":
+        elif a in ( "basic properties", "basic_properties" ):
               return basic_properties
         else:
             a = a.replace("_", " ")
