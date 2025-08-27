@@ -16,7 +16,7 @@
 #           returns a graph objects based on a cluster of rules
 #           around a central concept.
 # 
-# 3) range()
+# 3) conceptrange()
 #           find sibling concepts (e.g. fonts, movies, colors,
 #           trees) using a taxonomy graph.
 # 
@@ -119,6 +119,7 @@ def nodecompare( a, b):
 
 
 def makeunicode(s, srcencoding="utf-8", normalizer="NFC"):
+    # Needed to be redone here for type == typ
     try:
         if typ(s) not in (punicode, pstr):
             s = str( s )
@@ -138,17 +139,6 @@ def hashFromString( s ):
     h = hashlib.sha1()
     h.update( s )
     return h.hexdigest()
-
-
-# "_range" is the name of a singleton class in the library.
-# "range" is the name of the class instance.
-def range_(start, stop=None, step=1):
-    if stop is None: 
-        stop, start = start, 0
-    cur = start
-    while cur < stop:
-        yield cur
-        cur += step
 
 
 #### BASIC PROPERTIES ##########################################################
@@ -698,12 +688,14 @@ def taxonomy(concept, context, author=None, depth=4):
     
 hierarchy = taxonomy
 
-class _range(dict):
+# "ConcepRange" is the name of a singleton class in the library.
+# "conceptrange" is the name of the class instance.
+class ConcepRange(dict):
     
     def __init__(self):
         """ Creates a taxonomy from a given concept and filters hyponyms from it.
-        For example: range.typeface -> Times, Helvetica, Arial, Georgio, Verdana, ...
-        For example: range.movie -> Star Wars, Conan The Barbarian, ...
+        For example: conceptrange.typeface -> Times, Helvetica, Arial, Georgio, Verdana, ...
+        For example: conceptrange.movie -> Star Wars, Conan The Barbarian, ...
         The dictionary itself contains settings for how graph.specific() is called.
         """
         self.rules = {
@@ -735,7 +727,7 @@ class _range(dict):
     def __getattr__(self, a):
         """ Each attribute behaves as a list of hyponym nodes.
         Attributes are expected to be singular nouns.
-        Some of these are fine-tuned in the range, others are generic.
+        Some of these are fine-tuned in the conceptrange, others are generic.
         """
         if a in self.rules:
             concept, context, fringe, proper = self.rules[a]
@@ -753,7 +745,7 @@ class _range(dict):
     def __call__(self, a):
         return self.__getattr__(a)
 
-range = _range()
+conceptrange = ConcepRange()
 
 #### INDEX #####################################################################
 # A cached index of shortest paths between concepts.
@@ -850,7 +842,7 @@ index = _index()
 def _build_properties_index(): 
     index.build(
         "properties",
-        range.properties,
+        conceptrange.properties,
         cost({"is-property-of" : -0.25,
               "is-same-as"     : -0.5,
               "is-opposite-of" : 10})
@@ -929,7 +921,7 @@ class _solver:
            query (Dijkstra).
         4) A list of winning concepts is returned (closest first).
         
-        For example: painful <-> range.emotion = shame, envy, pride, anger, jealousy, sadness, fear, anxiety, ...
+        For example: painful <-> conceptrange.emotion = shame, envy, pride, anger, jealousy, sadness, fear, anxiety, ...
         
         The word [properties] can be replaced with another type of concept,
         as long as it is a graph method the solver can call,
@@ -949,7 +941,7 @@ class _solver:
             # Find paths to the root for each [property]. 
             # The length of the paths at the start of the list is important.
             if concept == root:
-                S = [[] for i in range_(100)]
+                S = [[] for i in range(100)]
             else:
                 S = self._retrieve(concept, depth=3, cached=True)
                 S = [index.shortest_path(n, root) for n in S]
@@ -1023,7 +1015,7 @@ class _analogy:
         Returns the list of concepts sorted by the relevance score sum.
         
         For example:
-        sword <=> range.animal = hedgehog, scorpion, bee, cat, cheetah, cougar, ...
+        sword <=> conceptrange.animal = hedgehog, scorpion, bee, cat, cheetah, cougar, ...
         
         """
         
@@ -1104,7 +1096,7 @@ def search_match_parse(
         engine = Bing(license=None, language="en")
 
     collect = []
-    for i in range_(n):
+    for i in range(n):
         if service == "google":
             # search = web.google.search(query, start=i*4, cached=cached)
             for result in engine.search(query, start=i, count=10): #, type=SEARCH, cached=True):
@@ -1325,8 +1317,8 @@ def suggest_comparisons(concept1, concept2, cached=True):
 
 #solver.index = "properties"
 #solver.method = "properties"
-#print solver.sort_by_relevance("dark", range("emotion"))
-#print solver.sort_by_relevance("bright", range("emotion"))
+#print solver.sort_by_relevance("dark", conceptrange("emotion"))
+#print solver.sort_by_relevance("bright", conceptrange("emotion"))
 
 # BETA+
 # - Implemented is-effect-of and has-effect rules.
