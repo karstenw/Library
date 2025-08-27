@@ -5,27 +5,12 @@ from functools import cmp_to_key
 
 from types import FunctionType, LambdaType
 
-# py3 stuff
-py3 = False
-try:
-    unicode('')
-    punicode = unicode
-    pstr = str
-    punichr = unichr
-except NameError:
-    punicode = str
-    pstr = bytes
-    py3 = True
-    punichr = chr
-    long = int
+# py3 stuff not needed here
 
 
 def sortlist(thelist, thecompare):
-    if py3:
-        sortkeyfunction = cmp_to_key( thecompare )
-        thelist.sort( key=sortkeyfunction )
-    else:
-        thelist.sort( thecompare )
+    sortkeyfunction = cmp_to_key( thecompare )
+    thelist.sort( key=sortkeyfunction )
 
 
 ###
