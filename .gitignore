@@ -65,6 +65,11 @@ photobot/examples/transform2/*
 photobot/images/*
 photobot/photobot-standalone
 photobot/photobot.leo
+photobot/examples/mk.sh
+photobot/examples/runall-py2
+photobot/examples/runall-py3
+photobot/examples/testimage.jpg
+
 
 pixabay
 */APIKEY
