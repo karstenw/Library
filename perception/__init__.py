@@ -9,7 +9,7 @@
 # solver object:
 # 
 # 1) query()
-#           returns lists of rules form the online database,
+#           returns lists of rules from the online database,
 #           using a caching mechanism.
 # 
 # 2) cluster()
@@ -94,19 +94,12 @@ typ = type
 
 
 
-# py3 stuff
-py3 = False
-try:
-    unicode('')
-    punicode = unicode
-    pstr = str
-    punichr = unichr
-except NameError:
-    punicode = str
-    pstr = bytes
-    py3 = True
-    punichr = chr
-    long = int
+# py3 stuff - kill py2
+punicode = str
+pstr = bytes
+py3 = True
+punichr = chr
+long = int
 
 
 def sortlist(thelist, thecompare):
