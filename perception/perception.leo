@@ -18,7 +18,6 @@
 <v t="karstenw.20230316191528.4"><vh>nodecompare</vh></v>
 <v t="karstenw.20230316191528.6"><vh>makeunicode</vh></v>
 <v t="karstenw.20230316191528.7"><vh>hashFromString</vh></v>
-<v t="karstenw.20230316191528.8"><vh>range_</vh></v>
 </v>
 <v t="karstenw.20230316191737.1"><vh>+ BASIC PROPERTIES +</vh></v>
 <v t="karstenw.20230316191816.1" a="E"><vh>+ Cache +</vh>
@@ -31,7 +30,7 @@
 <v t="karstenw.20230505121633.1"><vh>cachefiles</vh></v>
 </v>
 <v t="karstenw.20230318130644.1" a="E"><vh>+ API +</vh>
-<v t="karstenw.20230505102222.1"><vh>+ OFF +</vh>
+<v t="karstenw.20230505102222.1" a="E"><vh>+ OFF +</vh>
 <v t="karstenw.20230316191528.14"><vh>is_robot - OFF</vh></v>
 <v t="karstenw.20230330102024.1"><vh>+ QUERY CONCEPTNET API +</vh>
 <v t="karstenw.20230330142517.1"><vh>download_url</vh></v>
@@ -94,7 +93,7 @@
 </v>
 <v t="karstenw.20230316194702.1" a="E"><vh>+ TAXONOMY +</vh>
 <v t="karstenw.20230316191528.65"><vh>taxonomy</vh></v>
-<v t="karstenw.20230316191528.66" a="E"><vh>class _range</vh>
+<v t="karstenw.20230316191528.66" a="E"><vh>class ConcepRange</vh>
 <v t="karstenw.20230316191528.67"><vh>__init__</vh></v>
 <v t="karstenw.20230316191528.68"><vh>append</vh></v>
 <v t="karstenw.20230316191528.69"><vh>_hyponyms</vh></v>
@@ -102,7 +101,7 @@
 <v t="karstenw.20230316191528.71"><vh>__call__</vh></v>
 </v>
 </v>
-<v t="karstenw.20230316194807.1"><vh>+ INDEX +</vh>
+<v t="karstenw.20230316194807.1" a="E"><vh>+ INDEX +</vh>
 <v t="karstenw.20230316191528.72"><vh>class _index</vh>
 <v t="karstenw.20230316191528.73"><vh>__init__</vh></v>
 <v t="karstenw.20230316191528.74"><vh>_get_name</vh></v>
@@ -114,7 +113,7 @@
 </v>
 <v t="karstenw.20230316191528.80"><vh>_build_properties_index</vh></v>
 </v>
-<v t="karstenw.20230316194837.1"><vh>+ SOLVER +</vh>
+<v t="karstenw.20230316194837.1" a="E"><vh>+ SOLVER +</vh>
 <v t="karstenw.20230316191528.81"><vh>add_method</vh></v>
 <v t="karstenw.20230316191528.82"><vh>score</vh></v>
 <v t="karstenw.20230316191528.83"><vh>class IndexError</vh></v>
@@ -144,7 +143,7 @@
 <v t="karstenw.20230316191528.99"><vh>suggest_objects</vh></v>
 </v>
 <v t="karstenw.20230316195027.1" a="E"><vh>+ COMPARATIVE +</vh>
-<v t="karstenw.20230316191528.100" a="E"><vh>class compare_concepts</vh>
+<v t="karstenw.20230316191528.100"><vh>class compare_concepts</vh>
 <v t="karstenw.20230316191528.101"><vh>__init__</vh></v>
 <v t="karstenw.20230316191528.102"><vh>graph</vh></v>
 <v t="karstenw.20230316191528.103"><vh>rank</vh></v>
@@ -179,7 +178,7 @@
 #           returns a graph objects based on a cluster of rules
 #           around a central concept.
 # 
-# 3) range()
+# 3) conceptrange()
 #           find sibling concepts (e.g. fonts, movies, colors,
 #           trees) using a taxonomy graph.
 # 
@@ -749,6 +748,7 @@ heuristic = cost
     self[relation] = cost
 </t>
 <t tx="karstenw.20230316191528.6">def makeunicode(s, srcencoding="utf-8", normalizer="NFC"):
+    # Needed to be redone here for type == typ
     try:
         if typ(s) not in (punicode, pstr):
             s = str( s )
@@ -854,16 +854,18 @@ graph.graph.objects      = graph_objects
 hierarchy = taxonomy
 
 </t>
-<t tx="karstenw.20230316191528.66">class _range(dict):
+<t tx="karstenw.20230316191528.66"># "ConcepRange" is the name of a singleton class in the library.
+# "conceptrange" is the name of the class instance.
+class ConcepRange(dict):
     
     @others
-range = _range()
+conceptrange = ConcepRange()
 
 </t>
 <t tx="karstenw.20230316191528.67">def __init__(self):
     """ Creates a taxonomy from a given concept and filters hyponyms from it.
-    For example: range.typeface -&gt; Times, Helvetica, Arial, Georgio, Verdana, ...
-    For example: range.movie -&gt; Star Wars, Conan The Barbarian, ...
+    For example: conceptrange.typeface -&gt; Times, Helvetica, Arial, Georgio, Verdana, ...
+    For example: conceptrange.movie -&gt; Star Wars, Conan The Barbarian, ...
     The dictionary itself contains settings for how graph.specific() is called.
     """
     self.rules = {
@@ -901,13 +903,11 @@ range = _range()
     h = hashlib.sha1()
     h.update( s )
     return h.hexdigest()
-
-
 </t>
 <t tx="karstenw.20230316191528.70">def __getattr__(self, a):
     """ Each attribute behaves as a list of hyponym nodes.
     Attributes are expected to be singular nouns.
-    Some of these are fine-tuned in the range, others are generic.
+    Some of these are fine-tuned in the conceptrange, others are generic.
     """
     if a in self.rules:
         concept, context, fringe, proper = self.rules[a]
@@ -915,8 +915,7 @@ range = _range()
     elif a == "properties":
         g = cluster(None, context="properties", depth=None, wait=30)
         return sorted(g.keys())
-    elif a == "basic properties" \
-      or a == "basic_properties":
+    elif a in ( "basic properties", "basic_properties" ):
           return basic_properties
     else:
         a = a.replace("_", " ")
@@ -1018,22 +1017,10 @@ name = property(_get_name, _set_name)
     return sorted(concepts, _cmp)
     
 </t>
-<t tx="karstenw.20230316191528.8"># "_range" is the name of a singleton class in the library.
-# "range" is the name of the class instance.
-def range_(start, stop=None, step=1):
-    if stop is None: 
-        stop, start = start, 0
-    cur = start
-    while cur &lt; stop:
-        yield cur
-        cur += step
-
-
-</t>
 <t tx="karstenw.20230316191528.80">def _build_properties_index(): 
     index.build(
         "properties",
-        range.properties,
+        conceptrange.properties,
         cost({"is-property-of" : -0.25,
               "is-same-as"     : -0.5,
               "is-opposite-of" : 10})
@@ -1123,7 +1110,7 @@ solver = _solver()
        query (Dijkstra).
     4) A list of winning concepts is returned (closest first).
     
-    For example: painful &lt;-&gt; range.emotion = shame, envy, pride, anger, jealousy, sadness, fear, anxiety, ...
+    For example: painful &lt;-&gt; conceptrange.emotion = shame, envy, pride, anger, jealousy, sadness, fear, anxiety, ...
     
     The word [properties] can be replaced with another type of concept,
     as long as it is a graph method the solver can call,
@@ -1143,7 +1130,7 @@ solver = _solver()
         # Find paths to the root for each [property]. 
         # The length of the paths at the start of the list is important.
         if concept == root:
-            S = [[] for i in range_(100)]
+            S = [[] for i in range(100)]
         else:
             S = self._retrieve(concept, depth=3, cached=True)
             S = [index.shortest_path(n, root) for n in S]
@@ -1216,7 +1203,7 @@ analogy = _analogy()
     Returns the list of concepts sorted by the relevance score sum.
     
     For example:
-    sword &lt;=&gt; range.animal = hedgehog, scorpion, bee, cat, cheetah, cougar, ...
+    sword &lt;=&gt; conceptrange.animal = hedgehog, scorpion, bee, cat, cheetah, cougar, ...
     
     """
     
@@ -1294,7 +1281,7 @@ map_object = __call__
         engine = Bing(license=None, language="en")
 
     collect = []
-    for i in range_(n):
+    for i in range(n):
         if service == "google":
             # search = web.google.search(query, start=i*4, cached=cached)
             for result in engine.search(query, start=i, count=10): #, type=SEARCH, cached=True):
@@ -1436,6 +1423,7 @@ def sortlist(thelist, thecompare):
 # Those we think can easily be translated visually.
 
 basic_properties = [
+    # except the last one, these are pairwise
     "angular",  "round",      "large",    "small",
     "long",     "short",      "bright",   "dark",
     "calm",     "wild",       "chaotic",  "structured",
@@ -1447,7 +1435,8 @@ basic_properties = [
     "heavy",    "light",      "loud",     "quiet",
     "natural",  "artificial", "old",      "new",
     "elegant",  "raw",        "strong",   "weak",
-    "tangible", "abstract",   "thick",    "thin", "repetitive"
+    "tangible", "abstract",   "thick",    "thin",
+    "repetitive"
 ]
 
 </t>
@@ -1519,8 +1508,8 @@ INDEX = os.path.join(os.path.dirname(__file__), "index")
 
 #solver.index = "properties"
 #solver.method = "properties"
-#print solver.sort_by_relevance("dark", range("emotion"))
-#print solver.sort_by_relevance("bright", range("emotion"))
+#print solver.sort_by_relevance("dark", conceptrange("emotion"))
+#print solver.sort_by_relevance("bright", conceptrange("emotion"))
 
 # BETA+
 # - Implemented is-effect-of and has-effect rules.
