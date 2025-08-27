@@ -6,14 +6,14 @@ from random import seed, sample
 
 flowerewolf = ximport("flowerewolf")
 
-size( 1000, 900 )
+size( 1200, 1200 )
 fontsize(24)
 
 # select 13 random fonts
 
 allnouns = list(flowerewolf.allnouns)
 allfonts = fontnames()
-speed( 0.334 )
+speed( 1 )
 
 def setup():
     pass
@@ -26,4 +26,5 @@ def draw():
             str(topic), 
             foreground=color(1,1,1,0.9),
             background=color(1,0,0), 
-            fonts=fonts)
+            fonts=fonts,
+            fontsize=64)
