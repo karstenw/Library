@@ -1096,6 +1096,7 @@ def search_match_parse(
 
     collect = []
     for i in range(n):
+        
         if service == "google":
             # search = web.google.search(query, start=i*4, cached=cached)
             for result in engine.search(query, start=i, count=10): #, type=SEARCH, cached=True):
@@ -1117,6 +1118,7 @@ def search_match_parse(
                 raise request.error
             for result in request.value:
                 collect.append( result )
+    
     if kwdbg:
         pdb.set_trace()
     
@@ -1126,7 +1128,11 @@ def search_match_parse(
             # TODO
             #
             
-            # result.description = result.description.replace(",",", ").replace("  "," ")
+            if result.description:
+                result.description = result.description.replace(",",", ").replace("  "," ")
+            # sntc = en.Sentence( result.description.lower() )
+            
+            
             #match = en.sentence.find(result.description.lower(), pattern_)
             #if len(match) > 0 and len(match[0]) > 0:
             #    x = parse(match[0])
