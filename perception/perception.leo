@@ -1282,6 +1282,7 @@ map_object = __call__
 
     collect = []
     for i in range(n):
+        
         if service == "google":
             # search = web.google.search(query, start=i*4, cached=cached)
             for result in engine.search(query, start=i, count=10): #, type=SEARCH, cached=True):
@@ -1303,6 +1304,7 @@ map_object = __call__
                 raise request.error
             for result in request.value:
                 collect.append( result )
+    
     if kwdbg:
         pdb.set_trace()
     
@@ -1312,7 +1314,11 @@ map_object = __call__
             # TODO
             #
             
-            # result.description = result.description.replace(",",", ").replace("  "," ")
+            if result.description:
+                result.description = result.description.replace(",",", ").replace("  "," ")
+            # sntc = en.Sentence( result.description.lower() )
+            
+            
             #match = en.sentence.find(result.description.lower(), pattern_)
             #if len(match) &gt; 0 and len(match[0]) &gt; 0:
             #    x = parse(match[0])
