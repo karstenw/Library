@@ -13,10 +13,7 @@
 <v t="karstenw.20210712120529.1" a="E"><vh>@clean __init__.py</vh>
 <v t="karstenw.20210712120630.1"><vh>Header</vh></v>
 <v t="karstenw.20210712120542.1"><vh>Declarations</vh></v>
-<v t="karstenw.20220923144041.1" a="E"><vh>py3 stuff</vh>
-<v t="karstenw.20210712120542.2"><vh>cmp_to_key</vh></v>
-<v t="karstenw.20210712120542.3"><vh>sortlistfunction</vh></v>
-</v>
+<v t="karstenw.20220923144041.1"><vh>py3 stuff</vh></v>
 <v t="karstenw.20210712120819.1"><vh>REWIRING</vh>
 <v t="karstenw.20210712120542.4"><vh>class NoCoreImageOrPIL</vh></v>
 <v t="karstenw.20210712120542.5"><vh>_range</vh></v>
@@ -278,6 +275,8 @@ from math import floor, ceil
 from copy import deepcopy
 from xml.dom.minidom import parseString
 from random import random, choice
+
+from functools import cmp_to_key
 
 try:
     # NodeBox / Cocoa specific functionality.
@@ -1701,7 +1700,9 @@ def xml(self):
         xml = archive.read(member)
     dom = parseString(xml).documentElement
     
-    attr = lambda e, a: e.attributes[a].value
+    # attr = lambda e, a: e.attributes[a].value
+    def attr( e, a ):
+        return e.attributes[a].value
     
     for e in dom.getElementsByTagName("color")[:top]:
         w = float(attr(e, "weight")) 
@@ -1716,12 +1717,14 @@ def xml(self):
             )
             try: 
                 clr.name = attr(e, "name")
-                if clr.name == "blue": clr = color(blue)
+                if clr.name == "blue":
+                    clr = color(blue)
             except: 
                 pass
         except:
             name = attr(e, "name")
-            if name == "blue": name = blue
+            if name == "blue":
+                name = blue
             clr = color(name)
            
         for s in e.getElementsByTagName("shade"):
@@ -2025,26 +2028,6 @@ aggregate = theme
     return True
 
 </t>
-<t tx="karstenw.20210712120542.2">def cmp_to_key(mycmp):
-    'Convert a cmp= function into a key= function'
-    class K:
-        def __init__(self, obj, *args):
-            self.obj = obj
-        def __lt__(self, other):
-            return mycmp(self.obj, other.obj) &lt; 0
-        def __gt__(self, other):
-            return mycmp(self.obj, other.obj) &gt; 0
-        def __eq__(self, other):
-            return mycmp(self.obj, other.obj) == 0
-        def __le__(self, other):
-            return mycmp(self.obj, other.obj) &lt;= 0
-        def __ge__(self, other):
-            return mycmp(self.obj, other.obj) &gt;= 0
-        def __ne__(self, other):
-            return mycmp(self.obj, other.obj) != 0
-    return K
-
-</t>
 <t tx="karstenw.20210712120542.20">def __setattr__(self, a, v):
     
     if a in ["a", "alpha"]:
@@ -2145,7 +2128,7 @@ class Color(BaseColor):
     which default to the state colormode and color range.
     
     """
-
+    # pdb.set_trace()
     self.name = ""
 
     try:
@@ -2298,15 +2281,6 @@ def is_transparent(self):
     if self.a == 0:
         return True
     return False
-
-</t>
-<t tx="karstenw.20210712120542.3">def sortlistfunction(thelist, thecompare):
-    if py3:
-        sortkeyfunction = cmp_to_key( thecompare )
-        thelist.sort( key=sortkeyfunction )
-    else:
-        thelist.sort( thecompare )
-
 
 </t>
 <t tx="karstenw.20210712120542.30">@property
@@ -4059,6 +4033,14 @@ except NameError:
     punichr = chr
     long = int
     xrange = range
+
+def sortlistfunction(thelist, thecompare):
+    if py3:
+        sortkeyfunction = cmp_to_key( thecompare )
+        thelist.sort( key=sortkeyfunction )
+    else:
+        thelist.sort( thecompare )
+
 
 </t>
 </tnodes>
