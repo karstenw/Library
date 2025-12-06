@@ -7,13 +7,14 @@ __pycache__
 */+private
 +latex
 +shoebot
++private
++news
 */+movies
 */cache
 */doc
 */build
 */dist
 */classbrowser*
-
 
 beziereditor/*.svg
 beziereditor/+latex
