@@ -97,7 +97,8 @@ def sortlistfunction(thelist, thecompare):
 
 # This exception is raised when trying to get a list of colors from an image
 # without Core Image or Python Imaging Library.
-class NoCoreImageOrPIL(Exception): pass
+class NoCoreImageOrPIL(Exception):
+    pass
 
 #### REWIRING ######################################################################
 
@@ -453,6 +454,7 @@ for f in glob(path):
     tags = [tag.strip() for tag in tags.split(",")]
     tags.sort()
     context[name] = tags
+
 
 #### BASE COLOR ####################################################################
 
@@ -997,11 +999,13 @@ def color(*args, **kwargs):
     return Color(*args, **kwargs)
     
 def rgb(r, g, b, a=None, range=1.0, name=""):
-    if a == None: a = range
+    if a == None:
+        a = range
     return color(r, g, b, a, mode="rgb", name=name, range=range)
     
 def hsb(h, s, b, a=None, range=1.0, name=""):
-    if a == None: a = range
+    if a == None:
+        a = range
     return color(h, s, b, a, mode="hsb", name=name, range=range)
 
 def cmyk(c, m, y, k, a=None, range=1.0, name=""):
@@ -1027,7 +1031,7 @@ for clr in named_colors:
     except:
         r, g, b, a = named_colors[clr]
     r, g, b, a = [str(v) for v in [r, g, b, a]]
-    code += clr+" = lambda: Color("+r+", "+g+", "+b+", "+a+", mode=\"rgb\", name=\""+clr+"\")\n"
+    code += clr + " = lambda: Color("+r+", "+g+", "+b+", "+a+", mode=\"rgb\", name=\""+clr+"\")\n"
 
 #for clr in named_hues:
 #    h = named_hues[clr]
