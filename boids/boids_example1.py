@@ -1,5 +1,5 @@
 size(500, 500)
-speed(20)
+speed(30)
 
 try:
     boids = ximport("boids")
