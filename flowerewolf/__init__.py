@@ -623,7 +623,8 @@ def dada(   query, foreground=None, background=None, fonts=[],
 
 
     # Poem title.
-    _ctx.text(query, _ctx.WIDTH / 15, _ctx.HEIGHT / 7-fontsizepts)
+    printquery = query.replace( "_", " ")
+    _ctx.text(printquery, _ctx.WIDTH / 15, _ctx.HEIGHT / 7-fontsizepts)
     
     # initially spanned the rest of dada()
     # for i in range(1):
