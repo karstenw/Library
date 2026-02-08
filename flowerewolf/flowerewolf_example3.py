@@ -13,18 +13,19 @@ fontsize(24)
 
 allnouns = list(flowerewolf.allnouns)
 allfonts = fontnames()
-speed( 1 )
+speed( 0.2 )
 
 def setup():
     pass
 
 def draw():
     fonts = sample( allfonts, 20 )
-    topic = choice( allnouns )
-    print("topic:", topic)
+    topic = str(choice( allnouns ))
+    printtopic = topic.replace("_", " ")
+    print("topic:", printtopic)
     flowerewolf.dada(
-            str(topic), 
+            topic,
             foreground=color(1,1,1,0.9),
-            background=color(1,0,0), 
+            background=color(1,0,0),
             fonts=fonts,
-            fontsize=64)
+            fontsizepts=64)
