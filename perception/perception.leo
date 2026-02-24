@@ -13,7 +13,7 @@
 <v t="karstenw.20230316191501.1" a="E"><vh>@clean __init__.py</vh>
 <v t="karstenw.20230316191528.1"><vh>Declarations</vh></v>
 <v t="karstenw.20230417110004.1"><vh>+ GLOBALS +</vh></v>
-<v t="karstenw.20230318131229.1" a="E"><vh>+ TOOLS +</vh>
+<v t="karstenw.20230318131229.1"><vh>+ TOOLS +</vh>
 <v t="karstenw.20230316191631.1"><vh>py3</vh></v>
 <v t="karstenw.20230316191528.4"><vh>nodecompare</vh></v>
 <v t="karstenw.20230316191528.6"><vh>makeunicode</vh></v>
@@ -56,7 +56,7 @@
 <v t="karstenw.20230316191528.18"><vh>__init__</vh></v>
 <v t="karstenw.20230316191528.19"><vh>__repr__</vh></v>
 </v>
-<v t="karstenw.20230316191528.20"><vh>class Rules</vh>
+<v t="karstenw.20230316191528.20" a="E"><vh>class Rules</vh>
 <v t="karstenw.20230316191528.21"><vh>_concepts</vh></v>
 <v t="karstenw.20230316191528.22"><vh>disambiguate</vh></v>
 </v>
@@ -77,7 +77,7 @@
 <v t="karstenw.20230316191528.52"><vh>add_rule</vh></v>
 <v t="karstenw.20230316191528.53"><vh>cluster</vh></v>
 </v>
-<v t="karstenw.20230316194605.1" a="E"><vh>+ CLUSTER HEURISTICS +</vh>
+<v t="karstenw.20230316194605.1"><vh>+ CLUSTER HEURISTICS +</vh>
 <v t="karstenw.20230316191528.54"><vh>proper_nouns</vh></v>
 <v t="karstenw.20230316191528.55"><vh>proper_leaves</vh></v>
 <v t="karstenw.20230316191528.56"><vh>neighbors</vh></v>
@@ -91,7 +91,7 @@
 <v t="karstenw.20230316191528.63"><vh>graph_specific</vh></v>
 <v t="karstenw.20230316191528.64"><vh>graph_objects</vh></v>
 </v>
-<v t="karstenw.20230316194702.1" a="E"><vh>+ TAXONOMY +</vh>
+<v t="karstenw.20230316194702.1"><vh>+ TAXONOMY +</vh>
 <v t="karstenw.20230316191528.65"><vh>taxonomy</vh></v>
 <v t="karstenw.20230316191528.66" a="E"><vh>class ConcepRange</vh>
 <v t="karstenw.20230316191528.67"><vh>__init__</vh></v>
@@ -101,7 +101,7 @@
 <v t="karstenw.20230316191528.71"><vh>__call__</vh></v>
 </v>
 </v>
-<v t="karstenw.20230316194807.1" a="E"><vh>+ INDEX +</vh>
+<v t="karstenw.20230316194807.1"><vh>+ INDEX +</vh>
 <v t="karstenw.20230316191528.72"><vh>class _index</vh>
 <v t="karstenw.20230316191528.73"><vh>__init__</vh></v>
 <v t="karstenw.20230316191528.74"><vh>_get_name</vh></v>
@@ -119,7 +119,7 @@
 <v t="karstenw.20230316191528.83"><vh>class IndexError</vh></v>
 <v t="karstenw.20230316191528.84"><vh>class MethodError</vh></v>
 <v t="karstenw.20230316191528.85"><vh>class analysis</vh></v>
-<v t="karstenw.20230316191528.86"><vh>class _solver</vh>
+<v t="karstenw.20230316191528.86" a="E"><vh>class _solver</vh>
 <v t="karstenw.20230316191528.87"><vh>__init__</vh></v>
 <v t="karstenw.20230316191528.88"><vh>_prepare</vh></v>
 <v t="karstenw.20230316191528.89"><vh>_retrieve</vh></v>
@@ -143,7 +143,7 @@
 <v t="karstenw.20230316191528.99"><vh>suggest_objects</vh></v>
 </v>
 <v t="karstenw.20230316195027.1" a="E"><vh>+ COMPARATIVE +</vh>
-<v t="karstenw.20230316191528.100"><vh>class compare_concepts</vh>
+<v t="karstenw.20230316191528.100" a="E"><vh>class compare_concepts</vh>
 <v t="karstenw.20230316191528.101"><vh>__init__</vh></v>
 <v t="karstenw.20230316191528.102"><vh>graph</vh></v>
 <v t="karstenw.20230316191528.103"><vh>rank</vh></v>
@@ -426,10 +426,11 @@ if 1:
 
 </t>
 <t tx="karstenw.20230316191528.19">def __repr__(self):
-    s = self.concept1 + " " + self.relation + " " +self.concept2
+    s = "%s(%s)  %s  %s(%s)" % (self.concept1,self.lang1,self.relation,self.concept2,self.lang2)
     if self.context != None:
-        s += " (" + self.context + ")"
+        s += "  (" + self.context + ")"
     return s
+
 
 </t>
 <t tx="karstenw.20230316191528.20">class Rules(list):
@@ -448,7 +449,6 @@ if 1:
         rank[rule.concept1] += 1
         rank[rule.concept2] += 1
     return rank
-    
 concepts = property(_concepts)
 
 </t>
@@ -1330,12 +1330,14 @@ map_object = __call__
     return matches
 
 </t>
-<t tx="karstenw.20230316191528.96">def count(list):
+<t tx="karstenw.20230316191528.96">def count( alist ):
     """ Returns a dictionary with the list items as keys and their count as values.
     """
     d = {}
-    for v in list: d[v]  = 0
-    for v in list: d[v] += 1
+    for v in alist:
+        d[v]  = 0
+    for v in alist:
+        d[v] += 1
     return d
 
 </t>
@@ -1616,7 +1618,6 @@ INDEX = os.path.join(os.path.dirname(__file__), "index")
         rules.append( rule )
         
     return rules
-
 query = query_cnr
 
 </t>

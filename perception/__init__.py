@@ -252,10 +252,11 @@ class Rule:
         #self.date     = date
 
     def __repr__(self):
-        s = self.concept1 + " " + self.relation + " " +self.concept2
+        s = "%s(%s)  %s  %s(%s)" % (self.concept1,self.lang1,self.relation,self.concept2,self.lang2)
         if self.context != None:
-            s += " (" + self.context + ")"
+            s += "  (" + self.context + ")"
         return s
+
 
 class Rules(list):
 
@@ -271,7 +272,6 @@ class Rules(list):
             rank[rule.concept1] += 1
             rank[rule.concept2] += 1
         return rank
-        
     concepts = property(_concepts)
 
     def disambiguate(self, root=None):
@@ -342,7 +342,6 @@ def query_cnr(concept, relation=None, context=None, depth=1, maxedges=0, wait=2,
         rules.append( rule )
         
     return rules
-
 query = query_cnr
 
 #### CONCEPT CLUSTER ###########################################################
@@ -1143,12 +1142,14 @@ def search_match_parse(
                 matches.append(result.text)
     return matches
 
-def count(list):
+def count( alist ):
     """ Returns a dictionary with the list items as keys and their count as values.
     """
     d = {}
-    for v in list: d[v]  = 0
-    for v in list: d[v] += 1
+    for v in alist:
+        d[v]  = 0
+    for v in alist:
+        d[v] += 1
     return d
 
 def clean(word):
