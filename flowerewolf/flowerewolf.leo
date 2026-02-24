@@ -13,14 +13,6 @@
 <v t="karstenw.20230227153059.1" a="E"><vh>@clean __init__.py</vh>
 <v t="karstenw.20230227153123.1"><vh>Declarations</vh></v>
 <v t="karstenw.20230227161027.1"><vh>Globals</vh></v>
-<v t="karstenw.20230323132157.1"><vh>FlowerWord</vh>
-<v t="karstenw.20230323132157.2"><vh>__init__</vh></v>
-<v t="karstenw.20230323132157.3"><vh>hyponyms</vh></v>
-<v t="karstenw.20230323132157.4"><vh>hypernyms</vh></v>
-<v t="karstenw.20230323132157.5"><vh>senses</vh></v>
-<v t="karstenw.20230323132157.6"><vh>holonyms</vh></v>
-<v t="karstenw.20230323132157.7"><vh>meronyms</vh></v>
-</v>
 <v t="karstenw.20230310134343.1"><vh>printsynset</vh></v>
 <v t="karstenw.20230227153522.1" a="E"><vh>+ GRAMMAR +</vh>
 <v t="karstenw.20230227153123.2"><vh>alliterations</vh></v>
@@ -53,6 +45,7 @@
 
 ################################################################################
 
+import os
 import time
 import io
 
@@ -68,8 +61,11 @@ from nodebox.util import random, choice
 
 # new linguistics/pattern
 
-# need to import linguistics first - sets up sys.path and corpus/data folders for the sublibs
+# need to import linguistics first 
+# sets up sys.path and corpus/data folders for the sublibs
 import linguistics
+FlowerWord = linguistics.FlowerWord
+
 import pattern
 import pattern.text
 import pattern.text.en
@@ -130,7 +126,8 @@ wordnet = en.wordnet
 
 
 </t>
-<t tx="karstenw.20230227153123.11">def dada(query, foreground=None, background=None, fonts=[], transparent=False):
+<t tx="karstenw.20230227153123.11">def dada(   query, foreground=None, background=None, fonts=[],
+            transparent=False, fontsizepts=24):
 
     """Create some lines of poetry based on the query."""
 
@@ -177,7 +174,8 @@ wordnet = en.wordnet
     &lt;&lt; Setup the colors and fonts &gt;&gt;
 
     # Poem title.
-    _ctx.text(query, _ctx.WIDTH / 15, _ctx.HEIGHT / 7-f)
+    printquery = query.replace( "_", " ")
+    _ctx.text(printquery, _ctx.WIDTH / 15, _ctx.HEIGHT / 7-fontsizepts)
     
     # initially spanned the rest of dada()
     # for i in range(1):
@@ -193,7 +191,7 @@ wordnet = en.wordnet
             # pick a random font from the list and a random fontsize.
             _ctx.font(choice(fonts))
             if random() &gt; 0.7: 
-                _ctx.fontsize(random(f*0.6, f*1.2))
+                _ctx.fontsize(random(fontsizepts*0.6, fontsizepts*1.2))
             
             # A word that is s
             #                 l
@@ -385,6 +383,7 @@ wordnet = en.wordnet
     except:
         return None
 
+
 </t>
 <t tx="karstenw.20230227153123.7">def eloquate(noun, antonise=True):
     
@@ -486,7 +485,8 @@ wordnet = en.wordnet
     if len(verbs) &gt; 0: return choice(verbs)
     
     return verb
-    
+
+
 </t>
 <t tx="karstenw.20230227153123.9">def incorporate(word, typ=NOUN):
     
@@ -575,7 +575,7 @@ if background == None:
 if len(fonts) == 0: 
     fonts = [_ctx.font()]
 
-f = _ctx.fontsize()
+# f = _ctx.fontsize()
 _ctx.background(background)
 
 if transparent: 
@@ -676,101 +676,6 @@ _ctx.strokewidth(0.5)
         print( '   _wnsynset.verb_groups:', s._wnsynset.verb_groups )
         print( '   _wnsynset.wup_similarity:', s._wnsynset.wup_similarity )
 
-
-</t>
-<t tx="karstenw.20230323132157.1">class FlowerWord:
-    @others
-
-
-</t>
-<t tx="karstenw.20230323132157.2">def __init__(self, word):
-    # pdb.set_trace()
-    self.word = word
-    self.synsets = wordnet.synsets( word )
-    self.idx = 0
-    self.antonym = ""
-    self.gloss = ""
-    self.synset = None
-    self.synonyms = []
-    self.antonym = ""
-    self.gloss = ""
-    self.lexname = ""
-    
-    if len(self.synsets) &gt; 0:
-        synonyms = self.synsets[0].synonyms
-        try:
-            self.idx = synonyms.index(word)
-            w = self.synset = self.synsets[self.idx]
-            #print("Found synset:", w)
-        except:
-            w = self.synsets[0]
-            #print("Use synset:", w)
-
-        self.antonym = w.antonym
-        self.gloss = w.gloss
-        self.lexname = w.lexname
-
-</t>
-<t tx="karstenw.20230323132157.3">def hyponyms(self):
-    result = []
-    for synset in self.synsets:
-        hyponyms = synset.hyponyms()
-        for hyponym in hyponyms:
-            synonyms = hyponym.synonyms
-            for synonym in synonyms:
-                synonym = synonym.replace("_", " ")
-                result.append( synonym )
-    result = list(set(result))
-    return result
-
-</t>
-<t tx="karstenw.20230323132157.4">def hypernyms(self):
-    result = []
-    for synset in self.synsets:
-        hypernyms = synset.hypernyms()
-        for hypernym in hypernyms:
-            synonyms = hypernym.synonyms
-            for synonym in synonyms:
-                synonym = synonym.replace("_", " ")
-                result.append( synonym )
-    result = list(set(result))
-    return result
-
-
-</t>
-<t tx="karstenw.20230323132157.5">def senses(self):
-    result = []
-    for synset in self.synsets:
-        senses = synset.senses
-        result.append( senses )
-    return result
-
-
-</t>
-<t tx="karstenw.20230323132157.6">def holonyms(self):
-    result = []
-    for synset in self.synsets:
-        holonyms = synset.holonyms()
-        for holonym in holonyms:
-            synonyms = hyponym.synonyms
-            for synonym in synonyms:
-                synonym = synonym.replace("_", " ")
-                result.append( synonym )
-    result = list(set(result))
-    return result
-
-</t>
-<t tx="karstenw.20230323132157.7">def meronyms(self):
-    result = []
-    for synset in self.synsets:
-        meronyms = synset.meronyms()
-        for meronym in meronyms:
-            synonyms = hyponym.synonyms
-            for synonym in synonyms:
-                synonym = synonym.replace("_", " ")
-                result.append( synonym )
-    result = list(set(result))
-    return result
 
 </t>
 </tnodes>
