@@ -108,12 +108,16 @@ class node:
         
         if isinstance(node, str):
             node = self.graph[node]
+        
         for n in self.graph.nodes:
             n._visited = False
-        return proximity.depth_first_search(self,
+        
+        return proximity.depth_first_search(
+            self,
             visit=lambda n: node == n,
             traversable=traversable
-            )
+        )
+
 
     def _get_betweenness(self):
         if self._betweenness == None:
@@ -131,18 +135,23 @@ class node:
     eigenvalue = property(_get_eigenvalue)
     weight = eigenvalue
 
-    def _x(self): return self.vx * self.graph.d
-    def _y(self): return self.vy * self.graph.d
+
+    def _x(self):
+        return self.vx * self.graph.d
+
+    def _y(self):
+        return self.vy * self.graph.d
     x = property(_x)
     y = property(_y)
+
 
     def __contains__(self, pt):
         
         """ True if pt.x, pt.y is inside the node's absolute position.
         """
         
-        if abs(self.graph.x+self.x-pt.x) < self.r*2 and \
-           abs(self.graph.y+self.y-pt.y) < self.r*2:
+        if (    abs(self.graph.x+self.x-pt.x) < self.r*2
+            and abs(self.graph.y+self.y-pt.y) < self.r*2):
             return True
         else:
             return False
@@ -152,32 +161,39 @@ class node:
 
     def __and__(self, node, distance=1):
         return cluster.intersection(
-            self.flatten(distance), node.flatten(distance))
+                self.flatten(distance),
+                node.flatten(distance))
 
     def __or__(self, node, distance=1):
         return cluster.union(
-            self.flatten(distance), node.flatten(distance))
+            self.flatten(distance),
+            node.flatten(distance))
 
     def __sub__(self, node, distance=1):
         return cluster.difference(
-            self.flatten(distance), node.flatten(distance))
+            self.flatten(distance),
+            node.flatten(distance))
 
     def __repr__(self): 
-        try: return "<"+str(self.id)+" node>"
+        try:
+            return "<" + str(self.id) + " node>"
         except:
-            return "<"+self.id.encode("utf-8")+" node>"
+            return "<" + self.id.encode("utf-8") + " node>"
 
     def __str__(self): 
-        try: return str(self.id)
+        try:
+            return str(self.id)
         except:
             return self.id.encode("utf-8")
             
     def __eq__(self, node):
-        if not isinstance(node, self.__class__): return False
+        if not isinstance(node, self.__class__):
+            return False
         return self.id == node.id
 
     def __le__(self, node):
-        if not isinstance(node, self.__class__): return False
+        if not isinstance(node, self.__class__):
+            return False
         return self.id < node.id
 
 #### GRAPH NODE LINKS ##########################################################

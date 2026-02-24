@@ -10,7 +10,7 @@
 <find_panel_settings/>
 <vnodes>
 <v t="karstenw.20230319195648.2" a="E"><vh>graph</vh>
-<v t="karstenw.20230319195720.1"><vh>@clean __init__.py</vh>
+<v t="karstenw.20230319195720.1" a="E"><vh>@clean __init__.py</vh>
 <v t="karstenw.20230319195736.1"><vh>Declarations</vh></v>
 <v t="karstenw.20230319202717.1"><vh>py3</vh>
 <v t="karstenw.20230319202717.2"><vh>py3 stuff</vh></v>
@@ -120,7 +120,7 @@
 </v>
 <v t="karstenw.20230329160929.12"><vh>partition</vh></v>
 </v>
-<v t="karstenw.20230329161629.1" a="E"><vh>@clean event.py</vh>
+<v t="karstenw.20230329161629.1"><vh>@clean event.py</vh>
 <v t="karstenw.20230329161638.1"><vh>Declarations</vh></v>
 <v t="karstenw.20230329161638.2" a="E"><vh>class Point</vh>
 <v t="karstenw.20230329161638.3"><vh>__init__</vh></v>
@@ -146,7 +146,7 @@
 </v>
 </v>
 </v>
-<v t="karstenw.20230329162253.1" a="E"><vh>@clean layout.py</vh>
+<v t="karstenw.20230329162253.1"><vh>@clean layout.py</vh>
 <v t="karstenw.20230329162306.1"><vh>Declarations</vh></v>
 <v t="karstenw.20230329162306.2"><vh>class Point</vh>
 <v t="karstenw.20230329162306.3"><vh>__init__</vh></v>
@@ -190,7 +190,7 @@
 </v>
 </v>
 </v>
-<v t="karstenw.20230329163013.1" a="E"><vh>@clean proximity.py</vh>
+<v t="karstenw.20230329163013.1"><vh>@clean proximity.py</vh>
 <v t="karstenw.20230329163023.1"><vh>Declarations</vh></v>
 <v t="karstenw.20230329163023.2" a="E"><vh>class priorityqueue</vh>
 <v t="karstenw.20230329163023.3"><vh>push</vh></v>
@@ -328,9 +328,11 @@ from . import proximity
 from . import style
 
 </t>
-<t tx="karstenw.20230319195736.10">def _y(self): return self.vy * self.graph.d
+<t tx="karstenw.20230319195736.10">def _y(self):
+    return self.vy * self.graph.d
 x = property(_x)
 y = property(_y)
+
 
 </t>
 <t tx="karstenw.20230319195736.11">def __contains__(self, pt):
@@ -338,8 +340,8 @@ y = property(_y)
     """ True if pt.x, pt.y is inside the node's absolute position.
     """
     
-    if abs(self.graph.x+self.x-pt.x) &lt; self.r*2 and \
-       abs(self.graph.y+self.y-pt.y) &lt; self.r*2:
+    if (    abs(self.graph.x+self.x-pt.x) &lt; self.r*2
+        and abs(self.graph.y+self.y-pt.y) &lt; self.r*2):
         return True
     else:
         return False
@@ -351,38 +353,45 @@ y = property(_y)
 </t>
 <t tx="karstenw.20230319195736.13">def __and__(self, node, distance=1):
     return cluster.intersection(
-        self.flatten(distance), node.flatten(distance))
+            self.flatten(distance),
+            node.flatten(distance))
 
 </t>
 <t tx="karstenw.20230319195736.14">def __or__(self, node, distance=1):
     return cluster.union(
-        self.flatten(distance), node.flatten(distance))
+        self.flatten(distance),
+        node.flatten(distance))
 
 </t>
 <t tx="karstenw.20230319195736.15">def __sub__(self, node, distance=1):
     return cluster.difference(
-        self.flatten(distance), node.flatten(distance))
+        self.flatten(distance),
+        node.flatten(distance))
 
 </t>
 <t tx="karstenw.20230319195736.16">def __repr__(self): 
-    try: return "&lt;"+str(self.id)+" node&gt;"
+    try:
+        return "&lt;" + str(self.id) + " node&gt;"
     except:
-        return "&lt;"+self.id.encode("utf-8")+" node&gt;"
+        return "&lt;" + self.id.encode("utf-8") + " node&gt;"
 
 </t>
 <t tx="karstenw.20230319195736.17">def __str__(self): 
-    try: return str(self.id)
+    try:
+        return str(self.id)
     except:
         return self.id.encode("utf-8")
         
 </t>
 <t tx="karstenw.20230319195736.18">def __eq__(self, node):
-    if not isinstance(node, self.__class__): return False
+    if not isinstance(node, self.__class__):
+        return False
     return self.id == node.id
 
 </t>
 <t tx="karstenw.20230319195736.19">def __le__(self, node):
-    if not isinstance(node, self.__class__): return False
+    if not isinstance(node, self.__class__):
+        return False
     return self.id &lt; node.id
 
 </t>
@@ -946,12 +955,16 @@ density = property(_density)
     
     if isinstance(node, str):
         node = self.graph[node]
+    
     for n in self.graph.nodes:
         n._visited = False
-    return proximity.depth_first_search(self,
+    
+    return proximity.depth_first_search(
+        self,
         visit=lambda n: node == n,
         traversable=traversable
-        )
+    )
+
 
 </t>
 <t tx="karstenw.20230319195736.60">def _is_complete(self) : return self.density == 1.0    
@@ -1259,8 +1272,11 @@ def create(iterations=1000, distance=1.0, layout=LAYOUT_SPRING, depth=True):
 eigenvalue = property(_get_eigenvalue)
 weight = eigenvalue
 
+
 </t>
-<t tx="karstenw.20230319195736.9">def _x(self): return self.vx * self.graph.d
+<t tx="karstenw.20230319195736.9">def _x(self):
+    return self.vx * self.graph.d
+
 </t>
 <t tx="karstenw.20230319202717.1"></t>
 <t tx="karstenw.20230319202717.2"># py3 stuff
