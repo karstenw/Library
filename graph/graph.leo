@@ -120,12 +120,12 @@
 </v>
 <v t="karstenw.20230329160929.12"><vh>partition</vh></v>
 </v>
-<v t="karstenw.20230329161629.1"><vh>@clean event.py</vh>
+<v t="karstenw.20230329161629.1" a="E"><vh>@clean event.py</vh>
 <v t="karstenw.20230329161638.1"><vh>Declarations</vh></v>
-<v t="karstenw.20230329161638.2"><vh>class Point</vh>
+<v t="karstenw.20230329161638.2" a="E"><vh>class Point</vh>
 <v t="karstenw.20230329161638.3"><vh>__init__</vh></v>
 </v>
-<v t="karstenw.20230329161815.1" a="E"><vh>+ GRAPH HOVER/CLICK/DRAG EVENTS +</vh>
+<v t="karstenw.20230329161815.1"><vh>+ GRAPH HOVER/CLICK/DRAG EVENTS +</vh>
 <v t="karstenw.20230329161638.4"><vh>class events</vh>
 <v t="karstenw.20230329161638.5"><vh>__init__</vh></v>
 <v t="karstenw.20230329161638.6"><vh>copy</vh></v>
@@ -137,7 +137,7 @@
 <v t="karstenw.20230329161638.12"><vh>click</vh></v>
 </v>
 </v>
-<v t="karstenw.20230329161904.1" a="E"><vh>+ POPUP +</vh>
+<v t="karstenw.20230329161904.1"><vh>+ POPUP +</vh>
 <v t="karstenw.20230329161638.13"><vh>class popup</vh>
 <v t="karstenw.20230329161638.14"><vh>__init__</vh></v>
 <v t="karstenw.20230329161638.15"><vh>textpath</vh></v>
@@ -146,13 +146,13 @@
 </v>
 </v>
 </v>
-<v t="karstenw.20230329162253.1"><vh>@clean layout.py</vh>
+<v t="karstenw.20230329162253.1" a="E"><vh>@clean layout.py</vh>
 <v t="karstenw.20230329162306.1"><vh>Declarations</vh></v>
 <v t="karstenw.20230329162306.2"><vh>class Point</vh>
 <v t="karstenw.20230329162306.3"><vh>__init__</vh></v>
 </v>
 <v t="karstenw.20230329162353.1" a="E"><vh>+ GRAPH LAYOUT +</vh>
-<v t="karstenw.20230329162306.4"><vh>class layout</vh>
+<v t="karstenw.20230329162306.4" a="E"><vh>class layout</vh>
 <v t="karstenw.20230329162306.5"><vh>__init__</vh></v>
 <v t="karstenw.20230329162306.6"><vh>copy</vh></v>
 <v t="karstenw.20230329162306.7"><vh>prepare</vh></v>
@@ -165,7 +165,7 @@
 </v>
 </v>
 <v t="karstenw.20230329162416.1" a="E"><vh>+ GRAPH CIRCLE LAYOUT +</vh>
-<v t="karstenw.20230329162306.14"><vh>class circle_layout</vh>
+<v t="karstenw.20230329162306.14" a="E"><vh>class circle_layout</vh>
 <v t="karstenw.20230329162306.15"><vh>__init__</vh></v>
 <v t="karstenw.20230329162306.16"><vh>_get_orbits</vh></v>
 <v t="karstenw.20230329162306.17"><vh>_set_orbits</vh></v>
@@ -175,7 +175,7 @@
 </v>
 </v>
 <v t="karstenw.20230329162442.1" a="E"><vh>+ GRAPH SPRING LAYOUT +</vh>
-<v t="karstenw.20230329162306.21"><vh>class spring_layout</vh>
+<v t="karstenw.20230329162306.21" a="E"><vh>class spring_layout</vh>
 <v t="karstenw.20230329162306.22"><vh>__init__</vh></v>
 <v t="karstenw.20230329162306.23"><vh>tweak</vh></v>
 <v t="karstenw.20230329162306.24"><vh>_get_force</vh></v>
@@ -190,9 +190,9 @@
 </v>
 </v>
 </v>
-<v t="karstenw.20230329163013.1"><vh>@clean proximity.py</vh>
+<v t="karstenw.20230329163013.1" a="E"><vh>@clean proximity.py</vh>
 <v t="karstenw.20230329163023.1"><vh>Declarations</vh></v>
-<v t="karstenw.20230329163023.2"><vh>class priorityqueue</vh>
+<v t="karstenw.20230329163023.2" a="E"><vh>class priorityqueue</vh>
 <v t="karstenw.20230329163023.3"><vh>push</vh></v>
 <v t="karstenw.20230329163023.4"><vh>pop</vh></v>
 </v>
@@ -251,7 +251,7 @@
 <v t="karstenw.20230507120755.2"><vh>draw</vh></v>
 <v t="karstenw.20250827122705.1"><vh>script</vh></v>
 </v>
-<v t="karstenw.20230507120747.1" a="E"><vh>@clean graph_example4.py</vh>
+<v t="karstenw.20230507120747.1"><vh>@clean graph_example4.py</vh>
 <v t="karstenw.20230507120753.1"><vh>Declarations</vh></v>
 <v t="karstenw.20230518121333.1"><vh>+ REPLACEMENTS</vh>
 <v t="karstenw.20230507120753.2"><vh>holonym</vh></v>
@@ -272,7 +272,7 @@
 <v t="karstenw.20230507120753.16"><vh>load</vh></v>
 <v t="karstenw.20230507120753.17"><vh>draw</vh></v>
 </v>
-<v t="karstenw.20230507120753.18" a="E"><vh>class senses</vh>
+<v t="karstenw.20230507120753.18"><vh>class senses</vh>
 <v t="karstenw.20230507120753.19"><vh>__init__</vh></v>
 <v t="karstenw.20230507120753.20"><vh>count</vh></v>
 <v t="karstenw.20230507120753.21"><vh>draw</vh></v>
@@ -2162,8 +2162,10 @@ class priorityqueue(dict):
 <t tx="karstenw.20230329163023.4">def pop(self):
     p, w = None, float(INFINITY)
     for e in self:
-        if self[e] &lt;= w: p, w = e, self[e]
-    if p: del self[p]
+        if self[e] &lt;= w:
+            p, w = e, self[e]
+    if p:
+        del self[p]
     return p
 
 </t>
@@ -3505,27 +3507,12 @@ g.load(query)
 size(700, 550)
 speed(30) 
 </t>
-<t tx="karstenw.20230518183122.1"># py3 stuff
-py3 = False
-try:
-    unicode('')
-    punicode = unicode
-    pstr = str
-    punichr = unichr
-except NameError:
-    punicode = str
-    pstr = bytes
-    py3 = True
-    punichr = chr
-    long = int
+<t tx="karstenw.20230518183122.1"># py3 stuff not needed here
 
 
 def sortlist(thelist, thecompare):
-    if py3:
-        sortkeyfunction = cmp_to_key( thecompare )
-        thelist.sort( key=sortkeyfunction )
-    else:
-        thelist.sort( thecompare )
+    sortkeyfunction = cmp_to_key( thecompare )
+    thelist.sort( key=sortkeyfunction )
 
 
 ###
