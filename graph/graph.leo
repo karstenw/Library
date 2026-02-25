@@ -10,7 +10,7 @@
 <find_panel_settings/>
 <vnodes>
 <v t="karstenw.20230319195648.2" a="E"><vh>graph</vh>
-<v t="karstenw.20230319195720.1" a="E"><vh>@clean __init__.py</vh>
+<v t="karstenw.20230319195720.1"><vh>@clean __init__.py</vh>
 <v t="karstenw.20230319195736.1"><vh>Declarations</vh></v>
 <v t="karstenw.20230319202717.1"><vh>py3</vh>
 <v t="karstenw.20230319202717.2"><vh>py3 stuff</vh></v>
@@ -146,13 +146,13 @@
 </v>
 </v>
 </v>
-<v t="karstenw.20230329162253.1"><vh>@clean layout.py</vh>
+<v t="karstenw.20230329162253.1" a="E"><vh>@clean layout.py</vh>
 <v t="karstenw.20230329162306.1"><vh>Declarations</vh></v>
 <v t="karstenw.20230329162306.2"><vh>class Point</vh>
 <v t="karstenw.20230329162306.3"><vh>__init__</vh></v>
 </v>
-<v t="karstenw.20230329162353.1" a="E"><vh>+ GRAPH LAYOUT +</vh>
-<v t="karstenw.20230329162306.4" a="E"><vh>class layout</vh>
+<v t="karstenw.20230329162353.1"><vh>+ GRAPH LAYOUT +</vh>
+<v t="karstenw.20230329162306.4"><vh>class layout</vh>
 <v t="karstenw.20230329162306.5"><vh>__init__</vh></v>
 <v t="karstenw.20230329162306.6"><vh>copy</vh></v>
 <v t="karstenw.20230329162306.7"><vh>prepare</vh></v>
@@ -164,8 +164,8 @@
 <v t="karstenw.20230329162306.13"><vh>refresh</vh></v>
 </v>
 </v>
-<v t="karstenw.20230329162416.1" a="E"><vh>+ GRAPH CIRCLE LAYOUT +</vh>
-<v t="karstenw.20230329162306.14" a="E"><vh>class circle_layout</vh>
+<v t="karstenw.20230329162416.1"><vh>+ GRAPH CIRCLE LAYOUT +</vh>
+<v t="karstenw.20230329162306.14"><vh>class circle_layout</vh>
 <v t="karstenw.20230329162306.15"><vh>__init__</vh></v>
 <v t="karstenw.20230329162306.16"><vh>_get_orbits</vh></v>
 <v t="karstenw.20230329162306.17"><vh>_set_orbits</vh></v>
@@ -205,7 +205,7 @@
 </v>
 <v t="karstenw.20230329163234.1"><vh>@clean style.py</vh>
 <v t="karstenw.20230329163243.1"><vh>Declarations</vh></v>
-<v t="karstenw.20230507112117.1"><vh>newHeadline</vh></v>
+<v t="karstenw.20230507112117.1"><vh>Py3 &amp; makeunicode</vh></v>
 <v t="karstenw.20230329163243.2"><vh>class styles</vh>
 <v t="karstenw.20230329163243.3"><vh>__init__</vh></v>
 <v t="karstenw.20230329163243.4"><vh>apply</vh></v>
@@ -1888,10 +1888,14 @@ from math import pi, sin, cos, sqrt
     self.a = pi/2 # starting angle
 
 </t>
-<t tx="karstenw.20230329162306.16">def _get_orbits(self): return self.c
+<t tx="karstenw.20230329162306.16">def _get_orbits(self):
+    return self.c
+
 </t>
-<t tx="karstenw.20230329162306.17">def _set_orbits(self, v): self.c = v
+<t tx="karstenw.20230329162306.17">def _set_orbits(self, v):
+    self.c = v
 orbits = property(_get_orbits, _set_orbits)
+
 
 </t>
 <t tx="karstenw.20230329162306.18">def copy(self, graph):
@@ -1903,7 +1907,8 @@ orbits = property(_get_orbits, _set_orbits)
 </t>
 <t tx="karstenw.20230329162306.19">def iterate(self):
     
-    if len(self.graph.nodes) == 1: return
+    if len(self.graph.nodes) == 1:
+        return
     
     # Nodes are sorted by betweenness centrality.
     # Node with a high centrality are on the inner circles.
@@ -2428,9 +2433,9 @@ def eigenvector_centrality(graph, normalized=True, reversed=True, rating={},
     warn("node weight is 0 because eigenvector_centrality() did not converge.", Warning)
     return dict([(n, 0) for n in G])
 </t>
-<t tx="karstenw.20230329163234.1">@others
-@language python
+<t tx="karstenw.20230329163234.1">@language python
 @tabwidth -4
+@others
 </t>
 <t tx="karstenw.20230329163243.1">
 

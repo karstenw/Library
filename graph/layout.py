@@ -99,9 +99,13 @@ class circle_layout(layout):
         self.c = 2    # number of circles
         self.a = pi/2 # starting angle
 
-    def _get_orbits(self): return self.c
-    def _set_orbits(self, v): self.c = v
+    def _get_orbits(self):
+        return self.c
+
+    def _set_orbits(self, v):
+        self.c = v
     orbits = property(_get_orbits, _set_orbits)
+
 
     def copy(self, graph):
         
@@ -111,7 +115,8 @@ class circle_layout(layout):
 
     def iterate(self):
         
-        if len(self.graph.nodes) == 1: return
+        if len(self.graph.nodes) == 1:
+            return
         
         # Nodes are sorted by betweenness centrality.
         # Node with a high centrality are on the inner circles.
