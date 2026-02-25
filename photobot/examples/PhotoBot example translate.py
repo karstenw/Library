@@ -33,17 +33,17 @@ for t in rawfiles:
         tiles.append( path )
 
 nextImagePath = choice(tiles)
-print "path", repr(nextImagePath)
+print( "path", repr(nextImagePath) )
 canvas.layer( nextImagePath )
 w, h = canvas.layers[1].bounds()
-print "w,h", w,h
+print( "w,h", w,h )
 destWidth = WIDTH / float(repeats)
-print "destWidth", destWidth
+print( "destWidth", destWidth )
 sc = 1 / (w / destWidth)
-print "scale", sc
+print( "scale", sc )
 canvas.layers[1].scale(sc, sc)
 canvas.draw(0,0)
-print "layersSize", layerTop(canvas)
+print( "layersSize", layerTop(canvas) )
 for i in range(repeats):
     canvas.layers[1].duplicate()
 

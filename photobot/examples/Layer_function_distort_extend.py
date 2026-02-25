@@ -7,7 +7,7 @@ import pprint
 pp = pprint.pprint
 
 import pdb
-kwdbg = 0
+kwdbg = 1
 
 W, H = 542, 1050
 fullwidth = int(W-20)
@@ -28,30 +28,18 @@ else:
     WIDTH, HEIGHT = W, H
     import photobot as pb
 
-import libgradient
 import imagewells
-loadImageWell = imagewells.loadImageWell
-
-
 
 if kwdbg:
     # make random choices repeatable for debugging
     rnd.seed(8)
 
-# imagewell = imagewells.loadImageWell(resultfile="imagewell-files")
-imagewell = loadImageWell(   bgsize=(WIDTH, HEIGHT),
-                             minsize=(256,256),
-                             pathonly=True,
-                             # additionals=additionals,
-                             imagewellfilename="imagewell.txt",
-                             tabfilename="imagewell.tab",
-                             ignoreFolderNames=('+offline',))
-
-
-
+imagewell = imagewells.loadImageWell(tabfilename=True)
 tiles = imagewell['landscape']
 rnd.shuffle(tiles)
 
+
+import PIL
 
 # pick 2 images
 img1path = tiles.pop()
@@ -61,13 +49,13 @@ img2path = tiles.pop()
 c = pb.canvas( WIDTH, HEIGHT)
 c.fill( (192, 192, 192) )
 
+        
 #
 # Image 1
 #
 
 #  create, scale and place the image
 x, y = 10, 10
-
 
 #
 # Normal Image 1
@@ -76,21 +64,29 @@ x, y = 10, 10
 h = 10
 x, y = 10 , h + 20
 
-top, w, h = pb.placeImage(c, img1path, x, y, fullwidth, "Image 1", 0)
+top, w, h = pb.placeImage(c, img2path, x, y, fullwidth, "Image 1", 0)
 
 pb.label(c, "Normal Image 1", x, y)
 
 
 #
-# Equalize Image 1
+# distort Image 1
 #
 
 x, y = 10 , h + 20 + y
 
-top, w4, h4 = pb.placeImage(c, img1path, x, y, fullwidth, "Image 2", 1)
-c.top.equalize()
-pb.label(c, "Equalized Image 1", x, y)
+top, w4, h4 = pb.placeImage(c, img2path, x, y, fullwidth, "Image 2", 1)
+
+class Example:
+    def getdata(self):
+        method = PIL.Image.Transform.EXTENT
+        data = (-50, -50, 650, 650)
+        return method, data
+
+# x1=0,y1=0, x2=w,y2=0, x3=w,y3=h, x4=0,y4=h
+c.top.distort( method=Example() )
+pb.label(c, "Distorted Image 1", x, y)
 
 # draw the result
-c.draw(name="Layer_function_equalize")
+c.draw(name="Layer_function_distort")
 

@@ -16,7 +16,7 @@ print( "import perception internal: %.4fs" % (perception.stopimport - perception
 
 # concepts, edges, loadedConcepts = perception.query( "cool" )
 
-rules = perception.query( "cool", maxedges=20 )
+rules = perception.query( "cool", maxedges=2000 )
 
 s4 = time.time()
 print( "query cool: %.4fs" % (s4 - s3) )

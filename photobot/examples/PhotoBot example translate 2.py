@@ -18,18 +18,18 @@ canvas = photobot.canvas(WIDTH, HEIGHT)
 tiles = list(imagefiles( "/Library/Desktop Pictures", True ))
 
 nextImagePath = choice(tiles)
-print "path", repr(nextImagePath)
+print( "path", repr(nextImagePath) )
 canvas.layer( nextImagePath )
 w, h = canvas.layers[1].bounds()
 canvas.layers[1].scale(0.33,0.33)
-print "w,h", w,h
+print( "w,h", w,h )
 destWidth = WIDTH / float(repeats)
-print "destWidth", destWidth
+print( "destWidth", destWidth )
 sc = 1 / (w / destWidth)
-print "scale", sc
+print( "scale", sc )
 # canvas.layers[1].scale(sc, sc)
 
-print "layersSize", canvas.top.img.size
+print( "layersSize", canvas.top.img.size )
 for i in range(repeats):
     # canvas.layers[1].duplicate()
     canvas.layer( nextImagePath )

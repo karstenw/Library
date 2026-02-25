@@ -27,10 +27,10 @@ class styles(dict):
         self._ctx = _ctx
         self.guide = styleguide(grob)
         self.create("default")
-    
+
     def apply(self):
         self.guide.apply()
-    
+
     def create(self, stylename, **kwargs):
         """ Creates a new style which inherits from the default style, or any
         other style which name is supplied to the optional template parameter.
@@ -44,10 +44,10 @@ class styles(dict):
             if attr in s.__dict__: # .has_key(attr):
                 s.__dict__[attr] = kwargs[attr]
         return s
-    
+
     def append(self, style):
         self[style.name] = style
-    
+
     def __getattr__(self, a):
         """ Keys in the dictionaries are accessible as attributes."""
 
@@ -90,17 +90,17 @@ class styleguide(dict):
     def __init__(self, grob):
         self.grob = grob
         self.order = []
-    
+
     def append(self, stylename, function):
         """ The name of a style and a function that takes a grob.
         It returns True when the style should be applied to the given grob.
         """
         self[stylename] = function
-    
+
     def clear(self):
         self.order = []
         dict.__init__(self)
-    
+
     def apply(self):
         """ Check the rules for each grob and apply the style.
         We expect a grob to have an all() method that yields all grobs to check.
@@ -140,19 +140,19 @@ class spacing(list):
     def _get_t(self): return self[1]
     def _get_r(self): return self[2]
     def _get_b(self): return self[3]
-    
+
     def _set_l(self, v): self[0] = v
     def _set_t(self, v): self[1] = v
     def _set_r(self, v): self[2] = v
     def _set_b(self, v): self[3] = v
-    
+
     left   = l = property(_get_l, _set_l)
     top    = t = property(_get_t, _set_t)
     right  = r = property(_get_r, _set_r)
     bottom = b = property(_get_b, _set_b)
 
-#### BACKGROUND ###############################################################
 
+#### BACKGROUND ###############################################################
 class background():
     
     def __init__(self, clr,
@@ -216,8 +216,8 @@ class background():
         pass
     draw = None
 
-#### STYLE ####################################################################
 
+#### STYLE ####################################################################
 class style(object):
     
     def __init__(self, name, _ctx, **kwargs):
@@ -272,7 +272,7 @@ class style(object):
         if not isinstance(v, background):
             b = background(v)
         self._background = b
-    
+
     background = property(_get_background, _set_background)
 
     def _get_strokewidth(self): return self._strokewidth
@@ -280,7 +280,7 @@ class style(object):
         if not isinstance(v, (list, tuple)): 
             v = (v, v, v, v)
         self._strokewidth = spacing(v)
-    
+
     strokewidth = property(_get_strokewidth, _set_strokewidth)
 
     def _get_margin(self): return self._margin
@@ -288,7 +288,7 @@ class style(object):
         if not isinstance(v, (list, tuple)): 
             v = (v, v, v, v)
         self._margin = spacing(v)
-    
+
     margin = property(_get_margin, _set_margin)
 
     def _get_padding(self): return self._padding
@@ -296,7 +296,7 @@ class style(object):
         if not isinstance(v, (list, tuple)): 
             v = (v, v, v, v)
         self._padding = spacing(v)
-    
+
     padding = property(_get_padding, _set_padding)
 
     def _get_align(self): return (self.horizontal, self.vertical)

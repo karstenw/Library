@@ -1,15 +1,37 @@
 # coding: utf-8
 
 ### PERCEPTION #################################################################
-# Analysis tools for working with data from http://nodebox.net/perception in NodeBox.
-# The library is roughly organised in 5 parts that add up to the final solver object:
-# 1) query()   : returns lists of rules form the online database, using a caching mechanism.
-# 2) cluster() : returns a graph objects based on a cluster of rules around a central concept.
-# 3) range()   : find sibling concepts (e.g. fonts, movies, colors, trees) using a taxonomy graph.
-# 4) index     : object for building and searching cached indices of shortest paths.
-# 5) cost      : object that simplifies the creation of path search heuristics.
-# => solver    : object for inferring knowledge from the database, using clusters,
-#                indices and ranges.
+#
+# Analysis tools for working with data from http://nodebox.net/perception
+# in NodeBox.
+# 
+# The library is roughly organised in 5 parts that add up to the final
+# solver object:
+# 
+# 1) query()
+#           returns lists of rules from the online database,
+#           using a caching mechanism.
+# 
+# 2) cluster()
+#           returns a graph objects based on a cluster of rules
+#           around a central concept.
+# 
+# 3) conceptrange()
+#           find sibling concepts (e.g. fonts, movies, colors,
+#           trees) using a taxonomy graph.
+# 
+# 4) index
+#           object for building and searching cached indices
+#           of shortest paths.
+#
+# 5) cost
+#           object that simplifies the creation of path
+#           search heuristics.
+#
+# => solver
+#           object for inferring knowledge from the database,
+#           using clusters, indices and ranges.
+
 
 ### CREDITS ####################################################################
 
@@ -26,6 +48,7 @@ __license__   = "GPL"
 import os
 import time
 
+import functools
 
 import hashlib
 import glob
@@ -42,19 +65,22 @@ pp = pprint.pprint
 from random import random
 import requests
 import pdb
+kwdbg = True
+kwlog= True
 
 startimport = time.time()
 
 import linguistics
 import conceptnetreader
 
+# used in search_match_parse()
 import pattern
 import pattern.web
 import pattern.text
 import pattern.text.en
 en = pattern.text.en
 
-import textblob
+# import textblob
 
 import graph
 from graph.cluster import sorted, unique
@@ -67,44 +93,18 @@ if 1:
 typ = type
 
 
-# py3 stuff
-py3 = False
-try:
-    unicode('')
-    punicode = unicode
-    pstr = str
-    punichr = unichr
-except NameError:
-    punicode = str
-    pstr = bytes
-    py3 = True
-    punichr = chr
-    long = int
 
-
-def cmp_to_key(mycmp):
-    'Convert a cmp= function into a key= function'
-    class K:
-        def __init__(self, obj, *args):
-            self.obj = obj
-        def __lt__(self, other):
-            return mycmp(self.obj, other.obj) < 0
-        def __gt__(self, other):
-            return mycmp(self.obj, other.obj) > 0
-        def __eq__(self, other):
-            return mycmp(self.obj, other.obj) == 0
-        def __le__(self, other):
-            return mycmp(self.obj, other.obj) <= 0
-        def __ge__(self, other):
-            return mycmp(self.obj, other.obj) >= 0
-        def __ne__(self, other):
-            return mycmp(self.obj, other.obj) != 0
-    return K
+# py3 stuff - kill py2
+punicode = str
+pstr = bytes
+py3 = True
+punichr = chr
+long = int
 
 
 def sortlist(thelist, thecompare):
     if py3:
-        sortkeyfunction = cmp_to_key( thecompare )
+        sortkeyfunction = functools.cmp_to_key( thecompare )
         thelist.sort( key=sortkeyfunction )
     else:
         thelist.sort( thecompare )
@@ -119,6 +119,7 @@ def nodecompare( a, b):
 
 
 def makeunicode(s, srcencoding="utf-8", normalizer="NFC"):
+    # Needed to be redone here for type == typ
     try:
         if typ(s) not in (punicode, pstr):
             s = str( s )
@@ -138,23 +139,11 @@ def hashFromString( s ):
     h = hashlib.sha1()
     h.update( s )
     return h.hexdigest()
-
-
-# "_range" is the name of a singleton class in the library.
-# "range" is the name of the class instance.
-def range_(start, stop=None, step=1):
-    if stop is None: 
-        stop, start = start, 0
-    cur = start
-    while cur < stop:
-        yield cur
-        cur += step
-
-
 #### BASIC PROPERTIES ##########################################################
 # Those we think can easily be translated visually.
 
 basic_properties = [
+    # except the last one, these are pairwise
     "angular",  "round",      "large",    "small",
     "long",     "short",      "bright",   "dark",
     "calm",     "wild",       "chaotic",  "structured",
@@ -166,7 +155,8 @@ basic_properties = [
     "heavy",    "light",      "loud",     "quiet",
     "natural",  "artificial", "old",      "new",
     "elegant",  "raw",        "strong",   "weak",
-    "tangible", "abstract",   "thick",    "thin", "repetitive"
+    "tangible", "abstract",   "thick",    "thin",
+    "repetitive"
 ]
 
 #### CACHE #####################################################################
@@ -262,10 +252,11 @@ class Rule:
         #self.date     = date
 
     def __repr__(self):
-        s = self.concept1 + " " + self.relation + " " +self.concept2
+        s = "%s(%s)  %s  %s(%s)" % (self.concept1,self.lang1,self.relation,self.concept2,self.lang2)
         if self.context != None:
-            s += " (" + self.context + ")"
+            s += "  (" + self.context + ")"
         return s
+
 
 class Rules(list):
 
@@ -281,7 +272,6 @@ class Rules(list):
             rank[rule.concept1] += 1
             rank[rule.concept2] += 1
         return rank
-        
     concepts = property(_concepts)
 
     def disambiguate(self, root=None):
@@ -330,7 +320,8 @@ def query_cnr(concept, relation=None, context=None, depth=1, maxedges=0, wait=2,
     if concept == None:
         return rules
 
-    # pdb.set_trace()
+    #if kwdbg:
+    #    pdb.set_trace()
 
     concepts, edges, loadedConcepts = conceptnetreader.query_concept( concept,
                     context=context, maxedges=maxedges, lang=lang, weight=0.5 )
@@ -351,7 +342,6 @@ def query_cnr(concept, relation=None, context=None, depth=1, maxedges=0, wait=2,
         rules.append( rule )
         
     return rules
-
 query = query_cnr
 
 #### CONCEPT CLUSTER ###########################################################
@@ -697,12 +687,14 @@ def taxonomy(concept, context, author=None, depth=4):
     
 hierarchy = taxonomy
 
-class _range(dict):
+# "ConcepRange" is the name of a singleton class in the library.
+# "conceptrange" is the name of the class instance.
+class ConcepRange(dict):
     
     def __init__(self):
         """ Creates a taxonomy from a given concept and filters hyponyms from it.
-        For example: range.typeface -> Times, Helvetica, Arial, Georgio, Verdana, ...
-        For example: range.movie -> Star Wars, Conan The Barbarian, ...
+        For example: conceptrange.typeface -> Times, Helvetica, Arial, Georgio, Verdana, ...
+        For example: conceptrange.movie -> Star Wars, Conan The Barbarian, ...
         The dictionary itself contains settings for how graph.specific() is called.
         """
         self.rules = {
@@ -734,7 +726,7 @@ class _range(dict):
     def __getattr__(self, a):
         """ Each attribute behaves as a list of hyponym nodes.
         Attributes are expected to be singular nouns.
-        Some of these are fine-tuned in the range, others are generic.
+        Some of these are fine-tuned in the conceptrange, others are generic.
         """
         if a in self.rules:
             concept, context, fringe, proper = self.rules[a]
@@ -742,8 +734,7 @@ class _range(dict):
         elif a == "properties":
             g = cluster(None, context="properties", depth=None, wait=30)
             return sorted(g.keys())
-        elif a == "basic properties" \
-          or a == "basic_properties":
+        elif a in ( "basic properties", "basic_properties" ):
               return basic_properties
         else:
             a = a.replace("_", " ")
@@ -752,7 +743,7 @@ class _range(dict):
     def __call__(self, a):
         return self.__getattr__(a)
 
-range = _range()
+conceptrange = ConcepRange()
 
 #### INDEX #####################################################################
 # A cached index of shortest paths between concepts.
@@ -849,7 +840,7 @@ index = _index()
 def _build_properties_index(): 
     index.build(
         "properties",
-        range.properties,
+        conceptrange.properties,
         cost({"is-property-of" : -0.25,
               "is-same-as"     : -0.5,
               "is-opposite-of" : 10})
@@ -928,7 +919,7 @@ class _solver:
            query (Dijkstra).
         4) A list of winning concepts is returned (closest first).
         
-        For example: painful <-> range.emotion = shame, envy, pride, anger, jealousy, sadness, fear, anxiety, ...
+        For example: painful <-> conceptrange.emotion = shame, envy, pride, anger, jealousy, sadness, fear, anxiety, ...
         
         The word [properties] can be replaced with another type of concept,
         as long as it is a graph method the solver can call,
@@ -948,7 +939,7 @@ class _solver:
             # Find paths to the root for each [property]. 
             # The length of the paths at the start of the list is important.
             if concept == root:
-                S = [[] for i in range_(100)]
+                S = [[] for i in range(100)]
             else:
                 S = self._retrieve(concept, depth=3, cached=True)
                 S = [index.shortest_path(n, root) for n in S]
@@ -1022,7 +1013,7 @@ class _analogy:
         Returns the list of concepts sorted by the relevance score sum.
         
         For example:
-        sword <=> range.animal = hedgehog, scorpion, bee, cat, cheetah, cougar, ...
+        sword <=> conceptrange.animal = hedgehog, scorpion, bee, cat, cheetah, cougar, ...
         
         """
         
@@ -1067,7 +1058,13 @@ analogy = _analogy()
 
 #### SEARCH-MATCH-PARSE ########################################################
 
-def search_match_parse(query, pattern_, parse=lambda x: x, service="google", cached=True, n=2,):
+def search_match_parse(
+        query,
+        pattern_,
+        parse=lambda x: x,
+        service="google",
+        cached=True, n=2,):
+
     """ Parses words from search engine queries that match a given syntactic pattern.
     query   : a Google/Yahoo query. Google queries can include * wildcards. 
     pattern : an en.sentence.find() pattern, e.g. as big as * NN
@@ -1097,7 +1094,8 @@ def search_match_parse(query, pattern_, parse=lambda x: x, service="google", cac
         engine = Bing(license=None, language="en")
 
     collect = []
-    for i in range_(n):
+    for i in range(n):
+        
         if service == "google":
             # search = web.google.search(query, start=i*4, cached=cached)
             for result in engine.search(query, start=i, count=10): #, type=SEARCH, cached=True):
@@ -1119,12 +1117,21 @@ def search_match_parse(query, pattern_, parse=lambda x: x, service="google", cac
                 raise request.error
             for result in request.value:
                 collect.append( result )
-
-    pdb.set_trace()
+    
+    if kwdbg:
+        pdb.set_trace()
     
     for result in collect:
         if result.text:
-            # result.description = result.description.replace(",",", ").replace("  "," ")
+            #
+            # TODO
+            #
+            
+            if result.description:
+                result.description = result.description.replace(",",", ").replace("  "," ")
+            # sntc = en.Sentence( result.description.lower() )
+            
+            
             #match = en.sentence.find(result.description.lower(), pattern_)
             #if len(match) > 0 and len(match[0]) > 0:
             #    x = parse(match[0])
@@ -1135,12 +1142,14 @@ def search_match_parse(query, pattern_, parse=lambda x: x, service="google", cac
                 matches.append(result.text)
     return matches
 
-def count(list):
+def count( alist ):
     """ Returns a dictionary with the list items as keys and their count as values.
     """
     d = {}
-    for v in list: d[v]  = 0
-    for v in list: d[v] += 1
+    for v in alist:
+        d[v]  = 0
+    for v in alist:
+        d[v] += 1
     return d
 
 def clean(word):
@@ -1314,8 +1323,8 @@ def suggest_comparisons(concept1, concept2, cached=True):
 
 #solver.index = "properties"
 #solver.method = "properties"
-#print solver.sort_by_relevance("dark", range("emotion"))
-#print solver.sort_by_relevance("bright", range("emotion"))
+#print solver.sort_by_relevance("dark", conceptrange("emotion"))
+#print solver.sort_by_relevance("bright", conceptrange("emotion"))
 
 # BETA+
 # - Implemented is-effect-of and has-effect rules.

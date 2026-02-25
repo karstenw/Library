@@ -248,8 +248,8 @@ class statistics(object):
         return sqrt(self.variance)
     stdev = property(_stdev)
 
-#### ROWS AND COLUMNS #########################################################
 
+#### ROWS AND COLUMNS #########################################################
 class rows(list, splitter):
     def row(self, i):
         return self[i]
@@ -339,8 +339,8 @@ class cells(list, splitter, statistics):
         for cell in self:
             cell.flow_vertical(recursive)
 
-#--- ROW ----------------------------------------------------------------------
 
+#--- ROW ----------------------------------------------------------------------
 class row(cells):
 
     def column(self, i):
@@ -374,8 +374,8 @@ class row(cells):
     relative_height = _height = property(_get_relative_height,
                                          _set_relative_height)
 
-#--- COLUMN -------------------------------------------------------------------
 
+#--- COLUMN -------------------------------------------------------------------
 class column(cells):
 
     def row(self, i):
@@ -408,8 +408,8 @@ class column(cells):
 
     relative_width = _width = property(_get_relative_width, _set_relative_width)
 
-#### GRID #####################################################################
 
+#### GRID #####################################################################
 class grid(list, splitter, statistics):
 
     def __init__(self, rows=1, columns=1,
@@ -990,8 +990,8 @@ class grid(list, splitter, statistics):
         if explicit:
             self.traverse(commit, rebuild)
 
-#------------------------------------------------------------------------------
 
+#------------------------------------------------------------------------------
 def create(rows=1, columns=1, width=None, height=None, parent=None, name=""):
     return grid(rows, columns, width, height, parent, name)
 

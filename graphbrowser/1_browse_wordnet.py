@@ -224,7 +224,9 @@ class WordNetBrowser(graphbrowser.GraphBrowser):
         try:
             s = self.graph.styles.default
         except Exception as err:
+            # pdb.set_trace()
             print("draw().style ERR:", err)
+            print(dir(self.graph))
         _ctx.reset()
         _ctx.nostroke()
         try:

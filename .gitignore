@@ -7,12 +7,14 @@ __pycache__
 */+private
 +latex
 +shoebot
++private
++news
+*/+movies
 */cache
 */doc
 */build
 */dist
 */classbrowser*
-
 
 beziereditor/*.svg
 beziereditor/+latex
@@ -56,6 +58,7 @@ perception/cache
 perception/index
 
 photobot/examples/Example collage 6.py
+photobot/examples/Example collage 7.py
 photobot/examples/exports/
 photobot/examples/imagewells/
 photobot/examples/landslide@coreimage
@@ -63,6 +66,11 @@ photobot/examples/transform2/*
 photobot/images/*
 photobot/photobot-standalone
 photobot/photobot.leo
+photobot/examples/mk.sh
+photobot/examples/runall-py2
+photobot/examples/runall-py3
+photobot/examples/testimage.jpg
+imagewells-config@photobotlib
 
 pixabay
 */APIKEY
@@ -73,3 +81,10 @@ svg/svg-example3.py
 svg/svg-example4-icons.py
 
 svg/+lib
+
+Imagewells
+
+
+en_classic
+linguistics/en_classic
+flowerewolf-classic

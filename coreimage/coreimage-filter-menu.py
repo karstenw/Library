@@ -1,3 +1,13 @@
+
+"""
+
+Interactive coreimage explorer
+
+peek at handleButton() to see which parameters are needed
+for a specific filter.
+
+"""
+
 size(800, 800)
 
 coreimage = ximport("__init__")
@@ -13,11 +23,11 @@ pp=pprint.pprint
 filters = [
     # "average", 
     "bloom", "bumpdistortion", "checkerboard", "circlesplash", "circularwrap",
-    "crystallize", "dotscreen", "edges", "holedistortion", "kaleidoscope", "levels",
-    "lighting", "linearbump", "lineoverlay", "motionblur", "noisereduction", "pagecurl",
-    "parallelogramtile", "perspectivetile", "pixelate", "shading", "starshine",
-    "stretch", "triangletile", "twirl", "zoomblur",
-    "boxblur", "discblur", "sharpen", "unsharpmask"
+    "crystallize", "dotscreen", "edges", "holedistortion", "kaleidoscope",
+    "levels", "lighting", "linearbump", "lineoverlay", "motionblur",
+    "noisereduction", "pagecurl", "parallelogramtile", "perspectivetile",
+    "pixelate", "shading", "starshine", "stretch", "triangletile", "twirl",
+    "zoomblur", "boxblur", "discblur", "sharpen", "unsharpmask"
      ]
 
 filternames = filters

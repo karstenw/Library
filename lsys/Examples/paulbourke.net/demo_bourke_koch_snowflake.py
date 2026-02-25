@@ -1,6 +1,6 @@
 # From  the website:
 #
-# see http://paulbourke.net/fractals/vonkoch_snowflake/
+# see https://paulbourke.net/fractals/lsys/
 
 try: 
     lsys = ximport("lsys")

@@ -1,3 +1,3 @@
 col = ximport("colors")
 
-col.colorwheel(400, 400, 400, 1, 1, 0)
+col.colorwheel(500, 500, 480, 1, 1, 0)

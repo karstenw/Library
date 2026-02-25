@@ -10,7 +10,7 @@
 <find_panel_settings/>
 <vnodes>
 <v t="karstenw.20170725105442.2" a="E"><vh>Twyg</vh>
-<v t="karstenw.20170725105509.1"><vh>@clean __init__.py</vh>
+<v t="karstenw.20170725105509.1" a="E"><vh>@clean __init__.py</vh>
 <v t="karstenw.20170725105526.1"><vh>Declarations</vh></v>
 <v t="karstenw.20170725105526.2"><vh>_fullname</vh></v>
 <v t="karstenw.20170725105526.3"><vh>_init</vh></v>
@@ -151,7 +151,7 @@
 </v>
 <v t="karstenw.20170725110903.19"><vh>colorizer_by_name</vh></v>
 </v>
-<v t="karstenw.20170725110631.1"><vh>@clean common.py</vh>
+<v t="karstenw.20170725110631.1" a="E"><vh>@clean common.py</vh>
 <v t="karstenw.20170725110905.1"><vh>Declarations</vh></v>
 <v t="karstenw.20170725110905.2"><vh>init</vh></v>
 <v t="karstenw.20170725110905.3"><vh>validate_margins</vh></v>
@@ -270,7 +270,7 @@
 </v>
 <v t="karstenw.20170725110911.12"><vh>conndrawer_by_name</vh></v>
 </v>
-<v t="karstenw.20170725110703.1"><vh>@clean css3colors.py</vh>
+<v t="karstenw.20170725110703.1" a="E"><vh>@clean css3colors.py</vh>
 <v t="karstenw.20170725110914.1"><vh>Declarations</vh></v>
 <v t="karstenw.20170725110914.2"><vh>_parse_hex</vh></v>
 <v t="karstenw.20170725110914.3"><vh>_conv_rgb</vh></v>
@@ -477,7 +477,7 @@
 </t>
 <t tx="karstenw.20170725105526.1">__version__ = '0.1dev'
 
-import os, sys
+import os, sys, pdb
 
 #from twyg.cairowrapper import context as ctx
 from twyg.common import calculate_margins, loadjson
@@ -495,14 +495,16 @@ import twyg.config
 import twyg.connection
 import twyg.node
 
+pdb.set_trace()
+
 # Detect nodebox
 try:
-    #print "_fullname(_ctx)", repr(_fullname(_ctx))
+    #print( "_fullname(_ctx)", repr(_fullname(_ctx)) )
     #print
     #nodebox = _fullname(_ctx) == 'nodebox.graphics.Context'
     nodebox = 'nodebox.graphics.Context'
 except NameError:
-    print "NO NODEBOX!"
+    print( "NO NODEBOX!" )
     nodebox = False
 
 
@@ -515,6 +517,7 @@ if nodebox:
     twyg.common.TWYG_HOME = os.path.dirname(os.path.abspath(
         os.path.join(inspect.getfile(inspect.currentframe()), '..'))
     )
+    print("twyg.common.TWYG_HOME:", twyg.common.TWYG_HOME)
 
 else:
     if 'TWYG_HOME' in os.environ:
@@ -601,13 +604,14 @@ _initialized = False
     with the correct backend (PyCairo or NodeBox1).
     """
     global _initialized
-    if _initialized:
+    if 0: #_initialized:
         return
 
-    if nodebox:
-        global _ctx
-    else:
-        from twyg.cairowrapper import context as _ctx
+    #if nodebox:
+    #    global _ctx  #- global makes it writeable?
+    #    # pass
+    #else:
+    #    from twyg.cairowrapper import context as _ctx
 
     twyg.common.init(nodebox=nodebox, ctx=_ctx)
 
@@ -654,7 +658,7 @@ _initialized = False
     level_dict = c if _has_levels(c) else {DEFAULT_LEVEL: c}
     drawers = []
 
-    for levelname, conf in level_dict.iteritems():
+    for levelname, conf in level_dict.items():
         style = _get_style(section + '.' + levelname, conf)
         level = createlevel(levelname, conf)
         drawer_class = factory_func(style)
@@ -721,7 +725,7 @@ _initialized = False
     # Center tree
     tree.shiftnodes(padleft, padtop)
 
-    _ctx.size(width, height)
+    _ctx.size( int(width), int(height) )
     _ctx.background(tree.background_color())
 
     tree.draw()
@@ -827,7 +831,7 @@ import cairo, colorsys, math
     elif n == 4:
         r, g, b, a = args
     else:
-        raise ValueError, "Invalid color value: '%s'" % args
+        raise ValueError( "Invalid color value: '%s'" % args )
 
     r = min(max(0.0, r), 1.0)
     g = min(max(0.0, g), 1.0)
@@ -1021,7 +1025,7 @@ def init():
         self.a = a
         self._update_rgb()
     else:
-        raise ValueError, 'Invalid color mode: ' + mode
+        raise ValueError( 'Invalid color mode: ' + mode )
 
 </t>
 <t tx="karstenw.20170725110856.30">def autoclosepath(self, close=True):
@@ -1273,7 +1277,7 @@ def init():
     elif fmt == 'ps':
         self._surface = cairo.PSSurface(fname, w, h)
     else:
-        raise ValueError, "Invalid output format: '%s'" % (fmt)
+        raise ValueError( "Invalid output format: '%s'" % (fmt) )
 
     self._format = fmt
     self._filename = fname
@@ -1496,7 +1500,7 @@ from twyg.common import validate_margins
 
 </t>
 <t tx="karstenw.20170725110859.2">def exit_error(msg):
-    print &gt;&gt;sys.stderr, sys.argv[0] + ': ' + msg
+    print( "XXX  " + sys.argv[0] + ': ' + msg, file=sys.stderr)
     sys.exit(1)
 
 
@@ -1565,7 +1569,7 @@ from twyg.common import validate_margins
     margins = options.margin.split(',')
     try:
         validate_margins(margins)
-    except ValueError, e:
+    except ValueError as e:
         parser.error(e)
         return 2
 
@@ -1576,7 +1580,7 @@ from twyg.common import validate_margins
                         colorscheme=options.colorscheme, scale=scale,
                         margins=margins)
 
-    except Exception, e:
+    except Exception as e:
         exit_error(traceback.format_exc() if options.verbose else str(e))
 
     return 0
@@ -1700,7 +1704,7 @@ _colorizer_map = {
     if name in _colorizer_map:
         return _colorizer_map[name]
     else:
-        raise ValueError, 'Unrecognized colorizer name: %s' % name
+        raise ValueError( 'Unrecognized colorizer name: %s' % name )
 
 </t>
 <t tx="karstenw.20170725110903.2">class Colorizer(object):
@@ -1812,12 +1816,15 @@ _colorizer_map = {
 
 
 </t>
-<t tx="karstenw.20170725110905.1">import collections, math
+<t tx="karstenw.20170725110905.1">
+from __future__ import print_function
 
-try:
-    import json                 # Python 2.6+
-except ImportError:
-    import simplejson as json   # Python 2.5 &amp; Nodebox 1
+import io
+import collections
+import math
+import json
+
+
 
 
 </t>
@@ -1853,22 +1860,20 @@ except ImportError:
         try:
             val = float(v[:-1])
         except ValueError:
-            raise ValueError, 'Invalid percentage margin value: %s' % v
+            raise ValueError( 'Invalid percentage margin value: %s' % v )
         if val &lt; 0:
-            raise (ValueError,
-                   'Margin percentage value must be positive: %s' % v)
+            raise ValueError( 'Margin percentage value must be positive: %s' % v)
         elif val &gt; 100:
-            raise (ValueError,
-                   'Margin percentage value must be less than 100: %s' % v)
+            raise ValueError( 'Margin percentage value must be less than 100: %s' % v)
         return val
 
     def value(v):
         try:
             val = float(v)
         except ValueError:
-            raise ValueError, 'Invalid margin value: %s' % v
+            raise ValueError( 'Invalid margin value: %s' % v )
         if val &lt; 0:
-            raise ValueError, 'Margin value must be positive: %s' % v
+            raise ValueError( 'Margin value must be positive: %s' % v )
         return val
 
     if len(margins) == 1:
@@ -1884,7 +1889,7 @@ except ImportError:
         bottom = margins[2]
         left = margins[3]
     else:
-        raise ValueError, 'Invalid margin description: %s' % margins
+        raise ValueError( 'Invalid margin description: %s' % margins )
 
     top_margin = (height * percent_value(top) / 100 if is_percent(top)
                   else value(top))
@@ -1914,10 +1919,10 @@ except ImportError:
 <t tx="karstenw.20170725110905.6">def loadjson(path):
     """ Loads a JSON file. """
     try:
-        fp = file(path)
+        fp = io.open(path, encoding="utf-8")
         data = json.load(fp)
         fp.close()
-    except Exception, e:
+    except Exception as e:
         raise ValueError("Error loading JSON file '%s':\n\t%s" % (path, e))
     return data
 
@@ -1978,18 +1983,32 @@ _textwidth_cache = collections.defaultdict(dict)
             elif len(s) == 4:
                 ctx.curveto(s[1].x, s[1].y, s[2].x, s[2].y, s[3].x, s[3].y)
             else:
-                raise ValueError, 'Invalid path segment: %s' % s
+                raise ValueError( 'Invalid path segment: %s' % s )
         else:
             ctx.lineto(s.x, s.y)
 
     return ctx.endpath(draw=False)
 
 </t>
-<t tx="karstenw.20170725110908.1">import math, os, re, sys
+<t tx="karstenw.20170725110908.1">import math, os, re, sys, io
 import operator as _operator
 
 # TODO what happens in NodeBox?
 from pkg_resources import resource_filename
+
+# py3 stuff
+py3 = False
+try:
+    unicode('')
+    punicode = unicode
+    pstr = str
+    punichr = unichr
+except NameError:
+    punicode = str
+    pstr = bytes
+    py3 = True
+    punichr = chr
+    long = int
 
 try:
     # Python 2.7+
@@ -2003,6 +2022,8 @@ from twyg.tree import Direction
 
 import twyg.common
 
+import pdb
+kwlog = False
 
 CONF_EXT = '.twg'
 
@@ -2036,6 +2057,8 @@ DEFAULT_LEVEL = '$defaultLevel'
 
 </t>
 <t tx="karstenw.20170725110908.10">def loaddefaults(defaults):
+    if kwlog:
+        print("loaddefaults()")
     return loadconfig(defaults_path(defaults), flat=True)
 
 
@@ -2051,6 +2074,9 @@ DEFAULT_LEVEL = '$defaultLevel'
     See buildconfig for a detailed description of the returned config
     data structure.
     """
+
+    if kwlog:
+        print("loadconfig()")
 
     tokens, cwd = _tokenize_file(file, flat)
     config = buildconfig(tokens, cwd=cwd, prev_configs=[file])
@@ -2068,6 +2094,9 @@ DEFAULT_LEVEL = '$defaultLevel'
     the path, then tries with CONF_EXT extension appended at the end.
     """
 
+    if kwlog:
+        print("find_config()")
+
     for p in paths:
         if os.path.exists(p):
             return p
@@ -2079,6 +2108,9 @@ DEFAULT_LEVEL = '$defaultLevel'
 
 </t>
 <t tx="karstenw.20170725110908.13">def defaults_path(configname):
+    if kwlog:
+        print("defaults_path()")
+
     conf = os.path.join(DEFAULTS_DIR, configname)
     home_conf = os.path.join(twyg.common.TWYG_HOME, conf)
     paths = [
@@ -2090,6 +2122,9 @@ DEFAULT_LEVEL = '$defaultLevel'
 
 </t>
 <t tx="karstenw.20170725110908.14">def colors_path(configname):
+    if kwlog:
+        print("colors_path()")
+
     colors_conf = os.path.join(COLORS_DIR, configname)
     home_colors_conf = os.path.join(twyg.common.TWYG_HOME, colors_conf)
     paths = [
@@ -2102,6 +2137,8 @@ DEFAULT_LEVEL = '$defaultLevel'
 
 </t>
 <t tx="karstenw.20170725110908.15">def config_path(configname):
+    if kwlog:
+        print("config_path()")
     configs_conf = os.path.join(CONFIGS_DIR, configname)
     home_configs_conf = os.path.join(twyg.common.TWYG_HOME, configs_conf)
     paths = [
@@ -2114,6 +2151,8 @@ DEFAULT_LEVEL = '$defaultLevel'
 
 </t>
 <t tx="karstenw.20170725110908.16">def include_path(configname):
+    if kwlog:
+        print("include_path()")
     return find_config([configname], 'included config')
 
 
@@ -2139,6 +2178,8 @@ DEFAULT_LEVEL = '$defaultLevel'
     """ Helper function to parse colors specified by their individual
     component values using the CSS3 color parser.
     """
+    if kwlog:
+        print("parsecolor()")
     s = ', '.join([str(a) for a in components])
     if mode:
         s = mode + '(' + s + ')'
@@ -2175,7 +2216,11 @@ variable_table = {
 <t tx="karstenw.20170725110908.18">def init_variable_table_defaults():
     # Make all named CSS3 colors available as color.&lt;colorname&gt; in the
     # config file
+    if kwlog:
+        print("init_variable_table_defaults()")
     def inject_css3_colors():
+        if kwlog:
+            print("init_variable_table_defaults().inject_css3_colors()")
         global variable_table_defaults
 
         class Colors:
@@ -2233,6 +2278,8 @@ symbol_table = {}
 
 </t>
 <t tx="karstenw.20170725110908.24">def symbol(id, value=None, bp=0):
+    if kwlog:
+        print("symbol(  %s,  %s,  %s)" % (repr(id),repr(value),repr(bp) ))
     key = value if value else id
     if key in symbol_table:
         s = symbol_table[key]
@@ -2245,15 +2292,24 @@ symbol_table = {}
         s.value = value
         symbol_table[key] = s
 
-    s.lbp = max(bp, s.lbp)
+    # crashes in py3; cmp( int, None )
+    if s.lbp != None:
+        if bp != None:
+            s.lbp = max(bp, s.lbp)
+    elif bp != None:
+        s.lbp = bp
     return s
 
 </t>
 <t tx="karstenw.20170725110908.25">def operator(op, bp=None):
+    if kwlog:
+        print("operator()")
     return symbol('(operator)', op, bp)
 
 </t>
 <t tx="karstenw.20170725110908.26">def infix(op, bp):
+    if kwlog:
+        print("infix()")
     def led(self, left):
         self.first = left
         self.second = expression(bp)
@@ -2262,6 +2318,8 @@ symbol_table = {}
 
 </t>
 <t tx="karstenw.20170725110908.27">def prefix(op, bp):
+    if kwlog:
+        print("prefix()")
     def nud(self):
         self.first = expression(bp)
         self.second = None
@@ -2270,8 +2328,12 @@ symbol_table = {}
 
 </t>
 <t tx="karstenw.20170725110908.28">def method(s):
+    if kwlog:
+        print("method()")
     assert issubclass(s, SymbolBase)
     def bind(fn):
+        if kwlog:
+            print("method().bind()")
         setattr(s, fn.__name__, fn)
     return bind
 
@@ -2286,6 +2348,8 @@ operator('.', 40); operator('[', 40); operator('(', 40)
 </t>
 <t tx="karstenw.20170725110908.29">@method(symbol('('))
 def nud(self):
+    if kwlog:
+        print("nud( '(' )")
     expr = expression()
     advance(')')
     return expr
@@ -2307,6 +2371,8 @@ operator(')'); operator(',')
 </t>
 <t tx="karstenw.20170725110908.30">@method(symbol('('))
 def led(self, left):
+    if kwlog:
+        print("led( '(' )")
     self.first = left
     self.second = []
     if not token.isoperator(')'):
@@ -2321,6 +2387,8 @@ def led(self, left):
 </t>
 <t tx="karstenw.20170725110908.31">@method(symbol('.'))
 def led(self, left):
+    if kwlog:
+        print("led( '.' )")
     self.first = left
     self.second = token
     advance()
@@ -2332,6 +2400,8 @@ operator(']')
 </t>
 <t tx="karstenw.20170725110908.32">@method(symbol('['))
 def nud(self):
+    if kwlog:
+        print("nud( '[' )")
     self.first = []
     if not token.isoperator(']'):
         while 1:
@@ -2374,15 +2444,19 @@ opnames = {
 
 </t>
 <t tx="karstenw.20170725110908.33">def unaryop(t, op):
+    if kwlog:
+        print("unaryop()")
     try:
         a = t.first.eval()
         return op(a)
-    except TypeError, e:
+    except TypeError as e:
         raise ConfigError("Cannot use operator '%s' on type '%s'"
                           % (opnames[op.__name__], type(a).__name__), t)
 
 </t>
 <t tx="karstenw.20170725110908.34">def binaryop(t, op):
+    if kwlog:
+        print("binaryop()")
     try:
         a = t.first.eval()
         b = t.second.eval()
@@ -2391,7 +2465,7 @@ opnames = {
         if type(b) == int:
             b = float(b)
         return op(a, b)
-    except TypeError, e:
+    except TypeError as e:
         raise ConfigError("Cannot use operator '%s' on types '%s' and '%s'"
                           % (opnames[op.__name__], type(a).__name__,
                              type(b).__name__), t)
@@ -2399,6 +2473,8 @@ opnames = {
 </t>
 <t tx="karstenw.20170725110908.35">@method(symbol('+'))
 def eval(self):
+    if kwlog:
+        print("eval( '+' )")
     if self.second:
         return binaryop(self, _operator.add)
     else:
@@ -2407,23 +2483,32 @@ def eval(self):
 </t>
 <t tx="karstenw.20170725110908.36">@method(symbol('-'))
 def eval(self):
+    if kwlog:
+        print("eval( '-' )")
     if self.second:
         return binaryop(self, _operator.sub)
     else:
         return unaryop(self, _operator.neg)
 
 symbol('*').eval = lambda self: binaryop(self, _operator.mul)
-symbol('/').eval = lambda self: binaryop(self, _operator.div)
+if py3:
+    symbol('/').eval = lambda self: binaryop(self, _operator.floordiv)
+else:
+    symbol('/').eval = lambda self: binaryop(self, _operator.div)
 
 
 </t>
 <t tx="karstenw.20170725110908.37">def isfunction(o):
+    if kwlog:
+        print("isfunction()")
     return type(o).__name__ in ('function', 'instancemethod',
                                 'builtin_function_or_method')
 
 </t>
 <t tx="karstenw.20170725110908.38">@method(symbol('('))
 def eval(self):
+    if kwlog:
+        print("eval( '(' )")
     if self.first.isoperator('.'):
         dot_op = self.first
         obj, attr = dot_operator(dot_op)
@@ -2440,13 +2525,15 @@ def eval(self):
     a = [x.eval() for x in args]
     try:
         return fn(*a)
-    except TypeError, e:
+    except TypeError as e:
         raise ConfigError(str(e).capitalize(), self)
 
 
 </t>
 <t tx="karstenw.20170725110908.39">@method(symbol('.'))
 def eval(self):
+    if kwlog:
+        print("eval( '.' )")
     obj, attr = dot_operator(self)
     if not hasattr(obj, attr):
         raise ConfigError("'%s' has no property named '%s'"
@@ -2467,6 +2554,8 @@ def eval(self):
 
 </t>
 <t tx="karstenw.20170725110908.40">def dot_operator(t):
+    if kwlog:
+        print("dot_operator()")
     i = t.first.id
     v = t.first.value
     if i == '(name)':
@@ -2482,6 +2571,8 @@ def eval(self):
 </t>
 <t tx="karstenw.20170725110908.41">@method(symbol('['))
 def eval(self):
+    if kwlog:
+        print("eval( '[' )")
     args = self.first
     a = [x.eval() for x in args]
     return a
@@ -2497,6 +2588,8 @@ symbol('(string)').eval   = lambda self: self.value.replace('\\"', '"')
 </t>
 <t tx="karstenw.20170725110908.42">@method(symbol('(name)'))
 def eval(self):
+    if kwlog:
+        print("eval( 'name' )")
     v = self.value
     if v not in variable_table:
         raise ConfigError("Variable '%s' does not exist" % v, self)
@@ -2507,6 +2600,8 @@ def eval(self):
 </t>
 <t tx="karstenw.20170725110908.43">def nexttoken():
     global token, lasttoken
+    if kwlog:
+        print("nexttoken()")
     t = token
     if t.id != '(end)':
         lasttoken = t
@@ -2516,16 +2611,24 @@ def eval(self):
 </t>
 <t tx="karstenw.20170725110908.44">def expression(rbp=0):
     global token, lasttoken
+    if kwlog:
+        print("expression()")
     t = nexttoken()
     left = t.nud()
-    while rbp &lt; token.lbp:
+
+    while True: # rbp &lt; token.lbp:
+        if token.lbp in (None, False ):
+            break
         t = nexttoken()
         left = t.led(left)
+
     return left
 
 </t>
 <t tx="karstenw.20170725110908.45">def advance(value=None, id='(operator)'):
     global token
+    if kwlog:
+        print("advance()")
     if value and not (token.id == id and token.value == value):
         raise ConfigError("Syntax error: expected '%s'" % value, lasttoken)
     token = next()
@@ -2535,7 +2638,13 @@ def eval(self):
 <t tx="karstenw.20170725110908.46">def parse_expr(expr):
     global next, token
 
-    next = (x for x in expr).next
+    if kwlog:
+        print("parse_expr()")
+
+    if py3:
+        next = (x for x in expr).__next__
+    else:
+        next = (x for x in expr).next
     token = next()
     try:
         e = expression()
@@ -2551,6 +2660,10 @@ def eval(self):
 </t>
 <t tx="karstenw.20170725110908.47">def eval_expr(expr, vars={}):
     global variable_table
+
+    if kwlog:
+        print("eval_expr()")
+
     if not variable_table_defaults:
         init_variable_table_defaults()
     variable_table = dict(variable_table_defaults)
@@ -2662,6 +2775,8 @@ rules = [
     """ Create Level object from a config and then deletes all level
     related properties.
     """
+    if kwlog:
+        print("createlevel()")
     level = Level(levelname, config)
     for k in level._props._properties.keys():
         if k in config:
@@ -2720,7 +2835,7 @@ COLOR_CONFIG      = 'color'
     @others
 </t>
 <t tx="karstenw.20170725110908.61">def _validate(self):
-    if type(self.value) not in (str, unicode):
+    if type(self.value) not in (pstr, punicode):
         raise ConfigError("Property '%s' must evaluate to a string"
                           % self.name, self.expr[0])
 
@@ -2797,6 +2912,8 @@ COLOR_CONFIG      = 'color'
     parsed further.
     """
 
+    if kwlog:
+        print("tokenize()")
     lines = config.split('\n');
 
     def linenum(line_nr, flat):
@@ -2895,7 +3012,7 @@ COLOR_CONFIG      = 'color'
     """ Class for managing configuration properties. """
 
     @others
-#            print '&gt;&gt;&gt;', name, ':', e
+            # print( '&gt;&gt;&gt;', name, ':', e )
             prop.expr = e
             prop.name = name
 
@@ -2907,9 +3024,9 @@ COLOR_CONFIG      = 'color'
         for p in extra_props:
             token = config[p][0]
             #TODO make displaying warnings optional? print to stdout?
-            print &gt;&gt;sys.stderr, (
-                "Warning: Unknown property '%s' in configuration "
-                "file '%s' on line %s" % (p, token.file, token.line))
+            print ( "Warning: Unknown property '%s' in configuration "
+                    "file '%s' on line %s" % (p, token.file, token.line),
+                    file=sys.stderr)
 
     def eval(self, name, scope=None, vars={}):
         """ Evaluate the value of a property.
@@ -2926,7 +3043,7 @@ COLOR_CONFIG      = 'color'
 
         p = self._properties[name]
         if scope:
-            for propname, varname in scope.property_mappings.iteritems():
+            for propname, varname in scope.property_mappings.items():
                 if hasattr(scope, propname):
                     vars[varname] = getattr(scope, propname)
                 # TODO triggered by 'basecolor' -- why?
@@ -2970,13 +3087,13 @@ COLOR_CONFIG      = 'color'
 
     # Build properties dictionary
     self._properties = {}
-    for name, prop_params in properties.iteritems():
+    for name, prop_params in properties.items():
         # The first parameter is the property class, the second the
         # optional constructor parameters
         prop_class, opts = prop_params
         self._properties[name] = prop_class(name, **opts)
 
-    for name, prop in self._properties.iteritems():
+    for name, prop in self._properties.items():
         if name not in config:
             raise ConfigError("Missing property: '%s'" % name)
         e = parse_expr(config[name])
@@ -2990,17 +3107,19 @@ COLOR_CONFIG      = 'color'
 </t>
 <t tx="karstenw.20170725110908.78">def get_stylename(configname, config):
     if STYLE not in config:
-        raise ConfigError, ("Style must be specified in '%s'" % (configname))
+        raise ConfigError("Style must be specified in '%s'" % (configname))
 
     expr = config[STYLE]
-    if len(expr) == 2 and expr[0].id == '(name)' and expr[1].id == '(end)':
+    if (    len(expr) == 2
+        and expr[0].id == '(name)'
+        and expr[1].id == '(end)'):
         stylename = expr[0].value
     else:
         raise ConfigError("Invalid style name", expr[0])
 
-    if not (type(stylename) == str or type(stylename) == unicode):
-        raise ConfigError, format_paramvalue_error(configname, STYLE,
-                                                   stylename, str)
+    if not type(stylename) in (pstr, punicode):
+        raise ConfigError( format_paramvalue_error(configname, STYLE,
+                                                   stylename, str))
     return stylename
 
 </t>
@@ -3077,6 +3196,9 @@ COLOR_CONFIG      = 'color'
         ])
     }
     """
+
+    if kwlog:
+        print("buildconfig()")
 
     def isliteral(id):
         return id in ('(operator)', '(float)', '(percent)', '(integer)',
@@ -3190,7 +3312,7 @@ COLOR_CONFIG      = 'color'
                                 % (name, configpath), prevtoken)
 
                         tokens, cwd = _tokenize_file(configpath, flat=False)
-                    except IOError, e:
+                    except IOError as e:
                         raise ConfigError(
                             "Error while processing '%s' directive:\n"
                             "\t%s: '%s'" % (name, e.strerror, e.filename),
@@ -3279,7 +3401,9 @@ COLOR_CONFIG      = 'color'
     Returns the list of tokens and the directory the config file resides
     in (this will be used for processing the @include directives).
     """
-    f = open(file)
+    if kwlog:
+        print("_tokenize_file()")
+    f = io.open(file, encoding="utf-8")
     config = f.read()
     if flat:
         config = '[default]\n' + config
@@ -3508,7 +3632,7 @@ from twyg.tree import Direction, opposite_dir
     if name in _conndrawer_map:
         return _conndrawer_map[name]
     else:
-        raise ValueError, 'Unrecognized connection drawer name: %s' % name
+        raise ValueError( 'Unrecognized connection drawer name: %s' % name )
 
 </t>
 <t tx="karstenw.20170725110911.2">def defaults_path(conf):
@@ -3811,16 +3935,16 @@ colornames = {
 
 
 # Precompile regular expressions for rgb(a) &amp; hsl(a) format matching
-i = '\s*([-+]?\d+)\s*'       # int
-p = '\s*([-+]?\d+)\%\s*'     # percent
-f = '\s*([-+]?\d*\.?\d+)\s*' # float
+i = r'\s*([-+]?\d+)\s*'       # int
+p = r'\s*([-+]?\d+)\%\s*'     # percent
+f = r'\s*([-+]?\d*\.?\d+)\s*' # float
 
-_re_rgb    = re.compile('rgb\(%s,%s,%s\)'     % (i, i, i))
-_re_rgb_p  = re.compile('rgb\(%s,%s,%s\)'     % (p, p, p))
-_re_rgba   = re.compile('rgba\(%s,%s,%s,%s\)' % (i, i, i, f))
-_re_rgba_p = re.compile('rgba\(%s,%s,%s,%s\)' % (p, p, p, f))
-_re_hsl    = re.compile('hsl\(%s,%s,%s\)'     % (i, p, p))
-_re_hsla   = re.compile('hsla\(%s,%s,%s,%s\)' % (i, p, p, f))
+_re_rgb    = re.compile( r'rgb\(%s,%s,%s\)'     % (i, i, i))
+_re_rgb_p  = re.compile( r'rgb\(%s,%s,%s\)'     % (p, p, p))
+_re_rgba   = re.compile( r'rgba\(%s,%s,%s,%s\)' % (i, i, i, f))
+_re_rgba_p = re.compile( r'rgba\(%s,%s,%s,%s\)' % (p, p, p, f))
+_re_hsl    = re.compile( r'hsl\(%s,%s,%s\)'     % (i, p, p))
+_re_hsla   = re.compile( r'hsla\(%s,%s,%s,%s\)' % (i, p, p, f))
 
 del i, p, f
 
@@ -3943,7 +4067,7 @@ del i, p, f
         r, g, b = colorsys.hls_to_rgb(h, l, s)
         return r, g, b, a
 
-    raise ValueError, ('Invalid color: %s' % col)
+    raise ValueError('Invalid color: %s' % col)
 
 
 </t>
@@ -3978,7 +4102,7 @@ del i, p, f
         return ('hsla(%.0f, %.0f%%, %.0f%%, %.3f)'
                 % (h * 360, s * 100, l * 100, a))
 
-    raise ValueError, 'Invalid color format: %s' % format
+    raise ValueError( 'Invalid color format: %s' % format )
 
 </t>
 <t tx="karstenw.20170725110917.1">import math
@@ -4091,12 +4215,12 @@ del i, p, f
             self.y = float(args[0].y)
             return
         elif len(args) &lt; 2:
-            raise ValueError, "Must specify 'x' and 'y' of new vector"
+            raise ValueError( "Must specify 'x' and 'y' of new vector" )
         self.x = float(args[0])
         self.y = float(args[1])
     else:
         if not ('m' in kwargs and 'angle' in kwargs):
-            raise ValueError, "Must specify 'm' and 'angle' of new vector"
+            raise ValueError( "Must specify 'm' and 'angle' of new vector" )
         m = kwargs['m']
         a = -kwargs['angle']
         self.x = m * math.cos(a)
@@ -5171,7 +5295,7 @@ if __name__ == '__main__':
     import sys
     if len(sys.argv) &gt; 1:
         for word in sys.argv[1:]:
-            print '-'.join(hyphenate_word(word))
+            print( '-'.join(hyphenate_word(word)) )
     else:
         import doctest
         doctest.testmod(verbose=True)
@@ -5465,7 +5589,7 @@ from twyg.geomutils import halfcircle
     if name in _layout_map:
         return _layout_map[name]
     else:
-        raise ValueError, 'Unrecognized layout name: %s' % name
+        raise ValueError( 'Unrecognized layout name: %s' % name )
 
 </t>
 <t tx="karstenw.20170725110924.2">class Layout(object):
@@ -5604,8 +5728,7 @@ DEBUG = False
     _ctx.lineheight(node.lineheight)
 
     lineheight = node.lineheight * node.fontsize
-    textwidth_func = lambda(txt): textwidth(_ctx, txt,
-                                            node.fontname, node.fontsize)
+    textwidth_func = lambda txt: textwidth(_ctx, txt, node.fontname, node.fontsize)
 
     if self._wraprect:
         (node._textlines, node._textlinewidths, node._textrects,
@@ -6179,7 +6302,7 @@ _nodedrawer_map = {
     if name in _nodedrawer_map:
         return _nodedrawer_map[name]
     else:
-        raise ValueError, 'Unrecognized node drawer name: %s' % name
+        raise ValueError( 'Unrecognized node drawer name: %s' % name )
 
 </t>
 <t tx="karstenw.20170725110927.4">def _defaults_path(self, conf):
@@ -6662,8 +6785,7 @@ _hyphenate_word_cache = {}
     """
 
     if not rects and maxwidth &lt;= 0:
-        raise (ValueError,
-               'maxwidth must be greater than 0 if no rects are provided')
+        raise ValueError( 'maxwidth must be greater than 0 if no rects are provided' )
 
     maxwidth = max(maxwidth, max(wordwidths))
 
@@ -6859,6 +6981,20 @@ _hyphenate_word_cache = {}
 
 from twyg.geom import Vector2, Rectangle
 
+# py3 stuff
+py3 = False
+try:
+    unicode('')
+    punicode = unicode
+    pstr = str
+    punichr = unichr
+except NameError:
+    punicode = str
+    pstr = bytes
+    py3 = True
+    punichr = chr
+    long = int
+
 
 </t>
 <t tx="karstenw.20170725110934.10">def direction(self):
@@ -6900,7 +7036,12 @@ from twyg.geom import Vector2, Rectangle
     if type(tree) != dict:
         raise ValueError('Invalid JSON structure: Root element must be a dict')
 
-    root = tree.iteritems().next()
+    # root = tree.iteritems().next()
+    if py3:
+        root = iter(tree.items()).__next__()
+    else:
+        root = tree.iteritems().next()
+
     root_label = root[0]
     children = root[1]
     root_node = Node(root_label)
@@ -6909,13 +7050,13 @@ from twyg.geom import Vector2, Rectangle
 
 </t>
 <t tx="karstenw.20170725110934.16">def _build_tree(self, node, children):
-    if type(children) in (str, unicode):
+    if type(children) in (pstr, punicode):
         Node(children, parent=node)
     else:
         for c in children:
             if type(c) == dict:
-                child = Node(c.keys()[0], parent=node)
-                self._build_tree(child, c.values()[0])
+                child = Node( list(c.keys())[0], parent=node)
+                self._build_tree(child, list(c.values())[0])
             elif type(c) in (list, tuple):
                 #TODO proper error handling
                 raise ValueError('Invalid JSON structure: Dicts cannot have List siblings')
@@ -7006,7 +7147,7 @@ from twyg.geom import Vector2, Rectangle
 
 </t>
 <t tx="karstenw.20170725110934.25">def _print_tree(self, node):
-    print (" " * node.depth() * 2) + node.label
+    print( ( " " * node.depth() * 2) + node.label )
     for child in node.children:
         self._print_tree(child)
 
@@ -7045,12 +7186,12 @@ from twyg.geom import Vector2, Rectangle
     if d == Direction.Left:
         return Direction.Right
     else:
-        raise ValueError, 'Invalid direction: %s' % d
+        raise ValueError( 'Invalid direction: %s' % d )
 
 
 </t>
 <t tx="karstenw.20170725110934.30">def _calcbbox(self):
-    m = sys.maxint
+    m = 2**31 #sys.maxint
     topleft = Vector2(m, m)
     bottomright = Vector2(-m, -m)
     self._calcbbox_recurse(self.root, topleft, bottomright)
@@ -7150,7 +7291,7 @@ from twyg.geom import Vector2, Rectangle
             depth += 1
             if depth == n:
                 return curr
-        raise ValueError, 'Node ancestor argument out of range: ' + n
+        raise ValueError( 'Node ancestor argument out of range: ' + n )
 
     # If n is negative or zero, get n-th ancestor from the root
     # towards the node
@@ -7166,8 +7307,7 @@ from twyg.geom import Vector2, Rectangle
         else:
             n -= 1
             if -n &gt; len(ancestors):
-                raise (ValueError,
-                      'Node ancestor argument out of range: ' + n)
+                raise ValueError( 'Node ancestor argument out of range: ' + n )
             return ancestors[n]
 
 </t>

@@ -52,6 +52,8 @@ from copy import deepcopy
 from xml.dom.minidom import parseString
 from random import random, choice
 
+from functools import cmp_to_key
+
 try:
     # NodeBox / Cocoa specific functionality.
     # Our library can still do a lot of interesting stuff without these!
@@ -83,25 +85,6 @@ except NameError:
     long = int
     xrange = range
 
-def cmp_to_key(mycmp):
-    'Convert a cmp= function into a key= function'
-    class K:
-        def __init__(self, obj, *args):
-            self.obj = obj
-        def __lt__(self, other):
-            return mycmp(self.obj, other.obj) < 0
-        def __gt__(self, other):
-            return mycmp(self.obj, other.obj) > 0
-        def __eq__(self, other):
-            return mycmp(self.obj, other.obj) == 0
-        def __le__(self, other):
-            return mycmp(self.obj, other.obj) <= 0
-        def __ge__(self, other):
-            return mycmp(self.obj, other.obj) >= 0
-        def __ne__(self, other):
-            return mycmp(self.obj, other.obj) != 0
-    return K
-
 def sortlistfunction(thelist, thecompare):
     if py3:
         sortkeyfunction = cmp_to_key( thecompare )
@@ -114,7 +97,8 @@ def sortlistfunction(thelist, thecompare):
 
 # This exception is raised when trying to get a list of colors from an image
 # without Core Image or Python Imaging Library.
-class NoCoreImageOrPIL(Exception): pass
+class NoCoreImageOrPIL(Exception):
+    pass
 
 #### REWIRING ######################################################################
 
@@ -470,6 +454,7 @@ for f in glob(path):
     tags = [tag.strip() for tag in tags.split(",")]
     tags.sort()
     context[name] = tags
+
 
 #### BASE COLOR ####################################################################
 
@@ -1014,11 +999,13 @@ def color(*args, **kwargs):
     return Color(*args, **kwargs)
     
 def rgb(r, g, b, a=None, range=1.0, name=""):
-    if a == None: a = range
+    if a == None:
+        a = range
     return color(r, g, b, a, mode="rgb", name=name, range=range)
     
 def hsb(h, s, b, a=None, range=1.0, name=""):
-    if a == None: a = range
+    if a == None:
+        a = range
     return color(h, s, b, a, mode="hsb", name=name, range=range)
 
 def cmyk(c, m, y, k, a=None, range=1.0, name=""):
@@ -1044,7 +1031,7 @@ for clr in named_colors:
     except:
         r, g, b, a = named_colors[clr]
     r, g, b, a = [str(v) for v in [r, g, b, a]]
-    code += clr+" = lambda: Color("+r+", "+g+", "+b+", "+a+", mode=\"rgb\", name=\""+clr+"\")\n"
+    code += clr + " = lambda: Color("+r+", "+g+", "+b+", "+a+", mode=\"rgb\", name=\""+clr+"\")\n"
 
 #for clr in named_hues:
 #    h = named_hues[clr]

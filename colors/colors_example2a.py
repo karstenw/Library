@@ -4,10 +4,10 @@ try:
     colors = ximport("colors")
 except ImportError:
     colors = ximport("__init__")
-    reload(colors)
+    # reload(colors)
     
 
-size(1200, 900)
+size(1440, 900)
 background(None)
 
 
@@ -29,7 +29,8 @@ sea = colors.list(img, n=n)
 
 sea = list(set(sea))
 n = len(sea)
-image(img, 0, 50, width=WIDTH)
+w = round(WIDTH / n)
+image(img, 0, w+5, width=WIDTH)
 
 print( img )
 print( n )
@@ -37,9 +38,8 @@ print()
 
 sea.sort()
 
-w = WIDTH / n
 x = 0
 for clr in sea:
     fill(clr)
-    rect(x, 0, w, 50)
+    rect(x, 0, w, w)
     x += w

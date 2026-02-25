@@ -5,6 +5,7 @@
 
 ################################################################################
 
+import os
 import time
 import io
 
@@ -20,8 +21,11 @@ from nodebox.util import random, choice
 
 # new linguistics/pattern
 
-# need to import linguistics first - sets up sys.path and corpus/data folders for the sublibs
+# need to import linguistics first 
+# sets up sys.path and corpus/data folders for the sublibs
 import linguistics
+FlowerWord = linguistics.FlowerWord
+
 import pattern
 import pattern.text
 import pattern.text.en
@@ -38,9 +42,13 @@ stopwords = []
 items = (
     ("vocabulary.txt", dictionary),
     ("stopwords.txt", stopwords) )
+
+PACKAGE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 for item in items:
-    path, container = item
-    f = open(path, 'r', encoding="utf-8")
+    filename, container = item
+    path = os.path.join( PACKAGE_DIR, filename)
+    f = io.open(path, 'r', encoding="utf-8")
     for line in f.readlines():
         if not line:
             continue
@@ -59,93 +67,6 @@ ADJECTIVE = "adjective"
 VERB = "verb"
 
 old = False
-
-class FlowerWord:
-    def __init__(self, word):
-        # pdb.set_trace()
-        self.word = word
-        self.synsets = wordnet.synsets( word )
-        self.idx = 0
-        self.antonym = ""
-        self.gloss = ""
-        self.synset = None
-        self.synonyms = []
-        self.antonym = ""
-        self.gloss = ""
-        self.lexname = ""
-
-        if len(self.synsets) > 0:
-            synonyms = self.synsets[0].synonyms
-            try:
-                self.idx = synonyms.index(word)
-                w = self.synset = self.synsets[self.idx]
-                #print("Found synset:", w)
-            except:
-                w = self.synsets[0]
-                #print("Use synset:", w)
-
-            self.antonym = w.antonym
-            self.gloss = w.gloss
-            self.lexname = w.lexname
-
-    def hyponyms(self):
-        result = []
-        for synset in self.synsets:
-            hyponyms = synset.hyponyms()
-            for hyponym in hyponyms:
-                synonyms = hyponym.synonyms
-                for synonym in synonyms:
-                    synonym = synonym.replace("_", " ")
-                    result.append( synonym )
-        result = list(set(result))
-        return result
-
-    def hypernyms(self):
-        result = []
-        for synset in self.synsets:
-            hypernyms = synset.hypernyms()
-            for hypernym in hypernyms:
-                synonyms = hypernym.synonyms
-                for synonym in synonyms:
-                    synonym = synonym.replace("_", " ")
-                    result.append( synonym )
-        result = list(set(result))
-        return result
-
-
-    def senses(self):
-        result = []
-        for synset in self.synsets:
-            senses = synset.senses
-            result.append( senses )
-        return result
-
-
-    def holonyms(self):
-        result = []
-        for synset in self.synsets:
-            holonyms = synset.holonyms()
-            for holonym in holonyms:
-                synonyms = hyponym.synonyms
-                for synonym in synonyms:
-                    synonym = synonym.replace("_", " ")
-                    result.append( synonym )
-        result = list(set(result))
-        return result
-
-    def meronyms(self):
-        result = []
-        for synset in self.synsets:
-            meronyms = synset.meronyms()
-            for meronym in meronyms:
-                synonyms = hyponym.synonyms
-                for synonym in synonyms:
-                    synonym = synonym.replace("_", " ")
-                    result.append( synonym )
-        result = list(set(result))
-        return result
-
-
 
 def printsynset( word ):
     synsets = wordnet.synsets( word )
@@ -360,6 +281,7 @@ def alliterate(word, typ=ADJECTIVE):
     except:
         return None
 
+
 def eloquate(noun, antonise=True):
     
     """Returns an alliteration with an adjective.
@@ -459,7 +381,8 @@ def consonate(verb, noun):
     if len(verbs) > 0: return choice(verbs)
     
     return verb
-    
+
+
 def incorporate(word, typ=NOUN):
     
     """Combines this noun with another.
@@ -549,7 +472,8 @@ def verse(word):
     return g
 
 
-def dada(query, foreground=None, background=None, fonts=[], transparent=False):
+def dada(   query, foreground=None, background=None, fonts=[],
+            transparent=False, fontsizepts=24):
 
     """Create some lines of poetry based on the query."""
 
@@ -604,7 +528,7 @@ def dada(query, foreground=None, background=None, fonts=[], transparent=False):
     if len(fonts) == 0: 
         fonts = [_ctx.font()]
 
-    f = _ctx.fontsize()
+    # f = _ctx.fontsize()
     _ctx.background(background)
 
     if transparent: 
@@ -617,7 +541,8 @@ def dada(query, foreground=None, background=None, fonts=[], transparent=False):
 
 
     # Poem title.
-    _ctx.text(query, _ctx.WIDTH / 15, _ctx.HEIGHT / 7-f)
+    printquery = query.replace( "_", " ")
+    _ctx.text(printquery, _ctx.WIDTH / 15, _ctx.HEIGHT / 7-fontsizepts)
     
     # initially spanned the rest of dada()
     # for i in range(1):
@@ -633,7 +558,7 @@ def dada(query, foreground=None, background=None, fonts=[], transparent=False):
             # pick a random font from the list and a random fontsize.
             _ctx.font(choice(fonts))
             if random() > 0.7: 
-                _ctx.fontsize(random(f*0.6, f*1.2))
+                _ctx.fontsize(random(fontsizepts*0.6, fontsizepts*1.2))
             
             # A word that is s
             #                 l

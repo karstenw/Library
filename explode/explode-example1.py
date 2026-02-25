@@ -43,7 +43,7 @@ if 1:
         root = choice( nouns )
         root = choice( longlistwords )
         # root="dupe"
-        root="bird"
+        # root="bird"
         # root="protestamt_denomination"
         synset = wordnet.synsets( root )[0]
         hyponyms = list( synset.hyponyms() )

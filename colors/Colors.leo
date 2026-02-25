@@ -13,11 +13,8 @@
 <v t="karstenw.20210712120529.1" a="E"><vh>@clean __init__.py</vh>
 <v t="karstenw.20210712120630.1"><vh>Header</vh></v>
 <v t="karstenw.20210712120542.1"><vh>Declarations</vh></v>
-<v t="karstenw.20220923144041.1" a="E"><vh>py3 stuff</vh>
-<v t="karstenw.20210712120542.2"><vh>cmp_to_key</vh></v>
-<v t="karstenw.20210712120542.3"><vh>sortlistfunction</vh></v>
-</v>
-<v t="karstenw.20210712120819.1"><vh>REWIRING</vh>
+<v t="karstenw.20220923144041.1"><vh>py3 stuff</vh></v>
+<v t="karstenw.20210712120819.1" a="E"><vh>REWIRING</vh>
 <v t="karstenw.20210712120542.4"><vh>class NoCoreImageOrPIL</vh></v>
 <v t="karstenw.20210712120542.5"><vh>_range</vh></v>
 </v>
@@ -31,9 +28,7 @@
 </v>
 <v t="karstenw.20210715121613.1"><vh>NAMED COLOR HUES</vh></v>
 <v t="karstenw.20210715121757.1"><vh>NAMED COLORS</vh></v>
-<v t="karstenw.20210712122004.1"><vh>COLOR CONTEXT</vh>
-<v t="karstenw.20210712122100.1"><vh>newHeadline</vh></v>
-</v>
+<v t="karstenw.20210712122004.1"><vh>COLOR CONTEXT</vh></v>
 <v t="karstenw.20210712120918.1"><vh>NAMED COLOR HUES</vh>
 <v t="karstenw.20210712120542.12"><vh>class BaseColor</vh>
 <v t="karstenw.20210712120542.13"><vh>__init__</vh></v>
@@ -84,7 +79,7 @@
 </v>
 <v t="karstenw.20210712120542.54"><vh>named_color</vh></v>
 <v t="karstenw.20210712121036.1"><vh>NAMED COLOR OBJECTS</vh></v>
-<v t="karstenw.20210712121102.1"><vh>COLOR LIST</vh>
+<v t="karstenw.20210712121102.1" a="E"><vh>COLOR LIST</vh>
 <v t="karstenw.20210712120542.55"><vh>class ColorList</vh>
 <v t="karstenw.20210712120542.56"><vh>__init__</vh></v>
 <v t="karstenw.20210712120542.57"><vh>image_to_rgb</vh></v>
@@ -97,7 +92,7 @@
 <v t="karstenw.20210712120542.64"><vh>join</vh></v>
 <v t="karstenw.20210712120542.65"><vh>blend</vh></v>
 <v t="karstenw.20210712120542.66"><vh>sort_by_distance</vh></v>
-<v t="karstenw.20210712122340.1" a="E"><vh>TROUBLEMAKERS</vh>
+<v t="karstenw.20210712122340.1"><vh>TROUBLEMAKERS</vh>
 <v t="karstenw.20210712120542.67"><vh>_sorted_copy</vh></v>
 <v t="karstenw.20210712120542.68"><vh>sort_by_hue</vh></v>
 <v t="karstenw.20210712120542.69"><vh>sort_by_saturation</vh></v>
@@ -278,6 +273,8 @@ from math import floor, ceil
 from copy import deepcopy
 from xml.dom.minidom import parseString
 from random import random, choice
+
+from functools import cmp_to_key
 
 try:
     # NodeBox / Cocoa specific functionality.
@@ -1701,7 +1698,9 @@ def xml(self):
         xml = archive.read(member)
     dom = parseString(xml).documentElement
     
-    attr = lambda e, a: e.attributes[a].value
+    # attr = lambda e, a: e.attributes[a].value
+    def attr( e, a ):
+        return e.attributes[a].value
     
     for e in dom.getElementsByTagName("color")[:top]:
         w = float(attr(e, "weight")) 
@@ -1716,12 +1715,14 @@ def xml(self):
             )
             try: 
                 clr.name = attr(e, "name")
-                if clr.name == "blue": clr = color(blue)
+                if clr.name == "blue":
+                    clr = color(blue)
             except: 
                 pass
         except:
             name = attr(e, "name")
-            if name == "blue": name = blue
+            if name == "blue":
+                name = blue
             clr = color(name)
            
         for s in e.getElementsByTagName("shade"):
@@ -2025,26 +2026,6 @@ aggregate = theme
     return True
 
 </t>
-<t tx="karstenw.20210712120542.2">def cmp_to_key(mycmp):
-    'Convert a cmp= function into a key= function'
-    class K:
-        def __init__(self, obj, *args):
-            self.obj = obj
-        def __lt__(self, other):
-            return mycmp(self.obj, other.obj) &lt; 0
-        def __gt__(self, other):
-            return mycmp(self.obj, other.obj) &gt; 0
-        def __eq__(self, other):
-            return mycmp(self.obj, other.obj) == 0
-        def __le__(self, other):
-            return mycmp(self.obj, other.obj) &lt;= 0
-        def __ge__(self, other):
-            return mycmp(self.obj, other.obj) &gt;= 0
-        def __ne__(self, other):
-            return mycmp(self.obj, other.obj) != 0
-    return K
-
-</t>
 <t tx="karstenw.20210712120542.20">def __setattr__(self, a, v):
     
     if a in ["a", "alpha"]:
@@ -2145,7 +2126,7 @@ class Color(BaseColor):
     which default to the state colormode and color range.
     
     """
-
+    # pdb.set_trace()
     self.name = ""
 
     try:
@@ -2300,15 +2281,6 @@ def is_transparent(self):
     return False
 
 </t>
-<t tx="karstenw.20210712120542.3">def sortlistfunction(thelist, thecompare):
-    if py3:
-        sortkeyfunction = cmp_to_key( thecompare )
-        thelist.sort( key=sortkeyfunction )
-    else:
-        thelist.sort( thecompare )
-
-
-</t>
 <t tx="karstenw.20210712120542.30">@property
 def hex(self):
     r, g, b = [int(n * 255) for n in (self.r, self.g, self.b)]
@@ -2369,7 +2341,8 @@ lighter = lighten
 
 # This exception is raised when trying to get a list of colors from an image
 # without Core Image or Python Imaging Library.
-class NoCoreImageOrPIL(Exception): pass
+class NoCoreImageOrPIL(Exception):
+    pass
 
 #### REWIRING ######################################################################
 
@@ -2543,7 +2516,8 @@ draw = swatch
     
 </t>
 <t tx="karstenw.20210712120542.49">def rgb(r, g, b, a=None, range=1.0, name=""):
-    if a == None: a = range
+    if a == None:
+        a = range
     return color(r, g, b, a, mode="rgb", name=name, range=range)
     
 </t>
@@ -2561,7 +2535,8 @@ def _range(start, stop=None, step=1):
 
 </t>
 <t tx="karstenw.20210712120542.50">def hsb(h, s, b, a=None, range=1.0, name=""):
-    if a == None: a = range
+    if a == None:
+        a = range
     return color(h, s, b, a, mode="hsb", name=name, range=range)
 
 </t>
@@ -3633,7 +3608,7 @@ for clr in named_colors:
     except:
         r, g, b, a = named_colors[clr]
     r, g, b, a = [str(v) for v in [r, g, b, a]]
-    code += clr+" = lambda: Color("+r+", "+g+", "+b+", "+a+", mode=\"rgb\", name=\""+clr+"\")\n"
+    code += clr + " = lambda: Color("+r+", "+g+", "+b+", "+a+", mode=\"rgb\", name=\""+clr+"\")\n"
 
 #for clr in named_hues:
 #    h = named_hues[clr]
@@ -3839,8 +3814,7 @@ _shadow = None
 # The context is a dictionary of colors mapped to associated words,
 # e.g. "red" is commonly associated with passion, love, heat, etc. 
 
-</t>
-<t tx="karstenw.20210712122100.1">#__file__ = ""
+#__file__ = ""
 context = {}
 path = os.path.join(os.path.dirname(__file__), "context", "*.txt")
 for f in glob(path):
@@ -3849,6 +3823,7 @@ for f in glob(path):
     tags = [tag.strip() for tag in tags.split(",")]
     tags.sort()
     context[name] = tags
+
 
 </t>
 <t tx="karstenw.20210712122340.1"></t>
@@ -4059,6 +4034,14 @@ except NameError:
     punichr = chr
     long = int
     xrange = range
+
+def sortlistfunction(thelist, thecompare):
+    if py3:
+        sortkeyfunction = cmp_to_key( thecompare )
+        thelist.sort( key=sortkeyfunction )
+    else:
+        thelist.sort( thecompare )
+
 
 </t>
 </tnodes>

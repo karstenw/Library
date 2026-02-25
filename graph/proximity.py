@@ -15,8 +15,10 @@ class priorityqueue(dict):
     def pop(self):
         p, w = None, float(INFINITY)
         for e in self:
-            if self[e] <= w: p, w = e, self[e]
-        if p: del self[p]
+            if self[e] <= w:
+                p, w = e, self[e]
+        if p:
+            del self[p]
         return p
 
 #--- DEPTH-FIRST SEARCH ------------------------------------------------------------------------------

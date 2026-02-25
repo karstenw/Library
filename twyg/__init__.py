@@ -1,6 +1,6 @@
 __version__ = '0.1dev'
 
-import os, sys
+import os, sys, pdb
 
 #from twyg.cairowrapper import context as ctx
 from twyg.common import calculate_margins, loadjson
@@ -17,6 +17,8 @@ import twyg.colorizer
 import twyg.config
 import twyg.connection
 import twyg.node
+
+# pdb.set_trace()
 
 # Detect nodebox
 try:
@@ -38,6 +40,7 @@ if nodebox:
     twyg.common.TWYG_HOME = os.path.dirname(os.path.abspath(
         os.path.join(inspect.getfile(inspect.currentframe()), '..'))
     )
+    print("twyg.common.TWYG_HOME:", twyg.common.TWYG_HOME)
 
 else:
     if 'TWYG_HOME' in os.environ:
@@ -63,13 +66,14 @@ def _init():
     with the correct backend (PyCairo or NodeBox1).
     """
     global _initialized
-    if _initialized:
+    if 0: #_initialized:
         return
 
-    if nodebox:
-        global _ctx
-    else:
-        from twyg.cairowrapper import context as _ctx
+    #if nodebox:
+    #    global _ctx  #- global makes it writeable?
+    #    # pass
+    #else:
+    #    from twyg.cairowrapper import context as _ctx
 
     twyg.common.init(nodebox=nodebox, ctx=_ctx)
 

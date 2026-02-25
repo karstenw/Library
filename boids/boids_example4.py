@@ -1,8 +1,5 @@
 
-# Run in full screen
-
-# get screen size
-size(0, 0)
+size(1440, 900)
 
 speed(40)
 

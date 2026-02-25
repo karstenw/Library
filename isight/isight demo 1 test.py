@@ -51,4 +51,4 @@ background(None)
 well = itertools.cycle( imagepaths )
 
 for x, y in grid(columns, rows, imagewidth, imheight):
-    image(well.next(), x, y, width=imagewidth, height=imheight)
+    image(next(well), x, y, width=imagewidth, height=imheight)

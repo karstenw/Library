@@ -47,7 +47,7 @@ def run( x, y, ang, radius ):
     if ang == 0:
         ang = None
 
-    print("RUN (%i, %i), %s, %i" % ( x, y, repr(ang), radius ))
+    # print("RUN (%i, %i), %s, %i" % ( x, y, repr(ang), radius ))
     # A lightsource positioned at the centre of the canvas.
     d = colors.shader(x, y, W2, H2, angle=ang, radius=radius)
 

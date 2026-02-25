@@ -170,16 +170,16 @@ colornames = {
 
 
 # Precompile regular expressions for rgb(a) & hsl(a) format matching
-i = '\s*([-+]?\d+)\s*'       # int
-p = '\s*([-+]?\d+)\%\s*'     # percent
-f = '\s*([-+]?\d*\.?\d+)\s*' # float
+i = r'\s*([-+]?\d+)\s*'       # int
+p = r'\s*([-+]?\d+)\%\s*'     # percent
+f = r'\s*([-+]?\d*\.?\d+)\s*' # float
 
-_re_rgb    = re.compile('rgb\(%s,%s,%s\)'     % (i, i, i))
-_re_rgb_p  = re.compile('rgb\(%s,%s,%s\)'     % (p, p, p))
-_re_rgba   = re.compile('rgba\(%s,%s,%s,%s\)' % (i, i, i, f))
-_re_rgba_p = re.compile('rgba\(%s,%s,%s,%s\)' % (p, p, p, f))
-_re_hsl    = re.compile('hsl\(%s,%s,%s\)'     % (i, p, p))
-_re_hsla   = re.compile('hsla\(%s,%s,%s,%s\)' % (i, p, p, f))
+_re_rgb    = re.compile( r'rgb\(%s,%s,%s\)'     % (i, i, i))
+_re_rgb_p  = re.compile( r'rgb\(%s,%s,%s\)'     % (p, p, p))
+_re_rgba   = re.compile( r'rgba\(%s,%s,%s,%s\)' % (i, i, i, f))
+_re_rgba_p = re.compile( r'rgba\(%s,%s,%s,%s\)' % (p, p, p, f))
+_re_hsl    = re.compile( r'hsl\(%s,%s,%s\)'     % (i, p, p))
+_re_hsla   = re.compile( r'hsla\(%s,%s,%s,%s\)' % (i, p, p, f))
 
 del i, p, f
 

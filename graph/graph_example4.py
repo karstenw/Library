@@ -3,7 +3,11 @@
 # You'll need the NodeBox Linguistics library installed.
 # Author: Tom De Smedt.
 
-query = "bird"
+
+import os
+import pdb
+kwdbg = False
+kwlog = False
 
 try:
     graph = ximport("graph")
@@ -25,7 +29,8 @@ import pattern.text.en
 en = pattern.text.en
 wordnet = pattern.text.en.wordnet
 
-nouns = set(list( wordnet.NOUNS() ))
+allnouns = list( wordnet.NOUNS() )
+nouns = set( allnouns )
 
 
 
@@ -34,44 +39,62 @@ nouns = set(list( wordnet.NOUNS() ))
 # these should move two levels up into linguistics
 
 
-def holonym( word, sense="" ):
+def holonym( word, sense="", all=False ):
     fw = FlowerWord( word )
     hn = fw.holonyms()
+    print("holonym(%s): %s" % (word, str(hn)))
+    if all:
+        return hn
     if len(hn) > 0:
         return hn[0]
     return ""
 
-def meronym( word, sense="" ):
+def meronym( word, sense="", all=False ):
     fw = FlowerWord( word )
     mn = fw.meronyms()
-    if len(hn) > 0:
+    print("meronym(%s): %s" % (word, str(mn)))
+    if all:
+        return mn
+    if len(mn) > 0:
         return mn[0]
     return ""
 
-def antonym( word, sense="" ):
+def antonym( word, sense="", all=False ):
     fw = FlowerWord( word )
-    hn = fw.holonyms()
-    if len(hn) > 0:
-        return hn[0].antonym
+    an = fw.holonyms()
+    if all:
+        return an
+    if len(an) > 0:
+        print("antonym(%s): %s" % (word, str(an[0].antonym)))
+        return an[0].antonym
     return ""
 
-def hypernym( word, sense="" ):
+def hypernym( word, sense="", all=False ):
     fw = FlowerWord( word )
     hn = fw.hypernyms()
+    print("hypernym(%s): %s" % (word, str(hn)))
+    if all:
+        return hn
     if len(hn) > 0:
         return hn[0]
     return ""
 
-def senses( word, sense="" ):
+def senses( word, sense="", all=False ):
     fw = FlowerWord( word )
-    hn = fw.hypernyms()
-    if len(hn) > 0:
-        return hn[0]
+    sn = fw.senses()
+    print("senses(%s): %s" % (word, str(sn)))
+    if all:
+        return sn
+    if len(sn) > 0:
+        return sn[0]
     return ""
 
-def hyponym( word, sense="" ):
+def hyponym( word, sense="", all=False ):
     fw = FlowerWord( word )
     hn = fw.hyponyms()
+    print("hyponym(%s): %s" % (word, str(hn)))
+    if all:
+        return hn
     if len(hn) > 0:
         return hn[0]
     return ""
@@ -139,7 +162,7 @@ class wordnetgraph(graph.graph):
         return False
 
 
-    def get_senses(self, word, top=6):
+    def get_senses(self, word, top=12):
 
         """ The graph displays the different senses of a noun,
         e.g. light -> lighter, luminosity, sparkle, ...
@@ -186,10 +209,10 @@ class wordnetgraph(graph.graph):
         relations = [
             # (6, en.noun.holonym  , "has-parts"),
             (6, holonym  , "has-parts"),
-            (2, meronym  , "is-part-of"),
+            (3, meronym  , "is-part-of"),
             (2, antonym  , "is-opposite-of"),
-            (3, hypernym , "is-a"),
-            (2, senses   , "is-action"),
+            (4, hypernym , "is-a"),
+            (3, senses   , "is-action"),
             (6, hyponym  , "has-specific"),
         ]
         # Get related words from WordNet.
@@ -197,20 +220,28 @@ class wordnetgraph(graph.graph):
         for top, f, relation in relations:
             r = []
             try:
-                rng = f(word, sense=self.senses.current)
+                wordlist = f(word, sense=self.senses.current, all=True)
             except:
                 try:
-                    rng = f(word)
+                    wordlist = f(word, all=True)
                 except:
                     continue
-            for w in rng:
-                if (    w[0] != word
-                    and w[0] not in r
-                    and len(w[0]) < 20):
-                    r.append((w[0], relation))
-                    
+            # old
+            if 0:
+                for w in wordlist:
+                    if (    w[0] != word
+                        and w[0] not in r
+                        and len(w[0]) < 20):
+                        r.append( (w[0], relation) )
+            else:
+                for w in wordlist:
+                    if w != word:
+                        if w not in r:
+                            if len(w) < 20:
+                                r.append( (w, relation) )
             words.extend(r[:top])
-            
+        if kwdbg:
+            print("get_relations(%s): %s" % (word, str(words)))
         return words
 
     def expand(self, relation, previous=None):
@@ -358,9 +389,9 @@ class senses:
         """ Update senses.pressed to the last button pressed.
         """
         
-        if mousedown \
-        and self.graph.events.dragged == None \
-        and path.contains(MOUSEX, MOUSEY):
+        if (    mousedown 
+            and self.graph.events.dragged == None 
+            and path.contains(MOUSEX, MOUSEY)):
             self.pressed = i
 
     def log_clicked(self, path, i):
@@ -376,13 +407,21 @@ class senses:
         
 ######################################################################################################
 
+query = "house"
+query = "rhetoric"
+query = choice( allnouns )
+goodies = ("inconvenience", "biology", "cyberpunk", "frankfurt", "computer",
+           "monastery", "africa", "rhetoric")
+
+query = choice( goodies )
+
 g = wordnetgraph(distance=1.2)
 g.load(query)
 
-size(550, 550)
+size(700, 550)
 speed(30) 
 def draw():
-    g.styles.textwidth = 120
+    g.styles.textwidth = 160
     g.draw(
         directed=True, 
         weighted=True,

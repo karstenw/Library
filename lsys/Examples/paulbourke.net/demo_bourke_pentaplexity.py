@@ -1,6 +1,6 @@
 # From  the website:
 #
-# http://paulbourke.net/fractals/pentaplexity/
+# https://paulbourke.net/fractals/lsys/
 
 try: 
     lsys = ximport("lsys")

@@ -14,18 +14,13 @@
 <v t="karstenw.20230316191528.1"><vh>Declarations</vh></v>
 <v t="karstenw.20230417110004.1"><vh>+ GLOBALS +</vh></v>
 <v t="karstenw.20230318131229.1"><vh>+ TOOLS +</vh>
-<v t="karstenw.20230316191631.1"><vh>py3</vh>
-<v t="karstenw.20230316191639.1"><vh>py3 stuff</vh></v>
-<v t="karstenw.20230316191528.2"><vh>cmp_to_key</vh></v>
-<v t="karstenw.20230316191528.3"><vh>sortlist</vh></v>
-</v>
+<v t="karstenw.20230316191631.1"><vh>py3</vh></v>
 <v t="karstenw.20230316191528.4"><vh>nodecompare</vh></v>
 <v t="karstenw.20230316191528.6"><vh>makeunicode</vh></v>
 <v t="karstenw.20230316191528.7"><vh>hashFromString</vh></v>
-<v t="karstenw.20230316191528.8"><vh>range_</vh></v>
 </v>
 <v t="karstenw.20230316191737.1"><vh>+ BASIC PROPERTIES +</vh></v>
-<v t="karstenw.20230316191816.1"><vh>+ Cache +</vh>
+<v t="karstenw.20230316191816.1" a="E"><vh>+ Cache +</vh>
 <v t="karstenw.20230403165828.1"><vh>_newpath  ## UNUSED ##</vh></v>
 <v t="karstenw.20230316191528.9"><vh>_path</vh></v>
 <v t="karstenw.20230316191528.10"><vh>cache</vh></v>
@@ -35,7 +30,7 @@
 <v t="karstenw.20230505121633.1"><vh>cachefiles</vh></v>
 </v>
 <v t="karstenw.20230318130644.1" a="E"><vh>+ API +</vh>
-<v t="karstenw.20230505102222.1"><vh>+ OFF +</vh>
+<v t="karstenw.20230505102222.1" a="E"><vh>+ OFF +</vh>
 <v t="karstenw.20230316191528.14"><vh>is_robot - OFF</vh></v>
 <v t="karstenw.20230330102024.1"><vh>+ QUERY CONCEPTNET API +</vh>
 <v t="karstenw.20230330142517.1"><vh>download_url</vh></v>
@@ -61,7 +56,7 @@
 <v t="karstenw.20230316191528.18"><vh>__init__</vh></v>
 <v t="karstenw.20230316191528.19"><vh>__repr__</vh></v>
 </v>
-<v t="karstenw.20230316191528.20"><vh>class Rules</vh>
+<v t="karstenw.20230316191528.20" a="E"><vh>class Rules</vh>
 <v t="karstenw.20230316191528.21"><vh>_concepts</vh></v>
 <v t="karstenw.20230316191528.22"><vh>disambiguate</vh></v>
 </v>
@@ -82,7 +77,7 @@
 <v t="karstenw.20230316191528.52"><vh>add_rule</vh></v>
 <v t="karstenw.20230316191528.53"><vh>cluster</vh></v>
 </v>
-<v t="karstenw.20230316194605.1" a="E"><vh>+ CLUSTER HEURISTICS +</vh>
+<v t="karstenw.20230316194605.1"><vh>+ CLUSTER HEURISTICS +</vh>
 <v t="karstenw.20230316191528.54"><vh>proper_nouns</vh></v>
 <v t="karstenw.20230316191528.55"><vh>proper_leaves</vh></v>
 <v t="karstenw.20230316191528.56"><vh>neighbors</vh></v>
@@ -98,7 +93,7 @@
 </v>
 <v t="karstenw.20230316194702.1"><vh>+ TAXONOMY +</vh>
 <v t="karstenw.20230316191528.65"><vh>taxonomy</vh></v>
-<v t="karstenw.20230316191528.66"><vh>class _range</vh>
+<v t="karstenw.20230316191528.66" a="E"><vh>class ConcepRange</vh>
 <v t="karstenw.20230316191528.67"><vh>__init__</vh></v>
 <v t="karstenw.20230316191528.68"><vh>append</vh></v>
 <v t="karstenw.20230316191528.69"><vh>_hyponyms</vh></v>
@@ -118,13 +113,13 @@
 </v>
 <v t="karstenw.20230316191528.80"><vh>_build_properties_index</vh></v>
 </v>
-<v t="karstenw.20230316194837.1"><vh>+ SOLVER +</vh>
+<v t="karstenw.20230316194837.1" a="E"><vh>+ SOLVER +</vh>
 <v t="karstenw.20230316191528.81"><vh>add_method</vh></v>
 <v t="karstenw.20230316191528.82"><vh>score</vh></v>
 <v t="karstenw.20230316191528.83"><vh>class IndexError</vh></v>
 <v t="karstenw.20230316191528.84"><vh>class MethodError</vh></v>
 <v t="karstenw.20230316191528.85"><vh>class analysis</vh></v>
-<v t="karstenw.20230316191528.86"><vh>class _solver</vh>
+<v t="karstenw.20230316191528.86" a="E"><vh>class _solver</vh>
 <v t="karstenw.20230316191528.87"><vh>__init__</vh></v>
 <v t="karstenw.20230316191528.88"><vh>_prepare</vh></v>
 <v t="karstenw.20230316191528.89"><vh>_retrieve</vh></v>
@@ -168,15 +163,37 @@
 <t tx="karstenw.20230316191528.1"># coding: utf-8
 
 ### PERCEPTION #################################################################
-# Analysis tools for working with data from http://nodebox.net/perception in NodeBox.
-# The library is roughly organised in 5 parts that add up to the final solver object:
-# 1) query()   : returns lists of rules form the online database, using a caching mechanism.
-# 2) cluster() : returns a graph objects based on a cluster of rules around a central concept.
-# 3) range()   : find sibling concepts (e.g. fonts, movies, colors, trees) using a taxonomy graph.
-# 4) index     : object for building and searching cached indices of shortest paths.
-# 5) cost      : object that simplifies the creation of path search heuristics.
-# =&gt; solver    : object for inferring knowledge from the database, using clusters,
-#                indices and ranges.
+#
+# Analysis tools for working with data from http://nodebox.net/perception
+# in NodeBox.
+# 
+# The library is roughly organised in 5 parts that add up to the final
+# solver object:
+# 
+# 1) query()
+#           returns lists of rules from the online database,
+#           using a caching mechanism.
+# 
+# 2) cluster()
+#           returns a graph objects based on a cluster of rules
+#           around a central concept.
+# 
+# 3) conceptrange()
+#           find sibling concepts (e.g. fonts, movies, colors,
+#           trees) using a taxonomy graph.
+# 
+# 4) index
+#           object for building and searching cached indices
+#           of shortest paths.
+#
+# 5) cost
+#           object that simplifies the creation of path
+#           search heuristics.
+#
+# =&gt; solver
+#           object for inferring knowledge from the database,
+#           using clusters, indices and ranges.
+
 
 ### CREDITS ####################################################################
 
@@ -193,6 +210,7 @@ __license__   = "GPL"
 import os
 import time
 
+import functools
 
 import hashlib
 import glob
@@ -209,19 +227,22 @@ pp = pprint.pprint
 from random import random
 import requests
 import pdb
+kwdbg = True
+kwlog= True
 
 startimport = time.time()
 
 import linguistics
 import conceptnetreader
 
+# used in search_match_parse()
 import pattern
 import pattern.web
 import pattern.text
 import pattern.text.en
 en = pattern.text.en
 
-import textblob
+# import textblob
 
 import graph
 from graph.cluster import sorted, unique
@@ -405,30 +426,10 @@ if 1:
 
 </t>
 <t tx="karstenw.20230316191528.19">def __repr__(self):
-    s = self.concept1 + " " + self.relation + " " +self.concept2
+    s = "%s(%s)  %s  %s(%s)" % (self.concept1,self.lang1,self.relation,self.concept2,self.lang2)
     if self.context != None:
-        s += " (" + self.context + ")"
+        s += "  (" + self.context + ")"
     return s
-
-</t>
-<t tx="karstenw.20230316191528.2">def cmp_to_key(mycmp):
-    'Convert a cmp= function into a key= function'
-    class K:
-        def __init__(self, obj, *args):
-            self.obj = obj
-        def __lt__(self, other):
-            return mycmp(self.obj, other.obj) &lt; 0
-        def __gt__(self, other):
-            return mycmp(self.obj, other.obj) &gt; 0
-        def __eq__(self, other):
-            return mycmp(self.obj, other.obj) == 0
-        def __le__(self, other):
-            return mycmp(self.obj, other.obj) &lt;= 0
-        def __ge__(self, other):
-            return mycmp(self.obj, other.obj) &gt;= 0
-        def __ne__(self, other):
-            return mycmp(self.obj, other.obj) != 0
-    return K
 
 
 </t>
@@ -448,7 +449,6 @@ if 1:
         rank[rule.concept1] += 1
         rank[rule.concept2] += 1
     return rank
-    
 concepts = property(_concepts)
 
 </t>
@@ -555,15 +555,6 @@ def is_effect(node)   : return node.has_rule("is-effect-of")
 graph.node.is_property = property(is_property)
 graph.node.is_related  = property(is_related)
 graph.node.is_effect   = property(is_effect)
-
-</t>
-<t tx="karstenw.20230316191528.3">def sortlist(thelist, thecompare):
-    if py3:
-        sortkeyfunction = cmp_to_key( thecompare )
-        thelist.sort( key=sortkeyfunction )
-    else:
-        thelist.sort( thecompare )
-
 
 </t>
 <t tx="karstenw.20230316191528.39">def enumerate_rules(node, relation, depth=1, reversed=False):
@@ -757,6 +748,7 @@ heuristic = cost
     self[relation] = cost
 </t>
 <t tx="karstenw.20230316191528.6">def makeunicode(s, srcencoding="utf-8", normalizer="NFC"):
+    # Needed to be redone here for type == typ
     try:
         if typ(s) not in (punicode, pstr):
             s = str( s )
@@ -862,16 +854,18 @@ graph.graph.objects      = graph_objects
 hierarchy = taxonomy
 
 </t>
-<t tx="karstenw.20230316191528.66">class _range(dict):
+<t tx="karstenw.20230316191528.66"># "ConcepRange" is the name of a singleton class in the library.
+# "conceptrange" is the name of the class instance.
+class ConcepRange(dict):
     
     @others
-range = _range()
+conceptrange = ConcepRange()
 
 </t>
 <t tx="karstenw.20230316191528.67">def __init__(self):
     """ Creates a taxonomy from a given concept and filters hyponyms from it.
-    For example: range.typeface -&gt; Times, Helvetica, Arial, Georgio, Verdana, ...
-    For example: range.movie -&gt; Star Wars, Conan The Barbarian, ...
+    For example: conceptrange.typeface -&gt; Times, Helvetica, Arial, Georgio, Verdana, ...
+    For example: conceptrange.movie -&gt; Star Wars, Conan The Barbarian, ...
     The dictionary itself contains settings for how graph.specific() is called.
     """
     self.rules = {
@@ -909,13 +903,11 @@ range = _range()
     h = hashlib.sha1()
     h.update( s )
     return h.hexdigest()
-
-
 </t>
 <t tx="karstenw.20230316191528.70">def __getattr__(self, a):
     """ Each attribute behaves as a list of hyponym nodes.
     Attributes are expected to be singular nouns.
-    Some of these are fine-tuned in the range, others are generic.
+    Some of these are fine-tuned in the conceptrange, others are generic.
     """
     if a in self.rules:
         concept, context, fringe, proper = self.rules[a]
@@ -923,8 +915,7 @@ range = _range()
     elif a == "properties":
         g = cluster(None, context="properties", depth=None, wait=30)
         return sorted(g.keys())
-    elif a == "basic properties" \
-      or a == "basic_properties":
+    elif a in ( "basic properties", "basic_properties" ):
           return basic_properties
     else:
         a = a.replace("_", " ")
@@ -1026,22 +1017,10 @@ name = property(_get_name, _set_name)
     return sorted(concepts, _cmp)
     
 </t>
-<t tx="karstenw.20230316191528.8"># "_range" is the name of a singleton class in the library.
-# "range" is the name of the class instance.
-def range_(start, stop=None, step=1):
-    if stop is None: 
-        stop, start = start, 0
-    cur = start
-    while cur &lt; stop:
-        yield cur
-        cur += step
-
-
-</t>
 <t tx="karstenw.20230316191528.80">def _build_properties_index(): 
     index.build(
         "properties",
-        range.properties,
+        conceptrange.properties,
         cost({"is-property-of" : -0.25,
               "is-same-as"     : -0.5,
               "is-opposite-of" : 10})
@@ -1131,7 +1110,7 @@ solver = _solver()
        query (Dijkstra).
     4) A list of winning concepts is returned (closest first).
     
-    For example: painful &lt;-&gt; range.emotion = shame, envy, pride, anger, jealousy, sadness, fear, anxiety, ...
+    For example: painful &lt;-&gt; conceptrange.emotion = shame, envy, pride, anger, jealousy, sadness, fear, anxiety, ...
     
     The word [properties] can be replaced with another type of concept,
     as long as it is a graph method the solver can call,
@@ -1151,7 +1130,7 @@ solver = _solver()
         # Find paths to the root for each [property]. 
         # The length of the paths at the start of the list is important.
         if concept == root:
-            S = [[] for i in range_(100)]
+            S = [[] for i in range(100)]
         else:
             S = self._retrieve(concept, depth=3, cached=True)
             S = [index.shortest_path(n, root) for n in S]
@@ -1224,7 +1203,7 @@ analogy = _analogy()
     Returns the list of concepts sorted by the relevance score sum.
     
     For example:
-    sword &lt;=&gt; range.animal = hedgehog, scorpion, bee, cat, cheetah, cougar, ...
+    sword &lt;=&gt; conceptrange.animal = hedgehog, scorpion, bee, cat, cheetah, cougar, ...
     
     """
     
@@ -1266,7 +1245,13 @@ analogy = _analogy()
 map_object = __call__
 
 </t>
-<t tx="karstenw.20230316191528.95">def search_match_parse(query, pattern_, parse=lambda x: x, service="google", cached=True, n=2,):
+<t tx="karstenw.20230316191528.95">def search_match_parse(
+        query,
+        pattern_,
+        parse=lambda x: x,
+        service="google",
+        cached=True, n=2,):
+
     """ Parses words from search engine queries that match a given syntactic pattern.
     query   : a Google/Yahoo query. Google queries can include * wildcards. 
     pattern : an en.sentence.find() pattern, e.g. as big as * NN
@@ -1296,7 +1281,8 @@ map_object = __call__
         engine = Bing(license=None, language="en")
 
     collect = []
-    for i in range_(n):
+    for i in range(n):
+        
         if service == "google":
             # search = web.google.search(query, start=i*4, cached=cached)
             for result in engine.search(query, start=i, count=10): #, type=SEARCH, cached=True):
@@ -1318,12 +1304,21 @@ map_object = __call__
                 raise request.error
             for result in request.value:
                 collect.append( result )
-
-    pdb.set_trace()
+    
+    if kwdbg:
+        pdb.set_trace()
     
     for result in collect:
         if result.text:
-            # result.description = result.description.replace(",",", ").replace("  "," ")
+            #
+            # TODO
+            #
+            
+            if result.description:
+                result.description = result.description.replace(",",", ").replace("  "," ")
+            # sntc = en.Sentence( result.description.lower() )
+            
+            
             #match = en.sentence.find(result.description.lower(), pattern_)
             #if len(match) &gt; 0 and len(match[0]) &gt; 0:
             #    x = parse(match[0])
@@ -1335,12 +1330,14 @@ map_object = __call__
     return matches
 
 </t>
-<t tx="karstenw.20230316191528.96">def count(list):
+<t tx="karstenw.20230316191528.96">def count( alist ):
     """ Returns a dictionary with the list items as keys and their count as values.
     """
     d = {}
-    for v in list: d[v]  = 0
-    for v in list: d[v] += 1
+    for v in alist:
+        d[v]  = 0
+    for v in alist:
+        d[v] += 1
     return d
 
 </t>
@@ -1413,20 +1410,20 @@ def suggest_properties(noun, cached=True):
     return count(matches)
 
 </t>
-<t tx="karstenw.20230316191631.1"></t>
-<t tx="karstenw.20230316191639.1"># py3 stuff
-py3 = False
-try:
-    unicode('')
-    punicode = unicode
-    pstr = str
-    punichr = unichr
-except NameError:
-    punicode = str
-    pstr = bytes
-    py3 = True
-    punichr = chr
-    long = int
+<t tx="karstenw.20230316191631.1"># py3 stuff - kill py2
+punicode = str
+pstr = bytes
+py3 = True
+punichr = chr
+long = int
+
+
+def sortlist(thelist, thecompare):
+    if py3:
+        sortkeyfunction = functools.cmp_to_key( thecompare )
+        thelist.sort( key=sortkeyfunction )
+    else:
+        thelist.sort( thecompare )
 
 
 </t>
@@ -1434,6 +1431,7 @@ except NameError:
 # Those we think can easily be translated visually.
 
 basic_properties = [
+    # except the last one, these are pairwise
     "angular",  "round",      "large",    "small",
     "long",     "short",      "bright",   "dark",
     "calm",     "wild",       "chaotic",  "structured",
@@ -1445,7 +1443,8 @@ basic_properties = [
     "heavy",    "light",      "loud",     "quiet",
     "natural",  "artificial", "old",      "new",
     "elegant",  "raw",        "strong",   "weak",
-    "tangible", "abstract",   "thick",    "thin", "repetitive"
+    "tangible", "abstract",   "thick",    "thin",
+    "repetitive"
 ]
 
 </t>
@@ -1517,8 +1516,8 @@ INDEX = os.path.join(os.path.dirname(__file__), "index")
 
 #solver.index = "properties"
 #solver.method = "properties"
-#print solver.sort_by_relevance("dark", range("emotion"))
-#print solver.sort_by_relevance("bright", range("emotion"))
+#print solver.sort_by_relevance("dark", conceptrange("emotion"))
+#print solver.sort_by_relevance("bright", conceptrange("emotion"))
 
 # BETA+
 # - Implemented is-effect-of and has-effect rules.
@@ -1597,7 +1596,8 @@ INDEX = os.path.join(os.path.dirname(__file__), "index")
     if concept == None:
         return rules
 
-    # pdb.set_trace()
+    #if kwdbg:
+    #    pdb.set_trace()
 
     concepts, edges, loadedConcepts = conceptnetreader.query_concept( concept,
                     context=context, maxedges=maxedges, lang=lang, weight=0.5 )
@@ -1618,12 +1618,12 @@ INDEX = os.path.join(os.path.dirname(__file__), "index")
         rules.append( rule )
         
     return rules
-
 query = query_cnr
 
 </t>
 <t tx="karstenw.20230417110004.1"># for whoever effed up the def type() below...
 typ = type
+
 
 
 </t>

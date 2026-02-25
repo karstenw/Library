@@ -43,10 +43,10 @@ l = canvas.append("lily.tif")
 # l.filter("kaleidoscope", dx=0, dy=0, count=3)
 
 # ok
-# l.filter("circularwrap", radius=72, angle=241)
+# l.filter("circularwrap", radius=19, angle=241)
 
 # ok
-# l.filter("twirl", dx=0, dy=0, radius=150, angle=171)
+# l.filter("twirl", dx=0, dy=0, radius=72, angle=120)
 
 # ok
 # l.filter("circlesplash", dx=55, dy=80, radius=34)
@@ -83,7 +83,7 @@ l = canvas.append("lily.tif")
 
 
 # ok
-# l.filter("pagecurl", time=0.4, radius=34, angle=275, back=None)
+# l.filter("pagecurl", time=0.4, radius=34, angle=251, back=None)
 
 
 # ok
