@@ -20,7 +20,7 @@
 <v t="karstenw.20230316191528.7"><vh>hashFromString</vh></v>
 </v>
 <v t="karstenw.20230316191737.1"><vh>+ BASIC PROPERTIES +</vh></v>
-<v t="karstenw.20230316191816.1" a="E"><vh>+ Cache +</vh>
+<v t="karstenw.20230316191816.1"><vh>+ Cache +</vh>
 <v t="karstenw.20230403165828.1"><vh>_newpath  ## UNUSED ##</vh></v>
 <v t="karstenw.20230316191528.9"><vh>_path</vh></v>
 <v t="karstenw.20230316191528.10"><vh>cache</vh></v>
@@ -29,8 +29,8 @@
 <v t="karstenw.20230316191528.13"><vh>clear_cache</vh></v>
 <v t="karstenw.20230505121633.1"><vh>cachefiles</vh></v>
 </v>
-<v t="karstenw.20230318130644.1" a="E"><vh>+ API +</vh>
-<v t="karstenw.20230505102222.1" a="E"><vh>+ OFF +</vh>
+<v t="karstenw.20230318130644.1"><vh>+ API +</vh>
+<v t="karstenw.20230505102222.1"><vh>+ OFF +</vh>
 <v t="karstenw.20230316191528.14"><vh>is_robot - OFF</vh></v>
 <v t="karstenw.20230330102024.1"><vh>+ QUERY CONCEPTNET API +</vh>
 <v t="karstenw.20230330142517.1"><vh>download_url</vh></v>
@@ -41,7 +41,7 @@
 <v t="karstenw.20230329150748.1"><vh>get_next_page</vh></v>
 <v t="karstenw.20230330104408.1"><vh>get_all_pages</vh></v>
 <v t="karstenw.20230329135420.1"><vh>query_cn   --   api.conceptnet.io</vh></v>
-<v t="karstenw.20230403170112.1" a="E"><vh>+ NEW STUFF UNSORTED +</vh>
+<v t="karstenw.20230403170112.1"><vh>+ NEW STUFF UNSORTED +</vh>
 <v t="karstenw.20230403170027.1"><vh>getoldwords</vh></v>
 <v t="karstenw.20230403170129.1"><vh>getpatternwords</vh></v>
 <v t="karstenw.20230403170137.1"><vh>scancache</vh></v>
@@ -52,23 +52,24 @@
 </v>
 <v t="karstenw.20230316191528.15"><vh>normalize</vh></v>
 <v t="karstenw.20230316191528.16"><vh>class InternetError</vh></v>
-<v t="karstenw.20230316191528.17" a="E"><vh>class Rule</vh>
+<v t="karstenw.20230316191528.17"><vh>class Rule</vh>
 <v t="karstenw.20230316191528.18"><vh>__init__</vh></v>
 <v t="karstenw.20230316191528.19"><vh>__repr__</vh></v>
 </v>
-<v t="karstenw.20230316191528.20" a="E"><vh>class Rules</vh>
+<v t="karstenw.20230316191528.20"><vh>class Rules</vh>
 <v t="karstenw.20230316191528.21"><vh>_concepts</vh></v>
 <v t="karstenw.20230316191528.22"><vh>disambiguate</vh></v>
 </v>
 </v>
 <v t="karstenw.20230417110310.1" a="E"><vh>+ QUERY SQLITE +</vh>
+<v t="karstenw.20260227105342.1"><vh>unifyContext</vh></v>
 <v t="karstenw.20230417105918.1"><vh>query_cnr</vh></v>
 </v>
-<v t="karstenw.20230316194255.1" a="E"><vh>+ CONCEPT CLUSTER +</vh>
+<v t="karstenw.20230316194255.1"><vh>+ CONCEPT CLUSTER +</vh>
 <v t="karstenw.20230316191528.24"><vh>has_rule</vh></v>
 <v t="karstenw.20230316191528.25"><vh>is_a</vh></v>
 </v>
-<v t="karstenw.20230316194456.1" a="E"><vh>+ NODE RULE RETRIEVAL +</vh>
+<v t="karstenw.20230316194456.1"><vh>+ NODE RULE RETRIEVAL +</vh>
 <v t="karstenw.20230316191528.39"><vh>enumerate_rules</vh></v>
 <v t="karstenw.20230316191528.40"><vh>specific parts opposites properties associations aliases effects type whole objects causes</vh></v>
 </v>
@@ -93,7 +94,7 @@
 </v>
 <v t="karstenw.20230316194702.1"><vh>+ TAXONOMY +</vh>
 <v t="karstenw.20230316191528.65"><vh>taxonomy</vh></v>
-<v t="karstenw.20230316191528.66" a="E"><vh>class ConcepRange</vh>
+<v t="karstenw.20230316191528.66"><vh>class ConcepRange</vh>
 <v t="karstenw.20230316191528.67"><vh>__init__</vh></v>
 <v t="karstenw.20230316191528.68"><vh>append</vh></v>
 <v t="karstenw.20230316191528.69"><vh>_hyponyms</vh></v>
@@ -113,20 +114,20 @@
 </v>
 <v t="karstenw.20230316191528.80"><vh>_build_properties_index</vh></v>
 </v>
-<v t="karstenw.20230316194837.1" a="E"><vh>+ SOLVER +</vh>
+<v t="karstenw.20230316194837.1"><vh>+ SOLVER +</vh>
 <v t="karstenw.20230316191528.81"><vh>add_method</vh></v>
 <v t="karstenw.20230316191528.82"><vh>score</vh></v>
 <v t="karstenw.20230316191528.83"><vh>class IndexError</vh></v>
 <v t="karstenw.20230316191528.84"><vh>class MethodError</vh></v>
 <v t="karstenw.20230316191528.85"><vh>class analysis</vh></v>
-<v t="karstenw.20230316191528.86" a="E"><vh>class _solver</vh>
+<v t="karstenw.20230316191528.86"><vh>class _solver</vh>
 <v t="karstenw.20230316191528.87"><vh>__init__</vh></v>
 <v t="karstenw.20230316191528.88"><vh>_prepare</vh></v>
 <v t="karstenw.20230316191528.89"><vh>_retrieve</vh></v>
 <v t="karstenw.20230316191528.90"><vh>sort_by_relevance</vh></v>
 </v>
 </v>
-<v t="karstenw.20230316194920.1" a="E"><vh>+ ANALOGY +</vh>
+<v t="karstenw.20230316194920.1"><vh>+ ANALOGY +</vh>
 <v t="karstenw.20230316191528.91"><vh>class _analogy</vh>
 <v t="karstenw.20230316191528.92"><vh>__init__</vh></v>
 <v t="karstenw.20230316191528.93"><vh>_best_first</vh></v>
@@ -138,11 +139,11 @@
 <v t="karstenw.20230316191528.96"><vh>count</vh></v>
 <v t="karstenw.20230316191528.97"><vh>clean</vh></v>
 </v>
-<v t="karstenw.20230316195011.1" a="E"><vh>+ SIMILE +</vh>
+<v t="karstenw.20230316195011.1"><vh>+ SIMILE +</vh>
 <v t="karstenw.20230316191528.98"><vh>suggest_properties</vh></v>
 <v t="karstenw.20230316191528.99"><vh>suggest_objects</vh></v>
 </v>
-<v t="karstenw.20230316195027.1" a="E"><vh>+ COMPARATIVE +</vh>
+<v t="karstenw.20230316195027.1"><vh>+ COMPARATIVE +</vh>
 <v t="karstenw.20230316191528.100" a="E"><vh>class compare_concepts</vh>
 <v t="karstenw.20230316191528.101"><vh>__init__</vh></v>
 <v t="karstenw.20230316191528.102"><vh>graph</vh></v>
@@ -151,6 +152,27 @@
 <v t="karstenw.20230316191528.104"><vh>suggest_comparisons</vh></v>
 </v>
 <v t="karstenw.20230316195056.1"><vh>+ OUTRO +</vh></v>
+</v>
+<v t="karstenw.20260227123056.1" a="E"><vh>Examples</vh>
+<v t="karstenw.20260227123100.1"><vh>@clean perception_example1.py</vh>
+<v t="karstenw.20260227123205.1"><vh>Declarations</vh></v>
+<v t="karstenw.20260227123205.2"><vh>load</vh></v>
+<v t="karstenw.20260227123205.3"><vh>draw</vh></v>
+</v>
+<v t="karstenw.20260227123116.1" a="E"><vh>@clean perception_example1a.py</vh>
+<v t="karstenw.20260227123301.1"><vh>Declarations</vh></v>
+<v t="karstenw.20260227123301.2"><vh>load</vh></v>
+<v t="karstenw.20260227123301.3"><vh>draw</vh></v>
+</v>
+<v t="karstenw.20260227123138.1"><vh>@clean perception_example2.py</vh>
+<v t="karstenw.20260227123329.1"><vh>Declarations</vh></v>
+</v>
+<v t="karstenw.20260227123149.1"><vh>@clean perception_example3.py</vh>
+<v t="karstenw.20260227124051.1"><vh>Declarations</vh></v>
+</v>
+<v t="karstenw.20260227123157.1"><vh>@clean perception_example4-test.py</vh>
+<v t="karstenw.20260227124054.1"><vh>Declarations</vh></v>
+</v>
 </v>
 </v>
 </vnodes>
@@ -228,12 +250,12 @@ from random import random
 import requests
 import pdb
 kwdbg = True
-kwlog= True
+kwlog = True
 
 startimport = time.time()
 
 import linguistics
-import conceptnetreader
+import conceptnetreader as cnr
 
 # used in search_match_parse()
 import pattern
@@ -248,7 +270,7 @@ import graph
 from graph.cluster import sorted, unique
 
 stopimport = time.time()
-if 1:
+if kwlog:
     print("perception import linguistics et al: %.3f" % (stopimport-startimport,)  )
 
 </t>
@@ -272,7 +294,11 @@ if 1:
     Requires the Web, Linguistics and Graph libraries.
     T. De Smedt, F. De Bleser
     """
-    matches = search_match_parse(
+    relspaces = relation.replace("-"," ")
+    arg1 = "/%s/" % (relspaces,)
+    arg2 = "NN %s (a) (an) (JJ) NN" % (relspaces,)
+    
+    matches = search_match_parse( # arg1, arg2, 
         "\"" + relation.replace("-"," ") + "\"",
         "NN " + relation.replace("-"," ") + " (a) (an) (JJ) NN",
         lambda chunk_: (clean(chunk_[0][0]), clean(chunk_[-1][0])), # A is bigger than B --&gt; (A, B)
@@ -683,9 +709,10 @@ graph.graph.add_rule = add_rule
         graph._ctx = _ctx
     except:
         pass
-    # query_cnr(concept, relation=None, context=None, depth=1, maxedges=0, wait=2, lang="en")
     rules = query(concept, relation, context, depth, maxedges, wait, lang)
-
+    
+    # pdb.set_trace()
+    
     concept = rules.disambiguate(concept)
     g = graph.create()
     style(g)
@@ -1305,7 +1332,7 @@ map_object = __call__
             for result in request.value:
                 collect.append( result )
     
-    if kwdbg:
+    if kwdbg and 0:
         pdb.set_trace()
     
     for result in collect:
@@ -1342,8 +1369,8 @@ map_object = __call__
 
 </t>
 <t tx="karstenw.20230316191528.97">def clean(word):
-    word = word.strip(",;:.?!'`\"-[()]")
-    word = word.strip(u"‘“")
+    word = word.strip( ",;:.?!'`\"-[()]" )
+    word = word.strip( "‘“" )
     if word[-2:] in ("'s", "’s"):
         word = word[:-2]
     if 0:
@@ -1581,7 +1608,7 @@ INDEX = os.path.join(os.path.dirname(__file__), "index")
 </t>
 <t tx="karstenw.20230403170157.1">@
 </t>
-<t tx="karstenw.20230417105918.1">def query_cnr(concept, relation=None, context=None, depth=1, maxedges=0, wait=2, lang="en"):
+<t tx="karstenw.20230417105918.1">def query_cnr(concept, relation=None, context=None, depth=1, maxedges=500, wait=2, lang="en", weight=0.5):
     
     """ Returns search results from sqlite database.
 
@@ -1596,27 +1623,39 @@ INDEX = os.path.join(os.path.dirname(__file__), "index")
     if concept == None:
         return rules
 
-    #if kwdbg:
-    #    pdb.set_trace()
+    if kwdbg and 0:
+        pdb.set_trace()
 
-    concepts, edges, loadedConcepts = conceptnetreader.query_concept( concept,
-                    context=context, maxedges=maxedges, lang=lang, weight=0.5 )
+    concepts, edges, _ = cnr.query_concept( concept,
+                                            context=context, maxedges=maxedges,
+                                            lang=lang, weight=weight )
 
     if not edges:
         return rules
     
     if not concepts:
         return rules
-
-    context = concepts[0].get('context', '')
+    
+    context = ""
+    if concepts:
+        context = concepts[0].context
 
     for edge in edges:
-        concept1lang,concept1name,relation,concept2lang,concept2name,weight,rev,sym = edge
-        rule = Rule( concept1name, relation, concept2name,
-                     concept1lang, concept2lang,
-                     context, weight=weight )
-        rules.append( rule )
+        # concept1lang,concept1name,relation,concept2lang,concept2name,weight,rev,sym = edge
         
+        # see if FullConcept edges can be used
+        if 1:
+            # edges are FullConcept namedtuples
+            idedge,concept1id,concept1name,concept1lang,concept1context,relationid,relationname,weight,concept2id,concept2name,concept2lang,concept2context = edge
+        
+            # context 
+            context = unifyContext( concept1context, concept2context )
+            rule = Rule( concept1name, relationname, concept2name,
+                         concept1lang, concept2lang,
+                         context, weight )
+            rules.append( rule )
+        else:
+            rules.append( edge )
     return rules
 query = query_cnr
 
@@ -1640,6 +1679,201 @@ typ = type
     return f
 
 
+</t>
+<t tx="karstenw.20260227105342.1">def unifyContext( *args ):
+    """Unify and sort all cotexts."""
+    allItems = set()
+    for arg in args:
+        items = arg.split(",")
+        for item in items:
+            if item != "":
+                allItems.add( item )
+    allItems = list(allItems)
+    
+    allItems.sort()
+    result = ','.join( allItems)
+    if 0 and kwdbg:
+        # pdb.set_trace()
+        print("\nunifyContext()")
+        pp( args )
+        pp( result )
+    return result
+
+
+</t>
+<t tx="karstenw.20260227123056.1"></t>
+<t tx="karstenw.20260227123100.1">@language python
+@tabwidth -4
+@others
+</t>
+<t tx="karstenw.20260227123116.1">@language python
+@tabwidth -4
+@others
+</t>
+<t tx="karstenw.20260227123138.1">@others
+@language python
+@tabwidth -4
+</t>
+<t tx="karstenw.20260227123149.1"># SIMILE
+
+@others
+@language python
+@tabwidth -4
+</t>
+<t tx="karstenw.20260227123157.1"># PERCEPTION BROWSER
+
+@others
+@language python
+@tabwidth -4
+</t>
+<t tx="karstenw.20260227123205.1"># PERCEPTION BROWSER
+
+try:
+    perception = ximport("perception")
+except ImportError:
+    perception = ximport("__init__")
+    # reload(perception)
+
+g = None
+
+</t>
+<t tx="karstenw.20260227123205.2">def load(node, lang="en"):
+    
+    global g
+    # Load a new cluster of nodes surrounding the clicked node.
+    # Note the "maxedges" parameter - you won't find it documented.
+    # We use it here to cap the number of rules returned.
+    # A fast graph is more important right now than all of the data.
+    g = perception.cluster(str(node), depth=2, maxedges=200, labeled=1, lang=lang)
+    g.distance = 4.0
+    g.layout.n = 500
+    g.styles.apply()
+    g.layout.force = 0.001 # lower if nodes are twitching
+    g.events.click = load
+
+targets = (
+    ("House",   'en'),
+    ("Casa",    'it'),
+    ("Huis",    'nl'),
+    ("Maison",  'fr'),
+    ("Haus",    'de'),
+    ("Nada",    'es'),
+    ("domus",   'la'))
+
+p = choice( targets )
+# p = ("House",   'en')
+print( p )
+load( *p )
+
+
+size(1150, 1150)
+speed(20)
+</t>
+<t tx="karstenw.20260227123205.3">def draw():
+    g.update()
+    g.draw(traffic=True, directed=True)
+
+
+</t>
+<t tx="karstenw.20260227123301.1"># PERCEPTION BROWSER
+
+import pdb
+
+try:
+    perception = ximport("perception")
+except ImportError:
+    perception = ximport("__init__")
+    # reload(perception)
+
+g = None
+</t>
+<t tx="karstenw.20260227123301.2">def load( concept ):
+    
+    global g
+    print("load:", concept)
+    
+    # pdb.set_trace()
+    
+    # Load a new cluster of nodes surrounding the clicked node.
+    # Note the "maxedges" parameter - you won't find it documented.
+    # We use it here to cap the number of rules returned.
+    # A fast graph is more important right now than all of the data.
+    g = perception.cluster( str(concept), depth=2, maxedges=60, labeled=1, lang="")
+    g.distance = 2.9
+    g.layout.n = 500
+    g.styles.apply()
+    g.layout.force = 0.001 # lower if nodes are twitching
+    g.events.click = load
+
+load("Casa")
+
+#size(600, 600)
+
+speed(16)
+</t>
+<t tx="karstenw.20260227123301.3">def draw():
+    g.update()
+    g.draw(traffic=False, directed=False)
+</t>
+<t tx="karstenw.20260227123329.1"># COMPARATIVES
+
+try:
+    perception = ximport("perception")
+except ImportError:
+    perception = ximport("__init__")
+    # reload(perception)
+
+size(1000, 1000)
+
+p = "is-more-important-than"
+cmp = perception.compare_concepts(p)
+
+# The return value is a list:
+print( "Concepts:" )
+for concept1, concept2 in cmp:
+    print( concept1, p, concept2 )
+print( "Concepts ENDE" )
+
+# Creating a graph from the results is easy enough.
+# Typically, the graph will contain different clusters
+# that are disconnected from each other.
+# We take the biggest cluster.
+g = cmp.graph()
+# g = g.split()[0] # increase 0 for more clusters
+g.solve()
+g.styles.apply()
+g.draw(weighted=True, directed=True, traffic=3)
+
+# Print out the results,
+# with the most relevant first.
+for concept1, comparisons in cmp.rank(g):
+    for concept2 in comparisons:
+        print( concept1, cmp.relation, concept2 )
+</t>
+<t tx="karstenw.20260227124051.1">import pprint
+pp=pprint.pprint
+
+try:
+    perception = ximport("perception")
+except ImportError:
+    perception = ximport("__init__")
+    # reload(perception)
+
+# Use Google search engine to look for properties:
+q = "queen"
+results = perception.suggest_properties(q)
+print("results:", results)
+for property in results:
+    count = "(" + str(results[property]) + ")"
+    print(property, "is-property-of", q, count)
+
+</t>
+<t tx="karstenw.20260227124054.1">import pprint
+perception = ximport("perception")
+
+g = perception.query('apfel', lang="de")
+
+pprint.pprint( g )
 </t>
 </tnodes>
 </leo_file>

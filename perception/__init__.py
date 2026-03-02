@@ -66,12 +66,12 @@ from random import random
 import requests
 import pdb
 kwdbg = True
-kwlog= True
+kwlog = True
 
 startimport = time.time()
 
 import linguistics
-import conceptnetreader
+import conceptnetreader as cnr
 
 # used in search_match_parse()
 import pattern
@@ -86,7 +86,7 @@ import graph
 from graph.cluster import sorted, unique
 
 stopimport = time.time()
-if 1:
+if kwlog:
     print("perception import linguistics et al: %.3f" % (stopimport-startimport,)  )
 
 # for whoever effed up the def type() below...
@@ -305,7 +305,27 @@ class Rules(list):
         return self._root
 
 
-def query_cnr(concept, relation=None, context=None, depth=1, maxedges=0, wait=2, lang="en"):
+def unifyContext( *args ):
+    """Unify and sort all cotexts."""
+    allItems = set()
+    for arg in args:
+        items = arg.split(",")
+        for item in items:
+            if item != "":
+                allItems.add( item )
+    allItems = list(allItems)
+    
+    allItems.sort()
+    result = ','.join( allItems)
+    if 0 and kwdbg:
+        # pdb.set_trace()
+        print("\nunifyContext()")
+        pp( args )
+        pp( result )
+    return result
+
+
+def query_cnr(concept, relation=None, context=None, depth=1, maxedges=500, wait=2, lang="en", weight=0.5):
     
     """ Returns search results from sqlite database.
 
@@ -320,27 +340,39 @@ def query_cnr(concept, relation=None, context=None, depth=1, maxedges=0, wait=2,
     if concept == None:
         return rules
 
-    #if kwdbg:
-    #    pdb.set_trace()
+    if kwdbg and 0:
+        pdb.set_trace()
 
-    concepts, edges, loadedConcepts = conceptnetreader.query_concept( concept,
-                    context=context, maxedges=maxedges, lang=lang, weight=0.5 )
+    concepts, edges, _ = cnr.query_concept( concept,
+                                            context=context, maxedges=maxedges,
+                                            lang=lang, weight=weight )
 
     if not edges:
         return rules
     
     if not concepts:
         return rules
-
-    context = concepts[0].get('context', '')
+    
+    context = ""
+    if concepts:
+        context = concepts[0].context
 
     for edge in edges:
-        concept1lang,concept1name,relation,concept2lang,concept2name,weight,rev,sym = edge
-        rule = Rule( concept1name, relation, concept2name,
-                     concept1lang, concept2lang,
-                     context, weight=weight )
-        rules.append( rule )
+        # concept1lang,concept1name,relation,concept2lang,concept2name,weight,rev,sym = edge
         
+        # see if FullConcept edges can be used
+        if 1:
+            # edges are FullConcept namedtuples
+            idedge,concept1id,concept1name,concept1lang,concept1context,relationid,relationname,weight,concept2id,concept2name,concept2lang,concept2context = edge
+        
+            # context 
+            context = unifyContext( concept1context, concept2context )
+            rule = Rule( concept1name, relationname, concept2name,
+                         concept1lang, concept2lang,
+                         context, weight )
+            rules.append( rule )
+        else:
+            rules.append( edge )
     return rules
 query = query_cnr
 
@@ -541,9 +573,10 @@ def cluster(concept, relation=None, context=None, author=None, depth=2,
         graph._ctx = _ctx
     except:
         pass
-    # query_cnr(concept, relation=None, context=None, depth=1, maxedges=0, wait=2, lang="en")
     rules = query(concept, relation, context, depth, maxedges, wait, lang)
-
+    
+    # pdb.set_trace()
+    
     concept = rules.disambiguate(concept)
     g = graph.create()
     style(g)
@@ -1118,7 +1151,7 @@ def search_match_parse(
             for result in request.value:
                 collect.append( result )
     
-    if kwdbg:
+    if kwdbg and 0:
         pdb.set_trace()
     
     for result in collect:
@@ -1153,8 +1186,8 @@ def count( alist ):
     return d
 
 def clean(word):
-    word = word.strip(",;:.?!'`\"-[()]")
-    word = word.strip(u"‘“")
+    word = word.strip( ",;:.?!'`\"-[()]" )
+    word = word.strip( "‘“" )
     if word[-2:] in ("'s", "’s"):
         word = word[:-2]
     if 0:
@@ -1233,7 +1266,11 @@ class compare_concepts(list):
         Requires the Web, Linguistics and Graph libraries.
         T. De Smedt, F. De Bleser
         """
-        matches = search_match_parse(
+        relspaces = relation.replace("-"," ")
+        arg1 = "/%s/" % (relspaces,)
+        arg2 = "NN %s (a) (an) (JJ) NN" % (relspaces,)
+        
+        matches = search_match_parse( # arg1, arg2, 
             "\"" + relation.replace("-"," ") + "\"",
             "NN " + relation.replace("-"," ") + " (a) (an) (JJ) NN",
             lambda chunk_: (clean(chunk_[0][0]), clean(chunk_[-1][0])), # A is bigger than B --> (A, B)

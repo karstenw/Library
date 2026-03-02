@@ -4,9 +4,10 @@ try:
     perception = ximport("perception")
 except ImportError:
     perception = ximport("__init__")
-    reload(perception)
+    # reload(perception)
 
 g = None
+
 def load(node, lang="en"):
     
     global g
@@ -14,9 +15,9 @@ def load(node, lang="en"):
     # Note the "maxedges" parameter - you won't find it documented.
     # We use it here to cap the number of rules returned.
     # A fast graph is more important right now than all of the data.
-    g = perception.cluster(str(node), depth=2, maxedges=999, labeled=1, lang=lang)
+    g = perception.cluster(str(node), depth=2, maxedges=200, labeled=1, lang=lang)
     g.distance = 4.0
-    g.layout.n = 2000
+    g.layout.n = 500
     g.styles.apply()
     g.layout.force = 0.001 # lower if nodes are twitching
     g.events.click = load
@@ -37,7 +38,7 @@ load( *p )
 
 
 size(1150, 1150)
-speed(60)
+speed(20)
 def draw():
     g.update()
     g.draw(traffic=True, directed=True)
