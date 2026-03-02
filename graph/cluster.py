@@ -24,6 +24,7 @@ def sortnodes_zero( a, b ):
 
 #--- LIST OPERATIONS ---------------------------------------------------------------------------------
 
+# UNUSED - apart from cmp this is like the built-in sorted
 def sorted(thelist, cmp=None, reversed=False):
     """ Returns a sorted copy of the list.
     """
