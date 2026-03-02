@@ -1,3 +1,10 @@
+
+"""
+These ling*.py scripts (ling_cnr_query.py, ling_notwork3-pat.py, lingpat.py,
+lingperception.py, lingtest.py, lingwn.py ) are my test and tryout scripts for the linguistics library.
+"""
+
+
 import sys
 import os
 import pprint
