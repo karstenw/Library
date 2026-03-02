@@ -200,7 +200,8 @@ class style:
         s = style(self.name, self._ctx)
         for attr in self.__dict__: 
             v = self.__dict__[attr]
-            if self._ctx and isinstance(v, self.fill.__class__): v = v.copy()
+            if self._ctx and isinstance(v, self.fill.__class__):
+                v = v.copy()
             s.__dict__[attr] = v
         if name != None: 
             s.name = name
