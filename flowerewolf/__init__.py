@@ -24,7 +24,8 @@ from nodebox.util import random, choice
 # need to import linguistics first 
 # sets up sys.path and corpus/data folders for the sublibs
 import linguistics
-FlowerWord = linguistics.FlowerWord
+FlowerWord = linguistics.FlowerWord.FlowerWord
+
 
 import pattern
 import pattern.text
