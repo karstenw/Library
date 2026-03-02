@@ -10,14 +10,14 @@
 <find_panel_settings/>
 <vnodes>
 <v t="karstenw.20230319195648.2" a="E"><vh>graph</vh>
-<v t="karstenw.20230319195720.1"><vh>@clean __init__.py</vh>
+<v t="karstenw.20230319195720.1" a="E"><vh>@clean __init__.py</vh>
 <v t="karstenw.20230319195736.1"><vh>Declarations</vh></v>
 <v t="karstenw.20230319202717.1"><vh>py3</vh>
 <v t="karstenw.20230319202717.2"><vh>py3 stuff</vh></v>
 <v t="karstenw.20230319202717.4"><vh>sortlist</vh></v>
 <v t="karstenw.20230319203345.1"><vh>sortnodes_zero</vh></v>
 </v>
-<v t="karstenw.20230319195736.2"><vh>class node</vh>
+<v t="karstenw.20230319195736.2" a="E"><vh>class node</vh>
 <v t="karstenw.20230319195736.3"><vh>__init__</vh></v>
 <v t="karstenw.20230319195736.4"><vh>_edges</vh></v>
 <v t="karstenw.20230319195736.5"><vh>_is_leaf</vh></v>
@@ -47,7 +47,7 @@
 <v t="karstenw.20230319195736.27"><vh>_get_length</vh></v>
 <v t="karstenw.20230319195736.28"><vh>_set_length</vh></v>
 </v>
-<v t="karstenw.20230319195736.29"><vh>class graph</vh>
+<v t="karstenw.20230319195736.29" a="E"><vh>class graph</vh>
 <v t="karstenw.20230319195736.30"><vh>__init__</vh></v>
 <v t="karstenw.20230319195736.31"><vh>_get_distance</vh></v>
 <v t="karstenw.20230319195736.32"><vh>_set_distance</vh></v>
@@ -102,18 +102,18 @@
 <v t="karstenw.20230329160917.1"><vh>@clean cluster.py</vh>
 <v t="karstenw.20230329160929.1"><vh>Declarations</vh></v>
 <v t="karstenw.20230518183122.1"><vh>py3</vh></v>
-<v t="karstenw.20230329160948.1" a="E"><vh>+ LIST OPERATIONS +</vh>
+<v t="karstenw.20230329160948.1"><vh>+ LIST OPERATIONS +</vh>
 <v t="karstenw.20230329160929.2"><vh>sorted</vh></v>
 <v t="karstenw.20230329160929.3"><vh>unique</vh></v>
 </v>
-<v t="karstenw.20230329161013.1" a="E"><vh>+ SET THEORY +</vh>
+<v t="karstenw.20230329161013.1"><vh>+ SET THEORY +</vh>
 <v t="karstenw.20230329160929.4"><vh>flatten</vh></v>
 <v t="karstenw.20230329160929.5"><vh>intersection</vh></v>
 <v t="karstenw.20230329160929.6"><vh>union</vh></v>
 <v t="karstenw.20230329160929.7"><vh>difference</vh></v>
 </v>
 <v t="karstenw.20230329160929.8"><vh>subgraph</vh></v>
-<v t="karstenw.20230329161057.1" a="E"><vh>+ CLIQUE +</vh>
+<v t="karstenw.20230329161057.1"><vh>+ CLIQUE +</vh>
 <v t="karstenw.20230329160929.9"><vh>is_clique</vh></v>
 <v t="karstenw.20230329160929.10"><vh>clique</vh></v>
 <v t="karstenw.20230329160929.11"><vh>cliques</vh></v>
@@ -122,11 +122,11 @@
 </v>
 <v t="karstenw.20230329161629.1"><vh>@clean event.py</vh>
 <v t="karstenw.20230329161638.1"><vh>Declarations</vh></v>
-<v t="karstenw.20230329161638.2" a="E"><vh>class Point</vh>
+<v t="karstenw.20230329161638.2"><vh>class Point</vh>
 <v t="karstenw.20230329161638.3"><vh>__init__</vh></v>
 </v>
-<v t="karstenw.20230329161815.1"><vh>+ GRAPH HOVER/CLICK/DRAG EVENTS +</vh>
-<v t="karstenw.20230329161638.4"><vh>class events</vh>
+<v t="karstenw.20230329161815.1" a="E"><vh>+ GRAPH HOVER/CLICK/DRAG EVENTS +</vh>
+<v t="karstenw.20230329161638.4" a="E"><vh>class events</vh>
 <v t="karstenw.20230329161638.5"><vh>__init__</vh></v>
 <v t="karstenw.20230329161638.6"><vh>copy</vh></v>
 <v t="karstenw.20230329161638.7"><vh>_mouse</vh></v>
@@ -146,7 +146,7 @@
 </v>
 </v>
 </v>
-<v t="karstenw.20230329162253.1" a="E"><vh>@clean layout.py</vh>
+<v t="karstenw.20230329162253.1"><vh>@clean layout.py</vh>
 <v t="karstenw.20230329162306.1"><vh>Declarations</vh></v>
 <v t="karstenw.20230329162306.2"><vh>class Point</vh>
 <v t="karstenw.20230329162306.3"><vh>__init__</vh></v>
@@ -164,8 +164,8 @@
 <v t="karstenw.20230329162306.13"><vh>refresh</vh></v>
 </v>
 </v>
-<v t="karstenw.20230329162416.1"><vh>+ GRAPH CIRCLE LAYOUT +</vh>
-<v t="karstenw.20230329162306.14"><vh>class circle_layout</vh>
+<v t="karstenw.20230329162416.1" a="E"><vh>+ GRAPH CIRCLE LAYOUT +</vh>
+<v t="karstenw.20230329162306.14" a="E"><vh>class circle_layout</vh>
 <v t="karstenw.20230329162306.15"><vh>__init__</vh></v>
 <v t="karstenw.20230329162306.16"><vh>_get_orbits</vh></v>
 <v t="karstenw.20230329162306.17"><vh>_set_orbits</vh></v>
@@ -203,7 +203,7 @@
 <v t="karstenw.20230329163024.3"><vh>class NoConvergenceError</vh></v>
 <v t="karstenw.20230329163024.4"><vh>eigenvector_centrality</vh></v>
 </v>
-<v t="karstenw.20230329163234.1"><vh>@clean style.py</vh>
+<v t="karstenw.20230329163234.1" a="E"><vh>@clean style.py</vh>
 <v t="karstenw.20230329163243.1"><vh>Declarations</vh></v>
 <v t="karstenw.20230507112117.1"><vh>Py3 &amp; makeunicode</vh></v>
 <v t="karstenw.20230329163243.2"><vh>class styles</vh>
@@ -222,7 +222,7 @@
 <v t="karstenw.20230329163243.14"><vh>apply</vh></v>
 <v t="karstenw.20230329163243.15"><vh>copy</vh></v>
 </v>
-<v t="karstenw.20230329163243.16"><vh>class style</vh>
+<v t="karstenw.20230329163243.16" a="E"><vh>class style</vh>
 <v t="karstenw.20230329163243.17"><vh>__init__</vh></v>
 <v t="karstenw.20230329163243.18"><vh>copy</vh></v>
 </v>
@@ -242,7 +242,7 @@
 <v t="karstenw.20230507120759.1"><vh>Declarations</vh></v>
 <v t="karstenw.20250827122608.1"><vh>script</vh></v>
 </v>
-<v t="karstenw.20230507120741.1"><vh>@clean graph_example2.py</vh>
+<v t="karstenw.20230507120741.1" a="E"><vh>@clean graph_example2.py</vh>
 <v t="karstenw.20230507120757.1"><vh>Declarations</vh></v>
 <v t="karstenw.20250827122640.1"><vh>script</vh></v>
 </v>
@@ -315,11 +315,14 @@ import pdb
 from functools import cmp_to_key
 
 import linguistics
+
 import pattern
 import pattern.text
 import pattern.text.en
 en = pattern.text.en
 wordnet = en.wordnet
+
+import conceptnetreader as cnr
 
 from . import cluster
 from . import event
@@ -1398,7 +1401,8 @@ def partition(graph):
     return g
 
 </t>
-<t tx="karstenw.20230329160929.2">def sorted(thelist, cmp=None, reversed=False):
+<t tx="karstenw.20230329160929.2"># UNUSED - apart from cmp this is like the built-in sorted
+def sorted(thelist, cmp=None, reversed=False):
     """ Returns a sorted copy of the list.
     """
     thelist = [x for x in thelist]
@@ -1594,7 +1598,7 @@ wordnet = en.wordnet
 
 </t>
 <t tx="karstenw.20230329161638.12">def click(self, node):
-    
+    # print("event.events.click(%s)" % (str(node),))
     pass
 
 </t>
@@ -2570,7 +2574,8 @@ class style:
     s = style(self.name, self._ctx)
     for attr in self.__dict__: 
         v = self.__dict__[attr]
-        if self._ctx and isinstance(v, self.fill.__class__): v = v.copy()
+        if self._ctx and isinstance(v, self.fill.__class__):
+            v = v.copy()
         s.__dict__[attr] = v
     if name != None: 
         s.name = name
