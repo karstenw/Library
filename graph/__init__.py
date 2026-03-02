@@ -23,11 +23,14 @@ import pdb
 from functools import cmp_to_key
 
 import linguistics
+
 import pattern
 import pattern.text
 import pattern.text.en
 en = pattern.text.en
 wordnet = en.wordnet
+
+import conceptnetreader as cnr
 
 from . import cluster
 from . import event
