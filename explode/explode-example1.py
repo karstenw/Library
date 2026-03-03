@@ -22,9 +22,9 @@ explode = ximport("explode")
 # reload(explode)
 
 
-cellsize = 854
-halfsize = int( cellsize / 2 )
-size( cellsize, cellsize )
+W, H = 1280, 1024
+cx, cy = int(round(W/2)),  int(round(H/2))
+size( W, H )
 background( 0.89 )
 
 font("Arial", 10)
@@ -56,8 +56,9 @@ synsets = wordnet.synsets( root )
 synset = synsets[0]
 #pp( dir(synset) )
 hyponyms = list( synset.hyponyms() )
-translate(halfsize, halfsize)
+# translate( cx, cy )
 scale(0.9)
-explode.explode(root, hyponyms, 0,0 )
+# explode.explode(root, hyponyms, 0,0 )
+explode.explode(root, hyponyms, cx,cy, max=90 )
 
 print( """WordNet definition for '%s': "%s".""" % (root, synset.gloss ) )
