@@ -16,9 +16,9 @@ def load( concept ):
     # Note the "maxedges" parameter - you won't find it documented.
     # We use it here to cap the number of rules returned.
     # A fast graph is more important right now than all of the data.
-    g = perception.cluster( str(concept), depth=2, maxedges=90, labeled=1, lang="")
+    g = perception.cluster( str(concept), depth=2, maxedges=65, labeled=1, lang="")
     g.distance = 2.9
-    g.layout.n = 2000
+    g.layout.n = 1000
     g.styles.apply()
     g.layout.force = 0.001 # lower if nodes are twitching
     g.events.click = load
