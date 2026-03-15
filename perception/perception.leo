@@ -1779,41 +1779,39 @@ speed(20)
 
 import pdb
 
-try:
-    perception = ximport("perception")
-except ImportError:
-    perception = ximport("__init__")
-    # reload(perception)
+perception = ximport("perception")
+
 
 g = None
 </t>
 <t tx="karstenw.20260227123301.2">def load( concept ):
     
     global g
-    print("load:", concept)
-    
-    # pdb.set_trace()
     
     # Load a new cluster of nodes surrounding the clicked node.
     # Note the "maxedges" parameter - you won't find it documented.
     # We use it here to cap the number of rules returned.
     # A fast graph is more important right now than all of the data.
-    g = perception.cluster( str(concept), depth=2, maxedges=60, labeled=1, lang="")
-    g.distance = 2.9
-    g.layout.n = 500
+    g = perception.cluster( str(concept), depth=2, maxedges=90, labeled=1, lang="")
+    g.distance = 3.2
+    g.layout.n = 2000
     g.styles.apply()
     g.layout.force = 0.001 # lower if nodes are twitching
     g.events.click = load
+    if 1:
+        print("load:", concept, len(g) )
 
-load("Casa")
+load("Dog")
 
-#size(600, 600)
-
-speed(16)
+size( 1024, 1024)
+if 1:
+    speed(16)
 </t>
-<t tx="karstenw.20260227123301.3">def draw():
-    g.update()
-    g.draw(traffic=False, directed=False)
+<t tx="karstenw.20260227123301.3">    def draw():
+        g.update()
+        g.draw(traffic=False, directed=False)
+else:
+    background(0.5)
 </t>
 <t tx="karstenw.20260227123329.1"># COMPARATIVES
 
