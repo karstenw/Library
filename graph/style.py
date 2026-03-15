@@ -89,7 +89,7 @@ class styles(dict):
             for style in self.values(): 
                 style.__dict__[a] = v
         else:
-            raise AttributeError( "'style' object has no attribute '"+a+"'" )
+            raise AttributeError( "'style' object has no attribute '" + a + "'" )
             
     def copy(self, graph):
         """ Returns a copy of all styles and a copy of the styleguide.
@@ -154,7 +154,7 @@ class style:
         self._ctx = _ctx
         if not _ctx: 
             return
-        
+
         # Defaults for colors and typography.
         self.background  = _ctx.color(0.18, 0.23, 0.28, 1.00)
         self.traffic     = _ctx.color(0.00, 0.00, 0.00, 0.07)
@@ -162,8 +162,8 @@ class style:
         self.stroke      = _ctx.color(0.80, 0.80, 0.80, 0.75)
         self.strokewidth = 0.5
         self.text        = _ctx.color(1.00, 1.00, 1.00, 0.85)
-        self.font        = "Verdana"
-        self.fontsize    = 10
+        self.font        = "Gentium-Regular" #"Gentium-Regular" if "Gentium-Regular" in _ctx.fontnames() else "Verdana"
+        self.fontsize    = 11
         self.textwidth   = 100
         self.align       = 1
         self.depth       = True
