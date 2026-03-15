@@ -10,14 +10,14 @@
 <find_panel_settings/>
 <vnodes>
 <v t="karstenw.20230319195648.2" a="E"><vh>graph</vh>
-<v t="karstenw.20230319195720.1" a="E"><vh>@clean __init__.py</vh>
+<v t="karstenw.20230319195720.1"><vh>@clean __init__.py</vh>
 <v t="karstenw.20230319195736.1"><vh>Declarations</vh></v>
 <v t="karstenw.20230319202717.1"><vh>py3</vh>
 <v t="karstenw.20230319202717.2"><vh>py3 stuff</vh></v>
 <v t="karstenw.20230319202717.4"><vh>sortlist</vh></v>
 <v t="karstenw.20230319203345.1"><vh>sortnodes_zero</vh></v>
 </v>
-<v t="karstenw.20230319195736.2" a="E"><vh>class node</vh>
+<v t="karstenw.20230319195736.2"><vh>class node</vh>
 <v t="karstenw.20230319195736.3"><vh>__init__</vh></v>
 <v t="karstenw.20230319195736.4"><vh>_edges</vh></v>
 <v t="karstenw.20230319195736.5"><vh>_is_leaf</vh></v>
@@ -47,7 +47,7 @@
 <v t="karstenw.20230319195736.27"><vh>_get_length</vh></v>
 <v t="karstenw.20230319195736.28"><vh>_set_length</vh></v>
 </v>
-<v t="karstenw.20230319195736.29" a="E"><vh>class graph</vh>
+<v t="karstenw.20230319195736.29"><vh>class graph</vh>
 <v t="karstenw.20230319195736.30"><vh>__init__</vh></v>
 <v t="karstenw.20230319195736.31"><vh>_get_distance</vh></v>
 <v t="karstenw.20230319195736.32"><vh>_set_distance</vh></v>
@@ -102,7 +102,7 @@
 <v t="karstenw.20230329160917.1"><vh>@clean cluster.py</vh>
 <v t="karstenw.20230329160929.1"><vh>Declarations</vh></v>
 <v t="karstenw.20230518183122.1"><vh>py3</vh></v>
-<v t="karstenw.20230329160948.1"><vh>+ LIST OPERATIONS +</vh>
+<v t="karstenw.20230329160948.1" a="E"><vh>+ LIST OPERATIONS +</vh>
 <v t="karstenw.20230329160929.2"><vh>sorted</vh></v>
 <v t="karstenw.20230329160929.3"><vh>unique</vh></v>
 </v>
@@ -1401,7 +1401,7 @@ def partition(graph):
     return g
 
 </t>
-<t tx="karstenw.20230329160929.2"># UNUSED - apart from cmp this is like the built-in sorted
+<t tx="karstenw.20230329160929.2"># USED in perception - apart from cmp this is like the built-in sorted
 def sorted(thelist, cmp=None, reversed=False):
     """ Returns a sorted copy of the list.
     """
@@ -1598,7 +1598,7 @@ wordnet = en.wordnet
 
 </t>
 <t tx="karstenw.20230329161638.12">def click(self, node):
-    # print("event.events.click(%s)" % (str(node),))
+    
     pass
 
 </t>
@@ -2527,7 +2527,7 @@ class style:
     self._ctx = _ctx
     if not _ctx: 
         return
-    
+
     # Defaults for colors and typography.
     self.background  = _ctx.color(0.18, 0.23, 0.28, 1.00)
     self.traffic     = _ctx.color(0.00, 0.00, 0.00, 0.07)
@@ -2535,8 +2535,8 @@ class style:
     self.stroke      = _ctx.color(0.80, 0.80, 0.80, 0.75)
     self.strokewidth = 0.5
     self.text        = _ctx.color(1.00, 1.00, 1.00, 0.85)
-    self.font        = "Verdana"
-    self.fontsize    = 10
+    self.font        = "Gentium-Regular" #"Gentium-Regular" if "Gentium-Regular" in _ctx.fontnames() else "Verdana"
+    self.fontsize    = 11
     self.textwidth   = 100
     self.align       = 1
     self.depth       = True
@@ -2979,7 +2979,7 @@ def path(s, graph, path):
         for style in self.values(): 
             style.__dict__[a] = v
     else:
-        raise AttributeError( "'style' object has no attribute '"+a+"'" )
+        raise AttributeError( "'style' object has no attribute '" + a + "'" )
         
 </t>
 <t tx="karstenw.20230329163243.9">def copy(self, graph):
