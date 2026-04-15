@@ -23,13 +23,13 @@ def load( concept ):
     if 1:
         print("load:", concept, len(g) )
 
-load("Dog")
+load("House")
 
 size( 1024, 1024)
 if 1:
     speed(16)
     def draw():
         g.update()
-        g.draw(traffic=False, directed=False)
+        g.draw(traffic=False, directed=True)
 else:
     background(0.5)
