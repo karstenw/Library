@@ -17,7 +17,7 @@ def handler( value, name ):
         lang = language
     load( concept, lang )
     
-var("concept", TEXT, "dog", handler=handler)
+var("concept", TEXT, "Mensch", handler=handler)
 var("language", MENU, default=handler, value=languageCodes)
 
 
@@ -30,8 +30,8 @@ def load( theConcept, lang="" ):
     # Note the "maxedges" parameter - you won't find it documented.
     # We use it here to cap the number of rules returned.
     # A fast graph is more important right now than all of the data.
-    g = perception.cluster( str(theConcept), depth=2, maxedges=100, labeled=1, lang=lang)
-    g.distance = 4.1
+    g = perception.cluster( str(theConcept), depth=2, maxedges=140, labeled=1, lang=lang)
+    g.distance = 3.1
     g.layout.n = 2000
     g.styles.apply()
     g.layout.force = 0.001 # lower if nodes are twitching
@@ -39,7 +39,7 @@ def load( theConcept, lang="" ):
     if 1:
         print("load:", concept, len(g) )
 
-load("Dog", 'en')
+load("Mensch", lang)
 
 size( 1024, 1024)
 if 1:
