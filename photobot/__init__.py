@@ -1980,13 +1980,32 @@ with Image.open("hopper.jpg") as im:
     
 
 
+# may have rounding errors
 def calculateRectangles(width, height):
-    """Calculate several rectangles for the given size."""
+    """Calculate several rectangles for the given size.
+    
+    Returns a namedtuple( innerSquare outerSquare upper lower left right quads niner outerNiner threeRows threeColumns )
+        
+        A rectangle in this context means a tuple with ( x,y,w,h ) - the rectangle class is not yet integrated
+        
+        innerSquare - a square that fits inside w/h
+        upper       - upper remainder rectangle of innerSquare if w<h
+        lower       - lower remainder rectangle of innerSquare if w<h
+        left        - left remainder rectangle of innerSquare if w>h
+        right       - right remainder rectangle of innerSquare if w>h
+        
+        outerSquare - a square that fits outside w/h
+        quads       - list of the four quarter rectangles
+        niner       - list of 3x3 rectangles inside w/h
+        outerNiner  - 
+        threeRows   - 
+        threeColumns- 
+    """
     
     # Rectangle result type
-    Rectangles = namedtuple('Rectangles', "innerSquare outerSquare upper lower left right quads niner outerNiner" )
+    Rectangles = namedtuple('Rectangles', "innerSquare upper lower left right outerSquare quads niner outerNiner threeRows threeColumns" )
     
-    innerrect = outerrect = quads = niner = upper = lower = outerNiner = None
+    innerrect = outerrect = quads = niner = upper = lower = outerNiner = threeRows = threeColumns = None
     
     xoffset = yoffset = 0
     
@@ -2055,13 +2074,115 @@ def calculateRectangles(width, height):
         (-width,  height,       0,  0),
         (     0,  height,   width,  0),
         ( width,  height, 2*width,  0),
-
     )
     
-    result = Rectangles( innerrect, outerrect, upper, lower, left, right, quads, niner, outerNiner )
+    # threeRows
+    threeRows = []
+    for y in range(3):
+        left = 0
+        top = y * heightthird
+        right = width
+        bottom = top + heightthird
+        threeRows.append( (left, top, right, bottom ) )
+    threeRows = tuple(threeRows)
+    
+    # threeColumns
+    threeColumns = []
+    for x in range( 3 ):
+        top = 0
+        left = x * widththird
+        right = left + widththird
+        bottom = height
+        threeColumns.append( (left, top, right, bottom ) )
+    threeColumns = tuple( threeColumns )
+    
+    result = Rectangles( innerrect, outerrect, upper, lower, left, right, quads, niner, outerNiner, threeRows, threeColumns )
     return result
 
 
+def explodeRectangles( rectangles, deltax=10, deltay=10 ):
+    
+    # innerSquare outerSquare upper lower left right quads niner outerNiner threeRows threeColumns
+    upper = rectangles.upper 
+    if upper is not None:
+        upper = ( upper[0], upper[1] - deltay, upper[2], upper[3] )
+    
+    lower = rectangles.lower
+    if lower is not None:
+        lower = ( lower[0], lower[1] + deltay, lower[2], lower[3] )
+    
+    left = rectangles.left
+    if left is not None:
+        left = ( left[0] - deltax, left[1], left[2], left[3] )
+    
+    right = rectangles.right
+    if right is not None:
+        right = ( right[0] + deltax, right[1], right[2], right[3] )
+    
+    # QUADS
+    dx2 = deltax / 2
+    dy2 = deltay / 2
+    q1, q2, q3, q4 = rectangles.quads
+    quads = (
+        ( q1[0] - dx2, q1[1] - dy2, q1[2], q1[3] ),
+        ( q2[0] + dx2, q2[1] - dy2, q2[2], q2[3] ),
+        
+        ( q3[0] - dx2, q3[1] + dy2, q3[2], q3[3] ),
+        ( q4[0] + dx2, q4[1] + dy2, q4[2], q4[3] )
+    )
+    
+    # NINER
+    dx3 = deltax / 2
+    dy3 = deltay / 2
+    q1, q2, q3, q4, q5, q6, q7, q8, q9 = rectangles.niner
+    niner = (
+        ( q1[0] - dx3, q1[1] - dy3, q1[2], q1[3] ),
+        ( q2[0]      , q2[1] - dy3, q2[2], q2[3] ),
+        ( q3[0] + dx3, q3[1] - dy3, q3[2], q3[3] ),
+        
+        ( q4[0] - dx3, q4[1]      , q4[2], q4[3] ),
+        ( q5[0]      , q5[1]      , q5[2], q5[3] ),
+        ( q6[0] + dx3, q6[1]      , q6[2], q6[3] ),
+        
+        ( q7[0] - dx3, q7[1] + dy3, q7[2], q9[3] ),
+        ( q8[0]      , q8[1] + dy3, q8[2], q8[3] ),
+        ( q9[0] + dx3, q9[1] + dy3, q9[2], q7[3] )
+    )
+    
+    # OUTERNINER
+    q1, q2, q3, q4, q5, q6, q7, q8, q9 = rectangles.outerNiner
+    outerNiner = (
+        ( q1[0] - dx3, q1[1] - dy3, q1[2], q1[3] ),
+        ( q2[0]      , q2[1] - dy3, q2[2], q2[3] ),
+        ( q3[0] + dx3, q3[1] - dy3, q3[2], q3[3] ),
+        
+        ( q4[0] - dx3, q4[1]      , q4[2], q4[3] ),
+        ( q5[0]      , q5[1]      , q5[2], q5[3] ),
+        ( q6[0] + dx3, q6[1]      , q6[2], q6[3] ),
+        
+        ( q7[0] - dx3, q7[1] + dy3, q7[2], q9[3] ),
+        ( q8[0]      , q8[1] + dy3, q8[2], q8[3] ),
+        ( q9[0] + dx3, q9[1] + dy3, q9[2], q7[3] )
+    )
+    
+    # THREEROWS
+    q1, q2, q3 = rectangles.threeRows
+    threeRows = (
+        ( q1[0]      , q1[1] - dy3, q1[2], q1[3] ),
+        ( q2[0]      , q2[1]      , q2[2], q2[3] ),
+        ( q3[0]      , q3[1] + dy3, q3[2], q3[3] )
+    )
+    
+    # THREECOLUMNS
+    q1, q2, q3 = rectangles.threeColumns
+    threeColumns = (
+        ( q1[0] - dx3, q1[1]      , q1[2], q1[3] ),
+        ( q2[0]      , q2[1]      , q2[2], q2[3] ),
+        ( q3[0] + dx3, q3[1]      , q3[2], q3[3] )
+    )
+    
+    result = Rectangles( rectangles.innerSquare, rectangles.outerSquare, upper, lower, left, right, quads, niner, outerNiner, threeRows, threeColumns )
+    return result
 def aspectRatio(size, maxsize, height=False, width=False, assize=False):
     """Resize image with size=(w,h) to maxsize in max(width, height).
     use height == maxsize if height==True
