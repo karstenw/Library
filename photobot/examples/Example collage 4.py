@@ -85,7 +85,7 @@ if not kwdbg:
 if len(backgrounds) > 0:
     bgimage = backgrounds.pop()
     top, w, h = pb.placeImage(c, bgimage, 0, 0, WIDTH, "Image 1", width=True, height=True)
-    print( "Background: %s" % bgimage.encode("utf-8") )
+    print( "Background: %s" % (bgimage,) )
 
 
 def grid(cols, rows, colSize=1, rowSize=1, shuffled=False):
@@ -141,7 +141,7 @@ for position in positions:
 
     # create image in canvas at 0,0
     p = tiles.pop()
-    print(p.encode("utf-8"))
+    print( p )
     top, w, h = pb.placeImage(c, p, 0, 0, maxsize=None, name="Image %i,%i" % (x,y)) #, width=False, height=True)
 
     # scale the layer to row height

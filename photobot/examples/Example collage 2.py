@@ -85,7 +85,7 @@ if not kwdbg:
 if len(backgrounds) > 0:
     bgimage = backgrounds.pop()
     top, w, h = pb.placeImage(c, bgimage, 0, 0, WIDTH, "Image 1", width=True, height=True)
-    print( "Background: %s" % bgimage.encode("utf-8") )
+    print( "Background: %s" % (bgimage,) )
 
 
 # CONFIGURATION
@@ -121,7 +121,7 @@ for j in range(rows):
         c.layer( nextpictpath )
         tilecounter += 1
         if kwdbg or 1:
-            print( "%i  -- %s" % (tilecounter, nextpictpath.encode("utf-8")) )
+            print( "%i  -- %s" % (tilecounter, nextpictpath) )
 
         # add contrast
         c.top.contrast(1.1)
