@@ -101,3 +101,29 @@ data = {
 #    fill(r, g, b, a)
 #    rect(40, i, 40, 40)
 #    i += 40
+
+cell = 40
+offset = 10
+
+if 0:
+    clrs = data["atlas"][1]
+    i = 0
+    for r, g, b, a in clrs:
+        fill(r, g, b, a)
+        rect(40, i, 40, 40)
+        i += 40
+else:
+    x = y = cell
+    clrnames = data.keys()
+    for colorname in clrnames:
+        clrs = data[colorname][1]
+        y = cell
+        for r, g, b, a in clrs:
+            fill(r, g, b, a)
+            rect(x, y, cell, cell)
+            y += cell
+        x += cell + offset
+
+
+
+
