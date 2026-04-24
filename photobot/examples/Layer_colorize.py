@@ -65,7 +65,7 @@ c.fill( (192, 192, 192) )
 # Image 1
 #
 
-print( img1path.encode("utf-8") )
+print( img1path )
 #  create, scale and place the image
 x, y = 10, 10
 top, w1, h1 = pb.placeImage(c, img1path, x, y, fullwidth, "Image 1")
