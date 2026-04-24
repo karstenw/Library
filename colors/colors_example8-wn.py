@@ -14,8 +14,8 @@ colors = ximport("colors")
 # pattern = ximport("pattern")
 
 import linguistics
-linguistics.init_wn()
 import wn
+#wn.init_wn()
 
 
 import pdb
