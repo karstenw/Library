@@ -20,7 +20,7 @@ import pattern.en.wordnet
 en = pattern.en
 wordnet = pattern.en.wordnet
 
-import pdb
+# import pdb
 
 # WordNet has a set of global categories (or lexnames)
 # into which it classifies all words.
