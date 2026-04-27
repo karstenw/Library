@@ -109,7 +109,7 @@ class SemanticRelationBrowser(graphbrowser.GraphBrowser):
         # pp( self.nodes )
 
     def has_node(self, node_id):
-    
+
         if node_id in self.nodes:
             return True
         else:

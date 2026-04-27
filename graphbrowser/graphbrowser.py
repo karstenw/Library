@@ -48,7 +48,7 @@ class GraphBrowser:
         self.marquee = None
         self.marquee_speed = 3.0
         self.marquee_width = 200
-    
+
     def has_node(self, node_id):
         
         """ Returns True if the network contains a node with the given id.
@@ -58,7 +58,7 @@ class GraphBrowser:
         """
 
         return False
-    
+
     def get_direct_links(self, node_id):
         
         """ Retrieves id' of directly connected nodes.
@@ -110,7 +110,7 @@ class GraphBrowser:
             pass
         
         return msg
-    
+
     def _reload(self, node_id, previous=None):
         
         """ Builds a graph around the given node id.
@@ -126,10 +126,10 @@ class GraphBrowser:
         g = springgraph.graph(iterations=self.graph_iterations, distance=self.graph_distance)
         g.hovered = self.node_hovered
         g.clicked = self.node_clicked
-    
+
         # Root node with ROOT style.
         g.add_node(node_id, style=springgraph.STYLE_ROOT, root=True)
-    
+
         # When the browser returns direct links for a node,
         # these have priority. Add them to the graph first and colorize them.
         # By default, all nodes have the LIGHT style.
@@ -184,7 +184,7 @@ class GraphBrowser:
                 g.add_edge(node_id, previous)
             else:
                 g.index[previous].style=springgraph.STYLE_BACK
-    
+
         self.graph = g
         return g
         
@@ -230,12 +230,12 @@ class GraphBrowser:
                                             w=self.marquee_width)
             else:
                 self.marquee = None
-    
+
         if self.marquee != None:
             x = node.x * node.graph.d + _ctx.fontsize()*2
             y = node.y * node.graph.d + _ctx.fontsize()*2.5
             self.marquee.draw(x, y)
-    
+
     def view(self, node_id):
         
         if self.has_node(node_id):

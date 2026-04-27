@@ -175,7 +175,7 @@ class Graph:
             return self.index[id]
         else:
             return None
-    
+
     def edge(self, id1, id2):
         
         """ Returns the edge between the nodes with given id1 and id2.
@@ -185,9 +185,9 @@ class Graph:
             if e.node1.id in (id1, id2) and \
                e.node2.id in (id1, id2):
                 return e
-    
+
         return None
-    
+
     def update(self, iterations=10):
         
         """ Iterates the graph layout.
@@ -216,7 +216,7 @@ class Graph:
             self.iteration += n
         else:
             return False
-    
+
         return True
         
     def solve(self):
@@ -227,7 +227,7 @@ class Graph:
         done = False
         while not done:
             done = not self.update()
-    
+
     def center(self):
         
         """ The absolute center of the graph on the canvas.
@@ -254,7 +254,7 @@ class Graph:
         y = c.y + node.y * self.d - _ctx.HEIGHT/2
         
         return Point(x, y)
-    
+
     def draw(self, dx=0, dy=0, highlight=[], clusters=True):
         
         """ Layouts the graph incrementally.
@@ -276,8 +276,8 @@ class Graph:
         # Center the graph on the canvas.
         c = self.center()
         _ctx.translate(c.x+dx, c.y+dy)
- 
- 
+     
+     
         
         if clusters:
             for n in self.strongest_nodes()[:3]:
@@ -346,7 +346,7 @@ class Graph:
         # Nodes will resist being dragged by attraction and repulsion,
         # put the event listener on top to get more direct feedback.
         self.events()
-    
+
     def mouse_inside(self, node):
         
         """ Checks whether the mouse hovers the given node.
@@ -362,7 +362,7 @@ class Graph:
             return True
         else:
             return False    
-    
+
     def drag(self, node):
         
         """ Drag given node to mouse location.
@@ -390,7 +390,7 @@ class Graph:
         
         node.x = dx/self.d
         node.y = dy/self.d
-    
+
     def events(self):
         
         """ Interact with the graph by clicking or dragging nodes.
@@ -476,7 +476,7 @@ class Graph:
         
         self._v = self.iteration, v
         return v
-    
+
     def shortest_path(self, id1, id2):
         
         """ Returns a list of node id's connecting the two nodes.
@@ -534,7 +534,7 @@ class GraphSpringLayout:
         self.k = 2
         self.c = 0.01
         self.max_vertex_movement = 0.5
-    
+
     def prepare(self):
         
         for n in self.graph.nodes:
@@ -585,7 +585,7 @@ class GraphSpringLayout:
             n.y += dy
             n.force.x = 0
             n.force.y = 0
-    
+
     def repulse(self, n1, n2):
         
         dx = n2.x - n1.x
@@ -676,7 +676,7 @@ class GraphStyles(dict):
     def append(self, style):
         
         self[style.name] = style
-    
+
     def __getattr__(self, a):
         
         """ Keys in the dictionaries are accessible as attributes.
@@ -750,8 +750,8 @@ class GraphDraw:
         self.background = draw_background
         self.cluster    = draw_cluster        
 
-#--- DRAW_BACKGROUND ---------------------------------------------------------------------------
 
+#--- DRAW_BACKGROUND ---------------------------------------------------------------------------
 def draw_background(style):
 
     """ Override this method to get a different background.
