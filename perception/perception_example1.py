@@ -15,7 +15,7 @@ def load(node, lang="en"):
     # Note the "maxedges" parameter - you won't find it documented.
     # We use it here to cap the number of rules returned.
     # A fast graph is more important right now than all of the data.
-    g = perception.cluster(str(node), depth=2, maxedges=200, labeled=1, lang=lang)
+    g = perception.cluster(str(node), depth=2, maxedges=100, labeled=1, lang=lang)
     g.distance = 4.0
     g.layout.n = 500
     g.styles.apply()
