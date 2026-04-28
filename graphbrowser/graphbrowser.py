@@ -110,7 +110,7 @@ class GraphBrowser:
             pass
         
         return msg
-
+    
     def _reload(self, node_id, previous=None):
         
         """ Builds a graph around the given node id.
@@ -123,7 +123,8 @@ class GraphBrowser:
         
         springgraph = _ctx.ximport("springgraph")
         
-        g = springgraph.graph(iterations=self.graph_iterations, distance=self.graph_distance)
+        g = springgraph.graph( iterations=self.graph_iterations,
+                               distance=self.graph_distance)
         g.hovered = self.node_hovered
         g.clicked = self.node_clicked
 
@@ -187,7 +188,7 @@ class GraphBrowser:
 
         self.graph = g
         return g
-        
+    
     def node_clicked(self, node):
         
         """ Callback from the browser's graph when a node is clicked.
@@ -210,7 +211,7 @@ class GraphBrowser:
         if p == node.id:
             prev = None
         self._reload(node.id, previous=p)  
-
+    
     def node_hovered(self, node):
         
         """ Display a marquee of node descriptions when hovering over a node.
