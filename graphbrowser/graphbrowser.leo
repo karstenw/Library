@@ -24,7 +24,7 @@
 <v t="karstenw.20260427093640.11"><vh>view</vh></v>
 <v t="karstenw.20260427093640.12"><vh>draw</vh></v>
 </v>
-<v t="karstenw.20260427093640.13" a="E"><vh>class GraphMarquee</vh>
+<v t="karstenw.20260427093640.13"><vh>class GraphMarquee</vh>
 <v t="karstenw.20260427093640.14"><vh>__init__</vh></v>
 <v t="karstenw.20260427093640.15"><vh>update</vh></v>
 <v t="karstenw.20260427093640.16"><vh>textpath</vh></v>
@@ -110,7 +110,7 @@
 <v t="karstenw.20230506100835.1"><vh>@clean 2_contextual_links.py</vh>
 <v t="karstenw.20230506100912.1"><vh>Declarations</vh></v>
 <v t="karstenw.20230506102028.1"><vh>loadtext</vh></v>
-<v t="karstenw.20230506100912.2" a="E"><vh>class ContextualLinkBrowser</vh>
+<v t="karstenw.20230506100912.2"><vh>class ContextualLinkBrowser</vh>
 <v t="karstenw.20230506100912.3"><vh>__init__</vh></v>
 <v t="karstenw.20230506100912.4"><vh>generate_filters</vh></v>
 <v t="karstenw.20230506100912.5"><vh>_strip_tokens</vh></v>
@@ -126,16 +126,17 @@
 <v t="karstenw.20230506100912.13"><vh>setup</vh></v>
 <v t="karstenw.20230506100912.14"><vh>draw</vh></v>
 </v>
-<v t="karstenw.20260427093505.1" a="E"><vh>@clean 3_semantic_relations.py</vh>
+<v t="karstenw.20260427093505.1"><vh>@clean 3_semantic_relations.py</vh>
 <v t="karstenw.20260427093516.1"><vh>Declarations</vh></v>
-<v t="karstenw.20260427093516.2"><vh>class SemanticRelationNode</vh>
+<v t="karstenw.20260427093516.2" a="E"><vh>class SemanticRelationNode</vh>
 <v t="karstenw.20260427093516.3"><vh>__init__</vh></v>
 </v>
-<v t="karstenw.20260427093516.4"><vh>class SemanticRelationBrowser</vh>
+<v t="karstenw.20260427093516.4" a="E"><vh>class SemanticRelationBrowser</vh>
 <v t="karstenw.20260427093516.5"><vh>__init__</vh></v>
 <v t="karstenw.20260427093516.6"><vh>has_node</vh></v>
 <v t="karstenw.20260427093516.7"><vh>get_links</vh></v>
 </v>
+<v t="karstenw.20260427101458.1"><vh>newHeadline</vh></v>
 <v t="karstenw.20260427093516.8"><vh>setup</vh></v>
 <v t="karstenw.20260427093516.9"><vh>draw</vh></v>
 </v>
@@ -181,7 +182,12 @@ allnouns = list(wordnet.NOUNS())
 
 
 </t>
-<t tx="karstenw.20230506100740.10">def setup():
+<t tx="karstenw.20230506100740.10">################################################################################################
+
+size(500, 500)
+speed(30)
+
+def setup():
     
     global wnb
     #q = str(choice(en.wordnet.all_nouns())).replace("(n.)","")
@@ -212,11 +218,6 @@ allnouns = list(wordnet.NOUNS())
     """
     
     @others
-################################################################################################
-
-size(500, 500)
-speed(30)
-
 </t>
 <t tx="karstenw.20230506100740.3">def __init__(self):
     
@@ -471,6 +472,8 @@ import os
 # import en
 from os.path import basename
 
+import pdb
+
 import linguistics
 import pattern
 import pattern.text
@@ -578,10 +581,10 @@ graphbrowser = ximport("graphbrowser")
     self.cache = {}
     for lexicon in lexicons:
         for f in files(lexicon):
-            n = basename(f)[:-4]
-            if not n in self.nodes:
-                self.nodes[n] = ""
-            self.nodes[n] += " " + loadtext(f)
+            conceptname = basename(f)[:-4]
+            if not conceptname in self.nodes:
+                self.nodes[conceptname] = ""
+            self.nodes[conceptname] += " " + loadtext(f)
     
     self.link_pattern = "(JJ) NN"    
     self.filters = [
@@ -675,9 +678,12 @@ graphbrowser = ximport("graphbrowser")
     # We assume nouns that occur early in the text to be
     # more relevant than nouns that occur later.    
     if not node_id in self.cache:
-
+        
+        pdb.set_trace()
         # Get each chunk of words in the description that matches the pattern.
-        matches = en.sentence.find(self.nodes[node_id], self.link_pattern, chunked=False)
+        # matches = en.sentence.find(self.nodes[node_id], self.link_pattern, chunked=False)
+        matches = en.Sentence.find(self.nodes[node_id], self.link_pattern, chunked=False)
+        
         strings = []
         count = {}
         for s in matches:
@@ -829,11 +835,6 @@ semantic_relations_implicit = {
 <t tx="karstenw.20260427093516.4">class SemanticRelationBrowser(graphbrowser.GraphBrowser):
     
     @others
-################################################################################
-
-size(500, 500)
-speed(30)
-
 </t>
 <t tx="karstenw.20260427093516.5">def __init__(self, lexica=[]):
     
@@ -856,8 +857,7 @@ speed(30)
             f = io.open( path, 'r', encoding="utf-8" )
             lines = f.readlines()
             f.close()
-            # rules = open(f).readlines()
-            # for rule in rules:
+            
             for line in lines:
                 
                 # A rule in the file has the following format:
@@ -917,9 +917,13 @@ speed(30)
     # stoopid data contents
     # lexica = [ "data/graphics", "data/colors", "data/metaphors" ]
     srb = SemanticRelationBrowser(lexica)
+    
+    # pdb.set_trace()
+    
     names = [x for x in srb.nodes]
     # print( names )
     name = choice(names)
+    
     # srb.view("aesthetics")
     srb.view( name )
     print(name)
@@ -1221,7 +1225,8 @@ class GraphBrowser:
     
     springgraph = _ctx.ximport("springgraph")
     
-    g = springgraph.graph(iterations=self.graph_iterations, distance=self.graph_distance)
+    g = springgraph.graph( iterations=self.graph_iterations,
+                           distance=self.graph_distance)
     g.hovered = self.node_hovered
     g.clicked = self.node_clicked
 
@@ -1285,7 +1290,7 @@ class GraphBrowser:
 
     self.graph = g
     return g
-    
+
 </t>
 <t tx="karstenw.20260427093640.9">def node_clicked(self, node):
     
@@ -2441,6 +2446,12 @@ class GraphStyle:
 
 </t>
 <t tx="karstenw.20260427094057.1">#### COMMANDS ##################################################################################
+
+</t>
+<t tx="karstenw.20260427101458.1">################################################################################
+
+size(500, 500)
+speed(30)
 
 </t>
 </tnodes>
