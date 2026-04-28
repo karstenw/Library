@@ -37,7 +37,7 @@ g = springgraph.graph(iterations=iters, distance=1.0)
 # g.shortest_path(node_id1, node_id2)            # returns a list of node id's
 
 from random import seed
-seed(6)
+# seed(6)
 
 for i in range(nodecount):
     # Add nodes with a random id.
