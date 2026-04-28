@@ -1,0 +1,7 @@
+graph =  ximport("graph")
+g = graph.create(iterations=50, distance=2.8)
+g.add_node("NodeBox")
+g.add_node("Core Image", category="library")
+g.add_edge("NodeBox", "Core Image", label="uses")
+g.solve()
+g.draw()
