@@ -10,17 +10,20 @@ import sys
 import pprint
 pp=pprint.pprint
 
+import pdb
+
 colors = ximport("colors")
 # pattern = ximport("pattern")
 
 import linguistics
+FlowerWord = linguistics.FlowerWord.FlowerWord
+
 import pattern
 import pattern.en
 import pattern.en.wordnet
 en = pattern.en
 wordnet = pattern.en.wordnet
 
-# import pdb
 
 # WordNet has a set of global categories (or lexnames)
 # into which it classifies all words.
@@ -28,6 +31,8 @@ wordnet = pattern.en.wordnet
 lexname_scores = {}
 
 # wordnet.wn._lexnames ???
+
+# pdb.set_trace()
 
 lexnames = list( wordnet.wn._lexnames )
 pp(lexnames)
@@ -43,7 +48,7 @@ for lexname in lexnames: #wordnet.wn.Lexname.dict.keys():
 
 # Traverse all colors in the context (blue, green, ...)
 for clr in colors.context: #.keys():
-    print( clr )
+    print( "clr:", clr )
         
     # Each color has associated tags: blue -> air, cold, calm, ...
     # Calculate the weight of each tag,
@@ -55,17 +60,19 @@ for clr in colors.context: #.keys():
     # therefore it will also be classified in a lexname category.
     # Count the number of tags in each lexname category.
     count = {}
+    # pdb.set_trace()
     for tag in colors.context[clr]:
         # list(wordnet.NOUNS())
         # list(wordnet.VERBS())
         
-        synsets = wordnet.synsets( tag )
+        # pdb.set_trace()
+        
+        fw = FlowerWord( tag )
+        synsets = fw.synsets #( tag )
         if not synsets:
             continue
+        
         # pdb.set_trace()
-        synsets = [ synsets[0] ]
-        # print("tag:", tag)
-        # synset = synsets[0]
         for synset in synsets:
             lexname = synset.lexname
             pos = synset.pos
@@ -76,6 +83,7 @@ for clr in colors.context: #.keys():
 
     #print("count:")
     #pp(count)
+    
     # Each lexname then points to a list of colors
     # that have tags categorized under this lexname,
     # together with the tag score from the count dict.
@@ -85,6 +93,8 @@ for clr in colors.context: #.keys():
             lexname_scores[lexname] = []
         lexname_scores[lexname].append( (clr, count[lexname]) )
 
+# pdb.set_trace()
+
 # So now each lexname in the scores dict points to a number of (color, weight) tuples.
 # We normalize the weight so their total weight is 1.0.
 # So now we have a percentage of each color's importance for the lexname.
@@ -93,6 +103,8 @@ for lexname in lexname_scores: #.keys():
     s = sum([weight for clr, weight in lexname_scores[lexname]])
     normalized = [(clr, weight/s) for clr, weight in lexname_scores[lexname]]
     lexname_scores[lexname] = normalized
+
+# pdb.set_trace()
 
 # This prints out the full list of colors scores per lexname category.
 # pp(lexname_scores)
@@ -104,7 +116,9 @@ for q,x,y in (
     ("rave",     300, 150),
     ("keyboard", 450, 150),
     ("love",     150, 300),
-    ("yearn",    300, 300),
+    # ("yearn",    300, 300), # not found
+    ("yarn",     300, 300),
+    ("rocket",   450, 300),
     ):
 
     # Now we can do some guessing!
@@ -113,28 +127,26 @@ for q,x,y in (
 
     # use wordnet.synset.lexname()
     l = ""
-    synset = wordnet.synsets( q )
+    fw = FlowerWord( q )
+    synsets = fw.synsets
+    synset = fw.synset
+    # synset = wordnet.synsets( q )
     if synset:
-        l = synset[0].lexname
-    else:
+        lexname = synset.lexname
+        
         if q in nouns: #  en.is_noun(q):
-            synset = wordnet.synsets( q )[0]
-            l = synset.lexname
-            # l = "noun."+en.noun.lexname(q)
+            l = lexname
         elif q in verbs: #en.is_verb(q): 
-            #l = "verb."+en.verb.lexname(q)
-            synset = wordnet.synsets( q )[0]
-            l = "verb." + synset.lexname
+            l = "verb." + lexname
         elif q in adjectives: #en.is_adjective(q): 
-            # l = "adj."+en.adjective.lexname(q)
-            synset = wordnet.synsets( q )[0]
-            l = "adj." + synset.lexname
+            l = "adj." + lexname
 
     print( q, "is-a", l )
 
     clrs = colors.list()
-    for clr, weight in lexname_scores[l]:
-        for i in range(int(weight*100)):
-            clrs += colors.color(clr)
+    if l:
+        for clr, weight in lexname_scores[l]:
+            for i in range(int(weight*100)):
+                clrs += colors.color(clr)
 
-    clrs.swarm(x, y, 50)
+        clrs.swarm(x, y, 50)
