@@ -79,8 +79,7 @@ class SemanticRelationBrowser(graphbrowser.GraphBrowser):
                 f = io.open( path, 'r', encoding="utf-8" )
                 lines = f.readlines()
                 f.close()
-                # rules = open(f).readlines()
-                # for rule in rules:
+                
                 for line in lines:
                     
                     # A rule in the file has the following format:
@@ -142,9 +141,13 @@ def setup():
     # stoopid data contents
     # lexica = [ "data/graphics", "data/colors", "data/metaphors" ]
     srb = SemanticRelationBrowser(lexica)
+    
+    # pdb.set_trace()
+    
     names = [x for x in srb.nodes]
     # print( names )
     name = choice(names)
+    
     # srb.view("aesthetics")
     srb.view( name )
     print(name)
