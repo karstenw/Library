@@ -20,7 +20,7 @@ The module ```boids``` runs.
 
 The module ```colors``` has been patched for zipfile support. The [patch](https://github.com/shoebot/shoebot/commit/b2b9c43b28acb9312ca2a0557cc8728fc49a47bb) came from the [shoebot](https://github.com/shoebot/shoebot) project. You'll need at least Nodebox version 1.9.17.
 
-The module ```coreimage``` runs mostly.
+The module ```coreimage``` runs mostly but is one mean memory hog.
 
 The module ```cornu``` runs.
 
@@ -32,7 +32,7 @@ The module ```explode``` runs.
 
 The module ```fatpath``` runs.
 
-The module ```flowerewolf``` is in adaption.
+The module ```flowerewolf``` is adapted.
 
 The module ```graph``` runs mostly.
 
@@ -40,7 +40,7 @@ The module ```graphbrowser``` runs mostly.
 
 The module ```grid``` runs.
 
-The module ```ìsight``` has been rewritten to use the newer [imagesnap](http://iharder.net/imagesnap) tool which makes it possible to take sequences of images very quickly.
+The module ```ìsight``` has been rewritten to use the newer [imagesnap](http://iharder.net/imagesnap) tool which makes it possible to take sequences of images very quickly. 
 
 The module ```linguistics``` is new and needs an initialisation for downloading databases. See linguistics/README.md
 
@@ -50,7 +50,7 @@ The module ```lsystem``` runs.
 
 The module ```noise``` has been adapted and the _noise.so file has been compiled for x86\_64
 
-The module ```perception``` has been removed but may come back. The associated web application at "http://www.nodebox.net/perception/" for entering new rules has shut down.
+The module ```perception``` ~~has been removed but may come~~ is back. The associated web application at "http://www.nodebox.net/perception/" for entering new rules has shut down but perception now uses the conceptnet database.
 
 The module ```photobot``` has been adapted to use [Pillow](https://github.com/python-pillow/Pillow), the PIL successor. You'll need at least Nodebox version 1.9.12.
 
