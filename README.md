@@ -8,7 +8,7 @@
 
 
 
-The contents of this repo go into the ```~/Library/Application Support/Nodebox/``` folder. As of 2017-05-20 and NodeBox v1.9.17+ the library folder can be anywhere.
+The contents of this repo go into the ```~/Library/Application Support/Nodebox/``` folder. As of 2017-05-20 and NodeBox v1.9.17+ the library folder can be anywhere and needs to be set in the preferences.
 
 These are modules that could be made to work with my [Nodebox fork](https://github.com/karstenw/nodebox-pyobjc).
 
