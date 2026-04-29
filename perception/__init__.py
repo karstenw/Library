@@ -75,12 +75,15 @@ import conceptnetreader as cnr
 
 # used in search_match_parse()
 import pattern
+
+import pattern.search # import search
+import pattern.en  # import parsetree, pluralize, singularize
+
 import pattern.web
 import pattern.text
 import pattern.text.en
 en = pattern.text.en
 
-# import textblob
 
 import graph
 from graph.cluster import sorted, unique
@@ -1113,15 +1116,18 @@ def search_match_parse(
     matches = []
     rawresults = []
 
-    if 1:
+    if 0:
         print( "search_match_parse query:", query )
         print( "search_match_parse pattern_:", pattern_ )
+    
     if service == "google":
         n = min(n, 4)
         engine = Google(license=None, language="en")
+    
     elif service == "yahoo" :
         n = min(n, 10)
         engine = Yahoo(license=None, language="en")
+    
     elif service == "bing" :
         n = min(n, 10)
         engine = Bing(license=None, language="en")
@@ -1162,15 +1168,16 @@ def search_match_parse(
             
             if result.description:
                 result.description = result.description.replace(",",", ").replace("  "," ")
-            # sntc = en.Sentence( result.description.lower() )
             
+            lowdesc = result.description.lower()
+            pt = pattern.en.parsetree( lowdesc, lemmata=True )
+            match = pattern.search.search( pattern_, pt )
             
-            #match = en.sentence.find(result.description.lower(), pattern_)
-            #if len(match) > 0 and len(match[0]) > 0:
-            #    x = parse(match[0])
-            #    matches.append(x)
-            if 1:
-                pp( result )
+            if len(match) > 0 and len(match[0]) > 0:
+                x = parse(match[0])
+                matches.append(x)
+                if 1:
+                    pp( result )
             if pattern_ in result.text:
                 matches.append(result.text)
     return matches
@@ -1219,7 +1226,8 @@ def suggest_properties(noun, cached=True):
     matches = search_match_parse(
         "\"as * as " + noun + "\"",
         "as * as " + noun,
-        lambda chunk_: clean(chunk_[1][0]), # as A as a house -> A
+        # lambda chunk_: clean(chunk_[1][0]), # as A as a house -> A
+        lambda chunk_: clean(chunk_[1].string), # as A as a house -> A
         service="google", 
         cached=cached
     )
@@ -1266,14 +1274,38 @@ class compare_concepts(list):
         Requires the Web, Linguistics and Graph libraries.
         T. De Smedt, F. De Bleser
         """
-        relspaces = relation.replace("-"," ")
-        arg1 = "/%s/" % (relspaces,)
-        arg2 = "NN %s (a) (an) (JJ) NN" % (relspaces,)
         
-        matches = search_match_parse( # arg1, arg2, 
-            "\"" + relation.replace("-"," ") + "\"",
-            "NN " + relation.replace("-"," ") + " (a) (an) (JJ) NN",
-            lambda chunk_: (clean(chunk_[0][0]), clean(chunk_[-1][0])), # A is bigger than B --> (A, B)
+        origargs = """
+                "\"" + relation.replace("-"," ") + "\"",
+                "NN " + relation.replace("-"," ") + " (a) (an) (JJ) NN",
+                lambda chunk_: (clean(chunk_[0][0]), clean(chunk_[-1][0])), # A is bigger than B --> (A, B)
+                # service="yahoo",
+                service="google",
+                cached=cached, 
+                n=n"""    
+        
+        # pdb.set_trace()
+        
+        relspaces = relation.replace("-"," ")
+        if 0:
+            # what style?
+            query = "/%s/" % (relspaces,)
+            pattern_ = "NN %s (a) (an) (JJ) NN" % (relspaces,)
+        else:
+            query = '"%s"' % (relspaces,)
+            pattern_ = "NN %s (a) (an) (the) (JJ) NN" % (relspaces,)
+        
+        if 1:
+            print( "query:", query )
+            print( "pattern_:", pattern_ )
+            # print( "parse:", str(parse))
+        
+        # parse = lambda chunk_: (clean(chunk_[0][0]), clean(chunk_[-1][0])), # A is bigger than B --> (A, B)
+        
+        matches = search_match_parse(
+            query, pattern_,
+            # lambda chunk_: (clean(chunk_[0][0]), clean(chunk_[-1][0])), # A is bigger than B --> (A, B)
+            lambda chunk_: (clean(chunk_[0].string), clean(chunk_[-1].string)), # A is bigger than B --> (A, B)
             # service="yahoo",
             service="google",
             cached=cached, 
@@ -1321,15 +1353,20 @@ class compare_concepts(list):
         if graph == None:
             graph = self.graph()
         r = []
-
+        
+        # pdb.set_trace()
+        
         def linksort( a, b ):
-            w1, w2 = graph.node(a).weight, graph.node(b).weight
-            if w1 > w2:
+            w1 = graph.node(a).weight
+            w2 = graph.node(b).weight*2-1
+            if w1 < w2:
                 return 1
-            elif w1 < w2:
+            elif w1 > w2:
                 return -1
             return 0
-
+        def eigensort( a, b):
+            return linksort( a[0], b[0] )
+        
         for node in graph.nodes:
             # Get the id's of all the nodes that point to this node.
             # Sort them according to weight.
@@ -1340,7 +1377,7 @@ class compare_concepts(list):
             r.append((node.id, links))
 
         # r.sort(cmp=lambda a, b: eigensort(graph, a[0], b[0]))
-        sortlist(r, linksort)
+        sortlist(r, eigensort)
         r.reverse()
         return r
 

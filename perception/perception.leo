@@ -61,7 +61,7 @@
 <v t="karstenw.20230316191528.22"><vh>disambiguate</vh></v>
 </v>
 </v>
-<v t="karstenw.20230417110310.1" a="E"><vh>+ QUERY SQLITE +</vh>
+<v t="karstenw.20230417110310.1"><vh>+ QUERY SQLITE +</vh>
 <v t="karstenw.20260227105342.1"><vh>unifyContext</vh></v>
 <v t="karstenw.20230417105918.1"><vh>query_cnr</vh></v>
 </v>
@@ -73,7 +73,7 @@
 <v t="karstenw.20230316191528.39"><vh>enumerate_rules</vh></v>
 <v t="karstenw.20230316191528.40"><vh>specific parts opposites properties associations aliases effects type whole objects causes</vh></v>
 </v>
-<v t="karstenw.20230316194540.1" a="E"><vh>+ CLUSTER +</vh>
+<v t="karstenw.20230316194540.1"><vh>+ CLUSTER +</vh>
 <v t="karstenw.20230316191528.51"><vh>style</vh></v>
 <v t="karstenw.20230316191528.52"><vh>add_rule</vh></v>
 <v t="karstenw.20230316191528.53"><vh>cluster</vh></v>
@@ -127,7 +127,7 @@
 <v t="karstenw.20230316191528.90"><vh>sort_by_relevance</vh></v>
 </v>
 </v>
-<v t="karstenw.20230316194920.1"><vh>+ ANALOGY +</vh>
+<v t="karstenw.20230316194920.1" a="E"><vh>+ ANALOGY +</vh>
 <v t="karstenw.20230316191528.91"><vh>class _analogy</vh>
 <v t="karstenw.20230316191528.92"><vh>__init__</vh></v>
 <v t="karstenw.20230316191528.93"><vh>_best_first</vh></v>
@@ -143,7 +143,7 @@
 <v t="karstenw.20230316191528.98"><vh>suggest_properties</vh></v>
 <v t="karstenw.20230316191528.99"><vh>suggest_objects</vh></v>
 </v>
-<v t="karstenw.20230316195027.1"><vh>+ COMPARATIVE +</vh>
+<v t="karstenw.20230316195027.1" a="E"><vh>+ COMPARATIVE +</vh>
 <v t="karstenw.20230316191528.100" a="E"><vh>class compare_concepts</vh>
 <v t="karstenw.20230316191528.101"><vh>__init__</vh></v>
 <v t="karstenw.20230316191528.102"><vh>graph</vh></v>
@@ -259,12 +259,17 @@ import conceptnetreader as cnr
 
 # used in search_match_parse()
 import pattern
+
+import pattern.search # import search
+import pattern.en  # import parsetree, pluralize, singularize
+
+
+
 import pattern.web
 import pattern.text
 import pattern.text.en
 en = pattern.text.en
 
-# import textblob
 
 import graph
 from graph.cluster import sorted, unique
@@ -294,13 +299,36 @@ if kwlog:
     Requires the Web, Linguistics and Graph libraries.
     T. De Smedt, F. De Bleser
     """
-    relspaces = relation.replace("-"," ")
-    arg1 = "/%s/" % (relspaces,)
-    arg2 = "NN %s (a) (an) (JJ) NN" % (relspaces,)
     
-    matches = search_match_parse( # arg1, arg2, 
-        "\"" + relation.replace("-"," ") + "\"",
-        "NN " + relation.replace("-"," ") + " (a) (an) (JJ) NN",
+    origargs = """
+            "\"" + relation.replace("-"," ") + "\"",
+            "NN " + relation.replace("-"," ") + " (a) (an) (JJ) NN",
+            lambda chunk_: (clean(chunk_[0][0]), clean(chunk_[-1][0])), # A is bigger than B --&gt; (A, B)
+            # service="yahoo",
+            service="google",
+            cached=cached, 
+            n=n"""    
+    
+    # pdb.set_trace()
+    
+    relspaces = relation.replace("-"," ")
+    if 0:
+        # what style?
+        query = "/%s/" % (relspaces,)
+        pattern_ = "NN %s (a) (an) (JJ) NN" % (relspaces,)
+    else:
+        query = '"%s"' % (relspaces,)
+        pattern_ = "NN %s (a) (an) (JJ) NN" % (relspaces,)
+    
+    if 1:
+        print( "query:", query )
+        print( "pattern_:", pattern_ )
+        # print( "parse:", str(parse))
+    
+    # parse = lambda chunk_: (clean(chunk_[0][0]), clean(chunk_[-1][0])), # A is bigger than B --&gt; (A, B)
+    
+    matches = search_match_parse(
+        query, pattern_,
         lambda chunk_: (clean(chunk_[0][0]), clean(chunk_[-1][0])), # A is bigger than B --&gt; (A, B)
         # service="yahoo",
         service="google",
@@ -1294,15 +1322,18 @@ map_object = __call__
     matches = []
     rawresults = []
 
-    if 1:
+    if 0:
         print( "search_match_parse query:", query )
         print( "search_match_parse pattern_:", pattern_ )
+    
     if service == "google":
         n = min(n, 4)
         engine = Google(license=None, language="en")
+    
     elif service == "yahoo" :
         n = min(n, 10)
         engine = Yahoo(license=None, language="en")
+    
     elif service == "bing" :
         n = min(n, 10)
         engine = Bing(license=None, language="en")
@@ -1332,7 +1363,7 @@ map_object = __call__
             for result in request.value:
                 collect.append( result )
     
-    if kwdbg and 0:
+    if kwdbg and 1:
         pdb.set_trace()
     
     for result in collect:
@@ -1343,15 +1374,23 @@ map_object = __call__
             
             if result.description:
                 result.description = result.description.replace(",",", ").replace("  "," ")
-            # sntc = en.Sentence( result.description.lower() )
             
+            lowdesc = result.description.lower()
             
-            #match = en.sentence.find(result.description.lower(), pattern_)
-            #if len(match) &gt; 0 and len(match[0]) &gt; 0:
-            #    x = parse(match[0])
-            #    matches.append(x)
-            if 1:
-                pp( result )
+            # sntc = pattern.text.en.Sentence( lowdesc )
+            # match = en.sentence.find(result.description.lower(), pattern_)
+            # match = pattern.search.search(lowdesc, pattern_)
+            
+            # crashes
+            # pt = pattern.en.parsetree( lowdesc, lemmata=True )
+            
+            match = pattern.search.search( pattern_, lowdesc )
+            
+            if len(match) &gt; 0 and len(match[0]) &gt; 0:
+                x = parse(match[0])
+                matches.append(x)
+                if 1:
+                    pp( result )
             if pattern_ in result.text:
                 matches.append(result.text)
     return matches
@@ -1744,7 +1783,7 @@ g = None
     # Note the "maxedges" parameter - you won't find it documented.
     # We use it here to cap the number of rules returned.
     # A fast graph is more important right now than all of the data.
-    g = perception.cluster(str(node), depth=2, maxedges=200, labeled=1, lang=lang)
+    g = perception.cluster(str(node), depth=2, maxedges=100, labeled=1, lang=lang)
     g.distance = 4.0
     g.layout.n = 500
     g.styles.apply()
@@ -1792,8 +1831,8 @@ g = None
     # Note the "maxedges" parameter - you won't find it documented.
     # We use it here to cap the number of rules returned.
     # A fast graph is more important right now than all of the data.
-    g = perception.cluster( str(concept), depth=2, maxedges=90, labeled=1, lang="")
-    g.distance = 3.2
+    g = perception.cluster( str(concept), depth=2, maxedges=100, labeled=1, lang="")
+    g.distance = 4.1
     g.layout.n = 2000
     g.styles.apply()
     g.layout.force = 0.001 # lower if nodes are twitching
@@ -1801,7 +1840,7 @@ g = None
     if 1:
         print("load:", concept, len(g) )
 
-load("Dog")
+load("House")
 
 size( 1024, 1024)
 if 1:
@@ -1809,7 +1848,7 @@ if 1:
 </t>
 <t tx="karstenw.20260227123301.3">    def draw():
         g.update()
-        g.draw(traffic=False, directed=False)
+        g.draw(traffic=False, directed=True)
 else:
     background(0.5)
 </t>
@@ -1824,7 +1863,7 @@ except ImportError:
 size(1000, 1000)
 
 p = "is-more-important-than"
-cmp = perception.compare_concepts(p)
+cmp = perception.compare_concepts( p )
 
 # The return value is a list:
 print( "Concepts:" )

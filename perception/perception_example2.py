@@ -9,7 +9,8 @@ except ImportError:
 size(1000, 1000)
 
 p = "is-more-important-than"
-cmp = perception.compare_concepts(p)
+cmp = perception.compare_concepts( p )
+print("cmp:", cmp)
 
 # The return value is a list:
 print( "Concepts:" )
