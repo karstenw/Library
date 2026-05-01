@@ -343,9 +343,6 @@ def query_cnr(concept, relation=None, context=None, depth=1, maxedges=500, wait=
     if concept == None:
         return rules
 
-    if kwdbg and 0:
-        pdb.set_trace()
-
     concepts, edges, _ = cnr.query_concept( concept,
                                             context=context, maxedges=maxedges,
                                             lang=lang, weight=weight )
@@ -1157,14 +1154,8 @@ def search_match_parse(
             for result in request.value:
                 collect.append( result )
     
-    if kwdbg and 0:
-        pdb.set_trace()
-    
     for result in collect:
         if result.text:
-            #
-            # TODO
-            #
             
             if result.description:
                 result.description = result.description.replace(",",", ").replace("  "," ")
@@ -1206,7 +1197,6 @@ def clean(word):
 
 #--- SIMILE ----------------------------------------------------------------------------
 
-# NOT WORKING
 def suggest_properties(noun, cached=True):
     """ Learning to Understand Figurative Language: 
         From Similes to Metaphors to Irony,
@@ -1245,8 +1235,10 @@ def suggest_objects(adjective, cached=True):
     # import en
     def _parse(chunk_):
         # as deep as the oceans -> ocean
-        noun = clean(chunk_[-1][0])
-        if chunk_[-2][0] == "the" and en.is_noun(en.noun.singular(noun)):
+        # noun = clean(chunk_[-1][0])
+        noun = clean(chunk_[-1].string)
+        # if chunk_[-2][0] == "the" and en.is_noun(en.noun.singular(noun)):
+        if chunk_[-2].string == "the" and en.is_noun(en.noun.singular(noun)):
             return en.noun.singular(noun)
         return noun
     matches = []
