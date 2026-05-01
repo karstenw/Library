@@ -337,7 +337,8 @@ class graph(dict):
         if id in self: 
             return self[id]
             
-        if not isinstance(style, str) and "name" in style.__dict__:
+        if ( not isinstance(style, str)
+             and "name" in style.__dict__ ):
             style = style.name
         
         n = self.new_node(self, id, radius, style, category, label, properties)
@@ -364,7 +365,8 @@ class graph(dict):
         connection (not the cost).
         """
         
-        if id1 == id2: return None
+        if id1 == id2:
+            return None
         
         if not id1 in self:
             self.add_node(id1)
@@ -789,8 +791,10 @@ class xgraph(graph):
         """ Callback from graph.events when a node is clicked.
         """
         
-        if not self.has_node(node.id): return
-        if node == self.root: return
+        if not self.has_node(node.id):
+            return
+        if node == self.root:
+            return
         
         self._dx, self._dy = self.offset(node)
         self.previous = self.root.id
