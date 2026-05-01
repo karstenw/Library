@@ -6,8 +6,8 @@
 
 import os
 import pdb
-kwdbg = False
-kwlog = False
+kwdbg = True
+kwlog = True
 
 try:
     graph = ximport("graph")
@@ -61,11 +61,13 @@ def meronym( word, sense="", all=False ):
 
 def antonym( word, sense="", all=False ):
     fw = FlowerWord( word )
-    an = fw.holonyms()
+    an = fw.antonym
+    if 1: #len(an) > 0:
+        print("antonym(%s): %s" % (word, str(an)))
     if all:
         return an
     if len(an) > 0:
-        print("antonym(%s): %s" % (word, str(an[0].antonym)))
+        #print("antonym(%s): %s" % (word, str(an[0].antonym)))
         return an[0].antonym
     return ""
 
@@ -79,7 +81,7 @@ def hypernym( word, sense="", all=False ):
         return hn[0]
     return ""
 
-def senses( word, sense="", all=False ):
+def fsenses( word, sense="", all=False ):
     fw = FlowerWord( word )
     sn = fw.senses()
     print("senses(%s): %s" % (word, str(sn)))
@@ -117,7 +119,7 @@ class wordnetgraph(graph.graph):
     They retrieve data from WordNet and format it as nodes.
     The expand() method is called when you click on "has-specific" or "has-parts".
     
-    A helper class, senses, draws the interactive word sense selection buttons.
+    A helper class, SenseButtons, draws the interactive word sense selection buttons.
     
     """
     
@@ -132,7 +134,7 @@ class wordnetgraph(graph.graph):
         self.max = 20
         
         # A row of buttons to select the current word sense.
-        self.senses = senses(self, 20, 20)
+        self.senses = SenseButtons(self, 20, 20)
 
     def is_expandable(self, id):
         
@@ -176,11 +178,12 @@ class wordnetgraph(graph.graph):
         # If there are 4 word senses and each of it a list of words,
         # take the first word from each list, then take the second etc.
         words = []
+        # pdb.set_trace()
         fw = FlowerWord( word )
         snses = fw.senses()
         for i in range(2):
             
-            for sense in snses: # en.noun.senses(word):
+            for sense in snses: #en.noun.senses(word):
                 if (    len(sense) > i
                     and sense[i] != word
                     and sense[i] not in words):
@@ -196,15 +199,17 @@ class wordnetgraph(graph.graph):
         
         word = str(word)
         
-        if self.is_expandable(word): 
+        if self.is_expandable(word):
+            print("get_relations.is_expandable:", word)
             return self.expand(word, previous)
-
+        
         words = []
+        
         fw = FlowerWord( word )
         # lexname = en.noun.lexname(word)
         lexname = fw.lexname
         if lexname != "":
-            words.append((lexname, "category "))
+            words.append( (lexname, "category ") )
         
         relations = [
             # (6, en.noun.holonym  , "has-parts"),
@@ -212,13 +217,16 @@ class wordnetgraph(graph.graph):
             (3, meronym  , "is-part-of"),
             (2, antonym  , "is-opposite-of"),
             (4, hypernym , "is-a"),
-            (3, senses   , "is-action"),
+            (3, fsenses   , "is-action"),
             (6, hyponym  , "has-specific"),
         ]
         # Get related words from WordNet.
         # Exclude long words and take the top of the list.
+        
+        # pdb.set_trace()
+        
         for top, f, relation in relations:
-            r = []
+            result = []
             try:
                 wordlist = f(word, sense=self.senses.current, all=True)
             except:
@@ -226,20 +234,23 @@ class wordnetgraph(graph.graph):
                     wordlist = f(word, all=True)
                 except:
                     continue
+            if wordlist is None:
+                wordlist = []
             # old
             if 0:
                 for w in wordlist:
-                    if (    w[0] != word
-                        and w[0] not in r
-                        and len(w[0]) < 20):
-                        r.append( (w[0], relation) )
-            else:
+                    if (    w != word
+                        and w not in result
+                        and len(w) < 20):
+                        result.append( (w, relation) )
+            # rewritten
+            if 1:
                 for w in wordlist:
                     if w != word:
-                        if w not in r:
+                        if w not in result:
                             if len(w) < 20:
-                                r.append( (w, relation) )
-            words.extend(r[:top])
+                                result.append( (w, relation) )
+            words.extend( result ) #[:top] )
         if kwdbg:
             print("get_relations(%s): %s" % (word, str(words)))
         return words
@@ -249,8 +260,8 @@ class wordnetgraph(graph.graph):
         """ Zoom in to the hyponym or holonym branch.
         """
         
-        if relation == "has-specific" : f = en.noun.hyponym
-        if relation == "has-parts"    : f = en.noun.holonym
+        if relation == "has-specific" : f = hyponym # en.noun.hyponym
+        if relation == "has-parts"    : f = holonym # en.noun.holonym
         
         root = str(self.root.id.lower())
         unique = []
@@ -281,9 +292,11 @@ class wordnetgraph(graph.graph):
         if self.is_clickable(node):
             p = self.root.id
             # Use the previous back node instead of "has specific".
-            if self.is_expandable(p): p = self.nodes[-1].id
+            if self.is_expandable(p):
+                p = self.nodes[-1].id
             self.load(node.id, previous=p)
-
+    
+    
     def load(self, word, previous=None):
         
         self.clear()
@@ -294,31 +307,61 @@ class wordnetgraph(graph.graph):
         self.add_node(word, root=True, style="root")
         
         # Add the word senses to the root in the LIGHT style.
-        for w in self.get_senses(word):
-            self.add_node(w, style=self.styles.light.name)
-            self.add_edge(word, w, 0.5)
-            if len(self) > self.max: break
-
+        for wrd in self.get_senses(word):
+            self.add_node(wrd, style=self.styles.light.name)
+            self.add_edge(word, wrd, 0.5)
+            
+            if len(self) > self.max:
+                break
+        
+        if word in ("biology", "o", "i", "b"):
+            pdb.set_trace()
+        
         # Add relation branches to the root in the DARK style.
-        for w, r in self.get_relations(word, previous):
-            self.add_node(r, style="dark")
-            self.add_edge(w, r, 1.0)
-            self.add_edge(word, r)
-            if len(self) > self.max: break    
+        for wrd, rel in self.get_relations(word, previous):
+            
+            if type(rel) in (list,):
+                pdb.set_trace()
+            
+            if type(wrd) in (list,):
+                # pdb.set_trace()
+                for wrd2 in wrd:
+                    self.add_edge( wrd2, rel, 1.0)
+            else:
+                self.add_edge( wrd, rel, 1.0)
+                
+            self.add_node( rel, style="dark")
+            self.add_edge( word, rel)
+            
+            """
+                self.add_node( rel, style="dark")
+                self.add_edge( word, rel)
+            """
+                    
 
+
+            
+            if len(self) > self.max:
+                break
+        
         # Provide a back link to the previous word.
-        if previous and previous != self.root.id:
+        if (    previous
+            and previous != self.root.id):
             n = self.add_node(previous, 10)
-            if len(n.links) == 0: self.add_edge(word, n.id)
+            if len(n.links) == 0:
+                self.add_edge(word, n.id)
             n.style = "back"
         
         # Indicate the word corresponding to the current sense.
         if self.senses.count() > 0:
-            for w in en.noun.senses(word)[self.senses.current]:
+            #for w in en.noun.senses(word)[self.senses.current]:
+            for w in fsenses(word)[self.senses.current]:
+                
                 n = self.node(w)
                 if n and n != self.root: 
                     n.style = "marked"
-
+    
+    
     def draw(self, *args, **kwargs):
         
         """ Additional drawing for sense selection buttons.
@@ -329,7 +372,7 @@ class wordnetgraph(graph.graph):
 
 ### WORD SENSE SELECTION #######################################################
 
-class senses:
+class SenseButtons:
     
     """ A row of word sense selection buttons.
     """
@@ -354,7 +397,9 @@ class senses:
             self.word = str(self.graph.root.id)
             self.current = 0
             self._count = 0
-            try: self._count = len(en.noun.senses(self.word))
+            # try: self._count = len(en.noun.senses(self.word))
+            try:
+                self._count = len( fsenses(self.word) )
             except:
                 pass
                 
@@ -413,12 +458,14 @@ query = choice( allnouns )
 goodies = ("inconvenience", "biology", "cyberpunk", "frankfurt", "computer",
            "monastery", "africa", "rhetoric")
 
-query = choice( goodies )
+# query = choice( goodies )
+# query = "biology"
 
 g = wordnetgraph(distance=1.2)
+print( "query:", query )
 g.load(query)
 
-size(700, 550)
+size(850, 750)
 speed(30) 
 def draw():
     g.styles.textwidth = 160
