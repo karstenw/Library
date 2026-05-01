@@ -102,7 +102,7 @@
 <v t="karstenw.20230329160917.1"><vh>@clean cluster.py</vh>
 <v t="karstenw.20230329160929.1"><vh>Declarations</vh></v>
 <v t="karstenw.20230518183122.1"><vh>py3</vh></v>
-<v t="karstenw.20230329160948.1" a="E"><vh>+ LIST OPERATIONS +</vh>
+<v t="karstenw.20230329160948.1"><vh>+ LIST OPERATIONS +</vh>
 <v t="karstenw.20230329160929.2"><vh>sorted</vh></v>
 <v t="karstenw.20230329160929.3"><vh>unique</vh></v>
 </v>
@@ -203,7 +203,7 @@
 <v t="karstenw.20230329163024.3"><vh>class NoConvergenceError</vh></v>
 <v t="karstenw.20230329163024.4"><vh>eigenvector_centrality</vh></v>
 </v>
-<v t="karstenw.20230329163234.1" a="E"><vh>@clean style.py</vh>
+<v t="karstenw.20230329163234.1"><vh>@clean style.py</vh>
 <v t="karstenw.20230329163243.1"><vh>Declarations</vh></v>
 <v t="karstenw.20230507112117.1"><vh>Py3 &amp; makeunicode</vh></v>
 <v t="karstenw.20230329163243.2"><vh>class styles</vh>
@@ -242,7 +242,7 @@
 <v t="karstenw.20230507120759.1"><vh>Declarations</vh></v>
 <v t="karstenw.20250827122608.1"><vh>script</vh></v>
 </v>
-<v t="karstenw.20230507120741.1" a="E"><vh>@clean graph_example2.py</vh>
+<v t="karstenw.20230507120741.1"><vh>@clean graph_example2.py</vh>
 <v t="karstenw.20230507120757.1"><vh>Declarations</vh></v>
 <v t="karstenw.20250827122640.1"><vh>script</vh></v>
 </v>
@@ -3142,6 +3142,7 @@ nouns = set( allnouns )
         return self.expand(word, previous)
 
     words = []
+    
     fw = FlowerWord( word )
     # lexname = en.noun.lexname(word)
     lexname = fw.lexname
@@ -3159,6 +3160,9 @@ nouns = set( allnouns )
     ]
     # Get related words from WordNet.
     # Exclude long words and take the top of the list.
+    
+    pdb.set_trace()
+    
     for top, f, relation in relations:
         r = []
         try:
@@ -3192,8 +3196,8 @@ nouns = set( allnouns )
     """ Zoom in to the hyponym or holonym branch.
     """
     
-    if relation == "has-specific" : f = en.noun.hyponym
-    if relation == "has-parts"    : f = en.noun.holonym
+    if relation == "has-specific" : f = hyponym # en.noun.hyponym
+    if relation == "has-parts"    : f = holonym # en.noun.holonym
     
     root = str(self.root.id.lower())
     unique = []
@@ -3392,7 +3396,7 @@ class senses:
 </t>
 <t tx="karstenw.20230507120753.4">def antonym( word, sense="", all=False ):
     fw = FlowerWord( word )
-    an = fw.holonyms()
+    an = fw.antonym
     if all:
         return an
     if len(an) &gt; 0:
@@ -3528,6 +3532,7 @@ goodies = ("inconvenience", "biology", "cyberpunk", "frankfurt", "computer",
 query = choice( goodies )
 
 g = wordnetgraph(distance=1.2)
+print( "query:", query )
 g.load(query)
 
 size(700, 550)
