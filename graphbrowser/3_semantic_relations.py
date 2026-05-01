@@ -131,7 +131,7 @@ class SemanticRelationBrowser(graphbrowser.GraphBrowser):
         
 ################################################################################
 
-size(500, 500)
+size(800, 800)
 speed(30)
 
 def setup():
