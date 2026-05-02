@@ -10,7 +10,7 @@
 <find_panel_settings/>
 <vnodes>
 <v t="karstenw.20230319195648.2" a="E"><vh>graph</vh>
-<v t="karstenw.20230319195720.1"><vh>@clean __init__.py</vh>
+<v t="karstenw.20230319195720.1" a="E"><vh>@clean __init__.py</vh>
 <v t="karstenw.20230319195736.1"><vh>Declarations</vh></v>
 <v t="karstenw.20230319202717.1"><vh>py3</vh>
 <v t="karstenw.20230319202717.2"><vh>py3 stuff</vh></v>
@@ -47,7 +47,7 @@
 <v t="karstenw.20230319195736.27"><vh>_get_length</vh></v>
 <v t="karstenw.20230319195736.28"><vh>_set_length</vh></v>
 </v>
-<v t="karstenw.20230319195736.29"><vh>class graph</vh>
+<v t="karstenw.20230319195736.29" a="E"><vh>class graph</vh>
 <v t="karstenw.20230319195736.30"><vh>__init__</vh></v>
 <v t="karstenw.20230319195736.31"><vh>_get_distance</vh></v>
 <v t="karstenw.20230319195736.32"><vh>_set_distance</vh></v>
@@ -251,9 +251,9 @@
 <v t="karstenw.20230507120755.2"><vh>draw</vh></v>
 <v t="karstenw.20250827122705.1"><vh>script</vh></v>
 </v>
-<v t="karstenw.20230507120747.1"><vh>@clean graph_example4.py</vh>
+<v t="karstenw.20230507120747.1" a="E"><vh>@clean graph_example4.py</vh>
 <v t="karstenw.20230507120753.1"><vh>Declarations</vh></v>
-<v t="karstenw.20230518121333.1"><vh>+ REPLACEMENTS</vh>
+<v t="karstenw.20230518121333.1" a="E"><vh>+ REPLACEMENTS</vh>
 <v t="karstenw.20230507120753.2"><vh>holonym</vh></v>
 <v t="karstenw.20230507120753.3"><vh>meronym</vh></v>
 <v t="karstenw.20230507120753.4"><vh>antonym</vh></v>
@@ -261,7 +261,7 @@
 <v t="karstenw.20230507120753.6"><vh>senses</vh></v>
 <v t="karstenw.20230507120753.7"><vh>hyponym</vh></v>
 </v>
-<v t="karstenw.20230507120753.8"><vh>class wordnetgraph</vh>
+<v t="karstenw.20230507120753.8" a="E"><vh>class wordnetgraph</vh>
 <v t="karstenw.20230507120753.9"><vh>__init__</vh></v>
 <v t="karstenw.20230507120753.10"><vh>is_expandable</vh></v>
 <v t="karstenw.20230507120753.11"><vh>is_clickable</vh></v>
@@ -272,7 +272,7 @@
 <v t="karstenw.20230507120753.16"><vh>load</vh></v>
 <v t="karstenw.20230507120753.17"><vh>draw</vh></v>
 </v>
-<v t="karstenw.20230507120753.18"><vh>class senses</vh>
+<v t="karstenw.20230507120753.18" a="E"><vh>class SenseButtons</vh>
 <v t="karstenw.20230507120753.19"><vh>__init__</vh></v>
 <v t="karstenw.20230507120753.20"><vh>count</vh></v>
 <v t="karstenw.20230507120753.21"><vh>draw</vh></v>
@@ -591,7 +591,8 @@ distance = property(_get_distance, _set_distance)
     if id in self: 
         return self[id]
         
-    if not isinstance(style, str) and "name" in style.__dict__:
+    if ( not isinstance(style, str)
+         and "name" in style.__dict__ ):
         style = style.name
     
     n = self.new_node(self, id, radius, style, category, label, properties)
@@ -620,7 +621,8 @@ distance = property(_get_distance, _set_distance)
     connection (not the cost).
     """
     
-    if id1 == id2: return None
+    if id1 == id2:
+        return None
     
     if not id1 in self:
         self.add_node(id1)
@@ -1123,8 +1125,10 @@ class xgraph(graph):
     """ Callback from graph.events when a node is clicked.
     """
     
-    if not self.has_node(node.id): return
-    if node == self.root: return
+    if not self.has_node(node.id):
+        return
+    if node == self.root:
+        return
     
     self._dx, self._dy = self.offset(node)
     self.previous = self.root.id
@@ -3044,8 +3048,8 @@ def makeunicode(s, srcencoding="utf-8", normalizer="NFC"):
 
 import os
 import pdb
-kwdbg = False
-kwlog = False
+kwdbg = True
+kwlog = True
 
 try:
     graph = ximport("graph")
@@ -3117,11 +3121,12 @@ nouns = set( allnouns )
     # If there are 4 word senses and each of it a list of words,
     # take the first word from each list, then take the second etc.
     words = []
+    # pdb.set_trace()
     fw = FlowerWord( word )
     snses = fw.senses()
     for i in range(2):
         
-        for sense in snses: # en.noun.senses(word):
+        for sense in snses: #en.noun.senses(word):
             if (    len(sense) &gt; i
                 and sense[i] != word
                 and sense[i] not in words):
@@ -3138,16 +3143,17 @@ nouns = set( allnouns )
     
     word = str(word)
     
-    if self.is_expandable(word): 
+    if self.is_expandable(word):
+        print("get_relations.is_expandable:", word)
         return self.expand(word, previous)
-
+    
     words = []
     
     fw = FlowerWord( word )
     # lexname = en.noun.lexname(word)
     lexname = fw.lexname
     if lexname != "":
-        words.append((lexname, "category "))
+        words.append( (lexname, "category ") )
     
     relations = [
         # (6, en.noun.holonym  , "has-parts"),
@@ -3155,16 +3161,16 @@ nouns = set( allnouns )
         (3, meronym  , "is-part-of"),
         (2, antonym  , "is-opposite-of"),
         (4, hypernym , "is-a"),
-        (3, senses   , "is-action"),
+        (3, fsenses   , "is-action"),
         (6, hyponym  , "has-specific"),
     ]
     # Get related words from WordNet.
     # Exclude long words and take the top of the list.
     
-    pdb.set_trace()
+    # pdb.set_trace()
     
     for top, f, relation in relations:
-        r = []
+        result = []
         try:
             wordlist = f(word, sense=self.senses.current, all=True)
         except:
@@ -3172,20 +3178,23 @@ nouns = set( allnouns )
                 wordlist = f(word, all=True)
             except:
                 continue
+        if wordlist is None:
+            wordlist = []
         # old
         if 0:
             for w in wordlist:
-                if (    w[0] != word
-                    and w[0] not in r
-                    and len(w[0]) &lt; 20):
-                    r.append( (w[0], relation) )
-        else:
+                if (    w != word
+                    and w not in result
+                    and len(w) &lt; 20):
+                    result.append( (w, relation) )
+        # rewritten
+        if 1:
             for w in wordlist:
                 if w != word:
-                    if w not in r:
+                    if w not in result:
                         if len(w) &lt; 20:
-                            r.append( (w, relation) )
-        words.extend(r[:top])
+                            result.append( (w, relation) )
+        words.extend( result ) #[:top] )
     if kwdbg:
         print("get_relations(%s): %s" % (word, str(words)))
     return words
@@ -3229,8 +3238,10 @@ nouns = set( allnouns )
     if self.is_clickable(node):
         p = self.root.id
         # Use the previous back node instead of "has specific".
-        if self.is_expandable(p): p = self.nodes[-1].id
+        if self.is_expandable(p):
+            p = self.nodes[-1].id
         self.load(node.id, previous=p)
+
 
 </t>
 <t tx="karstenw.20230507120753.16">def load(self, word, previous=None):
@@ -3243,30 +3254,57 @@ nouns = set( allnouns )
     self.add_node(word, root=True, style="root")
     
     # Add the word senses to the root in the LIGHT style.
-    for w in self.get_senses(word):
-        self.add_node(w, style=self.styles.light.name)
-        self.add_edge(word, w, 0.5)
-        if len(self) &gt; self.max: break
-
+    for wrd in self.get_senses(word):
+        self.add_node(wrd, style=self.styles.light.name)
+        self.add_edge(word, wrd, 0.5)
+        
+        if len(self) &gt; self.max:
+            break
+    
+    if word in ("biology", "o", "i", "b"):
+        pdb.set_trace()
+    
     # Add relation branches to the root in the DARK style.
-    for w, r in self.get_relations(word, previous):
-        self.add_node(r, style="dark")
-        self.add_edge(w, r, 1.0)
-        self.add_edge(word, r)
-        if len(self) &gt; self.max: break    
+    for wrd, rel in self.get_relations(word, previous):
+        
+        if type(rel) in (list,):
+            pdb.set_trace()
+        
+        if type(wrd) in (list,):
+            # pdb.set_trace()
+            for wrd2 in wrd:
+                self.add_edge( wrd2, rel, 1.0)
+        else:
+            self.add_edge( wrd, rel, 1.0)
+            
+        self.add_node( rel, style="dark")
+        self.add_edge( word, rel)
+        
+        """
+            self.add_node( rel, style="dark")
+            self.add_edge( word, rel)
+        """
 
+        if len(self) &gt; self.max:
+            break
+    
     # Provide a back link to the previous word.
-    if previous and previous != self.root.id:
+    if (    previous
+        and previous != self.root.id):
         n = self.add_node(previous, 10)
-        if len(n.links) == 0: self.add_edge(word, n.id)
+        if len(n.links) == 0:
+            self.add_edge(word, n.id)
         n.style = "back"
     
     # Indicate the word corresponding to the current sense.
     if self.senses.count() &gt; 0:
-        for w in en.noun.senses(word)[self.senses.current]:
+        #for w in en.noun.senses(word)[self.senses.current]:
+        for w in fsenses(word, all=True)[self.senses.current]:
+            
             n = self.node(w)
             if n and n != self.root: 
                 n.style = "marked"
+
 
 </t>
 <t tx="karstenw.20230507120753.17">def draw(self, *args, **kwargs):
@@ -3280,7 +3318,7 @@ nouns = set( allnouns )
 </t>
 <t tx="karstenw.20230507120753.18">### WORD SENSE SELECTION #######################################################
 
-class senses:
+class SenseButtons:
     
     """ A row of word sense selection buttons.
     """
@@ -3291,6 +3329,7 @@ class senses:
     
     self.graph = graph
     self.word = ""
+    self.senses = []
     self.x = x
     self.y = y
     
@@ -3301,7 +3340,7 @@ class senses:
 <t tx="karstenw.20230507120753.2">def holonym( word, sense="", all=False ):
     fw = FlowerWord( word )
     hn = fw.holonyms()
-    print("holonym(%s): %s" % (word, str(hn)))
+    #print("holonym(%s): %s" % (word, str(hn)))
     if all:
         return hn
     if len(hn) &gt; 0:
@@ -3319,9 +3358,14 @@ class senses:
         self.word = str(self.graph.root.id)
         self.current = 0
         self._count = 0
-        try: self._count = len(en.noun.senses(self.word))
-        except:
-            pass
+        self.senses = fsenses(self.word, all=True)
+        self._count = len( self.senses )
+        if 0:
+            # try: self._count = len(en.noun.senses(self.word))
+            try:
+                self._count = len( fsenses(self.word, all=True) )
+            except:
+                pass
             
     return self._count
 
@@ -3371,7 +3415,10 @@ class senses:
         self.pressed = None
         if path.contains(MOUSEX, MOUSEY):
             self.current = i
-            self.graph.load(self.graph.root.id)      
+            if 0:
+                self.graph.load(self.graph.root.id)
+            else:
+                self.graph.load( self.senses[i] )
     
 </t>
 <t tx="karstenw.20230507120753.24">def draw():
@@ -3386,7 +3433,7 @@ class senses:
 <t tx="karstenw.20230507120753.3">def meronym( word, sense="", all=False ):
     fw = FlowerWord( word )
     mn = fw.meronyms()
-    print("meronym(%s): %s" % (word, str(mn)))
+    #print("meronym(%s): %s" % (word, str(mn)))
     if all:
         return mn
     if len(mn) &gt; 0:
@@ -3397,10 +3444,12 @@ class senses:
 <t tx="karstenw.20230507120753.4">def antonym( word, sense="", all=False ):
     fw = FlowerWord( word )
     an = fw.antonym
+    if 0: #len(an) &gt; 0:
+        print("antonym(%s): %s" % (word, str(an)))
     if all:
         return an
     if len(an) &gt; 0:
-        print("antonym(%s): %s" % (word, str(an[0].antonym)))
+        #print("antonym(%s): %s" % (word, str(an[0].antonym)))
         return an[0].antonym
     return ""
 
@@ -3408,7 +3457,7 @@ class senses:
 <t tx="karstenw.20230507120753.5">def hypernym( word, sense="", all=False ):
     fw = FlowerWord( word )
     hn = fw.hypernyms()
-    print("hypernym(%s): %s" % (word, str(hn)))
+    #print("hypernym(%s): %s" % (word, str(hn)))
     if all:
         return hn
     if len(hn) &gt; 0:
@@ -3416,7 +3465,7 @@ class senses:
     return ""
 
 </t>
-<t tx="karstenw.20230507120753.6">def senses( word, sense="", all=False ):
+<t tx="karstenw.20230507120753.6">def fsenses( word, sense="", all=False ):
     fw = FlowerWord( word )
     sn = fw.senses()
     print("senses(%s): %s" % (word, str(sn)))
@@ -3430,7 +3479,7 @@ class senses:
 <t tx="karstenw.20230507120753.7">def hyponym( word, sense="", all=False ):
     fw = FlowerWord( word )
     hn = fw.hyponyms()
-    print("hyponym(%s): %s" % (word, str(hn)))
+    #print("hyponym(%s): %s" % (word, str(hn)))
     if all:
         return hn
     if len(hn) &gt; 0:
@@ -3456,7 +3505,7 @@ class wordnetgraph(graph.graph):
     They retrieve data from WordNet and format it as nodes.
     The expand() method is called when you click on "has-specific" or "has-parts".
     
-    A helper class, senses, draws the interactive word sense selection buttons.
+    A helper class, SenseButtons, draws the interactive word sense selection buttons.
     
     """
     
@@ -3473,7 +3522,7 @@ class wordnetgraph(graph.graph):
     self.max = 20
     
     # A row of buttons to select the current word sense.
-    self.senses = senses(self, 20, 20)
+    self.senses = SenseButtons(self, 20, 20)
 
 </t>
 <t tx="karstenw.20230507120755.1">try:
@@ -3529,13 +3578,14 @@ query = choice( allnouns )
 goodies = ("inconvenience", "biology", "cyberpunk", "frankfurt", "computer",
            "monastery", "africa", "rhetoric")
 
-query = choice( goodies )
+# query = choice( goodies )
+# query = "biology"
 
 g = wordnetgraph(distance=1.2)
 print( "query:", query )
 g.load(query)
 
-size(700, 550)
+size(850, 750)
 speed(30) 
 </t>
 <t tx="karstenw.20230518183122.1"># py3 stuff not needed here
