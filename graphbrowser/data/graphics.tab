@@ -1,0 +1,381 @@
+advertising	9	AdBusters	culture jamming
+advertising	8	culture jamming	advertising
+advertising	10	consumerism	advertising
+advertising	4	flyer	advertising
+advertising	4	billboard	advertising
+advertising	6	Minority Report	advertising
+advertising	4	Google	advertising
+advertising	4	newspaper	advertising
+advertising	4	magazine	advertising
+advertising	3	guerilla promotion	advertising
+advertising	1	product placement	guerilla promotion
+advertising	4	social network	guerilla promotion
+advertising	4	attention	advertising
+advertising	6	advertising	marketing
+advertising	4	bus stop	advertising
+advertising	10	profit	advertising
+advertising	4	social network	viral marketing
+advertising	3	viral marketing	marketing
+advertising	4	blog	viral marketing
+advertising	2	attention	marketing
+advertising	4	Macromedia Flash	viral marketing
+advertising	6	advergame	viral marketing
+advertising	4	viral marketing	profit
+advertising	4	viral marketing	profit
+advertising	10	attention	logo
+advertising	10	profit	graphic design
+aesthetics	10	dynamic	curve
+aesthetics	1	straight	line
+aesthetics	10	tranquility	horizontal
+aesthetics	10	tranquility	straight
+aesthetics	1	tranquility	nature
+aesthetics	6	aesthetics	tranquility
+aesthetics	6	slow	tranquility
+aesthetics	6	noise	clutter
+aesthetics	4	odd	attention
+aesthetics	4	even	symmetry
+aesthetics	2	repetition	rhythm
+aesthetics	2	length	rhythm
+aesthetics	2	time	rhythm
+aesthetics	1	balance	composition
+aesthetics	1	rhythm	composition
+aesthetics	1	unity	composition
+aesthetics	6	unity	harmony
+aesthetics	4	aesthetics	layout
+aesthetics	4	whitespace	aesthetics
+aesthetics	4	golden ratio	aesthetics
+aesthetics	1	1.618033989	golden ratio
+aesthetics	9	Fibonacci sequence	golden ratio
+aesthetics	2	golden ratio	nature
+aesthetics	6	golden ratio	tree
+aesthetics	2	tree	nature
+aesthetics	1	recursion	nature
+aesthetics	4	symmetry	aesthetics
+aesthetics	1	symmetry	nature
+aesthetics	6	symmetry	mirror
+aesthetics	4	scale	symmetry
+aesthetics	4	rotation	symmetry
+aesthetics	4	flip	symmetry
+aesthetics	6	symmetry	architecture
+aesthetics	6	symmetry	recursion
+aesthetics	3	pattern	symmetry
+aesthetics	6	all-over	complexity
+aesthetics	6	simplicity	aesthetics
+aesthetics	8	simplicity	complexity
+aesthetics	6	noise	complexity
+aesthetics	8	symmetry	asymmetry
+aesthetics	4	asymmetry	attention
+aesthetics	10	attention	layout
+aesthetics	7	radial symmetry	symmetry
+aesthetics	7	bilateral symmetry	symmetry
+aesthetics	6	focus	attention
+aesthetics	2	gravity	focus
+aesthetics	2	direction	focus
+aesthetics	2	direction	dynamic
+aesthetics	2	speed	dynamic
+aesthetics	1	relative	aesthetics
+aesthetics	6	symmetry	harmony
+aesthetics	1	harmony	nature
+aesthetics	6	beauty	harmony
+aesthetics	6	beauty	spirituality
+aesthetics	8	ugliness	beauty
+aesthetics	2	beauty	aesthetics
+aesthetics	6	beauty	good
+aesthetics	8	good	bad
+aesthetics	1	big	nearby
+aesthetics	1	sharp	nearby
+aesthetics	4	sharpen	sharp
+aesthetics	4	shadow	depth
+aesthetics	6	shadow	darkness
+aesthetics	1	black	darkness
+aesthetics	1	dark	darkness
+aesthetics	8	light	dark
+aesthetics	6	gloom	darkness
+aesthetics	6	sadness	darkness
+aesthetics	6	joy	light
+aesthetics	6	light	whitespace
+aesthetics	1	saturation	hue
+aesthetics	1	intense	saturation
+aesthetics	1	vivid	saturation
+aesthetics	1	brightness	darkness
+aesthetics	1	brightness	light
+aesthetics	6	white	light
+aesthetics	6	math	aesthetics
+aesthetics	3	dynamic	composition
+aesthetics	2	whitespace	minimalism
+aesthetics	8	emotion	abstraction
+aesthetics	3	fear	emotion
+aesthetics	3	anger	emotion
+aesthetics	3	joy	emotion
+aesthetics	3	disgust	emotion
+aesthetics	8	complexity	abstraction
+aesthetics	6	simplicity	abstraction
+aesthetics	7	less is more	minimalism
+aesthetics	1	clean	minimalism
+aesthetics	8	chaos	minimalism
+aesthetics	6	minimalism	aesthetics
+aesthetics	1	static	minimalism
+aesthetics	8	static	dynamic
+aesthetics	1	abstraction	minimalism
+aesthetics	6	pattern	abstraction
+aesthetics	6	horror vacui	all-over
+aesthetics	8	all-over	whitespace
+aesthetics	6	crammed	all-over
+aesthetics	3	all-over	layout
+aesthetics	6	chaos	all-over
+creativity	2	creativity	graphic design
+creativity	3	artificial creativity	creativity
+creativity	4	Wikipedia	creativity
+creativity	10	creativity	brainstorm
+creativity	10	idea	brainstorm
+imaging	4	image	texture mapping
+imaging	2	image	layout
+imaging	4	Photoshop	image manipulation
+imaging	4	Core Image	image manipulation
+imaging	4	image	image manipulation
+imaging	2	layer	image
+imaging	1	opacity	layer
+imaging	1	blend mode	layer
+imaging	3	overlay blend	blend mode
+imaging	3	multiply blend	blend mode
+imaging	3	screen blend	blend mode
+imaging	3	soft light blend	blend mode
+imaging	3	dark light blend	blend mode
+imaging	4	screen blend	light
+imaging	4	overlay blend	surrealism
+imaging	4	overlay blend	dream
+imaging	1	brightness	layer
+imaging	1	saturation	layer
+imaging	4	filter	image manipulation
+imaging	7	blur	filter
+imaging	7	sharpen	filter
+imaging	6	unsharp mask	sharpen
+imaging	7	bump distortion	filter
+imaging	7	hole distortion	filter
+imaging	7	liquify	filter
+imaging	7	twirl	filter
+imaging	8	twirl	aesthetics
+imaging	7	gradient	layer
+imaging	1	alpha mask	layer
+imaging	4	gradient	alpha mask
+imaging	4	compositing	image manipulation
+imaging	6	compositing	blend mode
+imaging	4	Apple Shake	compositing
+imaging	2	transformation	image manipulation
+imaging	1	rotation	transformation
+imaging	1	scale	transformation
+imaging	1	flip	transformation
+imaging	7	invert	filter
+imaging	3	Dave McKean	illustrator
+imaging	3	Dave McKean	photographer
+imaging	6	collage	image manipulation
+imaging	9	Dave McKean	collage
+imaging	9	Dave McKean	dark mood
+imaging	6	Dave McKean	jazz
+imaging	7	collage	composition
+imaging	8	liquify	aesthetics
+imaging	2	perspective	depth
+imaging	4	rule of thirds	composition
+imaging	4	rule of thirds	aesthetics
+imaging	3	rule of thirds	golden ratio
+imaging	7	radial blur	filter
+imaging	4	radial blur	focus
+imaging	3	radial blur	blur
+imaging	3	motion blur	blur
+imaging	6	distortion	asymmetry
+imaging	1	distortion	bump distortion
+imaging	1	distortion	hole distortion
+imaging	1	distortion	perspective tile
+imaging	7	perspective tile	filter
+imaging	4	perspective tile	depth
+imaging	6	shadow	symmetry
+imaging	4	gradient	depth
+imaging	6	saturation	distance
+imaging	3	desaturate	filter
+imaging	1	grayscale	desaturate
+imaging	8	color	grayscale
+imaging	1	shadow	opacity
+imaging	6	motion	dynamic
+imaging	8	heavy	dynamic
+imaging	1	fast	motion
+imaging	1	slow	motion
+imaging	1	direction	motion
+imaging	7	motion blur	filter
+imaging	4	motion blur	motion
+imaging	1	shutter speed	photography
+imaging	4	photography	image
+imaging	9	photographer	photography
+imaging	1	exposure	shutter speed
+imaging	4	exposure	motion blur
+imaging	9	camera	photography
+imaging	9	camera	panning
+imaging	4	panning	motion blur
+imaging	4	layer	depth
+imaging	4	scale	depth
+imaging	2	depth	photography
+imaging	1	distance	depth
+imaging	1	nearby	distance
+imaging	1	far away	distance
+imaging	8	flatness	depth
+imaging	6	flatness	nearby
+imaging	6	depth	focus
+imaging	1	blur	far away
+imaging	1	small	far away
+imaging	6	canvas	image manipulation
+imaging	2	layer	canvas
+imaging	6	texture	canvas
+imaging	1	tactile	texture
+imaging	2	texture mapping	3D computer graphics
+imaging	6	Dave McKean	texture
+imaging	6	texture	rough
+imaging	7	rust	texture
+imaging	7	wood	texture
+imaging	7	metal	texture
+imaging	7	paint	texture
+imaging	7	dirt	texture
+imaging	7	trash	texture
+imaging	7	marble	texture
+imaging	7	cloud	texture
+imaging	7	mist	texture
+imaging	7	skin	texture
+imaging	7	fur	texture
+imaging	2	fur	animal
+imaging	2	animal	nature
+imaging	2	skin	man
+imaging	2	man	nature
+imaging	7	fabric	texture
+imaging	6	fabric	pattern
+imaging	7	water	texture
+imaging	2	photography	graphic design
+imaging	7	nature	photography
+imaging	7	architecture	photography
+imaging	7	people	photography
+imaging	7	fashion	photography
+imaging	2	overlay blend	vivid effect
+imaging	2	gaussian blur	vivid effect
+imaging	3	gaussian blur	blur
+print	5	document	paper
+print	1	document	300dpi
+print	1	document	CMYK
+print	3	CMYK	color model
+print	1	paper format	paper
+print	1	width	paper format
+print	1	height	paper format
+print	3	paper	medium
+print	3	A0	paper format
+print	3	A1	paper format
+print	3	A2	paper format
+print	3	A3	paper format
+print	3	A4	paper format
+print	3	A5	paper format
+print	3	B2	paper format
+print	3	B1	paper format
+print	6	poster	A2
+print	6	poster	A1
+print	6	poster	B2
+print	6	poster	B1
+print	1	A1	60x84cm
+print	1	A0	120x84cm
+print	1	cm	width
+print	1	cm	height
+print	1	B1	70x100cm
+print	1	B2	60x80cm
+print	1	B2	50x70cm
+print	1	B3	35x50cm
+print	1	A2	42x60cm
+print	2	mm	cm
+print	1	A3	42x30cm
+print	6	postcard	A5
+print	3	hypernym	abstraction
+print	6	concept	abstraction
+print	6	A4	book
+print	2	page	book
+print	1	layout	page
+print	1	layout	document
+print	2	logo	layout
+print	3	grid	layout
+print	3	template	layout
+print	6	composition	layout
+print	6	layout	composition
+print	1	300dpi	image
+print	1	CMYK	image
+print	3	HSB	color model
+print	3	RGB	color model
+print	2	layout	graphic design
+print	6	flyer	A5
+print	6	paper	magazine
+print	6	paper	book
+print	2	page	magazine
+print	5	page	paper
+typography	2	typography	graphic design
+typography	2	typography	layout
+typography	4	font	typography
+typography	6	typeface	font
+typography	1	weight	font
+typography	6	point size	weight
+typography	6	font size	weight
+typography	1	italic	font
+typography	1	bold	font
+typography	3	serif	font
+typography	3	sans-serif	font
+typography	2	letterspacing	typography
+typography	2	kerning	typography
+typography	6	letterspacing	readability
+typography	6	readability	legibility
+typography	6	font size	readability
+typography	6	leading	readability
+typography	2	leading	typography
+typography	6	linespacing	leading
+typography	6	lineheight	leading
+typography	2	paragraph	text
+typography	2	title	text
+typography	2	whitespace	layout
+typography	2	whitespace	typography
+typography	2	text	layout
+typography	4	type designer	typography
+typography	3	David Carson	type designer
+typography	7	grunge	typography
+typography	6	grunge	chaos
+typography	9	David Carson	grunge
+typography	2	icon	typography
+typography	3	ampersand	icon
+typography	3	smiley	icon
+typography	6	smiley	e-mail
+typography	6	smiley	chat
+typography	4	Adobe InDesign	layout
+typography	3	Helvetica	sans-serif
+typography	3	Times	serif
+typography	10	communication	graphic design
+typography	8	noise	communication
+typography	6	signal	icon
+typography	2	signal	communication
+typography	2	message	communication
+typography	1	message	text
+typography	6	David Carson	trash
+typography	6	David Carson	surfing
+typography	6	logo	abstraction
+typography	6	icon	abstraction
+typography	2	logo design	graphic design
+typography	10	logo	logo design
+typography	9	The Designers Republic	graphic design
+typography	6	The Designers Republic	architecture
+typography	2	Russian constructivism	The Designers Republic
+typography	6	electronica	The Designers Republic
+typography	9	The Designers Republic	web design
+typography	2	anime	The Designers Republic
+typography	2	minimalism	The Designers Republic
+vectors	2	geometric form	abstraction
+vectors	3	rectangle	geometric form
+vectors	3	circle	geometric form
+vectors	3	oval	geometric form
+vectors	3	line	geometric form
+vectors	3	star	geometric form
+vectors	6	drawing primitive	geometric form
+vectors	4	Adobe Illustrator	vector-based drawing
+vectors	3	PDF	vector graphics format
+vectors	3	EPS	vector graphics format
+vectors	3	SVG	vector graphics format
+vectors	3	document	vector graphics format
+vectors	6	Bézier curve	vector-based drawing
+vectors	7	vector-based drawing	computer graphics
+vectors	2	Bézier curve	curve
