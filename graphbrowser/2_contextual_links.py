@@ -19,7 +19,7 @@ from pattern.en import parsetree, pluralize, singularize
 def loadtext( filepath ):
     result = ""
     path = os.path.abspath( filepath )
-    print(filepath)
+    # print(filepath)
     f = io.open(path, 'r', encoding="utf-8")
     s = f.read()
     f.close()
@@ -39,8 +39,6 @@ class ContextualLinkBrowser(graphbrowser.GraphBrowser):
         for lexicon in lexicons:
             for f in files(lexicon):
                 path = os.path.abspath( f )
-                if 0:
-                    print("path:", path)
                 _, filename = os.path.split( path )
                 basename, ext = os.path.splitext( filename )
                 if not basename in self.nodes:
@@ -152,7 +150,9 @@ class ContextualLinkBrowser(graphbrowser.GraphBrowser):
             #                           self.link_pattern,
             #                           chunked=False)
             s = parsetree( self.nodes[node_id] )
-            print('s=parsetree("%s")' % (self.nodes[node_id],) )
+            print(node_id)
+            print( self.nodes[node_id] )
+            print()
             matches = search( self.link_pattern, s)
 
             strings = []
@@ -277,7 +277,7 @@ class ContextualLinkBrowser(graphbrowser.GraphBrowser):
                 node_id = node_id.split()[-1]
         graphbrowser.GraphBrowser._reload(self, node_id, previous)            
 
-######################################################################################################
+########################################################################################
 
 size(800, 800)
 speed(30)
@@ -287,11 +287,13 @@ def setup():
     
     global clb
     lexicons = ["data/colors/*.txt", "data/metaphors/*.txt"]
-    clb = ContextualLinkBrowser(lexicons)
-    print("clb:", clb)
-    clb.view("love")
+    clb = ContextualLinkBrowser( lexicons )
+    if 0:
+        query = choice( list(clb.nodes.keys()) )
+        clb.view( query )
+    else:
+        clb.view( "love" )
     clb.generate_filters()
-
 
 def draw():
     
