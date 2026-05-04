@@ -21,8 +21,10 @@ __license__   = "Research purposes only"
 
 import pprint
 
+import heapq
+
 from nodebox.graphics import Point, RGB
-from nodebox.util import random,makeunicode
+from nodebox.util import random, makeunicode
 from math import sqrt, log
 from math import degrees, atan2
 
@@ -121,13 +123,13 @@ class Graph:
         if id in self.index:
             return self.index[id]
         
-        n = GraphNode(self, id, radius, style)
-        self.index[n.id] = n
-        self.nodes.append(n)
+        node = GraphNode(self, id, radius, style)
+        self.index[node.id] = node
+        self.nodes.append(node)
         if root: 
-            self.root = n
+            self.root = node
             
-        return n
+        return node
         
     def add_edge(self, id1, id2, weight=1.0, label=""):
         
@@ -153,17 +155,17 @@ class Graph:
         """
         
         if self.index.has_key:
-            n = self.index[id]
-            self.nodes.remove(n)
+            node = self.index[id]
+            self.nodes.remove(node)
             del self.index[id]
             
             # Remove all edges involving id and all links to it.
             for e in self.edges:
-                if n in (e.node1, e.node2):
-                    if n in e.node1.links: 
-                        e.node1.links.remove(n)
-                    if n in e.node2.links: 
-                        e.node2.links.remove(n)
+                if node in (e.node1, e.node2):
+                    if node in e.node1.links: 
+                        e.node1.links.remove(node)
+                    if node in e.node2.links: 
+                        e.node2.links.remove(node)
                     self.edges.remove(e)
 
     def node(self, id):
@@ -268,25 +270,21 @@ class Graph:
         """
         
         self.update()
-
+        
         # Draw the graph background.
         s = self.styles.default
         s.draw.background(s)
-
+        
         # Center the graph on the canvas.
         c = self.center()
         _ctx.translate(c.x+dx, c.y+dy)
-     
-     
         
         if clusters:
-            for n in self.strongest_nodes()[:3]:
-                try: s = self.styles[n.style]
+            for node in self.strongest_nodes()[:3]:
+                try: s = self.styles[node.style]
                 except: s = self.styles.default
-                s.draw.cluster(s, n, self.alpha)        
-
-
-
+                s.draw.cluster(s, node, self.alpha)        
+        
         # Draws the graph's edges as a single Bezier path for speed.
         # The color of the default style's stroke is used,
         _ctx.nofill()
@@ -320,27 +318,27 @@ class Graph:
                 _ctx.strokewidth(s.strokewidth*2)
             first = True
             for id in highlight:
-                n = self.index[id]
+                node = self.index[id]
                 if first:
-                    _ctx.beginpath(n.x*self.d, n.y*self.d)
+                    _ctx.beginpath( node.x*self.d, node.y*self.d)
                     first = False
                 else:
-                    _ctx.lineto(n.x*self.d, n.y*self.d)
+                    _ctx.lineto(node.x*self.d, node.y*self.d)
             _ctx.endpath()
 
         # Draws each node in the graph.
         # Applies individual style to each node
         # or the default style when no style is specified.        
-        for n in self.nodes:
-            try:  s = self.styles[n.style]
+        for node in self.nodes:
+            try:  s = self.styles[node.style]
             except: s = self.styles.default
-            s.draw.node(s, n, self.alpha)
+            s.draw.node(s, node, self.alpha)
         
         # Draws node id's as labels on each node.
-        for n in self.nodes:
-            try:  s = self.styles[n.style]
+        for node in self.nodes:
+            try:  s = self.styles[node.style]
             except: s = self.styles.default
-            s.draw.node_label(s, n, self.alpha)
+            s.draw.node_label(s, node, self.alpha)
         
         # Events for clicked and dragged nodes.
         # Nodes will resist being dragged by attraction and repulsion,
@@ -406,9 +404,9 @@ class Graph:
             # check each node to see if it is being pressed.
             if not self.pressed \
             and not self.dragged:
-                for n in self.nodes:
-                    if self.mouse_inside(n):
-                        self.pressed = n
+                for node in self.nodes:
+                    if self.mouse_inside(node):
+                        self.pressed = node
                         break
             
             # When pressing a node,
@@ -439,9 +437,9 @@ class Graph:
             self.dragged = None
             
             # Is the mouse hovering over a node?
-            for n in self.nodes:
-                if self.mouse_inside(n):
-                    if self.hovered: self.hovered(n)
+            for node in self.nodes:
+                if self.mouse_inside(node):
+                    if self.hovered: self.hovered(node)
                     break
                 
     def distance_map(self):
@@ -491,10 +489,10 @@ class Graph:
     def strongest_nodes(self, treshold=0.0):
         
         nodes = []
-        for i,n in enumerate(self.nodes):
-            if n.weight and n.weight > treshold:
-                nodes.append( (n.weight, i) )
-        # nodes = [(n.weight, n) for n in self.nodes if n.weight and n.weight > treshold]
+        for i,node in enumerate(self.nodes):
+            if node.weight and node.weight > treshold:
+                nodes.append( (node.weight, i) )
+        # nodes = [(node.weight, node) for node in self.nodes if node.weight and node.weight > treshold]
         
         try:
             nodes.sort()
@@ -537,27 +535,27 @@ class GraphSpringLayout:
 
     def prepare(self):
         
-        for n in self.graph.nodes:
-            n.x = 0
-            n.y = 0
-            n.force = Point(0,0)
+        for node in self.graph.nodes:
+            node.x = 0
+            node.y = 0
+            node.force = Point(0,0)
             
-        for e in self.graph.edges:
-            e.weight = max(e.weight, 1)
+        for edge in self.graph.edges:
+            edge.weight = max(edge.weight, 1)
         
     def calculate_bounds(self):
         
-        min = Point(float("inf"), float("inf"))
-        max = Point(float("-inf"), float("-inf"))
+        minimum = Point(float("inf"), float("inf"))
+        maximum = Point(float("-inf"), float("-inf"))
         
-        for n in self.graph.nodes:
-            if (n.x > max.x): max.x = n.x
-            if (n.y > max.y): max.y = n.y
-            if (n.x < min.x): min.x = n.x
-            if (n.y < min.y): min.y = n.y
+        for node in self.graph.nodes:
+            if (node.x > maximum.x): maximum.x = node.x
+            if (node.y > maximum.y): maximum.y = node.y
+            if (node.x < minimum.x): minimum.x = node.x
+            if (node.y < minimum.y): minimum.y = node.y
             
-        self.graph.min = min
-        self.graph.max = max
+        self.graph.minimum = minimum
+        self.graph.maximum = maximum
         
     def iterate(self):
         
@@ -573,18 +571,18 @@ class GraphSpringLayout:
             self.attract(e)
             
         # Move by given force
-        for n in self.graph.nodes:
-            dx = self.c * n.force.x
-            dy = self.c * n.force.y
-            max = self.max_vertex_movement
-            if (dx > max): dx = max
-            if (dy > max): dy = max
-            if (dx < -max): dx = -max
-            if (dy < -max): dy = -max
-            n.x += dx
-            n.y += dy
-            n.force.x = 0
-            n.force.y = 0
+        for node in self.graph.nodes:
+            dx = self.c * node.force.x
+            dy = self.c * node.force.y
+            maximum = self.max_vertex_movement
+            if (dx >  maximum): dx = maximum
+            if (dy >  maximum): dy = maximum
+            if (dx < -maximum): dx = -maximum
+            if (dy < -maximum): dy = -maximum
+            node.x += dx
+            node.y += dy
+            node.force.x = 0
+            node.force.y = 0
 
     def repulse(self, n1, n2):
         
@@ -647,9 +645,6 @@ class GraphShortestPath:
         
         """
         
-        import heapq
-        from sets import Set
-        
         # Flatten linked list of form [0,[1,[2,[]]]]
         def flatten(L):       
             while len(L) > 0:
@@ -657,7 +652,7 @@ class GraphShortestPath:
                 L = L[1]
 
         q = [(0, start, ())]  # Heap of (cost, path_head, path_rest).
-        visited = Set()       # Visited vertices.
+        visited = set()       # Visited vertices.
         while True:
             (cost, v1, path) = heapq.heappop(q)
             if v1 not in visited:
@@ -668,6 +663,38 @@ class GraphShortestPath:
             for (v2, cost2) in G[v1].items():
                 if v2 not in visited:
                     heapq.heappush(q, (cost + cost2, v2, path))
+
+    """
+    # from https://nkugwamarkwilliam.medium.com/dijkstras-shortest-path-algorithm-in-python-6d8f99a9f223
+
+    from heapq import heappop, heappush
+
+    graph = {
+        "A": [("B", 1), ("C", 4)],
+        "B": [("A", 1), ("C", 2), ("D", 5)],
+        "C": [("A", 4), ("B", 2), ("D", 1)],
+        "D": [("B", 5), ("C", 1)],
+    }
+
+    def dijkstra(graph, start):
+        distances = {node: float("inf") for node in graph}
+        distances[start] = 0
+        queue = [(0, start)]
+        while queue:
+            (distance, current) = heappop(queue)
+            if distance > distances[current]:
+                continue
+            for neighbor, weight in graph[current]:
+                new_distance = distance + weight
+                if new_distance < distances[neighbor]:
+                    distances[neighbor] = new_distance
+                    heappush(queue, (new_distance, neighbor))
+        return distances
+
+    if __name__ == "__main__":
+        distances = dijkstra(graph, "A")
+        print(distances)  # Output: {'A': 0, 'B': 1, 'C': 2, 'D': 3}
+    """
 
 #### GRAPHSTYLE ################################################################################
 
@@ -685,7 +712,7 @@ class GraphStyles(dict):
         if a in self: 
             return self[a]
             
-        raise AttributeError( "'GraphStyles' object has no attribute '"+a+"'" )
+        raise AttributeError( "'GraphStyles' object has no attribute '" + a + "'" )
         
     def __setattr__(self, a, v):
         
@@ -697,7 +724,7 @@ class GraphStyles(dict):
                 style.__dict__[a] = v
                 
         else:
-            raise AttributeError( "'GraphStyle' object has no attribute '"+a+"'" )
+            raise AttributeError( "'GraphStyle' object has no attribute '" + a + "'" )
 
 #### GRAPHSTYLE ################################################################################
         
@@ -820,7 +847,7 @@ def draw_node_label(style, node, alpha=1.0):
         try: p = node._textpath
         except: 
             # txt = unicode(node.id)
-            txt = str(node.id)
+            txt = makeunicode(node.id)
             #try:
             #    txt = txt.decode("utf-8")
             #except:
@@ -875,7 +902,7 @@ def draw_edge_label(style, edge, alpha=1.0):
         # This enhances the speed and avoids wiggling text.
         try: p = edge._textpath
         except: 
-            txt = unicode(edge.label)
+            txt = makeunicode(edge.label)
             try: txt = txt.decode("utf-8").upper()
             except:
                 pass
@@ -981,23 +1008,6 @@ def graph_style(
 
 style = graphstyle = graph_style
 
-"""    
-g = graph(distance=3)
-g.add_node("nodebox")
-g.add_node("gravital")
-g.add_node("coreimage")
-g.add_node("bezier")
-g.add_edge("nodebox", "gravital")
-g.add_edge("nodebox", "coreimage", label="part_of")
-g.add_edge("nodebox", "bezier", label="part_of")
-
-size(500,500)
-speed(10)
-def draw():
-    g.draw()
-"""
-
-
 
 def centrality(g, normalized=True):
 
@@ -1068,4 +1078,20 @@ def centrality(g, normalized=True):
             return sorted
                     
         return betweenness
+
+# print("__name__:", __name__)
+if __name__ == 'builtins':
+    g = graph(distance=3)
+    g.add_node("nodebox")
+    g.add_node("gravital")
+    g.add_node("coreimage")
+    g.add_node("bezier")
+    g.add_edge("nodebox", "gravital")
+    g.add_edge("nodebox", "coreimage", label="part_of")
+    g.add_edge("nodebox", "bezier", label="part_of")
+    
+    size(500,500)
+    speed(30)
+    def draw():
+        g.draw()
 
