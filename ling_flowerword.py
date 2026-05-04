@@ -14,13 +14,16 @@ FlowerWord = linguistics.FlowerWord.FlowerWord
 
 import pattern
 
-f = FlowerWord("house")
-print("\nsynsets:", f.synsets)
+
+query = "car"
+
+f = FlowerWord( query )
+print("\nf.synsets:", f.synsets)
 s = f.synsets[0]
 
 # pdb.set_trace()
 
-print(s)
+print("s:", s)
 print()
 print("\ns.antonym:", s.antonym)
 
@@ -28,13 +31,13 @@ print("\ns.gloss:", s.gloss)
 
 print("\ns.hypernym:", s.hypernym)
 
+print("\ns.senses:", s.senses)
+
+print("\ns.synonyms:", s.synonyms)
+
 print("\ns.part_of_speech:", s.part_of_speech)
 
 print("\ns.pos:", s.pos)
-
-print("\nf.senses:", f.senses())
-
-print("\ns.synonyms:", s.synonyms)
 
 print("\ns.tag:", s.tag)
 
@@ -48,4 +51,5 @@ print("\ns.meronyms:", s.meronyms())
 print("\ns.similar:", s.similar())
 print("\nf.holonyms:", f.holonyms())
 print("\n")
+f.print()
 #pp(dir(s))
