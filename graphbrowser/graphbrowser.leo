@@ -10,9 +10,9 @@
 <find_panel_settings/>
 <vnodes>
 <v t="karstenw.20230506100641.2" a="E"><vh>library</vh>
-<v t="karstenw.20230506100718.1"><vh>@clean graphbrowser.py</vh>
+<v t="karstenw.20230506100718.1" a="E"><vh>@clean graphbrowser.py</vh>
 <v t="karstenw.20260427093640.1"><vh>Declarations</vh></v>
-<v t="karstenw.20260427093640.2"><vh>class GraphBrowser</vh>
+<v t="karstenw.20260427093640.2" a="E"><vh>class GraphBrowser</vh>
 <v t="karstenw.20260427093640.3"><vh>__init__</vh></v>
 <v t="karstenw.20260427093640.4"><vh>has_node</vh></v>
 <v t="karstenw.20260427093640.5"><vh>get_direct_links</vh></v>
@@ -31,7 +31,8 @@
 <v t="karstenw.20260427093640.17"><vh>draw</vh></v>
 </v>
 </v>
-<v t="karstenw.20260427093848.1"><vh>@clean springgraph.py</vh>
+<v t="karstenw.20260427093848.1" a="E"><vh>@clean springgraph.py</vh>
+<v t="karstenw.20260504084352.1"><vh>Credits</vh></v>
 <v t="karstenw.20260427093901.1"><vh>Declarations</vh></v>
 <v t="karstenw.20260427093901.2"><vh>class GraphNode</vh>
 <v t="karstenw.20260427093901.3"><vh>__init__</vh></v>
@@ -69,13 +70,14 @@
 </v>
 <v t="karstenw.20260427093901.32"><vh>class GraphShortestPath</vh>
 <v t="karstenw.20260427093901.33"><vh>find</vh></v>
+<v t="karstenw.20260504090524.1"><vh>newHeadline</vh></v>
 </v>
 <v t="karstenw.20260427093901.34"><vh>class GraphStyles</vh>
 <v t="karstenw.20260427093901.35"><vh>append</vh></v>
 <v t="karstenw.20260427093901.36"><vh>__getattr__</vh></v>
 <v t="karstenw.20260427093901.37"><vh>__setattr__</vh></v>
 </v>
-<v t="karstenw.20260427093958.1"><vh>newHeadline</vh></v>
+<v t="karstenw.20260427093958.1"><vh>class GraphStyle</vh></v>
 <v t="karstenw.20260427093901.38"><vh>class GraphDraw</vh>
 <v t="karstenw.20260427093901.39"><vh>__init__</vh></v>
 </v>
@@ -155,6 +157,12 @@
 </t>
 <t tx="karstenw.20230506100740.1"># A graph that browses through the WordNet dictionary.
 
+import os
+import pdb
+kwdbg = True
+kwlog = True
+
+
 springgraph = ximport("springgraph")
 #reload(springgraph)
 
@@ -162,36 +170,105 @@ graphbrowser = ximport("graphbrowser")
 #reload(graphbrowser)
 
 import linguistics
+FlowerWord = linguistics.FlowerWord.FlowerWord
+
 import pattern
 import pattern.text
 import pattern.text.en
 en = pattern.text.en
-wordnet = en.wordnet
+wordnet = pattern.text.en.wordnet
 
-# pattern = ximport("pattern")
-# en = pattern.text.en
+from pattern.en import pluralize, singularize
 
 from random import shuffle
 
 import pdb
 import pprint
 pp=pprint.pprint
-# pdb.set_trace()
 
 allnouns = list(wordnet.NOUNS())
 
 
-</t>
-<t tx="karstenw.20230506100740.10">################################################################################################
+#### REPLACEMENTS ##############################################################
+# 
+# these should move two levels up into linguistics
 
-size(500, 500)
+
+def holonym( word, sense="", all=False ):
+    fw = FlowerWord( word )
+    hn = fw.holonyms()
+    if all:
+        return hn
+    if len(hn) &gt; 0:
+        return hn[0]
+    return ""
+
+def meronym( word, sense="", all=False ):
+    fw = FlowerWord( word )
+    mn = fw.meronyms()
+    if all:
+        return mn
+    if len(mn) &gt; 0:
+        return mn[0]
+    return ""
+
+def antonym( word, sense="", all=False ):
+    fw = FlowerWord( word )
+    an = fw.antonym
+    if 0: #len(an) &gt; 0:
+        print("antonym(%s): %s" % (word, str(an)))
+    if all:
+        return an
+    if len(an) &gt; 0:
+        return an[0].antonym
+    return ""
+
+def hypernym( word, sense="", all=False ):
+    fw = FlowerWord( word )
+    hn = fw.hypernyms()
+    if all:
+        return hn
+    if len(hn) &gt; 0:
+        return hn[0]
+    return ""
+
+def fsenses( word, sense="", all=False ):
+    fw = FlowerWord( word )
+    sn = fw.senses()
+    print("senses(%s): %s" % (word, str(sn)))
+    if all:
+        return sn
+    if len(sn) &gt; 0:
+        return sn[0]
+    return ""
+
+def hyponym( word, sense="", all=False ):
+    fw = FlowerWord( word )
+    hn = fw.hyponyms()
+    if all:
+        return hn
+    if len(hn) &gt; 0:
+        return hn[0]
+    return ""
+
+
+</t>
+<t tx="karstenw.20230506100740.10">####################################################################################
+
+size( 650, 650 )
 speed(30)
 
 def setup():
     
-    global wnb
-    #q = str(choice(en.wordnet.all_nouns())).replace("(n.)","")
-    q = "light" # colors blanket green sea work apple baby phenomenon
+    global wnb, gSenses
+    
+    # lets have at least 2 senses
+    gSenses = []
+    while len(gSenses) &lt; 2:
+        q = str( choice( allnouns)).replace("(n.)","")
+        gSenses = fsenses( q )
+    
+    # q = "light" # colors blanket green sea work apple baby phenomenon
     wnb = WordNetBrowser()
     wnb.view(q)
  
@@ -200,20 +277,17 @@ def setup():
     
     global wnb
     wnb.draw()
-
-
 </t>
 <t tx="karstenw.20230506100740.2">class WordNetBrowser(graphbrowser.GraphBrowser):
     
     """ Browse WordNet in a graph.
     
-    WordNet provides extensive information on lexical relationships,
-    and coupled to the gloss of each word displayed as a marquee popup 
-    you get tons of factual and historical data as well.
+    WordNet provides extensive information on lexical relationships, and coupled
+    to the gloss of each word displayed as a marquee popup you get tons of
+    factual and historical data as well.
     
-    Getting data from WordNet is pretty straightforward
-    but a lot of the code here is complicated to make
-    the parts/specific branches in the graph clickable.
+    Getting data from WordNet is pretty straightforward but a lot of the code
+    here is complicated to make the parts/specific branches in the graph clickable.
     
     """
     
@@ -257,19 +331,28 @@ def setup():
     children = []
     
     # senses = en.noun.senses(node_id)
-    senses = wordnet.synsets( node_id ).senses
-    for i in range( 2 ):
-        for sense in senses:
-            if (    len(sense) &gt; i 
-                and sense[i] != node_id 
-                and sense[i] not in children ):
-                children.append(sense[i])
+    # senses = wordnet.synsets( node_id ).senses
+    senses = FlowerWord( node_id ).senses()
+    
+    if 0:
+        for i in range( 2 ):
+            for sense in senses:
+                if (    len(senses) &gt; i 
+                    and sense[i] != node_id 
+                    and sense[i] not in children ):
+                    children.append(sense[i])
                 
-    children = [(5,id) for id in children]
+    # children = [(5,id) for id in children]
+    children = [(5,id) for id in senses]
     return children[:top]
+
 
 </t>
 <t tx="karstenw.20230506100740.6">def get_links(self, node_id):
+    
+    print("get_links:", node_id)
+    
+    # pdb.set_trace()
     
     if node_id == "specific ":
         return self.get_branch_details("hyponym")
@@ -277,34 +360,45 @@ def setup():
         return self.get_branch_details("holonym")
     
     children = []
-    lexname = en.noun.lexname(node_id)
+    # lexname = en.noun.lexname(node_id)
+    lexname = FlowerWord(node_id).lexname
     if lexname != "":
         children.append( (1, lexname, ["category "]) )
     
     branches = [
-        (6, en.noun.holonym  , "parts "),
-        (2, en.noun.meronym  , "part of "),
-        (2, en.noun.antonym  , "opposite "),
-        (3, en.noun.hypernym , "generic "),
-        (2, en.verb.senses   , "action "),
-        (6, en.noun.hyponym  , "specific "),
+        # TODO: kill these function pointers
+        (6, holonym  , "parts "),
+        (2, meronym  , "part of "),
+        (2, antonym  , "opposite "),
+        (3, hypernym , "generic "),
+        (2, fsenses   , "action "),
+        (6, hyponym  , "specific "),
     ]
     # For each of the branches, get all the words from WordNet.
     # Exclude long words.
     # Shuffle the list and then take the top.
     for top, f, label in branches:
-        branch = []
+        branch = set()
         # The lookup for verb senses might not work with a noun,
         # then we get idiotic error stuff like:
         # KeyError: "'florenz ziegfeld' is not in the 'verb' database"
         try:
-            for n in f(node_id, sense=self.sense):
-                if  n[0] != node_id \
-                and n[0] not in branch \
-                and len(n[0]) &lt; 20:
-                    branch.append( (10, n[0], [label]) )
-        except: pass
-        #shuffle(branch)
+            if 0:
+                for name in f(node_id): #, sense=self.sense):
+                    if (    name[0] != node_id
+                        and name[0] not in branch
+                        and len(name[0]) &lt; 20 ):
+                        branch.append( (10, name[0], [label]) )
+            if 1:
+                for name in f(node_id, all=True): #, sense=self.sense):
+                    if (    name != node_id
+                        and len(name) &lt; 20 ):
+                        record = (10, name, (label,) )
+                        branch.add( record )
+        except:
+            pass
+        branch = list( branch )
+        shuffle(branch)
         children.extend(branch[:top])
         
     return children
@@ -317,27 +411,31 @@ def setup():
     
     root = self.graph.nodes[0].id.lower()
     # f = getattr(en.noun, branch)
-    # This is more readable:
-    if branch == "hyponym": f = en.noun.hyponym
-    if branch == "holonym": f = en.noun.holonym
     
-    unique = []
-    for n in f(root, sense=self.sense):
-        if n[0] not in unique: unique.append(n[0])
+    # This is more readable:
+    if branch == "hyponym": f = hyponym
+    if branch == "holonym": f = holonym
+    
+    unique = set()
+    for name in f(root, all=True): #, sense=self.sense):
+        # if name[0] not in unique:
+        # unique.add(name[0])
+        unique.add( name )
+    unique = list( unique )
     shuffle(unique)
     
     children = []
     i = 0
-    for n in unique:
+    for name in unique:
         # Organise connected nodes in branches,
         # each branch carries 4 nodes.
         # Nodes that have the root id in their own id,
         # form a branch on their own.
         binding = " "
-        if n.find(root) &lt; 0:
-            binding = (i+4)/4*"  "
+        if name.find(root) &lt; 0:
+            binding = (i+4) / 4 * "  "
             i += 1
-        children.append( (10, n, [binding]) )
+        children.append( (10, name, [binding]) )
         
     return children
     
@@ -369,32 +467,34 @@ def setup():
         self.sense = 0
     
     graphbrowser.GraphBrowser._reload(self, node_id, previous)
-
+    
     # Get the number of senses of this node.
     # Find the node in the graph matching that sense.
     # It's one of the nodes directly connected to the root.
     # Mark it with an appropriate style.
     try:
-        senses = en.noun.senses(node_id)
-        self.sense_count = len(senses)
-        for word in senses[self.sense]:
+        senses = FlowerWord( node_id ).senses() #en.noun.senses(node_id)
+        self.sense_count = len( senses )
+        for word in senses: #[self.sense]:
             if word != self.graph.root.id:
                 node = self.graph.node(word)
                 if node:
                     node.style = springgraph.STYLE_MARKED
-    except:
+    except Exception as err:
+        print("SILENT ERROR:", err)
         self.sense_count = 0
 
     # If the current viewed node is
     # the details of the parts/specific branch,
     # format the root name like "specific [root]s"
     # instead of just "specific".
-    root = self.graph.root      
+    root = self.graph.root
     if root.id == "specific ": 
-        root.id += en.noun.plural(previous)
+        root.id += pluralize( previous ) #en.noun.plural(previous)
         self.max -= 10
     if root.id == "parts ": 
         root.id = previous+" parts"
+
 
 </t>
 <t tx="karstenw.20230506100740.9">def draw(self):
@@ -409,7 +509,7 @@ def setup():
     try:
         s = self.graph.styles.default
     except Exception as err:
-        # pdb.set_trace()
+        pdb.set_trace()
         print("draw().style ERR:", err)
         print(dir(self.graph))
     _ctx.reset()
@@ -427,7 +527,7 @@ def setup():
         colors.noshadow()
     except:
         pass
-
+    
     for i in range(self.sense_count):
         
         # A clicked button (i.e. the current sense)
@@ -467,41 +567,32 @@ def setup():
 <t tx="karstenw.20230506100912.1"># A graph that connects concepts
 # based on nouns in their descriptions.
 
-import io
 import os
-# import en
-from os.path import basename
-
+import io
+import pprint
+pp=pprint.pprint
 import pdb
+
+springgraph = ximport("springgraph")
+graphbrowser = ximport("graphbrowser")
 
 import linguistics
 import pattern
-import pattern.text
-import pattern.text.en
-
-#print("\n\nen:")
-#pp(dir(pattern.text.en))
-
-en = pattern.text.en
-
-springgraph = ximport("springgraph")
-#reload(springgraph)
-
-graphbrowser = ximport("graphbrowser")
-#reload(graphbrowser)
+from pattern.search import search
+from pattern.en import parsetree, pluralize, singularize
 
 
 </t>
 <t tx="karstenw.20230506100912.10">def get_links(self, node_id, treshold=1.0):
     
     children = []
-    
+
     if node_id in self.nodes:
-        
+
         nouns = self._parse_nouns(node_id)
         for id in self.nodes:
-            if id != node_id \
-            and self.nodes[id] != self.nodes[node_id]:
+            if (    id != node_id
+                and self.nodes[id] != self.nodes[node_id]):
                 # Calculate the relevance of the associated node:
                 # nodes that have the node_id in their description weigh heavily,
                 # nodes that have one or more of the nouns related to the node_id
@@ -555,9 +646,12 @@ graphbrowser = ximport("graphbrowser")
     
     global clb
     lexicons = ["data/colors/*.txt", "data/metaphors/*.txt"]
-    clb = ContextualLinkBrowser(lexicons)
-    print("clb:", clb)
-    clb.view("love")
+    clb = ContextualLinkBrowser( lexicons )
+    if 0:
+        query = choice( list(clb.nodes.keys()) )
+        clb.view( query )
+    else:
+        clb.view( "love" )
     clb.generate_filters()
 
 </t>
@@ -581,32 +675,42 @@ graphbrowser = ximport("graphbrowser")
     self.cache = {}
     for lexicon in lexicons:
         for f in files(lexicon):
-            conceptname = basename(f)[:-4]
-            if not conceptname in self.nodes:
-                self.nodes[conceptname] = ""
-            self.nodes[conceptname] += " " + loadtext(f)
+            path = os.path.abspath( f )
+            _, filename = os.path.split( path )
+            basename, ext = os.path.splitext( filename )
+            if not basename in self.nodes:
+                self.nodes[basename] = ""
+            self.nodes[basename] += " " + loadtext( path )
     
     self.link_pattern = "(JJ) NN"    
-    self.filters = [
+    self.filters = set([
         "i", "someone", "dream", "life", 
         "situation", "and/or", "her", "type", "period", 
         "the", "an", "connotation", "side", "part", "aspect",
         "symbol", "quality", "sense", "thing", "metaphor", "trait", "person"
-    ]
+    ])
 
 </t>
 <t tx="karstenw.20230506100912.4">def generate_filters(self):
     
     count = {}
+    # pdb.set_trace()
     for id in self.nodes.keys():
+        # print(id)
         description = self._strip_tokens(self.nodes[id])
-        matches = en.sentence.find(description, "NN")
-        unique_nouns = []
+        # matches = en.sentence.find(description, "NN")
+        s = parsetree(description)
+        # print('s=parsetree("%s")' % (description,) )
+        matches = search("NN", s)   # all nouns
+        
+        # unique_nouns = []
+        unique_nouns = set()
         for noun in matches:
-            noun = noun[0][0]
-            #noun = self._lazy_singularize(noun)
+            # noun = noun[0][0]
+            noun = noun.string
+            noun = self._lazy_singularize(noun)
             if not noun in unique_nouns:
-                unique_nouns.append(noun)
+                unique_nouns.add( noun )
         for noun in unique_nouns:
             if not noun in count:
                 count[noun] = 1
@@ -622,18 +726,17 @@ graphbrowser = ximport("graphbrowser")
     
 
 </t>
-<t tx="karstenw.20230506100912.5">def _strip_tokens(self, str):
+<t tx="karstenw.20230506100912.5">def _strip_tokens(self, s):
     
     """ Cleans up a node description string for searching.
     """
     
-    str = str.lower()
-    str = str.replace("."," ")
-    str = str.replace(","," ")
-    str = str.replace("/"," ")
-    str = " "+str+" "
-    return str
-
+    s = s.lower()
+    s = s.replace("."," ")
+    s = s.replace(","," ")
+    s = s.replace("/"," ")
+    s = " " + s + " "
+    return s
 
 </t>
 <t tx="karstenw.20230506100912.6">def _lazy_singularize(self, s):
@@ -645,20 +748,22 @@ graphbrowser = ximport("graphbrowser")
     is the same as the given string.
     
     """ 
-    
-    inflections = [
-        ("ves" , "f"),
-        ("ies" , "y"),
-        ("es"  , ""),
-        ("s"   , "")
-    ]
-    for pl, sg in inflections:
-        singular = s.strip(pl) + sg
-        if s == en.noun.plural(singular):
-            if en.is_noun(singular):
+    if 0:
+        inflections = [
+            ("ves" , "f"),
+            ("ies" , "y"),
+            ("es"  , ""),
+            ("s"   , "")
+        ]
+        for pl, sg in inflections:
+            singular = s.strip(pl) + sg
+            if (    s == en.noun.plural(singular)
+                and en.is_noun(singular)):
                 return singular
+    if 1:
+        #pl = pluralize( s )
+        return singularize( s )
     return s
-
 
 </t>
 <t tx="karstenw.20230506100912.7">def _parse_nouns(self, node_id):
@@ -677,21 +782,32 @@ graphbrowser = ximport("graphbrowser")
     # and the order in which they appeared.
     # We assume nouns that occur early in the text to be
     # more relevant than nouns that occur later.    
+    
     if not node_id in self.cache:
         
-        pdb.set_trace()
+        # pdb.set_trace()
         # Get each chunk of words in the description that matches the pattern.
-        # matches = en.sentence.find(self.nodes[node_id], self.link_pattern, chunked=False)
-        matches = en.Sentence.find(self.nodes[node_id], self.link_pattern, chunked=False)
-        
+        #matches = en.sentence.find(self.nodes[node_id],
+        #                           self.link_pattern,
+        #                           chunked=False)
+        s = parsetree( self.nodes[node_id] )
+        print(node_id)
+        print( self.nodes[node_id] )
+        print()
+        matches = search( self.link_pattern, s)
+
         strings = []
         count = {}
         for s in matches:
             # We assume the last word in the pattern is the most important.
             # We assume it is a noun.
+            s = s.string
             s = s.lower().strip("\"").split()
             noun = s[-1]
             noun = noun.strip(" ()\"'").replace("'s", "")
+            
+            # pdb.set_trace()
+            
             noun = self._lazy_singularize(noun)
             s = " ".join(s[:-1]) + " " + noun
             s = s.strip()
@@ -749,9 +865,9 @@ graphbrowser = ximport("graphbrowser")
         return children[:int(top*1.5)]
         
 </t>
-<t tx="karstenw.20230506101011.1">######################################################################################################
+<t tx="karstenw.20230506101011.1">########################################################################################
 
-size(500, 500)
+size(800, 800)
 speed(30)
 clb = None
 
@@ -759,11 +875,12 @@ clb = None
 <t tx="karstenw.20230506102028.1">def loadtext( filepath ):
     result = ""
     path = os.path.abspath( filepath )
-    print(filepath)
+    # print(filepath)
     f = io.open(path, 'r', encoding="utf-8")
     s = f.read()
     f.close()
     return s
+
 
 </t>
 <t tx="karstenw.20260427093505.1">@language python
@@ -952,6 +1069,12 @@ __license__   = "Research purposes only"
 #    connected to the given node via the node id's in the bindings list.
 # 4) get_node_descriptions(node_id): a list of descriptions for the given node id.
 #    By default, attempts to return the WordNet interpretations of the id.
+
+import pdb
+
+import linguistics
+FlowerWord = linguistics.FlowerWord.FlowerWord
+
 
 </t>
 <t tx="karstenw.20260427093640.10">def node_hovered(self, node):
@@ -1203,10 +1326,20 @@ class GraphBrowser:
     """
     
     msg = []
+    msgunique = set()
+    # pdb.set_trace()
     try:
-        import en
-        for i in range(len(en.noun.senses(node_id))):
-            msg.append(node_id + " | " + en.noun.gloss(node_id, sense=i))       
+        #import en
+        #for i in range(len(en.noun.senses(node_id))):
+        #    msg.append(node_id + " | " + en.noun.gloss(node_id, sense=i))
+        fw = FlowerWord( node_id )
+        senses = fw.senses()
+        for sense in senses:
+            fw = FlowerWord( sense )
+            gloss = fw.gloss
+            if gloss not in msgunique:
+                msg.append( gloss )
+                msgunique.add( gloss )
     except:
         pass
     
@@ -1313,38 +1446,35 @@ class GraphBrowser:
     p = self.graph.nodes[0].id
     if p == node.id:
         prev = None
-    self._reload(node.id, previous=p)  
+    self._reload(node.id, previous=p)
 
 </t>
 <t tx="karstenw.20260427093848.1">@language python
 @tabwidth -4
 @others
+# print("__name__:", __name__)
+if __name__ == 'builtins':
+    g = graph(distance=3)
+    g.add_node("nodebox")
+    g.add_node("gravital")
+    g.add_node("coreimage")
+    g.add_node("bezier")
+    g.add_edge("nodebox", "gravital")
+    g.add_edge("nodebox", "coreimage", label="part_of")
+    g.add_edge("nodebox", "bezier", label="part_of")
+    
+    size(500,500)
+    speed(30)
+    def draw():
+        g.draw()
+
 </t>
-<t tx="karstenw.20260427093901.1">### CREDITS ####################################################################################
+<t tx="karstenw.20260427093901.1">import pprint
 
-# Copyright (c) 2007 Tom De Smedt.
-# See LICENSE.txt for details.
-
-__author__    = "Tom De Smedt"
-__version__   = "alpha"
-__copyright__ = "Copyright (c) 2007 Tom De Smedt"
-__license__   = "Research purposes only"
-
-### SPRINGGRAPH ################################################################################
-
-# The NodeBox Springgraph library provides tools to implement a fast graph in animation.
-# You can load it with connected nodes and display them as a network of data,
-# or find the shortest path between two nodes using the Dijkstra algorithm.
-
-# The Springgraph is extended in Graphbrowser which links user interaction to datasets
-# and the graphing math.
-
-################################################################################################
-
-import pprint
+import heapq
 
 from nodebox.graphics import Point, RGB
-from nodebox.util import random,makeunicode
+from nodebox.util import random, makeunicode
 from math import sqrt, log
 from math import degrees, atan2
 
@@ -1384,17 +1514,17 @@ STYLE_BLUE      = "blue"
     """
     
     if self.index.has_key:
-        n = self.index[id]
-        self.nodes.remove(n)
+        node = self.index[id]
+        self.nodes.remove(node)
         del self.index[id]
         
         # Remove all edges involving id and all links to it.
         for e in self.edges:
-            if n in (e.node1, e.node2):
-                if n in e.node1.links: 
-                    e.node1.links.remove(n)
-                if n in e.node2.links: 
-                    e.node2.links.remove(n)
+            if node in (e.node1, e.node2):
+                if node in e.node1.links: 
+                    e.node1.links.remove(node)
+                if node in e.node2.links: 
+                    e.node2.links.remove(node)
                 self.edges.remove(e)
 
 </t>
@@ -1506,25 +1636,21 @@ STYLE_BLUE      = "blue"
     """
     
     self.update()
-
+    
     # Draw the graph background.
     s = self.styles.default
     s.draw.background(s)
-
+    
     # Center the graph on the canvas.
     c = self.center()
     _ctx.translate(c.x+dx, c.y+dy)
- 
- 
     
     if clusters:
-        for n in self.strongest_nodes()[:3]:
-            try: s = self.styles[n.style]
+        for node in self.strongest_nodes()[:3]:
+            try: s = self.styles[node.style]
             except: s = self.styles.default
-            s.draw.cluster(s, n, self.alpha)        
-
-
-
+            s.draw.cluster(s, node, self.alpha)        
+    
     # Draws the graph's edges as a single Bezier path for speed.
     # The color of the default style's stroke is used,
     _ctx.nofill()
@@ -1558,27 +1684,27 @@ STYLE_BLUE      = "blue"
             _ctx.strokewidth(s.strokewidth*2)
         first = True
         for id in highlight:
-            n = self.index[id]
+            node = self.index[id]
             if first:
-                _ctx.beginpath(n.x*self.d, n.y*self.d)
+                _ctx.beginpath( node.x*self.d, node.y*self.d)
                 first = False
             else:
-                _ctx.lineto(n.x*self.d, n.y*self.d)
+                _ctx.lineto(node.x*self.d, node.y*self.d)
         _ctx.endpath()
 
     # Draws each node in the graph.
     # Applies individual style to each node
     # or the default style when no style is specified.        
-    for n in self.nodes:
-        try:  s = self.styles[n.style]
+    for node in self.nodes:
+        try:  s = self.styles[node.style]
         except: s = self.styles.default
-        s.draw.node(s, n, self.alpha)
+        s.draw.node(s, node, self.alpha)
     
     # Draws node id's as labels on each node.
-    for n in self.nodes:
-        try:  s = self.styles[n.style]
+    for node in self.nodes:
+        try:  s = self.styles[node.style]
         except: s = self.styles.default
-        s.draw.node_label(s, n, self.alpha)
+        s.draw.node_label(s, node, self.alpha)
     
     # Events for clicked and dragged nodes.
     # Nodes will resist being dragged by attraction and repulsion,
@@ -1653,9 +1779,9 @@ class GraphNode:
         # check each node to see if it is being pressed.
         if not self.pressed \
         and not self.dragged:
-            for n in self.nodes:
-                if self.mouse_inside(n):
-                    self.pressed = n
+            for node in self.nodes:
+                if self.mouse_inside(node):
+                    self.pressed = node
                     break
         
         # When pressing a node,
@@ -1686,9 +1812,9 @@ class GraphNode:
         self.dragged = None
         
         # Is the mouse hovering over a node?
-        for n in self.nodes:
-            if self.mouse_inside(n):
-                if self.hovered: self.hovered(n)
+        for node in self.nodes:
+            if self.mouse_inside(node):
+                if self.hovered: self.hovered(node)
                 break
             
 </t>
@@ -1741,10 +1867,10 @@ class GraphNode:
 <t tx="karstenw.20260427093901.24">def strongest_nodes(self, treshold=0.0):
     
     nodes = []
-    for i,n in enumerate(self.nodes):
-        if n.weight and n.weight &gt; treshold:
-            nodes.append( (n.weight, i) )
-    # nodes = [(n.weight, n) for n in self.nodes if n.weight and n.weight &gt; treshold]
+    for i,node in enumerate(self.nodes):
+        if node.weight and node.weight &gt; treshold:
+            nodes.append( (node.weight, i) )
+    # nodes = [(node.weight, node) for node in self.nodes if node.weight and node.weight &gt; treshold]
     
     try:
         nodes.sort()
@@ -1791,28 +1917,28 @@ class GraphSpringLayout:
 </t>
 <t tx="karstenw.20260427093901.27">def prepare(self):
     
-    for n in self.graph.nodes:
-        n.x = 0
-        n.y = 0
-        n.force = Point(0,0)
+    for node in self.graph.nodes:
+        node.x = 0
+        node.y = 0
+        node.force = Point(0,0)
         
-    for e in self.graph.edges:
-        e.weight = max(e.weight, 1)
+    for edge in self.graph.edges:
+        edge.weight = max(edge.weight, 1)
     
 </t>
 <t tx="karstenw.20260427093901.28">def calculate_bounds(self):
     
-    min = Point(float("inf"), float("inf"))
-    max = Point(float("-inf"), float("-inf"))
+    minimum = Point(float("inf"), float("inf"))
+    maximum = Point(float("-inf"), float("-inf"))
     
-    for n in self.graph.nodes:
-        if (n.x &gt; max.x): max.x = n.x
-        if (n.y &gt; max.y): max.y = n.y
-        if (n.x &lt; min.x): min.x = n.x
-        if (n.y &lt; min.y): min.y = n.y
+    for node in self.graph.nodes:
+        if (node.x &gt; maximum.x): maximum.x = node.x
+        if (node.y &gt; maximum.y): maximum.y = node.y
+        if (node.x &lt; minimum.x): minimum.x = node.x
+        if (node.y &lt; minimum.y): minimum.y = node.y
         
-    self.graph.min = min
-    self.graph.max = max
+    self.graph.minimum = minimum
+    self.graph.maximum = maximum
     
 </t>
 <t tx="karstenw.20260427093901.29">def iterate(self):
@@ -1829,18 +1955,18 @@ class GraphSpringLayout:
         self.attract(e)
         
     # Move by given force
-    for n in self.graph.nodes:
-        dx = self.c * n.force.x
-        dy = self.c * n.force.y
-        max = self.max_vertex_movement
-        if (dx &gt; max): dx = max
-        if (dy &gt; max): dy = max
-        if (dx &lt; -max): dx = -max
-        if (dy &lt; -max): dy = -max
-        n.x += dx
-        n.y += dy
-        n.force.x = 0
-        n.force.y = 0
+    for node in self.graph.nodes:
+        dx = self.c * node.force.x
+        dy = self.c * node.force.y
+        maximum = self.max_vertex_movement
+        if (dx &gt;  maximum): dx = maximum
+        if (dy &gt;  maximum): dy = maximum
+        if (dx &lt; -maximum): dx = -maximum
+        if (dy &lt; -maximum): dy = -maximum
+        node.x += dx
+        node.y += dy
+        node.force.x = 0
+        node.force.y = 0
 
 </t>
 <t tx="karstenw.20260427093901.3">def __init__(self, graph, id="", radius=8, style=STYLE_DEFAULT):
@@ -1928,9 +2054,6 @@ class GraphShortestPath:
     
     """
     
-    import heapq
-    from sets import Set
-    
     # Flatten linked list of form [0,[1,[2,[]]]]
     def flatten(L):       
         while len(L) &gt; 0:
@@ -1938,7 +2061,7 @@ class GraphShortestPath:
             L = L[1]
 
     q = [(0, start, ())]  # Heap of (cost, path_head, path_rest).
-    visited = Set()       # Visited vertices.
+    visited = set()       # Visited vertices.
     while True:
         (cost, v1, path) = heapq.heappop(q)
         if v1 not in visited:
@@ -1970,7 +2093,7 @@ class GraphStyles(dict):
     if a in self: 
         return self[a]
         
-    raise AttributeError( "'GraphStyles' object has no attribute '"+a+"'" )
+    raise AttributeError( "'GraphStyles' object has no attribute '" + a + "'" )
     
 </t>
 <t tx="karstenw.20260427093901.37">def __setattr__(self, a, v):
@@ -1983,7 +2106,7 @@ class GraphStyles(dict):
             style.__dict__[a] = v
             
     else:
-        raise AttributeError( "'GraphStyle' object has no attribute '"+a+"'" )
+        raise AttributeError( "'GraphStyle' object has no attribute '" + a + "'" )
 
 </t>
 <t tx="karstenw.20260427093901.38">#### GRAPHDRAW #################################################################################
@@ -2095,7 +2218,7 @@ def draw_node_label(style, node, alpha=1.0):
         try: p = node._textpath
         except: 
             # txt = unicode(node.id)
-            txt = str(node.id)
+            txt = makeunicode(node.id)
             #try:
             #    txt = txt.decode("utf-8")
             #except:
@@ -2152,7 +2275,7 @@ def draw_edge_label(style, edge, alpha=1.0):
         # This enhances the speed and avoids wiggling text.
         try: p = edge._textpath
         except: 
-            txt = unicode(edge.label)
+            txt = makeunicode(edge.label)
             try: txt = txt.decode("utf-8").upper()
             except:
                 pass
@@ -2257,23 +2380,6 @@ def draw_edge_label(style, edge, alpha=1.0):
     return s
 
 style = graphstyle = graph_style
-
-"""    
-g = graph(distance=3)
-g.add_node("nodebox")
-g.add_node("gravital")
-g.add_node("coreimage")
-g.add_node("bezier")
-g.add_edge("nodebox", "gravital")
-g.add_edge("nodebox", "coreimage", label="part_of")
-g.add_edge("nodebox", "bezier", label="part_of")
-
-size(500,500)
-speed(10)
-def draw():
-    g.draw()
-"""
-
 
 
 </t>
@@ -2402,13 +2508,13 @@ class Graph:
     if id in self.index:
         return self.index[id]
     
-    n = GraphNode(self, id, radius, style)
-    self.index[n.id] = n
-    self.nodes.append(n)
+    node = GraphNode(self, id, radius, style)
+    self.index[node.id] = node
+    self.nodes.append(node)
     if root: 
-        self.root = n
+        self.root = node
         
-    return n
+    return node
     
 </t>
 <t tx="karstenw.20260427093958.1">#### GRAPHSTYLE ################################################################################
@@ -2450,8 +2556,63 @@ class GraphStyle:
 </t>
 <t tx="karstenw.20260427101458.1">################################################################################
 
-size(500, 500)
+size(800, 800)
 speed(30)
+
+</t>
+<t tx="karstenw.20260504084352.1">### CREDITS ####################################################################################
+
+# Copyright (c) 2007 Tom De Smedt.
+# See LICENSE.txt for details.
+
+__author__    = "Tom De Smedt"
+__version__   = "alpha"
+__copyright__ = "Copyright (c) 2007 Tom De Smedt"
+__license__   = "Research purposes only"
+
+### SPRINGGRAPH ################################################################################
+
+# The NodeBox Springgraph library provides tools to implement a fast graph in animation.
+# You can load it with connected nodes and display them as a network of data,
+# or find the shortest path between two nodes using the Dijkstra algorithm.
+
+# The Springgraph is extended in Graphbrowser which links user interaction to datasets
+# and the graphing math.
+
+################################################################################################
+
+</t>
+<t tx="karstenw.20260504090524.1">"""
+# from https://nkugwamarkwilliam.medium.com/dijkstras-shortest-path-algorithm-in-python-6d8f99a9f223
+
+from heapq import heappop, heappush
+
+graph = {
+    "A": [("B", 1), ("C", 4)],
+    "B": [("A", 1), ("C", 2), ("D", 5)],
+    "C": [("A", 4), ("B", 2), ("D", 1)],
+    "D": [("B", 5), ("C", 1)],
+}
+
+def dijkstra(graph, start):
+    distances = {node: float("inf") for node in graph}
+    distances[start] = 0
+    queue = [(0, start)]
+    while queue:
+        (distance, current) = heappop(queue)
+        if distance &gt; distances[current]:
+            continue
+        for neighbor, weight in graph[current]:
+            new_distance = distance + weight
+            if new_distance &lt; distances[neighbor]:
+                distances[neighbor] = new_distance
+                heappush(queue, (new_distance, neighbor))
+    return distances
+
+if __name__ == "__main__":
+    distances = dijkstra(graph, "A")
+    print(distances)  # Output: {'A': 0, 'B': 1, 'C': 2, 'D': 3}
+"""
 
 </t>
 </tnodes>
