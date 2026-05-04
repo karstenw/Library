@@ -253,7 +253,7 @@
 </v>
 <v t="karstenw.20230507120747.1" a="E"><vh>@clean graph_example4.py</vh>
 <v t="karstenw.20230507120753.1"><vh>Declarations</vh></v>
-<v t="karstenw.20230518121333.1" a="E"><vh>+ REPLACEMENTS</vh>
+<v t="karstenw.20230518121333.1"><vh>+ REPLACEMENTS</vh>
 <v t="karstenw.20230507120753.2"><vh>holonym</vh></v>
 <v t="karstenw.20230507120753.3"><vh>meronym</vh></v>
 <v t="karstenw.20230507120753.4"><vh>antonym</vh></v>
@@ -272,7 +272,7 @@
 <v t="karstenw.20230507120753.16"><vh>load</vh></v>
 <v t="karstenw.20230507120753.17"><vh>draw</vh></v>
 </v>
-<v t="karstenw.20230507120753.18" a="E"><vh>class SenseButtons</vh>
+<v t="karstenw.20230507120753.18"><vh>class SenseButtons</vh>
 <v t="karstenw.20230507120753.19"><vh>__init__</vh></v>
 <v t="karstenw.20230507120753.20"><vh>count</vh></v>
 <v t="karstenw.20230507120753.21"><vh>draw</vh></v>
@@ -3114,6 +3114,7 @@ nouns = set( allnouns )
     """
     
     word = str(word)
+    word = word.replace( "_", " " )
     
     if self.is_expandable(word):
         return []
@@ -3329,7 +3330,7 @@ class SenseButtons:
     
     self.graph = graph
     self.word = ""
-    self.senses = []
+    self.senses = None
     self.x = x
     self.y = y
     
@@ -3358,8 +3359,13 @@ class SenseButtons:
         self.word = str(self.graph.root.id)
         self.current = 0
         self._count = 0
-        self.senses = fsenses(self.word, all=True)
+        if self.senses is None:
+            self.senses = fsenses(self.word, all=True)
         self._count = len( self.senses )
+        try:
+            self.current = self.senses.index( self.word )
+        except:
+            pass
         if 0:
             # try: self._count = len(en.noun.senses(self.word))
             try:
@@ -3416,7 +3422,7 @@ class SenseButtons:
         if path.contains(MOUSEX, MOUSEY):
             self.current = i
             if 0:
-                self.graph.load(self.graph.root.id)
+                self.graph.load( self.graph.root.id )
             else:
                 self.graph.load( self.senses[i] )
     
@@ -3578,7 +3584,7 @@ query = choice( allnouns )
 goodies = ("inconvenience", "biology", "cyberpunk", "frankfurt", "computer",
            "monastery", "africa", "rhetoric")
 
-# query = choice( goodies )
+query = choice( goodies )
 # query = "biology"
 
 g = wordnetgraph(distance=1.2)
