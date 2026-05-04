@@ -1,5 +1,11 @@
 # A graph that browses through the WordNet dictionary.
 
+import os
+import pdb
+kwdbg = True
+kwlog = True
+
+
 springgraph = ximport("springgraph")
 #reload(springgraph)
 
@@ -7,36 +13,100 @@ graphbrowser = ximport("graphbrowser")
 #reload(graphbrowser)
 
 import linguistics
+FlowerWord = linguistics.FlowerWord.FlowerWord
+
 import pattern
 import pattern.text
 import pattern.text.en
 en = pattern.text.en
-wordnet = en.wordnet
+wordnet = pattern.text.en.wordnet
 
-# pattern = ximport("pattern")
-# en = pattern.text.en
+from pattern.en import pluralize
 
 from random import shuffle
 
 import pdb
 import pprint
 pp=pprint.pprint
-# pdb.set_trace()
 
 allnouns = list(wordnet.NOUNS())
+
+
+gSenses = dict()
+
+#### REPLACEMENTS ##############################################################
+# 
+# these should move two levels up into linguistics
+
+
+def holonym( word, sense="", all=False ):
+    fw = FlowerWord( word )
+    hn = fw.holonyms()
+    if all:
+        return hn
+    if len(hn) > 0:
+        return hn[0]
+    return ""
+
+def meronym( word, sense="", all=False ):
+    fw = FlowerWord( word )
+    mn = fw.meronyms()
+    if all:
+        return mn
+    if len(mn) > 0:
+        return mn[0]
+    return ""
+
+def antonym( word, sense="", all=False ):
+    fw = FlowerWord( word )
+    an = fw.antonym
+    if 0: #len(an) > 0:
+        print("antonym(%s): %s" % (word, str(an)))
+    if all:
+        return an
+    if len(an) > 0:
+        return an[0].antonym
+    return ""
+
+def hypernym( word, sense="", all=False ):
+    fw = FlowerWord( word )
+    hn = fw.hypernyms()
+    if all:
+        return hn
+    if len(hn) > 0:
+        return hn[0]
+    return ""
+
+def fsenses( word, sense="", all=False ):
+    fw = FlowerWord( word )
+    sn = fw.senses()
+    print("senses(%s): %s" % (word, str(sn)))
+    if all:
+        return sn
+    if len(sn) > 0:
+        return sn[0]
+    return ""
+
+def hyponym( word, sense="", all=False ):
+    fw = FlowerWord( word )
+    hn = fw.hyponyms()
+    if all:
+        return hn
+    if len(hn) > 0:
+        return hn[0]
+    return ""
 
 
 class WordNetBrowser(graphbrowser.GraphBrowser):
     
     """ Browse WordNet in a graph.
     
-    WordNet provides extensive information on lexical relationships,
-    and coupled to the gloss of each word displayed as a marquee popup 
-    you get tons of factual and historical data as well.
+    WordNet provides extensive information on lexical relationships, and coupled
+    to the gloss of each word displayed as a marquee popup you get tons of
+    factual and historical data as well.
     
-    Getting data from WordNet is pretty straightforward
-    but a lot of the code here is complicated to make
-    the parts/specific branches in the graph clickable.
+    Getting data from WordNet is pretty straightforward but a lot of the code
+    here is complicated to make the parts/specific branches in the graph clickable.
     
     """
     
@@ -62,8 +132,8 @@ class WordNetBrowser(graphbrowser.GraphBrowser):
         if node_id in ("parts ", "specific "):
             return True
         return False
-
-
+    
+    
     def get_direct_links(self, node_id, top=6):
         
         if node_id in ["parts ", "specific "]: 
@@ -76,18 +146,27 @@ class WordNetBrowser(graphbrowser.GraphBrowser):
         children = []
         
         # senses = en.noun.senses(node_id)
-        senses = wordnet.synsets( node_id ).senses
-        for i in range( 2 ):
-            for sense in senses:
-                if (    len(sense) > i 
-                    and sense[i] != node_id 
-                    and sense[i] not in children ):
-                    children.append(sense[i])
+        # senses = wordnet.synsets( node_id ).senses
+        senses = FlowerWord( node_id ).senses()
+        
+        if 0:
+            for i in range( 2 ):
+                for sense in senses:
+                    if (    len(senses) > i 
+                        and sense[i] != node_id 
+                        and sense[i] not in children ):
+                        children.append(sense[i])
                     
-        children = [(5,id) for id in children]
+        # children = [(5,id) for id in children]
+        children = [(5,id) for id in senses]
         return children[:top]
-
+    
+    
     def get_links(self, node_id):
+        
+        print("get_links:", node_id)
+        
+        # pdb.set_trace()
         
         if node_id == "specific ":
             return self.get_branch_details("hyponym")
@@ -95,34 +174,45 @@ class WordNetBrowser(graphbrowser.GraphBrowser):
             return self.get_branch_details("holonym")
         
         children = []
-        lexname = en.noun.lexname(node_id)
+        # lexname = en.noun.lexname(node_id)
+        lexname = FlowerWord(node_id).lexname
         if lexname != "":
             children.append( (1, lexname, ["category "]) )
         
         branches = [
-            (6, en.noun.holonym  , "parts "),
-            (2, en.noun.meronym  , "part of "),
-            (2, en.noun.antonym  , "opposite "),
-            (3, en.noun.hypernym , "generic "),
-            (2, en.verb.senses   , "action "),
-            (6, en.noun.hyponym  , "specific "),
+            # TODO: kill these function pointers
+            (6, holonym  , "parts "),
+            (2, meronym  , "part of "),
+            (2, antonym  , "opposite "),
+            (3, hypernym , "generic "),
+            (2, fsenses   , "action "),
+            (6, hyponym  , "specific "),
         ]
         # For each of the branches, get all the words from WordNet.
         # Exclude long words.
         # Shuffle the list and then take the top.
         for top, f, label in branches:
-            branch = []
+            branch = set()
             # The lookup for verb senses might not work with a noun,
             # then we get idiotic error stuff like:
             # KeyError: "'florenz ziegfeld' is not in the 'verb' database"
             try:
-                for n in f(node_id, sense=self.sense):
-                    if  n[0] != node_id \
-                    and n[0] not in branch \
-                    and len(n[0]) < 20:
-                        branch.append( (10, n[0], [label]) )
-            except: pass
-            #shuffle(branch)
+                if 0:
+                    for name in f(node_id): #, sense=self.sense):
+                        if (    name[0] != node_id
+                            and name[0] not in branch
+                            and len(name[0]) < 20 ):
+                            branch.append( (10, name[0], [label]) )
+                if 1:
+                    for name in f(node_id, all=True): #, sense=self.sense):
+                        if (    name != node_id
+                            and len(name) < 20 ):
+                            record = (10, name, (label,) )
+                            branch.add( record )
+            except:
+                pass
+            branch = list( branch )
+            shuffle(branch)
             children.extend(branch[:top])
             
         return children
@@ -134,32 +224,36 @@ class WordNetBrowser(graphbrowser.GraphBrowser):
         
         root = self.graph.nodes[0].id.lower()
         # f = getattr(en.noun, branch)
-        # This is more readable:
-        if branch == "hyponym": f = en.noun.hyponym
-        if branch == "holonym": f = en.noun.holonym
         
-        unique = []
-        for n in f(root, sense=self.sense):
-            if n[0] not in unique: unique.append(n[0])
+        # This is more readable:
+        if branch == "hyponym": f = hyponym
+        if branch == "holonym": f = holonym
+        
+        unique = set()
+        for name in f(root, all=True): #, sense=self.sense):
+            # if name[0] not in unique:
+            # unique.add(name[0])
+            unique.add( name )
+        unique = list( unique )
         shuffle(unique)
         
         children = []
         i = 0
-        for n in unique:
+        for name in unique:
             # Organise connected nodes in branches,
             # each branch carries 4 nodes.
             # Nodes that have the root id in their own id,
             # form a branch on their own.
             binding = " "
-            if n.find(root) < 0:
-                binding = (i+4)/4*"  "
+            if name.find(root) < 0:
+                binding = (i+4) / 4 * "  "
                 i += 1
-            children.append( (10, n, [binding]) )
+            children.append( (10, name, [binding]) )
             
         return children
         
     def _reload(self, node_id, previous=None):
-        
+        global gSenses
         # If the previously viewed node was
         # the details of the parts/specific branch,
         # it will be named something like "specific [root]s".
@@ -178,40 +272,67 @@ class WordNetBrowser(graphbrowser.GraphBrowser):
                     previous = self.graph.nodes[-1].id
         
         # If a new node is loaded, reset the current sense.
-        if (    self.graph
+        if (0 and    self.graph
             and node_id != self.graph.root.id
             and node_id not in ["parts ", "specific "]
             and previous not in ["parts ", "specific "] ):
             self.sense = 0
         
+        # pdb.set_trace()
+        
+        if node_id in gSenses:
+            senses = gSenses[node_id]
+        else:
+            senses = FlowerWord( node_id ).senses()
+        
+        self.sense_count = len( senses )
+        
+        if self.sense > 0:
+            if self.sense < len( senses ):
+                node_id = senses[self.sense]
+            else:
+                pass
+            
         graphbrowser.GraphBrowser._reload(self, node_id, previous)
-
+        
+        
+        try:
+            self.sense = senses.index( node_id )
+            
+        except:
+            self.sense = 0
+            
         # Get the number of senses of this node.
         # Find the node in the graph matching that sense.
         # It's one of the nodes directly connected to the root.
         # Mark it with an appropriate style.
+        
+        """
         try:
-            senses = en.noun.senses(node_id)
-            self.sense_count = len(senses)
-            for word in senses[self.sense]:
+            senses = FlowerWord( node_id ).senses() #en.noun.senses(node_id)
+            self.sense_count = len( senses )
+            for word in senses: #[self.sense]:
                 if word != self.graph.root.id:
                     node = self.graph.node(word)
                     if node:
                         node.style = springgraph.STYLE_MARKED
-        except:
+        except Exception as err:
+            print("SILENT ERROR:", err)
             self.sense_count = 0
-
+        """
+        
         # If the current viewed node is
         # the details of the parts/specific branch,
         # format the root name like "specific [root]s"
         # instead of just "specific".
-        root = self.graph.root      
+        root = self.graph.root
         if root.id == "specific ": 
-            root.id += en.noun.plural(previous)
+            root.id += pluralize( previous ) #en.noun.plural(previous)
             self.max -= 10
         if root.id == "parts ": 
             root.id = previous+" parts"
-
+    
+    
     def draw(self):
         
         """ Additional drawing and events for sense selection buttons.
@@ -224,7 +345,7 @@ class WordNetBrowser(graphbrowser.GraphBrowser):
         try:
             s = self.graph.styles.default
         except Exception as err:
-            # pdb.set_trace()
+            pdb.set_trace()
             print("draw().style ERR:", err)
             print(dir(self.graph))
         _ctx.reset()
@@ -242,7 +363,7 @@ class WordNetBrowser(graphbrowser.GraphBrowser):
             colors.noshadow()
         except:
             pass
-
+        
         for i in range(self.sense_count):
             
             # A clicked button (i.e. the current sense)
@@ -273,17 +394,33 @@ class WordNetBrowser(graphbrowser.GraphBrowser):
                 if p.contains(MOUSEX, MOUSEY):
                     self.sense = i
                     self._reload(self.graph.root.id)
-        
-################################################################################################
 
-size(500, 500)
+
+####################################################################################
+
+size( 650, 650 )
 speed(30)
 
 def setup():
     
-    global wnb
-    #q = str(choice(en.wordnet.all_nouns())).replace("(n.)","")
-    q = "light" # colors blanket green sea work apple baby phenomenon
+    global wnb, gSenses
+    
+    # lets have at least 2 senses
+    # gSenses = []
+    count = 0
+    q = "light"
+    senses = fsenses( q, all=True )
+    gSenses[q] = senses
+    
+    while False:
+        q = str( choice( allnouns)).replace("(n.)","" )
+        print("TRY q:", q )
+        senses = fsenses( q )
+        if len( senses ) > 1:
+            gSenses[q] = senses
+            break
+    
+    # q = "light" # colors blanket green sea work apple baby phenomenon
     wnb = WordNetBrowser()
     wnb.view(q)
  
@@ -291,5 +428,3 @@ def draw():
     
     global wnb
     wnb.draw()
-
-
