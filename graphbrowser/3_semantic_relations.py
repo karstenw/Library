@@ -138,8 +138,6 @@ def setup():
     
     global srb 
     lexica = [ "data/graphics", ]
-    # stoopid data contents
-    # lexica = [ "data/graphics", "data/colors", "data/metaphors" ]
     srb = SemanticRelationBrowser(lexica)
     
     # pdb.set_trace()
