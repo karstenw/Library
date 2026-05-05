@@ -4,12 +4,11 @@
 # fin isPartOf fish
 
 springgraph = ximport("springgraph")
-# reload(springgraph)
 
 graphbrowser = ximport("graphbrowser")
-# reload(graphbrowser)
 
-# import pattern.en
+from data import data
+
 
 import os
 import io
@@ -17,8 +16,6 @@ import pprint
 pp=pprint.pprint
 
 import pdb
-
-# from os.path import basename
 
 
 
@@ -62,44 +59,23 @@ class SemanticRelationBrowser(graphbrowser.GraphBrowser):
         
         graphbrowser.GraphBrowser.__init__(self)
         self.nodes = {}
-        
         for lexicon in lexica:
-            
-            directory = os.path.abspath( lexicon )
-            # print("path:", path)
-            
-            paths = files( directory + "/*.txt" )
-            for path in paths:
-                folder, filename = os.path.split( path )
-                basename, ext = os.path.splitext( filename )
-
-                # The file name is used as a category.
-                category = basename #(f)[-4]
-            
-                f = io.open( path, 'r', encoding="utf-8" )
-                lines = f.readlines()
-                f.close()
+            # items = lexica[lexicon]
+            for category in lexicon:
+                records = lexicon[category]
+                for record in records:
+                    rulecode, id1, id2 = record
+                    rulecode = int(rulecode)
                 
-                for line in lines:
-                    
-                    # A rule in the file has the following format:
-                    # rulecode, concept1, concept2
-                    items = line.split(",")
-                    rulecode = int(items[0].strip())
-                    id1 = items[1].strip()
-                    id2 = items[2].strip()
-                    
                     # Add new concept nodes.
-                    
                     if not id1 in self.nodes:
                         self.nodes[id1] = SemanticRelationNode(id1, category)
                     if not id2 in self.nodes:
                         self.nodes[id2] = SemanticRelationNode(id2, category)
                     
                     # Build explicit relations.
-                    i = int(items[0].strip())
                     self.nodes[id1].links.append( (rulecode, id2) )
-                
+                    
                     # Build implicit relations.
                     if rulecode in (6, 8):
                         self.nodes[id2].links.append( (rulecode, id1) )
@@ -137,13 +113,14 @@ speed(30)
 def setup():
     
     global srb 
-    lexica = [ "data/graphics", ]
+    
+    pdb.set_trace()
+    
+    lexica = [ data['graphics'], ]
     srb = SemanticRelationBrowser(lexica)
     
-    # pdb.set_trace()
     
     names = [x for x in srb.nodes]
-    # print( names )
     name = choice(names)
     
     # srb.view("aesthetics")
