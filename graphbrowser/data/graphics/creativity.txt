@@ -1,5 +1,0 @@
-2, creativity, graphic design
-3, artificial creativity, creativity
-4, Wikipedia, creativity
-10, creativity, brainstorm
-10, idea, brainstorm
