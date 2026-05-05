@@ -10,7 +10,7 @@ pp=pprint.pprint
 
 import pdb
 
-pdb.set_trace()
+# pdb.set_trace()
 
 base, _ = os.path.split( __file__ )
 lexica = ("colors", "graphics", "metaphors" )

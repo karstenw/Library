@@ -15,15 +15,8 @@ import pattern
 from pattern.search import search
 from pattern.en import parsetree, pluralize, singularize
 
+from data import data
 
-def loadtext( filepath ):
-    result = ""
-    path = os.path.abspath( filepath )
-    # print(filepath)
-    f = io.open(path, 'r', encoding="utf-8")
-    s = f.read()
-    f.close()
-    return s
 
 
 class ContextualLinkBrowser(graphbrowser.GraphBrowser):
@@ -36,14 +29,11 @@ class ContextualLinkBrowser(graphbrowser.GraphBrowser):
                 
         self.nodes = {}
         self.cache = {}
+        
         for lexicon in lexicons:
-            for f in files(lexicon):
-                path = os.path.abspath( f )
-                _, filename = os.path.split( path )
-                basename, ext = os.path.splitext( filename )
-                if not basename in self.nodes:
-                    self.nodes[basename] = ""
-                self.nodes[basename] += " " + loadtext( path )
+            for name in lexicon:
+                desc = lexicon[name]
+                self.nodes[name] = " " + desc
         
         self.link_pattern = "(JJ) NN"    
         self.filters = set([
@@ -272,10 +262,10 @@ class ContextualLinkBrowser(graphbrowser.GraphBrowser):
         
         if not node_id in self.nodes:
             if node_id.find("/") >= 0:
-                node_id = node_id.split("/")[-1]        
+                node_id = node_id.split("/")[-1]
             if node_id.find(" ") >= 0:
                 node_id = node_id.split()[-1]
-        graphbrowser.GraphBrowser._reload(self, node_id, previous)            
+        graphbrowser.GraphBrowser._reload(self, node_id, previous)
 
 ########################################################################################
 
@@ -286,9 +276,10 @@ clb = None
 def setup():
     
     global clb
-    lexicons = ["data/colors/*.txt", "data/metaphors/*.txt"]
+    
+    lexicons = [ data['colors'], data['metaphors'] ]
     clb = ContextualLinkBrowser( lexicons )
-    if 0:
+    if 1:
         query = choice( list(clb.nodes.keys()) )
         clb.view( query )
     else:
