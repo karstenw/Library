@@ -42,7 +42,7 @@ nouns = set( allnouns )
 def holonym( word, sense="", all=False ):
     fw = FlowerWord( word )
     hn = fw.holonyms()
-    print("holonym(%s): %s" % (word, str(hn)))
+    #print("holonym(%s): %s" % (word, str(hn)))
     if all:
         return hn
     if len(hn) > 0:
@@ -52,7 +52,7 @@ def holonym( word, sense="", all=False ):
 def meronym( word, sense="", all=False ):
     fw = FlowerWord( word )
     mn = fw.meronyms()
-    print("meronym(%s): %s" % (word, str(mn)))
+    #print("meronym(%s): %s" % (word, str(mn)))
     if all:
         return mn
     if len(mn) > 0:
@@ -62,7 +62,7 @@ def meronym( word, sense="", all=False ):
 def antonym( word, sense="", all=False ):
     fw = FlowerWord( word )
     an = fw.antonym
-    if 1: #len(an) > 0:
+    if 0: #len(an) > 0:
         print("antonym(%s): %s" % (word, str(an)))
     if all:
         return an
@@ -74,7 +74,7 @@ def antonym( word, sense="", all=False ):
 def hypernym( word, sense="", all=False ):
     fw = FlowerWord( word )
     hn = fw.hypernyms()
-    print("hypernym(%s): %s" % (word, str(hn)))
+    #print("hypernym(%s): %s" % (word, str(hn)))
     if all:
         return hn
     if len(hn) > 0:
@@ -94,7 +94,7 @@ def fsenses( word, sense="", all=False ):
 def hyponym( word, sense="", all=False ):
     fw = FlowerWord( word )
     hn = fw.hyponyms()
-    print("hyponym(%s): %s" % (word, str(hn)))
+    #print("hyponym(%s): %s" % (word, str(hn)))
     if all:
         return hn
     if len(hn) > 0:
@@ -171,6 +171,7 @@ class wordnetgraph(graph.graph):
         """
         
         word = str(word)
+        # word = word.replace( "_", " " )
         
         if self.is_expandable(word):
             return []
@@ -178,19 +179,22 @@ class wordnetgraph(graph.graph):
         # If there are 4 word senses and each of it a list of words,
         # take the first word from each list, then take the second etc.
         words = []
-        # pdb.set_trace()
+        
         fw = FlowerWord( word )
         snses = fw.senses()
-        for i in range(2):
-            
-            for sense in snses: #en.noun.senses(word):
-                if (    len(sense) > i
-                    and sense[i] != word
-                    and sense[i] not in words):
-                    words.append(sense[i])
+        if 0:
+            # i think this is for a different structure
+            for i in range(2):
+                for sense in snses: #en.noun.senses(word):
+                    if (    len(sense) > i
+                        and sense[i] != word
+                        and sense[i] not in words):
+                        words.append(sense[i])
                     
-        return words[:top]
-
+        #return words[:top]
+        return snses[:top]
+    
+    
     def get_relations(self, word, previous=None):
         
         """ The graph displays semantic relations for a noun,
@@ -222,8 +226,6 @@ class wordnetgraph(graph.graph):
         ]
         # Get related words from WordNet.
         # Exclude long words and take the top of the list.
-        
-        # pdb.set_trace()
         
         for top, f, relation in relations:
             result = []
@@ -295,8 +297,8 @@ class wordnetgraph(graph.graph):
             if self.is_expandable(p):
                 p = self.nodes[-1].id
             self.load(node.id, previous=p)
-    
-    
+
+
     def load(self, word, previous=None):
         
         self.clear()
@@ -307,21 +309,20 @@ class wordnetgraph(graph.graph):
         self.add_node(word, root=True, style="root")
         
         # Add the word senses to the root in the LIGHT style.
-        for wrd in self.get_senses(word):
+        senses = self.get_senses(word)
+        for wrd in senses:
             self.add_node(wrd, style=self.styles.light.name)
             self.add_edge(word, wrd, 0.5)
             
             if len(self) > self.max:
                 break
         
-        if word in ("biology", "o", "i", "b"):
-            pdb.set_trace()
-        
         # Add relation branches to the root in the DARK style.
         for wrd, rel in self.get_relations(word, previous):
             
             if type(rel) in (list,):
-                pdb.set_trace()
+                # pdb.set_trace()
+                pass
             
             if type(wrd) in (list,):
                 # pdb.set_trace()
@@ -337,10 +338,7 @@ class wordnetgraph(graph.graph):
                 self.add_node( rel, style="dark")
                 self.add_edge( word, rel)
             """
-                    
 
-
-            
             if len(self) > self.max:
                 break
         
@@ -355,13 +353,13 @@ class wordnetgraph(graph.graph):
         # Indicate the word corresponding to the current sense.
         if self.senses.count() > 0:
             #for w in en.noun.senses(word)[self.senses.current]:
-            for w in fsenses(word)[self.senses.current]:
+            for word in gSenses: #fsenses(word, all=True)[self.senses.current]:
                 
-                n = self.node(w)
-                if n and n != self.root: 
-                    n.style = "marked"
-    
-    
+                node = self.node(word)
+                if node and node != self.root: 
+                    node.style = "marked"
+
+
     def draw(self, *args, **kwargs):
         
         """ Additional drawing for sense selection buttons.
@@ -381,6 +379,7 @@ class SenseButtons:
         
         self.graph = graph
         self.word = ""
+        self.senses = None
         self.x = x
         self.y = y
         
@@ -397,11 +396,19 @@ class SenseButtons:
             self.word = str(self.graph.root.id)
             self.current = 0
             self._count = 0
-            # try: self._count = len(en.noun.senses(self.word))
+            if self.senses is None:
+                self.senses = gSenses # fsenses(self.word, all=True)
+            self._count = len( self.senses )
             try:
-                self._count = len( fsenses(self.word) )
+                self.current = self.senses.index( self.word )
             except:
                 pass
+            if 0:
+                # try: self._count = len(en.noun.senses(self.word))
+                try:
+                    self._count = len( gSenses ) #fsenses(self.word, all=True) )
+                except:
+                    pass
                 
         return self._count
 
@@ -448,7 +455,10 @@ class SenseButtons:
             self.pressed = None
             if path.contains(MOUSEX, MOUSEY):
                 self.current = i
-                self.graph.load(self.graph.root.id)      
+                if 0:
+                    self.graph.load( self.graph.root.id )
+                else:
+                    self.graph.load( self.senses[i] )
         
 ######################################################################################################
 
@@ -463,6 +473,7 @@ goodies = ("inconvenience", "biology", "cyberpunk", "frankfurt", "computer",
 
 g = wordnetgraph(distance=1.2)
 print( "query:", query )
+gSenses = fsenses( query, all=True )
 g.load(query)
 
 size(850, 750)

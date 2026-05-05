@@ -17,6 +17,12 @@ __license__   = "Research purposes only"
 # 4) get_node_descriptions(node_id): a list of descriptions for the given node id.
 #    By default, attempts to return the WordNet interpretations of the id.
 
+import pdb
+
+import linguistics
+FlowerWord = linguistics.FlowerWord.FlowerWord
+
+
 ### GRAPHBROWSER ###############################################################################
 
 class GraphBrowser:
@@ -102,15 +108,25 @@ class GraphBrowser:
         """
         
         msg = []
+        msgunique = set()
+        # pdb.set_trace()
         try:
-            import en
-            for i in range(len(en.noun.senses(node_id))):
-                msg.append(node_id + " | " + en.noun.gloss(node_id, sense=i))       
+            #import en
+            #for i in range(len(en.noun.senses(node_id))):
+            #    msg.append(node_id + " | " + en.noun.gloss(node_id, sense=i))
+            fw = FlowerWord( node_id )
+            senses = fw.senses()
+            for sense in senses:
+                fw = FlowerWord( sense )
+                gloss = fw.gloss
+                if gloss not in msgunique:
+                    msg.append( gloss )
+                    msgunique.add( gloss )
         except:
             pass
         
         return msg
-    
+
     def _reload(self, node_id, previous=None):
         
         """ Builds a graph around the given node id.
@@ -188,7 +204,7 @@ class GraphBrowser:
 
         self.graph = g
         return g
-    
+
     def node_clicked(self, node):
         
         """ Callback from the browser's graph when a node is clicked.
@@ -210,8 +226,8 @@ class GraphBrowser:
         p = self.graph.nodes[0].id
         if p == node.id:
             prev = None
-        self._reload(node.id, previous=p)  
-    
+        self._reload(node.id, previous=p)
+
     def node_hovered(self, node):
         
         """ Display a marquee of node descriptions when hovering over a node.
