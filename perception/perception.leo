@@ -61,7 +61,7 @@
 <v t="karstenw.20230316191528.22"><vh>disambiguate</vh></v>
 </v>
 </v>
-<v t="karstenw.20230417110310.1"><vh>+ QUERY SQLITE +</vh>
+<v t="karstenw.20230417110310.1" a="E"><vh>+ QUERY SQLITE +</vh>
 <v t="karstenw.20260227105342.1"><vh>unifyContext</vh></v>
 <v t="karstenw.20230417105918.1"><vh>query_cnr</vh></v>
 </v>
@@ -73,7 +73,7 @@
 <v t="karstenw.20230316191528.39"><vh>enumerate_rules</vh></v>
 <v t="karstenw.20230316191528.40"><vh>specific parts opposites properties associations aliases effects type whole objects causes</vh></v>
 </v>
-<v t="karstenw.20230316194540.1"><vh>+ CLUSTER +</vh>
+<v t="karstenw.20230316194540.1" a="E"><vh>+ CLUSTER +</vh>
 <v t="karstenw.20230316191528.51"><vh>style</vh></v>
 <v t="karstenw.20230316191528.52"><vh>add_rule</vh></v>
 <v t="karstenw.20230316191528.53"><vh>cluster</vh></v>
@@ -263,8 +263,6 @@ import pattern
 import pattern.search # import search
 import pattern.en  # import parsetree, pluralize, singularize
 
-
-
 import pattern.web
 import pattern.text
 import pattern.text.en
@@ -318,7 +316,7 @@ if kwlog:
         pattern_ = "NN %s (a) (an) (JJ) NN" % (relspaces,)
     else:
         query = '"%s"' % (relspaces,)
-        pattern_ = "NN %s (a) (an) (JJ) NN" % (relspaces,)
+        pattern_ = "NN %s (a) (an) (the) (JJ) NN" % (relspaces,)
     
     if 1:
         print( "query:", query )
@@ -329,7 +327,8 @@ if kwlog:
     
     matches = search_match_parse(
         query, pattern_,
-        lambda chunk_: (clean(chunk_[0][0]), clean(chunk_[-1][0])), # A is bigger than B --&gt; (A, B)
+        # lambda chunk_: (clean(chunk_[0][0]), clean(chunk_[-1][0])), # A is bigger than B --&gt; (A, B)
+        lambda chunk_: (clean(chunk_[0].string), clean(chunk_[-1].string)), # A is bigger than B --&gt; (A, B)
         # service="yahoo",
         service="google",
         cached=cached, 
@@ -379,15 +378,20 @@ if kwlog:
     if graph == None:
         graph = self.graph()
     r = []
-
+    
+    # pdb.set_trace()
+    
     def linksort( a, b ):
-        w1, w2 = graph.node(a).weight, graph.node(b).weight
-        if w1 &gt; w2:
+        w1 = graph.node(a).weight
+        w2 = graph.node(b).weight*2-1
+        if w1 &lt; w2:
             return 1
-        elif w1 &lt; w2:
+        elif w1 &gt; w2:
             return -1
         return 0
-
+    def eigensort( a, b):
+        return linksort( a[0], b[0] )
+    
     for node in graph.nodes:
         # Get the id's of all the nodes that point to this node.
         # Sort them according to weight.
@@ -398,7 +402,7 @@ if kwlog:
         r.append((node.id, links))
 
     # r.sort(cmp=lambda a, b: eigensort(graph, a[0], b[0]))
-    sortlist(r, linksort)
+    sortlist(r, eigensort)
     r.reverse()
     return r
 
@@ -1363,28 +1367,15 @@ map_object = __call__
             for result in request.value:
                 collect.append( result )
     
-    if kwdbg and 1:
-        pdb.set_trace()
-    
     for result in collect:
         if result.text:
-            #
-            # TODO
-            #
             
             if result.description:
                 result.description = result.description.replace(",",", ").replace("  "," ")
             
             lowdesc = result.description.lower()
-            
-            # sntc = pattern.text.en.Sentence( lowdesc )
-            # match = en.sentence.find(result.description.lower(), pattern_)
-            # match = pattern.search.search(lowdesc, pattern_)
-            
-            # crashes
-            # pt = pattern.en.parsetree( lowdesc, lemmata=True )
-            
-            match = pattern.search.search( pattern_, lowdesc )
+            pt = pattern.en.parsetree( lowdesc, lemmata=True )
+            match = pattern.search.search( pattern_, pt )
             
             if len(match) &gt; 0 and len(match[0]) &gt; 0:
                 x = parse(match[0])
@@ -1420,8 +1411,7 @@ map_object = __call__
     return word.strip()
 
 </t>
-<t tx="karstenw.20230316191528.98"># NOT WORKING
-def suggest_properties(noun, cached=True):
+<t tx="karstenw.20230316191528.98">def suggest_properties(noun, cached=True):
     """ Learning to Understand Figurative Language: 
         From Similes to Metaphors to Irony,
         Tony Veale, Yanfen Hao
@@ -1440,7 +1430,8 @@ def suggest_properties(noun, cached=True):
     matches = search_match_parse(
         "\"as * as " + noun + "\"",
         "as * as " + noun,
-        lambda chunk_: clean(chunk_[1][0]), # as A as a house -&gt; A
+        # lambda chunk_: clean(chunk_[1][0]), # as A as a house -&gt; A
+        lambda chunk_: clean(chunk_[1].string), # as A as a house -&gt; A
         service="google", 
         cached=cached
     )
@@ -1459,8 +1450,10 @@ def suggest_properties(noun, cached=True):
     # import en
     def _parse(chunk_):
         # as deep as the oceans -&gt; ocean
-        noun = clean(chunk_[-1][0])
-        if chunk_[-2][0] == "the" and en.is_noun(en.noun.singular(noun)):
+        # noun = clean(chunk_[-1][0])
+        noun = clean(chunk_[-1].string)
+        # if chunk_[-2][0] == "the" and en.is_noun(en.noun.singular(noun)):
+        if chunk_[-2].string == "the" and en.is_noun(en.noun.singular(noun)):
             return en.noun.singular(noun)
         return noun
     matches = []
@@ -1662,9 +1655,6 @@ INDEX = os.path.join(os.path.dirname(__file__), "index")
     if concept == None:
         return rules
 
-    if kwdbg and 0:
-        pdb.set_trace()
-
     concepts, edges, _ = cnr.query_concept( concept,
                                             context=context, maxedges=maxedges,
                                             lang=lang, weight=weight )
@@ -1864,6 +1854,7 @@ size(1000, 1000)
 
 p = "is-more-important-than"
 cmp = perception.compare_concepts( p )
+print("cmp:", cmp)
 
 # The return value is a list:
 print( "Concepts:" )
@@ -1899,7 +1890,7 @@ except ImportError:
 # Use Google search engine to look for properties:
 q = "queen"
 results = perception.suggest_properties(q)
-print("results:", results)
+print("\n\nresults:", results)
 for property in results:
     count = "(" + str(results[property]) + ")"
     print(property, "is-property-of", q, count)
