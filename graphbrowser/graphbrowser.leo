@@ -41,7 +41,7 @@
 <v t="karstenw.20260427093901.5"><vh>class GraphEdge</vh>
 <v t="karstenw.20260427093901.6"><vh>__init__</vh></v>
 </v>
-<v t="karstenw.20260427093901.7"><vh>class Graph</vh>
+<v t="karstenw.20260427093901.7" a="E"><vh>class Graph</vh>
 <v t="karstenw.20260427093901.8"><vh>__init__</vh></v>
 <v t="karstenw.20260427093901.9"><vh>add_node</vh></v>
 <v t="karstenw.20260427093901.10"><vh>add_edge</vh></v>
@@ -95,9 +95,9 @@
 </v>
 </v>
 <v t="karstenw.20230506100705.1" a="E"><vh>examples</vh>
-<v t="karstenw.20230506100722.1"><vh>@clean 1_browse_wordnet.py</vh>
+<v t="karstenw.20230506100722.1" a="E"><vh>@clean 1_browse_wordnet.py</vh>
 <v t="karstenw.20230506100740.1"><vh>Declarations</vh></v>
-<v t="karstenw.20230506100740.2"><vh>class WordNetBrowser</vh>
+<v t="karstenw.20230506100740.2" a="E"><vh>class WordNetBrowser</vh>
 <v t="karstenw.20230506100740.3"><vh>__init__</vh></v>
 <v t="karstenw.20230506100740.4"><vh>has_node</vh></v>
 <v t="karstenw.20230506100740.5"><vh>get_direct_links</vh></v>
@@ -178,7 +178,7 @@ import pattern.text.en
 en = pattern.text.en
 wordnet = pattern.text.en.wordnet
 
-from pattern.en import pluralize, singularize
+from pattern.en import pluralize
 
 from random import shuffle
 
@@ -187,6 +187,11 @@ import pprint
 pp=pprint.pprint
 
 allnouns = list(wordnet.NOUNS())
+
+
+gSenses = dict()
+gRootword = ""
+gSenseindex = 0
 
 
 #### REPLACEMENTS ##############################################################
@@ -260,13 +265,24 @@ speed(30)
 
 def setup():
     
-    global wnb, gSenses
+    global wnb, gSenses, gRootword, gSenseindex
     
     # lets have at least 2 senses
-    gSenses = []
-    while len(gSenses) &lt; 2:
-        q = str( choice( allnouns)).replace("(n.)","")
-        gSenses = fsenses( q )
+    # gSenses = []
+    count = 0
+    q = "light"
+    senses = fsenses( q, all=True )
+    gSenses[q] = senses
+    gRootword = q
+    while False:
+        q = str( choice( allnouns)).replace("(n.)","" )
+        print("TRY q:", q )
+        senses = fsenses( q )
+        if len( senses ) &gt; 1:
+            gSenses[q] = senses
+            gRootword = q
+            gSenseindex = 0
+            break
     
     # q = "light" # colors blanket green sea work apple baby phenomenon
     wnb = WordNetBrowser()
@@ -438,21 +454,35 @@ def setup():
         children.append( (10, name, [binding]) )
         
     return children
-    
+
+
+
 </t>
 <t tx="karstenw.20230506100740.8">def _reload(self, node_id, previous=None):
+    global gSenses, gRootword, gSenseindex
+    
+    if 1:
+        print("node_id:", node_id)
+        print("gRootword:", gRootword)
+        print("gSenseindex:", gSenseindex)
+    #if node_id in ("visible_radiation", ):
+    #    pdb.set_trace()
     
     # If the previously viewed node was
     # the details of the parts/specific branch,
     # it will be named something like "specific [root]s".
     # Strip the [root] part.
     if previous != None:
+        
+        # pdb.set_trace()
+        
         if previous.find("specific ") == 0:
             if previous.find(node_id) &gt; 0:
                 previous = "specific "
             else:
                 previous = self.graph.nodes[-1].id
             self.max += 10
+        
         if previous.find(" parts") &gt; 0:
             if previous.find(node_id) &gt; 0:
                 previous = "parts "
@@ -466,12 +496,39 @@ def setup():
         and previous not in ["parts ", "specific "] ):
         self.sense = 0
     
+    # pdb.set_trace()
+    
+    # self.sense &gt; 0 if tab clicked
+    # self.sense == 0 if node clicked
+    
+    if node_id in gSenses:
+        senses = gSenses[node_id]
+    else:
+        senses = FlowerWord( node_id ).senses()
+    
+    self.sense_count = len( senses )
+    
+    if self.sense &gt; 0:
+        if self.sense &lt; len( senses ):
+            node_id = senses[self.sense]
+        else:
+            pass
+    
     graphbrowser.GraphBrowser._reload(self, node_id, previous)
     
+    
+    try:
+        self.sense = senses.index( node_id )
+        
+    except:
+        self.sense = 0
+        
     # Get the number of senses of this node.
     # Find the node in the graph matching that sense.
     # It's one of the nodes directly connected to the root.
     # Mark it with an appropriate style.
+    
+    """
     try:
         senses = FlowerWord( node_id ).senses() #en.noun.senses(node_id)
         self.sense_count = len( senses )
@@ -483,7 +540,8 @@ def setup():
     except Exception as err:
         print("SILENT ERROR:", err)
         self.sense_count = 0
-
+    """
+    
     # If the current viewed node is
     # the details of the parts/specific branch,
     # format the root name like "specific [root]s"
@@ -498,9 +556,9 @@ def setup():
 
 </t>
 <t tx="karstenw.20230506100740.9">def draw(self):
-    
     """ Additional drawing and events for sense selection buttons.
     """
+    global gSenses, gRootword, gSenseindex
     
     graphbrowser.GraphBrowser.draw(self)
     
@@ -509,7 +567,7 @@ def setup():
     try:
         s = self.graph.styles.default
     except Exception as err:
-        pdb.set_trace()
+        # pdb.set_trace()
         print("draw().style ERR:", err)
         print(dir(self.graph))
     _ctx.reset()
@@ -528,6 +586,7 @@ def setup():
     except:
         pass
     
+    # draw the tabs
     for i in range(self.sense_count):
         
         # A clicked button (i.e. the current sense)
@@ -538,7 +597,7 @@ def setup():
             clr = s.fill
         _ctx.fill(clr)
         
-        p = _ctx.rect(x, y, w, w)
+        rectpath = _ctx.rect(x, y, w, w)
         _ctx.fill(s.text)
         _ctx.align(CENTER)
         _ctx.text(str(i+1), x-w*0.5, y+s.fontsize+w*0.25, width=w*2)
@@ -547,7 +606,7 @@ def setup():
         # The mouse is pressed on a button.
         if (    mousedown
             and self.graph.dragged == None
-            and p.contains(MOUSEX, MOUSEY)):
+            and rectpath.contains(MOUSEX, MOUSEY)):
             self.sense_mousedown = i
         
         # The mouse is no longer pressed on a button.    
@@ -555,10 +614,12 @@ def setup():
             and self.sense_mousedown == i ):
             self.sense_mousedown = None
             # The mouse is released (clicked) on a button.
-            if p.contains(MOUSEX, MOUSEY):
-                self.sense = i
+            if rectpath.contains(MOUSEX, MOUSEY):
+                self.sense = gSenseindex = i
+                gRootword = self.graph.root.id
                 self._reload(self.graph.root.id)
-    
+
+
 </t>
 <t tx="karstenw.20230506100835.1">@language python
 @tabwidth -4
@@ -581,7 +642,7 @@ import pattern
 from pattern.search import search
 from pattern.en import parsetree, pluralize, singularize
 
-
+from data import data
 </t>
 <t tx="karstenw.20230506100912.10">def get_links(self, node_id, treshold=1.0):
     
@@ -636,18 +697,19 @@ from pattern.en import parsetree, pluralize, singularize
     
     if not node_id in self.nodes:
         if node_id.find("/") &gt;= 0:
-            node_id = node_id.split("/")[-1]        
+            node_id = node_id.split("/")[-1]
         if node_id.find(" ") &gt;= 0:
             node_id = node_id.split()[-1]
-    graphbrowser.GraphBrowser._reload(self, node_id, previous)            
+    graphbrowser.GraphBrowser._reload(self, node_id, previous)
 
 </t>
 <t tx="karstenw.20230506100912.13">def setup():
     
     global clb
-    lexicons = ["data/colors/*.txt", "data/metaphors/*.txt"]
+    
+    lexicons = [ data['colors'], data['metaphors'] ]
     clb = ContextualLinkBrowser( lexicons )
-    if 0:
+    if 1:
         query = choice( list(clb.nodes.keys()) )
         clb.view( query )
     else:
@@ -673,14 +735,11 @@ from pattern.en import parsetree, pluralize, singularize
             
     self.nodes = {}
     self.cache = {}
+    
     for lexicon in lexicons:
-        for f in files(lexicon):
-            path = os.path.abspath( f )
-            _, filename = os.path.split( path )
-            basename, ext = os.path.splitext( filename )
-            if not basename in self.nodes:
-                self.nodes[basename] = ""
-            self.nodes[basename] += " " + loadtext( path )
+        for name in lexicon:
+            desc = lexicon[name]
+            self.nodes[name] = " " + desc
     
     self.link_pattern = "(JJ) NN"    
     self.filters = set([
@@ -872,14 +931,7 @@ speed(30)
 clb = None
 
 </t>
-<t tx="karstenw.20230506102028.1">def loadtext( filepath ):
-    result = ""
-    path = os.path.abspath( filepath )
-    # print(filepath)
-    f = io.open(path, 'r', encoding="utf-8")
-    s = f.read()
-    f.close()
-    return s
+<t tx="karstenw.20230506102028.1">
 
 
 </t>
@@ -893,12 +945,11 @@ clb = None
 # fin isPartOf fish
 
 springgraph = ximport("springgraph")
-# reload(springgraph)
 
 graphbrowser = ximport("graphbrowser")
-# reload(graphbrowser)
 
-# import pattern.en
+from data import data
+
 
 import os
 import io
@@ -906,8 +957,6 @@ import pprint
 pp=pprint.pprint
 
 import pdb
-
-# from os.path import basename
 
 
 
@@ -957,44 +1006,23 @@ semantic_relations_implicit = {
     
     graphbrowser.GraphBrowser.__init__(self)
     self.nodes = {}
-    
     for lexicon in lexica:
-        
-        directory = os.path.abspath( lexicon )
-        # print("path:", path)
-        
-        paths = files( directory + "/*.txt" )
-        for path in paths:
-            folder, filename = os.path.split( path )
-            basename, ext = os.path.splitext( filename )
-
-            # The file name is used as a category.
-            category = basename #(f)[-4]
-        
-            f = io.open( path, 'r', encoding="utf-8" )
-            lines = f.readlines()
-            f.close()
+        # items = lexica[lexicon]
+        for category in lexicon:
+            records = lexicon[category]
+            for record in records:
+                rulecode, id1, id2 = record
+                rulecode = int(rulecode)
             
-            for line in lines:
-                
-                # A rule in the file has the following format:
-                # rulecode, concept1, concept2
-                items = line.split(",")
-                rulecode = int(items[0].strip())
-                id1 = items[1].strip()
-                id2 = items[2].strip()
-                
                 # Add new concept nodes.
-                
                 if not id1 in self.nodes:
                     self.nodes[id1] = SemanticRelationNode(id1, category)
                 if not id2 in self.nodes:
                     self.nodes[id2] = SemanticRelationNode(id2, category)
                 
                 # Build explicit relations.
-                i = int(items[0].strip())
                 self.nodes[id1].links.append( (rulecode, id2) )
-            
+                
                 # Build implicit relations.
                 if rulecode in (6, 8):
                     self.nodes[id2].links.append( (rulecode, id1) )
@@ -1029,16 +1057,11 @@ semantic_relations_implicit = {
 </t>
 <t tx="karstenw.20260427093516.8">def setup():
     
-    global srb 
-    lexica = [ "data/graphics", ]
-    # stoopid data contents
-    # lexica = [ "data/graphics", "data/colors", "data/metaphors" ]
+    global srb
+    lexica = [ data['graphics'], ]
     srb = SemanticRelationBrowser(lexica)
     
-    # pdb.set_trace()
-    
     names = [x for x in srb.nodes]
-    # print( names )
     name = choice(names)
     
     # srb.view("aesthetics")
@@ -1327,7 +1350,6 @@ class GraphBrowser:
     
     msg = []
     msgunique = set()
-    # pdb.set_trace()
     try:
         #import en
         #for i in range(len(en.noun.senses(node_id))):
@@ -1876,7 +1898,6 @@ class GraphNode:
         nodes.sort()
     except TypeError as err:
         #import pdb
-        #pdb.set_trace()
         # pprint.pprint( nodes )
         print("strongest_nodes() ERROR:", err)
     nodes.reverse()
