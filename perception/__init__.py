@@ -65,8 +65,8 @@ pp = pprint.pprint
 from random import random
 import requests
 import pdb
-kwdbg = True
-kwlog = True
+kwdbg = False
+kwlog = False
 
 startimport = time.time()
 
@@ -1167,7 +1167,7 @@ def search_match_parse(
             if len(match) > 0 and len(match[0]) > 0:
                 x = parse(match[0])
                 matches.append(x)
-                if 1:
+                if kwlog:
                     pp( result )
             if pattern_ in result.text:
                 matches.append(result.text)
@@ -1221,10 +1221,10 @@ def suggest_properties(noun, cached=True):
         service="google", 
         cached=cached
     )
-    if 1:
+    if kwlog:
         print("suggest_properties matches:", matches)
     matches = filter(lambda word: word not in ("well", "much"), matches)
-    if 1:
+    if kwlog:
         print("suggest_properties filtered matches:", matches)
     return count(matches)
 
