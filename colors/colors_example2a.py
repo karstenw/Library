@@ -5,7 +5,8 @@ try:
 except ImportError:
     colors = ximport("__init__")
     # reload(colors)
-    
+
+kwlog = 0    
 import imagewells
 
 size(1440, 900)
@@ -13,7 +14,6 @@ background(None)
 
 images = imagewells.loadImageWell(minsize=(400,300))
 img = choice(images['allimages'])
-print("img:", img)
 
 n = 20
 
@@ -28,7 +28,7 @@ w = round(WIDTH / n)
 image(img, 0, w+5, width=WIDTH)
 
 print( img )
-print( n )
+# print( n )
 print()
 
 sea.sort()
