@@ -11,7 +11,7 @@ import pprint
 pp=pprint.pprint
 
 import pdb
-
+kwlog = 0
 colors = ximport("colors")
 # pattern = ximport("pattern")
 
@@ -35,7 +35,8 @@ lexname_scores = {}
 # pdb.set_trace()
 
 lexnames = list( wordnet.wn._lexnames )
-pp(lexnames)
+if kwlog:
+    pp(lexnames)
 
 nouns = list( wordnet.NOUNS() )
 verbs = list( wordnet.VERBS() )
@@ -48,7 +49,8 @@ for lexname in lexnames: #wordnet.wn.Lexname.dict.keys():
 
 # Traverse all colors in the context (blue, green, ...)
 for clr in colors.context: #.keys():
-    print( "clr:", clr )
+    if kwlog:
+        print( "clr:", clr )
         
     # Each color has associated tags: blue -> air, cold, calm, ...
     # Calculate the weight of each tag,
@@ -140,8 +142,8 @@ for q,x,y in (
             l = "verb." + lexname
         elif q in adjectives: #en.is_adjective(q): 
             l = "adj." + lexname
-
-    print( q, "is-a", l )
+    if kwlog:
+        print( q, "is-a", l )
 
     clrs = colors.list()
     if l:
