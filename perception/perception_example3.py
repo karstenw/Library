@@ -12,8 +12,8 @@ except ImportError:
 # Use Google search engine to look for properties:
 q = "queen"
 results = perception.suggest_properties(q)
-print("\n\nresults:", results)
+# print("\n\nresults:", results)
 for property in results:
     count = "(" + str(results[property]) + ")"
     print(property, "is-property-of", q, count)
-
+print()
