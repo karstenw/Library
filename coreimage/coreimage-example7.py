@@ -2,15 +2,17 @@
 
 size(500, 400)
 
+import imagewells
+
 try: 
     coreimage = ximport("coreimage")
 except:
     coreimage = ximport("__init__")
-    reload(coreimage)
+    # reload(coreimage)
 
-images = list(imagefiles("/Library/Desktop Pictures", True))
-img = choice( images )
-# img = "images/France_414.jpg"
+
+imagewell = imagewells.loadImageWell()
+img = choice(imagewell['allimages'])
 
 m = None # The image's alpha mask we'll be editing
 r = 50   # Radius of the eraser.
