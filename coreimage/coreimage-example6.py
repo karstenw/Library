@@ -2,11 +2,13 @@
 
 size(600, 800)
 
+import imagewells
+
 try: 
     coreimage = ximport("coreimage")
 except:
     coreimage = ximport("__init__")
-    reload(coreimage)
+    # reload(coreimage)
     
 c = coreimage.canvas(WIDTH, HEIGHT)
 
@@ -15,8 +17,11 @@ l = c.append(color(0))
 
 # Create an image layer with a radial mask.
 # Use the first image in the image folder.
-img = choice(list(imagefiles("/Library/Desktop Pictures", True)))
+imagewell = imagewells.loadImageWell()
+img = choice(imagewell['allimages'])
+# img = choice(list(imagefiles("/Library/Desktop Pictures", True)))
 print( img )
+
 l = c.layer( img )
 l.mask.gradient(type="radial", spread=0.5)
 l.y -= 120
