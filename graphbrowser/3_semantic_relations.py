@@ -112,13 +112,9 @@ speed(30)
 
 def setup():
     
-    global srb 
-    
-    pdb.set_trace()
-    
+    global srb
     lexica = [ data['graphics'], ]
     srb = SemanticRelationBrowser(lexica)
-    
     
     names = [x for x in srb.nodes]
     name = choice(names)
