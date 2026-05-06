@@ -498,7 +498,6 @@ class Graph:
             nodes.sort()
         except TypeError as err:
             #import pdb
-            #pdb.set_trace()
             # pprint.pprint( nodes )
             print("strongest_nodes() ERROR:", err)
         nodes.reverse()
