@@ -12,20 +12,14 @@ try:
 except:
     print( "IMPORT MISSED!" )
     coreimage = ximport("__init__")
-    reload(coreimage)
+    # reload(coreimage)
 
 from random import shuffle
 
-# get all images from system "Desktop Pictures" folder
-filetuples = imagefiles( "/Library/Desktop Pictures", False )
+import imagewells
 
-# filter out all 1 pix one color images by ignoring all files < 100k
-tiles = []
-for t in filetuples:
-    path, filesize, lastmodified, mode, islink = t
-    if filesize < 100000:
-        continue
-    tiles.append( path )
+images = imagewells.loadImageWell(minsize=(800,600))
+tiles = images['allimages']
 
 shuffle(tiles)
 
