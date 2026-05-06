@@ -12,7 +12,13 @@ except:
     # we may need to try something different when
     # the library is not located in /Application Support
     coreimage = ximport("__init__")
-    reload(coreimage)
+    # reload(coreimage)
+
+
+import imagewells
+imagewell = imagewells.loadImageWell()
+images = imagewell['allimages']
+
 
 # Draw a dark grey background
 background(0.1)
@@ -20,7 +26,7 @@ background(0.1)
 # Create a 800x500 canvas to hold layers.
 canvas = coreimage.canvas(WIDTH, HEIGHT)
 
-images = list(imagefiles("/Library/Desktop Pictures", True))
+# images = list(imagefiles("/Library/Desktop Pictures", True))
 
 # Put a central image on top of the mess.
 img = choice(images)
