@@ -9,18 +9,16 @@ try:
     coreimage = ximport("coreimage")
 except:
     coreimage = ximport("__init__")
-    reload(coreimage)
+    # reload(coreimage)
 
-img = ""
+import imagewells
+
+images = imagewells.loadImageWell(minsize=(800,600))
+img = choice(images['allimages'])
+cache = img
 
 def setup():
-    
-    global img, cache
-    # img = choice(files("images/*.*"))
-    images = list(imagefiles( "/Library/Desktop Pictures", True ))
-    img = choice(images)
-
-    cache = img
+    pass
 
 def draw():
     
