@@ -6,24 +6,19 @@ except ImportError:
     colors = ximport("__init__")
     # reload(colors)
     
+import imagewells
 
 size(1440, 900)
 background(None)
 
-
-def findimage():
-    while True:
-        img = choice(list(imagefiles("/Library/Desktop Pictures")))
-        x = imagesize(img)
-        if x.width > 400:
-            return img
+images = imagewells.loadImageWell(minsize=(400,300))
+img = choice(images['allimages'])
+print("img:", img)
 
 n = 20
 
 # A list of colors from image pixels.
 # This requires the Core Image library to be installed.
-
-img = findimage()
 
 sea = colors.list(img, n=n)
 
