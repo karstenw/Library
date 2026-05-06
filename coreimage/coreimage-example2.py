@@ -5,12 +5,17 @@ try:
     coreimage = ximport("coreimage")
 except:
     coreimage = ximport("__init__")
-    reload(coreimage)
-img = ""
+    # reload(coreimage)
+
+import imagewells
+
+images = imagewells.loadImageWell(minsize=(800,600))
+img = choice(images['allimages'])
+
+
+
 def setup():
-    
-    global img
-    img = choice(list(imagefiles("/Library/Desktop Pictures", True)))
+    pass
 
 def draw():
 
