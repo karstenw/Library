@@ -33,6 +33,9 @@ allnouns = list(wordnet.NOUNS())
 
 
 gSenses = dict()
+gRootword = ""
+gSenseindex = 0
+
 
 #### REPLACEMENTS ##############################################################
 # 
@@ -132,8 +135,8 @@ class WordNetBrowser(graphbrowser.GraphBrowser):
         if node_id in ("parts ", "specific "):
             return True
         return False
-    
-    
+
+
     def get_direct_links(self, node_id, top=6):
         
         if node_id in ["parts ", "specific "]: 
@@ -160,8 +163,8 @@ class WordNetBrowser(graphbrowser.GraphBrowser):
         # children = [(5,id) for id in children]
         children = [(5,id) for id in senses]
         return children[:top]
-    
-    
+
+
     def get_links(self, node_id):
         
         print("get_links:", node_id)
@@ -251,20 +254,34 @@ class WordNetBrowser(graphbrowser.GraphBrowser):
             children.append( (10, name, [binding]) )
             
         return children
-        
+
+
+
     def _reload(self, node_id, previous=None):
-        global gSenses
+        global gSenses, gRootword, gSenseindex
+        
+        if 1:
+            print("node_id:", node_id)
+            print("gRootword:", gRootword)
+            print("gSenseindex:", gSenseindex)
+        #if node_id in ("visible_radiation", ):
+        #    pdb.set_trace()
+        
         # If the previously viewed node was
         # the details of the parts/specific branch,
         # it will be named something like "specific [root]s".
         # Strip the [root] part.
         if previous != None:
+            
+            # pdb.set_trace()
+            
             if previous.find("specific ") == 0:
                 if previous.find(node_id) > 0:
                     previous = "specific "
                 else:
                     previous = self.graph.nodes[-1].id
                 self.max += 10
+            
             if previous.find(" parts") > 0:
                 if previous.find(node_id) > 0:
                     previous = "parts "
@@ -272,13 +289,16 @@ class WordNetBrowser(graphbrowser.GraphBrowser):
                     previous = self.graph.nodes[-1].id
         
         # If a new node is loaded, reset the current sense.
-        if (0 and    self.graph
+        if (    self.graph
             and node_id != self.graph.root.id
             and node_id not in ["parts ", "specific "]
             and previous not in ["parts ", "specific "] ):
             self.sense = 0
         
         # pdb.set_trace()
+        
+        # self.sense > 0 if tab clicked
+        # self.sense == 0 if node clicked
         
         if node_id in gSenses:
             senses = gSenses[node_id]
@@ -292,7 +312,7 @@ class WordNetBrowser(graphbrowser.GraphBrowser):
                 node_id = senses[self.sense]
             else:
                 pass
-            
+        
         graphbrowser.GraphBrowser._reload(self, node_id, previous)
         
         
@@ -331,12 +351,12 @@ class WordNetBrowser(graphbrowser.GraphBrowser):
             self.max -= 10
         if root.id == "parts ": 
             root.id = previous+" parts"
-    
-    
+
+
     def draw(self):
-        
         """ Additional drawing and events for sense selection buttons.
         """
+        global gSenses, gRootword, gSenseindex
         
         graphbrowser.GraphBrowser.draw(self)
         
@@ -345,7 +365,7 @@ class WordNetBrowser(graphbrowser.GraphBrowser):
         try:
             s = self.graph.styles.default
         except Exception as err:
-            pdb.set_trace()
+            # pdb.set_trace()
             print("draw().style ERR:", err)
             print(dir(self.graph))
         _ctx.reset()
@@ -364,6 +384,7 @@ class WordNetBrowser(graphbrowser.GraphBrowser):
         except:
             pass
         
+        # draw the tabs
         for i in range(self.sense_count):
             
             # A clicked button (i.e. the current sense)
@@ -374,7 +395,7 @@ class WordNetBrowser(graphbrowser.GraphBrowser):
                 clr = s.fill
             _ctx.fill(clr)
             
-            p = _ctx.rect(x, y, w, w)
+            rectpath = _ctx.rect(x, y, w, w)
             _ctx.fill(s.text)
             _ctx.align(CENTER)
             _ctx.text(str(i+1), x-w*0.5, y+s.fontsize+w*0.25, width=w*2)
@@ -383,7 +404,7 @@ class WordNetBrowser(graphbrowser.GraphBrowser):
             # The mouse is pressed on a button.
             if (    mousedown
                 and self.graph.dragged == None
-                and p.contains(MOUSEX, MOUSEY)):
+                and rectpath.contains(MOUSEX, MOUSEY)):
                 self.sense_mousedown = i
             
             # The mouse is no longer pressed on a button.    
@@ -391,8 +412,9 @@ class WordNetBrowser(graphbrowser.GraphBrowser):
                 and self.sense_mousedown == i ):
                 self.sense_mousedown = None
                 # The mouse is released (clicked) on a button.
-                if p.contains(MOUSEX, MOUSEY):
-                    self.sense = i
+                if rectpath.contains(MOUSEX, MOUSEY):
+                    self.sense = gSenseindex = i
+                    gRootword = self.graph.root.id
                     self._reload(self.graph.root.id)
 
 
@@ -403,7 +425,7 @@ speed(30)
 
 def setup():
     
-    global wnb, gSenses
+    global wnb, gSenses, gRootword, gSenseindex
     
     # lets have at least 2 senses
     # gSenses = []
@@ -411,13 +433,15 @@ def setup():
     q = "light"
     senses = fsenses( q, all=True )
     gSenses[q] = senses
-    
+    gRootword = q
     while False:
         q = str( choice( allnouns)).replace("(n.)","" )
         print("TRY q:", q )
         senses = fsenses( q )
         if len( senses ) > 1:
             gSenses[q] = senses
+            gRootword = q
+            gSenseindex = 0
             break
     
     # q = "light" # colors blanket green sea work apple baby phenomenon
