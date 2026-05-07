@@ -6,8 +6,8 @@
 
 import os
 import pdb
-kwdbg = True
-kwlog = True
+kwdbg = False
+kwlog = False
 
 try:
     graph = ximport("graph")
@@ -84,7 +84,8 @@ def hypernym( word, sense="", all=False ):
 def fsenses( word, sense="", all=False ):
     fw = FlowerWord( word )
     sn = fw.senses()
-    print("senses(%s): %s" % (word, str(sn)))
+    if kwlog:
+        print("senses(%s): %s" % (word, str(sn)))
     if all:
         return sn
     if len(sn) > 0:
@@ -472,7 +473,8 @@ goodies = ("inconvenience", "biology", "cyberpunk", "frankfurt", "computer",
 # query = "biology"
 
 g = wordnetgraph(distance=1.2)
-print( "query:", query )
+if kwlog:
+    print( "query:", query )
 gSenses = fsenses( query, all=True )
 g.load(query)
 
