@@ -43,11 +43,8 @@ imagewell.tab
 isight/tras*
 isight/*.jpg
 
-#linguistics
 linguistics-data
 linguistics-archives
-#linguistics/linguistics-data
-#linguistics/linguistics-archives
 ling_notwork3-pat.py
 
 lsys/Examples/Lindenmayer Systems, Fractals, and Plants/*.png
@@ -82,7 +79,7 @@ svg/svg-example4-icons.py
 
 svg/+lib
 
-Imagewells
+imagewells/images
 
 
 en_classic
