@@ -15,16 +15,16 @@ FlowerWord = linguistics.FlowerWord.FlowerWord
 import pattern
 
 
-query = "car"
+query = "plane"
+print("query:", query)
 
 f = FlowerWord( query )
-print("\nf.synsets:", f.synsets)
+print("\nquery.synsets:", f.synsets)
 s = f.synsets[0]
+print("\nsynset[0]", s)
 
 # pdb.set_trace()
 
-print("s:", s)
-print()
 print("\ns.antonym:", s.antonym)
 
 print("\ns.gloss:", s.gloss)
