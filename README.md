@@ -26,7 +26,7 @@ The module ```cornu``` runs.
 
 The module ```database``` runs but should not be used. Use linguistics.pattern.db
 
-The module ```en``` has been removed. Use linguistics and adapt your scripts.
+The module ```en``` has been removed. Use linguistics and adapt your scripts. See the linguistics use in flowerewolf, perception, 
 
 The module ```explode``` runs.
 
@@ -40,7 +40,9 @@ The module ```graphbrowser``` runs mostly.
 
 The module ```grid``` runs.
 
-The module ```ìsight``` has been rewritten to use the newer [imagesnap](http://iharder.net/imagesnap) tool which makes it possible to take sequences of images very quickly. 
+~~The module ```ìsight``` has been rewritten to use the newer [imagesnap](http://iharder.net/imagesnap) tool which makes it possible to take sequences of images very quickly. ~~
+
+The ```ìsight``` module is about to be removed. It still runs on 10.13 but is Quicktime based and there is currently no substitute.
 
 The module ```linguistics``` is new and needs an initialisation for downloading databases. See linguistics/README.md
 
@@ -50,13 +52,11 @@ The module ```lsystem``` runs.
 
 The module ```noise``` has been adapted and the _noise.so file has been compiled for x86\_64
 
-The module ```perception``` ~~has been removed but may come~~ is back. The associated web application at "http://www.nodebox.net/perception/" for entering new rules has shut down but perception now uses the conceptnet database.
+The module ```perception``` ~~has been removed but may come~~ is back. The associated web application at "http://www.nodebox.net/perception/" for entering new rules has shut down but perception now uses the conceptnet database in linguistics.
 
 The module ```photobot``` has been adapted to use [Pillow](https://github.com/python-pillow/Pillow), the PIL successor. You'll need at least Nodebox version 1.9.12.
 
 The module ```pixie``` runs.
-
-The module ```quicktime``` runs on Intel. Can't run on newer Macs with M-*
 
 The module ```supershape``` has been adapted and the cSuperformula.so file has been compiled for x86_64
 
@@ -66,11 +66,13 @@ The module ```web``` has been removed. Use linguistics.pattern.web; [docs](https
 
 The module ```wikipedia``` has been removed. Use linguistics.pattern.wikipedia
 
-The module ```wordnet``` removed. Use linguistics.pattern.text.wordnet; [docs](https://www.nodebox.net/code/index.php/WordNet.html)
+The module ```wordnet``` has been removed. Use linguistics.pattern.text.wordnet; [docs](https://www.nodebox.net/code/index.php/WordNet.html)
 
 
 
 ## Things that do not work ##
+
+1. ```quicktime``` has been removed.
 
 1. ```boostgraph```: Missing source files for shared libs.
 
