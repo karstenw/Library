@@ -19,8 +19,8 @@ if len(sys.argv) > 2:
     lang = sys.argv[1]
     args = sys.argv[2:]
 else:
-    lang = 'de'
-    args = ['Haus',]
+    #lang = 'de'
+    #args = ['Haus',]
     lang = 'fr'
     args = ['Maison',]
 
