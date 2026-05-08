@@ -11,7 +11,7 @@ import pprint
 pp=pprint.pprint
 
 import pdb
-kwlog = 0
+kwlog = 1
 colors = ximport("colors")
 # pattern = ximport("pattern")
 
