@@ -279,7 +279,7 @@ def setup():
     
     lexicons = [ data['colors'], data['metaphors'] ]
     clb = ContextualLinkBrowser( lexicons )
-    if 1:
+    if 0:
         query = choice( list(clb.nodes.keys()) )
         clb.view( query )
     else:
