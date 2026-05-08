@@ -45,6 +45,8 @@ import pdb
 import pprint
 pp = pprint.pprint
 
+kwlog = False
+
 from glob import glob
 from math import degrees, radians, sin, cos, atan2, sqrt
 from math import floor, ceil
@@ -265,10 +267,10 @@ rgb2hsv = rgb2hsb = rgb_to_hsb = rgb_to_hsv
 # Names for each distinctive hue on the color wheel.
 
 named_hues = {
-    "red"         : 0.0   / 360,
-    "orange"      : 30.0  / 360,
-    "yellow"      : 60.0  / 360,
-    "lime"        : 90.0  / 360,
+    "red"         :   0.0 / 360,
+    "orange"      :  30.0 / 360,
+    "yellow"      :  60.0 / 360,
+    "lime"        :  90.0 / 360,
     "green"       : 120.0 / 360,
     "teal"        : 150.0 / 360,
     "cyan"        : 180.0 / 360,
@@ -279,7 +281,9 @@ named_hues = {
     "pink"        : 330.0 / 360,
 }
 
-primary_hues = ["red", "orange", "yellow", "green", "blue", "purple", "pink"]
+primary_hues = [
+    "red", "orange", "yellow", "green", "blue", "purple", "pink"]
+
 primary_and_secondary_hues = [
     "red", "orange", "yellow", "lime", "green", "teal", 
     "cyan", "azure", "blue", "indigo", "purple", "pink"
@@ -608,6 +612,7 @@ class BaseColor:
         errmsg = "'"+str(self.__class__)+"' object has no attribute '"+a+"'"
         raise AttributeError( errmsg )
 
+
 try:
     # The generic BaseColor is pretty nifty but we want to use Color from NodeBox
     # whenever available.  It's based on NSColor, allows drawing in NodeBox, has
@@ -791,9 +796,9 @@ class Color(BaseColor):
     def __eq__(self, clr):
         if not isinstance(clr, BaseColor):
             return False
-        if self.r == clr.r and \
-           self.g == clr.g and \
-           self.b == clr.b:
+        if (    self.r == clr.r
+            and self.g == clr.g
+            and self.b == clr.b ):
             return True
         return False
         
@@ -1032,6 +1037,10 @@ for clr in named_colors:
         r, g, b, a = named_colors[clr]
     r, g, b, a = [str(v) for v in [r, g, b, a]]
     code += clr + " = lambda: Color("+r+", "+g+", "+b+", "+a+", mode=\"rgb\", name=\""+clr+"\")\n"
+
+if kwlog:
+    print("color code:")
+    pp(code)
 
 #for clr in named_hues:
 #    h = named_hues[clr]
@@ -2693,7 +2702,8 @@ def aggregated(cache=DEFAULT_CACHE):
      
     return _aggregated_dict
 
-class ColorThemeNotFound(Exception): pass
+class ColorThemeNotFound(Exception):
+    pass
 
 class ColorTheme(_list):
     
