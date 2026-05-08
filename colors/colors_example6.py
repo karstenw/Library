@@ -4,7 +4,7 @@ try:
     colors = ximport("colors")
 except ImportError:
     colors = ximport("__init__")
-    reload(colors)
+    # reload(colors)
 
 # Themes are groups of color ranges (like warm or dark)
 # linked to a specific hue (like red or green).
@@ -30,10 +30,10 @@ t.swatch(50, 50, n=12)
 # they're not always that good, 
 # but a good source of inspiration nonetheless.
 t2 = colors.theme("love")
-t2.swatch(50,550, w=10, h=10, padding=1)
+t2.swatch(50,550, w=16, h=16, padding=1)
 
 # With the recombine() method, we can create
 # new generations from two parent themes!
 t3 = t.recombine(t2, d=0.7)
 print( "ancient egypt + love = ", t3.name )
-t3.swatch(200, 550, w=10, h=10, padding=1, grouped=False)
+t3.swatch(260, 550, w=16, h=16, padding=1, grouped=False)
