@@ -3,6 +3,6 @@
 import pprint
 perception = ximport("perception")
 
-g = perception.query('apfel', lang="de")
+g = perception.query('apfel', lang="")
 
 pprint.pprint( g )
