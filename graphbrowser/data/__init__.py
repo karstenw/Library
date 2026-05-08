@@ -9,6 +9,7 @@ import pprint
 pp=pprint.pprint
 
 import pdb
+kwlog = 1
 
 # pdb.set_trace()
 
@@ -76,7 +77,9 @@ def lexicas():
         root, parent = os.path.split( directory )
         # print("directory:", directory)
         inpath = os.path.join( base, parent + ".tab" )
-        f = open( inpath, 'r' )
+        if kwlog:
+            print("lexicas.open()", inpath)
+        f = io.open( inpath, 'r', encoding="utf-8" )
         for line in f:
             line = line.rstrip()
             category, rest = line.split('\t', 1)
