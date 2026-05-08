@@ -29,7 +29,7 @@
 <v t="karstenw.20210715121613.1"><vh>NAMED COLOR HUES</vh></v>
 <v t="karstenw.20210715121757.1"><vh>NAMED COLORS</vh></v>
 <v t="karstenw.20210712122004.1"><vh>COLOR CONTEXT</vh></v>
-<v t="karstenw.20210712120918.1"><vh>NAMED COLOR HUES</vh>
+<v t="karstenw.20210712120918.1"><vh>Color classes</vh>
 <v t="karstenw.20210712120542.12"><vh>class BaseColor</vh>
 <v t="karstenw.20210712120542.13"><vh>__init__</vh></v>
 <v t="karstenw.20210712120542.14"><vh>__repr__</vh></v>
@@ -79,7 +79,7 @@
 </v>
 <v t="karstenw.20210712120542.54"><vh>named_color</vh></v>
 <v t="karstenw.20210712121036.1"><vh>NAMED COLOR OBJECTS</vh></v>
-<v t="karstenw.20210712121102.1" a="E"><vh>COLOR LIST</vh>
+<v t="karstenw.20210712121102.1"><vh>COLOR LIST</vh>
 <v t="karstenw.20210712120542.55"><vh>class ColorList</vh>
 <v t="karstenw.20210712120542.56"><vh>__init__</vh></v>
 <v t="karstenw.20210712120542.57"><vh>image_to_rgb</vh></v>
@@ -142,8 +142,8 @@
 <v t="karstenw.20210712120542.109"><vh>triad</vh></v>
 <v t="karstenw.20210712120542.110"><vh>tetrad</vh></v>
 <v t="karstenw.20210712120542.111"><vh>compound</vh></v>
-</v>
 <v t="karstenw.20210712120542.112"><vh>rule</vh></v>
+</v>
 <v t="karstenw.20210712121226.1"><vh>COLOR GRADIENT</vh>
 <v t="karstenw.20210712120542.113"><vh>class Gradient</vh>
 <v t="karstenw.20210712120542.114"><vh>__init__</vh></v>
@@ -155,14 +155,14 @@
 <v t="karstenw.20210712120542.120"><vh>_cache</vh></v>
 </v>
 <v t="karstenw.20210712120542.121"><vh>gradient</vh></v>
-</v>
 <v t="karstenw.20210712120542.122"><vh>outline</vh></v>
-<v t="karstenw.20210712121307.1"><vh>FAVORITE COLOR LISTS</vh>
-<v t="karstenw.20210712120542.123" a="E"><vh>class Favorites</vh>
+</v>
+<v t="karstenw.20210712121307.1" a="E"><vh>FAVORITE COLOR LISTS</vh>
+<v t="karstenw.20210712120542.123"><vh>class Favorites</vh>
 <v t="karstenw.20210712120542.124"><vh>__getattr__</vh></v>
 </v>
 </v>
-<v t="karstenw.20210712121331.1"><vh>COLOR RANGE</vh>
+<v t="karstenw.20210712121331.1" a="E"><vh>COLOR RANGE</vh>
 <v t="karstenw.20210712120542.125"><vh>class ColorRange</vh>
 <v t="karstenw.20210712120542.126"><vh>__init__</vh></v>
 <v t="karstenw.20210712120542.127"><vh>constrain_hue</vh></v>
@@ -196,7 +196,7 @@
 <v t="karstenw.20210712120542.149"><vh>shader</vh></v>
 </v>
 <v t="karstenw.20210712121503.1"><vh>COLOR AGGREGATE</vh>
-<v t="karstenw.20210712121514.1"><vh>newHeadline</vh></v>
+<v t="karstenw.20210712121514.1"><vh>Cache locations</vh></v>
 <v t="karstenw.20210712120542.150"><vh>aggregated</vh></v>
 <v t="karstenw.20210712120542.151"><vh>class ColorThemeNotFound</vh></v>
 <v t="karstenw.20210712120542.152"><vh>class ColorTheme</vh>
@@ -226,7 +226,7 @@
 </v>
 <v t="karstenw.20210712120542.176"><vh>theme</vh></v>
 </v>
-<v t="karstenw.20210712121541.1"><vh>COLORS FROM WEB</vh>
+<v t="karstenw.20210712121541.1" a="E"><vh>COLORS FROM WEB</vh>
 <v t="karstenw.20210712120542.177"><vh>search_engine</vh></v>
 <v t="karstenw.20210712120543.1"><vh>google</vh></v>
 <v t="karstenw.20210712120543.2"><vh>yahoo</vh></v>
@@ -245,7 +245,7 @@
 </v>
 <v t="karstenw.20210712120543.11"><vh>gradientbackground</vh></v>
 </v>
-<v t="karstenw.20210712121646.1"><vh>TOOLS</vh>
+<v t="karstenw.20210712121646.1" a="E"><vh>TOOLS</vh>
 <v t="karstenw.20210712120543.12"><vh>colorwheel</vh></v>
 </v>
 <v t="karstenw.20210712121727.1"><vh>TODO &amp; VERSIONS</vh></v>
@@ -789,6 +789,7 @@ class BaseColor:
     """
     
     @others
+
 try:
     # The generic BaseColor is pretty nifty but we want to use Color from NodeBox
     # whenever available.  It's based on NSColor, allows drawing in NodeBox, has
@@ -1464,7 +1465,8 @@ shade_opposites = {
     return _aggregated_dict
 
 </t>
-<t tx="karstenw.20210712120542.151">class ColorThemeNotFound(Exception): pass
+<t tx="karstenw.20210712120542.151">class ColorThemeNotFound(Exception):
+    pass
 
 </t>
 <t tx="karstenw.20210712120542.152">class ColorTheme(_list):
@@ -2291,9 +2293,9 @@ def hex(self):
 <t tx="karstenw.20210712120542.31">def __eq__(self, clr):
     if not isinstance(clr, BaseColor):
         return False
-    if self.r == clr.r and \
-       self.g == clr.g and \
-       self.b == clr.b:
+    if (    self.r == clr.r
+        and self.g == clr.g
+        and self.b == clr.b ):
         return True
     return False
     
@@ -3610,6 +3612,8 @@ for clr in named_colors:
     r, g, b, a = [str(v) for v in [r, g, b, a]]
     code += clr + " = lambda: Color("+r+", "+g+", "+b+", "+a+", mode=\"rgb\", name=\""+clr+"\")\n"
 
+print("color code:", code)
+
 #for clr in named_hues:
 #    h = named_hues[clr]
 #    code += clr+" = lambda: Color("+str(h)+", 1, 1, 1, mode=\"hsb\", name=\""+clr+"\")\n"
@@ -3832,10 +3836,10 @@ for f in glob(path):
 # Names for each distinctive hue on the color wheel.
 
 named_hues = {
-    "red"         : 0.0   / 360,
-    "orange"      : 30.0  / 360,
-    "yellow"      : 60.0  / 360,
-    "lime"        : 90.0  / 360,
+    "red"         :   0.0 / 360,
+    "orange"      :  30.0 / 360,
+    "yellow"      :  60.0 / 360,
+    "lime"        :  90.0 / 360,
     "green"       : 120.0 / 360,
     "teal"        : 150.0 / 360,
     "cyan"        : 180.0 / 360,
@@ -3846,7 +3850,9 @@ named_hues = {
     "pink"        : 330.0 / 360,
 }
 
-primary_hues = ["red", "orange", "yellow", "green", "blue", "purple", "pink"]
+primary_hues = [
+    "red", "orange", "yellow", "green", "blue", "purple", "pink"]
+
 primary_and_secondary_hues = [
     "red", "orange", "yellow", "lime", "green", "teal", 
     "cyan", "azure", "blue", "indigo", "purple", "pink"
