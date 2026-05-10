@@ -29,6 +29,7 @@ if kwdbg and 1:
 W, H = 1920, 1080
 
 # import photobot lib
+nodebox=True
 try:
     pb = ximport("photobot")
     size(W, H)
@@ -40,8 +41,19 @@ except ImportError:
     background( 0.333 )
 except NameError:
     import photobot as pb
+    pb.kwdbg = kwdbg
+    pb.kwlog = kwlog
     WIDTH, HEIGHT = W, H
-    print( "File: %s" % (__file__,) )
+    nodebox=False
+
+if not nodebox:
+    if pb.py3:
+        print("\n\npython3 %s  %s" %(__file__, sys.argv[1:]) )
+    else:
+        print("\n\npython2 %s  %s" %(__file__, sys.argv[1:]) )
+
+
+
 RATIO = WIDTH / HEIGHT
 
 # load the image library
@@ -84,8 +96,9 @@ if not kwdbg:
 # background image
 if len(backgrounds) > 0:
     bgimage = backgrounds.pop()
-    top, w, h = pb.placeImage(c, bgimage, 0, 0, WIDTH, "Image 1", width=True, height=True)
-    print( "Background: %s" % (bgimage,) )
+    pb.placeImage(c, bgimage, 0, 0, WIDTH, "Image 1", width=True, height=True)
+    print( "Background:")
+    p(bgimage)
 
 
 def grid(cols, rows, colSize=1, rowSize=1, shuffled=False):
