@@ -2178,6 +2178,7 @@ def explodeRectangles( rectangles, deltax=10, deltay=10 ):
     
     result = Rectangles( rectangles.innerSquare, rectangles.outerSquare, upper, lower, left, right, quads, niner, outerNiner, threeRows, threeColumns )
     return result
+
 def aspectRatio(size, maxsize, height=False, width=False, assize=False):
     """Resize image with size=(w,h) to maxsize in max(width, height).
     use height == maxsize if height==True
