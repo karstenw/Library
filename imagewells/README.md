@@ -104,62 +104,62 @@ The items of each image list key will depend on the `pathonly` parameter.
 
 See "examples/Example collage *.py"
 
-![](../photobot/examples/demo-images/photobot_2021-06-10_144446.png?raw=True)
+![](../photobot/demo-images/photobot_2021-06-10_144446.png?raw=True)
 
-![](../photobot/examples/demo-images/photobot_2021-06-10_144727.png?raw=True)
+![](../photobot/demo-images/photobot_2021-06-10_144727.png?raw=True)
 
-![](../photobot/examples/demo-images/photobot_2021-06-10_144808.png?raw=True)
+![](../photobot/demo-images/photobot_2021-06-10_144808.png?raw=True)
 
 
 See "examples/Layer\_function\_*.py"
 
-![](../photobot/examples/demo-images/Layer_function_add_modulo.png?raw=True)
+![](../photobot/demo-images/Layer_function_add_modulo.png?raw=True)
 
-![](../photobot/examples/demo-images/Layer_function_add.png?raw=True)
+![](../photobot/demo-images/Layer_function_add.png?raw=True)
 
-![](../photobot/examples/demo-images/Layer_function_autocontrast.png?raw=True)
+![](../photobot/demo-images/Layer_function_autocontrast.png?raw=True)
 
-![](../photobot/examples/demo-images/Layer_function_boxblur.png?raw=True)
+![](../photobot/demo-images/Layer_function_boxblur.png?raw=True)
 
-![](../photobot/examples/demo-images/Layer_function_brightness.png?raw=True)
+![](../photobot/demo-images/Layer_function_brightness.png?raw=True)
 
-![](../photobot/examples/demo-images/Layer_function_color.png?raw=True)
+![](../photobot/demo-images/Layer_function_color.png?raw=True)
 
-![](../photobot/examples/demo-images/Layer_function_contour.png?raw=True)
+![](../photobot/demo-images/Layer_function_contour.png?raw=True)
 
-![](../photobot/examples/demo-images/Layer_function_contrast.png?raw=True)
+![](../photobot/demo-images/Layer_function_contrast.png?raw=True)
 
-![](../photobot/examples/demo-images/Layer_function_difference.png?raw=True)
+![](../photobot/demo-images/Layer_function_difference.png?raw=True)
 
-![](../photobot/examples/demo-images/Layer_function_emboss.png?raw=True)
+![](../photobot/demo-images/Layer_function_emboss.png?raw=True)
 
-![](../photobot/examples/demo-images/Layer_function_enhance_more.png?raw=True)
+![](../photobot/demo-images/Layer_function_enhance_more.png?raw=True)
 
-![](../photobot/examples/demo-images/Layer_function_enhance.png?raw=True)
+![](../photobot/demo-images/Layer_function_enhance.png?raw=True)
 
-![](../photobot/examples/demo-images/Layer_function_find_edges.png?raw=True)
+![](../photobot/demo-images/Layer_function_find_edges.png?raw=True)
 
-![](../photobot/examples/demo-images/Layer_function_flip.png?raw=True)
+![](../photobot/demo-images/Layer_function_flip.png?raw=True)
 
-![](../photobot/examples/demo-images/Layer_function_hue.png?raw=True)
+![](../photobot/demo-images/Layer_function_hue.png?raw=True)
 
-![](../photobot/examples/demo-images/Layer_function_mask.png?raw=True)
+![](../photobot/demo-images/Layer_function_mask.png?raw=True)
 
-![](../photobot/examples/demo-images/Layer_function_multiply.png?raw=True)
+![](../photobot/demo-images/Layer_function_multiply.png?raw=True)
 
-![](../photobot/examples/demo-images/Layer_function_opacity.png?raw=True)
+![](../photobot/demo-images/Layer_function_opacity.png?raw=True)
 
-![](../photobot/examples/demo-images/Layer_function_overlay.png?raw=True)
+![](../photobot/demo-images/Layer_function_overlay.png?raw=True)
 
-![](../photobot/examples/demo-images/Layer_function_posterize.png?raw=True)
+![](../photobot/demo-images/Layer_function_posterize.png?raw=True)
 
-![](../photobot/examples/demo-images/Layer_function_screen.png?raw=True)
+![](../photobot/demo-images/Layer_function_screen.png?raw=True)
 
-![](../photobot/examples/demo-images/Layer_function_select.png?raw=True)
+![](../photobot/demo-images/Layer_function_select.png?raw=True)
 
-![](../photobot/examples/demo-images/Layer_function_solarize.png?raw=True)
+![](../photobot/demo-images/Layer_function_solarize.png?raw=True)
 
-![](../photobot/examples/demo-images/Layer_function_subtract_modulo.png?raw=True)
+![](../photobot/demo-images/Layer_function_subtract_modulo.png?raw=True)
 
-![](../photobot/examples/demo-images/Layer_function_subtract.png?raw=True)
+![](../photobot/demo-images/Layer_function_subtract.png?raw=True)
 
