@@ -102,7 +102,7 @@ The items of each image list key will depend on the `pathonly` parameter.
 
 ### Examples ###
 
-See "examples/Example collage *.py"
+See "../photobot/examples/Example collage *.py"
 
 ![](../photobot/demo-images/photobot_2021-06-10_144446.png?raw=True)
 
@@ -111,7 +111,7 @@ See "examples/Example collage *.py"
 ![](../photobot/demo-images/photobot_2021-06-10_144808.png?raw=True)
 
 
-See "examples/Layer\_function\_*.py"
+See "../photobot/examples/Layer\_function\_*.py"
 
 ![](../photobot/demo-images/Layer_function_add_modulo.png?raw=True)
 
