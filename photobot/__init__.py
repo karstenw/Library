@@ -121,7 +121,7 @@ QUAD = "quad"
 
 def py23print( s, *args ):
     # print
-    if pb.py3:
+    if py3:
         print( s )
     else:
         print( s.encode("utf-8") )

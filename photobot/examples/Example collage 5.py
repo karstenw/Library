@@ -4,6 +4,7 @@ from __future__ import print_function
 
 import sys, os
 
+import pdb
 import pprint
 pp = pprint.pprint
 kwdbg = 0
@@ -27,6 +28,9 @@ if kwdbg and 1:
 # W, H = 1280,  800
 # W, H = 1440,  900
 W, H = 1920, 1080
+
+if kwdbg:
+    pdb.set_trace()
 
 # import photobot lib
 nodebox=True
@@ -98,7 +102,7 @@ if len(backgrounds) > 0:
     bgimage = backgrounds.pop()
     pb.placeImage(c, bgimage, 0, 0, WIDTH, "Image 1", width=True, height=True)
     print( "Background:")
-    p(bgimage)
+    pb.py23print(bgimage)
 
 
 def grid(cols, rows, colSize=1, rowSize=1, shuffled=False):
