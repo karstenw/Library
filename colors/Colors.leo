@@ -14,7 +14,7 @@
 <v t="karstenw.20210712120630.1"><vh>Header</vh></v>
 <v t="karstenw.20210712120542.1"><vh>Declarations</vh></v>
 <v t="karstenw.20220923144041.1"><vh>py3 stuff</vh></v>
-<v t="karstenw.20210712120819.1" a="E"><vh>REWIRING</vh>
+<v t="karstenw.20210712120819.1"><vh>REWIRING</vh>
 <v t="karstenw.20210712120542.4"><vh>class NoCoreImageOrPIL</vh></v>
 <v t="karstenw.20210712120542.5"><vh>_range</vh></v>
 </v>
@@ -123,11 +123,13 @@
 <v t="karstenw.20210712120542.93"><vh>invert</vh></v>
 <v t="karstenw.20210712120542.94"><vh>swatch</vh></v>
 <v t="karstenw.20210712120542.95"><vh>swarm</vh></v>
+<v t="karstenw.20260511174757.1"><vh>__ OVERRIDES __</vh>
 <v t="karstenw.20210712120542.96"><vh>__getslice__</vh></v>
 <v t="karstenw.20210712120542.97"><vh>__add__</vh></v>
 <v t="karstenw.20210712120542.98"><vh>__iadd__</vh></v>
 <v t="karstenw.20210712120542.99"><vh>__mul__</vh></v>
 <v t="karstenw.20210712120542.100"><vh>__imul__</vh></v>
+</v>
 </v>
 <v t="karstenw.20210712120542.101"><vh>colorlist</vh></v>
 </v>
@@ -157,12 +159,12 @@
 <v t="karstenw.20210712120542.121"><vh>gradient</vh></v>
 <v t="karstenw.20210712120542.122"><vh>outline</vh></v>
 </v>
-<v t="karstenw.20210712121307.1" a="E"><vh>FAVORITE COLOR LISTS</vh>
+<v t="karstenw.20210712121307.1"><vh>FAVORITE COLOR LISTS</vh>
 <v t="karstenw.20210712120542.123"><vh>class Favorites</vh>
 <v t="karstenw.20210712120542.124"><vh>__getattr__</vh></v>
 </v>
 </v>
-<v t="karstenw.20210712121331.1" a="E"><vh>COLOR RANGE</vh>
+<v t="karstenw.20210712121331.1"><vh>COLOR RANGE</vh>
 <v t="karstenw.20210712120542.125"><vh>class ColorRange</vh>
 <v t="karstenw.20210712120542.126"><vh>__init__</vh></v>
 <v t="karstenw.20210712120542.127"><vh>constrain_hue</vh></v>
@@ -232,9 +234,9 @@
 <v t="karstenw.20210712120543.2"><vh>yahoo</vh></v>
 <v t="karstenw.20210712120543.3"><vh>morguefile</vh></v>
 </v>
-<v t="karstenw.20210712121604.1"><vh>GRADIENT FILLS AND SHADOWS</vh>
+<v t="karstenw.20210712121604.1" a="E"><vh>GRADIENT FILLS AND SHADOWS</vh>
 <v t="karstenw.20210712121620.1"><vh>newHeadline</vh></v>
-<v t="karstenw.20210712120543.4"><vh>class shadow</vh>
+<v t="karstenw.20210712120543.4" a="E"><vh>class shadow</vh>
 <v t="karstenw.20210712120543.5"><vh>__init__</vh></v>
 <v t="karstenw.20210712120543.6"><vh>_draw</vh></v>
 </v>
@@ -267,6 +269,8 @@ import pdb
 import pprint
 pp = pprint.pprint
 
+kwlog = False
+
 from glob import glob
 from math import degrees, radians, sin, cos, atan2, sqrt
 from math import floor, ceil
@@ -284,7 +288,8 @@ try:
     from AppKit import NSShadow, NSColor
     from AppKit import CIImage, CIColor, CIFilter, CIVector, NSGraphicsContext
 except:
-    class Grob: pass
+    class Grob:
+        pass
 
 try:
     import favorites as _favorites
@@ -906,7 +911,7 @@ except:
         pt = contour.point(0.9999999) # Fix in pathmatics!
         _ctx.line(x0, y0, pt.x, pt.y)
         contour_i += 1
-                
+
 #g = gradient(color(0,0,1,0.5), color(0,0,0.5), color(1,0,0.5))
 #g = g.repeat(oscillate=True)
 #g.swatch(10, 10, h=3)
@@ -1422,7 +1427,7 @@ shade_opposites = {
             d2 = d / spread + d1
     
     return 1 - max(0, min(d2, 1))
-    
+
 #size(500, 500)
 #background(0.1,0,0.05)
 #colormode(HSB)
@@ -2822,7 +2827,8 @@ def average(self):
     return color(r, g, b, a, mode="rgb")
 
 </t>
-<t tx="karstenw.20210712120542.64">def join(self): return self.average
+<t tx="karstenw.20210712120542.64">def join(self):
+    return self.average
 merge = join
 
 </t>
@@ -3217,11 +3223,6 @@ draw = swatch
     else: 
         _ctx.stroke(sc)
 
-# Override some list behaviors
-# so slices return ColorList objects,
-# single Color objects can be added with +,
-# and * equals the repeat() method.
-
 </t>
 <t tx="karstenw.20210712120542.96">def __getslice__(self, i, j):
     j = min(len(self), j)
@@ -3612,7 +3613,9 @@ for clr in named_colors:
     r, g, b, a = [str(v) for v in [r, g, b, a]]
     code += clr + " = lambda: Color("+r+", "+g+", "+b+", "+a+", mode=\"rgb\", name=\""+clr+"\")\n"
 
-print("color code:", code)
+if kwlog:
+    print("color code:")
+    pp(code)
 
 #for clr in named_hues:
 #    h = named_hues[clr]
@@ -4048,6 +4051,12 @@ def sortlistfunction(thelist, thecompare):
     else:
         thelist.sort( thecompare )
 
+
+</t>
+<t tx="karstenw.20260511174757.1"># Override some list behaviors
+# so slices return ColorList objects,
+# single Color objects can be added with +,
+# and * equals the repeat() method.
 
 </t>
 </tnodes>
