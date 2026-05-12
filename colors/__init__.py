@@ -64,7 +64,8 @@ try:
     from AppKit import NSShadow, NSColor
     from AppKit import CIImage, CIColor, CIFilter, CIVector, NSGraphicsContext
 except:
-    class Grob: pass
+    class Grob:
+        pass
 
 try:
     import favorites as _favorites
@@ -1281,7 +1282,8 @@ class ColorList(_list):
 
         return color(r, g, b, a, mode="rgb")
 
-    def join(self): return self.average
+    def join(self):
+        return self.average
     merge = join
 
     def blend(self, d=0.1):
@@ -2123,7 +2125,7 @@ def outline(path, colors, precision=0.4, continuous=True):
         pt = contour.point(0.9999999) # Fix in pathmatics!
         _ctx.line(x0, y0, pt.x, pt.y)
         contour_i += 1
-                
+
 #g = gradient(color(0,0,1,0.5), color(0,0,0.5), color(1,0,0.5))
 #g = g.repeat(oscillate=True)
 #g.swatch(10, 10, h=3)
@@ -2659,7 +2661,7 @@ def shader(x, y, dx, dy, radius=300, angle=0, spread=90):
             d2 = d / spread + d1
     
     return 1 - max(0, min(d2, 1))
-    
+
 #size(500, 500)
 #background(0.1,0,0.05)
 #colormode(HSB)
