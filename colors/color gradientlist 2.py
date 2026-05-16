@@ -6,7 +6,7 @@ except ImportError:
 
 # translate(100,100)
 
-size(1500, 1500)
+# size(1000, 1000)
 
 clr1 = colors.rgb(0.6, 0.8, 1.0)
 clr2 = colors.rgb(0.0, 0.2, 0.4)
@@ -19,7 +19,8 @@ for i in range(len(g)):
     # oval(i*5, i*5, r, r)
 
  
-g.steps = 200
+n = 200
+g.steps = n
 g = g.reverse()
  
 colors.shadow(blur=12, alpha=0.3)
@@ -28,4 +29,4 @@ translate(600,600) #(WIDTH/2, HEIGHT/2)
 for i in range(len(g)):
     fill(g[i])
     rotate(3)
-    oval(i*0.5, i*0.5, 200-i, 200-i)
+    oval(i*0.5, i*0.5, n-i, n-i)
