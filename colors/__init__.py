@@ -2356,9 +2356,9 @@ class ColorRange(ColorList):
         # Only hues are copied and the shades in the original range are applied.
         if isinstance(colorrange, Color):
             colorrange = ColorList(colorrange)
-        if isinstance(colorrange, ColorList) \
-        and not isinstance(colorrange, ColorRange):
-            colorrange = ColorRange([(clr.h,clr.h) for clr in colorrange], [], [])
+        if isinstance(colorrange, ColorList):
+            if not isinstance(colorrange, ColorRange):
+                colorrange = ColorRange([(clr.h,clr.h) for clr in colorrange], [], [])
             
         hsba = [[], [], [], []]
         for r in [self, colorrange]:
@@ -2692,6 +2692,8 @@ def aggregated(cache=DEFAULT_CACHE):
     
     """
     
+    # pdb.set_trace()
+    
     global _aggregated_name, _aggregated_dict
     if _aggregated_name != cache:
         _aggregated_name = cache
@@ -2728,7 +2730,9 @@ class ColorTheme(_list):
         To ignore this, set blue="blue".
         
         """
-
+        
+        # pdb.set_trace()
+        
         self.name = name
         self.ranges = []
         self.cache = cache
@@ -2767,6 +2771,7 @@ class ColorTheme(_list):
             a = aggregated(self.cache)
             for key in a:
                 if self.name != "" and self.name in a[key]:
+                    # pdb.set_trace()
                     self.cache = os.path.join(self.cache, key)
                     self._load(self.top, self.blue)
                     self.tags.append(key.replace("_"," "))
@@ -3173,7 +3178,9 @@ def search_engine(query, top=5, service="google", license=None,
         return a
     except:
         pass
-
+    
+    # pdb.set_trace()
+    
     if service == "google":
         from web import google
         search_engine = google
@@ -3216,6 +3223,7 @@ def search_engine(query, top=5, service="google", license=None,
     return a
 
 def google(query, top=5, license=None, cache=os.path.join(DEFAULT_CACHE, "google")):
+    # pdb.set_trace()
     return search_engine(query, top, "google", license, cache)
 
 prism = google
