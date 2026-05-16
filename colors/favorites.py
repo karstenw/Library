@@ -102,8 +102,8 @@ data = {
 #    rect(40, i, 40, 40)
 #    i += 40
 
-cell = 40
-offset = 10
+cell = 60
+offset = 19
 
 if 0:
     clrs = data["atlas"][1]
@@ -116,6 +116,9 @@ else:
     x = y = cell
     clrnames = data.keys()
     for colorname in clrnames:
+        fill(0)
+        fontsize(16)
+        text(colorname, x, cell-8 )
         clrs = data[colorname][1]
         y = cell
         for r, g, b, a in clrs:
