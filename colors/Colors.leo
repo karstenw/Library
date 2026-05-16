@@ -92,7 +92,7 @@
 <v t="karstenw.20210712120542.64"><vh>join</vh></v>
 <v t="karstenw.20210712120542.65"><vh>blend</vh></v>
 <v t="karstenw.20210712120542.66"><vh>sort_by_distance</vh></v>
-<v t="karstenw.20210712122340.1"><vh>TROUBLEMAKERS</vh>
+<v t="karstenw.20210712122340.1" a="E"><vh>TROUBLEMAKERS</vh>
 <v t="karstenw.20210712120542.67"><vh>_sorted_copy</vh></v>
 <v t="karstenw.20210712120542.68"><vh>sort_by_hue</vh></v>
 <v t="karstenw.20210712120542.69"><vh>sort_by_saturation</vh></v>
@@ -164,8 +164,8 @@
 <v t="karstenw.20210712120542.124"><vh>__getattr__</vh></v>
 </v>
 </v>
-<v t="karstenw.20210712121331.1"><vh>COLOR RANGE</vh>
-<v t="karstenw.20210712120542.125"><vh>class ColorRange</vh>
+<v t="karstenw.20210712121331.1" a="E"><vh>COLOR RANGE</vh>
+<v t="karstenw.20210712120542.125" a="E"><vh>class ColorRange</vh>
 <v t="karstenw.20210712120542.126"><vh>__init__</vh></v>
 <v t="karstenw.20210712120542.127"><vh>constrain_hue</vh></v>
 <v t="karstenw.20210712120542.128"><vh>constrain_saturation</vh></v>
@@ -197,11 +197,11 @@
 <v t="karstenw.20210712121445.1"><vh>COLOR SHADER</vh>
 <v t="karstenw.20210712120542.149"><vh>shader</vh></v>
 </v>
-<v t="karstenw.20210712121503.1"><vh>COLOR AGGREGATE</vh>
+<v t="karstenw.20210712121503.1" a="E"><vh>COLOR AGGREGATE</vh>
 <v t="karstenw.20210712121514.1"><vh>Cache locations</vh></v>
 <v t="karstenw.20210712120542.150"><vh>aggregated</vh></v>
 <v t="karstenw.20210712120542.151"><vh>class ColorThemeNotFound</vh></v>
-<v t="karstenw.20210712120542.152"><vh>class ColorTheme</vh>
+<v t="karstenw.20210712120542.152" a="E"><vh>class ColorTheme</vh>
 <v t="karstenw.20210712120542.153"><vh>__init__</vh></v>
 <v t="karstenw.20210712120542.154"><vh>add_range</vh></v>
 <v t="karstenw.20210712120542.155"><vh>copy</vh></v>
@@ -228,13 +228,13 @@
 </v>
 <v t="karstenw.20210712120542.176"><vh>theme</vh></v>
 </v>
-<v t="karstenw.20210712121541.1" a="E"><vh>COLORS FROM WEB</vh>
+<v t="karstenw.20210712121541.1"><vh>COLORS FROM WEB</vh>
 <v t="karstenw.20210712120542.177"><vh>search_engine</vh></v>
 <v t="karstenw.20210712120543.1"><vh>google</vh></v>
 <v t="karstenw.20210712120543.2"><vh>yahoo</vh></v>
 <v t="karstenw.20210712120543.3"><vh>morguefile</vh></v>
 </v>
-<v t="karstenw.20210712121604.1" a="E"><vh>GRADIENT FILLS AND SHADOWS</vh>
+<v t="karstenw.20210712121604.1"><vh>GRADIENT FILLS AND SHADOWS</vh>
 <v t="karstenw.20210712121620.1"><vh>newHeadline</vh></v>
 <v t="karstenw.20210712120543.4" a="E"><vh>class shadow</vh>
 <v t="karstenw.20210712120543.5"><vh>__init__</vh></v>
@@ -247,7 +247,7 @@
 </v>
 <v t="karstenw.20210712120543.11"><vh>gradientbackground</vh></v>
 </v>
-<v t="karstenw.20210712121646.1" a="E"><vh>TOOLS</vh>
+<v t="karstenw.20210712121646.1"><vh>TOOLS</vh>
 <v t="karstenw.20210712120543.12"><vh>colorwheel</vh></v>
 </v>
 <v t="karstenw.20210712121727.1"><vh>TODO &amp; VERSIONS</vh></v>
@@ -1197,9 +1197,9 @@ colorlist = colors
     # Only hues are copied and the shades in the original range are applied.
     if isinstance(colorrange, Color):
         colorrange = ColorList(colorrange)
-    if isinstance(colorrange, ColorList) \
-    and not isinstance(colorrange, ColorRange):
-        colorrange = ColorRange([(clr.h,clr.h) for clr in colorrange], [], [])
+    if isinstance(colorrange, ColorList):
+        if not isinstance(colorrange, ColorRange):
+            colorrange = ColorRange([(clr.h,clr.h) for clr in colorrange], [], [])
         
     hsba = [[], [], [], []]
     for r in [self, colorrange]:
@@ -1457,6 +1457,8 @@ shade_opposites = {
     
     """
     
+    # pdb.set_trace()
+    
     global _aggregated_name, _aggregated_dict
     if _aggregated_name != cache:
         _aggregated_name = cache
@@ -1497,7 +1499,9 @@ shade_opposites = {
     To ignore this, set blue="blue".
     
     """
-
+    
+    # pdb.set_trace()
+    
     self.name = name
     self.ranges = []
     self.cache = cache
@@ -1536,6 +1540,7 @@ shade_opposites = {
         a = aggregated(self.cache)
         for key in a:
             if self.name != "" and self.name in a[key]:
+                # pdb.set_trace()
                 self.cache = os.path.join(self.cache, key)
                 self._load(self.top, self.blue)
                 self.tags.append(key.replace("_"," "))
@@ -1977,7 +1982,9 @@ aggregate = theme
         return a
     except:
         pass
-
+    
+    # pdb.set_trace()
+    
     if service == "google":
         from web import google
         search_engine = google
@@ -3247,6 +3254,7 @@ draw = swatch
     
 </t>
 <t tx="karstenw.20210712120543.1">def google(query, top=5, license=None, cache=os.path.join(DEFAULT_CACHE, "google")):
+    # pdb.set_trace()
     return search_engine(query, top, "google", license, cache)
 
 prism = google
