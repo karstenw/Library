@@ -21,7 +21,9 @@ t.add_range(colors.neutral, colors.teal(), weight=0.1)
 t.add_range(colors.intense, colors.red(), weight=0.1)
 
 stroke(0)
-strokewidth(0.2)
+strokewidth(0.5)
+fill(0)
+text(t.name, 50,50-10 )
 t.swatch(50, 50, n=12)
 
 # More than 4000 words (especially emotions, adjectives
@@ -30,10 +32,14 @@ t.swatch(50, 50, n=12)
 # they're not always that good, 
 # but a good source of inspiration nonetheless.
 t2 = colors.theme("love")
+fill(0)
+text(t2.name, 50,550-10 )
 t2.swatch(50,550, w=16, h=16, padding=1)
 
 # With the recombine() method, we can create
 # new generations from two parent themes!
 t3 = t.recombine(t2, d=0.7)
-print( "ancient egypt + love = ", t3.name )
+# print( "ancient egypt + love = ", t3.name )
+fill(0)
+text(t3.name, 260,550-10 )
 t3.swatch(260, 550, w=16, h=16, padding=1, grouped=False)

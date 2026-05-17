@@ -14,7 +14,7 @@ bg = rect(0,0,WIDTH,HEIGHT,draw=False)
 colors.gradientfill(bg, color(0.15,0.2,0), color(0,0,0))
 colors.shadow()
 
-for i in range(100):
+for i in range(400):
     
     x = random( WIDTH )
     y = random( HEIGHT )
@@ -28,6 +28,7 @@ for i in range(100):
     if r < 4:
         continue
     p = oval(x, y, r*2, r*2, draw=False)
+    # p = circle(x,y,r, draw=False)
     
     # Two colors for an oval gradient fill.
     # The green becomes lighter and more opaque

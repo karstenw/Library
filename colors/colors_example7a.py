@@ -58,7 +58,8 @@ def run( x, y, ang, radius ):
     clr1 = color(0.4+d*0.5, 0.6+d*0.3, 0, 0.75)
     clr2 = color(0, 0, 0, d)
 
-    p = oval(x, y, r*2, r*2, draw=False)
+    # p = oval(x, y, r*2, r*2, draw=False)
+    p = circle(x, y, r, draw=False)
 
     # Two colors for an oval gradient fill.
     # The green becomes lighter and more opaque

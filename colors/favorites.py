@@ -102,8 +102,14 @@ data = {
 #    rect(40, i, 40, 40)
 #    i += 40
 
-cell = 60
-offset = 19
+size(1200, 600 )
+cell = 85
+
+xoffset = 14
+yoffset = cell + 0
+
+basex, basey = 65, 80
+deltax = cell + xoffset
 
 if 0:
     clrs = data["atlas"][1]
@@ -112,20 +118,23 @@ if 0:
         fill(r, g, b, a)
         rect(40, i, 40, 40)
         i += 40
-else:
-    x = y = cell
+
+if __name__ == "builtins":
+    x, y = basex, basey
     clrnames = data.keys()
     for colorname in clrnames:
         fill(0)
         fontsize(16)
-        text(colorname, x, cell-8 )
-        clrs = data[colorname][1]
-        y = cell
+        text(colorname, x, basey-8 )
+        
+        keywords, clrs = data[colorname]
+        
+        y = basey
         for r, g, b, a in clrs:
             fill(r, g, b, a)
             rect(x, y, cell, cell)
-            y += cell
-        x += cell + offset
+            y += yoffset
+        x += deltax
 
 
 

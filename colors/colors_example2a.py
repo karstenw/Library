@@ -10,7 +10,7 @@ kwlog = 0
 import imagewells
 
 w,h = 1440,900
-n = 60
+n = 20
 
 
 
@@ -27,7 +27,7 @@ W,H = imagesize( img )
 sea = colors.list(img, n=n)
 
 sea = list(set(sea))
-n = len(sea)
+n = min( len(sea), n)
 
 tilesize = round( w / n )
 

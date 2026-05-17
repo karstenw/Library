@@ -21,7 +21,7 @@ FlowerWord = linguistics.FlowerWord.FlowerWord
 import pattern
 import pattern.en
 import pattern.en.wordnet
-en = pattern.en
+# en = pattern.en
 wordnet = pattern.en.wordnet
 
 
@@ -35,12 +35,15 @@ lexname_scores = {}
 # pdb.set_trace()
 
 lexnames = list( wordnet.wn._lexnames )
-if kwlog:
+if kwlog and 0:
+    print("wordnet.wn._lexnames:")
     pp(lexnames)
+
 
 nouns = list( wordnet.NOUNS() )
 verbs = list( wordnet.VERBS() )
 adjectives = list( wordnet.ADJECTIVES() )
+
 
 for lexname in lexnames: #wordnet.wn.Lexname.dict.keys():
     lexname_scores[lexname] = []
@@ -72,6 +75,8 @@ for clr in colors.context: #.keys():
         fw = FlowerWord( tag )
         synsets = fw.synsets #( tag )
         if not synsets:
+            if kwlog:
+                print("NO SYNSETS for:", tag )
             continue
         
         # pdb.set_trace()
@@ -115,12 +120,12 @@ q = "rabbit" # try out: rave, keyboard, love
 
 for q,x,y in (
     ("rabbit",   150, 150),
-    ("rave",     300, 150),
-    ("keyboard", 450, 150),
-    ("love",     150, 300),
+    ("rave",     320, 150),
+    ("keyboard", 490, 150),
+    ("love",     150, 320),
     # ("yearn",    300, 300), # not found
-    ("yarn",     300, 300),
-    ("rocket",   450, 300),
+    ("yarn",     320, 320),
+    ("rocket",   490, 320),
     ):
 
     # Now we can do some guessing!
@@ -150,5 +155,7 @@ for q,x,y in (
         for clr, weight in lexname_scores[l]:
             for i in range(int(weight*100)):
                 clrs += colors.color(clr)
-
+        fill(0.5)
+        fontsize(14)
+        text(q, x-20, y-80 )
         clrs.swarm(x, y, 50)

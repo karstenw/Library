@@ -133,7 +133,7 @@
 </v>
 <v t="karstenw.20210712120542.101"><vh>colorlist</vh></v>
 </v>
-<v t="karstenw.20210712121126.1"><vh>COLOR HARMONY</vh>
+<v t="karstenw.20210712121126.1" a="E"><vh>COLOR HARMONY</vh>
 <v t="karstenw.20210712120542.102"><vh>complement</vh></v>
 <v t="karstenw.20210712120542.103"><vh>complementary</vh></v>
 <v t="karstenw.20210712120542.104"><vh>split_complementary</vh></v>
@@ -188,13 +188,12 @@
 </v>
 <v t="karstenw.20210712120542.145"><vh>colorrange</vh></v>
 </v>
-<v t="karstenw.20210712121349.1"><vh>COLOR SHADES</vh>
+<v t="karstenw.20210712121349.1" a="E"><vh>COLOR SHADES</vh>
 <v t="karstenw.20210712121356.1"><vh>shades</vh></v>
-<v t="karstenw.20210712120542.146"><vh>shade</vh></v>
 <v t="karstenw.20210712120542.147"><vh>shade_opposite</vh></v>
 <v t="karstenw.20210712120542.148"><vh>guess_name</vh></v>
 </v>
-<v t="karstenw.20210712121445.1"><vh>COLOR SHADER</vh>
+<v t="karstenw.20210712121445.1" a="E"><vh>COLOR SHADER</vh>
 <v t="karstenw.20210712120542.149"><vh>shader</vh></v>
 </v>
 <v t="karstenw.20210712121503.1" a="E"><vh>COLOR AGGREGATE</vh>
@@ -1184,12 +1183,11 @@ colorlist = colors
 
 </t>
 <t tx="karstenw.20210712120542.135">def __add__(self, colorrange):
-    
-    """ Combines two ColorRange objects into one.
+    """
+    Combines two ColorRange objects into one.
     
     For example, if you merge a dark green range and a light red range,
     you get a range returning dark and light variations of green and red.
-    
     """
     
     # You can add single colors and lists to ranges,
@@ -1197,11 +1195,12 @@ colorlist = colors
     # Only hues are copied and the shades in the original range are applied.
     if isinstance(colorrange, Color):
         colorrange = ColorList(colorrange)
+    
     if isinstance(colorrange, ColorList):
         if not isinstance(colorrange, ColorRange):
             colorrange = ColorRange([(clr.h,clr.h) for clr in colorrange], [], [])
-        
-    hsba = [[], [], [], []]
+    
+    hsba = [ [], [], [], [] ]
     for r in [self, colorrange]:
         for i in _range(4):
             v = [r.h, r.s, r.b, r.a][i]
@@ -1286,13 +1285,7 @@ colorlist = colors
 range = colorrange
 
 </t>
-<t tx="karstenw.20210712120542.146">def shade(name):
-    
-    for shade in shades:
-        if shade.name == name:
-            return shade
-
-shade_opposites = {
+<t tx="karstenw.20210712120542.147">shade_opposites = {
     # XXX - not sure if all of these are correct.
     "light"   : dark,
     "dark"    : light,
@@ -1306,8 +1299,8 @@ shade_opposites = {
     "cool"    : warm
 }
 
-</t>
-<t tx="karstenw.20210712120542.147">def shade_opposite(shade):
+
+def shade_opposite(shade):
     
     if str(shade) in shade_opposites:
         return shade_opposites[str(shade)]
@@ -1399,14 +1392,14 @@ shade_opposites = {
 
     # Normalize the light's direction and spread
     # between 0 and 360.
-    angle = 360-angle%360
+    angle = 360 - angle % 360
     spread = max(0, min(spread, 360))
     if spread == 0:
-        return 0.0    
+        return 0.0
     
     # Objects that fall within the spreaded direction
     # of the light are illuminated.
-    d = abs(a-angle)
+    d = abs( a-angle )
     if d &lt;= spread/2:
         d2 = d / spread + d1
     else:
@@ -1512,6 +1505,8 @@ shade_opposites = {
     self.length = 100
     
     self.group_swatches = False
+    
+    # pdb.set_trace()
 
     # See if we can load data from cache first.
     # Check subfolders in the cache as well.
@@ -3741,6 +3736,13 @@ intense = ColorRange(name="intense",
 )
 
 shades = [light, dark, bright, weak, neutral, fresh, soft, hard, warm, cool, intense]
+
+def shade(name):
+    
+    for shade in shades:
+        if shade.name == name:
+            return shade
+
 
 </t>
 <t tx="karstenw.20210712121445.1">#### COLOR SHADER ##################################################################
