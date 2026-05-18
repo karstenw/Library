@@ -19,7 +19,8 @@ The recognized symbols are:
 
 + [,] push / pop the graphics state
 
-Remember: You can use any one character as a symbol in replacement rules. Only "FLRGf+-|[]" have actions associated with them.
+
+#### You can use any one character as a symbol in replacement rules. Only "FLRGf+-|[]" have actions associated with them. ####
 
 
 ## Usage ##

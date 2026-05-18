@@ -1,5 +1,9 @@
 ## isight module ##
 
+
+### This is old and 32-bit and QuickTime and will not run on macos 10.14 and beyond. ###
+
+
 This module has been rewritten to use the newer [imagesnap](http://iharder.net/imagesnap) tool.
 
 
