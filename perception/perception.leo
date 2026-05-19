@@ -10,7 +10,7 @@
 <find_panel_settings/>
 <vnodes>
 <v t="karstenw.20230316191437.2" a="E"><vh>perception</vh>
-<v t="karstenw.20230316191501.1" a="E"><vh>@clean __init__.py</vh>
+<v t="karstenw.20230316191501.1"><vh>@clean __init__.py</vh>
 <v t="karstenw.20230316191528.1"><vh>Declarations</vh></v>
 <v t="karstenw.20230417110004.1"><vh>+ GLOBALS +</vh></v>
 <v t="karstenw.20230318131229.1"><vh>+ TOOLS +</vh>
@@ -159,10 +159,15 @@
 <v t="karstenw.20260227123205.2"><vh>load</vh></v>
 <v t="karstenw.20260227123205.3"><vh>draw</vh></v>
 </v>
-<v t="karstenw.20260227123116.1" a="E"><vh>@clean perception_example1a.py</vh>
+<v t="karstenw.20260227123116.1"><vh>@clean perception_example1a.py</vh>
 <v t="karstenw.20260227123301.1"><vh>Declarations</vh></v>
 <v t="karstenw.20260227123301.2"><vh>load</vh></v>
 <v t="karstenw.20260227123301.3"><vh>draw</vh></v>
+</v>
+<v t="karstenw.20260518135726.1"><vh>@clean perception_example1b.py</vh>
+<v t="karstenw.20260518135734.1"><vh>Declarations</vh></v>
+<v t="karstenw.20260518135734.2"><vh>handler</vh></v>
+<v t="karstenw.20260518135734.3"><vh>load</vh></v>
 </v>
 <v t="karstenw.20260227123138.1"><vh>@clean perception_example2.py</vh>
 <v t="karstenw.20260227123329.1"><vh>Declarations</vh></v>
@@ -249,8 +254,8 @@ pp = pprint.pprint
 from random import random
 import requests
 import pdb
-kwdbg = True
-kwlog = True
+kwdbg = False
+kwlog = False
 
 startimport = time.time()
 
@@ -1380,7 +1385,7 @@ map_object = __call__
             if len(match) &gt; 0 and len(match[0]) &gt; 0:
                 x = parse(match[0])
                 matches.append(x)
-                if 1:
+                if kwlog:
                     pp( result )
             if pattern_ in result.text:
                 matches.append(result.text)
@@ -1435,10 +1440,10 @@ map_object = __call__
         service="google", 
         cached=cached
     )
-    if 1:
+    if kwlog:
         print("suggest_properties matches:", matches)
     matches = filter(lambda word: word not in ("well", "much"), matches)
-    if 1:
+    if kwlog:
         print("suggest_properties filtered matches:", matches)
     return count(matches)
 
@@ -1890,18 +1895,76 @@ except ImportError:
 # Use Google search engine to look for properties:
 q = "queen"
 results = perception.suggest_properties(q)
-print("\n\nresults:", results)
+# print("\n\nresults:", results)
 for property in results:
     count = "(" + str(results[property]) + ")"
     print(property, "is-property-of", q, count)
-
+print()
 </t>
 <t tx="karstenw.20260227124054.1">import pprint
 perception = ximport("perception")
 
-g = perception.query('apfel', lang="de")
+g = perception.query('apfel', lang="")
 
 pprint.pprint( g )
+</t>
+<t tx="karstenw.20260518135726.1">@language python
+@tabwidth -4
+@others
+if 1:
+    speed(16)
+    def draw():
+        g.update()
+        g.draw(traffic=False, directed=False)
+else:
+    background(0.5)
+</t>
+<t tx="karstenw.20260518135734.1"># PERCEPTION BROWSER
+
+import pdb
+
+perception = ximport("perception")
+
+languageCodes = list( perception.cnr.coreLanguageCodes )
+languageCodes.sort()
+languageCodes.insert(0, "")
+lang=""
+
+</t>
+<t tx="karstenw.20260518135734.2">def handler( value, name ):
+    global lang, concept
+    if name == 'concept':
+        concept = value
+    elif name == "language":
+        lang = language
+    load( concept, lang )
+    
+var("concept", TEXT, "Mitmensch", handler=handler)
+var("language", MENU, default=handler, value=languageCodes)
+
+
+g = None
+</t>
+<t tx="karstenw.20260518135734.3">def load( theConcept, lang="" ):
+    
+    global g, concept
+    concept = theConcept
+    # Load a new cluster of nodes surrounding the clicked node.
+    # Note the "maxedges" parameter - you won't find it documented.
+    # We use it here to cap the number of rules returned.
+    # A fast graph is more important right now than all of the data.
+    g = perception.cluster( str(theConcept), depth=2, maxedges=100, labeled=1, lang=lang)
+    g.distance = 3.1
+    g.layout.n = 2000
+    g.styles.apply()
+    g.layout.force = 0.001 # lower if nodes are twitching
+    g.events.click = load
+    if 1:
+        print("load:", concept, len(g) )
+
+load("Mitmensch", lang)
+
+size( 1024, 1024)
 </t>
 </tnodes>
 </leo_file>
