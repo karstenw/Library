@@ -1,0 +1,76 @@
+<h2 id="nodeboxlibraryfolder">Nodebox Library folder</h2>
+
+<h2 id="thingsthatarenew">Things that are new</h2>
+
+<p><code>twyg</code> - The twyg library needs at least NodeBox 1.9.23.</p>
+
+<p>The contents of this repo go into the <code>~/Library/Application Support/Nodebox/</code> folder. As of 2017&#8211;05&#8211;20 and NodeBox v1.9.17+ the library folder can be anywhere and needs to be set in the preferences.</p>
+
+<p>These are modules that could be made to work with my <a href="https://github.com/karstenw/nodebox-pyobjc">Nodebox fork</a>.</p>
+
+<p>The module <code>ants</code> runs.</p>
+
+<p>The module <code>beziereditor</code> runs.</p>
+
+<p>The module <code>boids</code> runs.</p>
+
+<p>The module <code>colors</code> has been patched for zipfile support. The <a href="https://github.com/shoebot/shoebot/commit/b2b9c43b28acb9312ca2a0557cc8728fc49a47bb">patch</a> came from the <a href="https://github.com/shoebot/shoebot">shoebot</a> project. You&#8217;ll need at least Nodebox version 1.9.17.</p>
+
+<p>The module <code>coreimage</code> runs mostly but is one mean memory hog.</p>
+
+<p>The module <code>cornu</code> runs.</p>
+
+<p>The module <code>database</code> runs but should not be used. Use linguistics.pattern.db</p>
+
+<p>The module <code>en</code> has been removed. Use linguistics and adapt your scripts. See the linguistics use in flowerewolf, perception,</p>
+
+<p>The module <code>explode</code> runs.</p>
+
+<p>The module <code>fatpath</code> runs.</p>
+
+<p>The module <code>flowerewolf</code> is adapted.</p>
+
+<p>The module <code>graph</code> runs mostly.</p>
+
+<p>The module <code>graphbrowser</code> runs mostly.</p>
+
+<p>The module <code>grid</code> runs.</p>
+
+<p>~~The module <code>ìsight</code> has been rewritten to use the newer <a href="http://iharder.net/imagesnap">imagesnap</a> tool which makes it possible to take sequences of images very quickly. ~~</p>
+
+<p>The <code>ìsight</code> module is about to be removed. It still runs on 10.13 but is Quicktime based and there is currently no substitute.</p>
+
+<p>The module <code>linguistics</code> is new and needs an initialisation for downloading databases. See linguistics/README.md</p>
+
+<p>The module <code>lsys</code>has been written from scratch. Why? Because lindemayer systems are fun. Included are a lot of demos from &#8220;Algorithmic Beauty of Plants&#8221; and &#8220;Lindenmayer Systems, Fractals, and Plants&#8221;.</p>
+
+<p>The module <code>lsystem</code> runs.</p>
+
+<p>The module <code>noise</code> has been adapted and the _noise.so file has been compiled for x86_64</p>
+
+<p>The module <code>perception</code> ~~has been removed but may come~~ is back. The associated web application at &#8220;http://www.nodebox.net/perception/&#8221; for entering new rules has shut down but perception now uses the conceptnet database in linguistics.</p>
+
+<p>The module <code>photobot</code> has been adapted to use <a href="https://github.com/python-pillow/Pillow">Pillow</a>, the PIL successor. You&#8217;ll need at least Nodebox version 1.9.12.</p>
+
+<p>The module <code>pixie</code> runs.</p>
+
+<p>The module <code>supershape</code> has been adapted and the cSuperformula.so file has been compiled for x86_64</p>
+
+<p>The module <code>svg</code> runs.</p>
+
+<p>The module <code>web</code> has been removed. Use linguistics.pattern.web; <a href="https://www.nodebox.net/code/index.php/Web.html">docs</a></p>
+
+<p>The module <code>wikipedia</code> has been removed. Use linguistics.pattern.wikipedia</p>
+
+<p>The module <code>wordnet</code> has been removed. Use linguistics.pattern.text.wordnet; <a href="https://www.nodebox.net/code/index.php/WordNet.html">docs</a></p>
+
+<h2 id="thingsthatdonotwork">Things that do not work</h2>
+
+<ol>
+<li><p><code>quicktime</code> has been removed.</p></li>
+<li><p><code>boostgraph</code>: Missing source files for shared libs.</p></li>
+<li><p><code>cutout</code>: No demo files, no docs.</p></li>
+<li><p><code>geometry</code>: Has been integrated into the app.</p></li>
+<li><p><code>google</code>: Needs a licence key which I do not have and wont apply for.</p></li>
+<li><p><code>purenode, tuio and wiinode</code>: Need devices which I do not have.</p></li>
+</ol>
