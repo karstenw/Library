@@ -1,0 +1,39 @@
+<h2 id="isightmodule">isight module</h2>
+
+<h3 id="thisisoldand32-bitandquicktimeandwillnotrunonmacos10.14andbeyond.">This is old and 32-bit and QuickTime and will not run on macos 10.14 and beyond.</h3>
+
+<p>This module has been rewritten to use the newer <a href="http://iharder.net/imagesnap">imagesnap</a> tool.</p>
+
+<h3 id="grab">grab</h3>
+
+<h5 id="isight.grabdestfolderfalse">isight.grab(destfolder=False)</h5>
+
+<p>Grabs a single image and returns the path to the file.</p>
+
+<p>Unlike the previous version, you cannot define the size of the image.</p>
+
+<p><code>ìmagesnap</code> always returns an image with the camera native size.</p>
+
+<p>The usage pattern is:</p>
+
+<pre><code class="Python">
+# grab one image to determine the cameras image size
+imagepath = isight.grab()
+imsize = imagesize(imagepath)
+w,h = imsize.width, imsize.height
+
+size(w,h)
+image(imagepath,0,0,width=w,height=h)
+</code></pre>
+
+<h5 id="isight.grabsequencecount10intervall0.1destfolderfalse">isight.grabSequence(count=10, intervall=0.1, destfolder=False)</h5>
+
+<p>Grabs a sequence of images and returns a list of paths.</p>
+
+<p>count: nr of images to read</p>
+
+<p>intervall: time between shots</p>
+
+<p>destfolder: the destination folder. If False, the folder &#8220;~/Pictures/Nodebox-iSight-Sequences&#8221; will be used.</p>
+
+<h4 id="attention:thedestinationfolderwillgrowwitheachrun.imagesarenotdeleted.">ATTENTION: The destination folder will grow with each run. Images are not deleted.</h4>
