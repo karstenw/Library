@@ -1,0 +1,28 @@
+<h2 id="lsyslibrary">LSYS Library</h2>
+
+<p>This is a Lindenmayer library written from scratch.</p>
+
+<p>Why?</p>
+
+<p>Because it&#8217;s fun!</p>
+
+<p>The recognized symbols are:</p>
+
+<ul>
+<li><p>F,L,R,G - Move forward one steplength drawing a line</p></li>
+<li><p>f - Move forward one steplength</p></li>
+<li><p>+,- turn right- or left angle degrees</p></li>
+<li><p>| turn 180 degrees</p></li>
+<li><p>[,] push / pop the graphics state</p></li>
+</ul>
+
+<h4 id="youcanuseanyonecharacterasasymbolinreplacementrules.onlyflrgf-haveactionsassociatedwiththem.">You can use any one character as a symbol in replacement rules. Only &#8220;FLRGf+-|[]&#8221; have actions associated with them.</h4>
+
+<h2 id="usage">Usage</h2>
+
+<pre><code class="Python">
+s = lsys.LindenmayerSystem( axiom, rulesdict, initialangle, rightangle, leftangle, steplength, depth)
+
+s.drawlsystem(inset=0)
+
+</code></pre>
