@@ -1,0 +1,101 @@
+<h3 id="imagewells">ImageWells</h3>
+
+<h4 id="whatdoesitdo">What does it do?</h4>
+
+<p>It creates a text database of an image folder definition.</p>
+
+<p>A file &#8220;imagewell.txt&#8221; when run through imagewells.loadImageWell() produces a textfile &#8220;imagewell.tab&#8221;. Once created this file allows very fast access to a collection of images.</p>
+
+<h4 id="scanningyourimageswithimagewells">Scanning your images with ImageWells</h4>
+
+<p>The collage examples in the <code>photobot</code> library make use of the <code>imagewells</code> library and serve as examples for imagewells.</p>
+
+<p>Abbreviated example from the <code>photobot</code> examples &#8220;Example collage 1.py&#8221;</p>
+
+<pre><code class="Python">
+import imagewells
+loadImageWell = imagewells.loadImageWell
+
+
+loadImageWell(  bgsize=(1280,1024),
+                minsize=(256,256),
+                maxfilesize=100*1024*1024,
+                maxpixellength=8192,
+                pathonly=True,
+                additionals=None,
+                ignorelibs=False,
+                imagewellfilename=&quot;imagewell.txt&quot;,
+                tabfilename=True,
+                ignoreDotFolders=True,
+                ignoreFolderNames=None):
+
+</code></pre>
+
+<p>After a script uses <code>loadImageWell()</code> for the first time there should be a file <code>imagewell.txt</code> in the same folder as the script excuting.</p>
+
+<h4 id="thefileimagewell.txtlookslikethis:">The file <code>imagewell.txt</code> looks like this:</h4>
+
+<pre><code>/Library/Desktop Pictures
+C:\Windows\Web
+/usr/share/backgrounds
+/usr/share/wallpapers
+</code></pre>
+
+<p>Each line represents a path for a platform. The file is NL terminated and UTF-8 encoded.</p>
+
+<p>The first line is the &#8220;Desktop Pictures&#8221; folder on macos.</p>
+
+<p>Line 2 is for windows.</p>
+
+<p>Lines 3+4 are for linux.</p>
+
+<p>If a folder does not exist, it will be ignored. The idea is to put your own image folders into that file. The not so obvious idea is to have different imagewell-THEMENAME.txt files to manage different collections of images.</p>
+
+<h4 id="theparametersforloadimagewellareasfollows:">The parameters for loadImageWell are as follows:</h4>
+
+<ul>
+<li><p>bgsize=(w,h) - a tuple marking the size at which a image is designated &#8216;background&#8217;. Usually the canvas size. This is for sorting purposes only.</p></li>
+<li><p>minsize=(w,h) - at least width&gt;=w or height&gt;=h for a image to be considered. If both are smaller, the image is ignored.</p></li>
+<li><p>pathonly=True|False - if False, a tuple with: (path, filesize, lastmodified, mode, islink, w0, h0, proportion, frac) is returned.</p></li>
+<li><p>addtionals=(&#8216;folder&#8217;,) - a list of folders to be added. If this is active, no caching is used.</p></li>
+<li><p>imagewellfilename=&#8220;imagewell.txt&#8221; - the name of the folderlist file to be read.</p></li>
+<li><p>tabfilename=&#8220;imagewell.tab&#8221; - the name of the resulting cache file.</p></li>
+<li><p>ignoreDotFolders=False - ignore folders starting with a &#8216;.&#8217;. This is for MacOS &#8216;.thumbnails&#8217; folders which you usually want to ignore</p></li>
+<li><p>ignoreFolderNames=(&#8216;folder&#8217;,) - a list of folder names. If a scanned folder STARTS with a name from that list, it will be ignored.</p></li>
+</ul>
+
+<h4 id="theresultingdictionarycontainsthefollowingkeys:">The resulting dictionary contains the following keys:</h4>
+
+<ul>
+<li><p>allimages - a list of all images</p></li>
+<li><p>tiles - a list of images with: minsize &lt;= image &lt;= bgsize</p></li>
+<li><p>backgrounds - a list of images considered backgrounds i.e. image &gt; bgsize</p></li>
+<li><p>landscape - a list of images where WIDTH &gt;= HEIGHT</p></li>
+<li><p>portrait - a list of images where WIDTH &lt; HEIGHT</p></li>
+<li><p>fractions - dictionary with all the fractions as keys. A fraction key looks like: &#8216;1024:575&#8217;, &#8216;4:3&#8217; or &#8216;16:9&#8217;.</p></li>
+<li><p>&#8216;WxH largest&#8217;, &#8216;WxH smallest&#8217; and &#8216;WxH median&#8217;: accumulated sizes</p>
+
+<ul>
+<li>&#8216;WxH largest&#8217;: (8003, 5622),</li>
+<li>&#8216;WxH median&#8217;: (1074.9886462882096, 754.4748180494905),</li>
+<li>&#8216;WxH smallest&#8217;: (566, 167),</li>
+</ul></li>
+</ul>
+
+<p>The items of each image list key will depend on the <code>pathonly</code> parameter.</p>
+
+<h3 id="examples">Examples</h3>
+
+<p>See &#8220;../photobot/examples/Example collage *.py&#8221;</p>
+
+<figure>
+<img src="../photobot/demo-images/photobot_2021-06-10_144446.png?raw=True" alt="" />
+</figure>
+
+<figure>
+<img src="../photobot/demo-images/photobot_2021-06-10_144727.png?raw=True" alt="" />
+</figure>
+
+<figure>
+<img src="../photobot/demo-images/photobot_2021-06-10_144808.png?raw=True" alt="" />
+</figure>
