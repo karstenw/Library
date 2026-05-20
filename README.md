@@ -40,7 +40,7 @@ The module ```graphbrowser``` runs mostly.
 
 The module ```grid``` runs.
 
-~~The module ```ìsight``` has been rewritten to use the newer [imagesnap](http://iharder.net/imagesnap) tool which makes it possible to take sequences of images very quickly. ~~
+~The module ```ìsight``` has been rewritten to use the newer [imagesnap](http://iharder.net/imagesnap) tool which makes it possible to take sequences of images very quickly.~
 
 The ```ìsight``` module is about to be removed. It still runs on 10.13 but is Quicktime based and there is currently no substitute.
 
