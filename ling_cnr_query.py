@@ -4,7 +4,13 @@ These ling*.py scripts (ling_cnr_query.py, ling_notwork3-pat.py, lingpat.py,
 lingperception.py, lingtest.py, lingwn.py ) are my test and tryout scripts for the linguistics library.
 """
 
-
+#
+# ling_cnr_query.py LANGCODE WORD
+#
+# Dumps all edges for WORD in LANGCODE
+#
+# ling_cnr_query.py de Haus
+#
 import sys
 import os
 import pprint
@@ -35,13 +41,16 @@ else:
 
 
 for word in args:
-    initialconcepts, resultconcepts, conceptsCache = cnr.query_concept(  word, maxedges=300, lang=lang, weight=0.0 )
+    initialconcepts, resultconcepts, conceptsCache = cnr.query_concept(
+                                            word, maxedges=300, lang=lang, weight=0.0 )
     
     for concept in resultconcepts:
-        print(concept.concept1name, concept.concept1lang,
-              concept.relationname,
-              concept.concept2name, concept.concept2lang,
-              concept.weight )
+        s = "{0:14} {1:20} {2:32} {3:14} {4}".format(
+                concept.concept1name, concept.concept1langname,
+                concept.relationname,
+                concept.concept2name, concept.concept2langname)
+        print( s )
+        # print( concept )
     print("\n\n" + "-"*40 + "\n\n")
 
 
