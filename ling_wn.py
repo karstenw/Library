@@ -29,9 +29,9 @@ adjectives = []
 for word in wn.words(lang="en"):
     if word.pos == 'n':
         nouns.append( word )
-    elif word.pos == 'v':
+    if word.pos == 'v':
         verbs.append( word )
-    elif word.pos == 'a':
+    if word.pos == 'a':
         adjectives.append( word )
 
 s3 = time.time()
@@ -41,30 +41,60 @@ print("verbs: %i" % (len(verbs),) )
 print("adjectives: %i" % (len(adjectives),) )
 
 
+
 wrd = 'bird'
-w = wn.words( wrd )[0]
-senses = wn.senses( wrd )
-synsets = wn.synsets( wrd )
+print("query:", wrd)
+words = wn.words( wrd )
+print("words:", words)
+word = words[0]
+print("word:", word)
 
-w = senses[0]
-synonyms = w.synsets()
-antonyms = w.antonyms()
-lemmasynonyms = [t.lemmas()[0] for t in synonyms]
+senses = word.senses()
+print("senses:", senses)
+
+sense = senses[0]
+print("sense:", sense)
 
 
-# pp(synsets)
-print( wrd )
-print( '\n    synset:', synsets )
-print( '\n    senses:', senses )
-# print( '\nDefinition:', w.definition() )
-if 0:
-    print( '\n  Synonyms:', synonyms )
-    print( '\n Hypernyms:', w.hypernyms() )
-    print( '\n  Hyponyms:', w.hyponyms() )
-    print( '\n  Holonyms:', w.holonyms() )
-    print( '\n  Meronyms:', w.meronyms() )
-    print( '\n   Antonym:', antonyms )
+synsets = word.synsets()
+print("synsets:", synsets)
+
+synset = synsets[0]
+print("synset:", synset)
+
+# pdb.set_trace()
+
+# pp(dir(sense))
+# 'adjposition', 'closure', 'counts', 'examples', 'frames', 'get_related',
+# 'get_related_synsets', 'id', 'lexicalized', 'lexicon', 'metadata', 'relation_map',
+# 'relation_paths', 'relations', 'synset', 'translate', 'word']
+
+# pp(dir(synset))
+# 'closure', 'common_hypernyms', 'definition', 'definitions', 'empty', 'examples',
+# 'get_related', 'holonyms', 'hypernym_paths', 'hypernyms', 'hyponyms', 'id', 'ili',
+# 'lemmas', 'lexfile', 'lexicalized', 'lexicon', 'lowest_common_hypernyms', 'max_depth',
+# 'meronyms', 'metadata', 'min_depth', 'pos', 'relation_map', 'relation_paths',
+# 'relations', 'senses', 'shortest_path', 'translate', 'words']
+
+
+#synonyms = w.synsets()
+#antonyms = w.antonyms()
+#lemmasynonyms = [t.lemmas()[0] for t in synonyms]
+
+if 1:
+    # pp(synsets)
+    print( wrd )
+    print( '\n    synset:', synsets )
+    print( '\n    senses:', senses )
+    # print( '\nDefinition:', w.definition() )
+    if 0:
+        print( '\n  Synonyms:', synonyms )
+        print( '\n Hypernyms:', w.hypernyms() )
+        print( '\n  Hyponyms:', w.hyponyms() )
+        print( '\n  Holonyms:', w.holonyms() )
+        print( '\n  Meronyms:', w.meronyms() )
+        print( '\n   Antonym:', antonyms )
 
 s4 = time.time()
-print("synset demo %.3f" % (s4-s3) )
+print("synset demo %.3f" % (s4-s1) )
 
