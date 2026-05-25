@@ -17,18 +17,12 @@ import linguistics.pattern
 pattern = linguistics.pattern
 
 
-
-
 wn = linguistics.wn
-#import wn
-#wn.config.data_directory = Path( os.path.abspath( './linguistics/wn-data' ) )
 wordnet = wn.Wordnet( lang="en" )
 
 allnouns = set()
 allverbs = set()
 alladjectives = set()
-
-# pdb.set_trace()
 
 missing = set()
 
@@ -53,8 +47,8 @@ if 1:
         directory = os.path.join(directory, "+private" )
     template = "%s\n"
     for p,s in ( ('allnouns.txt', allnouns),
-               ('allverbs.txt', allverbs),
-               ('alladjectives.txt', alladjectives)):
+                 ('allverbs.txt', allverbs),
+                 ('alladjectives.txt', alladjectives) ):
         path = os.path.join( directory, p )
         f = open(path,'w')
         for line in s:
