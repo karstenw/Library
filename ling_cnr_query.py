@@ -45,7 +45,7 @@ for word in args:
                                             word, maxedges=300, lang=lang, weight=0.0 )
     
     for concept in resultconcepts:
-        s = "{0:14} {1:20} {2:32} {3:14} {4}".format(
+        s = "{0:18} {1:20} {2:32} {3:18} {4}".format(
                 concept.concept1name, concept.concept1langname,
                 concept.relationname,
                 concept.concept2name, concept.concept2langname)
