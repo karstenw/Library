@@ -17,22 +17,24 @@ print("import linguistics %.3f" % (s2-s1) )
 import pattern
 import pattern.en
 
-from pattern.en import article, referenced
-from pattern.en import pluralize, singularize
-from pattern.en import comparative, superlative
-from pattern.en import conjugate, lemma, lexeme, tenses
-
-from pattern.en import NOUN, VERB, ADJECTIVE, DEFINITE, INDEFINITE
-from pattern.en import INDICATIVE, IMPERATIVE, CONDITIONAL, SUBJUNCTIVE
-from pattern.en import SINGULAR, PLURAL
-
-from pattern.text import IMPERFECTIVE, PERFECTIVE, PROGRESSIVE
-from pattern.text import INFINITIVE, PRESENT, PAST, FUTURE
-
 import pattern.text
 import pattern.text.en
 en = pattern.text.en
 wordnet = en.wordnet
+
+if 0:
+    from pattern.en import article, referenced
+    from pattern.en import pluralize, singularize
+    from pattern.en import comparative, superlative
+    from pattern.en import conjugate, lemma, lexeme, tenses
+
+    from pattern.en import NOUN, VERB, ADJECTIVE, DEFINITE, INDEFINITE
+    from pattern.en import INDICATIVE, IMPERATIVE, CONDITIONAL, SUBJUNCTIVE
+    from pattern.en import SINGULAR, PLURAL
+
+    from pattern.text import IMPERFECTIVE, PERFECTIVE, PROGRESSIVE
+    from pattern.text import INFINITIVE, PRESENT, PAST, FUTURE
+
 
 
 s3 = time.time()
@@ -67,30 +69,35 @@ print("synset demo %.3f" % (s4-s3) )
 
 print()
 
-print("article:", pattern.text.en.article( theword, function=INDEFINITE ) )
-print("referenced:", pattern.text.en.referenced( theword, article=INDEFINITE ) )
+print("article:", pattern.en.article( theword, function=pattern.en.INDEFINITE ) )
+print("referenced:", pattern.en.referenced( theword, article=pattern.en.INDEFINITE ) )
 
 print()
 
-print("lemma: ", lemma(theverb) )
-print("lexeme: ", lexeme(theverb) )
+print("lemma: ", pattern.en.lemma(theverb) )
+print("lexeme: ", pattern.en.lexeme(theverb) )
 print("tenses: ")
-pp( tenses(theverb) )
+pp( pattern.en.tenses(theverb) )
 
 
 if 0:
     print("conjugate: ", theverb )
-    for tense in (INFINITIVE, PRESENT, PAST, FUTURE):
+    for tense in (pattern.text.INFINITIVE, pattern.text.PRESENT,
+                  pattern.text.PAST, pattern.text.FUTURE):
         for person in (1,2,3,None):
-            for number in (SINGULAR, PLURAL):
-                for mood in (INDICATIVE, IMPERATIVE, CONDITIONAL, SUBJUNCTIVE):
-                    for aspect in (IMPERFECTIVE, PERFECTIVE, PROGRESSIVE):
+            for number in (pattern.en.SINGULAR, pattern.en.PLURAL):
+                for mood in (pattern.en.INDICATIVE, pattern.en.IMPERATIVE,
+                             pattern.en.CONDITIONAL, pattern.en.SUBJUNCTIVE):
+                    for aspect in (pattern.text.IMPERFECTIVE,
+                                   pattern.text.PERFECTIVE,
+                                   pattern.text.PROGRESSIVE):
                         for negated in (True, False):
-                            c = conjugate( theverb, tense, person, number, mood, aspect, negated, True)
+                            c = pattern.en.conjugate( theverb, tense, person,
+                                                      number, mood, aspect, negated, True)
                             print(c)
 
 
-if 0:
+if 1:
     allnouns = set( wordnet.NOUNS())
     misses = {}
     for noun in allnouns:
