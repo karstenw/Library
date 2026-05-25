@@ -363,7 +363,10 @@ def query_cnr(concept, relation=None, context=None, depth=1, maxedges=500, wait=
         # see if FullConcept edges can be used
         if 1:
             # edges are FullConcept namedtuples
-            idedge,concept1id,concept1name,concept1lang,concept1context,relationid,relationname,weight,concept2id,concept2name,concept2lang,concept2context = edge
+            (idedge,
+             concept1id,concept1name,concept1lang,concept1langname,concept1context,
+             relationid,relationname,weight,
+             concept2id,concept2name,concept2lang,concept2langname,concept2context) = edge
         
             # context 
             context = unifyContext( concept1context, concept2context )
