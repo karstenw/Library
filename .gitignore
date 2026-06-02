@@ -3,22 +3,12 @@ __pycache__
 *.pdf
 *.webloc
 .DS_Store
-+private
-*/+private
-+latex
 +shoebot
-+private
-+news
-+OFF
-*/+movies
 */cache
-*/doc
 */build
 */dist
-*/classbrowser*
 
 beziereditor/*.svg
-beziereditor/+latex
 
 coreimage/Missing Filters.tab
 coreimage/citools.py
@@ -33,8 +23,7 @@ cornu/*.svg
 database/*.db
 database/*.xml
 
-fatpath/fatpath-0.6.py
-flowerewolf/+*
+#flowerewolf/+*
 
 imagewell-*.tab
 imagewell-*.txt
@@ -46,7 +35,6 @@ isight/*.jpg
 
 linguistics-data
 linguistics-archives
-ling_notwork3-pat.py
 
 lsys/Examples/Lindenmayer Systems, Fractals, and Plants/*.png
 
@@ -70,22 +58,3 @@ photobot/examples/runall-py3
 photobot/examples/testimage.jpg
 imagewells-config@photobotlib
 
-pixabay
-*/APIKEY
-
-# ignore for now
-svg/Enthought_svg.py
-svg/svg-example3.py
-svg/svg-example4-icons.py
-
-svg/+lib
-
-# imagewells/images
-
-
-en_classic
-linguistics/en_classic
-flowerewolf-classic
-
-zz*
-web
