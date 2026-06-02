@@ -1,0 +1,30 @@
+import linguistics
+from textblob import TextBlob
+
+text = """
+The titular threat of The Blob has always struck me as the ultimate movie
+monster: an insatiably hungry, amoeba-like mass able to penetrate
+virtually any safeguard, capable of--as a doomed doctor chillingly
+describes it--"assimilating flesh on contact.
+Snide comparisons to gelatin be damned, it's a concept with the most
+devastating of potential consequences, not unlike the grey goo scenario
+proposed by technological theorists fearful of
+artificial intelligence run rampant.
+"""
+
+blob = TextBlob(text)
+
+print("\n\nblob.tags:", blob.tags)
+# [('The', 'DT'), ('titular', 'JJ'),
+#  ('threat', 'NN'), ('of', 'IN'), ...]
+
+print("\n\nblob.noun_phrases:", blob.noun_phrases )
+# WordList(['titular threat', 'blob',
+#            'ultimate movie monster',
+#            'amoeba-like mass', ...])
+
+for sentence in blob.sentences:
+    print("\n\nsentence:", sentence )
+    print("\nsentence.sentiment.polarity:", sentence.sentiment.polarity)
+# 0.060
+# -0.341
