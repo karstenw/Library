@@ -17,10 +17,18 @@ import wn
 s2 = time.time()
 print("import linguistics & wn %.3f" % (s2-s1) )
 
+def info(object, spacing=24, collapse=1):
+    """Print methods and doc strings.
 
+    Takes module, class, list, dictionary, or string."""
+    methodList = [e for e in dir(object) if callable(getattr(object, e))]
+    processFunc = collapse and (lambda s: " ".join(s.split())) or (lambda s: s)
+    print( "\n".join(["%s %s" %
+                     (method.ljust(spacing),
+                      processFunc(str(getattr(object, method).__doc__)))
+                     for method in methodList]) )
 
 # pdb.set_trace()
-
 
 
 nouns = []
@@ -40,6 +48,7 @@ print("nouns: %i" % (len(nouns),) )
 print("verbs: %i" % (len(verbs),) )
 print("adjectives: %i" % (len(adjectives),) )
 
+pdb.set_trace()
 
 
 wrd = 'bird'
