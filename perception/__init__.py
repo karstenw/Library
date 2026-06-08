@@ -1170,7 +1170,7 @@ def search_match_parse(
             if len(match) > 0 and len(match[0]) > 0:
                 x = parse(match[0])
                 matches.append(x)
-                if kwlog:
+                if kwlog and 0:
                     pp( result )
             if pattern_ in result.text:
                 matches.append(result.text)
@@ -1226,7 +1226,7 @@ def suggest_properties(noun, cached=True):
     )
     if kwlog:
         print("suggest_properties matches:", matches)
-    matches = filter(lambda word: word not in ("well", "much"), matches)
+    matches = list( filter(lambda word: word not in ("well", "much"), matches) )
     if kwlog:
         print("suggest_properties filtered matches:", matches)
     return count(matches)
