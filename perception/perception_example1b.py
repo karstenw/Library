@@ -39,7 +39,7 @@ def load( theConcept, lang="" ):
     if 1:
         print("load:", concept, len(g) )
 
-load("Mensch", lang)
+load("Haus", lang)
 
 size( 1024, 1024)
 if 1:
