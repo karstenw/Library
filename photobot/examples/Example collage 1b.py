@@ -4,11 +4,12 @@ from __future__ import print_function
 
 import sys, os
 
-import pdb
 import pprint
 pp = pprint.pprint
 kwdbg = 0
 kwlog = 0
+if kwdbg:
+    import pdb
 
 # need a different name for nodebox
 import random as rnd
@@ -16,11 +17,13 @@ import random as rnd
 import libgradient
 import imagewells
 loadImageWell = imagewells.loadImageWell
+imagewells.kwdbg = kwdbg
+imagewells.kwlog = kwlog
 
 if kwdbg and 1:
     # make random choices repeatable for debugging
     rnd.seed( 123456 )
-
+    
 
 # width and height of destination image
 # W, H =  800,  600
@@ -28,9 +31,7 @@ if kwdbg and 1:
 # W, H = 1280,  800
 # W, H = 1440,  900
 W, H = 1920, 1080
-
-if kwdbg:
-    pdb.set_trace()
+# W, H = 2560, 1440
 
 # import photobot lib
 nodebox=True
@@ -58,20 +59,52 @@ if not nodebox:
 
 
 
+###
+### This section should move into imagewells
+###
+
+# I use several distinct image collections
+
+# the defaults
+configname = ""
+pathsfilename = "imagewell.txt"
+storagefilename = "imagewell.tab"
+additionals = []
+
+# add configs or folders
+for item in sys.argv[1:]:
+    # try path
+    path = os.path.abspath( os.path.expanduser( item ) )
+    
+    if os.path.exists( path ):
+        additionals.append( path )
+        continue
+    
+    if item not in ('',):
+        # if given multiple config names only the last survives
+        pathsfilename = "imagewell-" + item + '.txt'
+        storagefilename = "imagewell-" + item + '.tab'
+        configname = item
+
+if kwlog or 1:
+    print("configname:", configname)
+    print("pathsfilename:", pathsfilename)
+    print("storagefilename:", storagefilename)
+
+
+# used in some examples
 RATIO = WIDTH / HEIGHT
 
-# load the image library
-# check for command line folders
-additionals = sys.argv[1:]
 
 # get all images from user image wells
 imagewell = loadImageWell(   bgsize=(WIDTH, HEIGHT),
                              minsize=(256,256),
                              pathonly=True,
                              additionals=additionals,
-                             imagewellfilename="imagewell.txt",
-                             tabfilename="imagewell.tab",
-                             ignoreFolderNames=('+offline',))
+                             imagewellfilename=pathsfilename,
+                             tabfilename=storagefilename,
+                             ignoreDotFolders=False,
+                             ignoreFolderNames=('+offline', '+OFFLINE'))
 
 # tiles are images >256x256 and <=WIDTH, HEIGHT
 tiles = imagewell['tiles']
@@ -79,13 +112,14 @@ tiles = imagewell['tiles']
 # backgrounds are images >W,H
 backgrounds = imagewell['backgrounds']
 
+
 print( "tiles: %i" % len(tiles) )
 print( "backgrounds: %i" % len(backgrounds) )
 
 
 # create the canvas
 c = pb.canvas( WIDTH, HEIGHT)
-c.fill( (85,85,85) )
+c.fill( (127,127,127) )
 
 
 if not kwdbg:
@@ -126,11 +160,11 @@ for j in range(rows):
     colw = 0
     for i in range(columns):
         # new layer with a random image
-        p = tiles.pop()
+        path = tiles.pop()
         tilecounter += 1
-        if kwdbg or 1:
-            print( "%i  -- %s" % (tilecounter, p) )
-        c.layer( p )
+        if kwlog or 1:
+            pb.py23print( u"%i - %s" % (tilecounter, path)  )
+        c.layer( path )
 
         # get current image bounds
         w, h = c.top.bounds()
@@ -147,7 +181,7 @@ for j in range(rows):
 
         # get the new image bounds
         w, h = c.top.bounds()
-        halfwidth = int( w / 2.0 )
+        halfwidth = int( round(w / 2.0 ) )
 
         r = rnd.random()
         # r = 0.65
@@ -222,10 +256,6 @@ if paintoverlay:
         if kwdbg or 1:
             print( "paint overlay end")
 
-c.draw(0,0)
-
-
-
 if 1:
     # orange hue mask finish
     top = c.fill((200,100,0))
@@ -242,3 +272,10 @@ if paintoverlay:
     c.top.scale(s, s)
     # c.top.opacity(60)
     c.top.overlay()
+
+name = ""
+if configname:
+    name = "photobot_" + pb.datestring() + "-" + configname
+c.draw(0,0, name=name)
+
+

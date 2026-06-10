@@ -4,11 +4,12 @@ from __future__ import print_function
 
 import sys, os
 
-import pdb
 import pprint
 pp = pprint.pprint
 kwdbg = 0
 kwlog = 0
+if kwdbg:
+    import pdb
 
 # need a different name for nodebox
 import random as rnd
@@ -16,11 +17,13 @@ import random as rnd
 import libgradient
 import imagewells
 loadImageWell = imagewells.loadImageWell
+imagewells.kwdbg = kwdbg
+imagewells.kwlog = kwlog
 
 if kwdbg and 1:
     # make random choices repeatable for debugging
     rnd.seed( 123456 )
-
+    
 
 # width and height of destination image
 # W, H =  800,  600
@@ -28,9 +31,7 @@ if kwdbg and 1:
 # W, H = 1280,  800
 # W, H = 1440,  900
 W, H = 1920, 1080
-
-if kwdbg:
-    pdb.set_trace()
+# W, H = 2560, 1440
 
 # import photobot lib
 nodebox=True
@@ -58,20 +59,52 @@ if not nodebox:
 
 
 
+###
+### This section should move into imagewells
+###
+
+# I use several distinct image collections
+
+# the defaults
+configname = ""
+pathsfilename = "imagewell.txt"
+storagefilename = "imagewell.tab"
+additionals = []
+
+# add configs or folders
+for item in sys.argv[1:]:
+    # try path
+    path = os.path.abspath( os.path.expanduser( item ) )
+    
+    if os.path.exists( path ):
+        additionals.append( path )
+        continue
+    
+    if item not in ('',):
+        # if given multiple config names only the last survives
+        pathsfilename = "imagewell-" + item + '.txt'
+        storagefilename = "imagewell-" + item + '.tab'
+        configname = item
+
+if kwlog or 1:
+    print("configname:", configname)
+    print("pathsfilename:", pathsfilename)
+    print("storagefilename:", storagefilename)
+
+
+# used in some examples
 RATIO = WIDTH / HEIGHT
 
-# load the image library
-# check for command line folders
-additionals = sys.argv[1:]
 
 # get all images from user image wells
 imagewell = loadImageWell(   bgsize=(WIDTH, HEIGHT),
                              minsize=(256,256),
                              pathonly=True,
                              additionals=additionals,
-                             imagewellfilename="imagewell.txt",
-                             tabfilename="imagewell.tab",
-                             ignoreFolderNames=('+offline',))
+                             imagewellfilename=pathsfilename,
+                             tabfilename=storagefilename,
+                             ignoreDotFolders=False,
+                             ignoreFolderNames=('+offline', '+OFFLINE'))
 
 # tiles are images >256x256 and <=WIDTH, HEIGHT
 tiles = imagewell['tiles']
@@ -79,13 +112,14 @@ tiles = imagewell['tiles']
 # backgrounds are images >W,H
 backgrounds = imagewell['backgrounds']
 
+
 print( "tiles: %i" % len(tiles) )
 print( "backgrounds: %i" % len(backgrounds) )
 
 
 # create the canvas
 c = pb.canvas( WIDTH, HEIGHT)
-c.fill( (85,85,85) )
+c.fill( (127,127,127) )
 
 
 if not kwdbg:
@@ -105,21 +139,6 @@ if len(backgrounds) > 0:
     pb.py23print(bgimage)
 
 
-def grid(cols, rows, colSize=1, rowSize=1, shuffled=False):
-    """Returns an iterator that contains coordinate tuples.
-    Taken from nodebox.utils
-    """
-    rowRange = list(range(int(rows)))
-    colRange = list(range(int(cols)))
-    # Shuffled needs a real list, though.
-    if (shuffled):
-        rnd.shuffle(rowRange)
-        rnd.shuffle(colRange)
-    for y in rowRange:
-        for x in colRange:
-            yield (x*colSize,y*rowSize)
-
-
 # CONFIGURATION
 columns = 5
 rows = 3
@@ -134,7 +153,7 @@ ygutter = rowheight * 0.0667
 realwidth = colwidth - 1*xgutter
 realheight = rowheight - 1*ygutter 
 
-positions = list(grid(columns, rows, colwidth, rowheight))
+positions = list(pb.grid(columns, rows, colwidth, rowheight))
 
 randomblur = not kwdbg
 paintoverlay = not kwdbg
@@ -147,14 +166,17 @@ paintoverlay = not kwdbg
 #  create, scale and place the image
 x, y = 0, 0
 
-
+tilecounter = 0
 for position in positions:
     x, y = position
 
     # create image in canvas at 0,0
-    p = tiles.pop()
-    print( p )
-    top, w, h = pb.placeImage(c, p, 0, 0, maxsize=None, name="Image %i,%i" % (x,y))
+    nextpictpath = tiles.pop()
+    tilecounter += 1
+    if kwlog or 1:
+        pb.py23print( u"%i - %s" % (tilecounter, nextpictpath)  )
+
+    top, w, h = pb.placeImage(c, nextpictpath, 0, 0, maxsize=None, name="Image %i,%i" % (x,y))
 
     # scale the layer to row height
     pb.scaleLayerToHeight( c.top, rowheight )
