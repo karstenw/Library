@@ -63,10 +63,10 @@ pb.label(c, fname, x, y)
 #
 x, y = 10, 10 + h1 + 10
 top, w2, h2 = pb.placeImage(c, img1path, x, y, fullwidth, fname)
-c.layers[top].rank( 3, 6 )
+c.layers[top].rank( 5, 16 )
 # 0 for a min filter, size * size / 2 for a median filter, size * size - 1
 
-pb.label(c, "%s rank( 3, 6 )" % fname, x, y)
+pb.label(c, "%s rank( 5, 16 )" % fname, x, y)
 
 
 # draw the result
