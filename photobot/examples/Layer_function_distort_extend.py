@@ -7,7 +7,7 @@ import pprint
 pp = pprint.pprint
 
 import pdb
-kwdbg = 1
+kwdbg = 0
 
 W, H = 542, 1050
 fullwidth = int(W-20)
@@ -80,7 +80,7 @@ top, w4, h4 = pb.placeImage(c, img2path, x, y, fullwidth, "Image 2", 1)
 class Example:
     def getdata(self):
         method = PIL.Image.Transform.EXTENT
-        data = (-50, -50, 650, 650)
+        data = (-50, -50, 550, 550)
         return method, data
 
 # x1=0,y1=0, x2=w,y2=0, x3=w,y3=h, x4=0,y4=h
