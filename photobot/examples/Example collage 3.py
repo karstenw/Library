@@ -196,7 +196,7 @@ for position in positions:
         #print "20% LINEAR"
         # create gradient layer
         # top is now gradient index
-        c.gradient(pb.LINEAR, int(w/2), h)
+        c.gradient(pb.LINEAR, int(round(w/2.0)), h)
         c.top.flip( pb.HORIZONTAL )
 
         # translate half a pict right
@@ -204,7 +204,7 @@ for position in positions:
 
         # create gradient layer
         # top is now second gradient image
-        topidx = c.gradient(pb.LINEAR, int(w/2), h)
+        topidx = c.gradient(pb.LINEAR, int(round(w/2.0)), h)
 
         # merge both gradients; destroys top layer
         c.merge([ topidx-1 , topidx ])
@@ -237,11 +237,13 @@ for position in positions:
     # c.top.translate(destx, desty)
     c.top.translate(x, y)
 
+    doflip = randomblur
+    if doflip:
+        if "/comic/" not in nextpictpath:
+            if rnd.random() > 0.75:
+                #print "FLIP"
+                c.top.flip()
     if randomblur:
-        if rnd.random() > 0.75:
-            #print "FLIP"
-            c.top.flip()
-
         if rnd.random() > 0.75:
             #print "BLUR"
             c.top.blur()
@@ -265,4 +267,9 @@ if paintoverlay:
     c.top.opacity(50)
     c.top.overlay()
 
-c.draw(0, 0)
+name = ""
+if configname:
+    name = "photobot_" + pb.datestring() + "-" + configname
+c.draw(0,0, name=name)
+
+

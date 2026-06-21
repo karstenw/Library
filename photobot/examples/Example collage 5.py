@@ -196,7 +196,7 @@ for position in positions:
 
     # get the new image bounds
     w, h = c.top.bounds()
-    halfwidth = int( w / 2.0 )
+    halfwidth = int(round(w/2.0))
 
     
     # add contrast
@@ -228,19 +228,25 @@ for position in positions:
     c.top.opacity( 50 + rnd.random() * 50 )
 
 
-    if randomblur:
-        if rnd.random() > 0.75:
-            c.top.flip()
+    doflip = randomblur
+    if doflip:
+        # do not flip if using comic tiles
+        if "/comic/" not in nextpictpath:
+            if rnd.random() > 0.75:
+                c.top.flip()
 
+    if randomblur:
         if rnd.random() > 0.75:
             c.top.blur()
 
     if rnd.random() > 0.9:
-        print("BLEND SCREEN")
+        if kwdbg:
+            print("BLEND SCREEN")
         c.top.screen()
 
     if rnd.random() > 0.9:
-        print("BLEND COLOR")
+        if kwdbg:
+            print("BLEND COLOR")
         c.top.color()
 
 if gilb:
@@ -274,6 +280,8 @@ if paintoverlay:
         if kwdbg or 1:
             print( "paint overlay end")
 
-c.draw(0,0)
-
+name = ""
+if configname:
+    name = "photobot_" + pb.datestring() + "-" + configname
+c.draw(0,0, name=name)
 

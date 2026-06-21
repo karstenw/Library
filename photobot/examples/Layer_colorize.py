@@ -28,27 +28,13 @@ else:
     WIDTH, HEIGHT = W, H
     import photobot as pb
 
-import libgradient
 import imagewells
-loadImageWell = imagewells.loadImageWell
-
-
 
 if kwdbg:
     # make random choices repeatable for debugging
     rnd.seed(8)
 
-# imagewell = imagewells.loadImageWell(resultfile="imagewell-files")
-imagewell = loadImageWell(   bgsize=(WIDTH, HEIGHT),
-                             minsize=(256,256),
-                             pathonly=True,
-                             # additionals=additionals,
-                             imagewellfilename="imagewell.txt",
-                             tabfilename="imagewell.tab",
-                             ignoreFolderNames=('+offline',))
-
-
-
+imagewell = imagewells.loadImageWell(tabfilename=True)
 tiles = imagewell['landscape']
 rnd.shuffle(tiles)
 
@@ -65,7 +51,7 @@ c.fill( (192, 192, 192) )
 # Image 1
 #
 
-print( img1path )
+pb.py23print( img1path)
 #  create, scale and place the image
 x, y = 10, 10
 top, w1, h1 = pb.placeImage(c, img1path, x, y, fullwidth, "Image 1")

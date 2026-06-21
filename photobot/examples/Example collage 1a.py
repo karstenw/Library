@@ -161,11 +161,11 @@ for j in range(rows):
     for i in range(columns):
 
         # new layer with a random image
-        path = tiles.pop()
+        nextpictpath = tiles.pop()
         tilecounter += 1
         if kwlog or 1:
-            pb.py23print( u"%i - %s" % (tilecounter, path)  )
-        top = c.layer( path )
+            pb.py23print( u"%i - %s" % (tilecounter, nextpictpath)  )
+        top = c.layer( nextpictpath )
 
         # get current image bounds
         w, h = c.top.bounds()
