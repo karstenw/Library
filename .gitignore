@@ -10,6 +10,8 @@ __pycache__
 
 beziereditor/*.svg
 
+colors/+dev
+
 coreimage/Missing Filters.tab
 coreimage/citools.py
 coreimage/coreimage-example5a.py
@@ -43,6 +45,7 @@ noise/texture.jpg
 perception/cache
 perception/index
 
+photobot/examples/+OFF/
 photobot/examples/Example collage 6.py
 photobot/examples/Example collage 7.py
 photobot/examples/exports/
