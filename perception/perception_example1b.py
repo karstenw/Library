@@ -9,6 +9,8 @@ languageCodes.sort()
 languageCodes.insert(0, "")
 lang=""
 
+initialNoun = "Haus"
+
 def handler( value, name ):
     global lang, concept
     if name == 'concept':
@@ -17,7 +19,7 @@ def handler( value, name ):
         lang = language
     load( concept, lang )
     
-var("concept", TEXT, "Mensch", handler=handler)
+var("concept", TEXT, initialNoun, handler=handler)
 var("language", MENU, default=handler, value=languageCodes)
 
 
@@ -39,7 +41,7 @@ def load( theConcept, lang="" ):
     if 1:
         print("load:", concept, len(g) )
 
-load("Haus", lang)
+load(initialNoun, lang)
 
 size( 1024, 1024)
 if 1:
