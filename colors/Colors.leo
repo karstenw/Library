@@ -133,7 +133,7 @@
 </v>
 <v t="karstenw.20210712120542.101"><vh>colorlist</vh></v>
 </v>
-<v t="karstenw.20210712121126.1" a="E"><vh>COLOR HARMONY</vh>
+<v t="karstenw.20210712121126.1"><vh>COLOR HARMONY</vh>
 <v t="karstenw.20210712120542.102"><vh>complement</vh></v>
 <v t="karstenw.20210712120542.103"><vh>complementary</vh></v>
 <v t="karstenw.20210712120542.104"><vh>split_complementary</vh></v>
@@ -164,8 +164,8 @@
 <v t="karstenw.20210712120542.124"><vh>__getattr__</vh></v>
 </v>
 </v>
-<v t="karstenw.20210712121331.1" a="E"><vh>COLOR RANGE</vh>
-<v t="karstenw.20210712120542.125" a="E"><vh>class ColorRange</vh>
+<v t="karstenw.20210712121331.1"><vh>COLOR RANGE</vh>
+<v t="karstenw.20210712120542.125"><vh>class ColorRange</vh>
 <v t="karstenw.20210712120542.126"><vh>__init__</vh></v>
 <v t="karstenw.20210712120542.127"><vh>constrain_hue</vh></v>
 <v t="karstenw.20210712120542.128"><vh>constrain_saturation</vh></v>
@@ -188,19 +188,19 @@
 </v>
 <v t="karstenw.20210712120542.145"><vh>colorrange</vh></v>
 </v>
-<v t="karstenw.20210712121349.1" a="E"><vh>COLOR SHADES</vh>
+<v t="karstenw.20210712121349.1"><vh>COLOR SHADES</vh>
 <v t="karstenw.20210712121356.1"><vh>shades</vh></v>
 <v t="karstenw.20210712120542.147"><vh>shade_opposite</vh></v>
 <v t="karstenw.20210712120542.148"><vh>guess_name</vh></v>
 </v>
-<v t="karstenw.20210712121445.1" a="E"><vh>COLOR SHADER</vh>
+<v t="karstenw.20210712121445.1"><vh>COLOR SHADER</vh>
 <v t="karstenw.20210712120542.149"><vh>shader</vh></v>
 </v>
-<v t="karstenw.20210712121503.1" a="E"><vh>COLOR AGGREGATE</vh>
+<v t="karstenw.20210712121503.1"><vh>COLOR AGGREGATE</vh>
 <v t="karstenw.20210712121514.1"><vh>Cache locations</vh></v>
 <v t="karstenw.20210712120542.150"><vh>aggregated</vh></v>
 <v t="karstenw.20210712120542.151"><vh>class ColorThemeNotFound</vh></v>
-<v t="karstenw.20210712120542.152" a="E"><vh>class ColorTheme</vh>
+<v t="karstenw.20210712120542.152"><vh>class ColorTheme</vh>
 <v t="karstenw.20210712120542.153"><vh>__init__</vh></v>
 <v t="karstenw.20210712120542.154"><vh>add_range</vh></v>
 <v t="karstenw.20210712120542.155"><vh>copy</vh></v>
@@ -227,7 +227,7 @@
 </v>
 <v t="karstenw.20210712120542.176"><vh>theme</vh></v>
 </v>
-<v t="karstenw.20210712121541.1"><vh>COLORS FROM WEB</vh>
+<v t="karstenw.20210712121541.1" a="E"><vh>COLORS FROM WEB</vh>
 <v t="karstenw.20210712120542.177"><vh>search_engine</vh></v>
 <v t="karstenw.20210712120543.1"><vh>google</vh></v>
 <v t="karstenw.20210712120543.2"><vh>yahoo</vh></v>
@@ -296,6 +296,10 @@ except:
     pass
 
 
+import linguistics
+import pattern
+import pattern.search # import search
+import pattern.web
 </t>
 <t tx="karstenw.20210712120542.10">def hsv_to_rgb(h, s, v):
     
@@ -1980,21 +1984,38 @@ aggregate = theme
     
     # pdb.set_trace()
     
-    if service == "google":
-        from web import google
-        search_engine = google
-    if service == "yahoo":
-        from web import yahoo
-        search_engine = yahoo
-        if license: 
-            yahoo.license_key = license
+    Google = pattern.web.Google
+    Yahoo = pattern.web.Yahoo
+    Bing = pattern.web.Bing
+    asynchronous =  pattern.web.asynchronous
+    plaintext = pattern.web.plaintext
+    
+    if 0:
+        if service == "google":
+            from web import google
+            search_engine = google
+        if service == "yahoo":
+            from web import yahoo
+            search_engine = yahoo
+            if license: 
+                yahoo.license_key = license
+    else:
+        if service == "google":
+            engine = Google(license=None, language="en")
+        
+        elif service == "yahoo" :
+            engine = Yahoo(license=None, language="en")
 
     # Sort all the primary hues (plus black and white) for q.
-    sorted_colors = search_engine.sort(
-        [h for h in primary_hues]+["black", "white"], 
-        context=query, strict=True, cached=True
-    )
-
+    collect = []
+    for result in engine.search(query, start=i, count=10): #, type=SEARCH, cached=True):
+        collect.append( result )
+    
+    if 0:
+        sorted_colors = search_engine.sort(
+            [h for h in primary_hues]+["black", "white"], 
+            context=query, strict=True, cached=True )
+    
     # Sort all the shades (bright, hard, ...) for q.
     sorted_shades = search_engine.sort(
         [str(s) for s in shades], 

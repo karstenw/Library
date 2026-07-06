@@ -73,6 +73,10 @@ except:
     pass
 
 
+import linguistics
+import pattern
+import pattern.search # import search
+import pattern.web
 # py3 stuff
 py3 = False
 try:
@@ -3185,21 +3189,38 @@ def search_engine(query, top=5, service="google", license=None,
     
     # pdb.set_trace()
     
-    if service == "google":
-        from web import google
-        search_engine = google
-    if service == "yahoo":
-        from web import yahoo
-        search_engine = yahoo
-        if license: 
-            yahoo.license_key = license
+    Google = pattern.web.Google
+    Yahoo = pattern.web.Yahoo
+    Bing = pattern.web.Bing
+    asynchronous =  pattern.web.asynchronous
+    plaintext = pattern.web.plaintext
+    
+    if 0:
+        if service == "google":
+            from web import google
+            search_engine = google
+        if service == "yahoo":
+            from web import yahoo
+            search_engine = yahoo
+            if license: 
+                yahoo.license_key = license
+    else:
+        if service == "google":
+            engine = Google(license=None, language="en")
+        
+        elif service == "yahoo" :
+            engine = Yahoo(license=None, language="en")
 
     # Sort all the primary hues (plus black and white) for q.
-    sorted_colors = search_engine.sort(
-        [h for h in primary_hues]+["black", "white"], 
-        context=query, strict=True, cached=True
-    )
-
+    collect = []
+    for result in engine.search(query, start=i, count=10): #, type=SEARCH, cached=True):
+        collect.append( result )
+    
+    if 0:
+        sorted_colors = search_engine.sort(
+            [h for h in primary_hues]+["black", "white"], 
+            context=query, strict=True, cached=True )
+    
     # Sort all the shades (bright, hard, ...) for q.
     sorted_shades = search_engine.sort(
         [str(s) for s in shades], 
