@@ -16,7 +16,8 @@ colors = ximport("colors")
 # pattern = ximport("pattern")
 
 import linguistics
-FlowerWord = linguistics.FlowerWord.FlowerWord
+import FlowerWord
+FlowerWord = FlowerWord.FlowerWord
 
 import pattern
 import pattern.en
