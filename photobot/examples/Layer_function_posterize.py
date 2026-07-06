@@ -47,55 +47,6 @@ img2path = tiles.pop()
 c = pb.canvas( WIDTH, HEIGHT)
 c.fill( (192, 192, 192) )
 
-import sys, os
-
-# need a different name
-import random as rnd
-
-import pprint
-pp = pprint.pprint
-
-import pdb
-kwdbg = 0
-
-W, H = 542, 1050
-fullwidth = int(W-20)
-tilewidth = int((fullwidth-10) / 2.0)
-
-
-# check for Nodebox
-NB = True
-try:
-    _ctx
-except(NameError):
-    NB = False
-
-if NB:
-    size(W, H)
-    pb = ximport("photobot")
-else:
-    WIDTH, HEIGHT = W, H
-    import photobot as pb
-
-import imagewells
-
-if kwdbg:
-    # make random choices repeatable for debugging
-    rnd.seed(8)
-
-imagewell = imagewells.loadImageWell(tabfilename=True)
-tiles = imagewell['landscape']
-rnd.shuffle(tiles)
-
-
-# pick 2 images
-img1path = tiles.pop()
-img2path = tiles.pop()
-
-# create a gray canvas
-c = pb.canvas( WIDTH, HEIGHT)
-c.fill( (192, 192, 192) )
-
 #
 # Image 1
 #
