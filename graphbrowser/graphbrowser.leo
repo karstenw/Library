@@ -170,7 +170,8 @@ graphbrowser = ximport("graphbrowser")
 #reload(graphbrowser)
 
 import linguistics
-FlowerWord = linguistics.FlowerWord.FlowerWord
+import FlowerWord
+FlowerWord = FlowerWord.FlowerWord
 
 import pattern
 import pattern.text
@@ -709,7 +710,7 @@ from data import data
     
     lexicons = [ data['colors'], data['metaphors'] ]
     clb = ContextualLinkBrowser( lexicons )
-    if 1:
+    if 0:
         query = choice( list(clb.nodes.keys()) )
         clb.view( query )
     else:
@@ -1096,7 +1097,8 @@ __license__   = "Research purposes only"
 import pdb
 
 import linguistics
-FlowerWord = linguistics.FlowerWord.FlowerWord
+import FlowerWord
+FlowerWord = FlowerWord.FlowerWord
 
 
 </t>

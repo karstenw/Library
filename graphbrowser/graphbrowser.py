@@ -20,7 +20,8 @@ __license__   = "Research purposes only"
 import pdb
 
 import linguistics
-FlowerWord = linguistics.FlowerWord.FlowerWord
+import FlowerWord
+FlowerWord = FlowerWord.FlowerWord
 
 
 ### GRAPHBROWSER ###############################################################################

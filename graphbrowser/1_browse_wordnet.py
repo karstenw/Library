@@ -13,7 +13,7 @@ graphbrowser = ximport("graphbrowser")
 #reload(graphbrowser)
 
 import linguistics
-FlowerWord = linguistics.FlowerWord.FlowerWord
+FlowerWord = graphbrowser.FlowerWord
 
 import pattern
 import pattern.text
