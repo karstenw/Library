@@ -10,9 +10,9 @@ import pprint
 pp = pprint.pprint
 
 import linguistics
-FlowerWord = linguistics.FlowerWord.FlowerWord
-
 import pattern
+from FlowerWord import FlowerWord
+
 
 
 query = "plane"
