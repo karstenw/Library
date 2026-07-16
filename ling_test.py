@@ -13,11 +13,13 @@ import pdb
 from pathlib import Path
 
 import linguistics
-import linguistics.pattern
-pattern = linguistics.pattern
+import linguistics
+import pattern
+#pattern = linguistics.pattern
 
+import wn
 
-wn = linguistics.wn
+# wn = linguistics.wn
 wordnet = wn.Wordnet( lang="en" )
 
 allnouns = set()
