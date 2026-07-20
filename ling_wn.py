@@ -48,7 +48,7 @@ print("nouns: %i" % (len(nouns),) )
 print("verbs: %i" % (len(verbs),) )
 print("adjectives: %i" % (len(adjectives),) )
 
-pdb.set_trace()
+# pdb.set_trace()
 
 
 wrd = 'bird'
