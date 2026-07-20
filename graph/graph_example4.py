@@ -18,8 +18,8 @@ except ImportError:
 from random import shuffle
 
 import linguistics
-import linguistics.FlowerWord
-FlowerWord = linguistics.FlowerWord.FlowerWord
+import FlowerWord
+FlowerWord = FlowerWord.FlowerWord
 
 # from linguistics import FlowerWord
 
@@ -469,7 +469,7 @@ query = choice( allnouns )
 goodies = ("inconvenience", "biology", "cyberpunk", "frankfurt", "computer",
            "monastery", "africa", "rhetoric")
 
-# query = choice( goodies )
+query = choice( goodies )
 # query = "biology"
 
 g = wordnetgraph(distance=1.2)
