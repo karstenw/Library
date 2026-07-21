@@ -245,7 +245,7 @@ class Database:
             
         data += "</database>"
         
-        f = open(self._name+".xml", "w")
+        f = open(self._name+".xml", "w", encoding="utf-8")
         f.write(data)        
         f.close()
         

@@ -40,7 +40,7 @@ class MorgueFileImage:
         
         data = urlopen(url).read()
         path = os.path.join(path, self.author + "_" + self.name)
-        f = open(path, "w")
+        f = open(path, "w", encoding="utf-8")
         f.write(data)
         f.close()
     

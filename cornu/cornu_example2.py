@@ -77,6 +77,6 @@ def export_svg():
     svg += '<path d="'+d+'" fill="none" stroke="rgb(0,0,0)" />\n'
     svg += '</g>\n'
     svg += '</svg>\n'
-    f = open("cornu_example2.svg", "w")
+    f = open("cornu_example2.svg", "w", encoding="utf-8")
     f.write(svg)
     f.close()

@@ -459,7 +459,7 @@ context = {}
 path = os.path.join(os.path.dirname(__file__), "context", "*.txt")
 for f in glob(path):
     name = os.path.basename(f)[:-4]
-    tags = open(f).read()
+    tags = open(f, encoding="utf-8").read()
     tags = [tag.strip() for tag in tags.split(",")]
     tags.sort()
     context[name] = tags
@@ -2920,7 +2920,7 @@ class ColorTheme(_list):
             os.makedirs(self.cache)
         
         path = os.path.join(self.cache, self.name+".xml")
-        f = open(path, "w")
+        f = open(path, "w", encoding="utf-8")
         f.write(self.xml)
         f.close()
 
@@ -2937,7 +2937,7 @@ class ColorTheme(_list):
         
         if archive is None:
             path = os.path.join(self.cache, self.name+".xml")
-            xml = open(path).read()
+            xml = open(path, encoding="utf-8").read()
         else:
             assert member is not None
             xml = archive.read(member)

@@ -930,7 +930,7 @@ class BezierPathEditor:
         s += '</g>\n'
         s += '</svg>\n'
         
-        f = open(self.file+".svg", "w")
+        f = open(self.file+".svg", "w", encoding="utf-8")
         f.write(s)
         f.close()
 

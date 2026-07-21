@@ -4,7 +4,7 @@ svg = ximport("svg")
 
 allpaths = []
 for name in ("path.svg", "char.svg"):
-    with open(name, 'r') as f:
+    with open(name, 'r', encoding="utf-8") as f:
         t = f.read()
         s = svg.parse(t)
         allpaths.append( s )
