@@ -72,7 +72,7 @@ The module ```wordnet``` has been removed. Use linguistics.pattern.text.wordnet;
 
 ## Things that do not work ##
 
-1. ```quicktime``` has been removed.
+1. ```quicktime``` has been removed. Nodebox can export MP4 videos if ffmpeg is present.
 
 1. ```boostgraph```: Missing source files for shared libs.
 
