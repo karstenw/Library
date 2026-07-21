@@ -185,13 +185,13 @@ def _path(key, ext='.json'):
 
 def cache(key, value, ext='.json'):
     if ext=='.json':
-        return open(_path(key,ext), "w").write(value)
+        return open(_path(key,ext), "w", encoding="utf-8").write(value)
     return open(_path(key,ext), "wb").write(value)
 
 
 def cached(key, ext='.json'):
     if ext == '.json':
-        return open(_path(key, ext=ext)).read()
+        return open(_path(key, ext=ext), encoding="utf-8").read()
     return open(_path(key, ext=ext), 'rb').read()
 
 def in_cache(key, ext=".json"):

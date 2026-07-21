@@ -25,7 +25,7 @@ def loaddatafolders():
         if os.path.exists( outpath ):
             continue
         
-        out = open(outpath, 'w')
+        out = open(outpath, 'w', encoding="utf-8")
         
         paths = glob.glob( directory + "/*.txt" )
         

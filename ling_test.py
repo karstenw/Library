@@ -52,9 +52,15 @@ if 1:
                  ('allverbs.txt', allverbs),
                  ('alladjectives.txt', alladjectives) ):
         path = os.path.join( directory, p )
-        f = open(path,'w')
+        f = open(path,'w', encoding="utf-8")
         for line in s:
-            f.write( template % line )
+            try:
+                f.write( template % line )
+            except Exception as err:
+                print(err)
+                print(line)
+                pp(dir(f))
+                print()
         f.close()
 
     print("allnouns:", len(allnouns) )
