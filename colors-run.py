@@ -4,7 +4,7 @@ pp=pprint.pprint
 
 import colors
 
-pdb.set_trace()
+# pdb.set_trace()
 
 # Our own theme of ancient colors:
 t = colors.theme( "babylonia" )
