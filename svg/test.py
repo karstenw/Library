@@ -14,7 +14,7 @@ RED = Color(1, 0, 0)
 class SVGTest(unittest.TestCase):
 
     def test_import(self):
-        paths = svg.parse(open('blocktest.svg').read())
+        paths = svg.parse(open('blocktest.svg', encoding="utf-8").read())
         # Blocktest contains 9 paths:
         # first row: 0: black fill | 1: black stroke | 2: black thick stroke
         # second row: 3: white fill | 4: white stroke | 5: white thick stroke
