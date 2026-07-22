@@ -54,13 +54,7 @@ if 1:
         path = os.path.join( directory, p )
         f = open(path,'w', encoding="utf-8")
         for line in s:
-            try:
-                f.write( template % line )
-            except Exception as err:
-                print(err)
-                print(line)
-                pp(dir(f))
-                print()
+            f.write( template % line )
         f.close()
 
     print("allnouns:", len(allnouns) )
