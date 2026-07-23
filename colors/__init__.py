@@ -117,13 +117,14 @@ _list = [].__class__
 # http://aspn.activestate.com/ASPN/Cookbook/Python/Recipe/66472
 # Edvard Majakari
 
-def _range(start, stop=None, step=1):
-    if stop is None:
-        stop, start = start, 0
-    cur = start
-    while cur < stop:
-        yield cur
-        cur += step
+_range = range
+#def _range(start, stop=None, step=1):
+#    if stop is None:
+#        stop, start = start, 0
+#    cur = start
+#    while cur < stop:
+#        yield cur
+#        cur += step
 
 #### COLOR SPACES ##################################################################
 
@@ -3213,20 +3214,39 @@ def search_engine(query, top=5, service="google", license=None,
 
     # Sort all the primary hues (plus black and white) for q.
     collect = []
-    for result in engine.search(query, start=i, count=10): #, type=SEARCH, cached=True):
-        collect.append( result )
+    for i in _range(1,2):
+        for result in engine.search(query, start=i, count=10): #, type=SEARCH, cached=True):
+            collect.append( result )
+    
+    # pdb.set_trace()
+    # TODO: web.google.sort needs to be copied
     
     if 0:
         sorted_colors = search_engine.sort(
             [h for h in primary_hues]+["black", "white"], 
             context=query, strict=True, cached=True )
+    else:
+        sorted_colors = [h for h in primary_hues]+["black", "white"]
+        # pdb.set_trace()
+        sorted_colors.sort()
+        ncolors = len(sorted_colors)
+        sorted_colors = [ (name, 1.0/ncolors) for name in sorted_colors]
     
     # Sort all the shades (bright, hard, ...) for q.
-    sorted_shades = search_engine.sort(
-        [str(s) for s in shades], 
-        context= query, strict=True, cached=True
-    )
-
+    if 0:
+        sorted_shades = search_engine.sort(
+            [str(s) for s in shades], 
+            context= query, strict=True, cached=True
+        )
+    else:
+        # 
+        sorted_shades = shades[:]
+        # pdb.set_trace()
+        sorted_shades.sort()
+        nshades = len(sorted_shades)
+        sorted_shades = [ (name, 1.0/nshades) for name in sorted_shades]
+    
+    
     # Reforms '"black death"' to 'black'.
     f = lambda x: x.strip("\"").split()[0]
 
