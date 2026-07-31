@@ -10,11 +10,12 @@
 <find_panel_settings/>
 <vnodes>
 <v t="karstenw.20230316191437.2" a="E"><vh>perception</vh>
-<v t="karstenw.20230316191501.1"><vh>@clean __init__.py</vh>
+<v t="karstenw.20230316191501.1" a="E"><vh>@clean __init__.py</vh>
 <v t="karstenw.20230316191528.1"><vh>Declarations</vh></v>
 <v t="karstenw.20230417110004.1"><vh>+ GLOBALS +</vh></v>
 <v t="karstenw.20230318131229.1"><vh>+ TOOLS +</vh>
 <v t="karstenw.20230316191631.1"><vh>py3</vh></v>
+<v t="karstenw.20260729143205.1"><vh>sortlist</vh></v>
 <v t="karstenw.20230316191528.4"><vh>nodecompare</vh></v>
 <v t="karstenw.20230316191528.6"><vh>makeunicode</vh></v>
 <v t="karstenw.20230316191528.7"><vh>hashFromString</vh></v>
@@ -92,7 +93,7 @@
 <v t="karstenw.20230316191528.63"><vh>graph_specific</vh></v>
 <v t="karstenw.20230316191528.64"><vh>graph_objects</vh></v>
 </v>
-<v t="karstenw.20230316194702.1"><vh>+ TAXONOMY +</vh>
+<v t="karstenw.20230316194702.1" a="E"><vh>+ TAXONOMY +</vh>
 <v t="karstenw.20230316191528.65"><vh>taxonomy</vh></v>
 <v t="karstenw.20230316191528.66"><vh>class ConcepRange</vh>
 <v t="karstenw.20230316191528.67"><vh>__init__</vh></v>
@@ -102,7 +103,7 @@
 <v t="karstenw.20230316191528.71"><vh>__call__</vh></v>
 </v>
 </v>
-<v t="karstenw.20230316194807.1"><vh>+ INDEX +</vh>
+<v t="karstenw.20230316194807.1" a="E"><vh>+ INDEX +</vh>
 <v t="karstenw.20230316191528.72"><vh>class _index</vh>
 <v t="karstenw.20230316191528.73"><vh>__init__</vh></v>
 <v t="karstenw.20230316191528.74"><vh>_get_name</vh></v>
@@ -114,13 +115,13 @@
 </v>
 <v t="karstenw.20230316191528.80"><vh>_build_properties_index</vh></v>
 </v>
-<v t="karstenw.20230316194837.1"><vh>+ SOLVER +</vh>
+<v t="karstenw.20230316194837.1" a="E"><vh>+ SOLVER +</vh>
 <v t="karstenw.20230316191528.81"><vh>add_method</vh></v>
 <v t="karstenw.20230316191528.82"><vh>score</vh></v>
 <v t="karstenw.20230316191528.83"><vh>class IndexError</vh></v>
 <v t="karstenw.20230316191528.84"><vh>class MethodError</vh></v>
 <v t="karstenw.20230316191528.85"><vh>class analysis</vh></v>
-<v t="karstenw.20230316191528.86"><vh>class _solver</vh>
+<v t="karstenw.20230316191528.86" a="E"><vh>class _solver</vh>
 <v t="karstenw.20230316191528.87"><vh>__init__</vh></v>
 <v t="karstenw.20230316191528.88"><vh>_prepare</vh></v>
 <v t="karstenw.20230316191528.89"><vh>_retrieve</vh></v>
@@ -284,7 +285,7 @@ if kwlog:
 </t>
 <t tx="karstenw.20230316191528.10">def cache(key, value, ext='.json'):
     if ext=='.json':
-        return open(_path(key,ext), "w").write(value)
+        return open(_path(key,ext), "w", encoding="utf-8").write(value)
     return open(_path(key,ext), "wb").write(value)
 
 
@@ -427,7 +428,7 @@ if kwlog:
 </t>
 <t tx="karstenw.20230316191528.11">def cached(key, ext='.json'):
     if ext == '.json':
-        return open(_path(key, ext=ext)).read()
+        return open(_path(key, ext=ext), encoding="utf-8").read()
     return open(_path(key, ext=ext), 'rb').read()
 
 </t>
@@ -1385,7 +1386,7 @@ map_object = __call__
             if len(match) &gt; 0 and len(match[0]) &gt; 0:
                 x = parse(match[0])
                 matches.append(x)
-                if kwlog:
+                if kwlog and 0:
                     pp( result )
             if pattern_ in result.text:
                 matches.append(result.text)
@@ -1442,7 +1443,7 @@ map_object = __call__
     )
     if kwlog:
         print("suggest_properties matches:", matches)
-    matches = filter(lambda word: word not in ("well", "much"), matches)
+    matches = list( filter(lambda word: word not in ("well", "much"), matches) )
     if kwlog:
         print("suggest_properties filtered matches:", matches)
     return count(matches)
@@ -1479,16 +1480,6 @@ punicode = str
 pstr = bytes
 py3 = True
 punichr = chr
-long = int
-
-
-def sortlist(thelist, thecompare):
-    if py3:
-        sortkeyfunction = functools.cmp_to_key( thecompare )
-        thelist.sort( key=sortkeyfunction )
-    else:
-        thelist.sort( thecompare )
-
 
 </t>
 <t tx="karstenw.20230316191737.1">#### BASIC PROPERTIES ##########################################################
@@ -1680,7 +1671,10 @@ INDEX = os.path.join(os.path.dirname(__file__), "index")
         # see if FullConcept edges can be used
         if 1:
             # edges are FullConcept namedtuples
-            idedge,concept1id,concept1name,concept1lang,concept1context,relationid,relationname,weight,concept2id,concept2name,concept2lang,concept2context = edge
+            (idedge,
+             concept1id,concept1name,concept1lang,concept1langname,concept1context,
+             relationid,relationname,weight,
+             concept2id,concept2name,concept2lang,concept2langname,concept2context) = edge
         
             # context 
             context = unifyContext( concept1context, concept2context )
@@ -1930,6 +1924,8 @@ languageCodes.sort()
 languageCodes.insert(0, "")
 lang=""
 
+initialNoun = "Haus"
+
 </t>
 <t tx="karstenw.20260518135734.2">def handler( value, name ):
     global lang, concept
@@ -1939,7 +1935,7 @@ lang=""
         lang = language
     load( concept, lang )
     
-var("concept", TEXT, "Mitmensch", handler=handler)
+var("concept", TEXT, initialNoun, handler=handler)
 var("language", MENU, default=handler, value=languageCodes)
 
 
@@ -1962,9 +1958,15 @@ g = None
     if 1:
         print("load:", concept, len(g) )
 
-load("Mitmensch", lang)
+load(initialNoun, lang)
 
 size( 1024, 1024)
+</t>
+<t tx="karstenw.20260729143205.1">def sortlist(thelist, thecompare):
+    sortkeyfunction = functools.cmp_to_key( thecompare )
+    thelist.sort( key=sortkeyfunction )
+
+
 </t>
 </tnodes>
 </leo_file>
