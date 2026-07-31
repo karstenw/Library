@@ -1952,6 +1952,18 @@ def grid(cols, rows, colSize=1, rowSize=1, shuffled=False):
             yield (x*colSize, y*rowSize)
 
 
+def imagesize( imagepath ):
+    """Get size of image at path."""
+    try:
+        img = Image.open( imagepath )
+        s = img.size
+    except:
+        s = (-1,-1)
+    img.close()
+    del img
+    return s
+
+
 #
 # image tools section
 #
@@ -2300,37 +2312,6 @@ def insetRect( rectangle, hinset, vinset):
     dw = hinset * 2
     dh = vinset * 2
     return Rectangle( x+hinset, y+vinset, w-dw, h-dh )
-
-
-# UNFINISHED
-def cropImageToRatioHorizontalOLD( layer, ratio ):
-    """Defekt
-    
-    This is the primary cause for collage 1a weirdness
-    """
-    
-    width, height = layer.bounds()
-    oldwidth = width
-    oldheight = height
-
-    newwidth = int( round( height * ratio ))
-    d = int( newwidth / 4.0 )
-    x,y,width,height = insetRect( (0,0,width,height), d, 0 )
-    
-    # pdb.set_trace()
-    if 1:
-        if 1: #(x > x+width) or (y > y+height):
-            if 1: #kwlog:
-                print("\n\ncropImageToRatioHorizontal")
-                print("ratio:", ratio)
-                layer.prnt()
-                print( "x,y,width,height", (x,y,width,height) )
-                print("oldwidth,newwidth,width:",oldwidth,newwidth, width)
-                print("oldheight,newheight:",oldwidth,height)
-        width = abs(width)
-        height = abs(height)
-    layer.img = layer.img.crop(box=(x,y,x+width,y+height))
-    return layer
 
 
 # UNFINISHED
