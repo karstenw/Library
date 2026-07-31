@@ -102,15 +102,10 @@ punicode = str
 pstr = bytes
 py3 = True
 punichr = chr
-long = int
-
 
 def sortlist(thelist, thecompare):
-    if py3:
-        sortkeyfunction = functools.cmp_to_key( thecompare )
-        thelist.sort( key=sortkeyfunction )
-    else:
-        thelist.sort( thecompare )
+    sortkeyfunction = functools.cmp_to_key( thecompare )
+    thelist.sort( key=sortkeyfunction )
 
 
 def nodecompare( a, b):
