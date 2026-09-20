@@ -28,6 +28,7 @@ import colorsys
 import io
 
 import collections
+import itertools
 
 import PIL
 import PIL.ImageFilter as ImageFilter
@@ -53,8 +54,8 @@ radians = math.radians
 asin = math.asin
 
 pp = pprint.pprint
-kwdbg = 0
-kwlog = 0
+kwdbg = 1
+kwlog = 1
 
 # disable large image warning
 old = Image.MAX_IMAGE_PIXELS
@@ -62,16 +63,12 @@ Image.MAX_IMAGE_PIXELS = None # 200000000
 # print( "MAX_IMAGE_PIXELS: %i" % old)
 
 # Rectangle result types
-Rectangles = collections.namedtuple('Rectangles', "innerSquare upper lower left right "
-                                                  "outerSquare quads niner outerNiner "
+Rectangles = collections.namedtuple('Rectangles',
+                                                  "squares outerSquare "
+                                                  "quads niner outerNiner "
                                                   "threeRows threeColumns fourByFour" )
 
 Rectangle = collections.namedtuple('Rectangle', "left upper width height" )
-
-def sqrect( x1,y1, x2, y2 ):
-    w = x2-x1
-    h = y2-y1
-    return Rectangle( x1, y1, w, h )
 
 # py3 stuff
 
@@ -255,7 +252,7 @@ class Canvas:
         w2 = int( round( w / 2 ))
         h2 = int( round( h / 2 ))
         
-        if kwlog:
+        if kwlog and 0:
             print( (style, self.w,self.h,w,h) )
         
         if style in (RADIALCOSINE,): #, SCATTER):
@@ -389,6 +386,7 @@ class Canvas:
         SINE, COSINE and ROUNDRECT
         """
 
+        # if w and h are floats, recalc to pixels
         w0 = self.w
         h0 = self.h
         if type(w) == float:
@@ -753,11 +751,12 @@ class Canvas:
         if unique or os.path.exists( path ):
             path = uniquepath(folder, name, ext, nfill=2, startindex=1, sep="_", always=unique)
 
-        if kwdbg and 0:
+        if kwdbg and 1:
             # if debugging is on export each layer separately
             # basename = "photobot_" + datestring() + "_layer_%i_%s" + ext
             basename = name + "_layer_%i_%s" + ext
 
+            pdb.set_trace()
 
             background = self.layers._get_bg()
             background.name = "Background"
@@ -765,34 +764,77 @@ class Canvas:
             for i in layers:
                 layer = self.layers[i]
 
-                # Determine which portion of the canvas
-                # needs to be updated with the overlaying layer.
+                
+                # this is not what I intend now...
+                # the first code was copied from flatten()
+                if 0:
+                    # Determine which portion of the canvas
+                    # needs to be updated with the overlaying layer.
 
-                x = max(0, layer.x)
-                y = max(0, layer.y)
-                w = min(background.w, layer.x+layer.w)
-                h = min(background.h, layer.y+layer.h)
+                    x = max( (0, layer.x) )
+                    y = max( (0, layer.y) )
+                    w = min( (background.w, layer.x+layer.w) )
+                    h = min( (background.h, layer.y+layer.h) )
 
-                base = background.img.crop((0, 0, background.w, background.h))
+                    base = background.img.crop( (0, 0, background.w, background.h) )
+                    # base = background.img
 
-                # Determine which piece of the layer
-                # falls within the canvas.
+                    # Determine which piece of the layer
+                    # falls within the canvas.
 
-                x = max(0, -layer.x)
-                y = max(0, -layer.y)
-                w -= layer.x
-                h -= layer.y
+                    x = max( (0, -layer.x) )
+                    y = max( (0, -layer.y) )
+                    w -= layer.x
+                    h -= layer.y
 
-                blend = layer.img.crop((x, y, w, h))
+                    blend = layer.img.crop( (x, y, w, h) )
+                    # blend = layer.img
 
-                # alpha = blend.split()[3]
-                alpha = blend.getchannel("A")
-                buffer = Image.composite(blend, base, alpha)
+                    # alpha = blend.split()[3]
+                    alpha = blend.getchannel("A")
+                    buffer = Image.composite(blend, base, alpha)
 
-                layername = basename % (i, layer.name)
-                path = os.path.join( folder, layername )
-                buffer.save( path, format=format, optimize=False)
-                print( "export() DBG: '%s'" % path )
+                    layername = basename % (i, layer.name)
+                    path = os.path.join( folder, layername )
+                    buffer.save( path, format=format, optimize=False)
+                    print( "export() DBG: '%s'" % path )
+
+                else:
+                    # Determine which portion of the canvas
+                    # needs to be updated with the overlaying layer.
+
+                    x = max( (0, layer.x) )
+                    y = max( (0, layer.y) )
+                    w = min( (background.w, layer.x+layer.w) )
+                    h = min( (background.h, layer.y+layer.h) )
+
+                    # base = background.img.crop( (0, 0, background.w, background.h) )
+                    base = background.img
+
+                    # Determine which piece of the layer
+                    # falls within the canvas.
+
+                    #x = max( (0, -layer.x) )
+                    #y = max( (0, -layer.y) )
+                    #w -= layer.x
+                    #h -= layer.y
+
+                    layer.translate(x,y)
+
+                    # blend = layer.img.crop( (x, y, w, h) )
+                    blend = layer.img
+
+                    # alpha = blend.split()[3]
+                    alpha = blend.getchannel("A")
+                    buffer = Image.composite(blend, base, alpha)
+
+                    layername = basename % (i, layer.name)
+                    path = os.path.join( folder, layername )
+                    buffer.save( path, format=format, optimize=False)
+                    print( "export() DBG: '%s'" % path )
+
+
+
 
         self.flatten()
         if format in ("JPEG",):
@@ -817,25 +859,11 @@ class Canvas:
         # Removes the temporary file.
         
         """
-        #if not name:
-        #    name = "photobot_" + datestring()
-        #if not ext:
-        #    ext = ".png"
-
-        #folder = os.path.abspath( os.curdir )
-        #folder = os.path.join( folder, "exports" )
-        #if not os.path.exists( folder ):
-        #    try:
-        #        os.makedirs( folder )
-        #    except:
-        #        pass
+        
         try:
-            #filename = os.path.join( folder, name + ext )
-            #filename = os.path.abspath(filename)
-            # path = self.export(filename)
             path = self.export(name, ext, format)
             try:
-                #if nodeboxlib:
+                #if nodebox
                 _ctx.image(path, x, y)
             except NameError as err:
                 pass
@@ -1273,7 +1301,7 @@ class Layer:
         img.putalpha(alpha)
         self.img = img
 
-    def deform( self, deformer, resample=BICUBIC ):
+    def deform(self, deformer, resample=BICUBIC ):
         self.img = ImageOps.deform(self.img, deformer, resample)
 
     def equalize(self, mask=None):
@@ -1397,7 +1425,7 @@ class Layer:
         self.w = w
         self.h = h   
 
-    def distort(self, x1=0,y1=0, x2=0,y2=0, x3=0,y3=0, x4=0,y4=0,method=Image.QUAD):
+    def distort(self, x1=0,y1=0, x2=0,y2=0, x3=0,y3=0, x4=0,y4=0, method=Image.QUAD):
 
         """Distorts the layer.
         
@@ -1973,6 +2001,12 @@ def imagesize( imagepath ):
 # image tools section
 #
 
+def sqrect( x1,y1, x2, y2 ):
+    """make a (x,y, w,h) rectangle from a (x1,y1, x2,y2) rect."""
+    w = x2-x1
+    h = y2-y1
+    return Rectangle( x1, y1, w, h )
+
 def invertimage( img ):
     # alpha = img.split()[3]
     alpha = img.getchannel("A")
@@ -2044,30 +2078,34 @@ with Image.open("hopper.jpg") as im:
 def calculateRectangles(width, height):
     """Calculate several rectangles for the given size.
     
-    Returns a namedtuple( innerSquare outerSquare upper lower left right quads niner outerNiner threeRows threeColumns fourByFour )
+    Returns a namedtuple( squares outerSquare quads niner outerNiner threeRows threeColumns fourByFour )
         
         A rectangle in this context means a tuple with ( x,y,w,h ) - the rectangle class is not yet integrated
         
-        innerSquare - a square that fits inside w/h
-        upper       - upper remainder rectangle of innerSquare if w<h
-        lower       - lower remainder rectangle of innerSquare if w<h
-        left        - left remainder rectangle of innerSquare if w>h
-        right       - right remainder rectangle of innerSquare if w>h
+        squares     - a list of the following
+        innerrect, upper, lower, left, right, outerrect
+            inner square - a square that fits inside w/h
+            upper - upper remainder rectangle of innerSquare
+            lower - lower remainder rectangle of innerSquare
+            left - left remainder rectangle of innerSquare
+            right  - right remainder rectangle of innerSquare
+            outer square - a square that fits outside w/h
         
-        outerSquare - a square that fits outside w/h
         quads       - list of the four quarter rectangles
         niner       - list of 3x3 rectangles inside w/h
         outerNiner  - 
         threeRows   - 
         threeColumns- 
+        fourByFour  - 
     """
     
-    innerrect = outerrect = quads = niner = upper = lower = left = right = outerNiner = threeRows = threeColumns = fourByFour = None
+    squares = innerrect = outerrect = upper = lower = left = right = quads = niner = outerNiner = threeRows = threeColumns = fourByFour = None
     
     xoffset = yoffset = 0
     
     delta = abs( width - height )
     halfdelta = int( round( delta / 2.0 ))
+    
     longside = max( (width, height) )
     shortside = min( (width, height) )
     
@@ -2078,7 +2116,7 @@ def calculateRectangles(width, height):
     heightthird = int( round( height / 3.0 ))
     
     quarterwidth = int( round( width / 4.0 ))
-    quarterheight = int( round( height / 3.0 ))
+    quarterheight = int( round( height / 4.0 ))
     
     # pdb.set_trace()
     
@@ -2100,6 +2138,11 @@ def calculateRectangles(width, height):
     else:
         # image is square
         innerrect = outerrect = Rectangle(0, 0,  width, height )
+        upper = left = lower = right = None
+
+    squares = (innerrect, upper, lower, left, right)
+
+    outerrect = (outerrect,)
 
     
     # make the niner
@@ -2179,71 +2222,147 @@ def calculateRectangles(width, height):
 
 
     
-    result = Rectangles( innerrect, upper, lower, left, right, outerrect, quads, niner, outerNiner, threeRows, threeColumns, fourByFour )
+    # result = Rectangles( squares, right, outerrect, quads, niner, outerNiner, threeRows, threeColumns, fourByFour )
+    result = Rectangles( squares, outerrect, quads, niner, outerNiner, threeRows, threeColumns, fourByFour )
     return result
 
 
-def testRectangles():
+def testRectangles( path=None, gap=20 ):
     
-    # pdb.set_trace()
-    
+    dt = datestring()
+
     sizes = ( (200,100,"landscape"), (100,200,"portrait") )
+    types = ("exploded", "standard" )
+    if path is not None:
+        w,h = imagesize( path )
+        name = "landscape"
+        if h > w:
+            name = "portrait"
+        sizes = ( (w,h,name), )
+        # types = ( "exploded", )
+
     
     def markers( w, h, draw ):
-        points = ( (w,h), (2*w,h), (w,2*h), (2*w, 2*h) )
+        points = ( (w+gap,h+gap), (2*w+gap,h+gap), (w+gap,2*h+gap), (2*w+gap, 2*h+gap) )
         for point in points:
             x,y = point
             draw.line( (x-5, y  , x+5, y  ), fill=(0,0,255,255) )
             draw.line( (x  , y-5, x  , y+5), fill=(0,0,255,255) )
+
+
+    def handlerectdicts( rects ):
+        return
+        squares = rects['squares']
+        sq1 = squares[:5]
+        sq2 = [ squares[5] ]
+        rects['squares'] = sq1
+        rects['outerSquare'] = sq2
+
     
-    for exploded in ("standard", "exploded"):
+    for exploded in types:
         for size in sizes:
             width, height, name = size
             
-            rects = calculateRectangles( width, height )
-            
+            # rects, plainrectangles, keys
+
+            # pdb.set_trace()
+
+            plainrects = calculateRectangles( width, height )
+            rects = plainrects
             if exploded in ("exploded",):
-                rects = explodeRectangles( rects )
-            
+                rects = explodeRectangles( plainrects, gap, gap )
+            else:
+                gap = 0
+
             rects = rects._asdict()
+            #handlerectdicts( rects )
+            # pp(rects)
+
+            plainrects = plainrects._asdict()
+            #handlerectdicts( plainrects )
+
             keys = list(rects.keys())
+
             
-            cw = width * 3
-            ch = height * 3
+            cw = width * 3 + 2 * gap
+            ch = height * 3 + 2 * gap
             x = width
             y = height
             
-            bg = Image.new( "RGBA", (cw,ch), (127,127,127,127))
-            
             for key in keys:
-                rect = rects[key]
-                if rect is None:
+                
+                #if key not in ('outerNiner',):
+                #    pdb.set_trace()
+                #    continue
+                
+                rectlist = rects[key]
+                if rectlist is None:
                     continue
+                plainrectlist = plainrects[key]
                 
                 c = canvas( cw, ch )
-                l = c.layer( bg )
-                
+                bg = Image.new( "RGBA", (cw,ch), (240,240,240,127))
                 draw = ImageDraw.Draw( c.top.img )
                 markers( width, height, draw )
-    
-                if type(rect) in (Rectangle,):
-                    rect = [rect]
+                l = c.layer( bg )
                 
-                for idx, r in enumerate(rect):
+                # get cropped image part
+                if path is not None:
+                    img = Image.open( path )
+                    # placeImage(c, path, width, height )
+                
+                # 
+                if type(rectlist) in (Rectangle,):
+                    rectlist = [rect]
+                
+                for idx, r in enumerate(rectlist):
                     # pp(dir(rect))
                     
+                    if r is None:
+                        continue
+                    
                     x1,y1,w,h = r
+                    
                     # translate to inner rect
-                    x1 = x1 + width
-                    y1 = y1 + height
+                    x1 = x1 + width + gap
+                    y1 = y1 + height + gap
                     x2 = x1 + w
                     y2 = y1 + h
-                    print(key, idx, name, (x1,y1), (x2,y2) )
-                    draw.rectangle( (x1,y1,x2,y2), fill=(31,225,31,240), outline=(0,0,0,255))
+                    if kwlog:
+                        print("key, idx, name, topleft, bottomright:", key, idx, name, (x1,y1), (x2,y2) )
+
+                    if path is not None:
+                        if key in ('outerNiner',):
+                            img2 = img.copy()
+                            c.layer( img2, x1, y1 )
+                            if kwlog:
+                                print(idx, 'Layer outerNiner@', x1,y1)
+                        else:
+                            # extract part from image
+                            ir = plainrectlist[idx]
+                            imgrect = (ir[0], ir[1], ir[0]+ir[2], ir[1]+ir[3])
+                            if kwlog:
+                                print(idx, imgrect )
+                            img2 = img.copy().crop( imgrect )
+                            # and move it where it belongs
+                            c.layer( img2, x1, y1 )
+                    
+                    if 1:
+                        fg = Image.new( "RGBA", (cw,ch), (255, 255, 255, 0))
+                        draw = ImageDraw.Draw( fg )
+                        draw.rectangle( (x1,y1,x2,y2), fill=(31,225,31,31), outline=(0,0,0,127), width=5 )
+                        l = c.layer( fg )
                 
-                rectname = "testRectangles(%i,%i,%s,%s,%s).jpg" % (width, height,name,key,exploded)
+                if 1:
+                    ext = ".jpg"
+                    format = "JPEG"
+                else:
+                    ext = ".jpg"
+                    format = "JPEG"
+                rectname = "Rectangles-%s-%i-%i-%s-%s-%s%s" % (dt,width, height,name,key,exploded,ext)
                 print(rectname)
-                c.draw( name=rectname, ext=".jpg", format='JPEG' )
+                print()
+                c.draw( name=rectname, ext=ext, format=format )
             
 
 def explodeRectangles( rectangles, deltax=10, deltay=10 ):
@@ -2253,21 +2372,24 @@ def explodeRectangles( rectangles, deltax=10, deltay=10 ):
     """
     
     # innerSquare upper lower left right outerSquare quads niner outerNiner threeRows threeColumns fourByFour"
-    upper = rectangles.upper 
+    squares = rectangles.squares
+    outerrect = rectangles.outerSquare
+    innerrect, upper, lower, left, right = squares
     if upper is not None:
         upper = Rectangle( upper[0], upper[1] - deltay, upper[2], upper[3] )
-    
-    lower = rectangles.lower
+
     if lower is not None:
         lower = Rectangle( lower[0], lower[1] + deltay, lower[2], lower[3] )
-    
-    left = rectangles.left
+
     if left is not None:
         left = Rectangle( left[0] - deltax, left[1], left[2], left[3] )
-    
-    right = rectangles.right
+
     if right is not None:
         right = Rectangle( right[0] + deltax, right[1], right[2], right[3] )
+
+    squares = (innerrect, upper, lower, left, right)
+    outerrect = (outerrect,)
+
     
     # QUADS
     dx2 = deltax / 2
@@ -2280,6 +2402,7 @@ def explodeRectangles( rectangles, deltax=10, deltay=10 ):
         Rectangle( q3[0] - dx2, q3[1] + dy2, q3[2], q3[3] ),
         Rectangle( q4[0] + dx2, q4[1] + dy2, q4[2], q4[3] )
     )
+
     
     # NINER
     dx3 = deltax # / 2
@@ -2298,8 +2421,11 @@ def explodeRectangles( rectangles, deltax=10, deltay=10 ):
         Rectangle( q8[0]      , q8[1] + dy3, q8[2], q8[3] ),
         Rectangle( q9[0] + dx3, q9[1] + dy3, q9[2], q7[3] )
     )
+
     
     # OUTERNINER
+    dx3 = deltax # / 2
+    dy3 = deltay # / 2
     q1, q2, q3, q4, q5, q6, q7, q8, q9 = rectangles.outerNiner
     outerNiner = (
         Rectangle( q1[0] - dx3, q1[1] - dy3, q1[2], q1[3] ),
@@ -2314,6 +2440,7 @@ def explodeRectangles( rectangles, deltax=10, deltay=10 ):
         Rectangle( q8[0]      , q8[1] + dy3, q8[2], q8[3] ),
         Rectangle( q9[0] + dx3, q9[1] + dy3, q9[2], q7[3] )
     )
+
     
     # THREEROWS
     q1, q2, q3 = rectangles.threeRows
@@ -2322,6 +2449,7 @@ def explodeRectangles( rectangles, deltax=10, deltay=10 ):
         Rectangle( q2[0]      , q2[1]      , q2[2], q2[3] ),
         Rectangle( q3[0]      , q3[1] + dy3, q3[2], q3[3] )
     )
+
     
     # THREECOLUMNS
     q1, q2, q3 = rectangles.threeColumns
@@ -2330,6 +2458,7 @@ def explodeRectangles( rectangles, deltax=10, deltay=10 ):
         Rectangle( q2[0]      , q2[1]      , q2[2], q2[3] ),
         Rectangle( q3[0] + dx3, q3[1]      , q3[2], q3[3] )
     )
+
     
     # FOURBYFOUR
     # naming is q ROW COL
@@ -2364,7 +2493,9 @@ def explodeRectangles( rectangles, deltax=10, deltay=10 ):
         Rectangle( q34[0] + dx2, q34[1] + dy2, q34[2], q34[3] ),
 
     )
-    result = Rectangles( rectangles.innerSquare, upper, lower, left, right, rectangles.outerSquare, quads, niner, outerNiner, threeRows, threeColumns, fourByFour )
+
+    
+    result = Rectangles( squares, rectangles.outerSquare, quads, niner, outerNiner, threeRows, threeColumns, fourByFour )
     return result
 
 
@@ -2417,15 +2548,6 @@ def aspectRatio(size, maxsize, height=False, width=False, assize=False):
     return scale
 
 
-def innerSquare( x1, y1, x2, y2 ):
-    """Calculate an inner size crop square."""
-
-    width = x2-x1
-    height = y2-y1
-    rects = calculateRectangles(width, height)
-    return rects.innerSquare
-
-
 def insetRect( rectangle, hinset, vinset):
     """Inset a Rectangle.
     
@@ -2443,8 +2565,11 @@ def cropImageToRatioHorizontal( layerOrImage, ratio ):
     
     This is the primary cause for collage 1a weirdness
     """
-    t = type( layerOrImage )
-    if t in (Layer,):
+    
+    # pdb.set_trace()
+    
+    layertype = isinstance(layerOrImage, Layer)
+    if layertype:
         width, height = layerOrImage.bounds()
     else:
         width, height = layerOrImage.size()
@@ -2475,16 +2600,257 @@ def cropImageToRatioHorizontal( layerOrImage, ratio ):
                 print("oldwidth,width:",oldwidth,width)
                 print("oldheight,height:",oldwidth,height)
                 print()
-                if t in (Layer,):
+                if layertype:
                     layerOrImage.prnt()
                 print("\n\n\n")
         width = abs(width)
         height = abs(height)
-    if t in (Layer,):
+    if layertype:
         layerOrImage.img = layerOrImage.img.crop(box=(x,y, x+width,y+height))
     else:
         layerOrImage = layerOrImage.crop(box=(x,y, x+width,y+height))
     return layerOrImage
+
+
+def normalizeOrientationImage( img ):
+    """Rotate an image according to exif info.
+    
+    """
+    rotation = 0
+    try:
+        info = img._getexif()
+        if 274 in info:
+            r = info[274]
+            if r == 3:
+                rotation = 180
+            elif r == 6:
+                rotation = -90
+            elif r == 8:    
+                rotation = 90
+    except (Exception, IndexError) as err:
+        pass
+    if rotation != 0:
+        return img.rotate( rotation )
+    return img
+
+
+def makerandomgradient( c, w, h, p1=0.2, p2=0.4, p3=0.6, p4=0.8, p5=0.90, brighter=0.0 ):
+    """Create a random gradient on canvas c with width and height w x h,
+    the probabilities p1..p5 for the different gradient types and a value for brighter masks.
+    """
+    
+    r = random.random()
+    if kwlog:
+        print( "mask random: %.2f" % r )
+
+    halfwidth = int( round(w / 2.0) )
+    grad = "XXX"
+
+    # P:0.2 - create a dual ramp gradient
+    if r < p1:
+        # consists of an up and a down ramp
+        grad = "LINEAR"
+        # c.makemask(   SOLID | LINEAR | RADIAL | DIAMOND
+        #             | DUALRAMP | SINE | COSINE | RADIALCOSINE
+        #             | ROUNDRECT, w, h)
+        _ = c.gradient(LINEAR, halfwidth, h)
+        c.top.flip( HORIZONTAL )
+        
+        # layer translate half a pict right
+        c.top.translate( halfwidth, 0)
+        
+        # create another gradient layer and merge with first gradient
+        topidx = c.gradient(LINEAR, halfwidth, h)
+        
+        # merge both gradients; destroys top layer
+        c.merge([ topidx-1 , topidx ])
+    
+    # P:0.2 - sine 0..π
+    elif p1 <= r < p2:
+        # from 1 to 0
+        grad = "SINE"
+        c.gradient(SINE, w, h)
+        
+    # P:0.25 - radial cosine
+    elif p2 <= r < p3:
+        grad = "RADIALCOSINE"
+        c.gradient(RADIALCOSINE, w, h)
+    
+    # P:0.25 - round rect
+    elif p3 <= r < p4:
+        grad = "ROUNDRECT"
+        radius = int( round( w / 5.0 ))
+        c.gradient(ROUNDRECT, w, h, radius=radius)
+    
+    elif p4 <= r < p5:
+        grad = "QUAD"
+        top = c.gradient(QUAD, w, h, "", 0, 0)
+    
+    elif r >= p5:
+        # from 0 to 1 to 0
+        grad = "COSINE"
+        _ = c.gradient(COSINE, halfwidth, h)
+        
+        # layer translate half a pict right
+        c.top.translate( halfwidth, 0)
+        
+        # create another gradient layer and merge with first gradient
+        topidx = c.gradient(COSINE, halfwidth, h)
+        c.top.flip( HORIZONTAL )
+        
+        # merge both gradients; destroys top layer
+        c.merge([ topidx-1 , topidx ])
+    
+    if brighter:
+        c.top.brightness(brighter)
+    if kwlog:
+        print( "Gradient:  %s" % grad )
+    
+    return grad
+
+def image2rectangles( imagepath, rectanglename ):
+    """
+    """
+    
+    result = []
+    
+    # get cropped image part
+    if os.path.exists( imagepath ):
+        img = Image.open( imagepath )
+    else:
+        return result
+    
+    w,h = img.size
+    
+    rectangles = calculateRectangles( w, h)
+    rectangles = rectangles._asdict()
+    
+    rectlist = rectangles[rectanglename]
+    
+    for idx, r in enumerate(rectlist):
+        # pp(dir(rect))
+        
+        if r is None:
+            continue
+        #print("CROPRECT x,y,w,h:", r )
+        x1,y1,w,h = r
+        x2 = x1 + w
+        y2 = y1 + h
+        # extract part from image
+        imgrect = ( x1, y1, x2, y2 )
+        if 0:#kwlog:
+            print("FINAL CROPRECT:", idx, r )
+        img2 = img.copy().crop( imgrect )
+        # and move it where it belongs
+        result.append( img2 )
+        del img2 
+    
+    return result
+
+
+def createImageStrip( stripwidth, stripheight, columns, images, randomgradient=False, overlap=0.0, scatter=0.0, rot=(0.0, 0.0) ):
+    """ create a 1-dimensional image strip
+    
+    canvas          the canvas to draw on
+    
+    stripwidth x
+    stripheight     dimensions of strip in pixels
+    
+    columns         no of images or zero to fill up
+    images          iterable that produces imagepaths
+    randomgradient  if True, a random gradient is used
+    overlap         horizontal overlap - if int in pixels, if float in part
+    scatter         vertical scatter - not used now
+    rot             rotate image (min, max)
+    """
+    
+    stripwidth = int(round(stripwidth))
+    stripheight = int(round(stripheight))
+    c = canvas( stripwidth, stripheight )
+    
+    imagecyclone = itertools.cycle( images )
+    tilewidth = 0
+    if columns > 0:
+        tilewidth = stripwidth / columns
+    else:
+        # suff. high; break after colw > w
+        columns = 10000
+    
+    tilecounter = 0
+    colw = 0
+    for column in range(columns):
+        if colw > stripwidth:
+            break
+            
+        # create image in canvas at 0,0
+        nextpictpath = next( imagecyclone )
+        topidx = c.layer( nextpictpath )
+        w, h = c.top.bounds()
+        
+        tilecounter += 1
+        if kwlog or 1:
+            py23print( u"%i - %s" % (tilecounter, nextpictpath)  )
+        
+        # calculate scale for rowheight & apply
+        s = aspectRatio( (w,h), stripheight, height=True)
+        c.top.scale(s, s)
+        w, h = c.top.bounds()
+        #cropImageToRatioHorizontal( c.top, w/stripheight )
+        #w, h = c.top.bounds()
+        
+        if randomgradient:
+            makerandomgradient( c, w, h, brighter=1.8 )
+            c.top.mask()
+
+        # overlap
+        
+        # scatter
+        
+        # rotation
+        
+        if kwlog:
+            print( "Translate" )
+        
+        # first image negative x offset
+        minusx = 0
+        if 1: #tilecounter == 1:
+            minusx = w / 4
+        c.top.translate( colw-minusx, 0 )
+        colw += w
+    return c    
+
+def createBlockLayout( w, h, rows, columns, images, maskcallback=None, overlap=0.0, scatter=0.0, rot=(0.0, 0.0) ):
+    """Fill a block w x h with rects. Either gridwise rows x columns or rows filled
+    w, h:           width & height of result block
+    rows, columns:  how to fill the block
+    images:         image source
+    maskcallback:   Not yet defined
+    overlap:        
+    scatter:        
+    rot:            min, max of random rotation
+    
+    """
+    pass
+def createSpiralLayout( w, h, width, images, maskcallback=None, align=None, mingle=1.0, scatter=0.0, rot=(0.0, 0.0) ):
+    """Fill a block w x h with a spiral of images
+    """
+    pass
+
+
+def createRimLayout( w, h, ovalwidth, ovalheight, images, maskcallback=None, align=None, mingle=1.0, scatter=0.0, rot=(0.0, 0.0) ):
+    """Fill a block w x h with an  exclusion oval.
+    """
+    pass
+
+
+# UNUSED
+def innerSquare( x1, y1, x2, y2 ):
+    """Calculate an inner size crop square."""
+
+    width = x2-x1
+    height = y2-y1
+    rects = calculateRectangles(width, height)
+    return rects.innerSquare
 
 
 def scaleLayerToHeight( layer, newheight ):
@@ -2539,28 +2905,6 @@ def resizeImage( filepath, maxsize, orientation=True, width=True, height=True):
     if f:
         f.close()
     return img.convert("RGBA")
-
-
-def normalizeOrientationImage( img ):
-    """Rotate an image according to exif info.
-    
-    """
-    rotation = 0
-    try:
-        info = img._getexif()
-        if 274 in info:
-            r = info[274]
-            if r == 3:
-                rotation = 180
-            elif r == 6:
-                rotation = -90
-            elif r == 8:    
-                rotation = 90
-    except (Exception, IndexError) as err:
-        pass
-    if rotation != 0:
-        return img.rotate( rotation )
-    return img
 
 
 #
