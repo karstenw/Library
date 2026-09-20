@@ -19,9 +19,16 @@ from random import shuffle
 
 import linguistics
 import FlowerWord
-FlowerWord = FlowerWord.FlowerWord
 
-# from linguistics import FlowerWord
+
+holonym = FlowerWord.holonym
+meronym = FlowerWord.meronym
+antonym = FlowerWord.antonym
+hypernym = FlowerWord.hypernym
+fsenses = FlowerWord.fsenses
+hyponym = FlowerWord.hyponym
+
+
 
 import pattern
 import pattern.text
@@ -32,75 +39,6 @@ wordnet = pattern.text.en.wordnet
 allnouns = list( wordnet.NOUNS() )
 nouns = set( allnouns )
 
-
-
-#### REPLACEMENTS ##############################################################
-# 
-# these should move two levels up into linguistics
-
-
-def holonym( word, sense="", all=False ):
-    fw = FlowerWord( word )
-    hn = fw.holonyms()
-    #print("holonym(%s): %s" % (word, str(hn)))
-    if all:
-        return hn
-    if len(hn) > 0:
-        return hn[0]
-    return ""
-
-def meronym( word, sense="", all=False ):
-    fw = FlowerWord( word )
-    mn = fw.meronyms()
-    #print("meronym(%s): %s" % (word, str(mn)))
-    if all:
-        return mn
-    if len(mn) > 0:
-        return mn[0]
-    return ""
-
-def antonym( word, sense="", all=False ):
-    fw = FlowerWord( word )
-    an = fw.antonym
-    if 0: #len(an) > 0:
-        print("antonym(%s): %s" % (word, str(an)))
-    if all:
-        return an
-    if len(an) > 0:
-        #print("antonym(%s): %s" % (word, str(an[0].antonym)))
-        return an[0].antonym
-    return ""
-
-def hypernym( word, sense="", all=False ):
-    fw = FlowerWord( word )
-    hn = fw.hypernyms()
-    #print("hypernym(%s): %s" % (word, str(hn)))
-    if all:
-        return hn
-    if len(hn) > 0:
-        return hn[0]
-    return ""
-
-def fsenses( word, sense="", all=False ):
-    fw = FlowerWord( word )
-    sn = fw.senses()
-    if kwlog:
-        print("senses(%s): %s" % (word, str(sn)))
-    if all:
-        return sn
-    if len(sn) > 0:
-        return sn[0]
-    return ""
-
-def hyponym( word, sense="", all=False ):
-    fw = FlowerWord( word )
-    hn = fw.hyponyms()
-    #print("hyponym(%s): %s" % (word, str(hn)))
-    if all:
-        return hn
-    if len(hn) > 0:
-        return hn[0]
-    return ""
 
 
 #### WORDNET GRAPH #############################################################
@@ -181,8 +119,8 @@ class wordnetgraph(graph.graph):
         # take the first word from each list, then take the second etc.
         words = []
         
-        fw = FlowerWord( word )
-        snses = fw.senses()
+        snses = FlowerWord.fsenses( word )
+        #snses = fw.senses()
         if 0:
             # i think this is for a different structure
             for i in range(2):
@@ -210,9 +148,8 @@ class wordnetgraph(graph.graph):
         
         words = []
         
-        fw = FlowerWord( word )
         # lexname = en.noun.lexname(word)
-        lexname = fw.lexname
+        lexname = FlowerWord.lexname( word )
         if lexname != "":
             words.append( (lexname, "category ") )
         
