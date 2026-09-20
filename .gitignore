@@ -4,6 +4,7 @@ __pycache__
 *.webloc
 .DS_Store
 +shoebot
++private
 */cache
 */build
 */dist
