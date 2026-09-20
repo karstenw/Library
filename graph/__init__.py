@@ -822,7 +822,8 @@ def create(iterations=1000, distance=1.0, layout=LAYOUT_SPRING, depth=True):
         _ctx.colormode(RGB)
         g = graph(iterations, distance, layout)
     except:
-        _ctx = None
+        # No. No. No. NO! _ctx = None made this fail silently
+        # _ctx = None
         g = graph(iterations, distance, layout)
         return g
     

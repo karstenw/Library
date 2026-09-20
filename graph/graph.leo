@@ -17,7 +17,7 @@
 <v t="karstenw.20230319202717.4"><vh>sortlist</vh></v>
 <v t="karstenw.20230319203345.1"><vh>sortnodes_zero</vh></v>
 </v>
-<v t="karstenw.20230319195736.2" a="E"><vh>class node</vh>
+<v t="karstenw.20230319195736.2"><vh>class node</vh>
 <v t="karstenw.20230319195736.3"><vh>__init__</vh></v>
 <v t="karstenw.20230319195736.4"><vh>_edges</vh></v>
 <v t="karstenw.20230319195736.5"><vh>_is_leaf</vh></v>
@@ -47,7 +47,7 @@
 <v t="karstenw.20230319195736.27"><vh>_get_length</vh></v>
 <v t="karstenw.20230319195736.28"><vh>_set_length</vh></v>
 </v>
-<v t="karstenw.20230319195736.29" a="E"><vh>class graph</vh>
+<v t="karstenw.20230319195736.29"><vh>class graph</vh>
 <v t="karstenw.20230319195736.30"><vh>__init__</vh></v>
 <v t="karstenw.20230319195736.31"><vh>_get_distance</vh></v>
 <v t="karstenw.20230319195736.32"><vh>_set_distance</vh></v>
@@ -222,7 +222,7 @@
 <v t="karstenw.20230329163243.14"><vh>apply</vh></v>
 <v t="karstenw.20230329163243.15"><vh>copy</vh></v>
 </v>
-<v t="karstenw.20230329163243.16" a="E"><vh>class style</vh>
+<v t="karstenw.20230329163243.16"><vh>class style</vh>
 <v t="karstenw.20230329163243.17"><vh>__init__</vh></v>
 <v t="karstenw.20230329163243.18"><vh>copy</vh></v>
 </v>
@@ -1158,8 +1158,8 @@ def create(iterations=1000, distance=1.0, layout=LAYOUT_SPRING, depth=True):
         _ctx.colormode(RGB)
         g = graph(iterations, distance, layout)
     except:
-        # No. No. No. NO!
-        _ctx = None
+        # No. No. No. NO! _ctx = None made this fail silently
+        # _ctx = None
         g = graph(iterations, distance, layout)
         return g
     
@@ -2533,12 +2533,6 @@ class style:
     if not _ctx:
         return
     
-    # dont change the defaults - mess with params in graph()
-    #fnt = "Gentium-Regular"
-    #fntsize = 11
-    #if "Gentium-Regular" not in _ctx.fontnames():
-    #    fnt = "Verdana"
-    
     # Defaults for colors and typography.
     self.background  = _ctx.color(0.18, 0.23, 0.28, 1.00)
     self.traffic     = _ctx.color(0.00, 0.00, 0.00, 0.07)
@@ -3068,9 +3062,16 @@ from random import shuffle
 
 import linguistics
 import FlowerWord
-FlowerWord = FlowerWord.FlowerWord
 
-# from linguistics import FlowerWord
+
+holonym = FlowerWord.holonym
+meronym = FlowerWord.meronym
+antonym = FlowerWord.antonym
+hypernym = FlowerWord.hypernym
+fsenses = FlowerWord.fsenses
+hyponym = FlowerWord.hyponym
+
+
 
 import pattern
 import pattern.text
@@ -3080,8 +3081,6 @@ wordnet = pattern.text.en.wordnet
 
 allnouns = list( wordnet.NOUNS() )
 nouns = set( allnouns )
-
-
 
 </t>
 <t tx="karstenw.20230507120753.10">def is_expandable(self, id):
@@ -3130,8 +3129,8 @@ nouns = set( allnouns )
     # take the first word from each list, then take the second etc.
     words = []
     
-    fw = FlowerWord( word )
-    snses = fw.senses()
+    snses = FlowerWord.fsenses( word )
+    #snses = fw.senses()
     if 0:
         # i think this is for a different structure
         for i in range(2):
@@ -3160,9 +3159,8 @@ nouns = set( allnouns )
     
     words = []
     
-    fw = FlowerWord( word )
     # lexname = en.noun.lexname(word)
-    lexname = fw.lexname
+    lexname = FlowerWord.lexname( word )
     if lexname != "":
         words.append( (lexname, "category ") )
     
@@ -3345,17 +3343,7 @@ class SenseButtons:
     self.pressed = None
 
 </t>
-<t tx="karstenw.20230507120753.2">def holonym( word, sense="", all=False ):
-    fw = FlowerWord( word )
-    hn = fw.holonyms()
-    #print("holonym(%s): %s" % (word, str(hn)))
-    if all:
-        return hn
-    if len(hn) &gt; 0:
-        return hn[0]
-    return ""
-
-</t>
+<t tx="karstenw.20230507120753.2"></t>
 <t tx="karstenw.20230507120753.20">def count(self):
     
     """ The number of senses for the current word.
@@ -3443,63 +3431,11 @@ class SenseButtons:
     )
     
 </t>
-<t tx="karstenw.20230507120753.3">def meronym( word, sense="", all=False ):
-    fw = FlowerWord( word )
-    mn = fw.meronyms()
-    #print("meronym(%s): %s" % (word, str(mn)))
-    if all:
-        return mn
-    if len(mn) &gt; 0:
-        return mn[0]
-    return ""
-
-</t>
-<t tx="karstenw.20230507120753.4">def antonym( word, sense="", all=False ):
-    fw = FlowerWord( word )
-    an = fw.antonym
-    if 0: #len(an) &gt; 0:
-        print("antonym(%s): %s" % (word, str(an)))
-    if all:
-        return an
-    if len(an) &gt; 0:
-        #print("antonym(%s): %s" % (word, str(an[0].antonym)))
-        return an[0].antonym
-    return ""
-
-</t>
-<t tx="karstenw.20230507120753.5">def hypernym( word, sense="", all=False ):
-    fw = FlowerWord( word )
-    hn = fw.hypernyms()
-    #print("hypernym(%s): %s" % (word, str(hn)))
-    if all:
-        return hn
-    if len(hn) &gt; 0:
-        return hn[0]
-    return ""
-
-</t>
-<t tx="karstenw.20230507120753.6">def fsenses( word, sense="", all=False ):
-    fw = FlowerWord( word )
-    sn = fw.senses()
-    if kwlog:
-        print("senses(%s): %s" % (word, str(sn)))
-    if all:
-        return sn
-    if len(sn) &gt; 0:
-        return sn[0]
-    return ""
-
-</t>
-<t tx="karstenw.20230507120753.7">def hyponym( word, sense="", all=False ):
-    fw = FlowerWord( word )
-    hn = fw.hyponyms()
-    #print("hyponym(%s): %s" % (word, str(hn)))
-    if all:
-        return hn
-    if len(hn) &gt; 0:
-        return hn[0]
-    return ""
-
+<t tx="karstenw.20230507120753.3"></t>
+<t tx="karstenw.20230507120753.4"></t>
+<t tx="karstenw.20230507120753.5"></t>
+<t tx="karstenw.20230507120753.6"></t>
+<t tx="karstenw.20230507120753.7">
 
 </t>
 <t tx="karstenw.20230507120753.8">#### WORDNET GRAPH #############################################################
@@ -3578,12 +3514,7 @@ except ImportError:
     # reload(graph)
 
 </t>
-<t tx="karstenw.20230518121333.1">#### REPLACEMENTS ##############################################################
-# 
-# these should move two levels up into linguistics
-
-
-</t>
+<t tx="karstenw.20230518121333.1"></t>
 <t tx="karstenw.20230518121412.1">######################################################################################################
 
 query = "house"
