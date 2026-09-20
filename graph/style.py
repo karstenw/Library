@@ -152,9 +152,15 @@ class style:
 
         self.name = name
         self._ctx = _ctx
-        if not _ctx: 
+        if not _ctx:
             return
-
+        
+        # dont change the defaults - mess with params in graph()
+        #fnt = "Gentium-Regular"
+        #fntsize = 11
+        #if "Gentium-Regular" not in _ctx.fontnames():
+        #    fnt = "Verdana"
+        
         # Defaults for colors and typography.
         self.background  = _ctx.color(0.18, 0.23, 0.28, 1.00)
         self.traffic     = _ctx.color(0.00, 0.00, 0.00, 0.07)
@@ -162,7 +168,7 @@ class style:
         self.stroke      = _ctx.color(0.80, 0.80, 0.80, 0.75)
         self.strokewidth = 0.5
         self.text        = _ctx.color(1.00, 1.00, 1.00, 0.85)
-        self.font        = "Gentium-Regular" #"Gentium-Regular" if "Gentium-Regular" in _ctx.fontnames() else "Verdana"
+        self.font        = "Verdana"
         self.fontsize    = 11
         self.textwidth   = 100
         self.align       = 1
