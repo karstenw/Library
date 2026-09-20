@@ -17,7 +17,7 @@
 <v t="karstenw.20230319202717.4"><vh>sortlist</vh></v>
 <v t="karstenw.20230319203345.1"><vh>sortnodes_zero</vh></v>
 </v>
-<v t="karstenw.20230319195736.2"><vh>class node</vh>
+<v t="karstenw.20230319195736.2" a="E"><vh>class node</vh>
 <v t="karstenw.20230319195736.3"><vh>__init__</vh></v>
 <v t="karstenw.20230319195736.4"><vh>_edges</vh></v>
 <v t="karstenw.20230319195736.5"><vh>_is_leaf</vh></v>
@@ -203,7 +203,7 @@
 <v t="karstenw.20230329163024.3"><vh>class NoConvergenceError</vh></v>
 <v t="karstenw.20230329163024.4"><vh>eigenvector_centrality</vh></v>
 </v>
-<v t="karstenw.20230329163234.1"><vh>@clean style.py</vh>
+<v t="karstenw.20230329163234.1" a="E"><vh>@clean style.py</vh>
 <v t="karstenw.20230329163243.1"><vh>Declarations</vh></v>
 <v t="karstenw.20230507112117.1"><vh>Py3 &amp; makeunicode</vh></v>
 <v t="karstenw.20230329163243.2"><vh>class styles</vh>
@@ -251,7 +251,7 @@
 <v t="karstenw.20230507120755.2"><vh>draw</vh></v>
 <v t="karstenw.20250827122705.1"><vh>script</vh></v>
 </v>
-<v t="karstenw.20230507120747.1" a="E"><vh>@clean graph_example4.py</vh>
+<v t="karstenw.20230507120747.1"><vh>@clean graph_example4.py</vh>
 <v t="karstenw.20230507120753.1"><vh>Declarations</vh></v>
 <v t="karstenw.20230518121333.1"><vh>+ REPLACEMENTS</vh>
 <v t="karstenw.20230507120753.2"><vh>holonym</vh></v>
@@ -261,7 +261,7 @@
 <v t="karstenw.20230507120753.6"><vh>senses</vh></v>
 <v t="karstenw.20230507120753.7"><vh>hyponym</vh></v>
 </v>
-<v t="karstenw.20230507120753.8" a="E"><vh>class wordnetgraph</vh>
+<v t="karstenw.20230507120753.8"><vh>class wordnetgraph</vh>
 <v t="karstenw.20230507120753.9"><vh>__init__</vh></v>
 <v t="karstenw.20230507120753.10"><vh>is_expandable</vh></v>
 <v t="karstenw.20230507120753.11"><vh>is_clickable</vh></v>
@@ -1158,6 +1158,7 @@ def create(iterations=1000, distance=1.0, layout=LAYOUT_SPRING, depth=True):
         _ctx.colormode(RGB)
         g = graph(iterations, distance, layout)
     except:
+        # No. No. No. NO!
         _ctx = None
         g = graph(iterations, distance, layout)
         return g
@@ -2529,9 +2530,15 @@ class style:
 
     self.name = name
     self._ctx = _ctx
-    if not _ctx: 
+    if not _ctx:
         return
-
+    
+    # dont change the defaults - mess with params in graph()
+    #fnt = "Gentium-Regular"
+    #fntsize = 11
+    #if "Gentium-Regular" not in _ctx.fontnames():
+    #    fnt = "Verdana"
+    
     # Defaults for colors and typography.
     self.background  = _ctx.color(0.18, 0.23, 0.28, 1.00)
     self.traffic     = _ctx.color(0.00, 0.00, 0.00, 0.07)
@@ -2539,7 +2546,7 @@ class style:
     self.stroke      = _ctx.color(0.80, 0.80, 0.80, 0.75)
     self.strokewidth = 0.5
     self.text        = _ctx.color(1.00, 1.00, 1.00, 0.85)
-    self.font        = "Gentium-Regular" #"Gentium-Regular" if "Gentium-Regular" in _ctx.fontnames() else "Verdana"
+    self.font        = "Verdana"
     self.fontsize    = 11
     self.textwidth   = 100
     self.align       = 1
@@ -3048,8 +3055,8 @@ def makeunicode(s, srcencoding="utf-8", normalizer="NFC"):
 
 import os
 import pdb
-kwdbg = True
-kwlog = True
+kwdbg = False
+kwlog = False
 
 try:
     graph = ximport("graph")
@@ -3060,8 +3067,8 @@ except ImportError:
 from random import shuffle
 
 import linguistics
-import linguistics.FlowerWord
-FlowerWord = linguistics.FlowerWord.FlowerWord
+import FlowerWord
+FlowerWord = FlowerWord.FlowerWord
 
 # from linguistics import FlowerWord
 
@@ -3114,7 +3121,7 @@ nouns = set( allnouns )
     """
     
     word = str(word)
-    word = word.replace( "_", " " )
+    # word = word.replace( "_", " " )
     
     if self.is_expandable(word):
         return []
@@ -3122,18 +3129,21 @@ nouns = set( allnouns )
     # If there are 4 word senses and each of it a list of words,
     # take the first word from each list, then take the second etc.
     words = []
-    # pdb.set_trace()
+    
     fw = FlowerWord( word )
     snses = fw.senses()
-    for i in range(2):
-        
-        for sense in snses: #en.noun.senses(word):
-            if (    len(sense) &gt; i
-                and sense[i] != word
-                and sense[i] not in words):
-                words.append(sense[i])
+    if 0:
+        # i think this is for a different structure
+        for i in range(2):
+            for sense in snses: #en.noun.senses(word):
+                if (    len(sense) &gt; i
+                    and sense[i] != word
+                    and sense[i] not in words):
+                    words.append(sense[i])
                 
-    return words[:top]
+    #return words[:top]
+    return snses[:top]
+
 
 </t>
 <t tx="karstenw.20230507120753.13">def get_relations(self, word, previous=None):
@@ -3167,8 +3177,6 @@ nouns = set( allnouns )
     ]
     # Get related words from WordNet.
     # Exclude long words and take the top of the list.
-    
-    # pdb.set_trace()
     
     for top, f, relation in relations:
         result = []
@@ -3255,21 +3263,20 @@ nouns = set( allnouns )
     self.add_node(word, root=True, style="root")
     
     # Add the word senses to the root in the LIGHT style.
-    for wrd in self.get_senses(word):
+    senses = self.get_senses(word)
+    for wrd in senses:
         self.add_node(wrd, style=self.styles.light.name)
         self.add_edge(word, wrd, 0.5)
         
         if len(self) &gt; self.max:
             break
     
-    if word in ("biology", "o", "i", "b"):
-        pdb.set_trace()
-    
     # Add relation branches to the root in the DARK style.
     for wrd, rel in self.get_relations(word, previous):
         
         if type(rel) in (list,):
-            pdb.set_trace()
+            # pdb.set_trace()
+            pass
         
         if type(wrd) in (list,):
             # pdb.set_trace()
@@ -3300,11 +3307,11 @@ nouns = set( allnouns )
     # Indicate the word corresponding to the current sense.
     if self.senses.count() &gt; 0:
         #for w in en.noun.senses(word)[self.senses.current]:
-        for w in fsenses(word, all=True)[self.senses.current]:
+        for word in gSenses: #fsenses(word, all=True)[self.senses.current]:
             
-            n = self.node(w)
-            if n and n != self.root: 
-                n.style = "marked"
+            node = self.node(word)
+            if node and node != self.root: 
+                node.style = "marked"
 
 
 </t>
@@ -3360,7 +3367,7 @@ class SenseButtons:
         self.current = 0
         self._count = 0
         if self.senses is None:
-            self.senses = fsenses(self.word, all=True)
+            self.senses = gSenses # fsenses(self.word, all=True)
         self._count = len( self.senses )
         try:
             self.current = self.senses.index( self.word )
@@ -3369,7 +3376,7 @@ class SenseButtons:
         if 0:
             # try: self._count = len(en.noun.senses(self.word))
             try:
-                self._count = len( fsenses(self.word, all=True) )
+                self._count = len( gSenses ) #fsenses(self.word, all=True) )
             except:
                 pass
             
@@ -3474,7 +3481,8 @@ class SenseButtons:
 <t tx="karstenw.20230507120753.6">def fsenses( word, sense="", all=False ):
     fw = FlowerWord( word )
     sn = fw.senses()
-    print("senses(%s): %s" % (word, str(sn)))
+    if kwlog:
+        print("senses(%s): %s" % (word, str(sn)))
     if all:
         return sn
     if len(sn) &gt; 0:
@@ -3588,7 +3596,9 @@ query = choice( goodies )
 # query = "biology"
 
 g = wordnetgraph(distance=1.2)
-print( "query:", query )
+if kwlog:
+    print( "query:", query )
+gSenses = fsenses( query, all=True )
 g.load(query)
 
 size(850, 750)
