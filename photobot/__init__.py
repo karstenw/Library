@@ -558,8 +558,7 @@ class Canvas:
         # large enough to hold all the given layers' data
         # (=time consuming).
 
-        if kwlog:
-            start = time.time()
+        start = time.time()
 
         if layers == []:
             layers = xrange(1, len(self.layers))
@@ -667,25 +666,23 @@ class Canvas:
             try:
                 buffimage.putalpha(buffalpha)
             except Exception as err:
-                if kwdbg and 0:
-                    pass
-                    # pdb.set_trace()
                 # TBD This needs fixing
-                print("PILLOW ERROR:", err)
-        
+                print("PILLOW ERROR in flatten(): putalpha() failed")
+                print(err)
+            
             # Apply the layer's opacity,
             # merging the buff to the base with
             # the given layer opacity.
-        
+            
             baseimage = Image.blend(baseimage, buffimage, layer.alpha)
-
+            
             # Merge the base to the flattened canvas.
-
+            
             x = max(0, int( round( layer.x )) )
             y = max(0, int( round( layer.y )) )
             background.img.paste(baseimage, (x,y) )
             del baseimage, buffimage, buffalpha, basealpha, blendimage
-
+        
         layers = list(layers)
         layers.reverse()
         for i in layers:
@@ -701,26 +698,26 @@ class Canvas:
             self.layers.insert(layers[-1], background)
         del img
         
+        stop = time.time()
         if kwlog:
-            stop = time.time()
             print("Canvas.flatten( %s ) in %.3fsec." % (repr(layers), stop-start))
-
-
+        
+        
     def export(self, name, ext=".png", format="PNG", unique=False):
-
+        
         """Exports the flattened canvas.
-
+        
         Flattens the canvas.
         PNG retains the alpha channel information.
         Other possibilities are JPEG and GIF.
-
+        
         """
-
+        
         start = time.time()
-
+        
         if not name:
             name = "photobot_" + datestring()
-
+        
         # check if full path was passed in name
         if os.sep in name:
             name = os.path.abspath( os.path.expanduser( name ))
@@ -756,7 +753,7 @@ class Canvas:
             # basename = "photobot_" + datestring() + "_layer_%i_%s" + ext
             basename = name + "_layer_%i_%s" + ext
 
-            pdb.set_trace()
+            # pdb.set_trace()
 
             background = self.layers._get_bg()
             background.name = "Background"
@@ -843,9 +840,9 @@ class Canvas:
         self.layers[1].img.save(path, format=format, optimize=False)
         if kwlog:
             print( "Canvas.export( %s )" % (path,))
-
+        
+        stop = time.time()
         if kwlog:
-            stop = time.time()
             print("Canvas.export(%s) in %.3f sec." % (name, stop-start))
 
         return path
