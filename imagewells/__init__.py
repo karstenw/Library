@@ -370,13 +370,14 @@ def imagewells( imagewellsfile="imagewell.txt" ):
     datafolder, _ = os.path.split( fullpath )
 
     # include adjacent "images" folders
-    for imgfolder in ("./images", "../images", "../coreimage/images", "../photobot/images"):
-        imgfolder = os.path.join( datafolder, imgfolder )
+    for relativeImageFolder in ("./images", "../images", "../coreimage/images", "../photobot/images"):
+        imgfolder = os.path.join( datafolder, relativeImageFolder )
         images = os.path.abspath( os.path.expanduser(imgfolder) )
+        # print("imagewells CHECK:", images )
         if os.path.exists( images ):
             if kwlog:
-                print("images found:", imgfolder)
-            folders.append( images )
+                print("images found:", relativeImageFolder)
+            folders.append( relativeImageFolder )
 
     # write new default imagewells.txt file and exit
     if not os.path.exists( fullpath ):
@@ -386,6 +387,7 @@ def imagewells( imagewellsfile="imagewell.txt" ):
             f.close()
         except:
             pass
+        folders = [os.path.join( datafolder, fld ) if fld[0]=='.' else fld for fld in folders]
         return folders
     
     # read imagewells file
@@ -398,8 +400,11 @@ def imagewells( imagewellsfile="imagewell.txt" ):
         # now we have read an imagewell, discard them default folders
         folders = []
         for line in lines:
-            line = line.strip( "\n\r" )
-            folders.append( makeunicode( line ) )
+            imgfolder = line.strip( "\n\r" )
+            if imgfolder.startswith('.'):
+                imgfolder = os.path.join( datafolder, imgfolder )
+                # print("LOAD FOLDER:", imgfolder)
+            folders.append( makeunicode( imgfolder ) )
     except:
         pass
 
@@ -420,7 +425,7 @@ def loadImageWell(  bgsize=(1280,1024),
                     tabfilename=True,
                     ignoreDotFolders=True,
                     ignoreFolderNames=None):
-
+    
     """
     Find images imagewells or additional folders. 
        
@@ -468,11 +473,6 @@ def loadImageWell(  bgsize=(1280,1024),
         list of file paths if pathonly is True
         list of filetuple records else.
     """
-
-    
-    if 0: #kwdbg:
-        pp(locals())
-        pdb.set_trace()
     
     # init
     tiles = []
@@ -507,8 +507,6 @@ def loadImageWell(  bgsize=(1280,1024),
     folders = []
     # <init
     
-    # pdb.set_trace()
-    
     # search for the imagewell named imagewellfilename
     # defaults to "imagewell.txt" in the current directory
     imageWellsFilePath = getImageWellsFile( imagewellfilename )
@@ -535,7 +533,8 @@ def loadImageWell(  bgsize=(1280,1024),
         # get all images from user image wells
         folders = imagewells(imagewellfilename)
         if kwlog:
-            pp(folders, width=300)
+            print("FOLDERS:")
+            pp(folders, width=100)
         
         if tabitem:
             if tabitem.ext != ".tab":
