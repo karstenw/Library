@@ -2,7 +2,7 @@ size(1200, 850)
 background(0.15, 0.15, 0.7)
 colors = ximport("colors")
 
-strokewidth( 1.4142 )
+strokewidth( 2 )
 joinstyle( ROUND )
 capstyle( ROUND )
 
