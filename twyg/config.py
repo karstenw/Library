@@ -2,7 +2,9 @@ import math, os, re, sys, io
 import operator as _operator
 
 # TODO what happens in NodeBox?
-from pkg_resources import resource_filename
+# from pkg_resources import resource_filename
+from importlib.resources import files
+
 
 # py3 stuff
 py3 = False
@@ -524,7 +526,8 @@ def defaults_path(configname):
     home_conf = os.path.join(twyg.common.TWYG_HOME, conf)
     paths = [
         home_conf,
-        resource_filename(__name__, conf)
+        # resource_filename(__name__, conf)
+        str(files(__name__).joinpath(conf))
     ]
     return find_config(paths, 'defaults config')
 
@@ -538,7 +541,8 @@ def colors_path(configname):
     paths = [
         configname,
         home_colors_conf,
-        resource_filename(__name__, colors_conf)
+        # resource_filename(__name__, colors_conf)
+        str(files(__name__).joinpath(colors_conf))
     ]
     return find_config(paths, 'colorscheme config')
 
@@ -551,7 +555,8 @@ def config_path(configname):
     paths = [
         configname,
         home_configs_conf,
-        resource_filename(__name__, configs_conf)
+        # resource_filename(__name__, configs_conf)
+        str(files(__name__).joinpath(configs_conf))
     ]
     return find_config(paths, 'config')
 
