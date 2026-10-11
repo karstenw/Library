@@ -32,7 +32,9 @@ elif len(sys.argv) > 3:
     lang = sys.argv[1]
     lang2 = sys.argv[2]
     args = sys.argv[3:]
-
+else:
+    args = sys.argv[1:]
+    lang = None
 #pp(cnr.relationnames)
 
 #pp(cnr.languagenames)
