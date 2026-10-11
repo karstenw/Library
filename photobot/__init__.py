@@ -54,8 +54,8 @@ radians = math.radians
 asin = math.asin
 
 pp = pprint.pprint
-kwdbg = 1
-kwlog = 1
+kwdbg = 0
+kwlog = 0
 
 # disable large image warning
 old = Image.MAX_IMAGE_PIXELS
