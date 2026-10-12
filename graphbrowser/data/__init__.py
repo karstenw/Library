@@ -60,7 +60,8 @@ def loaddatafolders():
                     out.write( s % (basename, line) )
                 else:
                     # should not happen
-                    pdb.set_trace()
+                    # pdb.set_trace()
+                    pass
         out.close()
 
 
